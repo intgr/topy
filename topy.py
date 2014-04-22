@@ -72,7 +72,8 @@ print("Loaded %d rules (%d errors, %d disabled)" % (parsed, errors, disabled))
 
 for fn in sys.argv[1:]:
     try:
-        text = open(fn, 'rb').read()
+        with open(fn, 'rb') as f:
+            text = f.read()
     except (IOError, OSError) as err:
         print("Cannot open %r: %s" % (fn, err))
 
@@ -90,4 +91,5 @@ for fn in sys.argv[1:]:
 
     if total > 0:
         print("Writing %s" % fn)
-        open(fn, 'wb').write(text)
+        with open(fn, 'wb') as f:
+            f.write(text)
