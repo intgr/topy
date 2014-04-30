@@ -16,12 +16,17 @@ See:
 # TODO: clean this crappy code up!
 
 from __future__ import unicode_literals
+import logging
 import os
 import regex
 import sys
 
 from bs4 import BeautifulSoup
 
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(message)s'
+)
 
 RETF_FILENAME = 'retf.txt'
 
@@ -68,10 +73,10 @@ for typo in soup.findAll('typo'):
         regs.append((word, r, replace))
         parsed += 1
     except regex.error as err:
-        #print("cannot compile %s %r: %s" % (word, find, err))
+        logging.debug("cannot compile %s %r: %s" % (word, find, err))
         errors += 1
 
-print("Loaded %d rules (%d errors, %d disabled)" % (parsed, errors, disabled))
+logging.info("Loaded %d rules (%d errors, %d disabled)" % (parsed, errors, disabled))
 
 
 for fn in sys.argv[1:]:
@@ -79,21 +84,21 @@ for fn in sys.argv[1:]:
         with open(fn, 'rb') as f:
             text = f.read()
     except (IOError, OSError) as err:
-        print("Cannot open %r: %s" % (fn, err))
+        logging.error("Cannot open %r: %s" % (fn, err))
 
     total = 0
     for word, r, replace in regs:
-        #print(word, r, replace)
+        logging.debug(word, r, replace)
         try:
             newtext, count = r.subn(replace, text)
             if count > 0 and newtext != text:
                 total += count
-                print("%s: replaced %s x %d" % (fn, word, count))
+                logging.info("%s: replaced %s x %d" % (fn, word, count))
             text = newtext
         except regex.error as err:
-            print("%s: error replacing %s (%r=>%r): %s" % (fn, word, r, replace, err))
+            logging.error("%s: error replacing %s (%r=>%r): %s" % (fn, word, r, replace, err))
 
     if total > 0:
-        print("Writing %s" % fn)
+        logging.info("Writing %s" % fn)
         with open(fn, 'wb') as f:
             f.write(text)
