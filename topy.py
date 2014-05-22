@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """
 Topy (anagram of "typo") is a Python script to fix typos in text, based on
 the RegExTypoFix project from Wikipedia and AutoWikiBrowser.
