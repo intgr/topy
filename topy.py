@@ -87,6 +87,7 @@ def apply_to_file(regs, filename):
             text = f.read()
     except (IOError, OSError) as err:
         logging.error("Cannot open %r: %s" % (filename, err))
+        return
 
     replaced = 0
     for word, r, replace in regs:
