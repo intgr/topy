@@ -17,7 +17,7 @@ See:
 
 from __future__ import unicode_literals
 import os
-import re
+import regex
 import sys
 
 from bs4 import BeautifulSoup
@@ -57,13 +57,13 @@ for typo in soup.findAll('typo'):
     replace = typo.attrs['replace'].encode('utf8')
 
     try:
-        r = re.compile(find)
+        r = regex.compile(find)
         # Use \1 instead of $1 etc
         replace = replace.replace(b'$', b'\\')
 
         regs.append((word, r, replace))
         parsed += 1
-    except re.error as err:
+    except regex.error as err:
         #print("cannot compile %s %r: %s" % (word, find, err))
         errors += 1
 
@@ -86,7 +86,7 @@ for fn in sys.argv[1:]:
                 total += count
                 print("%s: replaced %s x %d" % (fn, word, count))
             text = newtext
-        except re.error as err:
+        except regex.error as err:
             print("%s: error replacing %s (%r=>%r): %s" % (fn, word, r, replace, err))
 
     if total > 0:
