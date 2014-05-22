@@ -33,6 +33,7 @@ errors = 0
 parsed = 0
 
 regs = []
+# some rules are not working with regex or are not useful
 my_disable = {
     "Etc.",
     "e.g.",
@@ -45,6 +46,9 @@ my_disable = {
     "Recently",   # recently-commtted => recently committed, breaks "least-recently-used"
     "Highly",
     "exactly the same",  # only stylistic
+    "of xxx of xxx",     # causes an infinite loop in regex?
+    "Apache",
+    "Arabic",
 }
 
 for typo in soup.findAll('typo'):
