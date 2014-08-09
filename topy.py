@@ -138,7 +138,30 @@ def handle_file(regs, filename):
             print_diff(filename, oldtext, text)
 
 
-parser = OptionParser(usage="%prog [options] FILES...")
+def walk_dir_tree(dirpath):
+    """Walk a directory tree, yielding files exclude hidden directories
+       (*nix only), files and also binary files"""
+
+    for root, dirs, files in os.walk(dirpath):
+        dirs[:] = (d for d in dirs if not d.startswith("."))
+        for f in files:
+            if not f.startswith("."):
+                yield os.path.join(root, f)
+
+
+def flatten_files(filelist):
+    """ Given a list of dirs and filenames, yield a
+    flattened list of filenames"""
+
+    for item in filelist:
+        if os.path.isdir(item):
+            for filename in walk_dir_tree(item):
+                yield filename
+        else:
+            yield item
+
+
+parser = OptionParser(usage="%prog [options] FILES OR DIRECTORIES...")
 parser.add_option("-q", "--quiet",
                   action='store_true', dest='quiet', default=False,
                   help="silence information messages")
@@ -165,7 +188,7 @@ def main():
     path = os.path.join(os.path.dirname(__file__), RETF_FILENAME)
     regs = load_rules(path)
 
-    for filename in files:
+    for filename in flatten_files(files):
         handle_file(regs, filename)
 
 
