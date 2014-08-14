@@ -18,8 +18,8 @@ See:
 from __future__ import unicode_literals
 import logging
 import os
+from optparse import OptionParser
 import regex
-import sys
 
 from bs4 import BeautifulSoup
 
@@ -91,7 +91,7 @@ def read_text_file(filename):
     except UnicodeDecodeError:
         # We could implement configurable encodings or automatic fallback, but really, people should just quit that
         # nonsense and use UTF-8. If you have a valid use case, please open an issue and explain.
-        logging.warning("Skip %s" % filename)
+        logging.info("Skip %s" % filename)
 
     return None
 
@@ -121,16 +121,29 @@ def apply_to_file(regs, filename):
             f.write(text.encode(ENCODING))
 
 
+parser = OptionParser(usage="%prog [options] FILES...")
+parser.add_option("-q", "--quiet",
+                  action='store_true', dest='quiet', default=False,
+                  help="silence information messages")
+
+
 def main():
+    (opts, files) = parser.parse_args()
+
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.WARNING if opts.quiet else logging.INFO,
         format='%(message)s'
     )
+
+    if not files:
+        logging.error("No files specified")
+        parser.print_help()
+        exit(1)
 
     path = os.path.join(os.path.dirname(__file__), RETF_FILENAME)
     regs = load_rules(path)
 
-    for filename in sys.argv[1:]:
+    for filename in files:
         apply_to_file(regs, filename)
 
 
