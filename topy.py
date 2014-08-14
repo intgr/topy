@@ -24,6 +24,7 @@ import sys
 from bs4 import BeautifulSoup
 
 RETF_FILENAME = 'retf.txt'
+ENCODING = 'utf8'
 
 # some rules are not working with regex or are not useful
 disabled = {
@@ -60,13 +61,13 @@ def load_rules(filename):
             continue
 
         word = typo.attrs['word']
-        find = typo.attrs['find'].encode('utf8')
-        replace = typo.attrs['replace'].encode('utf8')
+        find = typo.attrs['find']
+        replace = typo.attrs['replace']
 
         try:
             r = regex.compile(find)
             # Use \1 instead of $1 etc
-            replace = replace.replace(b'$', b'\\')
+            replace = replace.replace('$', '\\')
 
             regs.append((word, r, replace))
             n_loaded += 1
@@ -79,14 +80,27 @@ def load_rules(filename):
     return regs
 
 
-def apply_to_file(regs, filename):
-    """Apply rules from `regs` to file `filename`, overwriting the file."""
+def read_text_file(filename):
+    """Reads file `filename` and returns contents as Unicode string. On failure, returns None and logs error."""
 
     try:
         with open(filename, 'rb') as f:
-            text = f.read()
+            return f.read().decode(ENCODING)
     except (IOError, OSError) as err:
         logging.error("Cannot open %r: %s" % (filename, err))
+    except UnicodeDecodeError:
+        # We could implement configurable encodings or automatic fallback, but really, people should just quit that
+        # nonsense and use UTF-8. If you have a valid use case, please open an issue and explain.
+        logging.warning("Skip %s" % filename)
+
+    return None
+
+
+def apply_to_file(regs, filename):
+    """Apply rules from `regs` to file `filename`, overwriting the file."""
+
+    text = read_text_file(filename)
+    if not text:
         return
 
     replaced = 0
@@ -96,7 +110,7 @@ def apply_to_file(regs, filename):
             newtext, count = r.subn(replace, text)
             if count > 0 and newtext != text:
                 replaced += count
-                logging.info("%s: replaced %s x %d" % (filename, word, count))
+                logging.debug("%s: replaced %s x %d" % (filename, word, count))
             text = newtext
         except regex.error as err:
             logging.error("%s: error replacing %s (%r=>%r): %s" % (filename, word, r, replace, err))
@@ -104,7 +118,7 @@ def apply_to_file(regs, filename):
     if replaced > 0:
         logging.info("Writing %s" % filename)
         with open(filename, 'wb') as f:
-            f.write(text)
+            f.write(text.encode(ENCODING))
 
 
 def main():
