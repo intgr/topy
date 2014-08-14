@@ -10,8 +10,6 @@ Usage::
 
     ./topy.py /path/to/file ...
 
-NB! Files will be changed in place (overwritten)!
-
 Resources
 ---------
 

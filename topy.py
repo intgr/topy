@@ -16,12 +16,15 @@ See:
 # TODO: clean this crappy code up!
 
 from __future__ import unicode_literals
+import sys
 import logging
 import os
 from optparse import OptionParser
-import regex
+from difflib import unified_diff
 
+import regex
 from bs4 import BeautifulSoup
+
 
 RETF_FILENAME = 'retf.txt'
 ENCODING = 'utf8'
@@ -96,10 +99,21 @@ def read_text_file(filename):
     return None
 
 
-def apply_to_file(regs, filename):
-    """Apply rules from `regs` to file `filename`, overwriting the file."""
+def print_diff(filename, old, new):
+    """Diffs the `old` and `new` strings and prints as unified diff to stdout."""
 
-    text = read_text_file(filename)
+    # TODO: color output for terminals
+    lines = unified_diff(old.splitlines(True), new.splitlines(True), filename, filename)
+    sys.stdout.writelines(lines)
+
+
+def handle_file(regs, filename):
+    """Apply rules from `regs` to file `filename`
+
+    If `apply` is True, the file is overwritten. Otherwise a unified diff is printed to stodut.
+    """
+
+    oldtext = text = read_text_file(filename)
     if not text:
         return
 
@@ -116,18 +130,26 @@ def apply_to_file(regs, filename):
             logging.error("%s: error replacing %s (%r=>%r): %s" % (filename, word, r, replace, err))
 
     if replaced > 0:
-        logging.info("Writing %s" % filename)
-        with open(filename, 'wb') as f:
-            f.write(text.encode(ENCODING))
+        if opts.apply:
+            logging.info("Writing %s" % filename)
+            with open(filename, 'wb') as f:
+                f.write(text.encode(ENCODING))
+        else:
+            print_diff(filename, oldtext, text)
 
 
 parser = OptionParser(usage="%prog [options] FILES...")
 parser.add_option("-q", "--quiet",
                   action='store_true', dest='quiet', default=False,
                   help="silence information messages")
+parser.add_option("-a", "--apply",
+                  action='store_true', dest='apply', default=False,
+                  help="overwrite files in place")
 
 
 def main():
+    global opts
+
     (opts, files) = parser.parse_args()
 
     logging.basicConfig(
@@ -144,7 +166,7 @@ def main():
     regs = load_rules(path)
 
     for filename in files:
-        apply_to_file(regs, filename)
+        handle_file(regs, filename)
 
 
 if __name__ == '__main__':
