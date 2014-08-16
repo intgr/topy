@@ -1,4 +1,7 @@
-Copyright (c) 2014 Marti Raudsepp <marti@juffo.org>
+All files except retf.txt are licensed as follows
+=================================================
+
+Copyright (c) 2014 Marti Raudsepp <marti@juffo.org> & contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -17,4 +20,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+retf.txt license
+================
+
+The bundled retf.txt file, copied from Wikipedia [1] by Wikipedia contributors
+is licensed under CC-BY-SA [2]. See the page on Wikipedia for authorship
+information.
+
+[1] https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
+[2] CC-BY-SA: https://creativecommons.org/licenses/by-sa/3.0/
 

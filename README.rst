@@ -43,4 +43,11 @@ Submit your changes as pull requests on Github.
 License
 -------
 
-Topy is licensed under the MIT license (see LICENSE.txt)
+The Topy software is licensed under the MIT license (see LICENSE.txt)
+
+The bundled ``retf.txt`` file, copied from `Wikipedia:AutoWikiBrowser/Typos`_ by Wikipedia contributors is licensed
+under CC-BY-SA_. See the page on Wikipedia for authorship information.
+
+.. _`Wikipedia:AutoWikiBrowser/Typos`: https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
+.. _CC-BY-SA: https://creativecommons.org/licenses/by-sa/3.0/
+
