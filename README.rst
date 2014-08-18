@@ -13,7 +13,7 @@ pip::
 
 Usage::
 
-    Usage: topy.py [options] FILES...
+    Usage: topy [options] FILES/DIRS...
 
     Options:
       -h, --help   show this help message and exit
@@ -36,7 +36,9 @@ Code style:
 * Strings that have meaning for humans use double quotes (``"``), otherwise single quotes (``'``). When in doubt, don't
   worry about it.
 
-Submit your changes as pull requests on Github.
+Run the test suite using ``python setup.py test``.
+
+Submit your changes as pull requests on GitHub.
 
 .. _PEP-8: https://www.python.org/dev/peps/pep-0008/
 

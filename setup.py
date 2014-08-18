@@ -41,4 +41,5 @@ setup(
         'regex',
         'beautifulsoup4',
     ],
+    test_suite='tests',
 )
