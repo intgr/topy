@@ -139,8 +139,7 @@ def handle_file(regs, filename):
 
 
 def walk_dir_tree(dirpath):
-    """Walk a directory tree, yielding files exclude hidden directories
-       (*nix only), files and also binary files"""
+    """Walk a directory tree, yielding filenames recursively, except those starting with a dot (.)"""
 
     for root, dirs, files in os.walk(dirpath):
         dirs[:] = (d for d in dirs if not d.startswith("."))
@@ -149,19 +148,21 @@ def walk_dir_tree(dirpath):
                 yield os.path.join(root, f)
 
 
-def flatten_files(filelist):
-    """ Given a list of dirs and filenames, yield a
-    flattened list of filenames"""
+def flatten_files(paths):
+    """Given a list of directories and filenames, yield a flattened sequence of filenames."""
 
-    for item in filelist:
-        if os.path.isdir(item):
-            for filename in walk_dir_tree(item):
+    for path in paths:
+        if os.path.isdir(path):
+            # Once we can drop Python < 3.3 support, this should use 'yield from'
+            for filename in walk_dir_tree(path):
                 yield filename
         else:
-            yield item
+            # Filename, or the path cannot be accessed (privilege errors, file not found, etc)
+            yield path
 
 
-parser = OptionParser(usage="%prog [options] FILES OR DIRECTORIES...")
+# Argument parsing. Keep this together with main()
+parser = OptionParser(usage="%prog [options] FILES/DIRS...")
 parser.add_option("-q", "--quiet",
                   action='store_true', dest='quiet', default=False,
                   help="silence information messages")
@@ -173,22 +174,22 @@ parser.add_option("-a", "--apply",
 def main():
     global opts
 
-    (opts, files) = parser.parse_args()
+    (opts, paths) = parser.parse_args()
 
     logging.basicConfig(
         level=logging.WARNING if opts.quiet else logging.INFO,
         format='%(message)s'
     )
 
-    if not files:
-        logging.error("No files specified")
+    if not paths:
+        logging.error("No paths specified")
         parser.print_help()
         exit(1)
 
     path = os.path.join(os.path.dirname(__file__), RETF_FILENAME)
     regs = load_rules(path)
 
-    for filename in flatten_files(files):
+    for filename in flatten_files(paths):
         handle_file(regs, filename)
 
 
