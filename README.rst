@@ -1,8 +1,9 @@
 Topy
 ====
 
-Topy (anagram of "typo") is a Python script to fix typos in text, based on the RegExTypoFix_ project from Wikipedia and
-AutoWikiBrowser.
+Topy (anagram of "typo") is a Python script to fix typos in text, using rulesets developed by the RegExTypoFix_ project
+from Wikipedia. The English ruleset is included with Topy and is used by default. Different rulesets need to be manually
+downloaded.
 
 .. _RegExTypoFix: https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
 
@@ -16,9 +17,11 @@ Usage::
     Usage: topy [options] FILES/DIRS...
 
     Options:
-      -h, --help   show this help message and exit
-      -q, --quiet  silence information messages
-      -a, --apply  overwrite files in place
+      -h, --help            show this help message and exit
+      -q, --quiet           silence information messages
+      -a, --apply           overwrite files in place
+      -r FILE, --rules=FILE
+                            specify custom ruleset file to use
 
 
 Resources
@@ -26,6 +29,7 @@ Resources
 
 * https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
 * https://github.com/intgr/topy
+* Rulesets for other languages: https://www.wikidata.org/wiki/Q6585066
 
 Contributing
 ------------
