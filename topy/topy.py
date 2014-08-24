@@ -173,10 +173,10 @@ parser.add_option("-r", "--rules", dest='rules', metavar="FILE",
                   help="specify custom ruleset file to use")
 
 
-def main():
+def main(args=None):
     global opts
 
-    (opts, paths) = parser.parse_args()
+    (opts, paths) = parser.parse_args(args=args)
 
     logging.basicConfig(
         level=logging.WARNING if opts.quiet else logging.INFO,
