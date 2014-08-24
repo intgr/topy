@@ -47,6 +47,8 @@ disabled = {
     "Arabic",
 }
 
+log = logging.getLogger('topy')
+
 
 def load_rules(filename):
     """Load and parse rules from `filename`, returns list of 3-tuples [(name, regexp, replacement), ...]"""
@@ -75,10 +77,10 @@ def load_rules(filename):
             regs.append((word, r, replace))
             n_loaded += 1
         except regex.error as err:
-            logging.debug("cannot compile %s %r: %s" % (word, find, err))
+            log.debug("cannot compile %s %r: %s", word, find, err)
             n_errors += 1
 
-    logging.info("Loaded %d rules (except %d errors, %d disabled)" % (n_loaded, n_errors, n_disabled))
+    log.info("Loaded %d rules (except %d errors, %d disabled)", n_loaded, n_errors, n_disabled)
 
     return regs
 
@@ -90,11 +92,11 @@ def read_text_file(filename):
         with open(filename, 'rb') as f:
             return f.read().decode(ENCODING)
     except (IOError, OSError) as err:
-        logging.error("Cannot open %r: %s" % (filename, err))
+        log.error("Cannot open %r: %s", filename, err)
     except UnicodeDecodeError:
         # We could implement configurable encodings or automatic fallback, but really, people should just quit that
         # nonsense and use UTF-8. If you have a valid use case, please open an issue and explain.
-        logging.info("Skip %s" % filename)
+        log.info("Skip %s", filename)
 
     return None
 
@@ -119,19 +121,18 @@ def handle_file(regs, filename):
 
     replaced = 0
     for word, r, replace in regs:
-        logging.debug(word, r, replace)
         try:
             newtext, count = r.subn(replace, text)
             if count > 0 and newtext != text:
                 replaced += count
-                logging.debug("%s: replaced %s x %d" % (filename, word, count))
+                log.debug("%s: replaced %s x %d", filename, word, count)
             text = newtext
         except regex.error as err:
-            logging.error("%s: error replacing %s (%r=>%r): %s" % (filename, word, r, replace, err))
+            log.error("%s: error replacing %s (%r=>%r): %s", filename, word, r, replace, err)
 
     if replaced > 0:
         if opts.apply:
-            logging.info("Writing %s" % filename)
+            log.info("Writing %s", filename)
             with open(filename, 'wb') as f:
                 f.write(text.encode(ENCODING))
         else:
@@ -184,7 +185,7 @@ def main(args=None):
     )
 
     if not paths:
-        logging.error("No paths specified")
+        log.error("No paths specified")
         parser.print_help()
         exit(1)
 
@@ -195,7 +196,7 @@ def main(args=None):
     try:
         regs = load_rules(opts.rules)
     except (IOError, OSError) as err:
-        logging.error("Cannot load ruleset: %s" % err)
+        log.error("Cannot load ruleset: %s", err)
         exit(1)
 
     for filename in flatten_files(paths):

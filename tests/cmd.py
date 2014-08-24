@@ -32,8 +32,13 @@ class CommandTest(unittest.TestCase):
 
         writefile(self.testrules, TESTRULES)
 
+        # Suppress output during tests
+        topy.log.setLevel('CRITICAL')
+
     def tearDown(self):
         shutil.rmtree(self.dir)
+
+        topy.log.setLevel('NOTSET')
 
     def test_rules_apply(self):
         """Test --rules and --apply options"""
