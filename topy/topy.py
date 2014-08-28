@@ -50,6 +50,11 @@ disabled = {
 log = logging.getLogger('topy')
 
 
+class Abort(Exception):
+    """Raised if a command needs to print an error and exit."""
+    pass
+
+
 def load_rules(filename):
     """Load and parse rules from `filename`, returns list of 3-tuples [(name, regexp, replacement), ...]"""
 
@@ -162,6 +167,20 @@ def flatten_files(paths):
             yield path
 
 
+def run(paths):
+    if opts.rules is None:
+        # TODO: Are there any better ways to bundle data files with Python packages?
+        opts.rules = os.path.join(os.path.dirname(__file__), RETF_FILENAME)
+
+    try:
+        regs = load_rules(opts.rules)
+    except (IOError, OSError) as err:
+        raise Abort("Cannot load ruleset: %s" % err)
+
+    for filename in flatten_files(paths):
+        handle_file(regs, filename)
+
+
 # Argument parsing. Keep this together with main()
 parser = OptionParser(usage="%prog [options] FILES/DIRS...")
 parser.add_option("-q", "--quiet",
@@ -184,23 +203,17 @@ def main(args=None):
         format='%(message)s'
     )
 
+    # Special abort case, we want to display help here
     if not paths:
         log.error("No paths specified")
         parser.print_help()
         exit(1)
 
-    if opts.rules is None:
-        # TODO: Are there any better ways to bundle data files with Python packages?
-        opts.rules = os.path.join(os.path.dirname(__file__), RETF_FILENAME)
-
     try:
-        regs = load_rules(opts.rules)
-    except (IOError, OSError) as err:
-        log.error("Cannot load ruleset: %s", err)
+        run(paths)
+    except Abort as err:
+        log.error("%s", err)
         exit(1)
-
-    for filename in flatten_files(paths):
-        handle_file(regs, filename)
 
 
 if __name__ == '__main__':
