@@ -190,7 +190,7 @@ def main(args=None):
     if not paths:
         log.error("No paths specified")
         parser.print_help()
-        exit(1)
+        sys.exit(1)
 
     if opts.rules is None:
         # TODO: Are there any better ways to bundle data files with Python packages?
@@ -200,7 +200,7 @@ def main(args=None):
         regs = load_rules(opts.rules)
     except (IOError, OSError) as err:
         log.error("Cannot load ruleset: %s", err)
-        exit(1)
+        sys.exit(1)
 
     for filename in flatten_files(paths):
         handle_file(regs, filename)
