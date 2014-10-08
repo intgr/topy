@@ -101,12 +101,15 @@ def read_text_file(filename):
     return None
 
 
-def print_diff(filename, old, new):
-    """Diffs the `old` and `new` strings and prints as unified diff to stdout."""
+def print_diff(filename, old, new, stream=sys.stdout):
+    """Diffs the `old` and `new` strings and prints as unified diff to file-like object `stream`."""
 
     # TODO: color output for terminals
     lines = unified_diff(old.splitlines(True), new.splitlines(True), filename, filename)
-    sys.stdout.writelines(lines)
+    if sys.version_info[0] <= 2:
+        # Python 2 requires input to be bytestring, Python 3 requires Unicode string
+        lines = (x.encode(ENCODING) for x in lines)
+    stream.writelines(lines)
 
 
 def handle_file(regs, filename):
