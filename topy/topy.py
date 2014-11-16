@@ -146,7 +146,6 @@ def walk_dir_tree(dirpath):
     """Walk a directory tree, yielding filenames recursively, except those starting with a dot (.)"""
 
     for root, dirs, files in os.walk(dirpath):
-        dirs[:] = (d for d in dirs if not d.startswith("."))
         for f in files:
             if not f.startswith("."):
                 yield os.path.join(root, f)
