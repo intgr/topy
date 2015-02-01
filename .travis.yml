@@ -1,8 +1,17 @@
+sudo: false  # Use travis' container based infra
 language: python
 python:
     - "2.7"
     - "3.2"
     - "3.3"
     - "3.4"
-install: "pip install -r requirements.txt"
+cache:
+  directories:
+    - $PWD/wheelhouse  # cache the dependencies
+env:
+  global:
+    - export PIP_FIND_LINKS=$PWD/wheelhouse
+install:
+  - pip wheel -r requirements.txt
+  - pip install -r requirements.txt
 script: python setup.py test
