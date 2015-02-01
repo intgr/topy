@@ -1,5 +1,5 @@
+# -*- coding: utf-8 -*-
 """Unit tests for internal functions"""
-# encoding=utf-8
 
 from __future__ import unicode_literals
 

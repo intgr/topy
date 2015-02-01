@@ -1,5 +1,8 @@
 Topy
 ====
+.. image:: https://travis-ci.org/intgr/topy.svg?branch=master
+   :alt: Travis CI
+   :target: http://travis-ci.org/intgr/topy
 
 Topy (anagram of "typo") is a Python script to fix typos in text, using rulesets developed by the RegExTypoFix_ project
 from Wikipedia. The English ruleset is included with Topy and is used by default. Other rulesets can be manually
