@@ -48,6 +48,7 @@ disabled = {
 }
 
 log = logging.getLogger('topy')
+PY2 = sys.version_info[0] <= 2
 
 
 def load_rules(filename):
@@ -98,19 +99,37 @@ def read_text_file(filename):
     except UnicodeDecodeError:
         # We could implement configurable encodings or automatic fallback, but really, people should just quit that
         # nonsense and use UTF-8. If you have a valid use case, please open an issue and explain.
-        log.info("Skip %s", filename)
+        log.info("Skip %s", sanitize_filename(filename))
 
     return None
+
+
+def sanitize_filename(filename):
+    """Converts `filename` to unicode, replaces invalid (un-encodable) characters."""
+
+    if PY2:
+        # This may break on Windows with Unicode filenames? Please tell me how to fix it if anyone out there cares.
+        if isinstance(filename, str):
+            # noinspection PyUnresolvedReferences
+            filename = filename.decode(sys.getfilesystemencoding() or ENCODING, 'replace')
+        return filename
+    else:
+        # Input filename is always unicode with surrogate escapes.
+        return filename.encode('utf8', 'surrogateescape').decode('utf8', 'replace')
 
 
 def print_diff(filename, old, new, stream=sys.stdout):
     """Diffs the `old` and `new` strings and prints as unified diff to file-like object `stream`."""
 
     # TODO: color output for terminals
+    if PY2:
+        # On Python 2, unified_diff() requires non-Unicode str
+        filename = filename.encode(ENCODING)
     lines = unified_diff(old.splitlines(True), new.splitlines(True), filename, filename)
-    if sys.version_info[0] <= 2:
-        # Python 2 requires input to be bytestring, Python 3 requires Unicode string
-        lines = (x.encode(ENCODING) for x in lines)
+    if PY2:
+        # Encode lines that aren't already str
+        lines = (line if isinstance(line, str) else line.encode(ENCODING)
+                 for line in lines)
     stream.writelines(lines)
 
 
@@ -124,24 +143,26 @@ def handle_file(regs, filename):
     if not text:
         return
 
+    safe_name = sanitize_filename(filename)
+
     replaced = 0
     for word, r, replace in regs:
         try:
             newtext, count = r.subn(replace, text)
             if count > 0 and newtext != text:
                 replaced += count
-                log.debug("%s: replaced %s x %d", filename, word, count)
+                log.debug("%s: replaced %s x %d", safe_name, word, count)
             text = newtext
         except regex.error as err:
-            log.error("%s: error replacing %s (%r=>%r): %s", filename, word, r, replace, err)
+            log.error("%s: error replacing %s (%r=>%r): %s", safe_name, word, r, replace, err)
 
     if replaced > 0:
         if opts.apply:
-            log.info("Writing %s", filename)
+            log.info("Writing %s", safe_name)
             with open(filename, 'wb') as f:
                 f.write(text.encode(ENCODING))
         else:
-            print_diff(filename, oldtext, text)
+            print_diff(safe_name, oldtext, text)
 
 
 def walk_dir_tree(dirpath):

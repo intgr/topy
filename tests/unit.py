@@ -4,7 +4,6 @@
 from __future__ import unicode_literals
 
 import unittest
-import sys
 
 try:
     from cStringIO import StringIO
@@ -18,6 +17,7 @@ class OutputTest(unittest.TestCase):
     def test_print_diff(self):
         """Tests diff printing output"""
 
+        # Simple ASCII diff
         self.diff_inner(
             'foobar.txt',
             "foo\nbar\nbaz\n",
@@ -32,6 +32,7 @@ class OutputTest(unittest.TestCase):
  baz
 """)
 
+        # Unicode diff
         self.diff_inner(
             'unicode.txt',
             "Ünicode\n\U0001F4A9\n",
@@ -45,12 +46,40 @@ class OutputTest(unittest.TestCase):
  \U0001F4A9
 """)
 
+        # Unicode filename
+        filename = 'ünicöde.txt'
+        self.diff_inner(
+            filename.encode('utf8') if topy.PY2 else filename,
+            "Foobar\n",
+            "Foobaz\n",
+            """\
+--- ünicöde.txt
++++ ünicöde.txt
+@@ -1 +1 @@
+-Foobar
++Foobaz
+""")
+
+        # Filename with invalid characters
+        filename = b'foo\xffbar.txt'
+        self.diff_inner(
+            filename if topy.PY2 else filename.decode('utf8', 'surrogateescape'),
+            "Foobar\n",
+            "Foobaz\n",
+            """\
+--- foo�bar.txt
++++ foo�bar.txt
+@@ -1 +1 @@
+-Foobar
++Foobaz
+""")
+
     def diff_inner(self, filename, old, new, expected):
-        if sys.version_info[0] <= 2:
+        if topy.PY2:
             expected = expected.encode('utf8')
 
         out = StringIO()
-        topy.print_diff(filename, old, new, out)
+        topy.print_diff(topy.sanitize_filename(filename), old, new, out)
         diff = out.getvalue()
         self.assertEqual(diff, expected)
         # Must be correct type too, otherwise writelines() fails
