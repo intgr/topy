@@ -58,7 +58,7 @@ class CommandTest(unittest.TestCase):
         with self.assertRaises(SystemExit):
             topy.main(['--rules', notfound, notfound])
 
-        # Non-existant source files are ignored
+        # Non-existent source files are ignored
         topy.main(['--rules', self.testrules, notfound])
 
 
