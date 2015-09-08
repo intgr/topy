@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='topy',
-    version='0.1.0',
+    version='0.2.0',
 
     # PyPI metadata
     author='Marti Raudsepp',
@@ -18,7 +18,7 @@ setup(
     keywords='typo spelling grammar text',
     classifiers=[
         # https://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',

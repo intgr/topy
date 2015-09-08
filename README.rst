@@ -36,6 +36,20 @@ Resources
 * https://pypi.python.org/pypi/topy
 * Rulesets for other languages: https://www.wikidata.org/wiki/Q6585066
 
+Changelog
+---------
+
+0.2.0 (2015-09-09)
+
+* Several fixes with Unicode on Python 2
+* Can safely deal with filenames that are invalid Unicode
+* Update bundled ruleset
+* Fix a few warnings from used libraries
+
+0.1.0 (2014-08-24)
+
+* Initial public release
+
 Contributing
 ------------
 
