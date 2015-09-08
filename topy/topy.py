@@ -147,9 +147,10 @@ def walk_dir_tree(dirpath):
 
     for root, dirs, files in os.walk(dirpath):
         # Modify 'dirs' list in place, so walk() doesn't recurse into them
-        dirs[:] = (d for d in dirs if not d.startswith("."))
+        # str(".") fixes issue #14: Python 2 has non-Unicode str pathnames, Python 3 uses Unicode
+        dirs[:] = (d for d in dirs if not d.startswith(str(".")))
         for f in files:
-            if not f.startswith("."):
+            if not f.startswith(str(".")):
                 yield os.path.join(root, f)
 
 
