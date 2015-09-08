@@ -53,7 +53,9 @@ log = logging.getLogger('topy')
 def load_rules(filename):
     """Load and parse rules from `filename`, returns list of 3-tuples [(name, regexp, replacement), ...]"""
 
-    soup = BeautifulSoup(open(filename))
+    with open(filename) as rulefile:
+        # Use html.parser: lxml is only slightly faster & requires an additional dependency.
+        soup = BeautifulSoup(rulefile, 'html.parser')
     regs = []
 
     n_disabled = 0

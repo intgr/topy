@@ -52,9 +52,9 @@ class OutputTest(unittest.TestCase):
         out = StringIO()
         topy.print_diff(filename, old, new, out)
         diff = out.getvalue()
-        self.assertEquals(diff, expected)
+        self.assertEqual(diff, expected)
         # Must be correct type too, otherwise writelines() fails
-        self.assertEquals(type(diff), type(expected))
+        self.assertEqual(type(diff), type(expected))
 
 
 if __name__ == '__main__':
