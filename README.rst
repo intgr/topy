@@ -1,5 +1,8 @@
 Topy
 ====
+.. image:: https://badge.fury.io/py/topy.svg
+   :target: http://badge.fury.io/py/topy
+
 .. image:: https://travis-ci.org/intgr/topy.svg?branch=master
    :alt: Travis CI
    :target: http://travis-ci.org/intgr/topy
