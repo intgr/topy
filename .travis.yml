@@ -1,7 +1,9 @@
 sudo: false  # Use travis' container based infra
 language: python
+# Versions are deliberately out of order to get a diverse sample first
 python:
     - "2.7"
+    - "3.5"
     - "3.2"
     - "3.3"
     - "3.4"
