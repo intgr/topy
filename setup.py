@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='topy',
-    version='0.2.0',
+    version='0.2.1',
 
     # PyPI metadata
     author='Marti Raudsepp',
@@ -26,6 +26,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
         'Topic :: Documentation',
         'Topic :: Software Development :: Quality Assurance',
         'Topic :: Text Processing :: Filters',
@@ -38,7 +39,7 @@ setup(
         '': ['*.txt']
     },
     install_requires=[
-        'regex',
+        'regex>=2016.07.14',
         'beautifulsoup4',
     ],
     test_suite='tests',

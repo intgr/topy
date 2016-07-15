@@ -42,6 +42,14 @@ Resources
 Changelog
 ---------
 
+0.2.1 (2016-07-15)
+
+* Update bundled ruleset
+* Update regex dependency version to avoid `regex issue #216`_
+* Officially add Python 3.5 support
+
+.. _`regex issue #216`: https://bitbucket.org/mrabarnett/mrab-regex/issues/216/invalid-match-when-using-negative
+
 0.2.0 (2015-09-09)
 
 * Several fixes with Unicode on Python 2
