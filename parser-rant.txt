@@ -1,0 +1,9 @@
+"""Wikipedia RegExTypoFix parser.
+
+Yes, I'm parsing the file using regular expressions. Yes, I know how bad it is to parse XML or HTML using regular
+expressions. But this file format isn't XML or HTML, it's just Wikipedia flavored tag soup. I was using BeautifulSoup
+before, but it's slow and an unnecessary dependency. There is no nesting of tags in this format so it *can* be parsed
+easily and reliably using regexp. https://stackoverflow.com/a/1732454/177663
+
+Secondly, XML parsers are the spawn of the devil -- full of security risks and cumbersome to use.
+"""

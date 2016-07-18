@@ -1,0 +1,291 @@
+These are the typo [[Регулярний вислів|regular expressions]] for [[:en:User:Mboverload/RegExTypoFix|RegExTypoFix]] and [[:en:User:Cacycle/wikEd|wikEd]], development is now open to the public.
+
+Please add to/modify/improve these regular expressions!
+
+== Adding/changing a misspelling ==
+* '''[[{{TALKPAGENAME}}|Go here]]''' to suggest a change if you don't know how to do it yourself or you have any doubts about the change. Knowledgeable users will be able to add it for you and perhaps improve it.
+* Always consider the possibility of false positives—don't add if there is one
+* Check the [[:en:User:Mboverload/RegExTypoFix/rejectedwords|Rejected Words]] list
+* Aim to have a single regular expression for each word ''when possible''
+* Keep in mind every addition/possibility of a word taxes more CPU and slows the article-scanning process
+* Remember to update the variable name if you change something that affects it
+
+=== TODO: ===
+* Remove any duplication
+* Expand regexes to accept more suffixes (e.g., «ing» «ed» «able»)
+** Keep in mind some regexes purposely fix only certain versions of a word to avoid false positives. These should be marked with an underscore character _ at the end of the <code>word=</code> entry
+* Remove any very unusual words
+
+== Typo list ==
+<big>All changes to this list are LIVE. AWB loads directly from this list whenever someone enables the RETF option.</big>
+
+=== New additions ===
+: ''For ease of fixing errors in newly introduced typos, please put new entries at the top of this section.''
+
+== А ==
+<source lang="xml">
+<Typo word="асобаў" find="\b(А|а)собаў\b" replace="$1соб" />
+<Typo word="асьц" find="\b(А|а)сьц(\w+)\b" replace="$1сц$2" />
+<Typo word="альгарытм" find="\b(А|а)льгарытм(\w+)\b" replace="$1лгарытм$2" />
+<Typo word="Амэрыка" find="\b(А|а)мэрык(\w+)\b" replace="$1мерык$2" />
+<Typo word="ангельск" find="\b(А|а)нгельск(\w+)\b" replace="$1нглійск$2" />
+<Typo word="Антвэрпэн" find="\b(А|а)нтв[эе]рп[эе]н(\w+)\b" replace="$1нтверпен$2" />
+<Typo word="Аргенціна" find="\b(А|а)ргентын(\w+)\b" replace="$1ргенцін$2" />
+
+</source>
+
+== Б ==
+
+<source lang="xml">
+<Typo word="Базэль" find="\b(Б|б)азэл(\w+)\b" replace="$1азел$2" />
+<Typo word="Базэль" find="\b(Б|б)азэл(\w*)\b" replace="$1азел$2" />
+<Typo word="Бляк" find="\b(Б|б)ляк(\w+)\b" replace="$1лак$2" />
+<Typo word="Болш" find="\b(Б|б)олш\b" replace="$1ольш$2" />
+<Typo word="Брусэль" find="\b(Б|б)русэл(\w+)\b" replace="$1русел$2" />
+<Typo word="бурзе" find="\b(\w+)бурзе\b" replace="$1бургу" />
+<Typo word="бэрг" find="\b(\w+)бэрг(\w+)\b" replace="$1берг$2" />
+<Typo word="бяз" find="\bбяз \b" replace="без " />
+
+</source>
+
+== В ==
+<source lang="xml">
+<Typo word="ваеначальнік" find="\b(В|в)аеначальні(\w+)\b" replace="$1оеначальні$2" />
+<Typo word="ваяводзтва" find="\b(В|в)аяводз(\w+)\b" replace="$1аяводс$2" />
+<Typo word="верасень" find="\b(В|в)ерасьн(я|ем|ю)\b" replace="$1ерасн$2" />
+<Typo word="вобласць" find="\b(В|в)обласьц(ь|і|ю)\b" replace="$1обласц$2" />
+<Typo word="водарасцяў" find="\b(В|в)одарасцяў\b" replace="$1одарасцей" />
+<Typo word="выстаўка" find="\b(В|в)ыстав(а|амі|аю|ай|у)\b" replace="$1ыстаўк$2" />
+<Typo word="Вэнэра" find="\b(В|в)[эе]н[эе]р(\w+)\b" replace="$1енер$2" />
+<Typo word="вэрфь" find="\b(В|в)эрф(\w+)\b" replace="$1ерф$2" />
+</source>
+
+== Г ==
+<source lang="xml">
+<Typo word="гадох" find="\b(Г|г)адох\b" replace="$1адах" />
+<Typo word="газэта" find="\b(Г|г)азэт(\w+)\b" replace="$1азет$2" />
+<Typo word="глябал" find="\b(Г|г)лябал(\w+)\b" replace="$1лабал$2" />
+<Typo word="году" find="\b(\d+) году\b" replace="$1 года" />
+<Typo word="году" find="\b (У|у|ў|Ў) (\d+) год[ау]\b" replace=" $1 $2 годзе" />
+<Typo word="году" find="\b(студзеня|лютага|сакавіка|красавіка|мая|чэрвеня|ліпеня|жніўня|верасня|кастрычніка|лістапада|снежня)\]\] \[\[(\d+)\]\] году\b" replace="$1]] [[$2]] года" />
+<Typo word="грамадзтва" find="\b(Г|г)рамадзт(\w+)\b" replace="$1рамадст$2" />
+<Typo word="грамадзкі" find="\b(Г|г)рамадзк(\w+)\b" replace="$1рамадск$2" />
+</source>
+
+== Д ==
+<source lang="xml">
+<Typo word="Дамэнік" find="\b(Д|д)амэнік(\w+)\b" replace="$1аменік$2" />
+<Typo word="Дздз" find="\b(\w+)дздз(\w+)\b" replace="$1ддз$2" />
+<Typo word="Дзяяч" find="\b(Д|д)зяяч(\w+)\b" replace="$1зеяч$2" />
+</source>
+
+== З ==
+
+<source lang="xml">
+<Typo word="зьв" find="\b(А|а)зьв(\w+)\b" replace="$1зв$2" />
+<Typo word="зьн" find="\b(А|а)зьн(\w+)\b" replace="$1зн$2" />
+<Typo word="зьм" find="\b(А|а)зьм(\w+)\b" replace="$1зм$2" />
+<Typo word="зыцы" find="\b(\w+)зыцы(\w+)\b" replace="$1зіцы$2" />
+</source>
+
+== І ==
+
+<source lang="xml">
+<Typo word="інтэрнет" find="\b(І|і)нтэрне(\w+)\b" replace="$1нтэрнэ$2" />
+<Typo word="імпэр" find="\b(І|і)мпэр(\w+)\b" replace="$1мпер$2" />
+</source>
+
+== К ==
+
+<source lang="xml">
+<Typo word="Казімер" find="\b(К|к)азімер(\w+)\b" replace="$1азімір$2" />
+<Typo word="Калюмб" find="\b(К|к)алюмб(\w+)\b" replace="$1алумб$2" />
+<Typo word="кампутэр" find="\b(К|к)ампут[эа]р(\w+)\b" replace="$1амп'ютар$2" />
+<Typo word="камп'ютэр" find="\b(К|к)амп'ютэр(\w+)\b" replace="$1амп'ютар$2" />
+<Typo word="капэла" find="\b(К|к)апел(а|ай|у|е|ы)\b" replace="$1апэл$2" />
+<Typo word="кілямэтр" find="\b(К|к)ілямэтр(\w+)\b" replace="$1іламетр$2" />
+<Typo word="кілямэтар" find="\b(К|к)ілямэтар(\w+)\b" replace="$1іламетр$2" />
+<Typo word="клясыфікацыя" find="\b(К|к)лясыфік(\w+)\b" replace="$1ласіфік$2" />
+</source>
+
+== Л ==
+
+<source lang="xml">
+<Typo word="Летува" find="\b(Л|л)етув(а|е|у)\b" replace="$1ітв$2" />
+<Typo word="льл" find="\b(\w+)льл(\w+)\b" replace="$1лл$2" />
+<Typo word="лягічны" find="\b(\w+)лягічн(\w+)\b" replace="$1лагічн$2" />
+<Typo word="ляўрэат" find="\b(Л|л)яўрэа(\w+)\b" replace="$1аўрэа$2" />
+</source>
+
+== М ==
+
+<source lang="xml">
+
+<Typo word="маянэз" find="\b(М|м)аянез(\w+)\b" replace="$1аянэз$2" />
+<Typo word="Марсэль" find="\b(М|м)арсэл(\w+)\b" replace="$1арсел$2" />
+<Typo word="мачапал" find="\b(М|м)ачапала(\w+)\b" replace="$1очапала$2" />
+<Typo word="мейсца" find="\b(М|м)ейсц(|а|е|ам|ы)\b" replace="$1есц$2" />
+<Typo word="Міталёг" find="\b(М|м)італёг(\w+)\b" replace="$1іфалог$2" />
+<Typo word="міталяг" find="\b(М|м)італяг(\w+)\b" replace="$1іфалаг$2" />
+<Typo word="музэ" find="\b(М|м)узэ(\w+)\b" replace="$1узе$2" />
+<Typo word="мэнт" find="\b(\w+)мэнт(\w+)\b" replace="$1мент$2" />
+<Typo word="мэтад" find="\b(М|м)этад(\w+)\b" replace="$1етад$2" />
+<Typo word="мэтры" find="\b(\w+)мэтры(\w+)\b" replace="$1метры$2" />
+<Typo word="менеджмент" find="\b(М|м)[еэ]н[еэ]джм[еэ]н(\w+)\b" replace="$1енеджмен$2" />
+<Typo word="мюнхэн" find="\b(М|м)юнхэн(\w+)\b" replace="$1юнхен$2" />
+</source>
+
+== Н ==
+<source lang="xml">
+
+<Typo word="НАТО" find="\bНАТО\b" replace="НАТА" />
+<Typo word="Нідэрлянд" find="\b(Н|н)ідэрлянд(\w+)\b" replace="$1ідэрланд$2" />
+<Typo word="Нэапаль" find="\b(Н|н)эапал(\w+)\b" replace="$1еапал$2" />
+<Typo word="ньн" find="\b(\w+)ньн(\w+)\b" replace="$1нн$2" />
+<Typo word="ня" find="\b ня \b" replace=" не " />
+</source>
+
+== О ==
+<source lang="xml">
+<Typo word="Опэра" find="\b(О|о)пэр(\w+)\b" replace="$1пер$2" />
+</source>
+
+== П ==
+<source lang="xml">
+<Typo word="Павал" find="\b(П|п)авал\b" replace="$1авел" />
+<Typo word="Пектын" find="\b(П|п)ектын\b" replace="$1екцін" />
+<Typo word="Пётар" find="\b(П|п)ётар\b" replace="$1ётр" />
+<Typo word="Пісьменьн" find="\b(П|п)ісьменьн(\w+)\b" replace="$1ісьменн$2" />
+<Typo word="плян" find="\b(П|п)лян(\w+)\b" replace="$1лан$2" />
+<Typo word="плян" find="\b(\w+)плян(\w+)\b" replace="$1план$2" />
+<Typo word="прадусар" find="\b(П|п)радусар(\w+)\b" replace="$1радзюсар$2" />
+<Typo word="прафэсар" find="\b(П|п)рафэсар(\w+)\b" replace="$1рафесар$2" />
+<Typo word="прэзыдэнт" find="\b(П|п)рэзыдэн(\w+)\b" replace="$1рэзідэн$2" />
+<Typo word="пэйзаж" find="\b(П|п)эйзаж(\w+)\b" replace="$1ейзаж$2" />
+<Typo word="пэкт" find="\b(\w+)пэкт(\w+)\b" replace="$1пект$2" />
+<Typo word="пэрыяд" find="\b(П|п)эрыяд(\w+)\b" replace="$1ерыяд$2" />
+</source>
+
+== Р ==
+<source lang="xml">
+<Typo word="Раслаўль" find="\b(Р|р)аслаўл(\w+)\b" replace="$1ослаўл$2" />
+<Typo word="рэзэрв" find="\b(Р|р)эзэрв\b" replace="$1эзерв" />
+</source>
+
+== С ==
+
+<source lang="xml">
+<Typo word="Сардынія" find="\b(С|с)ардын(\w+)\b" replace="$1ардзін$2" />
+<Typo word="спартовы" find="\b(С|с)партов(\w+)\b" replace="$1партыўн$2" />
+<Typo word="стагодзьдзе" find="\b(С|с)тагодзьдз(\w+)\b" replace="$1тагоддз$2" />
+<Typo word="сурвэтка" find="\b(С|с)урвет(\w+)\b" replace="$1урвэт$2" />
+<Typo word="сьнег, вясьне і сьнежань" find="\b(С|с)ьне(\w+)\b" replace="$1не$2" />
+<Typo word="сьмех" find="\b(С|с)ьмех(|у|ам)\b" replace="$1мех$2" />
+<Typo word="сьв" find="\b(С|с)ьв(\w+)\b" replace="$1в$2" />
+<Typo word="сымбал" find="\b(С|с)ымб(\w+)\b" replace="$1імв$2" />
+<Typo word="сэкс" find="\b(С|с)экс(\w+)\b" replace="$1екс$2" />
+<Typo word="сэрвер" find="\b(С|с)эрвер(\w+)\b" replace="$1ервер$2" />
+<Typo word="сэры" find="\b(С|с)эры(\w+)\b" replace="$1еры$2" />
+<Typo word="сымэтрыя" find="\b(С|с)ымэтр(\w+)\b" replace="$1іметр$2" />
+<Typo word="сюррэалізм" find="\b(С|с)юрэалізм(\w+)\b" replace="$1юррэалізм$2" />
+</source>
+
+== Т ==
+
+<source lang="xml">
+<Typo word="Токіо" find="\b(Т|т)окіо\b" replace="Токіа" />
+<Typo word="тунель" find="\b(Т|т)унел(\w+)\b" replace="$1унэл$2" />
+
+</source>
+
+== У ==
+<source lang="xml">
+<Typo word="Ў" find="\b(\w+)Ў(\w+)\b" replace="$1У$2" />
+<Typo word="убэрн" find="\b(\w+)убэрн(\w+)\b" replace="$1уберн$2" />
+<Typo word="ўнівэрсытэт" find="\b(У|у|ў)нів[эе]рс[іы]тэ(\w+)\b" replace="$1ніверсітэ$2" />
+<Typo word="ўтраліт" find="\b(\w+)ўтраліт(\w+)\b" replace="$1йтраліт$2" />
+</source>
+
+== Ф ==
+
+<source lang="xml">
+<Typo word="фауна" find="\b(Ф|ф)аун(|а|е|ай|у|ы)\b" replace="$1аўн$2" />
+<Typo word="фізык і фізычны" find="\b(Ф|ф)ізы(\w+)\b" replace="$1ізі$2" />
+<Typo word="Фляндрыя" find="\b(Ф|ф)ляндры(|я|ю|яй|і)\b" replace="$1ландры$2" />
+<Typo word="фэномэн" find="\b(Ф|ф)[эе]ном[эе]н(\w+)\b" replace="$1еномен$2" />
+<Typo word="фэнамэнальны" find="\b(Ф|ф)[эе]нам[эе]н(\w+)\b" replace="$1енамен$2" />
+</source>
+
+== Х ==
+
+<source lang="xml">
+<Typo word="хаас" find="\b(Х|х)аас(\w+)\b" replace="$1аос$2" />
+<Typo word="хмарачос" find="\bхмарачос(\w+)\b" replace="небаскроб$1" />
+<Typo word="Хмарачос" find="\bХмарачос(\w+)\b" replace="Небаскроб$1" />
+</source>
+
+== Ц ==
+
+<source lang="xml">
+<Typo word="цьв" find="\b(\w+)цьв(\w+)\b" replace="$1цв$2" />
+<Typo word="цьц" find="\b(\w+)цьц(\w+)\b" replace="$1цц$2" />
+<Typo word="цуск" find="\b(\w+)цуск(\w+)\b" replace="$1цузск$2" />
+<Typo word="цэнтар" find="\b(Ц|ц)энтар\b" replace="$1энтр" />
+</source>
+
+== Ш ==
+<source lang="xml">
+<Typo word="швайцар" find="\b(Ш|ш)вайцар(\w+)\b" replace="$1вейцар$2" />
+<Typo word="штадск" find="\b(\w+)штадск(\w+)\b" replace="$1штацк$2" />
+<Typo word="штадт" find="\b(\w+)штадт(\w+)\b" replace="$1штат$2" />
+
+</source>
+
+== Э ==
+
+<source lang="xml">
+
+<Typo word="экзэмпляр" find="\b(Э|э)кземпляр(\w+)\b" replace="$1кзэмпляр$2" />
+<Typo word="экспэрымэнт" find="\b(Э|э)ксп[эе]рым[эе]н(\w+)\b" replace="$1ксперымен$2" />
+<Typo word="Эўропа" find="\b(Э|э)ўроп(у|а|ы|е|ай)\b" replace="Еўроп$2" />
+<Typo word="Еўразвяз" find="\b(Э|э|Е|е)ўразвяз(\w+)\b" replace="Еўрасаюз$2" />
+<Typo word="эфэкт" find="\b(Э|э)фэкт(\w+)\b" replace="$1фект$2" />
+</source>
+
+== Я ==
+
+<source lang="xml">
+
+<Typo word="янэрк" find="\b(\w+)янэр(\w+)\b" replace="$1янер$2" />
+</source>
+
+== HTML-код ==
+<source lang="xml">
+<Typo word="<strong></strong>" find="(?i)<strong>(.*?)</strong>" replace="'''$1'''" />
+<Typo word="<em></em>" find="(?i)<em>(.*?)</em>" replace="''$1''" />
+<Typo word="<hr>" find="(?i)([\r\n])<hr[ /]*>([\r\n])" replace="$1----$2" />
+<Typo word="<hr>" find="(?i)<hr ([^>/]+?)>" replace="<hr $1 />" />
+<Typo word="<br />" find="</?(br|BR) ?/?>" replace="<br />" />
+<Typo word="=" find="(?i)([\r\n]) *<h1> *([^<]+?) *</h1> *([\r\n])" replace="$1= $2 =$3" />
+<Typo word="==" find="(?i)([\r\n]) *<h2> *([^<]+?) *</h2> *([\r\n])" replace="$1== $2 ==$3" />
+<Typo word="===" find="(?i)([\r\n]) *<h3> *([^<]+?) *</h3> *([\r\n])" replace="$1=== $2 ===$3" />
+<Typo word="====" find="(?i)([\r\n]) *<h4> *([^<]+?) *</h4> *([\r\n])" replace="$1==== $2 ====$3" />
+<Typo word="=====" find="(?i)([\r\n]) *<h5> *([^<]+?) *</h5> *([\r\n])" replace="$1===== $2 =====$3" />
+<Typo word="======" find="(?i)([\r\n]) *<h6> *([^<]+?) *</h6> *([\r\n])" replace="$1====== $2 ======$3" />
+</source>
+
+== Unicode ==
+<source lang="xml">
+<Typo word="&mdash;" find="&mdash;" replace="—" />
+<Typo word="&nbsp;" find="&nbsp;" replace=" " />
+<Typo word="&raquo;" find="&raquo;" replace="»" />
+<Typo word="&laquo;" find="&laquo;" replace="«" />
+</source>
+
+== Wiki-код ==
+<source lang="xml">
+<Typo word="Паўтлустае напісанне" find="\'\'\'Паўтлустае напісанне\'\'\'" replace="" />
+<Typo word="Курсіўнае напісанне" find="\'\'Курсіўнае напісанне\'\'" replace="" />
+<Typo word="Катэгорыя" find="(\[\[|\[\[:)(C|c)ategory:" replace="$1Катэгорыя:" />
+<Typo word="Выява" find="(\[\[|\[\[:)((I|i)mage|(В|в)ыява|(F|f)ile):" replace="$1Выява:" />
+</source>

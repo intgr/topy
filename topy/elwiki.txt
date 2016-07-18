@@ -1,0 +1,4 @@
+<source lang="xml">
+<Typo word="από" find="\b([Αα])πο\b" replace="$1πό"/>
+<Typo word="με/σε" find="\b([ΜμΣσ])έ\b" replace="$1ε"/>
+</source>

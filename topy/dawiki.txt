@@ -1,0 +1,185 @@
+Dette er en liste over ord og udtryk, som ofte er stavet forkert (kaldet ''typos''), og som bliver rettet løbende.
+
+Listen består af [[regulært udtryk|regulære udtryk]], som bruges af ''RegExTypoFix''-funktionen i [[Wikipedia:AutoWikiBrowser|AutoWikiBrowser-programmet]].
+
+Listen er skrevet i [[XML]], og omhandler hvilke ord (og udtryk heraf), som skal erstattes.
+
+Du kan tilføje rettelser herunder. Har du kendskab til en udbredt stavefejl, men har ikke lyst til at rode med XML og regulære udtryk, så kan du smide en besked med fejlen til [[Bruger:Penguin]], som kan tilføje den til listen.
+
+Hver fejlrettelse bliver manuelt godkendt, men listen bør stadigvæk kun indeholde "skudsikre" fejlrettelser.
+
+I nogle artikler findes der udtryk, som kan falde uden for aktuel, dansk sprogbrug. Det kan bl.a. være egennavne eller engelske ord, som ligner stavefejl på dansk. Det kan også være et skriftligt citat, hvor fejlen bør bevares. For eksempel:
+* [[Linie 3]] (''linje'')
+* Avisen [[Idag]] (''I dag'')
+* Færgen [[Skagerak]] (''Skagerrak'').
+
+Her kan man enten modificere reglen til at undgå disse særtilfælde, eller man kan bruge skabelonen [[Skabelon:sic|sic]] til at indkapsle udtrykket og dermed markere, at ordet er korrekt gengivet – korrekt dansk eller ej.
+
+==Liste over typos==
+<big>Alle ændringer til denne liste træder i kraft '''med det samme'''</big>. AWB henter denne liste direkte, når nogen benytter sig af RETF-funktionaliteten.</big>
+
+===Nyeste tilføjelser===
+:''Tilføj nye regler kun i denne sektion, af hensyn til overblikket.''
+
+<source lang="xml">
+<Typo word="Adskillige" find="\b(A|a)dskellige\b" replace="$ldskillige" />
+<Typo word="Reglen" find="\b(R|r)egelen\b" replace="$1eglen" />
+<Typo word="Forholdt" find="\b(F|f)orholdte\b" replace="$1orholdt" />
+<Typo word="Pizzeria" find="\b(P|p)izzaria\b" replace="$1izzeria" />
+<Typo word="Profession" find="\b(P|p)ro(ffess|ffes|fes)ion" replace="$1rofession" />
+<Typo word="Militær" find="\b(M|m)il(l|ll|I)itær" replace="$1ilitær" />
+</source>
+
+===Tilføjelser listet alfabetisk===
+<source lang="xml">
+<Typo word="Åbenlys" find="\b(Å|å)bentlys(t|e)?" replace="$1benlys$2" />
+<Typo word="Abonnere" find="\b(A|a)(bbonn?|bon)ere(r|ede|t|s)?\b" replace="$1bonnere$3" />
+<Typo word="Adresse" find="\b(A|a)ddresse(n|r|rne)?\b" replace="$1dresse$2" />
+<Typo word="Afbuddene" find="\b(A|a)fbudene\b" replace="$1fbuddene" />
+<Typo word="Afbuddet" find="\b(A|a)fbudet\b" replace="$1fbuddet" />
+<Typo word="Alle sammen" find="\b(A|a)llesammen" replace="$1lle sammen" />
+<Typo word="Antagelig" find="\b(A|a)ntageligvis\b" replace="$1ntagelig" />
+<Typo word="Apparat" find="\b(A|a)pperat(et|er|erne)?(s)?\b" replace="$1pparat$2$3" />
+<Typo word="Artikel" find="\b(A|a)rtikel(en|er|erne)(s)?\b" replace="$1rtikl$2$3" />
+<Typo word="At vide" find="\b(A|a)fvide\b" replace="$1t vide" />
+<Typo word="Bekræfte" find="\b(B|b)ekræftige(t|de|r)?\b" replace="$1ekræfte$2" />
+<Typo word="Betegnelse" find="\b(B|b)etegning(e(n))?\b" replace="$1etegnelse$3" />
+<Typo word="Bibliotek" find="\b(B|b)iblotek" replace="$1ibliotek" />
+<Typo word="Bl.a." find="\b(B|b)\.?l(\. )?a\.( ?a\.)?" replace="$1l.a." />
+<Typo word="Bossanova" find="\b(B|b)ossa nova(en|er|erne)?(s)?\b" replace="$1ossanova$2$3" />
+<Typo word="Bræt*" find="\b(B|b)rædt" replace="$1ræt" />
+<Typo word="Bronze*" find="\b(B|b)ronce" replace="$1ronze" />
+<Typo word="Buddet" find="\b(B|b)udet\b" replace="$1uddet" />
+<Typo word="Catalansk" find="\bKatalansk(e)?\b" replace="Catalansk$1" />
+<Typo word="Catalansk" find="\bkatalansk(e)?\b" replace="catalansk$1" />
+<Typo word="Celsius" find="\b(c)elcius\b" replace="$1elsius" />
+<Typo word="Censur" find="\b(C|c)encur(en|ens|ere|eres|eret)?\b" replace="$1ensur$2" />
+<Typo word="Daner" find="\b(D|d)anere\b" replace="$1aner" />
+<Typo word="Definition" find="\b(D|d)efin(a|e)tion" replace="$1efinition" />
+<Typo word="Dilettant" find="\b(D|d)ill?etant(en|er|erne)?(s)?\b" replace="$1ilettant$2$3" />
+<Typo word="Disciplin" find="\b(D|d)iciplin(en|er|erne)?(s)?\b" replace="$1isciplin$2$3" />
+<Typo word="dvs." find="\b(D|d)\. ?v\. ?s\." replace="$1vs." />
+<Typo word="Eksempelvis" find="\b(E|e)ksempelvist\b" replace="$1ksempelvis" />
+<Typo word="Ekskl." find="\b(E|e)xcl\." replace="$1kskl." />
+<Typo word="Eksterne" find="\b(E|e)xterne\b" replace="$1ksterne" />
+<Typo word="Estimat/Estimere" find="\bæstim(at|ere|erede|ering)?\b" replace="estim$2" />
+<Typo word="Estisk" find="\b(E|e)stnisk(e)?\b" replace="$1stisk$2" />
+<Typo word="f.eks." find="\b(F|f)\. eks\." replace="$1.eks." />
+<Typo word="Faldgrube" find="\b(F|f)aldgru(bb|pp)e(n|r|rne)?(s?)\b" replace="$1aldgrube$3$4" />
+<Typo word="For længst" find="\b(F|f)orlængst\b" replace="$1or længst" />
+<Typo word="Fås" find="\b(F|f)åes\b" replace="$1ås" />
+<Typo word="Filippinerne" find="\b(P|p)hilippin(erne|ernes)?\b" replace="Filippin$2" />
+<Typo word="Filippinsk" find="\b(P|p)hilippin(sk|ske|er|ere|erne)?\b" replace="filippin$2" />
+<Typo word="Finansiere" find="\b(F|f)inanciere(r|ede|t|s|ende)?\b" replace="$1inansiere$2" />
+<Typo word="Finansiering" find="\b(F|f)inanciering(en|er|erne)?(s)?\b" replace="$1inansiering$2$3" />
+<Typo word="Følgelig" find="\b(F|f)ølgeligt\b" replace="$1ølgelig" />
+<Typo word="Folketinget" find="\bfolketinget(s)?\b(?!\.dk)" replace="Folketinget$1" />
+<Typo word="Forbuddene" find="\b(F|f)orbudene\b" replace="$1orbuddene" />
+<Typo word="Forbuddet" find="\b(F|f)orbudet\b" replace="$1orbuddet" />
+<Typo word="For nylig" find="\b(F|f)or nyligt\b" replace="$1or nylig" />
+<Typo word="For nylig" find="\b(F|f)ornylig(t)\b" replace="$1or nylig" />
+<Typo word="Forslag" find="\b(F|f)oreslag(et|ene)?(s)?\b" replace="$1orslag$2$3" />
+<Typo word="Forstås" find="\b(F|f)orståes\b" replace="$1orstås" />
+<Typo word="Fredløs" find="\b(F|f)redsløs(e|t)?\b" replace="$1redløs$2" />
+<Typo word="Frem for" find="\b(F|f)remfor\b" replace="$1rem for" />
+<Typo word="Frygtelig" find="\b(F|f)rygtlig(t|e)?" replace="$1rygtelig$2" />
+<Typo word="fx" find="\b([Ff]x)\." replace="$1" />
+<Typo word="Gæstebuddene" find="\b(G|g)æstebudene\b" replace="$1æstebuddene" />
+<Typo word="Gæstebuddet" find="\b(G|g)æstebudet\b" replace="$1æstebuddet" />
+<Typo word="Galionsfigur" find="\b(G|g)allionsfigur(en|er|erne)?(s)?\b" replace="$1alionsfigur$2$3" />
+<Typo word="Gjort" find="\b(G|g)jordt\b" replace="$1jort" />
+<Typo word="Gletsjer" find="\b(G|g)let(c|sc)her(en|e|ne)?(s)?\b" replace="$1letsjer$3$4" />
+<Typo word="*gør" find="\b([Aa]f|[Aa]nskuelig|[Bb]esværlig|[Bb]evidst|[Dd]elagtig|[Dd]ygtig|[Ee]fter|[Ff]remmed|[Ff]ærdig|[Hh]ellig|[Kk]lar|[Kk]ropslig|[Kk]und|[Ll]atterlig|[Ll]ovlig|[Mm]angfoldig|[Mm]ulig|[Nn]ed|[Oo]ffentlig|[Oo]m|[Oo]verflødig|[Pp]ersonlig|[Rr]ede|[Rr]en|[Rr]etfærdig|[Ss]andsynlig|[Tt]ilintet|[Tt]ydelig|[Uu]d|[Uu]dødelig|[Uu]menneskelig|[Uu]myndig|[Uu]skadelig|[Vv]anskelig|[Vv]erdslig|[Vv]idenskabelig|[Vv]irkelig|[Åå]ndelig)gører\b" replace="$1gør" />
+<Typo word="Halvtreds" find="\b(H|h)al(vtres|tres|treds|vtredss)s?(er(ne)?s?)?\b" replace="$1alvtreds$3" />
+<Typo word="Hemmeligstemple" find="\b(H|h)emmeligtstemple(r|de|t)?\b" replace="$1emmeligstemple$2" />
+<Typo word="Henvisning" find="(H|h)envis(nig|ing)(en|er|erne)?(s)?\b" replace="$1envisning$3$4" />
+<Typo word="Hierarki" find="\b(H|h)ieraki(et|er|erne)?(s)?\b" replace="$1ierarki$2$3" />
+<Typo word="Højeste" find="\b(H|h)øjste\b" replace="$1øjeste" />
+<Typo word="Holdt" find="\b(H|h)oldte\b" replace="$1oldt" />
+<Typo word="Hoved" find="\b(H|h)ovede(s)?\b" replace="$1oved$2" />
+<Typo word="Hundredtusindvis" find="\b(H|h)undredetusind(e)vis\b" replace="$1undredtusindvis" />
+<Typo word="Hundredvis" find="\b(H|h)undredevis\b" replace="$1undredvis" />
+<Typo word="Hvad enten" find="\b(H|h)vadenten\b" replace="$1vad enten" />
+<Typo word="Hvad/Hvem/Hvor som helst" find="\b(H|h)(vad|vem|vor)(som|som | som)helst\b" replace="$1$2 som helst" />
+<Typo word="I alt/gang/øvrigt/stedet" find="\b(I|i)(alt|gang|øvrigt|stedet)\b" replace="$1 $2" />
+<Typo word="I dag/går" find="\b(I|i)(dag|går)\b" replace="$1 $2" />
+<Typo word="Ikke" find="\b(I|i)kek\b" replace="$1kke" />
+<Typo word="Inkl." find="\b(I|i)ncl\." replace="$1nkl." />
+<Typo word="I stedet for" find="\b(I|i)(stedet|stedet | stedet)for\b" replace="$1 stedet for" />
+<Typo word="Jf." find="\b(J|j)vn?f\." replace="$1f." />
+<Typo word="Kasakhstan" find="flagikon\|Kazakhstan" replace="flagikon|Kasakhstan" />
+<!-- Kasakhstan-tingen vil nok ikke virke, idet AWB ikke søger inde i skabeloner -->
+<Typo word="Kavaleri" find="\b(K|k)avalleri" replace="$1avaleri" />
+<Typo word="Kirurg(i/isk)" find="\b(K|k)irug(er|ers|erne|ernes|i|ien|isk|iske)?\b" replace="$1irurg$2" />
+<Typo word="Klogelig" find="\b(K|k)logeligt\b" replace="$1logelig" />
+<Typo word="Klokkeslæt" find="\b(K|k)lokkeslet(tet|tene)?(s)?\b" replace="$1lokkeslæt$2$3" />
+<Typo word="Kolossal" find="\b(K|k)o(llos|los|lloss)al(e|t)?\b" replace="$1olossal$3" />
+<Typo word="Konsensus" find="\b(K|k)oncensus\b" replace="$1onsensus" />
+<Typo word="Korrespondance" find="\b(K|k)orrespondence(n|r|rne)?(s)?\b" replace="$1orrespondance$2$3" />
+<Typo word="Kutyme" find="\b(K|k)otume\b" replace="$1utyme" />
+<Typo word="Leverance" find="\b(L|l)everence(n|r|rne)?(s)?\b" replace="$1everance$2$3" />
+<Typo word="Lige meget" find="\b(L|l)igemeget\b" replace="$1ige meget" />
+<Typo word="Lineær" find="\b(L|l)iniær(e|t)?\b" replace="$1ineær$2" />
+<Typo word="Linje(re)" find="\b(?<!(Wiener |Mols-))(L|l)inie(n|r|re|ring|rne)?(s)?\b" replace="$2inje$3$4" />
+<Typo word="Mauretanien" find="\b(M|m)auritan(ien|iens|sk|ske|ier|iere|ierne)?\b" replace="$1auretan$2" />
+<Typo word="Mayonnaise" find="\b(M|m)a(yonai|jonæ)se(n|r|rne)?(s)?\b" replace="$1ayonnaise$3$4" />
+<Typo word="Medlemskab" find="\b(M|m)edlemsskab(et|er|erne)?(s)?\b" replace="$1edlemskab$2$3" />
+<Typo word="Meteorologi" find="\b(M|m)eteologi(s|en|ens|sk)?\b" replace="$1eteorologi$2" />
+<Typo word="m.fl." find="\b(M|m)\. fl\." replace="$1.fl." />
+<Typo word="Når som helst" find="\b(N|n)år(som|som | som)helst\b" replace="$1år som helst" />
+<Typo word="Navnlig" find="\b(N|n)avnligt\b" replace="$1avnlig" />
+<Typo word="Nemlig" find="\b(N|n)emligt\b" replace="$1emlig" />
+<Typo word="Øjenhøjde" find="\b(Ø|ø)jehøjde(n|er|erne)?(s)?\b" replace="$1jenhøjde$2$3" />
+<Typo word="osv." find="\b(O|o)\. ?s\. ?v\." replace="$1sv." />
+<Typo word="Påbuddene" find="\b(P|p)åbude(t|ne)\b" replace="$1åbudde$2" />
+<Typo word="På ny" find="\b(P|p)åny\b" replace="$1å ny" />
+<Typo word="Parentes" find="\b(P|p)arantes(en|er|erne)?(s)?\b" replace="$1arentes$2$3" />
+<Typo word="Pasodoble" find="\b(P|p)aso doble(n|r|rne)?(s)?\b" replace="$1asodoble$2$3" />
+<Typo word="pga." find="\b(P|p)\. ?g\. ?a\." replace="$1ga." />
+<Typo word="Programmere" find="(P|p)rogramere(r|de|s|t)\b" replace="$1rogrammere$2" />
+<Typo word="Programmering" find="(P|p)rogramering" replace="$1rogrammering" />
+<Typo word="Programmør" find="(P|p)rogramør(en|er|erne)?(s)?" replace="$1rogrammør$2$3" />
+<Typo word="Reference" find="\b(R|r)eferance(n|r|rne)?(s)?\b" replace="$1eference$2$3" />
+<Typo word="Refleksion" find="\b(R|r)eflektion(en|er|erne)?(s)?\b" replace="$1efleksion$2$3" />
+<Typo word="Renommé" find="\b(R|r)enom(e|é)" replace="$1enomm$2" />
+<Typo word="Rettelig" find="\b(R|r)etteligt\b" replace="$1ettelig" />
+<Typo word="Rokoko" find="\b(R|r)okokko((en|er|erne)?(s?)\b)?" replace="$1okoko$2" />
+<Typo word="Sædvanligvis" find="\b(S|s)ædvanlig(|t)vis(|t)\b" replace="$1ædvanligvis" />
+<Typo word="Så længe" find="\b(S|s)ålænge\b" replace="$1å længe" />
+<Typo word="Sanskrit" find="\b(S|s)anskrift(s)?\b" replace="$1anskrit$2" />
+<Typo word="Satellit" find="\b(S|s)a(tel|ttel|ttell)it(ten|ter|terne)?(s)?\b" replace="$1atellit$3$4" />
+<Typo word="Sekondløjtnant" find="\b(S|s)ekundløjtnant(en|er|erne)?\b" replace="$1ekondløjtnant$2" />
+<Typo word="Seksualitet" find="(S|s)exualitet" replace="$1eksualitet" />
+<Typo word="Seksuel" find="(S|s)exuel" replace="$1eksuel" />
+<Typo word="Selskab" find="(S|s)elvskab(et|er|erne)?(s)?\b" replace="$1elskab$2$3" />
+<Typo word="Sendebuddene" find="\b(S|s)endebudene\b" replace="$1endebuddene" />
+<Typo word="Sendebuddet" find="\b(S|s)endebudet\b" replace="$1endebuddet" />
+<Typo word="Separat/Separere" find="\b(S|s)eper(at|ere)" replace="$1epar$2" />
+<Typo word="Skagerrak" find="\bSkagerak(s)?\b" replace="Skagerrak$1" />
+<!-- Der er dog en færge (og artikel om samme) ved navn "Skagerak" -->
+<Typo word="Slitage" find="\b(S|s)lidtage(n)?\b" replace="$1litage$2" />
+<Typo word="Sovjetisk" find="\b(s)ovjettisk\b" replace="$1ovjetisk" />
+<Typo word="Spørgsmål" find="\b(S|s)pørsmål" replace="$1pørgsmål" />
+<Typo word="Storbritannien" find="\b(S|s)tor(brit|britt)an(nien|ien)" replace="$1torbritannien" />
+<Typo word="Så vidt" find="\b(S|s)åvidt\b" replace="$1å vidt" />
+<Typo word="Temmelig" find="\b(T|t)emmeligt\b" replace="$1emmelig" />
+<Typo word="Tilbuddene" find="\b(T|t)ilbudene\b" replace="$1ilbuddene" />
+<Typo word="Tilbuddet" find="\b(T|t)ilbudet\b" replace="$1ilbuddet" />
+<Typo word="Til sidst" find="\b(T|t)ilsidst\b" replace="$1il sidst" />
+<Typo word="Tjekke" find="\bchecke(r|t)?\b" replace="tjekke$1" />
+<Typo word="Tør" find="\b(T|t)øer\b" replace="$1ør" />
+<Typo word="Trafikere" find="\b(T|t)ra(ffik|fikk)ere(t|de|r|s)?\b" replace="$1rafikere$3" />
+<Typo word="Trafik" find="\b(T|t)raffik(ken)?(s)?\b" replace="$1rafik$2$3" />
+<Typo word="Transparent" find="\b(T|t)ransperant\b" replace="$1ransparent" />
+<Typo word="Tredje" find="\b(T|t)redie\b" replace="$1redje" />
+<Typo word="Tres" find="\b(T|t)reds\b" replace="$1res" />
+<Typo word="Tresserne" find="\b(T|t)redss?(er(ne)?s?)\b" replace="$1ress$2" />
+<Typo word="Tusindvis" find="\b(T|t)usindevis\b" replace="$1usindvis" />
+<Typo word="Ud fra" find="\b(U|u)dfra\b" replace="$1d fra" />
+<Typo word="Udbuddet" find="\b(U|u)dbudet\b" replace="$1dbuddet" />
+<Typo word="Udbuddene" find="\b(U|u)dbudene\b" replace="$1dbuddene" />
+<Typo word="Udmærket" find="\b(U|u)demærket\b" replace="$1dmærket" />
+<Typo word="Unægtelig" find="\b(U|u)nægteligt\b" replace="$1nægtelig" />
+<Typo word="Underholdsbidrag" find="\b(U|u)nderholdnings?bidrag(et|ene)?\b" replace="$1nderholdsbidrag$2" />
+<Typo word="Væske" find="\b(V|v)ædske(n|r|rne)?(s)?\b" replace="$1æske$2$3" />
+<Typo word="Victoriansk" find="\b(V|v)iktoriansk(e)?\b" replace="$1ictoriansk$2" /></source>

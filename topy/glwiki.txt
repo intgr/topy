@@ -1,0 +1,913 @@
+{{CompactTOC}}
+
+== Traballo pendente ==
+*-mente -> Os adverbios en ''-mente'' non levan til.
+*''ir + infinitivo'' incoativo (non leva a preposición ''a''). ''Ía cantar'' =ía comezar a cantar, ''ía '''a''' cantar'' pola rúa= ía cantando pola rúa.
+*''volver + infinitivo'' (non leva a preposición ''a'').
+*A terminación verbal -iu non se acentúa (agás en tritongos como en ''saíu''): '''''Ex: '''partiu, pediu...''
+*Os verbos rematados en ''-uír'' sempre levan til no seu infinitivo: ex. '''construír'''.
+*ter + participio: en galego, esta perífrase só é correcta cando se refire a un feito reiterativo, repetido: ''teño feitas mil correccións na Galipedia'', non con valor perfectivo equivalente ó castelán ''haber + participio'' (*''Téñense censado 2.141 exiliados galegos'').
+
+==Lista de erros==
+===A===
+<source lang="xml">
+<Typo word="1) soleta" find="\bPlantilla\b" replace="1) soleta" /> <!-- (do calzado) '''2) modelo''', patrón '''3) cadro de persoal''' -->
+<Typo word="1) soleta" find="\bplantilla\b" replace="1) soleta" /> <!-- (do calzado) '''2) modelo''', patrón '''3) cadro de persoal''' -->
+<Typo word="a grandes trazos" find="\b([Aa]) grandes rasgos\b" replace="$1 grandes trazos" />
+<Typo word="á parte" find="\bAparte\b" replace="Á parte" />
+<Typo word="á parte" find="\baparte\b" replace="á parte" />
+<Typo word="a partir de" find="\b([Aa]) partires de\b" replace="$1 partir de" />
+<Typo word="abade" find="\b([Aa])bate\b" replace="$1bade" />
+<Typo word="abafar" find="\b([Aa])bechornar\b" replace="$1bafar" /> <!-- '''avergoñar''' -->
+<Typo word="abafar" find="\b([Aa])bichornar\b" replace="$1bafar" /> <!-- '''avergoñar''' -->
+<Typo word="abafar" find="\b([Aa])brumar\b" replace="$1bafar" />
+<Typo word="abandonar" find="\b([Aa])bandoar\b" replace="$1bandonar" />
+<Typo word="abatemento" find="\b([Aa])batimento\b" replace="$1batemento" />
+<Typo word="abater" find="\b([Aa])batir\b" replace="$1bater" />
+<Typo word="abdome" find="\b([Aa])bdomen\b" replace="$1bdome" />
+<Typo word="abeberar" find="\b([Aa])brevar\b" replace="$1beberar" />
+<Typo word="abellaruco" find="\b([Aa])bellaruxo\b" replace="$1bellaruco" />
+<Typo word="abellón" find="\b([Aa])bexorro\b" replace="$1bellón" />
+<Typo word="aboladura" find="\b([Aa])bolladura\b" replace="$1boladura" />
+<Typo word="abolar" find="\b([Aa])bollar\b" replace="$1bolar" />
+<Typo word="aborixe" find="\b([Aa])borixen\b" replace="$1borixe" />
+<Typo word="aborrecer" find="\b([Aa])borrescer\b" replace="$1borrecer" />
+<Typo word="abotoar" find="\b([Aa])botonar\b" replace="$1botoar" />
+<Typo word="abrancuzado" find="\b([Aa])blancazado\b" replace="$1brancuzado" />
+<Typo word="abrancuzado" find="\b([Aa])blancuzado\b" replace="$1brancuzado" />
+<Typo word="abrandar" find="\b([Aa])blandar\b" replace="$1brandar" />
+<Typo word="abrillantar" find="\b([Aa])brilantar\b" replace="$1brillantar" />
+<Typo word="ábsida" find="\bÁbside\b" replace="Ábsida" />
+<Typo word="ábsida" find="\bábside\b" replace="ábsida" />
+<Typo word="acabado de" find="\bRecén\b" replace="Acabado de" />
+<Typo word="acabado de" find="\brecén\b" replace="acabado de" />
+<Typo word="acantoar" find="\b([Aa])rrinconar\b" replace="$1cantoar" /> <!-- '''acurrunchar''', '''arrecunchar''' -->
+<Typo word="achado" find="\b([Aa])chádego\b" replace="$1chado" />
+<Typo word="achado" find="\bHachádego\b" replace="Achado" />
+<Typo word="achado" find="\bhachádego\b" replace="achado" />
+<Typo word="achado" find="\bHallazgo\b" replace="Achado" />
+<Typo word="achado" find="\bhallazgo\b" replace="achado" />
+<Typo word="achegar" find="\b([Aa])dxuntar\b" replace="$1chegar" />
+<Typo word="achegar" find="\b([Aa])portar\b" replace="$1chegar" /> <!-- '''contribuír''' (''aportar'' só equivale a ''chegar a porto'') -->
+<Typo word="acibeche" find="\b([Aa])cibache\b" replace="$1cibeche" />
+<Typo word="acibeche" find="\b([Aa])zabache\b" replace="$1cibeche" />
+<Typo word="acio" find="\bRacimo\b" replace="Acio" />
+<Typo word="acio" find="\bracimo\b" replace="acio" />
+<Typo word="acne" find="\b([Aa])cné\b" replace="$1cne" />
+<Typo word="actuar" find="\b([Aa])tuar\b" replace="$1ctuar" /> <!-- (''pero ollo: existe '''atuar''' = "tratar de ti"'') -->
+<Typo word="acueduto" find="\b([Aa])cueducto\b" replace="$1cueduto" />
+<Typo word="ademais" find="\b([Aa])demáis\b" replace="$1demais" /> <!-- '''amais''' -->
+<Typo word="adoptar" find="\b([Aa])doitar\b" replace="$1doptar" /> <!-- (pero '''adoitar''' vale co significado de ''ter por costume, ser habitual'') -->
+<Typo word="adro" find="\b([Aa])trio\b" replace="$1dro" />
+<Typo word="afago" find="\bHalago\b" replace="Afago" />
+<Typo word="afago" find="\bhalago\b" replace="afago" />
+<Typo word="afastar" find="\b([Aa])lonxar\b" replace="$1fastar" />
+<Typo word="aí" find="\b([Aa])hí\b" replace="$1í" />
+<Typo word="aínda que" find="\b([Aa])inda que\b" replace="$1índa que" />
+<Typo word="aínda que" find="\b([Aa])nque\b" replace="$1índa que" />
+<Typo word="aínda que" find="\b([Aa])nque\b" replace="$1índa que" />
+<Typo word="aínda" find="\bTodavía\b" replace="Aínda" />
+<Typo word="aínda" find="\btodavía\b" replace="aínda" />
+<Typo word="álbum" find="\bAlbum\b" replace="Álbum" />
+<Typo word="álbum" find="\balbum\b" replace="álbum" />
+<Typo word="álbums" find="\bÁlbumes\b" replace="Álbums" />
+<Typo word="álbums" find="\bálbumes\b" replace="álbums" />
+<Typo word="alemáns" find="\b([Aa])lemanes\b" replace="$1lemáns" />
+<Typo word="aliaxe" find="\b([Aa])leación\b" replace="$1liaxe" />
+<Typo word="aliñar" find="\b([Aa])linear\b" replace="$1liñar" />
+<Typo word="almorábide" find="\b([Aa])lmorávide\b" replace="$1lmorábide" />
+<Typo word="alxibe" find="\b([Aa])lgibe\b" replace="$1lxibe" />
+<Typo word="amodo, paseniño, devagar" find="\bDespacio\b" replace="Amodo, paseniño, devagar" />
+<Typo word="amodo, paseniño, devagar" find="\bdespacio\b" replace="amodo, paseniño, devagar" />
+<Typo word="amortecedor" find="\b([Aa])mortiguador\b" replace="$1mortecedor" />
+<Typo word="amortecer" find="\b([Aa])mortiguar\b" replace="$1mortecer" />
+<Typo word="análise" find="\b([Aa])nálisis\b" replace="$1nálise" /> <!-- (fem.) -->
+<Typo word="andoriña" find="\b([Aa])nduriña\b" replace="$1ndoriña" />
+<Typo word="andoriña" find="\bGolondrina\b" replace="Andoriña" />
+<Typo word="andoriña" find="\bgolondrina\b" replace="andoriña" />
+<Typo word="aniversario" find="\bCumpreanos\b" replace="Aniversario" />
+<Typo word="aniversario" find="\bcumpreanos\b" replace="aniversario" />
+<Typo word="anódino" find="\b([Aa])nodino\b" replace="$1nódino" />
+<Typo word="antigüidade" find="\b([Aa])ntigüedade\b" replace="$1ntigüidade" />
+<Typo word="ao menos, polo menos" find="\b([Aa])lomenos\b" replace="$1o menos, polo menos" />
+<Typo word="aparcadoiro" find="\b([Aa])parcamento\b" replace="$1parcadoiro" />
+<Typo word="aparencia" find="\b([Aa])pariencia\b" replace="$1parencia" />
+<Typo word="apertar" find="\b([Aa])preta(r?)\b" replace="$1perta$2" />
+<Typo word="apoiar" find="\brespaldar\b" replace="apoiar" />
+<Typo word="apoiar" find="\bRespaldar\b" replace="Apoiar" /><!-- , protexer, amparar -->
+<Typo word="apostila" find="\b([Aa])postilla\b" replace="$1postila" />
+<Typo word="apupar" find="\b([Aa])buchear\b" replace="$1pupar" />
+<Typo word="aquí" find="\bEiquí\b" replace="Aquí" />
+<Typo word="aquí" find="\beiquí\b" replace="aquí" />
+<Typo word="aquilo" find="\b([Aa])quelo\b" replace="$1quilo" />
+<Typo word="aramado" find="\b([Aa])lambrada\b" replace="$1ramado" />
+<Typo word="arame" find="\b([Aa])lambre\b" replace="$1rame" />
+<Typo word="arame" find="\b([Aa])ramio\b" replace="$1rame" />
+<Typo word="aresta" find="\b([Aa])rista\b" replace="$1resta" />
+<Typo word="arrabalde" find="\b([Aa])rrabaldo\b" replace="$1rrabalde" />
+<Typo word="arrefriar" find="\benfriar\b" replace="arrefriar" />
+<Typo word="arrefriar" find="\bEnfriar\b" replace="Arrefriar" /> <!-- ou '''arrefecer''' -->
+<Typo word="arroutada" find="\bVenada\b" replace="Arroutada" />
+<Typo word="arroutada" find="\bvenada\b" replace="arroutada" />
+<Typo word="arroutado/a" find="\b([Aa])beado/a\b" replace="$1rroutado/a" />
+<Typo word="ás veces" find="\bA veces\b" replace="Ás veces" />
+<Typo word="ás veces" find="\ba veces\b" replace="ás veces" />
+<Typo word="asasinar" find="\b([Aa])sesin(ar|o)\b" replace="$1sasin$2" />
+<Typo word="asemblea" find="\b([Aa])samblea\b" replace="$1semblea" /> <!-- ; '''xunta, xuntanza, reunión''' -->
+<Typo word="así mesmo" find="\b([Aa])simesmo\b" replace="$1sí mesmo" />
+<Typo word="ata" find="\bHasta (prep.)\b" replace="Ata" /> <!-- ou '''até''' (prep.) ('''ollo:''' unha ''hasta'' pode ser un corno ou un pau longo) -->
+<Typo word="ata" find="\bhasta (prep.)\b" replace="ata" /> <!-- ou '''até''' (prep.) ('''ollo:''' unha ''hasta'' pode ser un corno ou un pau longo) -->
+<Typo word="aterraxe" find="\b([Aa])terrizaxe\b" replace="$1terraxe" />
+<Typo word="autoestrada" find="\b([Aa])utopista\b" replace="$1utoestrada" />
+<Typo word="automóbil" find="\b([Aa])utomóvil\b" replace="$1utomóbil" />
+<Typo word="avagar" find="\b([Aa])bagar\b" replace="$1vagar" />
+<Typo word="avaría" find="\b([Aa])vería\b" replace="$1varía" />
+<Typo word="avecer" find="\b([Aa])becer\b" replace="$1vecer" />
+<Typo word="avegar" find="\b([Aa])begar\b" replace="$1vegar" />
+<Typo word="avermellado" find="\b([Aa])bermellado\b" replace="$1vermellado" />
+<Typo word="avinza" find="\b([Aa])biñanza\b" replace="$1vinza" />
+<Typo word="avinza" find="\b([Aa])binza\b" replace="$1vinza" />
+<Typo word="avinzar" find="\b([Aa])biñanzar\b" replace="$1vinzar" />
+<Typo word="avó/avoa" find="\b([Aa])bó/aboa\b" replace="$1vó/avoa" />
+<Typo word="avoengo" find="\b([Aa])boengo\b" replace="$1voengo" />
+<Typo word="avoengo" find="\b([Aa])boenza\b" replace="$1voengo" />
+<Typo word="avoengo" find="\b([Aa])bolencia\b" replace="$1voengo" />
+<Typo word="avoengo" find="\b([Aa])bolengo\b" replace="$1voengo" />
+<Typo word="avogacía" find="\b([Aa])bogacía\b" replace="$1vogacía" />
+<Typo word="avogado" find="\b([Aa])bogado\b" replace="$1vogado" />
+<Typo word="ávrego" find="\bÁbrego\b" replace="Ávrego" />
+<Typo word="ávrego" find="\bábrego\b" replace="ávrego" />
+<Typo word="azucre" find="\bZucre\b" replace="Azucre" />
+<Typo word="azucre" find="\bzucre\b" replace="azucre" />
+</source>
+
+===B===
+<source lang="xml">
+<Typo word="bacallau" find="\b([Bb])acallao\b" replace="$1acallau" />
+<Typo word="badalada" find="\bCampanada\b" replace="Badalada" />
+<Typo word="badalada" find="\bcampanada\b" replace="badalada" />
+<Typo word="baga" find="\b([Bb])aia\b" replace="$1aga" />
+<Typo word="baía" find="\b([Bb])ahía\b" replace="$1aía" />
+<Typo word="balanza de pagamentos" find="\b([Bb])alanza de pagos\b" replace="$1alanza de pagamentos" />
+<Typo word="balaústre" find="\b([Bb])alaguste\b" replace="$1alaústre" />
+<Typo word="balaústre" find="\b([Bb])alagustro\b" replace="$1alaústre" />
+<Typo word="baleirar" find="\bVal(d?)eir(ar|o)\b" replace="Bal$1eir$2" />
+<Typo word="baleirar" find="\bval(d?)eir(ar|o)\b" replace="bal$1eir$2" />
+<Typo word="base" find="\b([Bb])asa\b" replace="$1ase" />
+<Typo word="basear" find="\b([Bb])asar\b" replace="$1asear" />
+<Typo word="bater" find="\b([Bb])atir\b" replace="$1ater" />
+<Typo word="beira" find="\b([Bb])orde\b" replace="$1eira" /> <!-- '''marxe''', '''bordo''', '''canto''', '''esquina''' -->
+<Typo word="beirarrúa" find="\bAcera\b" replace="Beirarrúa" />
+<Typo word="beirarrúa" find="\bacera\b" replace="beirarrúa" />
+<Typo word="beliscar" find="\bAbellizcar\b" replace="Beliscar" />
+<Typo word="beliscar" find="\babellizcar\b" replace="beliscar" />
+<Typo word="belota" find="\bAbellota\b" replace="Belota" />
+<Typo word="belota" find="\babellota\b" replace="belota" />
+<Typo word="bérber" find="\b([Bb])ereber\b" replace="$1érber" />
+<Typo word="berce" find="\bCuna\b" replace="Berce" />
+<Typo word="berce" find="\bcuna\b" replace="berce" />
+<Typo word="billa" find="\bGrifo\b" replace="Billa" />
+<Typo word="billa" find="\bgrifo\b" replace="billa" />
+<Typo word="bo" find="\b([Bb])ó\b" replace="$1o" />
+<Typo word="bocexo" find="\b([Bb])ostezo\b" replace="$1ocexo" />
+<Typo word="bolboreta" find="\bMariposa\b" replace="Bolboreta" />
+<Typo word="bolboreta" find="\bmariposa\b" replace="bolboreta" />
+<Typo word="bolboreta" find="\bVolvoreta\b" replace="Bolboreta" />
+<Typo word="bolboreta" find="\bvolvoreta\b" replace="bolboreta" />
+<Typo word="bolseiro" find="\b([Bb])ecario\b" replace="$1olseiro" />
+<Typo word="bolsista" find="\b([Bb])ursátil\b" replace="$1olsista" />
+<Typo word="brillar" find="\b([Bb])ril(ar|o)\b" replace="$1rill$2" />
+<Typo word="brión" find="\bMusgo\b" replace="Brión" /> <!-- '''mofo''', '''carriza'''. ''Musgo'' é válido aplicado a alguén que ten os ollos semipechados -->
+<Typo word="brión" find="\bmusgo\b" replace="brión" /> <!-- '''mofo''', '''carriza'''. ''Musgo'' é válido aplicado a alguén que ten os ollos semipechados -->
+<Typo word="burato, buraco, furado" find="\bAguxeiro\b" replace="Burato, buraco, furado" />
+<Typo word="burato, buraco, furado" find="\baguxeiro\b" replace="burato, buraco, furado" />
+<Typo word="busca" find="\b([Bb])úsqueda\b" replace="$1usca" />
+</source>
+
+===C===
+<source lang="xml">
+<Typo word="cabaza" find="\b([Cc])alabaza\b" replace="$1abaza" />
+<Typo word="cabazo" find="\b([Cc])alabacín\b" replace="$1abazo" />
+<Typo word="cabicha" find="\b([Cc])olilla\b" replace="$1abicha" />
+<Typo word="cabido" find="\b([Cc])abildo\b" replace="$1abido" />
+<Typo word="cachotería" find="\bMampostería\b" replace="Cachotería" />
+<Typo word="cachotería" find="\bmampostería\b" replace="cachotería" />
+<Typo word="cadeado" find="\b([Cc])andado\b" replace="$1adeado" />
+<Typo word="cadeira de brazos" find="\bSillón\b" replace="Cadeira de brazos" />
+<Typo word="cadeira de brazos" find="\bsillón\b" replace="cadeira de brazos" />
+<Typo word="cadeira" find="\bSilla\b" replace="Cadeira" />
+<Typo word="cadeira" find="\bsilla\b" replace="cadeira" />
+<Typo word="caixa do correo" find="\bBuzón\b" replace="Caixa do correo" />
+<Typo word="caixa do correo" find="\bbuzón\b" replace="caixa do correo" />
+<Typo word="calcaria" find="\b([Cc])aliza\b" replace="$1alcaria" />
+<Typo word="caloroso/a" find="\b([Cc])aluroso/a\b" replace="$1aloroso/a" />
+<Typo word="calquera" find="\b([Cc])alque(?:ira|r)\b" replace="$1alquera" />
+<Typo word="calquera" find="\b([Cc])ualquera\b" replace="$1alquera" />
+<Typo word="cambra" find="\b([Cc])alambre\b" replace="$1ambra" />
+<Typo word="candorca" find="\bOrca\b" replace="Candorca" />
+<Typo word="candorca" find="\borca\b" replace="candorca" />
+<Typo word="canón" find="\b([Cc])añón\b" replace="$1anón" />
+<Typo word="cantaría" find="\b([Cc])anteiría\b" replace="$1antaría" />
+<Typo word="cantería" find="\bSillería\b" replace="Cantería" /> <!-- ou '''cantaría''' -->
+<Typo word="cantería" find="\bsillería\b" replace="cantería" /> <!-- ou '''cantaría''' -->
+<Typo word="capela" find="\b([Cc])apilla\b" replace="$1apela" />
+<Typo word="cara a" find="\bHacea\b" replace="Cara a" />
+<Typo word="cara a" find="\bhacea\b" replace="cara a" />
+<Typo word="cara a" find="\bHacia\b" replace="Cara a" />
+<Typo word="cara a" find="\bhacia\b" replace="cara a" />
+<Typo word="carballo" find="\bRoble\b" replace="Carballo" />
+<Typo word="carballo" find="\broble\b" replace="carballo" />
+<Typo word="cartilaxe" find="\b([Cc])artílago\b" replace="$1artilaxe" /> <!-- (fem.) -->
+<Typo word="casarío" find="\b([Cc])aserío\b" replace="$1asarío" />
+<Typo word="cascuda" find="\b([Cc])ucaracha\b" replace="$1ascuda" />
+<Typo word="cazapo" find="\bGazapo\b" replace="Cazapo" />
+<Typo word="cazapo" find="\bgazapo\b" replace="cazapo" />
+<Typo word="cedo" find="\bTemprano\b" replace="Cedo" />
+<Typo word="cedo" find="\btemprano\b" replace="cedo" />
+<Typo word="cela" find="\b([Cc])elda\b" replace="$1ela" />
+<Typo word="celos" find="\b([Cc])i[úu]mes\b" replace="$1elos" />
+<Typo word="cepelín" find="\bZepelín\b" replace="Cepelín" />
+<Typo word="cepelín" find="\bzepelín\b" replace="cepelín" />
+<Typo word="cerramento" find="\b([Cc])erre\b" replace="$1erramento" /> <!-- '''peche''' -->
+<Typo word="cesamento" find="\b([Cc])ese\b" replace="$1esamento" />
+<Typo word="chanceler" find="\b([Cc])anciller\b" replace="$1hanceler" />
+<Typo word="charramangueiro" find="\bKitsch\b" replace="Charramangueiro" />
+<Typo word="charramangueiro" find="\bkitsch\b" replace="charramangueiro" />
+<Typo word="chícharo, ervella" find="\bGuisante\b" replace="Chícharo, ervella" />
+<Typo word="chícharo, ervella" find="\bguisante\b" replace="chícharo, ervella" />
+<Typo word="ciborio" find="\b([Cc])imborrio\b" replace="$1iborio" />
+<Typo word="cirio" find="\bvela\b" replace="cirio" />
+<Typo word="cirio" find="\bVela\b" replace="Cirio" /> <!-- '''candea''' (en galego, ''vela'' só ten o significado da peza dos barcos, o deporte e a acción de velar) -->
+<Typo word="cirurxián" find="\b([Cc])irurxán\b" replace="$1irurxián" />
+<Typo word="club" find="\b([Cc])lube\b" replace="$1lub" />
+<Typo word="co fin de" find="\bEn aras de\b" replace="Co fin de" />
+<Typo word="co fin de" find="\ben aras de\b" replace="co fin de" />
+<Typo word="codia" find="\b([Cc])orteza\b" replace="$1odia" />
+<Typo word="cóengo" find="\b([Cc])oengo\b" replace="$1óengo" />
+<Typo word="cogomelo" find="\bSeta (fungo)\b" replace="Cogomelo" />
+<Typo word="cogomelo" find="\bseta (fungo)\b" replace="cogomelo" />
+<Typo word="combater" find="\b([Cc])ombatir\b" replace="$1ombater" />
+<Typo word="comigo" find="\b([Cc])onmigo\b" replace="$1omigo" />
+<Typo word="compás" find="\bBrúxula\b" replace="Compás" />
+<Typo word="compás" find="\bbrúxula\b" replace="compás" />
+<Typo word="concello" find="\bAxuntamento\b" replace="Concello" />
+<Typo word="concello" find="\baxuntamento\b" replace="concello" />
+<Typo word="concepto" find="\b([Cc])onceito\b" replace="$1oncepto" />
+<Typo word="condenar" find="\b([Cc])ondear\b" replace="$1ondenar" /> <!-- (e '''condena''') -->
+<Typo word="confeitaría" find="\b([Cc])onfitería\b" replace="$1onfeitaría" />
+<Typo word="conflito" find="\b([Cc])onflicto\b" replace="$1onflito" />
+<Typo word="confucianismo" find="\b([Cc])onfucionismo\b" replace="$1onfucianismo" />
+<Typo word="conseguir" find="\b([Cc])onquerir\b" replace="$1onseguir" />
+<Typo word="construción" find="\b([Cc])onstrucción\b" replace="$1onstrución" />
+<Typo word="contorno" find="\bEntorn([oa])\b" replace="Contorn$1" />
+<Typo word="contorno" find="\bentorn([oa])\b" replace="contorn$1" />
+<Typo word="contrasinal" find="\b([Cc])ontraseña\b" replace="$1ontrasinal" />
+<Typo word="contribución" find="\bAportación\b" replace="Contribución" /> <!-- '''colaboración''', '''achega''' -->
+<Typo word="contribución" find="\baportación\b" replace="contribución" /> <!-- '''colaboración''', '''achega''' -->
+<Typo word="converter" find="\b([Cc])onvertir\b" replace="$1onverter" />
+<Typo word="cornixa" find="\b([Cc])ornisa\b" replace="$1ornixa" />
+<Typo word="corrección" find="\b([Cc])orreción\b" replace="$1orrección" />
+<Typo word="corredor" find="\bPasillo\b" replace="Corredor" />
+<Typo word="corredor" find="\bpasillo\b" replace="corredor" />
+<Typo word="corrixir" find="\b([Cc])orrexir\b" replace="$1orrixir" />
+<Typo word="costarriqueño" find="\b([Cc])ostarricense\b" replace="$1ostarriqueño" />
+<Typo word="cota" find="\b([Cc])upo\b" replace="$1ota" />
+<Typo word="covarde" find="\b([Cc])obarde\b" replace="$1ovarde" />
+<Typo word="cranio" find="\b([Cc])rán[ei]o\b" replace="$1ranio" />
+<Typo word="crer" find="\b([Cc])reer\b" replace="$1rer" />
+<Typo word="cru" find="\b([Cc])rudo\b" replace="$1ru" />
+<Typo word="crúa" find="\b([Cc])ruda\b" replace="$1rúa" />
+<Typo word="cueiro" find="\bPañal\b" replace="Cueiro" />
+<Typo word="cueiro" find="\bpañal\b" replace="cueiro" />
+<Typo word="culler" find="\b([Cc])uchara\b" replace="$1uller" />
+<Typo word="culleriña" find="\b([Cc])ucharilla\b" replace="$1ulleriña" />
+<Typo word="cumprir" find="\b([Cc])umplir\b" replace="$1umprir" />
+<Typo word="cuñar" find="\bAcuñar\b" replace="Cuñar" /> <!-- (no referente á moeda) -->
+<Typo word="cuñar" find="\bacuñar\b" replace="cuñar" /> <!-- (no referente á moeda) -->
+<Typo word="cunca" find="\bTaza\b" replace="Cunca" />
+<Typo word="cunca" find="\btaza\b" replace="cunca" />
+<Typo word="curral" find="\b([Cc])orral\b" replace="$1urral" />
+<Typo word="curto" find="\b([Cc])orto\b" replace="$1urto" />
+<Typo word="cuxa/o/as/os" find="\b([Cc])uia/o/as/os\b" replace="$1uxa/o/as/os" />
+</source>
+
+===D===
+<source lang="xml">
+<Typo word="daniño" find="\b([Dd])añino\b" replace="$1aniño" />
+<Typo word="dar prioridade" find="\bPriorizar\b" replace="Dar prioridade" />
+<Typo word="dar prioridade" find="\bpriorizar\b" replace="dar prioridade" />
+<Typo word="de todas as maneiras" find="\b([Dd])e todas maneiras\b" replace="$1e todas as maneiras" />
+<Typo word="decatarse" find="\bentei?rarse\b" replace="decatarse" />
+<Typo word="decatarse" find="\bEntei?rarse\b" replace="Decatarse" /> <!-- saber de, coñecer, informarse, darse de conta, ter coñecemento -->
+<Typo word="décatlon" find="\b([Dd])ecatl[óo]n\b" replace="$1écatlon" />
+<Typo word="décimo" find="\b([Dd])e[sz]mo\b" replace="$1écimo" /> <!-- (imposto) -->
+<Typo word="décimo" find="\b([Dd])ezmo\b" replace="$1écimo" />
+<Typo word="delito" find="\b([Dd])elicto\b" replace="$1elito" />
+<Typo word="derreter" find="\b([Dd])erretir\b" replace="$1erreter" />
+<Typo word="desafiuzamento" find="\b([Dd])esahucio\b" replace="$1esafiuzamento" />
+<Typo word="desalgar" find="\b([Dd])esalar\b" replace="$1esalgar" />
+<Typo word="descrición" find="\b([Dd])escripción\b" replace="$1escrición" />
+<Typo word="descubrir" find="\bAveriguar\b" replace="Descubrir" />
+<Typo word="descubrir" find="\baveriguar\b" replace="descubrir" />
+<Typo word="desculpa" find="\b([Dd])isculpa\b" replace="$1esculpa" />
+<Typo word="desparafusador" find="\bHachuela\b" replace="Desparafusador" />
+<Typo word="desparafusador" find="\bhachuela\b" replace="desparafusador" />
+<Typo word="despedimento" find="\b([Dd])espido\b" replace="$1espedimento" />
+<Typo word="destino" find="\b([Dd])estiño\b" replace="$1estino" />
+<Typo word="detalle, reparto, especificación" find="\b([Dd])esglose\b" replace="$1etalle, reparto, especificación" />
+<Typo word="deterioramento" find="\b([Dd])eterioro\b" replace="$1eterioramento" />
+<Typo word="devasa" find="\bCortafogos\b" replace="Devasa" />
+<Typo word="devasa" find="\bcortafogos\b" replace="devasa" />
+<Typo word="dicionario" find="\b([Dd])iccionario\b" replace="$1icionario" />
+<Typo word="dicir" find="\b([Dd])ecir\b" replace="$1icir" />
+<Typo word="diferenza" find="\b([Dd])iferencia\b" replace="$1iferenza" /> <!-- (subst., pero o verbo é '''diferenciar''') -->
+<Typo word="difrace" find="\b([Dd])isfraz\b" replace="$1ifrace" />
+<Typo word="diocese" find="\b([Dd])iócese\b" replace="$1iocese" />
+<Typo word="distante" find="\bLonxano\b" replace="Distante" /> <!-- '''arredado''', '''afastado''', '''apartado''' ou '''remoto''' -->
+<Typo word="distante" find="\blonxano\b" replace="distante" /> <!-- '''arredado''', '''afastado''', '''apartado''' ou '''remoto''' -->
+<Typo word="distinción" find="\b([Dd])istición\b" replace="$1istinción" />
+<Typo word="ditar" find="\b([Dd])ictar\b" replace="$1itar" />
+<Typo word="diúrno" find="\b([Dd])iurno\b" replace="$1iúrno" />
+<Typo word="doador" find="\b([Dd])onante\b" replace="$1oador" />
+<Typo word="doutrina" find="\b([Dd])oc?trina\b" replace="$1outrina" />
+<Typo word="dúbida" find="\b([Dd])uda\b" replace="$1úbida" />
+<Typo word="dun" find="\b([Dd])um\b" replace="$1un" />
+<Typo word="dun" find="\b([Dd])uma\b" replace="$1unha" /> <!-- (pero ollo: existe Duma, parlamento ruso) -->
+</source>
+
+===E===
+<source lang="xml">
+<Typo word="elección" find="\b([Ee])lei(ción|to)\b" replace="$1lec$2" />
+<Typo word="eléctrodo" find="\b([Ee])lectrodo\b" replace="$1léctrodo" />
+<Typo word="elite" find="\bÉlite\b" replace="Elite" />
+<Typo word="elite" find="\bélite\b" replace="elite" />
+<Typo word="elixir" find="\b([Ee])lexir\b" replace="$1lixir" />
+<Typo word="elo" find="\b([Ee])slabón\b" replace="$1lo" />
+<Typo word="en crequenas, de crequenas, anicado" find="\bCuclillas, en\b" replace="En crequenas, de crequenas, anicado" />
+<Typo word="en crequenas, de crequenas, anicado" find="\bcuclillas, en\b" replace="en crequenas, de crequenas, anicado" />
+<Typo word="enchente, enchedela, chea, farta, lupanda, atracada" find="\bComilona (comida abundante)\b" replace="Enchente, enchedela, chea, farta, lupanda, atracada" />
+<Typo word="enchente, enchedela, chea, farta, lupanda, atracada" find="\bcomilona (comida abundante)\b" replace="enchente, enchedela, chea, farta, lupanda, atracada" />
+<Typo word="encrucillado" find="\bCrucigrama\b" replace="Encrucillado" />
+<Typo word="encrucillado" find="\bcrucigrama\b" replace="encrucillado" />
+<Typo word="engalar" find="\bDespegar (un avión)\b" replace="Engalar" />
+<Typo word="engalar" find="\bdespegar (un avión)\b" replace="engalar" />
+<Typo word="entaboamento" find="\b([Ee])ntablamento\b" replace="$1ntaboamento" />
+<Typo word="envellecer" find="\b([Ee])nvexecer\b" replace="$1nvellecer" /> <!-- '''Avellentar''' ou '''avellar''' -->
+<Typo word="envorcallar" find="\bAborcallar\b" replace="Envorcallar" />
+<Typo word="envorcallar" find="\baborcallar\b" replace="envorcallar" />
+<Typo word="envorcallar" find="\bAbrocallar\b" replace="Envorcallar" />
+<Typo word="envorcallar" find="\babrocallar\b" replace="envorcallar" />
+<Typo word="errado" find="\bFallido\b" replace="Errado" />
+<Typo word="errado" find="\bfallido\b" replace="errado" />
+<Typo word="erro" find="\b([Ee])rror\b" replace="$1rro" />
+<Typo word="esgotar" find="\bAgotar\b" replace="Esgotar" />
+<Typo word="esgotar" find="\bagotar\b" replace="esgotar" />
+<Typo word="esparexer" find="\b([Ee])sparcir\b" replace="$1sparexer" />
+<Typo word="espazar" find="\b([Ee])spaciar\b" replace="$1spazar" />
+<Typo word="espazo" find="\b([Ee])spacio\b" replace="$1spazo" />
+<Typo word="espir(se), denudar(se), desvestir(se)" find="\bDesnudar(se)\b" replace="Espir(se), denudar(se), desvestir(se)" />
+<Typo word="espir(se), denudar(se), desvestir(se)" find="\bdesnudar(se)\b" replace="espir(se), denudar(se), desvestir(se)" />
+<Typo word="espírito" find="\b([Ee])spíritu\b" replace="$1spírito" />
+<Typo word="espremer" find="\b([Ee])xprimir\b" replace="$1spremer" /> <!-- '''premer''' -->
+<Typo word="esqueleto" find="\b([Ee])squelete\b" replace="$1squeleto" />
+<Typo word="esquío" find="\bArdilla\b" replace="Esquío" />
+<Typo word="esquío" find="\bardilla\b" replace="esquío" />
+<Typo word="estada" find="\bAndamio\b" replace="Estada" />
+<Typo word="estada" find="\bandamio\b" replace="estada" />
+<Typo word="estante" find="\b([Ee])stantería\b" replace="$1stante" />
+<Typo word="este, esta" find="\bÉst([ea])\b" replace="Est$1" />
+<Typo word="este, esta" find="\bést([ea])\b" replace="est$1" />
+<Typo word="este" find="\bIste\b" replace="Este" />
+<Typo word="este" find="\biste\b" replace="este" />
+<Typo word="estender" find="\b([Ee])xtender\b" replace="$1stender" /> <!-- (pero '''extenso''', extensión) -->
+<Typo word="estes" find="\b([Ee])stos\b" replace="$1stes" />
+<Typo word="estoxo" find="\b([Ee])stuche\b" replace="$1stoxo" />
+<Typo word="estrada" find="\bCarreteira\b" replace="Estrada" />
+<Typo word="estrada" find="\bcarreteira\b" replace="estrada" />
+<Typo word="estraño" find="\b([Ee])xtraño\b" replace="$1straño" />
+<Typo word="estrés" find="\bStress\b" replace="Estrés" /> <!-- '''tensión''' -->
+<Typo word="estrés" find="\bstress\b" replace="estrés" /> <!-- '''tensión''' -->
+<Typo word="estribeira" find="\bCabestrillo\b" replace="Estribeira" />
+<Typo word="estribeira" find="\bcabestrillo\b" replace="estribeira" />
+<Typo word="estrito" find="\b([Ee])stricto\b" replace="$1strito" />
+<Typo word="estrutura" find="\b([Ee])structura\b" replace="$1strutura" />
+<Typo word="estudar" find="\b([Ee])studiar\b" replace="$1studar" /> <!-- (''Estudio'', cun ''i'', é o lugar onde se realizan actividades intelectuais ou profesionais. Agás neste caso, os demais son sen ''i'', é dicir, ''estudo(s)'') -->
+<Typo word="esvaer" find="\bDifuminar\b" replace="Esvaer" />
+<Typo word="esvaer" find="\bdifuminar\b" replace="esvaer" />
+<Typo word="éuscaro" find="\beúscaro\b" replace="éuscaro" />
+<Typo word="éuscaro" find="\bEúscaro\b" replace="Éuscaro" /> <!-- ou '''vasco''' -->
+<Typo word="excomungar" find="\b([Ee])xcomulgar\b" replace="$1xcomungar" />
+<Typo word="excomuñón" find="\b([Ee])xcomunión\b" replace="$1xcomuñón" />
+<Typo word="expirar" find="\b([Ee])spira(ción|r)\b" replace="$1xpira$2" />
+</source>
+
+===F===
+<source lang="xml">
+<Typo word="facsímile" find="\b([Ff])acsímil\b" replace="$1acsímile" />
+<Typo word="fada" find="\bHada\b" replace="Fada" />
+<Typo word="fada" find="\bhada\b" replace="fada" />
+<Typo word="faia" find="\bHaia\b" replace="Faia" />
+<Typo word="faia" find="\bhaia\b" replace="faia" />
+<Typo word="faiado" find="\bBuhardilla\b" replace="Faiado" /> <!-- '''faio''' -->
+<Typo word="faiado" find="\bbuhardilla\b" replace="faiado" /> <!-- '''faio''' -->
+<Typo word="faio, faiado" find="\bDesván\b" replace="Faio, faiado" />
+<Typo word="faio, faiado" find="\bdesván\b" replace="faio, faiado" />
+<Typo word="fanado" find="\bTullido\b" replace="Fanado" />
+<Typo word="fanado" find="\btullido\b" replace="fanado" />
+<Typo word="fenda" find="\bRegandixa\b" replace="Fenda" /> <!-- '''regaña''' -->
+<Typo word="fenda" find="\bregandixa\b" replace="fenda" /> <!-- '''regaña''' -->
+<Typo word="fertilizante" find="\bAbono\b" replace="Fertilizante" />
+<Typo word="fertilizante" find="\babono\b" replace="fertilizante" />
+<Typo word="fociño" find="\b([Ff])uciño\b" replace="$1ociño" />
+<Typo word="fogueiro" find="\b([Ff])ogoneiro\b" replace="$1ogueiro" />
+<Typo word="folclore" find="\b([Ff])olklore\b" replace="$1olclore" /> <!-- (pero '''folk''', ó ser un anglicismo) -->
+<Typo word="fragrancia" find="\b([Ff])ragancia\b" replace="$1ragrancia" />
+<Typo word="Francia" find="\bFranza\b" replace="Francia" /> <!-- ('''''pero ollo:''' existe a parroquia [[Franza, Mugardos|Franza]], en [[Mugardos]]'') -->
+<Typo word="frieira" find="\bAbañón\b" replace="Frieira" />
+<Typo word="frieira" find="\babañón\b" replace="frieira" />
+<Typo word="fungo" find="\bHongo\b" replace="Fungo" />
+<Typo word="fungo" find="\bhongo\b" replace="fungo" />
+</source>
+
+===G===
+<source lang="xml">
+<Typo word="gaiola" find="\bXaula\b" replace="Gaiola" />
+<Typo word="gaiola" find="\bxaula\b" replace="gaiola" />
+<Typo word="garantir" find="\b([Gg])arantizar\b" replace="$1arantir" />
+<Typo word="garavanzo" find="\b([Gg])arbanzo\b" replace="$1aravanzo" />
+<Typo word="garfelo, cazo, cullerón" find="\bCucharón\b" replace="Garfelo, cazo, cullerón" />
+<Typo word="garfelo, cazo, cullerón" find="\bcucharón\b" replace="garfelo, cazo, cullerón" />
+<Typo word="garfo" find="\bTenedor\b" replace="Garfo" />
+<Typo word="garfo" find="\btenedor\b" replace="garfo" />
+<Typo word="gladíolo" find="\b([Gg])ladiolo\b" replace="$1ladíolo" />
+<Typo word="goberno" find="\b([Gg])overno\b" replace="$1oberno" />
+<Typo word="graal" find="\b([Gg])rial\b" replace="$1raal" />
+<Typo word="gravar" find="\b([Gg])rabar\b" replace="$1ravar" />
+<Typo word="gravata" find="\bCorbata\b" replace="Gravata" />
+<Typo word="gravata" find="\bcorbata\b" replace="gravata" />
+<Typo word="graza/s" find="\b([Gg])racia/s\b" replace="$1raza/s" />
+<Typo word="grella" find="\bParrilla\b" replace="Grella" />
+<Typo word="grella" find="\bparrilla\b" replace="grella" />
+</source>
+
+===H===
+<source lang="xml">
+<Typo word="habanera" find="\b([Hh])abaneira\b" replace="$1abanera" />
+<Typo word="habelencia" find="\bAbelencia\b" replace="Habelencia" />
+<Typo word="habelencia" find="\babelencia\b" replace="habelencia" />
+<Typo word="hahaha" find="\bJajaja (risada)\b" replace="Hahaha" />
+<Typo word="hahaha" find="\bjajaja (risada)\b" replace="hahaha" />
+<Typo word="hai [tempo]" find="\bFai [tempo]\b" replace="Hai [tempo]" />
+<Typo word="hai [tempo]" find="\bfai [tempo]\b" replace="hai [tempo]" />
+<Typo word="hámster" find="\b([Hh])ánster\b" replace="$1ámster" />
+<Typo word="haraquiri" find="\b([Hh])arakiri\b" replace="$1araquiri" />
+<Typo word="harén" find="\b([Hh])arem\b" replace="$1arén" />
+<Typo word="harmonía" find="\b([Hh])armuñía\b" replace="$1armonía" />
+<Typo word="harmonía" find="\bArmonía\b" replace="Harmonía" />
+<Typo word="harmonía" find="\barmonía\b" replace="harmonía" />
+<Typo word="haxemita" find="\b([Hh])achemí\b" replace="$1axemita" />
+<Typo word="haxemita" find="\b([Hh])achemita\b" replace="$1axemita" />
+<Typo word="haxix" find="\b([Hh])achís\b" replace="$1axix" />
+<Typo word="héptathlon" find="\b([Hh])eptathlón\b" replace="$1éptathlon" />
+<Typo word="herdade" find="\bfinca\b" replace="herdade" />
+<Typo word="herdade" find="\bFinca\b" replace="Herdade" /> <!-- '''propiedade rústica''', '''terreo''', '''leira''' -->
+<Typo word="heroe" find="\b([Hh])éroe\b" replace="$1eroe" />
+<Typo word="hioide" find="\b([Hh])ioides\b" replace="$1ioide" />
+<Typo word="humano" find="\b([Hh])umán\b" replace="$1umano" />
+</source>
+
+===I===
+<source lang="xml">
+<Typo word="icona" find="\b([Ii])cono\b" replace="$1cona" />
+<Typo word="implicar" find="\bConlevar\b" replace="Implicar" /> <!-- '''supoñer''', '''significar''' -->
+<Typo word="implicar" find="\bconlevar\b" replace="implicar" /> <!-- '''supoñer''', '''significar''' -->
+<Typo word="incerteza" find="\b([Ii])ncertidume\b" replace="$1ncerteza" />
+<Typo word="inconveniente" find="\b([Ii])nconvinte\b" replace="$1nconveniente" />
+<Typo word="ingrediente" find="\b([Ii])ngredente\b" replace="$1ngrediente" />
+<Typo word="inscrición" find="\b([Ii])nscripción\b" replace="$1nscrición" />
+<Typo word="inserir" find="\b([Ii])nsertar\b" replace="$1nserir" />
+<Typo word="instrución" find="\b([Ii])nstrucción\b" replace="$1nstrución" />
+<Typo word="inverter" find="\b([Ii])nvertir\b" replace="$1nverter" /> <!-- (dar a volta a unha cousa) -->
+<Typo word="investir" find="\b([Ii])nverter\b" replace="$1nvestir" /> <!-- (facer un investimento) -->
+<Typo word="ir" find="\bfacer\b" replace="ir" />
+<Typo word="ir" find="\bFacer\b" replace="Ir" /> <!-- [tempo meteorolóxico] (*Fai sol -> Vai sol) -->
+<Typo word="irmandar" find="\b([Ii])rmanar\b" replace="$1rmandar" />
+<Typo word="iso" find="\belo\b" replace="iso" />
+<Typo word="iso" find="\bElo\b" replace="Iso" /> <!-- (é un pronome neutro do galego medieval que só se conserva na expresión '''estar a elo''', '''''pero ollo:''' tamén existe o substantivo ''elo'' co significado de cada un dos [[aro]]s que forman unha cadea'') -->
+<Typo word="isto" find="\bEsto\b" replace="Isto" />
+<Typo word="isto" find="\besto\b" replace="isto" />
+</source>
+
+===K===
+<source lang="xml">
+<Typo word="kharxa" find="\bJarcha\b" replace="Kharxa" />
+<Typo word="kharxa" find="\bjarcha\b" replace="kharxa" />
+</source>
+
+===L===
+<source lang="xml">
+<Typo word="labirinto" find="\b([Ll])aberinto\b" replace="$1abirinto" />
+<Typo word="ladrillo" find="\bTixolo\b" replace="Ladrillo" />
+<Typo word="ladrillo" find="\btixolo\b" replace="ladrillo" />
+<Typo word="lagarta" find="\b([Ll])agartixa\b" replace="$1agarta" />
+<Typo word="landra, belota" find="\bBellota\b" replace="Landra, belota" />
+<Typo word="landra, belota" find="\bbellota\b" replace="landra, belota" />
+<Typo word="laranxa" find="\bNaranxa\b" replace="Laranxa" />
+<Typo word="laranxa" find="\bnaranxa\b" replace="laranxa" />
+<Typo word="laranxeira" find="\bNaranxal\b" replace="Laranxeira" />
+<Typo word="laranxeira" find="\bnaranxal\b" replace="laranxeira" />
+<Typo word="laranxeira" find="\bNaranxeiro\b" replace="Laranxeira" />
+<Typo word="laranxeira" find="\bnaranxeiro\b" replace="laranxeira" />
+<Typo word="laranxeira" find="\bNaranxo\b" replace="Laranxeira" />
+<Typo word="laranxeira" find="\bnaranxo\b" replace="laranxeira" />
+<Typo word="lavadoiro" find="\b([Ll])avadero\b" replace="$1avadoiro" />
+<Typo word="leito" find="\bCauce\b" replace="Leito" /> <!-- (do [[río]]) -->
+<Typo word="leito" find="\bcauce\b" replace="leito" /> <!-- (do [[río]]) -->
+<Typo word="lentes" find="\bGafas\b" replace="Lentes" />
+<Typo word="lentes" find="\bgafas\b" replace="lentes" />
+<Typo word="ler" find="\b([Ll])eer\b" replace="$1er" />
+<Typo word="lesma" find="\bBabosa\b" replace="Lesma" /> <!-- '''limacha, limaco''' -->
+<Typo word="lesma" find="\bbabosa\b" replace="lesma" /> <!-- '''limacha, limaco''' -->
+<Typo word="leste" find="\beste\b" replace="leste" />
+<Typo word="leste" find="\bEste\b" replace="Leste" /> <!-- (punto cardinal) -->
+<Typo word="liberdade" find="\b([Ll])ibertade -\b" replace="$1iberdade" />
+<Typo word="líder" find="\bCabecilla\b" replace="Líder" />
+<Typo word="líder" find="\bcabecilla\b" replace="líder" />
+<Typo word="ligadura" find="\b([Ll])igatura\b" replace="$1igadura" />
+<Typo word="limiar" find="\bUmbral\b" replace="Limiar" /> <!-- '''límite''' -->
+<Typo word="limiar" find="\bumbral\b" replace="limiar" /> <!-- '''límite''' -->
+<Typo word="liña" find="\b([Ll])ínea\b" replace="$1iña" />
+<Typo word="lingua" find="\b([Ll])íng(ua|oaxe)\b" replace="$1ing$2" />
+<Typo word="lingüista" find="\b([Ll])ingüísta\b" replace="$1ingüista" />
+<Typo word="listaxe" find="\b([Ll])istado\b" replace="$1istaxe" /> <!-- '''lista''' -->
+<Typo word="lixivia" find="\b([Ll])exía\b" replace="$1ixivia" />
+<Typo word="lixo" find="\bBasura\b" replace="Lixo" />
+<Typo word="lixo" find="\bbasura\b" replace="lixo" />
+<Typo word="localización" find="\bUbicación\b" replace="Localización" /> <!-- '''situación''' -->
+<Typo word="localización" find="\bubicación\b" replace="localización" /> <!-- '''situación''' -->
+<Typo word="lombo, costas" find="\bEspalda\b" replace="Lombo, costas" />
+<Typo word="lombo, costas" find="\bespalda\b" replace="lombo, costas" />
+<Typo word="lonxe" find="\b([Ll])exos\b" replace="$1onxe" />
+<Typo word="losquear" find="\bAbofetear\b" replace="Losquear" /> <!-- '''dar unha losqueada''', '''dar un lapote''' -->
+<Typo word="losquear" find="\babofetear\b" replace="losquear" /> <!-- '''dar unha losqueada''', '''dar un lapote''' -->
+<Typo word="lura" find="\bCalamar\b" replace="Lura" />
+<Typo word="lura" find="\bcalamar\b" replace="lura" />
+</source>
+
+===M===
+<source lang="xml">
+<Typo word="macela" find="\b([Mm])anzanilla\b" replace="$1acela" />
+<Typo word="maioría" find="\b([Mm])aioria\b" replace="$1aioría" />
+<Typo word="mañá" find="\b([Mm])añán\b" replace="$1añá" />
+<Typo word="maniotas" find="\bAguxetas\b" replace="Maniotas" />
+<Typo word="maniotas" find="\baguxetas\b" replace="maniotas" />
+<Typo word="marabedí" find="\b([Mm])aravedí\b" replace="$1arabedí" />
+<Typo word="marabilla" find="\b([Mm])aravilla\b" replace="$1arabilla" />
+<Typo word="mastro" find="\b([Mm])ástil\b" replace="$1astro" />
+<Typo word="materia" find="\bAsignatura\b" replace="Materia" /> <!-- ou '''disciplina''' -->
+<Typo word="materia" find="\basignatura\b" replace="materia" /> <!-- ou '''disciplina''' -->
+<Typo word="media" find="\b([Pp])ropri([oa]s?)\b" replace="$1ropi$2" />
+<Typo word="media" find="\bPromedio\b" replace="Media" />
+<Typo word="media" find="\bpromedio\b" replace="media" />
+<Typo word="medula" find="\b([Mm])édula\b" replace="$1edula" />
+<Typo word="meiriñado" find="\b([Mm])erindad\b" replace="$1eiriñado" />
+<Typo word="mentres, namentres, entrementres" find="\b([Mm])entras\b" replace="$1entres, namentres, entrementres" />
+<Typo word="mergullador" find="\bBuzo\b" replace="Mergullador" /> <!-- (a non ser o sinónimo de [[bozo]]) -->
+<Typo word="mergullador" find="\bbuzo\b" replace="mergullador" /> <!-- (a non ser o sinónimo de [[bozo]]) -->
+<Typo word="mesa de braseiro" find="\b([Mm])esa camilla\b" replace="$1esa de braseiro" />
+<Typo word="mestura" find="\b([Mm])(ezcl|istur)a\b" replace="$1estura" />
+<Typo word="meteoroloxía" find="\b([Mm])etereoloxía\b" replace="$1eteoroloxía" />
+<Typo word="min" find="\b([Mm])ín\b" replace="$1in" />
+<Typo word="misto" find="\bCerilla\b" replace="Misto" />
+<Typo word="misto" find="\bcerilla\b" replace="misto" />
+<Typo word="móbil" find="\b([Mm])óvil\b" replace="$1óbil" /> <!-- (e '''inmóbil''', pero '''mover''' e '''inamovible''') -->
+<Typo word="modos" find="\b([Mm])odais\b" replace="$1odos" />
+<Typo word="monólito" find="\b([Mm])onolito\b" replace="$1onólito" />
+<Typo word="Moscova" find="\bMoscú\b" replace="Moscova" />
+<Typo word="Moscova" find="\bMoscú\b" replace="Moscova" />
+</source>
+
+===N===
+<source lang="xml">
+<Typo word="Nadal" find="\bNavidade\b" replace="Nadal" />
+<Typo word="Nadal" find="\bNavidade\b" replace="Nadal" />
+<Typo word="nadar ao somorgullo" find="\bBucear\b" replace="Nadar ao somorgullo" />
+<Typo word="nadar ao somorgullo" find="\bbucear\b" replace="nadar ao somorgullo" />
+<Typo word="necrolóxica" find="\bEsquela\b" replace="Necrolóxica" />
+<Typo word="necrolóxica" find="\besquela\b" replace="necrolóxica" />
+<Typo word="nicaraguano" find="\b([Nn])icaragüense\b" replace="$1icaraguano" />
+<Typo word="nin" find="\b([Nn])en\b" replace="$1in" />
+<Typo word="ningún" find="\b([Nn])engún\b" replace="$1ingún" />
+<Typo word="ningunha" find="\b([Nn])engunha\b" replace="$1ingunha" />
+<Typo word="nocello" find="\bTobillo\b" replace="Nocello" /> <!-- '''noelo, nortello''' -->
+<Typo word="nocello" find="\btobillo\b" replace="nocello" /> <!-- '''noelo, nortello''' -->
+<Typo word="nómade" find="\b([Nn])ómada\b" replace="$1ómade" />
+<Typo word="nomeado/a" find="\b([Nn])ominado/a\b" replace="$1omeado/a" />
+<Typo word="nomeamento/s" find="\b([Nn])ominación/s\b" replace="$1omeamento/s" />
+<Typo word="noxo" find="\bAsco\b" replace="Noxo" />
+<Typo word="noxo" find="\basco\b" replace="noxo" />
+<Typo word="núcleo, zona" find="\bCasco (vello, urbano)\b" replace="Núcleo, zona" />
+<Typo word="núcleo, zona" find="\bcasco (vello, urbano)\b" replace="núcleo, zona" />
+<Typo word="nun" find="\b([Nn])um\b" replace="$1un" />
+<Typo word="nunha" find="\b([Nn])uma(s?)\b" replace="$1unha$2" />
+<Typo word="nutriente" find="\b([Nn])utrinte\b" replace="$1utriente" />
+</source>
+
+===O===
+<source lang="xml">
+<Typo word="o labor" find="\bLabor, a\b" replace="O labor" /> <!-- (''labor feit'''o''' non corre présa'') -->
+<Typo word="o labor" find="\blabor, a\b" replace="o labor" /> <!-- (''labor feit'''o''' non corre présa'') -->
+<Typo word="ola" find="\bHola\b" replace="Ola" />
+<Typo word="ola" find="\bhola\b" replace="ola" />
+<Typo word="ollada" find="\bVistazo\b" replace="Ollada" />
+<Typo word="ollada" find="\bvistazo\b" replace="ollada" />
+<Typo word="onda" find="\b([Oo])la\b" replace="$1nda" /> <!-- ('''''pero ollo:''' existe '''ola''' de saúdo'') -->
+<Typo word="onde" find="\bDonde\b" replace="Onde" />
+<Typo word="onde" find="\bdonde\b" replace="onde" />
+<Typo word="orchata" find="\bHorchata\b" replace="Orchata" />
+<Typo word="orchata" find="\bhorchata\b" replace="orchata" />
+<Typo word="ordenar" find="\b([Oo])rdear\b" replace="$1rdenar" />
+<Typo word="óso" find="\bOso\b" replace="Óso" /> <!-- (peza do esqueleto); '''oso''' (animal) -->
+<Typo word="óso" find="\boso\b" replace="óso" /> <!-- (peza do esqueleto); '''oso''' (animal) -->
+<Typo word="outeiro" find="\bColina\b" replace="Outeiro" />
+<Typo word="outeiro" find="\bcolina\b" replace="outeiro" />
+<Typo word="outorgar" find="\b([Oo])torgar\b" replace="$1utorgar" />
+</source>
+
+===P===
+<source lang="xml">
+<Typo word="padiola, angarellas, cama" find="\bCamilla\b" replace="Padiola, angarellas, cama" />
+<Typo word="padiola, angarellas, cama" find="\bcamilla\b" replace="padiola, angarellas, cama" />
+<Typo word="padioleiro" find="\bCamilleiro\b" replace="Padioleiro" />
+<Typo word="padioleiro" find="\bcamilleiro\b" replace="padioleiro" />
+<Typo word="pálpebra" find="\b([Pp])árpado\b" replace="$1álpebra" />
+<Typo word="panca" find="\b([Pp])alanca\b" replace="$1anca" />
+<Typo word="panxoliña" find="\bVilancico\b" replace="Panxoliña" />
+<Typo word="panxoliña" find="\bvilancico\b" replace="panxoliña" />
+<Typo word="paquete" find="\bCaxetilla\b" replace="Paquete" />
+<Typo word="paquete" find="\bcaxetilla\b" replace="paquete" />
+<Typo word="parabéns" find="\bNoraboa\b" replace="Parabéns" />
+<Typo word="parabéns" find="\bnoraboa\b" replace="parabéns" />
+<Typo word="parafuso" find="\bTornillo\b" replace="Parafuso" />
+<Typo word="parafuso" find="\btornillo\b" replace="parafuso" />
+<Typo word="parasito" find="\b([Pp])arásito\b" replace="$1arasito" />
+<Typo word="parella" find="\b([Pp])arexa\b" replace="$1arella" />
+<Typo word="pavillón" find="\b([Pp])abellón\b" replace="$1avillón" />
+<Typo word="paxaro" find="\b([Pp])áxaro\b" replace="$1axaro" />
+<Typo word="peirao" find="\bMuelle\b" replace="Peirao" /> <!-- (lugar de atraque de barcos) ou '''resorte''' (peza metálica elástica). En galego ''mol'' non é ''peirao'', senón ''brando'' (entre outras acepcións) -->
+<Typo word="peirao" find="\bmuelle\b" replace="peirao" /> <!-- (lugar de atraque de barcos) ou '''resorte''' (peza metálica elástica). En galego ''mol'' non é ''peirao'', senón ''brando'' (entre outras acepcións) -->
+<Typo word="péntatlon" find="\b([Pp])entatlón\b" replace="$1éntatlon" />
+<Typo word="peonil" find="\b([Pp])eatonal\b" replace="$1eonil" />
+<Typo word="percorrer" find="\bRecorrer\b" replace="Percorrer" /> <!-- (distancias) -->
+<Typo word="percorrer" find="\brecorrer\b" replace="percorrer" /> <!-- (distancias) -->
+<Typo word="perda" find="\b([Pp])érdida\b" replace="$1erda" />
+<Typo word="peregrinación" find="\b([Pp])eregrinaxe\b" replace="$1eregrinación" />
+<Typo word="período" find="\b([Pp])eriodo\b" replace="$1eríodo" />
+<Typo word="perpiaño" find="\bSillar(?:ejo)?\b" replace="Perpiaño" />
+<Typo word="perpiaño" find="\bsillar(?:ejo)?\b" replace="perpiaño" />
+<Typo word="perseveranza" find="\b([Pp])erseverancia\b" replace="$1erseveranza" />
+<Typo word="pertencer" find="\b([Pp])ertenecer\b" replace="$1ertencer" />
+<Typo word="petróglifo" find="\b([Pp])etroglifo\b" replace="$1etróglifo" />
+<Typo word="pexa" find="\b([Pp])ega (traba)\b" replace="$1exa" />
+<Typo word="plancto" find="\b([Pp])lancton\b" replace="$1lancto" />
+<Typo word="planta" find="\b([Pp])ranta\b" replace="$1lanta" />
+<Typo word="pneumo-" find="\bNeumo-\b" replace="Pneumo-" /> <!-- (pneumonía, pneumotórax, pneumático) -->
+<Typo word="pneumo-" find="\bneumo-\b" replace="pneumo-" /> <!-- (pneumonía, pneumotórax, pneumático) -->
+<Typo word="po" find="\b([Pp])ó\b" replace="$1o" /> <!-- ('''''Ex:''' unha nube de po'') -->
+<Typo word="poetisa" find="\b([Pp])oeta (f)\b" replace="$1oetisa" /> <!-- (f) [''Alberti foi un poeta; Rosalía de Castro foi unha poetisa''] -->
+<Typo word="porca" find="\bTuerca\b" replace="Porca" /> <!-- (tamén torca) -->
+<Typo word="porca" find="\btuerca\b" replace="porca" /> <!-- (tamén torca) -->
+<Typo word="porén" find="\b(?:sen embargo|nembargantes)\b" replace="porén" />
+<Typo word="porén" find="\b(?:Sen embargo|Nembargantes)\b" replace="Porén" /> <!-- '''non obstante''', '''no entanto''', '''a pesar diso''', '''con todo''', '''así e todo''', '''mais''', '''pero''' -->
+<Typo word="porén" find="\bNembargantes\b" replace="Porén" /> <!-- '''non obstante''', '''con todo''' -->
+<Typo word="porén" find="\bnembargantes\b" replace="porén" /> <!-- '''non obstante''', '''con todo''' -->
+<Typo word="posguerra" find="\b([Pp])ostguerra\b" replace="$1osguerra" />
+<Typo word="posuír" find="\b([Pp])oseer\b" replace="$1osuír" />
+<Typo word="poxa" find="\bSubasta\b" replace="Poxa" />
+<Typo word="poxa" find="\bsubasta\b" replace="poxa" />
+<Typo word="praza" find="\b([Pp])laza\b" replace="$1raza" />
+<Typo word="premer" find="\b([Pp])resionar\b" replace="$1remer" />
+<Typo word="prénsil" find="\b([Pp])rensil\b" replace="$1rénsil" />
+<Typo word="presentar" find="\b([Pp])lantex?ar\b" replace="$1resentar" /> <!-- '''formular''', '''expresar''', '''realizar''', '''propor''', '''preguntar(se)''', '''planificar''', '''idear'''.. -->
+<Typo word="presenza" find="\b([Pp])resencia\b" replace="$1resenza" />
+<Typo word="preto" find="\b([Pp])erto\b" replace="$1reto" />
+<Typo word="prexudicial" find="\b([Pp])erxudicial\b" replace="$1rexudicial" />
+<Typo word="prexuízo" find="\b([Pp])(re|er)xu([ií]ci|iz)o\b" replace="$1rexuízo" />
+<Typo word="primavera" find="\b([Pp])rimaveira\b" replace="$1rimavera" />
+<Typo word="produtor" find="\b([Pp])roductor\b" replace="$1rodutor" />
+<Typo word="provedor" find="\b([Pp])roveedor\b" replace="$1rovedor" />
+<Typo word="próximo" find="\bCercano\b" replace="Próximo" />
+<Typo word="próximo" find="\bcercano\b" replace="próximo" />
+<Typo word="psicanálise" find="\b([Pp])sicoanálise\b" replace="$1sicanálise" />
+<Typo word="punto" find="\b([Pp])onto\b" replace="$1unto" />
+</source>
+
+===Q===
+<source lang="xml">
+<Typo word="quen" find="\b([Qq])uenes\b" replace="$1uen" />
+<Typo word="quenda, vez, rolda, orde, serie" find="\bTurno\b" replace="Quenda, vez, rolda, orde, serie" />
+<Typo word="quenda, vez, rolda, orde, serie" find="\bturno\b" replace="quenda, vez, rolda, orde, serie" />
+<Typo word="quenlla" find="\bTiburón\b" replace="Quenlla" />
+<Typo word="quenlla" find="\btiburón\b" replace="quenlla" />
+<Typo word="quilómetro" find="\bKilómetro\b" replace="Quilómetro" />
+<Typo word="quilómetro" find="\bkilómetro\b" replace="quilómetro" />
+</source>
+
+===R===
+<source lang="xml">
+<Typo word="rabaño" find="\b([Rr])ebaño\b" replace="$1abaño" />
+<Typo word="raposo" find="\bZorro\b" replace="Raposo" />
+<Typo word="raposo" find="\bzorro\b" replace="raposo" />
+<Typo word="recorrer" find="\b([Rr])ecurrir\b" replace="$1ecorrer" /> <!-- (a alguén, presentar recurso) -->
+<Typo word="reflectir" find="\b([Rr])eflexar\b" replace="$1eflectir" />
+<Typo word="réptil" find="\b([Rr])eptil\b" replace="$1éptil" /> <!-- (pl. '''réptiles''') -->
+<Typo word="requirir" find="\b([Rr])equerir\b" replace="$1equirir" />
+<Typo word="respectar" find="\b([Rr])espet(ar|uoso|o)\b" replace="$1espect$2" />
+<Typo word="resumo" find="\b([Rr])esume (s.)\b" replace="$1esumo" /> <!-- (subst.) -->
+<Typo word="réxime" find="\b([Rr])exime\b" replace="$1éxime" />
+<Typo word="ribazo" find="\bTalude\b" replace="Ribazo" /> <!-- '''noiro''', '''cemba''' -->
+<Typo word="ribazo" find="\btalude\b" replace="ribazo" /> <!-- '''noiro''', '''cemba''' -->
+<Typo word="rir" find="\b([Rr])eír\b" replace="$1ir" />
+<Typo word="romanés(a)" find="\b([Rr])umano\b" replace="$1omanés(a)" />
+<Typo word="Romanía" find="\bRumanía\b" replace="Romanía" />
+<Typo word="Romanía" find="\bRumanía\b" replace="Romanía" />
+<Typo word="romano" find="\b([Rr])omán\b" replace="$1omano" /> <!-- -a -->
+<Typo word="rúa" find="\bCalle\b" replace="Rúa" />
+<Typo word="rúa" find="\bcalle\b" replace="rúa" />
+<Typo word="ruela" find="\bCalexón\b" replace="Ruela" /> <!-- '''corredoira''', '''canella''' (canella sen saída), '''canellón''', '''vieiro choído''' (canella sen saída) -->
+<Typo word="ruela" find="\bcalexón\b" replace="ruela" /> <!-- '''corredoira''', '''canella''' (canella sen saída), '''canellón''', '''vieiro choído''' (canella sen saída) -->
+<Typo word="ruína" find="\b([Rr])uina\b" replace="$1uína" />
+<Typo word="ruminante" find="\b([Rr])umiante\b" replace="$1uminante" />
+</source>
+
+===S===
+<source lang="xml">
+<Typo word="sabotar" find="\b([Ss])abotear\b" replace="$1abotar" />
+<Typo word="saia" find="\b([Ff])alda\b" replace="$1aldra" /> <!-- ou '''Saia''' -->
+<Typo word="se" find="\b([Ss])i (condicional)\b" replace="$1e" />
+<Typo word="secaño" find="\b([Ss])ecano\b" replace="$1ecaño" />
+<Typo word="semana" find="\b([Ss])emán\b" replace="$1emana" />
+<Typo word="sen" find="\b([Ss])in\b" replace="$1en" />
+<Typo word="serradoiro" find="\b([Ss])errería\b" replace="$1erradoiro" /> <!-- '''serra''' -->
+<Typo word="servizo" find="\b([Ss])ervicio\b" replace="$1ervizo" />
+<Typo word="si" find="\b([Ss])í (afirmación)\b" replace="$1i" />
+<Typo word="sinal" find="\b([Ss])ina(?:l|is)\b" replace="$1inal" /> <!-- '''sinais''' (masc.) -->
+<Typo word="sincero" find="\b([Ss])inceiro\b" replace="$1incero" />
+<Typo word="slálom" find="\beslálom\b" replace="slálom" />
+<Typo word="slálom" find="\bEslálom\b" replace="Slálom" /> <!-- (con acento) -->
+<Typo word="slogan" find="\beslógan\b" replace="slogan" />
+<Typo word="slogan" find="\bEslógan\b" replace="Slogan" /> <!-- (sen acento) -->
+<Typo word="soamente" find="\b([Ss])(?:omentes?|oamentes)\b" replace="$1oamente" /> <!-- '''só''' -->
+<Typo word="sobrepasar" find="\bUltrapasar\b" replace="Sobrepasar" />
+<Typo word="sobrepasar" find="\bultrapasar\b" replace="sobrepasar" />
+<Typo word="soidade" find="\b([Ss])oledade\b" replace="$1oidade" />
+<Typo word="solidariedade" find="\b([Ss])olidaridade\b" replace="$1olidariedade" />
+<Typo word="solombo" find="\b([Ss])olomillo\b" replace="$1olombo" />
+<Typo word="sondaxe" find="\b([Ss])ondeo\b" replace="$1ondaxe" />
+<Typo word="sopa" find="\b([Ss])oupa\b" replace="$1opa" />
+<Typo word="submarino" find="\b([Ss])ubmariño\b" replace="$1ubmarino" />
+<Typo word="subministración" find="\b([Ss])ubministro\b" replace="$1ubministración" />
+<Typo word="suborno" find="\bCohecho\b" replace="Suborno" />
+<Typo word="suborno" find="\bcohecho\b" replace="suborno" />
+<Typo word="substantivo" find="\b([Ss])ustantivo\b" replace="$1ubstantivo" />
+<Typo word="substituír" find="\b([Ss])ustituír\b" replace="$1ubstituír" />
+<Typo word="substituír" find="\bReemprazar\b" replace="Substituír" />
+<Typo word="substituír" find="\breemprazar\b" replace="substituír" />
+<Typo word="sucidade" find="\b([Ss])uciedade\b" replace="$1ucidade" />
+<Typo word="sueste" find="\b([Ss])ureste\b" replace="$1ueste" />
+<Typo word="sueste" find="\b([Ss])urleste\b" replace="$1ueste" />
+<Typo word="surafricano" find="\b([Ss])udafricano\b" replace="$1urafricano" />
+</source>
+
+===T===
+<source lang="xml">
+<Typo word="talvez" find="\b([Tt])al vez\b" replace="$1alvez" />
+<Typo word="tamén" find="\b([Tt])ambém\b" replace="$1amén" />
+<Typo word="tamén" find="\b([Tt])ambén\b" replace="$1amén" />
+<Typo word="temperado" find="\b([Tt])emplado\b" replace="$1emperado" /> <!-- '''morno, tépedo''' -->
+<Typo word="termo" find="\b([Tt])érmino\b" replace="$1ermo" />
+<Typo word="terremoto" find="\b([Tt])erramoto\b" replace="$1erremoto" />
+<Typo word="tesiña" find="\b([Tt])esina\b" replace="$1esiña" /> <!-- ou '''tese de doutoramento''' -->
+<Typo word="tesoiras" find="\b([Tt])ixeiras\b" replace="$1esoiras" />
+<Typo word="testamenteiro" find="\bAlbacea\b" replace="Testamenteiro" />
+<Typo word="testamenteiro" find="\balbacea\b" replace="testamenteiro" />
+<Typo word="téxtil" find="\b([Tt])extil\b" replace="$1éxtil" />
+<Typo word="tiroide" find="\b([Tt])iroides\b" replace="$1iroide" />
+<Typo word="tixola" find="\bSartén\b" replace="Tixola" /> <!-- '''tixela''' -->
+<Typo word="tixola" find="\bsartén\b" replace="tixola" /> <!-- '''tixela''' -->
+<Typo word="tolo" find="\bChiflado\b" replace="Tolo" /> <!-- '''chalado''' -->
+<Typo word="tolo" find="\bchiflado\b" replace="tolo" /> <!-- '''chalado''' -->
+<Typo word="torresmo" find="\b([Tt])orrezno\b" replace="$1orresmo" />
+<Typo word="trade" find="\b([Tt])aladro\b" replace="$1rade" />
+<Typo word="tradución" find="\b([Tt])raduc(ción|tor)\b" replace="$1radu$2" />
+<Typo word="traizón" find="\b([Tt])raición\b" replace="$1raizón" />
+<Typo word="transbordador" find="\bFerry\b" replace="Transbordador" />
+<Typo word="transbordador" find="\bferry\b" replace="transbordador" />
+<Typo word="transcendencia" find="\b([Tt])rascendencia\b" replace="$1ranscendencia" />
+<Typo word="transvasamento" find="\b([Tt])ransvase\b" replace="$1ransvasamento" />
+<Typo word="transxénico" find="\b([Tt])ranxénico\b" replace="$1ransxénico" /> <!-- (tódolos cultismos que empregan o prefixo trans- manteñen o grupo -ns agás os ligados a palabras que empezan por s-, que perden o -s) -->
+<Typo word="traquea" find="\b([Tt])ráquea\b" replace="$1raquea" />
+<Typo word="traza" find="\bPolilla\b" replace="Traza" /> <!-- ou '''couza''' -->
+<Typo word="traza" find="\bpolilla\b" replace="traza" /> <!-- ou '''couza''' -->
+<Typo word="trazaría" find="\b([Tt])racería\b" replace="$1razaría" />
+<Typo word="trazo" find="\bRasgo\b" replace="Trazo" />
+<Typo word="trazo" find="\brasgo\b" replace="trazo" />
+<Typo word="tremer" find="\b([Tt])emblar\b" replace="$1remer" />
+<Typo word="trevo" find="\b([Tt])rébol\b" replace="$1revo" />
+<Typo word="tríatlon" find="\b([Tt])riatlón\b" replace="$1ríatlon" />
+<Typo word="tribo" find="\b([Tt])ribu\b" replace="$1ribo" />
+<Typo word="Trindade" find="\bTrinidade\b" replace="Trindade" />
+<Typo word="Trindade" find="\bTrinidade\b" replace="Trindade" />
+<Typo word="triplo/a" find="\b([Tt])riple\b" replace="$1riplo/a" />
+<Typo word="triunfo" find="\b([Tt])riúnfo\b" replace="$1riunfo" />
+<Typo word="troco, intercambio" find="\bCanxe\b" replace="Troco, intercambio" />
+<Typo word="troco, intercambio" find="\bcanxe\b" replace="troco, intercambio" />
+<Typo word="tsar" find="\bZar\b" replace="Tsar" />
+<Typo word="tsar" find="\bzar\b" replace="tsar" />
+<Typo word="tubo, cano" find="\b([Tt])ubería\b" replace="$1ubo, cano" />
+</source>
+
+===U===
+<source lang="xml">
+<Typo word="ultimato" find="\b([Uu])ltimatum\b" replace="$1ltimato" />
+<Typo word="úmero" find="\bHúmero\b" replace="Úmero" />
+<Typo word="úmero" find="\bhúmero\b" replace="úmero" />
+<Typo word="unificar" find="\bAunar\b" replace="Unificar" />
+<Typo word="unificar" find="\baunar\b" replace="unificar" />
+<Typo word="uniformar" find="\b([Uu])niformizar\b" replace="$1niformar" />
+<Typo word="urbano" find="\b([Uu])rbán\b" replace="$1rbano" />
+</source>
+
+===V===
+<source lang="xml">
+<Typo word="vaixela" find="\b([Vv])axilla (conxunto de [[prato]]s)\b" replace="$1aixela" />
+<Typo word="varíola" find="\b([Vv])iruela\b" replace="$1aríola" />
+<Typo word="varredor" find="\bBarrendeiro\b" replace="Varredor" />
+<Typo word="varredor" find="\bbarrendeiro\b" replace="varredor" />
+<Typo word="varrer" find="\bBarrer\b" replace="Varrer" />
+<Typo word="varrer" find="\bbarrer\b" replace="varrer" />
+<Typo word="vasalo" find="\b([Vv])asallo\b" replace="$1asalo" />
+<Typo word="vasilla" find="\b([Vv])asixa\b" replace="$1asilla" />
+<Typo word="vasoira" find="\bEscoba\b" replace="Vasoira" /> <!-- (existe o substantivo escoba, xogo de cartas) -->
+<Typo word="vasoira" find="\bescoba\b" replace="vasoira" /> <!-- (existe o substantivo escoba, xogo de cartas) -->
+<Typo word="vasoirada" find="\bAbasoirada\b" replace="Vasoirada" />
+<Typo word="vasoirada" find="\babasoirada\b" replace="vasoirada" />
+<Typo word="vea" find="\b([Vv])ena\b" replace="$1ea" />
+<Typo word="veleno" find="\b([Vv])eneno\b" replace="$1eleno" />
+<Typo word="verme" find="\bGusano\b" replace="Verme" />
+<Typo word="verme" find="\bgusano\b" replace="verme" />
+<Typo word="verniz" find="\bBarniz\b" replace="Verniz" />
+<Typo word="verniz" find="\bbarniz\b" replace="verniz" />
+<Typo word="vestíbulo" find="\bHall\b" replace="Vestíbulo" />
+<Typo word="vestíbulo" find="\bhall\b" replace="vestíbulo" />
+<Typo word="vidro" find="\b([Vv])idrio\b" replace="$1idro" />
+<Typo word="vítima" find="\b([Vv])íctima\b" replace="$1ítima" />
+<Typo word="voda" find="\bBoda\b" replace="Voda" />
+<Typo word="voda" find="\bboda\b" replace="voda" />
+<Typo word="voitre" find="\bAboitre\b" replace="Voitre" />
+<Typo word="voitre" find="\baboitre\b" replace="voitre" />
+</source>
+
+===X===
+<source lang="xml">
+<Typo word="xaneiro" find="\bXaneiro\b" replace="xaneiro" />
+<Typo word="xarope" find="\b([Xx])arabe\b" replace="$1arope" />
+<Typo word="xardineiro" find="\b([Xx])ardiñeir([oa])\b" replace="$1ardineir$2" />
+<Typo word="xavelina" find="\b([Xx])abalina\b" replace="$1avelina" />
+<Typo word="xávega" find="\b([Xx])([aá])bega\b" replace="$1ávega" />
+<Typo word="xelea" find="\b([Xx])alea\b" replace="$1elea" /> <!-- ('''xelea real''') -->
+<Typo word="xeneralizar" find="\b([Xx])eralizar\b" replace="$1eneralizar" />
+<Typo word="xeonllo" find="\bRodilla\b" replace="Xeonllo" />
+<Typo word="xeonllo" find="\brodilla\b" replace="xeonllo" />
+<Typo word="xeración" find="\b([Xx])eneración\b" replace="$1eración" />
+<Typo word="xerar" find="\b([Xx])enerar\b" replace="$1erar" />
+<Typo word="xisto" find="\bEsquisto\b" replace="Xisto" />
+<Typo word="xisto" find="\besquisto\b" replace="xisto" />
+<Typo word="xoaniña, reirrei" find="\bMariquita\b" replace="Xoaniña, reirrei" />
+<Typo word="xoaniña, reirrei" find="\bmariquita\b" replace="xoaniña, reirrei" />
+<Typo word="xudeu" find="\b([Xx])udeo\b" replace="$1udeu" />
+<Typo word="xuízo" find="\b([Xx])u(?:[ií]ci|iz)o\b" replace="$1uízo" /> <!-- (con acento) -->
+<Typo word="xurdir" find="\bSurxir\b" replace="Xurdir" />
+<Typo word="xurdir" find="\bsurxir\b" replace="xurdir" />
+</source>
+
+===Z===
+<source lang="xml">
+<Typo word="zócolo" find="\b([Zz])ócalo\b" replace="$1ócolo" />
+<Typo word="zócolo" find="\b([Zz])ocalo\b" replace="$1ócolo" />
+<Typo word="zodíaco" find="\b([Zz])odiaco\b" replace="$1odíaco" />
+</source>
+
+==Véxase tamén==
+{{Galizionario|Apéndice:Castelanismos usuais|Castelanismos}}
+===Outros artigos===
+*[[Axuda:Como mellorar a ortografía]]
+*[[Wikipedia:Revisor ortográfico]]
+*[[Wikipedia:Erros de ortografía e desviacións]]
+
+
+===Ligazóns externas===
+*[http://www.udc.es/snl/documentospdf/Libro_Calidade_Lingua.pdf Libro para mellorarmos o uso da lingua, con moitos exemplos, en pdf]
+
+
+[[#Lista de erros|Volver ao comezo]]

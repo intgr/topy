@@ -1,0 +1,212 @@
+Ef þið treystið ykkur ekki til að bæta við listann sjálf getið þið bent á algengar stafsetningarvillur á [http://is.wikipedia.org/w/index.php?title=Wikipediaspjall:AutoWikiBrowser/Typos&action=edit&section=new '''spjallsíðunni'''] (takið endilega fram réttan rithátt líka :).
+==Stafsetningarvillur==
+[http://www.mr.is/sel/isl/OlOGottm.pdf Gott mál eftir Ólaf Oddson] o.fl. viðbætur
+<pre>
+<Typo word="Ábyrgur, allar beygingarmyndir" find="\b(Á|á)birg(|[a-z]{1,5})\b" replace="$1byrg$2" />
+<Typo word="Afleiðing, allar beygingarmyndir" find="\b(A|a)fleyðing(|[a-z]{1,7})\b" replace="$1fleiðing$2" />
+<Typo word="Annarra, annarri ekki með því það er bm. sérnafns" find="\b(A|a)nnara(|r)\b" replace="$1nnarra$2" />
+<Typo word="x" find="\b(A|a)tburðarrás(|in)\b" replace="$1tburðarás$2" />
+<Typo word="x" find="\b(A|a)usturísk([a-z]|[a-z][a-z])\b" replace="$1usturrísk$2" />
+<Typo word="x" find="\b(A|a)usturík(i|is)\b" replace="$1usturrík$2" />
+<!-- <Typo word="x" find="\b(B|b)rín([a-z]|[a-z][a-z])\b" replace="$1rýn$2" /> Örugglega ekki algengt -->
+<Typo word="x" find="\b(Fjölb|fjölb|Margb|margb|b|B)reitt(ur|ir)\b" replace="$1reytt$2" />
+<Typo word="x" find="\b(B|b)úfjárs\b" replace="$1úfjár" />
+<Typo word="x" find="\b(D|d)rukna(|r|ði|ðir|ðu|ð|ður|ðar)\b" replace="$1rukkna$2" />
+<Typo word="x" find="\b(D|d)eyj(ið|i|ir|ðu)\b" replace="$1ey$2" />
+<Typo word="x" find="\b(D|d)æj(i|ir)\b" replace="$1æ$2" />
+<Typo word="x" find="\b(E|e)fti(r|l)vill\b" replace="$1f til vill" />
+<Typo word="x" find="\b(E|e)inhvert\b" replace="$1itthvert" />
+<Typo word="x" find="\b(E|e)inmanna\b" replace="$1inmana" />
+<Typo word="x" find="\b(E|e)inhvað\b" replace="$1itthvað" />
+<Typo word="x" find="\b(F|f)erðamannaiðnaður\b" replace="$1erðaþjónusta" />
+<Typo word="x" find="\b(F|f)erðamannaiðnað(|i|ar)\b" replace="$1erðaþjónustu" />
+<Typo word="x" find="\b(F|f)jölskild(a|ur|urnar)\b" replace="$1jölskyld$2" />
+<Typo word="x" find="\b(F|f)leirra\b" replace="$1leira" />
+<Typo word="x" find="\b(G|g)eturu\b" replace="$1eturðu" />
+<Typo word="x" find="\b(G|g)ífuleg([a-z]|[a-z][a-z])\b" replace="$1ífurleg$2" />
+<Typo word="x" find="\b(H|h)eimstyrjöldin\b" replace="$1eimsstyrjöldin" />
+<Typo word="x" find="\b(H|h)eiðursmeðlimur\b" replace="$1eiðursfélagi" />
+<Typo word="x" find="\b(H|h)eiðursmeðlimir\b" replace="$1eiðursfélagar" />
+<Typo word="x" find="\b((E|e)ðlis|)kvöt(|in|ir|ina|inni|um|unum)\b" replace="$1hvöt$2" />
+<Typo word="x" find="\b(H|h)rapaleg([a-z]|[a-z][a-z])\b" replace="$1rapalleg$2" />
+<Typo word="x" find="\b(H|h)æðst(ur|ir)\b" replace="$1æst$2" />
+<Typo word="x" find="\b(H|h|)öfundarétt(|ur|ar)\b" replace="$1öfundarrétt$2" />
+<Typo word="x" find="\b(K|k)reyk(|[a-z]|[a-z][a-z])\b" replace="$1kreik$2" />
+<Typo word="x" find="\bkvatti\b" replace="hvatti" />
+<Typo word="x" find="\bKvatti\b" replace="Hvatti" />
+<Typo word="x" find="\bKvetja\b" replace="Hvetja" />
+<Typo word="x" find="\bkvetja\b" replace="hvetja" />
+<Typo word="x" find="\b(L|l)íter\b" replace="$1ítri" />
+<Typo word="x" find="\b(L|l)ærri\b" replace="$1ægri" />
+<Typo word="x" find="\b(L|l)egst\b" replace="$1eggst" />
+<Typo word="x" find="\b(M|m)ánaðarmót(|um|a|in|unum|anna)\b" replace"$1ánaðamót$2" />
+<Typo word="x" find="\b(N|n)áskild([a-z]|[a-z][a-z])\b" replace="$1áskyld$2" />
+<Typo word="x" find="\b(N|n)efninlega\b" replace="$1efnilega" />
+<Typo word="x" find="\b(N|n)okkura\b" replace="$1okkurra" />
+<Typo word="x" find="\b(N|n)orðanlega\b" replace="$1orðarlega" />
+<Typo word="x" find="\b(N|n)ýji(|r)\b" replace="$1ýi$2" />
+<Typo word="x" find="\b(S|s)átmál(|i|a|inn|ann|anum|ans|ar|um|arnir|ana|unum|anna)\b" replace="$1áttmál$2" />
+<Typo word="x" find="\bófgnótt(|ar|in|ina|inni|innar)\b" replace="ofgnótt$1" />
+<Typo word="x" find="\b(Ós|ós|S|s)kiljanlegari\b" replace="$1skiljanlegri" />
+<Typo word="x" find="\b(P|p)lötun(i|ar)\b" replace="$1lötunn$2" />
+<Typo word="x" find="\b(P|p)lötunna\b" replace="$1lötuna" />
+<Typo word="x" find="\b(S|s)afnaðarmeðlimur\b" replace="$1afnaðarfélagi" />
+<Typo word="x" find="\b(S|s)afnaðarmeðlimir\b" replace="$1afnaðarfélagar" />
+<Typo word="x" find="\b(S|s)afnaðarmeðlimum\b" replace="$1afnaðarfélögum" />
+<Typo word="x" find="\b(S|s)téttarskipting\b" replace="$1téttaskipting" />
+<Typo word="x" find="\b(S|s)tundarskrá(|r|a|in|na|nni|rinnar|arinnar|rnar|num|nna|m)\b" replace="$1tundaskrá$2" />
+<Typo word="x" find="\b(S|s)tæðst(|ur|ir)\b" replace="$1tæst$2" />
+<Typo word="x" find="\b(S|s)vokallaðari\b" replace="$1vokallaðri" />
+<Typo word="x" find="\b(S|s)kilmingaþræ(ll|lar)\b" replace="$1kylmingaþræ$2" />
+<Typo word="x" find="\b(Upps|upps|S|s)tylling(|ar)\b" replace="$1tilling$2" />
+<Typo word="x" find="\b(S|s)töðuleik(i|a|inn|ann|anum|ans)\b" replace="$1töðugleik$2" />
+<Typo word="x" find="\b(T|t)ágr(a|ö)nn(|ur|t|ir|um|ar)\b" replace="$1ággr$2nn$3" />
+<Typo word="x" find="\btalva\b" replace="tölva" />
+<Typo word="x" find="\bTalva\b" replace="Tölva" />
+<Typo word="x" find="\b(T|t)ilheir(i|ir|um|ið|a|ði|ðir|ðum|ðuð|ðu|andi|t)\b" replace="$1ilheyr$2" />
+<Typo word="x" find="\b(T|t)illitsemi\b" replace="\b$1illitssemi" />
+<Typo word="x" find="\b(Ú|ú)tþennsla\b" replace="$1tþensla" />
+<Typo word="x" find="\b(Þ|þ)jóðarbandalag(ið|inu)\b" replace="$1jóðabandalag$2" />
+<Typo word="x" find="\b(Ö|ö)ldungardeildarþing(maður|maðurinn|menn|mennirnir|mann|manni|manninn|mennina|manns|mannsins|mönnum)\b" replace="$1ldungadeildarþing$2" />
+</pre>
+
+===Röng beyging===
+<pre>
+<Typo word="x" find="\b(H|h)undruðir\b" replace="$1undruð" />
+<Typo word="x" find="\b(H|h)undruða\b" replace="$1undraða" />
+</pre>
+===N eða nn===
+<pre>
+<Typo word="Kannski" find="\b(K|k)anski\b" replace="$1annski" />
+<Typo word="Kannski" find="\b((I|i)ll|(G|g)óð)mensk(a|u|unni|una|an|unnar)\b" replace="$1ennsk$2" />
+<Typo word="Kannski" find="\b(L|l)ennt(|i|u|ir|uð|um|ir)\b" replace="$1ent$2" />
+<Typo word="Upprunalega" find="\b(U|u)pprun(n|)a(n|)leg(|a|ur)\b" replace="$1pprunaleg$4" />
+</pre>
+
+===Ypsilon ruglingur===
+<pre>
+<Typo word="x" find="\b(F|f)ynn(a|st|ast)\b" replace="$1inn$2" />
+<Typo word="Hreinsa, hreinsilögur, o.s.frv." find="\b(H|h)reyns(i|a)" replace="$1reins$2" />
+<Typo word="x" find="\b(L|l)eygj(a|um|umst|ast|andi)\b" replace="$1eigja$2" />
+<Typo word="x" find="\b(S|s)íning(|u|ar|in|una|unni|arinnar|a|um|arnar|unum|anna)\b" replace="$ýning$2" />
+<Typo word="x" find="\býmind(|a|un|unarafl)\b" replace="ímynd$1" />
+<Typo word="x" find="\bÝmind(|a|un|unarafl)\b" replace="Ímynd$1" />
+<Typo word="x" find="\b(S|s)taðreind(|a|ar|in|ina|inni|arinnar|um|ir|irnar|unum|anna)\b" replace="$1taðreynd$2" />
+<Typo word="x" find="\b(G|g)agnrín([a-z]{1,4})\b" replace="$1agnrýn2" />
+</pre>
+
+===Þrír eða tveir eins samhljóðar á mótum samsettra orða===
+<pre>
+<Typo word="Alllítill" find="\b(A|a)llíti(l|ll)\b" replace="$1lllíti$2" />
+<Typo word="Misskilningur" find="\b(M|m)iskilningur\b" replace="$1isskilningur" />
+<Typo word="Rétttrúnaður" find="\b(R|r)éttrúnað(|i|ur(|inn)|ar|aðnum|inum|arins)\b" replace="$1étttrúnað$2" />
+<Typo word="Sannnefndur" find="\b(S|s)annefnd([a-z]|[a-z][a-z])\b" replace="$1annnefnd$2" />
+<Typo word="Þátttaka" find="\b(Þ|þ)átt(a|ö)k(a|u|an|una|unni|unnar)\b" replace="$1áttt$2k$3" />
+</pre>
+
+==Stór stafur - Lönd==
+[http://ismal.hi.is/Ritreglur-070306.pdf II. kafli í ritreglum ÍSMÁL] og [http://www.ismal.hi.is/landahei.html Landaheiti skv. ÍSMÁL]
+<pre>
+<Typo word="Abkasía" find="\babkasía\b" replace="Abkasía" />
+<Typo word="x" find="\b(A|a)fg(|h)anistan(|s)\b" replace="Afganistan$3" />
+<Typo word="x" find="\balbaní(a|u)\b" replace="Albaní$1" />
+<Typo word="x" find="\balsír\b" replace="Alsír" />
+<Typo word="x" find="\bandorra\b" replace="Andorra" />
+<Typo word="x" find="\bangóla\b" replace="Angóla" />
+<Typo word="x" find="\bangvilla\b" replace="Angvilla" />
+<Typo word="x" find="\bargentín(a|u)\b" replace="Argentín$1" />
+<Typo word="x" find="\barmenía\b" replace="Armenía" />
+<Typo word="x" find="\barúba\b" replace="Arúba" />
+<Typo word="x" find="\baserbaídsjan\b" replace="Aserbaídsjan" />
+<Typo word="x" find="\b(a|A)ustur(|-|–|—)(K|k)ongó\b" replace="Austur-Kongó" />
+<Typo word="x" find="\b(a|A)ustu(r|rr)íki\b" replace="Austurríki" />
+<Typo word="x" find="\b(a|A)ustur(|-|–|—)(t|T)ímor\b" replace="Austur-Tímor" />
+<Typo word="x" find="\bálandseyj(a|ar|um)\b" replace="Álandseyj$1" />
+<Typo word="x" find="\bástralí(a|u)\b" replace="Ástralí$1" />
+<Typo word="x" find="\bbahamaeyj(ar|um|a)\b" replace="Bahamaeyj$1" />
+<Typo word="x" find="\bbandarík(in|junum|janna)\b" replace="Bandarík$1" />
+<Typo word="x" find="\b(B|b)andaríska\b.*\b(S|s)amóa\b" replace="Bandaríska Samóa" />
+<Typo word="x" find="\b(B|b)anglade(s|ss)\b" replace="Bangladess" />
+<Typo word="x" find="\bbarbados\b" replace="Barbados" />
+<Typo word="x" find="\bbarein\b" replace="Barein" />
+<Typo word="x" find="\bbelgía\b" replace="Belgía" />
+<Typo word="x" find="\bbelís\b" replace="Belís" />
+<Typo word="x" find="\bbenín\b" replace="Benín" />
+<Typo word="x" find="\bbermúda(|eyjar)\b" replace="Bermúda$1" />
+<Typo word="x" find="\bbosnía\b" replace="Bosnía" />
+<Typo word="x" find="\b(H|h)ers(e|i)g(ó|o)v(í|i)na\b" replace="Hersegóvína" />
+<Typo word="x" find="\bbotsvana\b" replace="Botsvana" />
+<Typo word="x" find="\b(B|b)ouvet(|-|—)eyja\b" replace="Bouvet-eyja" />
+</pre>
+
+==Tvískipt orð==
+[http://ismal.hi.is/Ritreglur-070306.pdf XII. kafli í ritreglum ÍSMÁL]
+<pre>
+<Typo word="x" find="\b(A|a)fhverju\b" replace="$1f hverju" />
+<Typo word="x" find="\b(A|a)l(|l)skonar\b" replace="$1lls konar" />
+<Typo word="x" find="\b(A|a)llskostar\b" replace="$1lls kostar" />
+<Typo word="x" find="\b(A|a)l(|l)sk(i|y)ns\b" replace="$1lls kyns" />
+<Typo word="x" find="\b(A|a)ll(s|ss)taðar\b" replace="$1lls staðar" />
+<Typo word="x" find="\b(A|a)nnar(s|ss)taðar\b" replace="$1nnars staðar" />
+<Typo word="x" find="\b(A|a)nnarsvegar\b" replace="$1nnars vegar" />
+<Typo word="x" find="\b(E|e)inhvern?tíma(n|nn)\b" replace="$1inhvern tímann" />
+<Typo word="x" find="\b(E|e)inhvern?tíma\b" replace="$1inhvern tíma" />
+<Typo word="x" find="\b(E|e)inhvernveginn\b" replace="$1inhvern veginn" />
+<Typo word="x" find="\b(E|e)inhverskonar\b" replace="$1inhvers konar" />
+<Typo word="x" find="\b(E|e)inhver(s|ss)taðar\b" replace="$1inhvers staðar" />
+<Typo word="x" find="\b(E|e)inskonar\b" replace="$1ins konar" />
+<Typo word="x" find="\b(E|e)inusinni\b" replace="$1inu sinni" />
+<Typo word="x" find="\b(E|e)ittsinn\b" replace="$1itt sinn" />
+<Typo word="x" find="\b(E|e)nganveginn\b" replace="$1ngan veginn" />
+<Typo word="x" find="\b(E|e)insog\b" replace="$1ins og" />
+<Typo word="x" find="\b(E|e)nnfremur\b" replace="$1nn fremur" />
+<Typo word="x" find="\b(E|e)n(|n)þá\b" replace="$1nn þá" />
+<Typo word="x" find="\b(F|f)ramhjá\b" replace="$1ram hjá" />
+<Typo word="x" find="\b(F|f)yrirfram\b" replace="$1yrir fram" />
+<Typo word="x" find="\b(H|h)érmeð\b" replace="$1ér með" />
+<Typo word="x" find="\b(H|h)insvegar\b" replace="$1ins vegar" />
+<Typo word="x" find="\b(H|h)verjusinni\b" replace="$1verju sinni" />
+<Typo word="x" find="\b(H|h)verskonar\b" replace="$1vers konar" />
+<Typo word="x" find="\b(H|h)verskyns\b" replace="$1vers kyns" />
+<Typo word="x" find="\b(H|h)versvegna\b" replace="$1vers vegna" />
+<Typo word="x" find="\b(L|l)ítilsháttar\b" replace="$1ítils háttar" />
+<Typo word="x" find="\b(M|m)eðfram\b" replace="$1eð fram" />
+<Typo word="x" find="\b(M|m)argskonar\b" replace="$1args konar" />
+<Typo word="x" find="\b(M|m)argskyns\b" replace="$1args kyns" />
+<Typo word="x" find="\b(M|m)eiriháttar\b" replace="$1eiri háttar" />
+<Typo word="x" find="\b(M|m)ikilsháttar\b" replace="$1ikils háttar" />
+<Typo word="x" find="\b(M|m)inniháttar\b" replace="$1inni háttar" />
+<Typo word="x" find="\b(N|n)okkrusinni\b" replace="$1okkru sinni" />
+<Typo word="x" find="\b(N|n)okkurntíma(|nn)\b" replace="$1okkurn tíma$2" />
+<Typo word="x" find="\b(N|n)okkurnveginn\b" replace="$1okkurn veginn" />
+<Typo word="x" find="\b(N|n)okkur(s|ss)konar\b" replace="$1okkurs konar" />
+<Typo word="x" find="\b(N|n)okkur(s|ss)taðar\b" replace="$1okkurs staðar" />
+<Typo word="x" find="\b(S|s)amskonar\b" replace="$1ams konar" />
+<Typo word="x" find="\b(S|s)um(s|ss)taðar\b" replace="$1ums staðar" />
+<Typo word="x" find="\b(T|t)vennskonar\b" replace="$1venns konar" />
+<Typo word="x" find="\b(Ý|ý)miskonar\b" replace="$1miss konar" />
+<Typo word="x" find="\b(Y|y)firum\b" replace="$1fir um" />
+<Typo word="x" find="\b(Þ|þ)arsem\b" replace="$1ar sem" />
+<Typo word="x" find="\b(Þ|þ)esskonar\b" replace="$1ess konar" />
+<Typo word="x" find="\b(Þ|þ)essvegna\b" replace="$1ess vegna" />
+</pre>
+==Samræming á þýðingum grískra og latneskra nafna==
+<pre>
+<Typo word="x" find="\bSesar\b" replace="Caesar" />
+</pre>
+
+==Skammstafanir==
+<pre>
+<Typo word="og svo framvegis" find="o\.s\.fr\." replace="o.s.frv." /> <!-- Veit ekki hvort þetta er of gráðugt eða ekki :s -->
+<Typo word="þar á meðal" find="(Þ|þ)\.á\.m\." replace="$1.á m." /> <!-- Sama hér -->
+</pre>
+
+==Samræming greina==
+<pre>
+<Typo word="Sjá einnig -> Tengt efni" find="==(|\ )Sjá einnig(|\ )==" replace="== Tengt efni ==" />
+<Typo word="Tímalína -> tímaás" find="\b(T|t)ímalína\b" replace="$1ímaás" />
+<Typo word="Tímalína -> tímaás" find="\b(T|t)ímalínunni\b" replace="$1ímaásnum" />
+<Typo word="Tímalína -> tímaás" find="\b(T|t)ímalínum\b" replace="$1ímaásum" />
+<Typo word="Tímalína -> tímaás" find="\b(T|t)ímalínunum\b" replace="$1ímaásunum" />
+<Typo word="Tímalína -> tímaás" find="\b(T|t)ímalínanna\b" replace="$1ímaásanna" />
+</pre>

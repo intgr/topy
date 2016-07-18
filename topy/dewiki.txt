@@ -1,0 +1,1959 @@
+{| class="wikitable" width=100%
+! align="center" style="background: #DDFFDD;"|
+<big>'''AutoWikiBrowser'''</big>
+|-
+| align="center" valign="top" width="16%" style="background: #EEFFEE;" |'''Typografie und Rechtschreibung'''
+|-
+| align="center" valign="top" width="17%" style="background: #EEFFEE;" |Fragen und Kommentare zu dieser Seite bitte auf der <br \><br \>'''[[Wikipedia Diskussion:AutoWikiBrowser/Typos|Diskussionsseite]]'''<br \><br \> Weitere Wortvorschläge für häufige Falschschreibungen kannst du entweder direkt hier einfügen oder auf der Diskussionsseite vorschlagen. Bitte beachte, dass sich Änderungen auf dieser Seite unmittelbar auf den AutoWikiBrowser auswirken. 
+|}
+== Typographische Zeichen ==
+
+<source lang="xml">
+
+
+
+</source>
+
+== Diakritische Zeichen ==
+
+== Zahlen ==
+
+<source lang="xml">
+
+
+
+</source>
+
+
+== Daten ==
+
+<source lang="xml">
+<!-- dd/mm/aaaa -->
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](0?1|[Jj][Aa][Nn])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Januar]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](0?2|[Ff][Ee][Bb])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Februar]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](0?3|[Mm][Aa][Rr])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. März]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](0?4|[Aa][Pp][Rr])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. April]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](0?5|[Mm][Aa][Ii])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Mai]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](0?6|[Jj][Uu][Nn])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Juni]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](0?7|[Jj][Uu][Ll])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Juli]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](0?8|[Aa][Uu][Gg])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. August]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](0?9|[Ss][Ee][Pp])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. September]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](10|[Oo][Kk][Tt])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Oktober]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](11|[Nn][Oo][Vv])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. November]] [[$3]]" />
+<Typo word="Datum" find="\b([1-3][0-9])[\/-](12|[Dd][Ee][Zz])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Dezember]] [[$3]]" />
+
+<!-- 0d/mm/aaaa -->
+<Typo word="Datum" find="\b0?([1-9])[\/-](0?1|[Jj][Aa][Nn])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Januar]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](0?2|[Ff][Ee][Bb])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Februar]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](0?3|[Mm][Aa][Rr])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. März]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](0?4|[Aa][Pp][Rr])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. April]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](0?5|[Mm][Aa][Ii])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Mai]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](0?6|[Jj][Uu][Nn])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Juni]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](0?7|[Jj][Uu][Ll])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Juli]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](0?8|[Aa][Uu][Gg])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. August]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](0?9|[Ss][Ee][Pp])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. September]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](10|[Oo][Kk][Tt])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Oktober]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](11|[Nn][Oo][Vv])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. November]] [[$3]]" />
+<Typo word="Datum" find="\b0?([1-9])[\/-](12|[Dd][Ee][Zz])[\/-]([1-2][0-9][0-9][0-9])\b" replace="[[$1. Dezember]] [[$3]]" />
+
+<Typo word="Janaur" find="\bJanaur\b" replace="Januar" />
+<Typo word="January" find="\bJanuary\b" replace="Januar" />
+<Typo word="Febuar" find="\bFebuar\b" replace="Februar" />
+<Typo word="February" find="\bFebruary\b" replace="Februar" />
+<Typo word="Feber" find="\bFeber\b" replace="Februar" />
+<Typo word="May" find="\bMay\b" replace="Mai" />
+<Typo word="June" find="\bJune\b" replace="Juni" />
+<Typo word="July" find="\bJuly\b" replace="Juli" />
+<Typo word="October" find="\bOctober\b" replace="Oktober" />
+<Typo word="December" find="\bDecember\b" replace="Dezember" />
+
+</source>
+
+== Abkürzungen ==
+
+<source lang="xml">
+<Typo word="cm²" find="\bcm2\b" replace="cm²" />
+<Typo word="m²" find="\bm2\b" replace="m²" />
+<Typo word="m³" find="\bm3\b" replace="m³" />
+<Typo word="cm³" find="\bcm3\b" replace="cm³" />
+<Typo word="km²" find="\bkm2\b" replace="km²" />
+<Typo word="m" find="\bm^²³m0-9?\b" replace="Meter " />
+<Typo word="km" find="\bkm^²³0-9?\b" replace="Kilometer " />
+<Typo word="ca" find="\bca\.\b" replace="circa " />
+<Typo word="zB" find="\bz.B.\b" replace="zum Beispiel " />
+<Typo word="zB" find="\bz. B.\b" replace="zum Beispiel " />
+<Typo word="zB" find="\bzB\b" replace="zum Beispiel " />
+<Typo word="zB." find="\bzB\." replace="zum Beispiel " />
+</source>
+
+== Grammatik ==
+
+<source lang="xml">
+<Typo word="Sprachen" find="\b[Aa]uf deutsch\b" replace="auf Deutsch" />
+<Typo word="Sprachen" find="\b[Aa]uf englisch\b" replace="auf Englisch" />
+<Typo word="Sprachen" find="\b[Aa]uf französisch\b" replace="auf Französisch" />
+<Typo word="Sprachen" find="\b[Aa]uf spanisch\b" replace="auf Spanisch" />
+<Typo word="Sprachen" find="\b[Aa]uf türkisch\b" replace="auf Türkisch" />
+<Typo word="Sprachen" find="\b[Aa]uf italienisch\b" replace="auf Italienisch" />
+<Typo word="Sprachen" find="\b[Aa]uf schwedisch\b" replace="auf Schwedisch" />
+<Typo word="Sprachen" find="\b[Aa]uf ungarisch\b" replace="auf Ungarisch" />
+<Typo word="Sprachen" find="\b[Aa]uf polnisch\b" replace="auf Polnisch" />
+<Typo word="Zwielaut+ß" find="(Ä|ä)uss" replace="$1uß" />
+<Typo word="Straß-" find="(S|s)trass" replace="$1traß" />
+<Typo word="Zwielaut+ß" find="euss" replace="euß" />
+<Typo word="langer Laut+ß" find="\bmäss\b" replace="mäß" />
+<Typo word="erster Weltkrieg" find="\berste(r?|m?|n?) Weltkrieg(s?|es?)\b" replace="Erste$1 Weltkrieg$2" />
+<Typo word="zweiter Weltkrieg" find="\bzweite(r?|m?|n?) Weltkrieg(s?|es?)\b" replace="Zweite$1 Weltkrieg$2" />
+<Typo word="erstere-" find="\berstere" replace="Erstere" />
+<Typo word="letztere-" find="\bletztere" replace="Letztere" />
+<Typo word="in bezug auf" find="\bin bezug auf" replace="in Bezug auf" />
+<Typo word="statt dessen" find="\b(S|s)tatt dessen\b" replace="$1tattdessen" />
+
+</source>
+
+== Geographische Begriffe ==
+<source lang="xml">
+<Typo word="Californien" find="\bCalifornien\b" replace="Kalifornien" /> 
+<Typo word="Cincinnati" find="\b[Cc]in(?:ncinn?at?|cinat?|cinnat)t(i|ians?|us)\b" replace="Cincinnat$1" />
+<Typo word="Copenhagen" find="\b[Cc]openhagen\b" replace="Kopenhagen" />
+<Typo word="Delaware" find="\b[Dd]ele?war(es?|ians?)\b" replace="Delawar$1" />
+<Typo word="Florida" find="\b[Ff]lordi?a(n?s?)\b" replace="Florida$1" />
+<Typo word="Guatemala-Stadt" find="\bGuatemala-City\b" replace="Guatemala-Stadt" />
+<Typo word="Guatemala-Stadt" find="\bGuatemala City\b" replace="Guatemala-Stadt" />
+<Typo word="Illinois" find="\b[Ii]l(?:[li]a?noi|ll+[ai]noi?|l+[ai]ni?o|l+ioni)s\b" replace="Illinois" />
+<Typo word="Israel" find="\b(?:[Ii]srea|israe)l(|is?|ites?)\b" replace="Israel$1" />
+<Typo word="Kuwait-Stadt" find="\bKuwait-City\b" replace="Kuwait-Stadt" />
+<Typo word="Kuwait-Stadt" find="\bKuwait City\b" replace="Kuwait-Stadt" />
+<Typo word="Louisiana" find="\b[Ll]ou(?:siani?|isiani)(a|ans?)\b" replace="Louisian$1" />
+<Typo word="malayisch" find="\b(M|m)alayisch\b" replace="$1alaiisch" />
+<Typo word="Massachusetts" find="\b[Mm]as(?:(?:ss+|)[aeu]ch?u?s+et*|s*[eu]ch?u?s+et*|s*[aeu]cu?s+et*|s*[aeu]ch?s+et*|s*[aeu]ch?u?ss+et*|s*[aeu]ch?u?s+e(?:tt|))ts\b" replace="Massachusetts" />
+<Typo word="Minnesota" find="\b[Mm]in(?:nn+e|e|ni)sot(a|ans?)\b" replace="Minnesot$1" />
+<Typo word="Mississippi" find="\b[Mm]i(?:s(?:ss+|)is+ip+|s+is(?:ss+|)ip+|s+is+ip(?:pp+|))i(|ans?)\b" replace="Mississippi$1" />
+<Typo word="Mexiko-Stadt" find="\bMexiko-City\b" replace="Mexiko-Stadt" />
+<Typo word="Mexiko-Stadt" find="\bMexiko City\b" replace="Mexiko-Stadt" />
+<Typo word="Nevada" find="\b[Nn]eveda\b" replace="Nevada" />
+<Typo word="Pennsylvania" find="\b[Pp]en(?:sylva|n?sylvan)nia(|ns?)\b" replace="Pennsylvania$1" />
+<Typo word="Tennessee" find="\b[Tt]en(?:(?:nn+|)ess+e*|n+es(?:ss+|)e*|n+ess+(?:ee+|))(e|ans?)\b" replace="Tennesse$1" />
+<Typo word="Los_Angeles" find="\b[Ll](?:as\s*[Aa]nge?le?|[ao]s\s*[Aa]ng(?:le|el))s\b" replace="Los Angeles" />
+<Typo word="New_Delhi" find="\bNew\s*[Dd]ehli\b" replace="Neu-Delhi" />
+<Typo word="Östereich" find="\b(Ö|Ö)stereich\b" replace="$1sterreich" />
+<Typo word="östereichisch" find="\b(Ö|ö)stereichisch(e?|em?|en?|er?|es?)\b" replace="$1sterreichisch$2" />
+<Typo word="Panama-Stadt" find="\bPanama-City\b" replace="Panama-Stadt" />
+<Typo word="Panama-Stadt" find="\bPanama City\b" replace="Panama-Stadt" />
+<Typo word="panamesisch" find="\b(P|p)anamesisch" replace="$1anamaisch" />
+<Typo word="Philadelphia" find="\b[Pp]hil(?:i?delph|adelp|adeph)ia(|ns?)\b" replace="Philadelphia$1" />
+<Typo word="philipinen" find="\b(P|p)hilipinen\b" replace="$1hilippinen" />
+<Typo word="philippienen" find="\b(P|p)hilippienen\b" replace="$1hilippinen" />
+<Typo word="phillipienen" find="\b(P|p)hillipienen\b" replace="$1hilippinen" />
+<Typo word="phillipinen" find="\b(P|p)hillipinen\b" replace="$1hilippinen" />
+<Typo word="portugiesich" find="\b(P|p)ortugiesich(e?|en?|er?|es?|em?)\b" replace="$1ortugiesisch$2" />
+<Typo word="preussisch" find="\b(P|p)reussisch(e?|en?|er?|es?|em?)\b" replace="$1reußisch$2" />
+<Typo word="Reykjavik" find="\b[Rr]e(?:kj|jkj?)avik\b" replace="Reykjavik" />
+<Typo word="russich" find="\b(R|r)ussich(e?|en?|er?|es?|em?)\b" replace="$1ussisch$2" />
+<Typo word="russsisch" find="\b(R|r)usssisch(e?|en?|er?|es?|em?)\b" replace="$1ussisch$2" />
+<Typo word="rußland" find="\b(R|r)ußland\b" replace="$1ussland" />
+<Typo word="Saudi Arabien" find="\b[Ss]uadi+\s*[Aa]rabien\b" replace="Saudi-Arabien" />
+<Typo word="Tajikistan" find="\b(T|t)ajikistan" replace="$1adschikistan" />
+<Typo word="Tadshikistan" find="\b(T|t)adshikistan" replace="$1adschikistan" />
+<Typo word="taiwanese" find="\b(T|t)aiwanese\b" replace="$1aiwaner" />
+<Typo word="taiwanesin" find="\b(T|t)aiwanesin\b" replace="$1aiwanerin" />
+<Typo word="taiwanesisch" find="\b(T|t)aiwanesisch\b" replace="$1aiwanisch" />
+<Typo word="taiwanesische" find="\b(T|t)aiwanesische\b" replace="$1aiwanische" />
+<Typo word="Ukaine" find="(U|u)kain" replace="$1krain" />
+ <Typo word="würtemberg" find="\b(W|w)ürtemberg\b" replace="$1ürttemberg" />
+<Typo word="würtembergische" find="\b(W|w)ürtembergische\b" replace="$1ürttembergische" />
+
+</source>
+
+== Namen ==
+
+<source lang="xml">
+
+<Typo word="ghandi" find="\b(G|g)handi\b" replace="$1andhi" />
+
+</source>
+
+==Wortliste==
+
+===A===
+<source lang="xml">
+<Typo word="abeit" find="\b(A|a)beit\b" replace="$1rbeit" />
+<Typo word="abeiten" find="\b(A|a)beiten\b" replace="$1rbeiten" />
+<Typo word="abeiter" find="\b(A|a)beiter\b" replace="$1rbeiter" />
+<Typo word="abfluß" find="\b(A|a)bfluß\b" replace="$1bfluss" />
+<Typo word="abgeblaßt" find="\b(A|a)bgeblaßt\b" replace="$1bgeblasst" />
+<Typo word="abgestossen" find="\b(A|a)bgestossen\b" replace="$1bgestoßen" />
+<Typo word="abhanden kommen" find="(A|a)bhanden kommen" replace="$1bhandenkommen" />
+<Typo word="abhanden gekommen" find="\b(A|a)bhanden gekommen" replace="$1bhandengekommen" />
+<Typo word="abhängikeit" find="\b(A|a)bhängikeit\b" replace="$1bhängigkeit" />
+<Typo word="ablaß" find="\b(A|a)blaß\b" replace="$1blass" />
+<Typo word="abnachung" find="\b(A|a)bnachung\b" replace="$1bmachung" />
+<Typo word="abriß" find="\b(A|a)briß\b" replace="$1briss" />
+<Typo word="abschliessen" find="\b(A|a)bschliessen(d?)\b" replace="$1bschließen$2" />
+<Typo word="abschliesst" find="\b(A|a)bschliesst\b" replace="$1bschließt" />
+<Typo word="absorbtion" find="\b(A|a)bsorbtion\b" replace="$1bsorbierung" />
+<Typo word="abstossen" find="\b(A|a)bstossen\b" replace="$1bstoßen" />
+<Typo word="abszeß" find="\b(A|a)bszeß\b" replace="$1bszess" />
+<Typo word="abwägig" find="\b(A|a)bwägig\b" replace="$1bwegig" />
+<Typo word="accesoir" find="\b(A|a)ccesoir\b" replace="$1ccessoire" />
+<Typo word="acksessoir" find="\b(A|a)cksessoir\b" replace="$1ccessoire" />
+<Typo word="addresse" find="\b(A|a)ddresse\b" replace="$1dresse" />
+<Typo word="aderlaß" find="\b(A|a)derlaß\b" replace="$1derlass" />
+<Typo word="adjudant" find="\b(A|a)djudant\b" replace="$1djutant" />
+<Typo word="adnere" find="\b(A|a)dnere(s|r) \b" replace="$1ndere$2" />
+<Typo word="adners" find="\b(A|a)dners\b" replace="$1nders" />
+<Typo word="adreßbuch" find="\b(A|a)dreßbuch\b" replace="$1dressbuch" />
+<Typo word="agendas" find="\b(A|a)gendas\b" replace="$1genden" />
+<Typo word="aggresiv" find="\b(A|a)g(?:g?re|res)s(ion?|iv|or?)\b" replace="$1ggress$2" />
+<Typo word="akkustik" find="\b(A|a)kkustik\b" replace="$1kustik" />
+<Typo word="aktuele" find="\b(A|a)ktuel(e?)\b" replace="$1ktuell$2" />
+<Typo word="aktzept-" find="(A|a)ktzept" replace="$1kzept" />
+<Typo word="aler" find="\b(A|a)ler\b" replace="$1ller" />
+<Typo word="algoritmus" find="\b(A|a)lgor(i|y)t(h?)mus\b" replace="$1lgorithmus" />
+<Typo word="alkoholmißbrauch" find="\b(A|a)lkoholmißbrauch\b" replace="$1lkoholmissbrauch" />
+<Typo word="allierte" find="\b(A|a)llierte(n?)\b" replace="$1lliierte$2" />
+<Typo word="allzufrüh" find="\b(A|a)llzufrüh\b" replace="$1llzu früh" />
+<Typo word="allzugern" find="\b(A|a)llzugern\b" replace="$1llzu gern" />
+<Typo word="allzulange" find="\b(A|a)llzulang(e?)\b" replace="$1llzu lange" />
+<Typo word="allzuoft" find="\b(A|a)llzuoft\b" replace="$1llzu oft" />
+<Typo word="allzusehr" find="\b(A|a)llzusehr\b" replace="$1llzu sehr" />
+<Typo word="allzuselten" find="\b(A|a)llzuselten\b" replace="$1llzu selten" />
+<Typo word="allzuviel" find="\b(A|a)llzuviel\b" replace="$1llzu viel" />
+<Typo word="allzuweit" find="\b(A|a)llzuweit\b" replace="$1llzu weit" />
+<Typo word="alterstruktur" find="\b(A|a)lterstruktur\b" replace="$1ltersstruktur" />
+<Typo word="amboß" find="\b(A|a)mboß\b" replace="$1mboss" />
+<Typo word="amtsprache" find="\b(A|a)mtsprache(n?)\b" replace="$1mtssprache" />
+<Typo word="anaesthesie" find="\b(A|a)n(ae|ä|e)st(h?)esie\b" replace="$1nästhesie" />
+<Typo word="analen" find="\b(A|a)nalen\b" replace="$1nnalen" />
+<Typo word="anbiß" find="\b(A|a)nbiß\b" replace="$1nbiss" />
+<Typo word="anderere" find="\b(A|a)nderere(n?|r?)\b" replace="$1nderere$2" />
+<Typo word="anderne" find="\b(A|a)nderne\b" replace="$1nderen" />
+<Typo word="Annerkennung" find="(A|a)nnerkennung" replace="$1nerkennung" /> 
+<Typo word="angelsächsiche" find="\b(A|a)ngelsächsich(e?|en?)\b" replace="$1ngelsächsisch$2" />
+<Typo word="angelsächsichen" find="\b(A|a)ngelsächsichen\b" replace="$1ngelsächsichen" />
+<Typo word="anlaesslich" find="\b(A|a)nlaesslich\b" replace="$1nlässlich" />
+<Typo word="anlaeßlich" find="\b(A|a)nlaeßlich\b" replace="$1nlässlich" />
+<Typo word="anlaß" find="\b(A|a)nlaß\b" replace="$1nlass" />
+<Typo word="anläßlich" find="\b(A|a)nläßlich\b" replace="$1nlässlich" />
+<Typo word="anmassen" find="\b(A|a)nmassen\b" replace="$1nmaßen" />
+<Typo word="annerkannt" find="\b(A|a)nnerkannt\b" replace="$1nerkannt" />
+<Typo word="annerkannte" find="\b(A|a)nnerkannte\b" replace="$1nerkannte" />
+<Typo word="annerkannten" find="\b(A|a)nnerkannten\b" replace="$1nerkannten" />
+<Typo word="annerkannter" find="\b(A|a)nnerkannter\b" replace="$1nerkannter" />
+<Typo word="annerkanntes" find="\b(A|a)nnerkanntes\b" replace="$1nerkanntes" />
+<Typo word="annerkennung" find="\b(A|a)nnerkennung\b" replace="$1nerkennung" />
+<Typo word="annuliert" find="\b(A|a)nnuliert\b" replace="$1nnulliert" />
+<Typo word="annulierung" find="\b(A|a)nnulierung\b" replace="$1nnullierung" />
+<Typo word="anordung" find="\b(A|a)nordung(en?)\b" replace="$1nordnung$2" />
+<Typo word="anriß" find="\b(A|a)nriß\b" replace="$1nriss" />
+<Typo word="anschaung" find="\b(A|a)nschaung\b" replace="$1nschauung" />
+<Typo word="anschiß" find="\b(A|a)nschiß\b" replace="$1nschiss" />
+<Typo word="anschliessen" find="\b(A|a)nschliessen(d?|de?|den?|der?|des?)\b" replace="$1nschließen$2" />
+<Typo word="anschlusstelle" find="\b(A|a)nschlusstelle(n?)\b" replace="$1nschlussstelle$2" />
+<Typo word="anstoss" find="\b(A|a)nstoss(en?)\b" replace="$1nstoß$2" />
+<Typo word="aquirieren" find="\b(A|a)quirier(t?|en?|te?)\b" replace="$1kquirier$2" />
+<Typo word="aquise" find="\b(A|a)quise\b" replace="$1kquise" />
+<Typo word="aquisition" find="\b(A|a)quisition\b" replace="$1kquisition" />
+<Typo word="arbete" find="\b(A|a)rbete(n?)\b" replace="$1rbeite$2" />
+<Typo word="archälogische" find="\b(A|a)rchälogisch(e?|es?)\b" replace="$1rchäologisch$2" />
+<Typo word="argumnet" find="\b(A|a)rgumnet\b" replace="$1rgument" />
+<Typo word="asoziiert" find="\b(A|a)soziier(t?|en?)\b" replace="$1ssoziier$2" />
+<Typo word="assessoir" find="\b(A|a)ssessoir(e?)\b" replace="$1ccessoire$2" />
+<Typo word="assozial" find="\b(A|a)ssozial\b" replace="$1sozial" />
+<Typo word="athmosphäre" find="\b(A|a)thmosphäre\b" replace="$1tmosphäre" />
+<Typo word="aufassung" find="\b(A|a)ufassung(en?)\b" replace="$1uffassung$2" />
+<Typo word="aufgefaßt" find="\b(A|a)ufgefaßt\b" replace="$1ufgefasst" />
+<Typo word="aufgenomemn" find="\b(A|a)ufgenomemn\b" replace="$1ufgenommen" />
+<Typo word="aufgerauht" find="\b(A|a)ufgerauht\b" replace="$1ufgeraut" />
+<Typo word="auflösungsprozeß" find="\b(A|a)uflösungsprozeß\b" replace="$1uflösungsprozess" />
+<Typo word="auforderung" find="\b(A|a)uforderung\b" replace="$1ufforderung" />
+<Typo word="aufrauhen" find="\b(A|a)ufrauhen\b" replace="$1ufrauen" />
+<Typo word="aufriß" find="\b(A|a)ufriß\b" replace="$1ufriss" />
+<Typo word="aufsein" find="\b(A|a)ufsein\b" replace="$1uf sein" />
+<Typo word="aufsteig" find="\b(A|a)ufsteig\b" replace="$1ufstieg" />
+<Typo word="auftretenen" find="\b(A|a)uftretenen\b" replace="$1uftretenden" />
+<Typo word="aufällig" find="\b(A|a)ufällig\b" replace="$1uffällig" />
+<Typo word="ausage" find="\b(A|a)usage\b" replace="$1ussage" />
+<Typo word="ausagen" find="\b(A|a)usagen\b" replace="$1ussagen" />
+<Typo word="auschliesslich" find="\b(A|a)uschliesslich\b" replace="$1usschließlich" />
+<Typo word="auschließlich" find="\b(A|a)uschließlich\b" replace="$1usschließlich" />
+<Typo word="auseinanderhalten" find="\b(A|a)useinanderhalten\b" replace="$1useinander halten" />
+<Typo word="auserdem" find="\b(A|a)userdem\b" replace="$1ußerdem" />
+<Typo word="auserhalb" find="\b(A|a)userhalb\b" replace="$1ußerhalb" />
+<Typo word="ausfluß" find="\b(A|a)usfluß\b" replace="$1usfluss" />
+<Typo word="ausgangpunkt" find="\b(A|a)usgangpunkt\b" replace="$1usgangspunkt" />
+<Typo word="ausgestatte" find="\b(A|a)usgestatte\b" replace="$1usgestattet" />
+<Typo word="ausmass" find="\b(A|a)usmass\b" replace="$1usmaß" />
+<Typo word="ausprache" find="\b(A|a)usprache\b" replace="$1ussprache" />
+<Typo word="auspruch" find="\b(A|a)uspruch\b" replace="$1usspruch" />
+<Typo word="ausschliesslich" find="\b(A|a)usschliesslich\b" replace="$1usschließlich" />
+<Typo word="aussen" find="\b(A|a)ussen\b" replace="$1ußen" />
+<Typo word="aussen" find="aussen\b" replace="außen" />
+<Typo word="aussen" find="\b(A|a)ussen" replace="$1ußen" />
+<Typo word="aussen" find="aussen" replace="außen" />
+<Typo word="ausser" find="\b(A|a)usser\b" replace="$1ußer" />
+<Typo word="ausserdem" find="\b(A|a)usserdem\b" replace="$1ußerdem" />
+<Typo word="aussergewöhnlich" find="\b(A|a)ussergewöhnlich\b" replace="$1ußergewöhnlich" />
+<Typo word="aussergewöhnliche" find="\b(A|a)ussergewöhnliche\b" replace="$1ußergewöhnliche" />
+<Typo word="aussergewöhnlichen" find="\b(A|a)ussergewöhnlichen\b" replace="$1ußergewöhnlichen" />
+<Typo word="aussergewöhnliches" find="\b(A|a)ussergewöhnliches\b" replace="$1ußergewöhnliches" />
+<Typo word="ausserhalb" find="\b(A|a)usserhalb\b" replace="$1ußerhalb" />
+<Typo word="ausserirdisch" find="\b(A|a)usserirdisch\b" replace="$1ßerirdisch" />
+<Typo word="ausserirdische" find="\b(A|a)usserirdische\b" replace="$1ußerirdische" />
+<Typo word="ausserirdischem" find="\b(A|a)usserirdischem\b" replace="$1ußerirdischem" />
+<Typo word="ausserirdischen" find="\b(A|a)usserirdischen\b" replace="$1ußerirdischen" />
+<Typo word="ausserirdischer" find="\b(A|a)usserirdischer\b" replace="$1ußerirdischer" />
+<Typo word="ausserirdisches" find="\b(A|a)usserirdisches\b" replace="$1ußerirdisches" />
+<Typo word="ausserordentlich" find="\b(A|a)usserordentlich\b" replace="$1ußerordentlich" />
+<Typo word="ausserordentliche" find="\b(A|a)usserordentliche\b" replace="$1ußerordentliche" />
+<Typo word="ausserordentlichem" find="\b(A|a)usserordentlichem\b" replace="$1ußerordentlichem" />
+<Typo word="ausserordentlichen" find="\b(A|a)usserordentlichen\b" replace="$1ußerordentlichen" />
+<Typo word="ausserordentlicher" find="\b(A|a)usserordentlicher\b" replace="$1ußerordentlicher" />
+<Typo word="ausserordentliches" find="\b(A|a)usserordentliches\b" replace="$1ußerordentliches" />
+<Typo word="ausserstande" find="\b(A|a)usserstande\b" replace="$1ußerstande" />
+<Typo word="austattung" find="\b(A|a)ustattung\b" replace="$1usstattung" />
+<Typo word="austellung" find="\b(A|a)ustellung\b" replace="$1usstellung" />
+<Typo word="austellungen" find="\b(A|a)ustellungen\b" replace="$1usstellungen" />
+<Typo word="austerben" find="\b(A|a)usterben\b" replace="$1ussterben" />
+<Typo word="auswal" find="\b(A|a)uswal\b" replace="$1uswahl" />
+<Typo word="auszeichung" find="\b(A|a)uszeichung\b" replace="$1uszeichnung" />
+<Typo word="auszeichungen" find="\b(A|a)uszeichungen\b" replace="$1uszeichnungen" />
+<Typo word="author" find="\b(A|a)uthor\b" replace="$1utor" />
+<Typo word="authorisieren" find="\b(A|a)uthorisieren\b" replace="$1utorisieren" />
+<Typo word="authorisiert" find="\b(A|a)uthorisiert\b" replace="$1utorisiert" />
+<Typo word="authorisierung" find="\b(A|a)uthorisierung\b" replace="$1utorisierung" />
+</source>
+
+=== B ===
+
+<source lang="xml">
+<Typo word="babies" find="\b(B|b)abies\b" replace="$1abys" />
+<Typo word="ballettänzerin" find="\b(B|b)allettänzerin\b" replace="$1alletttänzerin" />
+<Typo word="ballokal" find="\b(B|b)allokal\b" replace="$1alllokal" />
+<Typo word="baroneß" find="\b(B|b)aroneß\b" replace="$1aroness" />
+<Typo word="baß" find="\b(B|b)aß\b" replace="$1ass" />
+<Typo word="baßgeige" find="\b(B|b)aßgeige\b" replace="$1assgeige" />
+<Typo word="baßsänger" find="\b(B|b)aßsänger\b" replace="$1asssänger" />
+<Typo word="bauerhof" find="\b(B|b)auerhof\b" replace="$1auernhof" />
+<Typo word="bedeutenste" find="\b(B|b)edeutenste\b" replace="$1edeutendste" />
+<Typo word="bedeutensten" find="\b(B|b)edeutensten\b" replace="$1edeutendsten" />
+<Typo word="bedeutenster" find="\b(B|b)edeutenster\b" replace="$1edeutendster" />
+<Typo word="bedeutenstes" find="\b(B|b)edeutenstes\b" replace="$1edeutendstes" />
+<Typo word="bedeutesten" find="\b(B|b)edeutesten\b" replace="$1edeutendsten" />
+<Typo word="bedrouille" find="\b(B|b)edrouille\b" replace="$1redouille" />
+<Typo word="beeinflußbar" find="\b(B|b)eeinflußbar\b" replace="$1eeinflussbar" />
+<Typo word="beeinflußbarkeit" find="\b(B|b)eeinflußbarkeit\b" replace="$1eeinflussbarkeit" />
+<Typo word="beeinflußen" find="\b(B|b)eeinflußen\b" replace="$1eeinflussen" />
+<Typo word="beeinflußt" find="\b(B|b)eeinflußt\b" replace="$1eeinflusst" />
+<Typo word="beeinflußte" find="\b(B|b)eeinflußte\b" replace="$1eeinflusste" />
+<Typo word="beeinflußten" find="\b(B|b)eeinflußten\b" replace="$1eeinflussten" />
+<Typo word="beeinhalten" find="\b(B|b)eeinhalten\b" replace="$1einhalten" />
+<Typo word="beeinhaltet" find="\b(B|b)eeinhaltet\b" replace="$1einhaltet" />
+<Typo word="befaßt" find="\b(B|b)efaßt(e?)\b" replace="$1efasst$2" />
+<Typo word="befaßten" find="\b(B|b)efaßten\b" replace="$1efassten" />
+<Typo word="befor" find="\b(B|b)efor\b" replace="$1evor" />
+<Typo word="began" find="\b(B|b)egan\b" replace="$1egann" />
+<Typo word="begrüsste" find="\b(B|b)egrüsste\b" replace="$1egrüßte" />
+<Typo word="begrüssten" find="\b(B|b)egrüssten\b" replace="$1egrüßten" />
+<Typo word="begrüßungskuß" find="\b(B|b)egrüßungskuß\b" replace="$1egrüßungskuss" />
+<Typo word="beherschen" find="\b(B|b)eherschen\b" replace="$1eherrschen" />
+<Typo word="beherscht" find="\b(B|b)eherscht\b" replace="$1eherrscht" />
+<Typo word="beherschte" find="\b(B|b)eherschte\b" replace="$1eherrschte" />
+<Typo word="beinflussen" find="\b(B|b)einflussen\b" replace="$1eeinflussen" />
+<Typo word="beinflusst" find="\b(B|b)einflusst\b" replace="$1eeinflusst" />
+<Typo word="beinflusste" find="\b(B|b)einflusste\b" replace="$1eeinflusste" />
+<Typo word="beinflussten" find="\b(B|b)einflussten\b" replace="$1eeinflussten" />
+<Typo word="beipiel" find="\b(B|b)eipiel\b" replace="$1eispiel" />
+<Typo word="beipiele" find="\b(B|b)eipiele\b" replace="$1eispiele" />
+<Typo word="beispeil" find="\b(B|b)eispeil\b" replace="$1eispiel" />
+<Typo word="beispeilsweise" find="\b(B|b)eispeilsweise\b" replace="$1eispielsweise" />
+<Typo word="beispielweise" find="\b(B|b)eispielweise\b" replace="$1eispielsweise" />
+<Typo word="beissen" find="\b(B|b)eissen\b" replace="$1eißen" />
+<Typo word="beisst" find="\b(B|b)eisst\b" replace="$1eißt" />
+<Typo word="bekant" find="\b(B|b)ekant\b" replace="$1ekannt" />
+<Typo word="bekante" find="\b(B|b)ekante\b" replace="$1ekannte" />
+<Typo word="bekanter" find="\b(B|b)ekanter\b" replace="$1ekannter" />
+<Typo word="bekantes" find="\b(B|b)ekantes\b" replace="$1ekanntes" />
+<Typo word="bekenntniss" find="\b(B|b)ekenntniss\b" replace="$1ekenntnis" />
+<Typo word="belästignug" find="\b(B|b)elästignug\b" replace="$1elästigung" />
+<Typo word="belätsigung" find="\b(B|b)elätsigung\b" replace="$1elästigung" />
+<Typo word="benefitz" find="\b(B|b)enefitz\b" replace="$1enefiz" />
+<Typo word="bennant" find="\b(B|b)ennant\b" replace="$1ennannt" />
+<Typo word="bennenung" find="\b(B|b)ennenung\b" replace="$1ennennung" />
+<Typo word="berechnug" find="\b(B|b)erechnug\b" replace="$1erechnung" />
+<Typo word="berechung" find="\b(B|b)erechung\b" replace="$1erechnung" />
+<Typo word="bereis" find="\b(B|b)ereis\b" replace="$1ereits" />
+<Typo word="besass" find="\b(B|b)esass\b" replace="$1esaß" />
+<Typo word="bescheidenden" find="\b(Bb)escheidenden\b" replace="$1escheidenen" />
+<Typo word="bescherde" find="\b(B|b)escherde\b" replace="$1eschwerde" />
+<Typo word="beschliessen" find="\b(B|b)eschliessen\b" replace="$1eschließen" />
+<Typo word="besitzten" find="\b(B|b)esitzten\b" replace="$1esitzen" />
+<Typo word="Beonderheit" find="\b(B|b)eonderheit" replace="$1eonderheit" />
+<Typo word="bestelliste" find="\b(B|b)estelliste\b" replace="$1estellliste" />
+<Typo word="bestgehaßt" find="gehaßt\b" replace="gehasst" />
+<Typo word="bestimmmte" find="\b(B|b)estimmmte\b" replace="$1estimmte" />
+<Typo word="betriebsystem" find="\b(B|b)etriebsystem(e?)\b" replace="$1etriebssystem$2" />
+<Typo word="betriebsystemen" find="\b(B|b)etriebsystemen\b" replace="$1etriebssystemen" />
+<Typo word="bettuch" find="\b(B|b)ettuch\b" replace="$1etttuch" />
+<Typo word="beweiß" find="\b(B|b)eweiß\b" replace="$1eweis" />
+<Typo word="beweißt" find="\b(B|b)eweißt\b" replace="$1eweist" />
+<Typo word="bewußt" find="\b(B|b)ewußt\b" replace="$1ewusst" />
+<Typo word="bewußte" find="\b(B|b)ewußte\b" replace="$1ewusste" />
+<Typo word="bewußten" find="\b(B|b)ewußten\b" replace="$1ewussten" />
+<Typo word="bewußter" find="\b(B|b)ewußter\b" replace="$1ewusster" />
+<Typo word="bewußtlos" find="\b(B|b)ewußtlos\b" replace="$1ewusstlos" />
+<Typo word="bewußtlosigkeit" find="\b(B|b)ewußtlosigkeit\b" replace="$1ewusstlosigkeit" />
+<Typo word="bewußtsein" find="\b(B|b)ewußtsein\b" replace="$1ewusstsein" />
+<Typo word="bezeichent" find="\b(B|b)ezeichent\b" replace="$1ezeichnend" />
+<Typo word="bezeichnug" find="\b(B|b)ezeichnug\b" replace="$1ezeichnung" />
+<Typo word="bezeichung" find="\b(B|b)ezeichung\b" replace="$1ezeichnung" />
+<Typo word="beziechnung" find="\b(B|b)eziechung\b" replace="$1ezeichnung" />
+<Typo word="bezeichungen" find="\b(B|b)ezeichungen\b" replace="$1ezeichnungen" />
+<Typo word="bibliotekh" find="\b(B|b)ibliotekh\b" replace="$1ibliothek" />
+<Typo word="bibliothrk" find="\b(B|b)ibliothrk\b" replace="$1ibliothek" />
+<Typo word="bierfaß" find="\b(B|b)ierfaß\b" replace="$1ierfass" />
+<Typo word="billiard" find="\b(B|b)illiard\b" replace="$1illard" />
+<Typo word="billingual" find="(B|b)illingu" replace="$1ilingu" />
+<Typo word="bischen" find="\b(B|b)ischen\b" replace="$1isschen" />
+<Typo word="bischhof" find="\b(B|b)ischhof\b" replace="$1ischof" />
+<Typo word="bischofsitz" find="\b(B|b)ischofsitz\b" replace="$1ischofssitz" />
+<Typo word="bisquit" find="\b(B|b)isquit\b" replace="$1iskuit" />
+<Typo word="biß" find="\b(B|b)iß\b" replace="$1iss" />
+<Typo word="bißchen" find="\b(B|b)ißchen\b" replace="$1isschen" />
+<Typo word="blaß" find="\b(B|b)laß\b" replace="$1lass" />
+<Typo word="blaßrosa" find="\b(B|b)laßrosa\b" replace="$1lassrosa" />
+<Typo word="bleßhuhn" find="\b(B|b)leßhuhn\b" replace="$1lesshuhn" />
+<Typo word="bleu" find="\b(B|b)leu(en?)\b" replace="$1läu$2" />
+<Typo word="blos" find="\b(B|b)los\b" replace="$1loß" />
+<Typo word="bloss" find="\b(B|b)loss\b" replace="$1loß" />
+<Typo word="bläßhuhn" find="\b(B|b)läßhuhn\b" replace="$1lässhuhn" />
+<Typo word="bläßlich" find="\b(B|b)läßlich\b" replace="$1lässlich" />
+<Typo word="bombadieren" find="\b(B|b)ombadieren\b" replace="$1ombardieren" />
+<Typo word="bombadiert" find="\b(B|b)ombadiert\b" replace="$1ombardiert" />
+<Typo word="bombadierung" find="\b(B|b)ombadierung\b" replace="$1ombardierung" />
+<Typo word="brennessel" find="\b(B|b)rennessel\b" replace="$1rennnessel" />
+<Typo word="brilliant" find="\b(B|b)rilliant\b" replace="$1rillant" />
+<Typo word="kuß" find="(K|k)uß\b" replace="$1uss" />
+<Typo word="bundesstrasse" find="\b(B|b)undesstrasse\b" replace="$1undesstraße" />
+<Typo word="bundesstrassen" find="\b(B|b)undesstrassen\b" replace="$1undesstraßen" />
+<Typo word="bundestaat" find="\b(B|b)undestaat\b" replace="$1undesstaat" />
+<Typo word="bundestaaten" find="\b(B|b)undestaaten\b" replace="$1undesstaaten" />
+<Typo word="bundestaates" find="\b(B|b)undestaates\b" replace="$1undesstaates" />
+<Typo word="bundestaats" find="\b(B|b)undestaats\b" replace="$1undesstaats" />
+<Typo word="bundestrasse" find="\b(B|b)undestrasse\b" replace="$1undesstraße" />
+<Typo word="bundestraße" find="\b(B|b)undestraße\b" replace="$1undesstraße" />
+<Typo word="bundesverammlung" find="\b(B|b)undesverammlung\b" replace="$1undesversammlung" />
+<Typo word="busineß" find="\b(B|b)usineß\b" replace="$1usiness" />
+<Typo word="butterfaß" find="\b(B|b)utterfaß\b" replace="$1utterfass" />
+<Typo word="bänderriß" find="\b(B|b)änderriß\b" replace="$1änderriss" />
+<Typo word="bündniss" find="\b(B|b)ündniss\b" replace="$1ündnis" />
+</source>
+
+=== C ===
+
+<source lang="xml">
+<Typo word="chinesiche" find="\b(C|c)hinesich(e?)\b" replace="$1hinesische$2" />
+<Typo word="chinesichen" find="\b(C|c)hinesiche(n?|r?)\b" replace="$1hinesiche$2" />
+<Typo word="cities" find="\b(C|c)ities\b" replace="$1itys" />
+<Typo word="cleverneß" find="\b(C|c)leverneß\b" replace="$1leverness" />
+</source>
+
+=== D ===
+
+<source lang="xml">
+<Typo word="dabeisein" find="\b(D|d)abeisein\b" replace="$1abei sein" />
+<Typo word="dachgeschoß" find="\b(D|d)achgeschoß\b" replace="$1achgeschoss" />
+<Typo word="daduch" find="\b(D|d)aduch\b" replace="$1adurch" />
+<Typo word="dagewesen" find="\b(D|d)agewesen\b" replace="$1a gewesen" />
+<Typo word="dagewesene" find="\b(D|d)agewesene\b" replace="$1a gewesene" />
+<Typo word="dagewesenen" find="\b(D|d)agewesenen\b" replace="$1a gewesenen" />
+<Typo word="dagewesener" find="\b(D|d)agewesener\b" replace="$1a gewesener" />
+<Typo word="dagewesenes" find="\b(D|d)agewesenes\b" replace="$1a gewesenes" />
+<Typo word="dampfschiffahrt" find="\b(D|d)ampfschiffahrt\b" replace="$1ampfschifffahrt" />
+<Typo word="dannach" find="\b(D|d)annach\b" replace="$1anach" />
+<Typo word="daruf" find="\b(D|d)aruf\b" replace="$1arauf" />
+<Typo word="daruaf" find="(D|d)aruaf" replace="$1arauf" />
+<Typo word="daselbe" find="\b(D|d)aselbe\b" replace="$1asselbe" />
+<Typo word="daß" find="\b(D|d)aß\b" replace="$1ass" />
+<Typo word="definitionsgemäss" find="\b(D|d)efinitionsgemäss\b" replace="$1efinitionsgemäß" />
+<Typo word="defintion" find="\b(D|d)efintion\b" replace="$1efinition" />
+<Typo word="deis" find="\b(D|d)eis\b" replace="$1ies" />
+<Typo word="deise" find="\b(D|d)eise\b" replace="$1iese" />
+<Typo word="deisen" find="\b(D|d)eisen\b" replace="$1iesen" />
+<Typo word="deiser" find="\b(D|d)eiser\b" replace="$1ieser" />
+<Typo word="deises" find="\b(D|d)eises\b" replace="$1ieses" />
+<Typo word="deknt" find="\b(D|d)eknt\b" replace="$1enkt" />
+<Typo word="deligieren" find="\b(D|d)eligieren\b" replace="$1elegieren" />
+<Typo word="denkprozeß" find="\b(D|d)enkprozeß\b" replace="$1enkprozess" />
+<Typo word="denoch" find="\b(D|d)enoch\b" replace="$1ennoch" />
+<Typo word="dermassen" find="\b(D|d)ermassen\b" replace="$1ermaßen" />
+<Typo word="desen" find="\b(D|d)esen\b" replace="$1essen" />
+<Typo word="dessenungeachtet" find="\b(D|d)essenungeachtet\b" replace="$1essen ungeachtet" />
+<Typo word="desweiteren" find="\b(D|d)esweiteren\b" replace="$1es Weiteren" />
+<Typo word="desweiteren" find="\b(D|d)es weiteren\b" replace="$1es Weiteren" />
+<Typo word="desshalb" find="\b(D|d)esshalb\b" replace="$1eshalb" />
+<Typo word="-dess" find="\b(D|d)ess\b" replace="$1es" />
+<Typo word="detailiert" find="\b(D|d)etailiert\b" replace="$1etailliert" />
+<Typo word="detailierte" find="\b(D|d)etailierte\b" replace="$1etaillierte" />
+<Typo word="detailiertem" find="\b(D|d)etailiertem\b" replace="$1etailliertem" />
+<Typo word="detailierten" find="\b(D|d)etailierten\b" replace="$1etaillierten" />
+<Typo word="detailierter" find="\b(D|d)etailierter\b" replace="$1etaillierter" />
+<Typo word="dh" find="\b(D|d)h\b" replace="$1as heißt" />
+<Typo word="diabetis" find="\b(D|d)iabetis\b" replace="$1iabetes" />
+<Typo word="diesre" find="\b(D|d)iesre\b" replace="$1ieser" />
+<Typo word="dilletant" find="\b(D|d)illetant\b" replace="$1ilettant" />
+<Typo word="dilletantisch" find="\b(D|d)illetantisch\b" replace="$1ilettantisch" />
+<Typo word="diozöse" find="\b(D|d)iozöse(n?)\b" replace="$1iözse$2" />
+<Typo word="diphtong" find="\b(D|d)iphtong\b" replace="$1iphthong" />
+<Typo word="Discography" find="(D|d)iscography" replace="$1iskografie" />
+<Typo word="disaster" find="\b(D|d)isaster\b" replace="$1esaster" />
+<Typo word="disaströs" find="\b(D|d)isaströs\b" replace="$1esaströs" />
+<Typo word="discografie" find="\b(D|d)iscografie\b" replace="$1iskografie" />
+<Typo word="discographie" find="\b(D|d)iscographie\b" replace="$1iskographie" />
+<Typo word="dise" find="\b(D|d)ise\b" replace="$1iese" />
+<Typo word="disees" find="\b(D|d)isees\b" replace="$1ieses" />
+<Typo word="disen" find="\b(D|d)isen\b" replace="$1iesen" />
+<Typo word="diser" find="\b(D|d)iser\b" replace="$1ieser" />
+<Typo word="dises" find="\b(D|d)ises\b" replace="$1ieses" />
+<Typo word="diskreminieren" find="\b(D|d)iskreminieren\b" replace="$1iskriminieren" />
+<Typo word="diskusion" find="\b(D|d)iskusion\b" replace="$1iskussion" />
+<Typo word="dnak" find="\b(D|d)nak\b" replace="$1ank" />
+<Typo word="doppelpaß" find="\b(D|d)oppelpaß\b" replace="$1oppelpass" />
+<Typo word="Dprf" find="\b(D|d)prf" replace="$1orf" />
+<Typo word="Dprf" find="dprf" replace="dorf" />
+<Typo word="draufsein" find="\b(D|d)raufsein\b" replace="$1rauf sein" />
+<Typo word="dre" find="\b(D|d)re\b" replace="$1er" />
+<Typo word="dreick" find="\b(D|d)reick\b" replace="$1reieck" />
+<Typo word="dreß" find="\b(D|d)reß\b" replace="$1ress" />
+<Typo word="drittgrösste" find="grösst" replace="größt" />
+<Typo word="druch" find="\b(D|d)ruch\b" replace="$1urch" />
+<Typo word="dsa" find="\b(D|d)sa\b" replace="$1as" />
+<Typo word="duch" find="\b(D|d)uch\b" replace="$1urch" />
+<Typo word="duchaus" find="\b(D|d)uchaus\b" replace="$1urchaus" />
+<Typo word="durchfluß" find="\b(D|d)urchfluß\b" replace="$1urchfluss" />
+<Typo word="durchlaß" find="\b(D|d)urchlaß\b" replace="$1urchlass" />
+<Typo word="durchnittliche" find="\b(D|d)urchnittliche\b" replace="$1urchschnittliche" />
+<Typo word="durchnumerieren" find="\b(D|d)urchnumerieren\b" replace="$1urchnummerieren" />
+<Typo word="durchstossen" find="\b(D|d)urchstossen\b" replace="$1urchstoßen" />
+<Typo word="durschnitt" find="\b(D|d)urschnitt\b" replace="$1urchschnitt" />
+<Typo word="durschnittlich" find="\b(D|d)urschnittlich\b" replace="$1urchschnittlich" />
+<Typo word="durschnittliche" find="\b(D|d)urschnittliche\b" replace="$1urchschnittliche" />
+<Typo word="durschnittlichen" find="\b(D|d)urschnittlichen\b" replace="$1urchschnittlichen" />
+<Typo word="dußlig" find="\b(D|d)ußlig\b" replace="$1usslig" />
+<Typo word="dußligkeit" find="\b(D|d)ußligkeit\b" replace="$1ussligkeit" />
+<Typo word="dußelig" find="\b(D|d)ußelig\b" replace="$1usselig" />
+<Typo word="dußeligkeit" find="\b(D|d)ußeligkeit\b" replace="$1ussligkeit" />
+
+</source>
+
+=== E ===
+
+<source lang="xml">
+
+<Typo word="ebenfall" find="\b(E|e)benfall\b" replace="$1benfalls" />
+<Typo word="ebenfals" find="\b(E|e)benfals\b" replace="$1benfalls" />
+<Typo word="ebensogut" find="\b(E|e)bensogut\b" replace="$1benso gut" />
+<Typo word="ebensosehr" find="\b(E|e)bensosehr\b" replace="$1benso sehr" />
+<Typo word="ebensoviel" find="\b(E|e)bensoviel\b" replace="$1benso viel" />
+<Typo word="ebensowenig" find="\b(E|e)bensowenig\b" replace="$1benso wenig" />
+<Typo word="editon" find="\b(E|e)diton\b" replace="$1dition" />
+<Typo word="ehielt" find="\b(E|e)hielt\b" replace="$1rhielt" />
+<Typo word="ehmalige" find="\b(E|e)hmalige\b" replace="$1hemalige" />
+<Typo word="eigendlich" find="\b(E|e)igendlich\b" replace="$1igentlich" />
+<Typo word="einge" find="\b(E|e)inge\b" replace="$1inige" />
+<Typo word="eingefaßten" find="\b(E|e)ingefaßten\b" replace="$1ingefassten" />
+<Typo word="eingen" find="\b(E|e)ingen\b" replace="$1inigen" />
+<Typo word="einges" find="\b(E|e)inges\b" replace="$1iniges" />
+<Typo word="einigermassen" find="\b(E|e)inigermassen\b" replace="$1inigermaßen" />
+<Typo word="einlaß" find="\b(E|e)inlaß\b" replace="$1inlass" />
+<Typo word="einläßlich" find="\b(E|e)inläßlich\b" replace="$1inlässlich" />
+<Typo word="einordung" find="\b(E|e)inordung\b" replace="$1inordnung" />
+<Typo word="einriß" find="\b(E|e)inriß\b" replace="$1inriss" />
+<Typo word="einschliesslich" find="\b(E|e)inschliesslich\b" replace="$1inschließlich" />
+<Typo word="einzigste" find="\b(E|e)inzigste\b" replace="$1inzige" />
+<Typo word="einzigster" find="\b(E|e)inzigster\b" replace="$1inziger" />
+<Typo word="einzigstes" find="\b(E|e)inzigstes\b" replace="$1inziges" />
+<Typo word="eisschnellauf" find="\b(E|e)isschnellauf\b" replace="$1isschnelllauf" />
+<Typo word="eisschnelläufer" find="\b(E|e)isschnelläufer\b" replace="$1isschnellläufer" />
+<Typo word="eisschnelläuferin" find="\b(E|e)isschnelläuferin\b" replace="$1isschnellläuferin" />
+<Typo word="eleminieren" find="\b(E|e)leminieren\b" replace="$1liminieren" />
+<Typo word="eleminiert" find="\b(E|e)leminiert\b" replace="$1liminiert" />
+<Typo word="emfohl" find="\b(E|e)mfohl\b" replace="$1mpfohl" />
+<Typo word="emfänger" find="\b(E|e)mfänger\b" replace="$1mpfänger" />
+<Typo word="emmission" find="\b(E|e)mmission\b" replace="$1mission" />
+<Typo word="endeckt" find="\b(E|e)ndeckt(e?)\b" replace="$1ntdeckt$2" />
+<Typo word="endeckung" find="\b(E|e)ndeckung\b" replace="$1ntdeckung" />
+<Typo word="energiebewußt" find="\b(E|e)nergiebewußt\b" replace="$1nergiebewusst" />
+<Typo word="enfernt" find="\b(E|e)nfernt\b" replace="$1ntfernt" />
+<Typo word="enfernte" find="\b(E|e)nfernte\b" replace="$1ntfernte" />
+<Typo word="enfernung" find="\b(E|e)nfernung\b" replace="$1ntfernung" />
+<Typo word="enfernungen" find="\b(E|e)nfernungen\b" replace="$1ntfernungen" />
+<Typo word="engpaß" find="\b(E|e)ngpaß\b" replace="$1ngpass" />
+<Typo word="engültig" find="\b(E|e)ngültig\b" replace="$1ndgültig" />
+<Typo word="enhalten" find="\b(E|e)nhalten\b" replace="$1nthalten" />
+<Typo word="enhält" find="\b(E|e)nhält\b" replace="$1nthält" />
+<Typo word="enige" find="\b(E|e)nige\b" replace="$1inige" />
+<Typo word="eniges" find="\b(E|e)niges\b" replace="$1iniges" />
+<Typo word="enldich" find="\b(E|e)nldich\b" replace="$1ndlich" />
+<Typo word="enscheidung" find="\b(E|e)nscheidung\b" replace="$1ntscheidung" />
+<Typo word="enstand" find="\b(E|e)nstand\b" replace="$1ntstand" />
+<Typo word="enstanden" find="\b(E|e)nstanden\b" replace="$1ntstanden" />
+<Typo word="enstehen" find="\b(E|e)nstehen\b" replace="$1ntstehen" />
+<Typo word="ensteht" find="\b(E|e)nsteht\b" replace="$1ntsteht" />
+<Typo word="enstehung" find="\b(E|e)nstehung\b" replace="$1ntstehung" />
+<Typo word="entgeld" find="\b(E|e)ntgeld\b" replace="$1ntgelt" />
+<Typo word="entgültig" find="\b(E|e)ntgültig\b" replace="$1ndgültig" />
+<Typo word="entgültige" find="\b(E|e)ntgültige\b" replace="$1ndgültige" />
+<Typo word="entgültigen" find="\b(E|e)ntgültigen\b" replace="$1ndgültigen" />
+<Typo word="entgültiger" find="\b(E|e)ntgültiger\b" replace="$1ndgültiger" />
+<Typo word="entliess" find="\b(E|e)ntliess\b" replace="$1ntließ" />
+<Typo word="entscheidene" find="\b(E|e)ntscheidene\b" replace="$1ntscheidende" />
+<Typo word="entscheidener" find="\b(E|e)ntscheidener\b" replace="$1ntscheidender" />
+<Typo word="entschliessen" find="\b(E|e)ntschliessen\b" replace="$1ntschließen" />
+<Typo word="entspechen" find="\b(E|e)ntspechen\b" replace="$1ntsprechen" />
+<Typo word="entspechend" find="\b(E|e)ntspechend\b" replace="$1ntsprechend" />
+<Typo word="entspechende" find="\b(E|e)ntspechende\b" replace="$1ntsprechende" />
+<Typo word="entsprechene" find="\b(E|e)ntsprechene\b" replace="$1ntsprechende" />
+<Typo word="entsprechenen" find="\b(E|e)ntsprechenen\b" replace="$1ntsprechenden" />
+<Typo word="entwicklug" find="\b(E|e)ntwicklug\b" replace="$1ntwicklung" />
+<Typo word="entwicklungsprozeß" find="\b(E|e)ntwicklungsprozeß\b" replace="$1ntwicklungsprozess" />
+<Typo word="enwickelt" find="\b(E|e)nwickelt\b" replace="$1ntwickelt" />
+<Typo word="enwickelte" find="\b(E|e)nwickelte\b" replace="$1ntwickelte" />
+<Typo word="enwickelten" find="\b(E|e)nwickelten\b" replace="$1ntwickelten" />
+<Typo word="enwickelter" find="\b(E|e)nwickelter\b" replace="$1ntwickelter" />
+<Typo word="enwickeltes" find="\b(E|e)nwickeltes\b" replace="$1ntwickeltes" />
+<Typo word="enwicklung" find="(E|e)nwicklung" replace="$1ntwicklung" />
+<Typo word="eintwick-" find="(E|e)intwick" replace="$1ntwick" />
+<Typo word="epedemie" find="\b(E|e)pedemie\b" replace="$1pidemie" />
+<Typo word="erblaßt" find="\b(E|e)rblaßt\b" replace="$1rblasst" />
+<Typo word="erdgeschoß" find="\b(E|e)rdgeschoß\b" replace="$1rdgeschoss" />
+<Typo word="erdnuß" find="\b(E|e)rdnuß\b" replace="$1rdnuss" />
+<Typo word="ereichen" find="\b(E|e)reichen\b" replace="$1rreichen" />
+<Typo word="ereicht" find="\b(E|e)reicht\b" replace="$1rreicht" />
+<Typo word="ereichte" find="\b(E|e)reichte\b" replace="$1rreichte" />
+<Typo word="ereichten" find="\b(E|e)reichten\b" replace="$1rreichten" />
+<Typo word="ereigniss" find="\b(E|e)reigniss\b" replace="$1reignis" />
+<Typo word="erfahrendste" find="\b(E|e)rfahrendste\b" replace="$1rfahrenste" />
+<Typo word="erfaßbar" find="\b(E|e)rfaßbar\b" replace="$1rfassbar" />
+<Typo word="erfaßt" find="\b(E|e)rfaßt\b" replace="$1rfasst" />
+<Typo word="erfaßte" find="\b(E|e)rfaßte\b" replace="$1rfasste" />
+<Typo word="erflg" find="\b(E|e)rflg\b" replace="$1rfolg" />
+<Typo word="erfog" find="\b(E|e)rfog\b" replace="$1rfolg" />
+<Typo word="erfogreich" find="\b(E|e)rfogreich\b" replace="$1rfolgreich" />
+<Typo word="ergebniss" find="\b(E|e)rgebniss\b" replace="$1rgebnis" />
+<Typo word="erhalen" find="\b(E|e)rhalen\b" replace="$1rhalten" />
+<Typo word="erhaltn" find="\b(E|e)rhaltn\b" replace="$1rhalten" />
+<Typo word="erhältich" find="\b(E|e)rhältich\b" replace="$1rhältlich" />
+<Typo word="erkennn" find="\b(E|e)rkennn\b" replace="$1rkennen" />
+<Typo word="erkenntniss" find="\b(E|e)rkenntniss\b" replace="$1rkenntnis" />
+<Typo word="erkentnisse" find="\b(E|e)rkentnisse\b" replace="$1rkenntnisse" />
+<Typo word="erklährt" find="\b(E|e)rklährt\b" replace="$1rklärt" />
+<Typo word="erknennen" find="\b(E|e)rknennen\b" replace="$1rkennen" />
+<Typo word="erlaß" find="\b(E|e)rlaß\b" replace="$1rlass" />
+<Typo word="ermeßbar" find="\b(E|e)rmeßbar\b" replace="$1rmessbar" />
+<Typo word="erpreßbar" find="\b(E|e)rpreßbar\b" replace="$1rpressbar" />
+<Typo word="errinnern" find="\b(E|e)rrinnern\b" replace="$1rinnern" />
+<Typo word="errinnert" find="\b(E|e)rrinnert\b" replace="$1rinnert" />
+<Typo word="errreichen" find="\b(E|e)rrreichen\b" replace="$1rreichen" />
+<Typo word="errreicht" find="\b(E|e)rrreicht\b" replace="$1rreicht" />
+<Typo word="erschliessen" find="\b(E|e)rschliessen\b" replace="$1rschließen" />
+<Typo word="erschliessung" find="\b(E|e)rschliessung\b" replace="$1rschließung" />
+<Typo word="erstemal" find="\b(E|e)rstemal\b" replace="$1rste Mal" />
+<Typo word="erstenmal" find="\b(E|e)rstenmal\b" replace="$1rsten Mal" />
+<Typo word="erstkläßler" find="\b(E|e)rstkläßler\b" replace="$1rstklässler" />
+<Typo word="erstplaziert" find="\b(E|e)rstplaziert\b" replace="$1rstplatziert" />
+<Typo word="erstplazierte" find="\b(E|e)rstplazierte\b" replace="$1rstplatzierte" />
+<Typo word="erstplazierten" find="\b(E|e)rstplazierten\b" replace="$1rstplatzierten" />
+<Typo word="erwiedern" find="\b(E|e)rwiedern\b" replace="$1rwidern" />
+<Typo word="erzeilt" find="\b(E|e)rzeilt\b" replace="$1rzielt" />
+<Typo word="erzeilte" find="\b(E|e)rzeilte\b" replace="$1rzielte" />
+<Typo word="erziehlen" find="\b(E|e)rziehlen\b" replace="$1rzielen" />
+<Typo word="erziehlt" find="\b(E|e)rziehlt\b" replace="$1rzielt" />
+<Typo word="erziehlte" find="\b(E|e)rziehlte\b" replace="$1rzielte" />
+<Typo word="ethymologie" find="\b(E|e)thymologie\b" replace="$1tymologie" />
+<Typo word="etlichemal" find="\b(E|e)tlichemal\b" replace="$1tliche Mal" />
+<Typo word="eventuel" find="\b(E|e)ventuel\b" replace="$1ventuell" />
+<Typo word="excellent" find="\b(E|e)xcellent\b" replace="$1xzellent" />
+<Typo word="expediton" find="\b(E|e)xpediton\b" replace="$1xpedition" />
+<Typo word="expreß" find="\b(E|e)xpreß\b" replace="$1xpress" />
+<Typo word="expreßzug" find="\b(E|e)xpreßzug\b" replace="$1xpresszug" />
+<Typo word="extase" find="\b(E|e)xtase\b" replace="$1kstase" />
+<Typo word="exzeß" find="\b(E|e)xzeß\b" replace="$1xzess" />
+<Typo word="eßbar" find="\b(E|e)ßbar\b" replace="$1ssbar" />
+<Typo word="eßbesteck" find="\b(E|e)ßbesteck\b" replace="$1ssbesteck" />
+<Typo word="eßecke" find="\b(E|e)ßecke\b" replace="$1ssecke" />
+<Typo word="eßlöffel" find="\b(E|e)ßlöffel\b" replace="$1sslöffel" />
+<Typo word="eßtisch" find="\b(E|e)ßtisch\b" replace="$1sstisch" />
+<Typo word="exclusiv" find="\b(E|e)xclusiv" replace="$1xklusiv" />
+
+</source>
+
+=== F ===
+
+<source lang="xml">
+
+<Typo word="fairneß" find="\b(F|f)airneß\b" replace="$1airness" />
+<Typo word="fallinie" find="\b(F|f)allinie\b" replace="$1alllinie" />
+<Typo word="famile" find="\b(F|f)amile\b" replace="$1amilie" />
+<Typo word="fandn" find="\b(F|f)andn\b" replace="$1annd" />
+<Typo word="faß" find="\b(F|f)aß\b" replace="$1ass" />
+<Typo word="faßbar" find="\b(F|f)aßbar\b" replace="$1assbar" />
+<Typo word="faßbier" find="\b(F|f)aßbier\b" replace="$1assbier" />
+<Typo word="faßlich" find="\b(F|f)aßlich\b" replace="$1asslich" />
+<Typo word="faßt" find="\b(F|f)aßt\b" replace="$1asst" />
+<Typo word="fehlpaß" find="\b(F|f)ehlpaß\b" replace="$1ehlpass" />
+<Typo word="fernstrasse" find="\b(F|f)ernstrasse\b" replace="$1ernstraße" />
+<Typo word="festellen" find="\b(F|f)estellen\b" replace="$1eststellen" />
+<Typo word="fiden" find="\b(F|f)iden\b" replace="$1inden" />
+<Typo word="fidet" find="\b(F|f)idet\b" replace="$1indet" />
+<Typo word="findn" find="\b(F|f)indn\b" replace="$1inden" />
+<Typo word="firnament" find="\b(F|f)irnament\b" replace="$1irmament" />
+<Typo word="fitneß" find="\b(F|f)itneß\b" replace="$1itness" />
+<Typo word="flagschiff" find="\b(F|f)lagschiff\b" replace="$1laggschiff" />
+<Typo word="fleiss" find="\b(F|f)leiss\b" replace="$1leiß" />
+<Typo word="fleissig" find="\b(F|f)leissig\b" replace="$1leißig" />
+<Typo word="fliessen" find="\b(F|f)liessen\b" replace="$1ließen" />
+<Typo word="fliessend" find="\b(F|f)liessend\b" replace="$1ließend" />
+<Typo word="fliessende" find="\b(F|f)liessende\b" replace="$1ließende" />
+<Typo word="fliesst" find="\b(F|f)liesst\b" replace="$1ließt" />
+<Typo word="fluß" find="\b(F|f)luß\b" replace="$1luss" />
+<Typo word="fluß" find="fluß\b" replace="fluss" />
+<Typo word="fluß" find="\b(F|f)luß" replace="$1luss" />
+<Typo word="fluß" find="fluß" replace="fluss" />
+<Typo word="flüß" find="\b(F|f)lüß\b" replace="$1lüss" />
+<Typo word="flußschiffahrt" find="\b(F|f)lußschiffahrt\b" replace="$1lussschifffahrt" />
+<Typo word="flächenmass" find="\b(F|f)lächenmass\b" replace="$1lächenmaß" />
+<Typo word="flötengehen" find="\b(F|f)lötengehen\b" replace="$1löten gehen" />
+<Typo word="flüßchen" find="\b(F|f)lüßchen\b" replace="$1lüsschen" />
+<Typo word="fnad" find="\b(F|f)nad\b" replace="$1and" />
+<Typo word="fnaden" find="\b(F|f)naden\b" replace="$1anden" />
+<Typo word="fnester" find="\b(F|f)nester\b" replace="$1enster" />
+<Typo word="folgendermassen" find="\b(F|f)olgendermassen\b" replace="$1olgendermaßen" />
+<Typo word="folgn" find="\b(F|f)olgn\b" replace="$1olgen" />
+<Typo word="folgnd" find="\b(F|f)olgnd\b" replace="$1olgend" />
+<Typo word="folgnde" find="\b(F|f)olgnde\b" replace="$1olgende" />
+<Typo word="folgnden" find="\b(F|f)olgnden\b" replace="$1olgenden" />
+<Typo word="folgnder" find="\b(F|f)olgnder\b" replace="$1olgender" />
+<Typo word="folgndes" find="\b(F|f)olgndes\b" replace="$1olgendes" />
+<Typo word="follgen" find="\b(F|f)ollgen\b" replace="$1olgen" />
+<Typo word="follgend" find="\b(F|f)ollgend\b" replace="$1olgend" />
+<Typo word="follgenden" find="\b(F|f)ollgenden\b" replace="$1olgenden" />
+<Typo word="follgender" find="\b(F|f)ollgender\b" replace="$1olgender" />
+<Typo word="follgendes" find="\b(F|f)ollgendes\b" replace="$1olgendes" />
+<Typo word="fpr" find="\b(F|f)pr\b" replace="$1ür" />
+<Typo word="fraeg" find="\b(F|f)raeg\b" replace="$1rage" />
+<Typo word="fragn" find="\b(F|f)ragn\b" replace="$1ragen" />
+<Typo word="franzöisch" find="\b(F|f)ranzöisch\b" replace="$1ranzösisch" />
+<Typo word="französich" find="\b(F|f)ranzösich\b" replace="$1ranzösisch" />
+<Typo word="französiche" find="\b(F|f)ranzösiche\b" replace="$1ranzösische" />
+<Typo word="französichen" find="\b(F|f)ranzösichen\b" replace="$1ranzösischen" />
+<Typo word="französicher" find="\b(F|f)ranzösicher\b" replace="$1ranzösischer" />
+<Typo word="frass" find="\b(F|f)rass\b" replace="$1raß" />
+<Typo word="frima" find="\b(F|f)rima\b" replace="$1irma" />
+<Typo word="fritieren" find="\b(F|f)ritieren\b" replace="$1rittieren" />
+<Typo word="fröhnen" find="\b(F|f)röhnen\b" replace="$1rönen" />
+<Typo word="fröhnte" find="\b(F|f)röhnte\b" replace="$1rönte" />
+<Typo word="fuer" find="\b(F|f)uer\b" replace="$1ür" />
+<Typo word="funkmeßtechnik" find="\b(F|f)unkmeßtechnik\b" replace="$1unkmesstechnik" />
+<Typo word="funtionieren" find="\b(F|f)untionieren\b" replace="$1unktionieren" />
+<Typo word="funtkion" find="\b(F|f)untkion\b" replace="$1unktion" />
+<Typo word="fuss" find="\b(F|f)uss\b" replace="$1uß" />
+<Typo word="fussball" find="\b(F|f)ussball\b" replace="$1ußball" />
+<Typo word="fussballspieler" find="\b(F|f)ussballspieler\b" replace="$1ußballspieler" />
+<Typo word="fussballverein" find="\b(F|f)ussballverein\b" replace="$1ußballverein" />
+<Typo word="fussgänger" find="\b(F|f)ussgänger\b" replace="$1ußgänger" />
+<Typo word="fußballänderspiel" find="\b(F|f)ußballänderspiel\b" replace="$1ußballländerspiel" />
+<Typo word="fäßchen" find="\b(F|f)äßchen\b" replace="$1ässchen" />
+<Typo word="fönen" find="\b(F|f)önen\b" replace="$1öhnen" />
+<Typo word="fönt" find="\b(F|f)önt\b" replace="$1öhnt" />
+<Typo word="förderation" find="\b(F|f)örderation\b" replace="$1öderation" />
+<Typo word="füsse" find="\b(F|f)üsse\b" replace="$1üße" />
+
+</source>
+
+=== G ===
+
+<source lang="xml">
+
+<Typo word="gaderobe" find="\b(G|g)aderobe\b" replace="$1arderobe" />
+<Typo word="gallerie" find="\b(G|g)allerie\b" replace="$1alerie" />
+<Typo word="gallerien" find="\b(G|g)allerien\b" replace="$1alerien" />
+<Typo word="gallionsfigur" find="\b(G|g)allionsfigur\b" replace="$1aleonsfigur" />
+<Typo word="gallopieren" find="\b(G|g)allopieren\b" replace="$1aloppieren" />
+<Typo word="gangsterboß" find="\b(G|g)angsterboß\b" replace="$1angsterboss" />
+<Typo word="garnicht" find="\b(G|g)arnicht\b" replace="$1ar nicht" />
+<Typo word="gebahren" find="\b(G|g)ebahren\b" replace="$1ebaren" />
+<Typo word="gebornen" find="\b(G|g)eborn(en?)\b" replace="$1eborenen" />
+<Typo word="gedult" find="\b(G|g)edult\b" replace="$1eduld" />
+<Typo word="gedächnis" find="\b(G|g)edächnis\b" replace="$1edächtnis" />
+<Typo word="gefaßt" find="\b(G|g)efaßt\b" replace="$1efasst" />
+<Typo word="gefaßtheit" find="\b(G|g)efaßtheit\b" replace="$1efasstheit" />
+<Typo word="gefäss" find="\b(G|g)efäss\b" replace="$1efäß" />
+<Typo word="gegebenfalls" find="\b(G|g)egebenfalls\b" replace="$1egebenenfalls" />
+<Typo word="gegeründet" find="\b(G|g)egeründet\b" replace="$1egründet" />
+<Typo word="Gegener" find="\b(G|g)egener" replace="$1egner" />
+<Typo word="gegn" find="\b(G|g)egn\b" replace="$1egen" />
+<Typo word="gegnüber" find="\b(G|g)egnüber\b" replace="$1egenüber" />
+<Typo word="gehaßt" find="\b(G|g)ehaßt\b" replace="$1ehasst" />
+<Typo word="geheimgehalten" find="\b(G|g)eheimgehalten\b" replace="$1eheim gehalten" />
+<Typo word="geheiss" find="\b(G|g)eheiss\b" replace="$1eheiß" />
+<Typo word="gehöhren" find="\b(G|g)ehöhren\b" replace="$1ehören" />
+<Typo word="gehöhrt" find="\b(G|g)ehöhrt\b" replace="$1ehört" />
+<Typo word="gehöhrte" find="\b(G|g)ehöhrte\b" replace="$1ehörte" />
+<Typo word="gehöhrten" find="\b(G|g)ehöhrten\b" replace="$1ehörten" />
+<Typo word="gelantine" find="\b(G|g)elantine\b" replace="$1elatine" />
+<Typo word="gemse" find="\b(G|g)emse\b" replace="$1ämse" />
+<Typo word="gemußt" find="\b(G|g)emußt\b" replace="$1emusst" />
+<Typo word="gemäss" find="\b(G|g)emäss\b" replace="$1emäß" />
+<Typo word="genant" find="\b(G|g)enant\b" replace="$1enannt" />
+<Typo word="genanten" find="\b(G|g)enanten\b" replace="$1enannten" />
+<Typo word="genausogut" find="\b(G|g)enausogut\b" replace="$1enauso gut" />
+<Typo word="genausowenig" find="\b(G|g)enausowenig\b" replace="$1enauso wenig" />
+<Typo word="geniessen" find="\b(G|g)eniessen\b" replace="$1enießen" />
+<Typo word="gennant" find="\b(G|g)ennant\b" replace="$1enannt" />
+<Typo word="gennanten" find="\b(G|g)ennanten\b" replace="$1enannten" />
+<Typo word="gennanter" find="\b(G|g)ennanter\b" replace="$1enannter" />
+<Typo word="genoß" find="\b(G|g)enoß\b" replace="$1enoss" />
+<Typo word="genuß" find="\b(G|g)enuß\b" replace="$1enuss" />
+<Typo word="genußmittel" find="\b(G|g)enußmittel\b" replace="$1enussmittel" />
+<Typo word="genußsüchtig" find="\b(G|g)enußsüchtig\b" replace="$1enusssüchtig" />
+<Typo word="genäßt" find="\b(G|g)enäßt\b" replace="$1enässt" />
+<Typo word="genüßlich" find="\b(G|g)enüßlich\b" replace="$1enüsslich" />
+<Typo word="gepraßt" find="\b(G|g)epraßt\b" replace="$1eprasst" />
+<Typo word="gepreßt" find="\b(G|g)epreßt\b" replace="$1epresst" />
+<Typo word="gesammt" find="\b(G|g)esammt\b" replace="$1esamt" />
+<Typo word="gesammte" find="\b(G|g)esammte\b" replace="$1esamte" />
+<Typo word="gesammten" find="\b(G|g)esammten\b" replace="$1esamten" />
+<Typo word="geschaßt" find="\b(G|g)eschaßt\b" replace="$1eschasst" />
+<Typo word="geschichtsbewußtsein" find="\b(G|g)eschichtsbewußtsein\b" replace="$1eschichtsbewusstsein" />
+<Typo word="geschirreiniger" find="\b(G|g)eschirreiniger\b" replace="$1eschirrreiniger" />
+<Typo word="geschlosssen" find="\b(G|g)eschlosssen\b" replace="$1eschlossen" />
+<Typo word="geschoß" find="\b(G|g)eschoß\b" replace="$1eschoss" />
+<Typo word="gestreßt" find="\b(G|g)estreßt\b" replace="$1estresst" />
+<Typo word="gesäht" find="\b(G|g)esäht\b" replace="$1esät" />
+<Typo word="gesäss" find="\b(G|g)esäss\b" replace="$1esäß" />
+<Typo word="gewinnummer" find="\b(G|g)ewinnummer\b" replace="$1ewinnnummer" />
+<Typo word="gewissensbiß" find="\b(G|g)ewissensbiß\b" replace="$1ewissensbiss" />
+<Typo word="gewissermassen" find="\b(G|g)ewissermassen\b" replace="$1ewissermaßen" />
+<Typo word="gewiß" find="\b(G|g)ewiß\b" replace="$1ewiss" />
+<Typo word="gewißheit" find="\b(G|g)ewißheit\b" replace="$1ewissheit" />
+<Typo word="gewißlich" find="\b(G|g)ewißlich\b" replace="$1ewisslich" />
+<Typo word="gewußt" find="\b(G|g)ewußt\b" replace="$1ewusst" />
+<Typo word="giebt" find="\b(G|g)iebt\b" replace="$1ibt" />
+<Typo word="giessen" find="\b(G|g)iessen\b" replace="$1ießen" />
+<Typo word="gillt" find="\b(G|g)illt\b" replace="$1ilt" />
+<Typo word="gleichermassen" find="\b(G|g)leichermassen\b" replace="$1leichermaßen" />
+<Typo word="gleichmässig" find="\b(G|g)leichmässig\b" replace="$1leichmäßig" />
+<Typo word="glimmstengel" find="\b(G|g)limmstengel\b" replace="$1limmstängel" />
+<Typo word="gnadenerlaß" find="\b(G|g)nadenerlaß\b" replace="$1nadenerlass" />
+<Typo word="gradwanderung" find="\b(G|g)radwanderung\b" replace="$1ratwanderung" />
+<Typo word="graffitis" find="\b(G|g)raffitis\b" replace="$1raffiti" />
+<Typo word="greuel" find="\b(G|g)reuel\b" replace="$1räuel" />
+<Typo word="greulich" find="\b(G|g)reulich\b" replace="$1räulich" />
+<Typo word="gries" find="\b(G|g)ries\b" replace="$1rieß" />
+<Typo word="griess" find="\b(G|g)riess\b" replace="$1rieß" />
+<Typo word="griffest" find="\b(G|g)riffest\b" replace="$1rifffest" />
+<Typo word="groesse" find="\b(G|g)roesse\b" replace="$1röße" />
+<Typo word="groeße" find="\b(G|g)roeße\b" replace="$1röße" />
+<Typo word="gross" find="\b(G|g)ross\b" replace="$1roß" />
+<Typo word="gross" find="gross\b" replace="groß" />
+<Typo word="gross" find="\b(G|g)ross" replace="$1roß" />
+<Typo word="gross" find="gross" replace="groß" />
+<Typo word="großten" find="\b(G|g)roßten\b" replace="$1rößten" />
+<Typo word="grundriß" find="\b(G|g)rundriß\b" replace="$1rundriss" />
+<Typo word="gruss" find="\b(G|g)russ\b" replace="$1ruß" />
+<Typo word="grusskarte" find="\b(G|g)russkarte\b" replace="$1rußkarte" />
+<Typo word="grusskarten" find="\b(G|g)russkarten\b" replace="$1rußkarten" />
+<Typo word="gräßlich" find="\b(G|g)räßlich\b" replace="$1rässlich" />
+<Typo word="gröhlen" find="\b(G|g)röhlen\b" replace="$1rölen" />
+<Typo word="grösse" find="\b(G|g)rösse\b" replace="$1röße" />
+<Typo word="grössere" find="\b(G|g)rössere\b" replace="$1rößere" />
+<Typo word="grösserem" find="\b(G|g)rösserem\b" replace="$1rößerem" />
+<Typo word="grösseren" find="\b(G|g)rösseren\b" replace="$1rößeren" />
+<Typo word="grösseres" find="\b(G|g)rösseres\b" replace="$1rößeres" />
+<Typo word="grösste" find="\b(G|g)rösste\b" replace="$1rößte" />
+<Typo word="grössten" find="\b(G|g)rössten\b" replace="$1rößten" />
+<Typo word="grösstenteils" find="\b(G|g)rösstenteils\b" replace="$1rößtenteils" />
+<Typo word="grösster" find="\b(G|g)rösster\b" replace="$1rößter" />
+<Typo word="guerrilla" find="\b(G|g)uerrilla\b" replace="$1uerilla" />
+<Typo word="guiseppe" find="\b(G|g)uiseppe\b" replace="$1iuseppe" />
+<Typo word="guvernante" find="\b(G|g)uvernante\b" replace="$1ouvernante" />
+<Typo word="guß" find="guß" replace="guss" />
+<Typo word="Guß" find="\b(G|g)uß\b" replace="$1uss" />
+<Typo word="gymansium" find="(G|g)ymansium" replace="$1ymnasium" />
+
+<Typo word="gärungsprozeß" find="\b(G|g)ärungsprozeß\b" replace="$1ärungsprozess" />
+<Typo word="gäßchen" find="\b(G|g)äßchen\b" replace="$1ässchen" />
+
+</source>
+
+=== H ===
+
+<source lang="xml">
+
+<Typo word="haette" find="\b(H|h)aette\b" replace="$1ätte" />
+<Typo word="haetten" find="\b(H|h)aetten\b" replace="$1äätten" />
+<Typo word="handies" find="\b(H|h)andies\b" replace="$1andys" />
+<Typo word="haselnuß" find="\b(H|h)aselnuß\b" replace="$1aselnuss" />
+<Typo word="haselnußstrauch" find="\b(H|h)aselnußstrauch\b" replace="$1aselnussstrauch" />
+<Typo word="haupstadt" find="\b(H|h)aupstadt\b" replace="$1auptstadt" />
+<Typo word="haupstädte" find="\b(H|h)aupstädte\b" replace="$1auptstädte" />
+<Typo word="haupsächlich" find="\b(H|h)aupsächlich\b" replace="$1auptsächlich" />
+<Typo word="haß" find="\b(H|h)aß\b" replace="$1ass" />
+<Typo word="haßerfüllt" find="\b(H|h)aßerfüllt\b" replace="$1asserfüllt" />
+<Typo word="haßliebe" find="\b(H|h)aßliebe\b" replace="$1assliebe" />
+<Typo word="haßt" find="\b(H|h)aßt\b" replace="$1asst" />
+<Typo word="heilungsprozeß" find="\b(H|h)eilungsprozeß\b" replace="$1eilungsprozess" />
+<Typo word="heiss" find="\b(H|h)eiss\b" replace="$1eiß" />
+<Typo word="heisse" find="\b(H|h)eisse\b" replace="$1eiße" />
+<Typo word="heissen" find="\b(H|h)eissen\b" replace="$1eißen" />
+<Typo word="heisser" find="\b(H|h)eisser\b" replace="$1eißer" />
+<Typo word="heisst" find="\b(H|h)eisst\b" replace="$1eißt" />
+<Typo word="hellicht" find="\b(H|h)ellicht\b" replace="$1elllicht" />
+<Typo word="hellichten" find="\b(H|h)ellichten\b" replace="$1elllichten" />
+<Typo word="hellichter" find="\b(H|h)ellichter\b" replace="$1elllichter" />
+<Typo word="herausgegegeben" find="\b(H|h)erausgegegeben\b" replace="$1eraus gegegeben" />
+<Typo word="herraus" find="\b(H|h)erraus\b" replace="$1eraus" />
+<Typo word="herrrschaft" find="\b(H|h)errrschaft\b" replace="$1errschaft" />
+<Typo word="herschaft" find="\b(H|h)erschaft\b" replace="$1errschaft" />
+<Typo word="herscher" find="\b(H|h)erscher\b" replace="$1errscher" />
+<Typo word="hevor" find="(H|h)hevor" replace="$1ervor" />
+<Typo word="hierachie" find="\b(H|h)ierachie\b" replace="$1ierarchie" />
+<Typo word="hierachisch" find="\b(H|h)ierachisch\b" replace="$1ierarchisch" />
+<Typo word="hiersein" find="\b(H|h)iersein\b" replace="$1ier sein" />
+<Typo word="hiess" find="\b(H|h)iess\b" replace="$1ieß" />
+<Typo word="hiessen" find="\b(H|h)iessen\b" replace="$1ießen" />
+<Typo word="hinsein" find="\b(H|h)insein\b" replace="$1in sein" />
+<Typo word="hinterhersein" find="\b(H|h)interhersein\b" replace="$1interher sein" />
+<Typo word="hinterliess" find="\b(H|h)interliess\b" replace="$1interließ" />
+<Typo word="hinterliessen" find="\b(H|h)interliessen\b" replace="$1interließen" />
+<Typo word="hinterläßt" find="\b(H|h)interläßt\b" replace="$1interlässt" />
+<Typo word="hinweiß" find="\b(H|h)inweiß\b" replace="$1inweis" />
+<Typo word="hinweißt" find="\b(H|h)inweißt\b" replace="$1inweist" />
+<Typo word="hißt" find="\b(H|h)ißt\b" replace="$1isst" />
+<Typo word="hobbies" find="\b(H|h)obbies\b" replace="$1obbys" />
+<Typo word="hochgenuß" find="\b(H|h)ochgenuß\b" replace="$1ochgenuss" />
+<Typo word="hoffendlich" find="\b(H|h)offendlich\b" replace="$1offentlich" />
+<Typo word="hoffung" find="\b(H|h)offung\b" replace="$1offnung" />
+<Typo word="hosteß" find="\b(H|h)osteß\b" replace="$1ostess" />
+<Typo word="häckchen" find="\b(H|h)äckchen\b" replace="$1äkchen" />
+<Typo word="hälst" find="\b(H|h)älst\b" replace="$1ältst" />
+<Typo word="häßlich" find="\b(H|h)äßlich\b" replace="$1ässlich" />
+<Typo word="häßlichkeit" find="\b(H|h)äßlichkeit\b" replace="$1ässlichkeit" />
+<Typo word="höhergelegt" find="\b(H|h)öhergelegt\b" replace="$1öher gelegt" />
+<Typo word="höhergelegten" find="\b(H|h)öhergelegten\b" replace="$1öher gelegten" />
+<Typo word="höhergelegter" find="\b(H|h)öhergelegter\b" replace="$1öher gelegter" />
+<Typo word="höherlegen" find="\b(H|h)öherlegen\b" replace="$1öher legen" />
+<Typo word="höhren" find="\b(H|h)öhren\b" replace="$1ören" />
+<Typo word="höhrt" find="\b(H|h)öhrt\b" replace="$1ört" />
+
+</source>
+
+=== I ===
+
+<source lang="xml">
+
+<Typo word="imbiß" find="\b(I|i)mbiß\b" replace="$1mbiss" />
+<Typo word="imbißstand" find="\b(I|i)mbißstand\b" replace="$1mbissstand" />
+<Typo word="imission" find="\b(I|i)mission\b" replace="$1mmission" />
+<Typo word="immmer" find="\b(I|i)mmmer\b" replace="$1mmer" />
+<Typo word="inbesondere" find="\b(I|i)nbesondere\b" replace="$1nsbesondere" />
+<Typo word="indizienprozeß" find="\b(I|i)ndizienprozeß\b" replace="$1ndizienprozess" />
+<Typo word="industie" find="\b(I|i)ndustie\b" replace="$1ndustrie" />
+<Typo word="inerhalb" find="\b(I|i)nerhalb\b" replace="$1nnerhalb" />
+<Typo word="infiszieren" find="\b(I|i)nfiszieren\b" replace="$1nfizieren" />
+<Typo word="informand" find="\b(I|i)nformand\b" replace="$1nformand" />
+<Typo word="ingeneur" find="\b(I|i)ngeneur\b" replace="$1ngenieur" />
+<Typo word="ingesamt" find="\b(I|i)ngesamt\b" replace="$1nsgesamt" />
+<Typo word="ingredenzien" find="\b(I|i)ngredenz(ien?)\b" replace="$1ngredienz$2" />
+<Typo word="initalen" find="\b(I|i)nitalen\b" replace="$1nitialen" />
+<Typo word="initative" find="\b(I|i)nitative\b" replace="$1nitiative" />
+<Typo word="initialien" find="\b(I|i)nitialien\b" replace="$1nitialen" />
+<Typo word="initiert" find="\b(I|i)nitiert\b" replace="$1nitiiert" />
+<Typo word="injezieren" find="\b(I|i)njezieren\b" replace="$1njizieren" />
+<Typo word="innesein" find="\b(I|i)nnesein\b" replace="$1nne sein" />
+<Typo word="innnerhalb" find="\b(I|i)nnnerhalb\b" replace="$1nnerhalb" />
+<Typo word="inoffiziel" find="\b(I|i)noffiziel\b" replace="$1noffiziell" />
+<Typo word="insgeamt" find="\b(I|i)nsgeamt\b" replace="$1nsgesamt" />
+<Typo word="insgesammt" find="\b(I|i)nsgesammt\b" replace="$1nsgesamt" />
+<Typo word="inspierier-" find="(I|i)nspierier" replace="$1nspirier" /> 
+<Typo word="instiut" find="\b(I|i)nstiut\b" replace="$1nstitut" />
+<Typo word="instutition" find="\b(I|i)nstutition\b" replace="$1nstitution" />
+<Typo word="intelektuell" find="\b(I|i)ntelektuell\b" replace="$1ntellektuell" />
+<Typo word="intelektuelle" find="\b(I|i)ntelektuelle\b" replace="$1ntellektuelle" />
+<Typo word="intelektuellen" find="\b(I|i)ntelektuellen\b" replace="$1ntellektuellen" />
+<Typo word="intelektueller" find="\b(I|i)ntelektueller\b" replace="$1ntellektueller" />
+<Typo word="interresiert" find="\b(I|i)nterresiert\b" replace="$1nteressiert" />
+<Typo word="interressant" find="\b(I|i)nterressant\b" replace="$1nterressant" />
+<Typo word="interresse" find="\b(I|i)nterresse\b" replace="$1nteresse" />
+<Typo word="interressiert" find="\b(I|i)nterressiert\b" replace="$1nteressiert" />
+<Typo word="intiative" find="\b(I|i)ntiative\b" replace="$1nitiative" />
+<Typo word="intressiert" find="\b(I|i)ntressiert\b" replace="$1nteressiert" />
+<Typo word="irgentwie" find="\b(I|i)rgentwie\b" replace="$1rgendwie" />
+<Typo word="italenisch" find="\b(I|i)talenisch\b" replace="$1talienisch" />
+<Typo word="italiensch" find="\b(I|i)taliensch\b" replace="$1talienisch" />
+<Typo word="italiensich" find="\b(I|i)taliensich\b" replace="$1talienisch" />
+<Typo word="ißt" find="\b(I|i)ßt\b" replace="$1sst" />
+
+</source>
+
+=== J ===
+
+<source lang="xml">
+
+<Typo word="jahhundert" find="\b(J|j)ahhundert\b" replace="$1ahrhundert" />
+<Typo word="jahhunderte" find="\b(J|j)ahhunderte\b" replace="$1ahrhunderte" />
+<Typo word="jahhunderts" find="\b(J|j)ahhunderts\b" replace="$1ahrhunderts" />
+<Typo word="jahrundert" find="\b(J|j)ahrundert\b" replace="$1ahrhundert" />
+<Typo word="jahrunderte" find="\b(J|j)ahrunderte\b" replace="$1ahrhunderte" />
+<Typo word="jahrunderts" find="\b(J|j)ahrunderts\b" replace="$1ahrhunderts" />
+<Typo word="jahrzent" find="\b(J|j)ahrzent\b" replace="$1ahrzehnt" />
+<Typo word="jahrzente" find="\b(J|j)ahrzente\b" replace="$1ahrzehnte" />
+<Typo word="jahundert" find="\b(J|j)ahundert\b" replace="$1ahrhundert" />
+<Typo word="jahunderte" find="\b(J|j)ahunderte\b" replace="$1ahrhunderte" />
+<Typo word="jahunderts" find="\b(J|j)ahunderts\b" replace="$1ahrhunderts" />
+<Typo word="janaur" find="\b(J|j)anaur\b" replace="$1anuar" />
+<Typo word="janur" find="\b(J|j)anur\b" replace="$1anuar" />
+<Typo word="jarhundert" find="\b(J|j)arhundert\b" replace="$1ahrhundert" />
+<Typo word="jarhunderte" find="\b(J|j)arhunderte\b" replace="$1ahrhunderte" />
+<Typo word="jarhunderts" find="\b(J|j)arhunderts\b" replace="$1ahrhunderts" />
+<Typo word="jedesmal" find="\b(J|j)edesmal\b" replace="$1edes Mal" />
+<Typo word="jeweil" find="\b(J|j)eweil\b" replace="$1eweils" />
+<Typo word="jezt" find="\b(J|j)ezt\b" replace="$1etzt" />
+<Typo word="jubiliäum" find="\b(J|j)ubiliäum\b" replace="$1ubiläum" />
+
+</source>
+
+=== K ===
+
+<source lang="xml">
+
+<Typo word="kapselriß" find="\b(K|k)apselriß\b" replace="$1apselriss" />
+<Typo word="karamel" find="\b(K|k)aramel\b" replace="$1aramell" />
+<Typo word="karamelisieren" find="\b(K|k)aramelisieren\b" replace="$1aramellisieren" />
+<Typo word="karamelisiert" find="\b(K|k)aramelisiert\b" replace="$1aramellisiert" />
+<Typo word="kariere" find="\b(K|k)ariere\b" replace="$1arriere" />
+<Typo word="karierre" find="\b(K|k)arierre\b" replace="$1arriere" />
+<Typo word="karrierre" find="\b(K|k)arrierre\b" replace="$1arriere" />
+<Typo word="karrikatur" find="\b(K|k)arrikatur\b" replace="$1arikatur" />
+<Typo word="kellergeschoß" find="\b(K|k)ellergeschoß\b" replace="$1ellergeschoss" />
+<Typo word="kenntniss" find="\b(K|k)enntniss\b" replace="$1enntnis" />
+<Typo word="kennummer" find="\b(K|k)ennummer\b" replace="$1ennnummer" />
+<Typo word="kennzeichnug" find="\b(K|k)ennzeichnug\b" replace="$1ennzeichnung" />
+<Typo word="kentnis" find="\b(K|k)entnis\b" replace="$1enntnis" />
+<Typo word="kentnisse" find="\b(K|k)entnisse\b" replace="$1enntnisse" />
+<Typo word="keß" find="\b(K|k)eß\b" replace="$1ess" />
+<Typo word="Keybord" find="\b(K|k)eybord" replace="$1eyboard" />
+<Typo word="kindesmißhandlung" find="\b(K|k)indesmißhandlung\b" replace="$1indesmisshandlung" />
+<Typo word="klassich" find="\b(K|k)lassich\b" replace="$1lassisch" />
+<Typo word="klassiche" find="\b(K|k)lassiche\b" replace="$1lassische" />
+<Typo word="klassichen" find="\b(K|k)lassichen\b" replace="$1lassischen" />
+<Typo word="klassicher" find="\b(K|k)lassicher\b" replace="$1lassischer" />
+<Typo word="kloss" find="\b(K|k)loss\b" replace="$1loß" />
+<Typo word="knieen-" find="(K|k)nieen" replace="$1nien" />
+<Typo word="koloß" find="\b(K|k)oloß\b" replace="$1oloss" />
+<Typo word="komandant" find="\b(K|k)omandant\b" replace="$1ommandant" />
+<Typo word="komandanten" find="\b(K|k)omandanten\b" replace="$1ommandanten" />
+<Typo word="komando" find="\b(K|k)omando\b" replace="$1ommando" />
+<Typo word="komandos" find="\b(K|k)omandos\b" replace="$1ommandos" />
+<Typo word="komissar" find="\b(K|k)omissar\b" replace="$1ommissar" />
+<Typo word="komissarisch" find="\b(K|k)omissarisch\b" replace="$1ommissarisch" />
+<Typo word="komission" find="\b(K|k)omission\b" replace="$1ommission" />
+<Typo word="kommitee" find="\b(K|k)ommitee\b" replace="$1omitee" />
+<Typo word="kommittee" find="\b(K|k)ommittee\b" replace="$1omitee" />
+<Typo word="kompaß" find="\b(K|k)ompaß\b" replace="$1ompass" />
+<Typo word="kompromiß" find="\b(K|k)ompromiß\b" replace="$1ompromiss" />
+<Typo word="kompromißbereit" find="\b(K|k)ompromißbereit\b" replace="$1ompromissbereit" />
+<Typo word="kompromißlos" find="\b(K|k)ompromißlos\b" replace="$1ompromisslos" />
+<Typo word="kompromißlösung" find="\b(K|k)ompromißlösung\b" replace="$1ompromisslösung" />
+<Typo word="komsariat" find="\b(K|k)omsariat\b" replace="$1ommisariat" />
+<Typo word="komteß" find="\b(K|k)omteß\b" replace="$1omtess" />
+<Typo word="kongreß" find="\b(K|k)ongreß\b" replace="$1ongress" />
+<Typo word="kongreßhalle" find="\b(K|k)ongreßhalle\b" replace="$1ongresshalle" />
+<Typo word="kongreßsaal" find="\b(K|k)ongreßsaal\b" replace="$1ongresssaal" />
+<Typo word="konkurenz" find="\b(K|k)onkurenz\b" replace="$1onkurrenz" />
+<Typo word="konkurieren" find="\b(K|k)onkurieren\b" replace="$1onkurrieren" />
+<Typo word="konkuriert" find="\b(K|k)onkuriert\b" replace="$1onkurriert" />
+<Typo word="konsenz" find="\b(K|k)onsenz\b" replace="$1onsens" />
+<Typo word="konte" find="\b(K|k)onte\b" replace="$1onnte" />
+<Typo word="kontrabaß" find="\b(K|k)ontrabaß\b" replace="$1ontrabass" />
+<Typo word="kontrollampe" find="\b(K|k)ontrollampe\b" replace="$1ontrolllampe" />
+<Typo word="kontrolliste" find="\b(K|k)ontrolliste\b" replace="$1ontrollliste" />
+<Typo word="konntroll-" find="(K|k)onntroll" replace="$1ontroll" />
+<Typo word="konventionnell" find="\b(K|k)onventionnell\b" replace="$1onventionell" />
+<Typo word="kopfnuß" find="\b(K|k)opfnuß\b" replace="$1opfnuss" />
+<Typo word="korregieren" find="\b(K|k)orregieren\b" replace="$1orrigieren" />
+<Typo word="korregiert" find="\b(K|k)orregiert\b" replace="$1orrigiert" />
+<Typo word="kreiselkompaß" find="\b(K|k)reiselkompaß\b" replace="$1reiselkompass" />
+<Typo word="kreissaal" find="\b(K|k)reissaal\b" replace="$1reißsaal" />
+<Typo word="kreisssaal" find="\b(K|k)reisssaal\b" replace="$1reißsaal" />
+<Typo word="kreppapier" find="\b(K|k)reppapier\b" replace="$1repppapier" />
+<Typo word="kriminalprozeß" find="\b(K|k)riminalprozeß\b" replace="$1riminalprozess" />
+<Typo word="kunstoff" find="\b(K|k)unstoff\b" replace="$1unststoff" />
+<Typo word="kunstoffe" find="\b(K|k)unstoffe\b" replace="$1unststoffe" />
+<Typo word="kunststoffolie" find="\b(K|k)unststoffolie\b" replace="$1unststofffolie" />
+<Typo word="kurzeitig" find="\b(K|k)urzeitig\b" replace="$1urzzeitig" />
+<Typo word="kuß" find="(K|k)uß" replace="$1uss" />
+<Typo word="kämmaschine" find="\b(K|k)ämmaschine\b" replace="$1ämmmaschine" />
+<Typo word="känguruh" find="\b(K|k)änguruh\b" replace="$1änguru" />
+<Typo word="küßchen" find="\b(K|k)üßchen\b" replace="$1üsschen" />
+<Typo word="küßt" find="\b(K|k)üßt\b" replace="$1üsst" />
+
+</source>
+
+=== L ===
+
+<source lang="xml">
+
+<Typo word="ladies" find="\b(L|l)adies\b" replace="$1adys" />
+<Typo word="landesprache" find="\b(L|l)andesprache\b" replace="$1andessprache" />
+<Typo word="landesstrasse" find="\b(L|l)andesstrasse\b" replace="$1andesstraße" />
+<Typo word="landstrasse" find="\b(L|l)andstrasse\b" replace="$1andstraße" />
+<Typo word="lapalie" find="\b(L|l)apalie(n?)\b" replace="$1appalie$2" />
+<Typo word="lateinsch" find="\b(L|l)ateinsch\b" replace="$1ateinisch" />
+<Typo word="lateinsche" find="\b(L|l)ateinsche\b" replace="$1ateinische" />
+<Typo word="lateinschen" find="\b(L|l)ateinschen\b" replace="$1ateinischen" />
+<Typo word="lateinsches" find="\b(L|l)ateinsches\b" replace="$1ateinisches" />
+<Typo word="laufpaß" find="\b(L|l)aufpaß\b" replace="$1aufpass" />
+<Typo word="legänder" find="(L|l)egänder" replace="$1egendär" />
+<Typo word="legändär" find="(L|l)(e|ä)gändär" replace="$1egendär" />
+<Typo word="leichnahm" find="\b(L|l)eichnahm\b" replace="$1eichnam" />
+<Typo word="leichnahme" find="\b(L|l)eichnahme\b" replace="$1eichnahme" />
+<Typo word="leichnahms" find="\b(L|l)eichnahms\b" replace="$1eichnams" />
+<Typo word="lernprozeß" find="\b(L|l)ernprozeß\b" replace="$1ernprozess" />
+<Typo word="letze" find="\b(L|l)etze\b" replace="$1etzte" />
+<Typo word="letzen" find="\b(L|l)etzen\b" replace="$1etzten" />
+<Typo word="letzendlich" find="\b(L|l)etzendlich\b" replace="$1etztendlich" />
+<Typo word="letzer" find="\b(L|l)etzer\b" replace="$1etzter" />
+<Typo word="letzere" find="\b(L|l)etzere\b" replace="$1etztere" />
+<Typo word="letzlich" find="\b(L|l)etzlich\b" replace="$1etztlich" />
+<Typo word="letztenmal" find="\b(L|l)etztenmal\b" replace="$1etzten Mal" />
+<Typo word="lexikas" find="\b(L|l)exikas\b" replace="$1exika" />
+<Typo word="liason" find="\b(L|l)iason\b" replace="$1iaison" />
+<Typo word="liebenlernen" find="\b(L|l)iebenlernen\b" replace="$1ieben lernen" />
+<Typo word="liebgewonnen" find="\b(L|l)iebgewonnen\b" replace="$1ieb gewonnen" />
+<Typo word="lies" find="\b(L|l)ies\b" replace="$1ieß" />
+<Typo word="liess" find="\b(L|l)iess\b" replace="$1ieß" />
+<Typo word="liessen" find="\b(L|l)iessen\b" replace="$1ießen" />
+<Typo word="ließt" find="\b(L|l)ießt\b" replace="$1iest" />
+<Typo word="lilliputaner" find="\b(L|l)illiputaner\b" replace="$1iliputaner" />
+<Typo word="litfasssäule" find="\b(L|l)itfasssäule\b" replace="$1itfaßsäule" />
+<Typo word="lizensieren" find="\b(L|l)izensieren\b" replace="$1izenzieren" />
+<Typo word="lizensiert" find="\b(L|l)izensiert\b" replace="$1izenziert" />
+<Typo word="lizensierte" find="\b(L|l)izensierte\b" replace="$1izenzierte" />
+<Typo word="lizensiertem" find="\b(L|l)izensiertem\b" replace="$1izenziertem" />
+<Typo word="lizensierten" find="\b(L|l)izensierten\b" replace="$1izenzierten" />
+<Typo word="lizensierter" find="\b(L|l)izensierter\b" replace="$1izenzierter" />
+<Typo word="lizensiertes" find="\b(L|l)izensiertes\b" replace="$1izenziertes" />
+<Typo word="lizensierung" find="\b(L|l)izensierung\b" replace="$1izenzierung" />
+<Typo word="lobbies" find="\b(L|l)obbies\b" replace="$1obbys" />
+<Typo word="looser" find="\b(L|l)ooser\b" replace="$1oser" />
+<Typo word="luftschiffahrt" find="\b(L|l)uftschiffahrt\b" replace="$1uftschifffahrt" />
+<Typo word="lybien" find="\b(L|l)ybien\b" replace="$1ibyen" />
+<Typo word="lybisch" find="\b(L|l)ybisch\b" replace="$1ibysch" />
+<Typo word="lybische" find="\b(L|l)ybische\b" replace="$1ibysche" />
+<Typo word="lybischen" find="\b(L|l)ybischen\b" replace="$1ybyschen" />
+<Typo word="lybischer" find="\b(L|l)ybischer\b" replace="$1ybyscher" />
+<Typo word="lybisches" find="\b(L|l)ybisches\b" replace="$1ybysches" />
+<Typo word="läd" find="\b(L|l)äd\b" replace="$1ädt" />
+<Typo word="läst" find="\b(L|l)äst\b" replace="$1ässt" />
+<Typo word="läßt" find="\b(L|l)äßt\b" replace="$1ässt" />
+
+</source>
+
+=== M ===
+
+<source lang="xml">
+
+<Typo word="maschiene" find="\b(M|m)aschiene\b" replace="$1aschine" />
+<Typo word="maschienen" find="\b(M|m)aschienen\b" replace="$1aschinen" />
+<Typo word="maschineschreiben" find="\b(M|m)aschineschreiben\b" replace="$1aschinenschreiben" />
+<Typo word="massgabe" find="\b(M|m)assgabe\b" replace="$1aßgabe" />
+<Typo word="massgebend" find="\b(M|m)assgebend\b" replace="$1aßgebend" />
+<Typo word="massgeblich" find="\b(M|m)assgeblich\b" replace="$1aßgeblich" />
+<Typo word="massnahme" find="\b(M|m)assnahme\b" replace="$1aßnahme" />
+<Typo word="massnahmen" find="\b(M|m)assnahmen\b" replace="$1aßnahmen" />
+<Typo word="massstab" find="\b(M|m)assstab\b" replace="$1aßstab" />
+<Typo word="massstäbe" find="\b(M|m)assstäbe\b" replace="$1aßstäbe" />
+<Typo word="matraze" find="\b(M|m)atraze\b" replace="$1atratze" />
+<Typo word="matrze" find="\b(M|m)atrze\b" replace="$1atratze" />
+<Typo word="meerespiegel" find="\b(M|m)eerespiegel\b" replace="$1eeresspiegel" />
+<Typo word="mehre" find="\b(M|m)ehre\b" replace="$1ehrere" />
+<Typo word="mehrerere" find="\b(M|m)ehrerere\b" replace="$1ehrere" />
+<Typo word="meissel" find="\b(M|m)eissel\b" replace="$1eißel" />
+<Typo word="meißt" find="\b(M|m)eißt\b" replace="$1eist" />
+<Typo word="meißten" find="\b(M|m)eißten\b" replace="$1eisten" />
+<Typo word="meißtens" find="\b(M|m)eißtens\b" replace="$1eistens" />
+<Typo word="menscheit" find="\b(M|m)enscheit\b" replace="$1enschheit" />
+<Typo word="messgrösse" find="\b(M|m)essgrösse\b" replace="$1essgröße" />
+<Typo word="metallegierung" find="\b(M|m)etallegierung\b" replace="$1etalllegierung" />
+<Typo word="meßbar" find="\b(M|m)eßbar\b" replace="$1essbar" />
+<Typo word="meßbare" find="\b(M|m)eßbare\b" replace="$1essbare" />
+<Typo word="meßbaren" find="\b(M|m)eßbaren\b" replace="$1essbaren" />
+<Typo word="meßbarer" find="\b(M|m)eßbarer\b" replace="$1essbarer" />
+<Typo word="meßbares" find="\b(M|m)eßbares\b" replace="$1essbares" />
+<Typo word="meßbecher" find="\b(M|m)eßbecher\b" replace="$1essbecher" />
+<Typo word="meßdaten" find="\b(M|m)eßdaten\b" replace="$1essdaten" />
+<Typo word="meßdiener" find="\b(M|m)eßdiener\b" replace="$1essdiener" />
+<Typo word="meßgewand" find="\b(M|m)eßgewand\b" replace="$1essgewand" />
+<Typo word="meßinstrument" find="\b(M|m)eßinstrument\b" replace="$1essinstrument" />
+<Typo word="micheal" find="\b(M|m)icheal\b" replace="$1ichael" />
+<Typo word="milionen" find="\b(M|m)ilionen\b" replace="$1illionen" />
+<Typo word="millarde" find="\b(M|m)illarde\b" replace="$1illiarde" />
+<Typo word="millarden" find="\b(M|m)illarden\b" replace="$1illiarden" />
+<Typo word="millenium" find="\b(M|m)illenium\b" replace="$1illennium" />
+<Typo word="millieu" find="\b(M|m)illieu\b" replace="$1ilieu" />
+<Typo word="millionenmal" find="\b(M|m)illionenmal\b" replace="$1illionen Mal" />
+<Typo word="millitärisch" find="\b(M|m)illitärisch\b" replace="$1ilitärisch" />
+<Typo word="millon" find="\b(M|m)illon\b" replace="$1illion" />
+<Typo word="millonen" find="\b(M|m)illonen\b" replace="$1illionen" />
+<Typo word="misstände" find="\b(M|m)isstände\b" replace="$1issstände" />
+<Typo word="misständen" find="\b(M|m)isständen\b" replace="$1issständen" />
+<Typo word="mitlied" find="\b(M|m)itlied\b" replace="$1itleid" />
+<Typo word="miß" find="\b(M|m)iß" replace="$1iss" />
+<Typo word="moeglich" find="\b(M|m)oeglich\b" replace="$1öglich" />
+<Typo word="moegliche" find="\b(M|m)oegliche\b" replace="$1ögliche" />
+<Typo word="moeglichen" find="\b(M|m)oeglichen\b" replace="$1öglichen" />
+<Typo word="moeglicher" find="\b(M|m)oeglicher\b" replace="$1öglicher" />
+<Typo word="moegliches" find="\b(M|m)oegliches\b" replace="$1ögliches" />
+<Typo word="mübe" find="\b(M|m)übe" replace="$1ürbe" />
+<Typo word="muesste" find="\b(M|m)uesste\b" replace="$1üsste" />
+<Typo word="muessten" find="\b(M|m)uessten\b" replace="$1üssten" />
+<Typo word="mutmasslich" find="\b(M|m)utmasslich\b" replace="$1utmaßlich" />
+<Typo word="mutmassung" find="\b(M|m)utmassung\b" replace="$1utmaßung" />
+<Typo word="muß" find="\b(M|m)uß\b" replace="$1uss" />
+<Typo word="mußt" find="\b(M|m)ußt\b" replace="$1usst" />
+<Typo word="mußte" find="\b(M|m)ußte\b" replace="$1usste" />
+<Typo word="mußten" find="\b(M|m)ußten\b" replace="$1ussten" />
+<Typo word="mässig" find="\b(M|m)ässig\b" replace="$1äßig" />
+<Typo word="müßte" find="\b(M|m)üßte\b" replace="$1üsste" />
+<Typo word="müßten" find="\b(M|m)üßten\b" replace="$1üssten" />
+<Typo word="müßtest" find="\b(M|m)üßtest\b" replace="$1üsstest" />
+
+</source>
+
+=== N ===
+
+<source lang="xml">
+
+<Typo word="nacheinanderfolgenden" find="\b(N|n)acheinanderfolgenden\b" replace="$1acheinander folgenden" />
+<Typo word="nachlaß" find="\b(N|n)achlaß\b" replace="$1achlass" />
+<Typo word="nahekommt" find="\b(N|n)ahekommt\b" replace="$1ahe kommt" />
+<Typo word="naheste" find="\b(N|n)aheste\b" replace="$1äheste" />
+<Typo word="nahesten" find="\b(N|n)ahesten\b" replace="$1ähesten" />
+<Typo word="nahmhaft" find="\b(N|n)ahmhaft\b" replace="$1amhaft" />
+<Typo word="nahmhafte" find="\b(N|n)ahmhafte\b" replace="$1amhafte" />
+<Typo word="nahmhafter" find="\b(N|n)ahmhafter\b" replace="$1amhafter" />
+<Typo word="nahmhaftes" find="\b(N|n)ahmhaftes\b" replace="$1amhaftes" />
+<Typo word="namenhaft" find="\b(N|n)amenhaft\b" replace="$1amhaft" />
+<Typo word="namenhafte" find="\b(N|n)amenhafte\b" replace="$1amhafte" />
+<Typo word="namenhaften" find="\b(N|n)amenhaften\b" replace="$1amhaften" />
+<Typo word="namenhafter" find="\b(N|n)amenhafter\b" replace="$1amhafter" />
+<Typo word="namenlich" find="\b(N|n)amenlich\b" replace="$1amentlich" />
+<Typo word="namenslos" find="\b(N|n)namenslos\b" replace="$1amenlos" />
+<Typo word="narzistisch" find="\b(N|n)arzistisch\b" replace="$1arzisstisch" />
+<Typo word="narzistische" find="\b(N|n)arzistische\b" replace="$1arzisstische" />
+<Typo word="narzistischer" find="\b(N|n)arzistischer\b" replace="$1arzisstischer" />
+<Typo word="narzißmus" find="\b(N|n)arzißmus\b" replace="$1arzissmus" />
+<Typo word="narzißtisch" find="\b(N|n)arzißtisch\b" replace="$1arzisstisch" />
+<Typo word="naß" find="\b(N|n)aß\b" replace="$1ass" />
+<Typo word="naßkalt" find="\b(N|n)aßkalt\b" replace="$1asskalt" />
+<Typo word="naßrasur" find="\b(N|n)aßrasur\b" replace="$1assrasur" />
+<Typo word="ncith" find="\b(N|n)cith\b" replace="$1icht" />
+<Typo word="nervösität" find="\b(N|n)ervösität\b" replace="$1ervosität" />
+<Typo word="niedersächsiche" find="\b(N|n)iedersächsiche\b" replace="$1iedersächsische" />
+<Typo word="niedersächsichen" find="\b(N|n)iedersächsichen\b" replace="$1iedersächsischen" />
+<Typo word="niesche" find="\b(N|n)iesche\b" replace="$1ische" />
+<Typo word="-niss" find="niss\b" replace="nis" />
+<Typo word="nix" find="\b(N|n)ix\b" replace="$1ichts" />
+<Typo word="noerdlich" find="\b(N|n)oerdlich\b" replace="$1ördlich" />
+<Typo word="nordlich" find="\b(N|n)ordlich\b" replace="$1ördlich" />
+<Typo word="notwenig" find="\b(N|n)otwenig\b" replace="$1otwendig" />
+<Typo word="novewmber" find="\b(N|n)ovewmber\b" replace="$1ovember" />
+<Typo word="numehr" find="\b(N|n)umehr\b" replace="$1unmehr" />
+<Typo word="numerieren" find="\b(N|n)umerieren\b" replace="$1ummerieren" />
+<Typo word="numeriert" find="\b(N|n)umeriert\b" replace="$1umeriert" />
+<Typo word="numerierte" find="\b(N|n)umerierte\b" replace="$1umerierte" />
+<Typo word="numerierten" find="\b(N|n)umerierten\b" replace="$1ummerierten" />
+<Typo word="numerierung" find="\b(N|n)umerierung\b" replace="$1ummerierung" />
+<Typo word="nuß" find="\b(N|n)uß\b" replace="$1uss" />
+<Typo word="nußschale" find="\b(N|n)ußschale\b" replace="$1ussschale" />
+<Typo word="nußschokolade" find="\b(N|n)ußschokolade\b" replace="$1ussschokolade" />
+<Typo word="nähmlich" find="\b(N|n)ähmlich\b" replace="$1ämlich" />
+<Typo word="nörlich" find="\b(N|n)örlich\b" replace="$1ördlich" />
+<Typo word="nörlicher" find="\b(N|n)örlicher\b" replace="$1ördlicher" />
+<Typo word="Normade" find="(N|n)ormade" replace="$1omade" />
+
+</source>
+
+=== O ===
+
+<source lang="xml">
+
+<Typo word="obergeschoß" find="\b(O|o)bergeschoß\b" replace="$1bergeschoss" />
+<Typo word="obulus" find="\b(O|o)bulus\b" replace="$1bolus" />
+<Typo word="offizell" find="\b(O|o)ffizell\b" replace="$1ffiziell" />
+<Typo word="offizelle" find="\b(O|o)ffizelle\b" replace="$1ffizielle" />
+<Typo word="offizellem" find="\b(O|o)ffizellem\b" replace="$1ffiziellem" />
+<Typo word="offizellen" find="\b(O|o)ffizellen\b" replace="$1ffiziellen" />
+<Typo word="offizeller" find="\b(O|o)ffizeller\b" replace="$1ffizieller" />
+<Typo word="offizelles" find="\b(O|o)ffizelles\b" replace="$1ffizielles" />
+<Typo word="offiziel" find="\b(O|o)ffiziel\b" replace="$1ffiziell" />
+<Typo word="offiziele" find="\b(O|o)ffiziele\b" replace="$1ffizielle" />
+<Typo word="offizielem" find="\b(O|o)ffizielem\b" replace="$1ffiziellem" />
+<Typo word="offizielen" find="\b(O|o)ffizielen\b" replace="$1ffiziellen" />
+<Typo word="offizieler" find="\b(O|o)ffizieler\b" replace="$1ffizieller" />
+<Typo word="offizieles" find="\b(O|o)ffizieles\b" replace="$1ffizielles" />
+<Typo word="offziell" find="\b(O|o)ffziell\b" replace="$1ffiziell" />
+<Typo word="offzielle" find="\b(O|o)ffzielle\b" replace="$1ffizielle" />
+<Typo word="optimalste" find="\b(O|o)ptimalste\b" replace="$1ptimale" />
+<Typo word="optimalster" find="\b(O|o)ptimalster\b" replace="$1ptimaler" />
+<Typo word="optimalstes" find="\b(O|o)ptimalstes\b" replace="$1ptimales" />
+<Typo word="ordung" find="\b(O|o)rdung\b" replace="$1rdnung" />
+<Typo word="organisert" find="\b(O|o)rganisert\b" replace="$1rganisiert" />
+<Typo word="organsiation" find="\b(O|o)rgansiation\b" replace="$1rganisiation" />
+<Typo word="organsisation" find="\b(O|o)rgansisation\b" replace="$1rganisation" />
+<Typo word="orginal" find="\b(O|o)rginal\b" replace="$1riginal" />
+<Typo word="orginale" find="\b(O|o)rginale\b" replace="$1riginale" />
+<Typo word="orginalen" find="\b(O|o)rginalen\b" replace="$1riginalen" />
+<Typo word="Origianl" find="\b(O|o)rigianl" replace="$1riginal" />
+<Typo word="orginalexemplar" find="\b(O|o)rginalexemplar\b" replace="$1riginalexemplar" />
+<Typo word="orginalexemplare" find="\b(O|o)rginalexemplare\b" replace="$1riginalexemplare" />
+<Typo word="orsteil" find="\b(O|o)rsteil\b" replace="$1rtsteil" />
+<Typo word="orsteile" find="\b(O|o)rsteile\b" replace="$1rtsteile" />
+
+</source>
+
+=== P ===
+
+<source lang="xml">
+
+<Typo word="pabst" find="\b(P|p)abst\b" replace="$1apst" />
+<Typo word="packet" find="\b(P|p)acket\b" replace="$1aket" />
+<Typo word="paralell" find="\b(P|p)aralell\b" replace="$1arallel" />
+<Typo word="parteikongreß" find="\b(P|p)arteikongreß\b" replace="$1arteikongress" />
+<Typo word="parties" find="\b(P|p)arties\b" replace="$1artys" />
+<Typo word="patroulle" find="\b(P|p)atroulle\b" replace="$1atrouille" />
+<Typo word="patroullie" find="\b(P|p)atroullie\b" replace="$1atrouille" />
+<Typo word="patroullieren" find="\b(P|p)atroullieren\b" replace="$1atrouillieren" />
+<Typo word="patroullierte" find="\b(P|p)atroullierte\b" replace="$1atrouillierte" />
+<Typo word="pavillion" find="\b(P|p)avillion\b" replace="$1avillon" />
+<Typo word="paß" find="\b(P|p)aß\b" replace="$1ass" />
+<Typo word="paßbild" find="\b(P|p)aßbild\b" replace="$1assbild" />
+<Typo word="paßkontrolle" find="\b(P|p)aßkontrolle\b" replace="$1asskontrolle" />
+<Typo word="paßstraße" find="\b(P|p)aßstraße\b" replace="$1assstraße" />
+<Typo word="paßt" find="\b(P|p)aßt\b" replace="$1asst" />
+<Typo word="paßt" find="paßt\b" replace="passt" />
+<Typo word="paßt" find="\b(P|p)aßt" replace="$1asst" />
+<Typo word="paßt" find="paßt" replace="passt" />
+<Typo word="pepperoni" find="\b(P|p)epperoni\b" replace="$1eperoni" />
+<Typo word="perfekteste" find="\b(P|p)erfekteste\b" replace="$1erfekte" />
+<Typo word="perfektesten" find="\b(P|p)erfektesten\b" replace="$1erfekten" />
+<Typo word="perfektester" find="\b(P|p)erfektester\b" replace="$1erfekter" />
+<Typo word="perfektestes" find="\b(P|p)erfektestes\b" replace="$1erfektes" />
+<Typo word="periphär" find="\b(P|p)eriphär\b" replace="$1eripher" />
+<Typo word="personenschiffahrt" find="\b(P|p)ersonenschiffahrt\b" replace="$1ersonenschifffahrt" />
+<Typo word="persöhnlich" find="\b(P|p)ersöhnlich\b" replace="$1ersönlich" />
+<Typo word="perönlichkeiten" find="\b(P|p)erönlichkeiten\b" replace="$1ersönlichkeiten" />
+<Typo word="pflichtbewußt" find="\b(P|p)flichtbewußt\b" replace="$1flichtbewusst" />
+<Typo word="pflichtbewußtsein" find="\b(P|p)flichtbewußtsein\b" replace="$1flichtbewusstsein" />
+<Typo word="philsophie" find="\b(P|p)hilsophie\b" replace="$1hilosophie" />
+<Typo word="pipline" find="\b(P|p)ipline\b" replace="$1ipeline" />
+<Typo word="plazieren" find="\b(P|p)lazieren\b" replace="$1latzieren" />
+<Typo word="plaziert" find="\b(P|p)laziert\b" replace="$1latziert" />
+<Typo word="plazzieren" find="\b(P|p)lazzieren\b" replace="$1latzieren" />
+<Typo word="politk" find="\b(P|p)olitk\b" replace="$1olitik" />
+<Typo word="politker" find="\b(P|p)olitker\b" replace="$1olitiker" />
+<Typo word="politsch" find="\b(P|p)olitsch\b" replace="$1olitisch" />
+<Typo word="politsche" find="\b(P|p)olitsche\b" replace="$1olitische" />
+<Typo word="politschen" find="\b(P|p)olitschen\b" replace="$1olitischen" />
+<Typo word="politscher" find="\b(P|p)olitscher\b" replace="$1olitischer" />
+<Typo word="politsches" find="\b(P|p)olitsches\b" replace="$1olitisches" />
+<Typo word="poltiker" find="\b(P|p)oltiker\b" replace="$1olitiker" />
+<Typo word="poltische" find="\b(P|p)oltische\b" replace="$1itische" />
+<Typo word="poltischen" find="\b(P|p)oltischen\b" replace="$olitischen" />
+<Typo word="ponies" find="\b(P|p)onies\b" replace="$1onys" />
+<Typo word="Portrait" find="(P|p)ortrait" replace="$1orträt" />
+<Typo word="positon" find="\b(P|p)ositon\b" replace="$1osition" />
+<Typo word="präsidnet" find="(P|p)räsidnet" replace="$1räsident" />
+<Typo word="praßt" find="\b(P|p)raßt\b" replace="$1rasst" />
+<Typo word="preferenz" find="\b(P|p)referenz\b" replace="$1räferenz" />
+<Typo word="Präsedenzfall" find="\b(P|p)räsedenzfall" replace="$1räzedenzfall" />
+<Typo word="preussen" find="\b(P|p)reussen\b" replace="$1reußen" />
+<Typo word="preßspan" find="\b(P|p)reßspan\b" replace="$1ressspan" />
+<Typo word="preßt" find="\b(P|p)reßt\b" replace="$1resst" />
+<Typo word="prinzipell" find="\b(P|p)rinzipell\b" replace="$1rinzipiell" />
+<Typo word="prinzipelle" find="\b(P|p)rinzipelle\b" replace="$1rinzipielle" />
+<Typo word="prinzipellen" find="\b(P|p)rinzipellen\b" replace="$1rinzipiellen" />
+<Typo word="prinzipeller" find="\b(P|p)rinzipeller\b" replace="$1rinzipieller" />
+<Typo word="prinzipelles" find="\b(P|p)rinzipelles\b" replace="$1rinzipielles" />
+<Typo word="prinzipen" find="\b(P|p)rinzipen\b" replace="$1rinzipien" />
+<Typo word="priveleg" find="\b(P|p)riveleg\b" replace="$1rivileg" />
+<Typo word="probefahren" find="\b(P|p)robefahren\b" replace="$1robe fahren" />
+<Typo word="poduktion" find="\b(P|p)oduktion" replace="$1roduktion" />
+<Typo word="poduktion" find="poduktion" replace="produktion" />
+<Typo word="program" find="\b(P|p)rogram\b" replace="$1rogramm" />
+<Typo word="progrom" find="\b(P|p)rogrom\b" replace="$1ogrom" />
+<Typo word="projezieren" find="\b(P|p)rojezieren\b" replace="$1rojizieren" />
+<Typo word="projeziert" find="\b(P|p)rojeziert\b" replace="$1rojiziert" />
+<Typo word="projezierte" find="\b(P|p)rojezierte\b" replace="$1rojizierte" />
+<Typo word="prozeß" find="\b(P|p)rozeß\b" replace="$1rozess" />
+<Typo word="prozeße" find="\b(P|p)rozeße\b" replace="$1rozesse" />
+<Typo word="prozeßkosten" find="\b(P|p)rozeßkosten\b" replace="$1rozesskosten" />
+<Typo word="psychatrie" find="\b(P|p)sychatrie\b" replace="$1sychiatrie" />
+
+</source>
+
+=== Q ===
+
+<source lang="xml">
+
+<Typo word="Quatier" find="(Q|q)uatier" replace="$1uartier" />
+<Typo word="quentchen" find="\b(Q|q)uentchen\b" replace="$1uäntchen" />
+
+</source>
+
+=== R ===
+
+<source lang="xml">
+
+<Typo word="rassenhaß" find="\b(R|r)assenhaß\b" replace="$1assenhass" />
+<Typo word="rauh" find="\b(R|r)auh\b" replace="$1au" />
+<Typo word="rauhbeinig" find="\b(R|r)auhbeinig\b" replace="$1aubeinig" />
+<Typo word="rauhfasertapete" find="\b(R|r)auhfasertapete\b" replace="$1aufasertapete" />
+<Typo word="rauhreif" find="\b(R|r)auhreif\b" replace="$1aureif" />
+<Typo word="reeling" find="\b(R|r)eeling\b" replace="$1eling" />
+<Typo word="reflektion" find="\b(R|r)eflektion\b" replace="$1eflexion" />
+<Typo word="regelmässig" find="\b(R|r)egelmässig\b" replace="$1egelmäßig" />
+<Typo word="regelmässige" find="\b(R|r)egelmässige\b" replace="$1egelmäßige" />
+<Typo word="regelmässigen" find="\b(R|r)egelmässigen\b" replace="$1egelmäßigen" />
+<Typo word="regelmässiger" find="\b(R|r)egelmässiger\b" replace="$1egelmäßiger" />
+<Typo word="regelmässiges" find="\b(R|r)egelmässiges\b" replace="$1egelmäßiges" />
+<Typo word="Regiseur" find="(R|r)egiseur" replace="$1egisseur" />
+<Typo word="regreß" find="\b(R|r)egreß\b" replace="$1egress" />
+<Typo word="regreßpflichtig" find="\b(R|r)egreßpflichtig\b" replace="$1egresspflichtig" />
+<Typo word="regreßpflichtige" find="\b(R|r)egreßpflichtige\b" replace="$1egresspflichtige" />
+<Typo word="regreßpflichtigen" find="\b(R|r)egreßpflichtigen\b" replace="$1egresspflichtigen" />
+<Typo word="regreßpflichtiger" find="\b(R|r)egreßpflichtiger\b" replace="$1egresspflichtiger" />
+<Typo word="regreßpflichtiges" find="\b(R|r)egreßpflichtiges\b" replace="$1egresspflichtiges" />
+<Typo word="reifungsprozeß" find="\b(R|r)eifungsprozeß\b" replace="$1eifungsprozess" />
+<Typo word="reisepaß" find="\b(R|r)eisepaß\b" replace="$1eisepass" />
+<Typo word="reissen" find="\b(R|r)eissen\b" replace="$1eißen" />
+<Typo word="religon" find="\b(R|r)eligon\b" replace="$1eligion" />
+<Typo word="religonen" find="\b(R|r)eligonen\b" replace="$1eligionen" />
+<Typo word="religös" find="\b(R|r)eligös\b" replace="$1eligiös" />
+<Typo word="religösen" find="\b(R|r)eligösen\b" replace="$1eligiösen" />
+<Typo word="reperatur" find="\b(R|r)eperatur\b" replace="$1eparatur" />
+<Typo word="reportoire" find="\b(R|r)eportoire\b" replace="$1epertoire" />
+<Typo word="repäsentieren" find="\b(R|r)epäsentieren\b" replace="$1epräsentieren" />
+<Typo word="repäsentiert" find="\b(R|r)epäsentiert\b" replace="$1epräsentiert" />
+<Typo word="resourcen" find="\b(R|r)esourcen\b" replace="$1essourcen" />
+<Typo word="rhytmisch" find="\b(R|r)hytmisch\b" replace="$1hythmisch" />
+<Typo word="rhytmische" find="\b(R|r)hytmische\b" replace="$1hythmische" />
+<Typo word="rhytmus" find="\b(R|r)hytmus\b" replace="$1hythmus" />
+<Typo word="riskio" find="\b(R|r)iskio\b" replace="$1isiko" />
+<Typo word="riß" find="\b(R|r)iß\b" replace="$1iss" />
+<Typo word="rißfest" find="\b(R|r)ißfest\b" replace="$1issfest" />
+<Typo word="roheit" find="\b(R|r)oheit\b" replace="$1ohheit" />
+<Typo word="rolladen" find="\b(R|r)olladen\b" replace="$1ollladen" />
+<Typo word="routinemässig" find="\b(R|r)outinemässig\b" replace="$1outinemäßig" />
+<Typo word="roß" find="\b(R|r)oß\b" replace="$1oss" />
+<Typo word="rythmisch" find="\b(R|r)ythmisch\b" replace="$1hythmisch" />
+<Typo word="rythmische" find="\b(R|r)ythmische\b" replace="$1hythmische" />
+<Typo word="rythmus" find="\b(R|r)ythmus\b" replace="$1hythmus" />
+<Typo word="rückgrad" find="\b(R|r)ückgrad\b" replace="$1ückgrat" />
+<Typo word="rückrad" find="\b(R|r)ückrad\b" replace="$1ückgrat" />
+<Typo word="rückrat" find="\b(R|r)ückrat\b" replace="$1ückgrat" />
+
+</source>
+
+=== S ===
+
+<source lang="xml">
+
+<Typo word="sass" find="\b(S|s)ass\b" replace="$1aß" />
+<Typo word="sattelit" find="\b(S|s)attelit\b" replace="$1atellit" />
+<Typo word="schauprozeß" find="\b(S|s)chauprozeß\b" replace="$1chauprozess" />
+<Typo word="schaßte" find="\b(S|s)chaßte\b" replace="$1chasste" />
+<Typo word="scheusslich" find="\b(S|s)cheusslich\b" replace="$1cheußlich" />
+<Typo word="schiessen" find="\b(S|s)chiessen\b" replace="$1chießen" />
+<Typo word="schiffahrt" find="\b(S|s)chiffahrt\b" replace="$1chifffahrt" />
+<Typo word="schiffahrtszeichen" find="\b(S|s)chiffahrtszeichen\b" replace="$1chifffahrtszeichen" />
+<Typo word="schirftsteller" find="\b(S|s)chirftsteller\b" replace="$1chriftsteller" />
+<Typo word="schirftstellerin" find="\b(S|s)chirftstellerin\b" replace="$1chriftstellerin" />
+<Typo word="schlachtroß" find="\b(S|s)chlachtroß\b" replace="$1chlachtross" />
+<Typo word="schliessen" find="\b(S|s)chliessen\b" replace="$1chließen" />
+<Typo word="schliesslich" find="\b(S|s)chliesslich\b" replace="$1chließlich" />
+<Typo word="schliesst" find="\b(S|s)chliesst\b" replace="$1chließt" />
+<Typo word="-schloß" find="schloß\b" replace="schloss" />
+<Typo word="Schloß-" find="\b(S|s)chloß" replace="$1chloss" />
+<Typo word="schloß" find="\b(S|s)chloß\b" replace="$1chloss" />
+<Typo word="-schloß-" find="schloß" replace="schloss" />
+<Typo word="-schluß" find="schluß\b" replace="schluss" />
+<Typo word="Schluß-" find="\b(S|s)chluß" replace="$1chluss" />
+<Typo word="schluß" find="\b(S|s)chluß\b" replace="$1chluss" />
+<Typo word="-schluß-" find="schluß" replace="schluss" />
+<Typo word="schlößchen" find="\b(S|s)chlößchen\b" replace="$1chlösschen" />
+<Typo word="Schockolade" find="(S|s)chockolad" replace="$1chokolad" />
+<Typo word="schnellebig" find="\b(S|s)chnellebig\b" replace="$1chnelllebig" />
+<Typo word="schnellimbiß" find="\b(S|s)chnellimbiß\b" replace="$1chnellimbiss" />
+<Typo word="schneuzen" find="\b(S|s)chneuzen\b" replace="$1chnäuzen" />
+<Typo word="schrifsteller" find="\b(S|s)chrifsteller\b" replace="$1chriftsteller" />
+<Typo word="schrifstellerin" find="\b(S|s)chrifstellerin\b" replace="$1chriftstellerin" />
+<Typo word="schrifstellers" find="\b(S|s)chrifstellers\b" replace="$1chriftstellers" />
+<Typo word="schriftseller" find="\b(S|s)chriftseller\b" replace="$1chriftsteller" />
+<Typo word="schriftsellerin" find="\b(S|s)chriftsellerin\b" replace="$1chriftstellerin" />
+<Typo word="schrittempo" find="\b(S|s)chrittempo\b" replace="$1chritttempo" />
+<Typo word="schliess" find="\b(S|s)chliess\b" replace="$1chließ" />
+<Typo word="schuldenerlaß" find="\b(S|s)chuldenerlaß\b" replace="$1chuldenerlass" />
+<Typo word="schuß" find="\b(S|s)chuß\b" replace="$1chuss" />
+<Typo word="schuß" find="schuß\b" replace="schuss" />
+<Typo word="schuß" find="\b(S|s)chuß" replace="$1chuss" />
+<Typo word="schuß" find="schuß" replace="schuss" />
+<Typo word="schweiss" find="\b(S|s)chweiss\b" replace="$1chweiß" />
+<Typo word="schweissen" find="\b(S|s)chweissen\b" replace="$1chweißen" />
+<Typo word="schweisser" find="\b(S|s)chweisser\b" replace="$1chweißer" />
+<Typo word="schweissnaht" find="\b(S|s)chweissnaht\b" replace="$1chweißnaht" />
+<Typo word="schweisspunkt" find="\b(S|s)chweisspunkt\b" replace="$1chweißpunkt" />
+<Typo word="schweitz" find="\b(S|s)chweitz\b" replace="$1chweiz" />
+<Typo word="schätzenlernen" find="\b(S|s)chätzenlernen\b" replace="$1chätzen lernen" />
+<Typo word="sechszehn" find="\b(S|s)echszehn\b" replace="$1echzehn" />
+<Typo word="seelig" find="\b(S|s)eelig\b" replace="$1elig" />
+<Typo word="seeligsprechung" find="\b(S|s)eeligsprechung\b" replace="$1eligsprechung" />
+<Typo word="sehenwert" find="\b(S|s)ehenwert\b" replace="$1ehenswert" />
+<Typo word="sehenwürdigkeit" find="\b(S|s)ehenwürdigkeit\b" replace="$1ehenswürdigkeit" />
+<Typo word="sehenwürdigkeiten" find="\b(S|s)ehenwürdigkeiten\b" replace="$1ehenswürdigkeiten" />
+<Typo word="selbstbewußt" find="\b(S|s)elbstbewußt\b" replace="$1elbstbewusst" />
+<Typo word="selbstbewußtsein" find="\b(S|s)elbstbewußtsein\b" replace="$1elbstbewusstsein" />
+<Typo word="seliggesprochen" find="\b(S|s)eliggesprochen\b" replace="$1eliggesprochen" />
+<Typo word="seliggesprochene" find="\b(S|s)eliggesprochene\b" replace="$1eliggesprochene" />
+<Typo word="seliggesprochenen" find="\b(S|s)eliggesprochenen\b" replace="$1eliggesprochenen" />
+<Typo word="seliggesprochener" find="\b(S|s)eliggesprochener\b" replace="$1eliggesprochener" />
+<Typo word="seperat" find="\b(S|s)eperat\b" replace="$1eparat" />
+<Typo word="seperate" find="\b(S|s)eperate\b" replace="$1eparate" />
+<Typo word="seperaten" find="\b(S|s)eperaten\b" replace="$1eparaten" />
+<Typo word="seperates" find="\b(S|s)eperates\b" replace="$1eparates" />
+<Typo word="seriösität" find="\b(S|s)eriösität\b" replace="$1eriosität" />
+<Typo word="seßhaft" find="\b(S|s)eßhaft\b" replace="$1esshaft" />
+<Typo word="seßhaftigkeit" find="\b(S|s)eßhaftigkeit\b" replace="$1esshaftigkeit" />
+<Typo word="showbusineß" find="\b(S|s)howbusineß\b" replace="$1howbusiness" />
+<Typo word="siegesgewiß" find="\b(S|s)iegesgewiß\b" replace="$1iegesgewiss" />
+<Typo word="skipaß" find="\b(S|s)kipaß\b" replace="$1kipass" />
+<Typo word="skuril" find="\b(S|s)kuril\b" replace="$1kurril" />
+<Typo word="skurill" find="\b(S|s)kurill\b" replace="$1kurril" />
+<Typo word="slavisch" find="\b(S|s)lavisch\b" replace="$1klavisch" />
+<Typo word="slavische" find="\b(S|s)lavische\b" replace="$1klavische" />
+<Typo word="slavischen" find="\b(S|s)lavischen\b" replace="$1klavischen" />
+<Typo word="sodas" find="\b(S|s)odas\b" replace="$1o das" />
+<Typo word="sodaß" find="\b(S|s)odaß\b" replace="$1o dass" />
+<Typo word="sogenanten" find="\b(S|s)ogenanten\b" replace="$1o genannten" />
+<Typo word="sosse" find="\b(S|s)osse\b" replace="$1auce" />
+<Typo word="sowietunion" find="\b(S|s)owietunion\b" replace="$1owjetunion" />
+<Typo word="sowjetrußland" find="\b(S|s)owjetrußland\b" replace="$1owjetrussland" />
+<Typo word="spass" find="\b(S|s)pass\b" replace="$1paß" />
+<Typo word="spassig" find="\b(S|s)passig\b" replace="$1paßig" />
+<Typo word="spazierenfahren" find="\b(S|s)pazierenfahren\b" replace="$1pazieren fahren" />
+<Typo word="speziel" find="\b(S|s)peziel\b" replace="$1peziell" />
+<Typo word="Sezial" find="\b(S|s)ezial" replace="$1pezial" />
+<Typo word="spiess" find="\b(S|s)piess\b" replace="$1pieß" />
+<Typo word="sprichworte" find="\b(S|s)prichworte\b" replace="$1prichwörter" />
+<Typo word="sproß" find="\b(S|s)proß\b" replace="$1pross" />
+<Typo word="sproßachse" find="\b(S|s)proßachse\b" replace="$1prossachse" />
+<Typo word="spätern" find="\b(S|s)pätern\b" replace="$1päteren" />
+<Typo word="spühlen" find="\b(S|s)pühlen\b" replace="$1pülen" />
+<Typo word="spühlte" find="\b(S|s)pühlte\b" replace="$1pülte" />
+<Typo word="spühren" find="\b(S|s)pühren\b" replace="$1püren" />
+<Typo word="spührt" find="\b(S|s)pührt\b" replace="$1pürt" />
+<Typo word="staatstreich" find="\b(S|s)taatstreich\b" replace="$1taatsstreich" />
+<Typo word="stadrat" find="\b(S|s)tadrat\b" replace="$1tadtrat" />
+<Typo word="stadteil" find="\b(S|s)tadteil\b" replace="$1tadtteil" />
+<Typo word="stadteile" find="\b(S|s)tadteile\b" replace="$1tadtteile" />
+<Typo word="stadteilen" find="\b(S|s)tadteilen\b" replace="$1tadtteilen" />
+<Typo word="stadteils" find="\b(S|s)tadteils\b" replace="$1tadtteils" />
+<Typo word="standart" find="\b(S|s)tandart\b" replace="$1tandard" />
+<Typo word="standartisieren" find="\b(S|s)tandartisieren\b" replace="$1tandardisieren" />
+<Typo word="standartmässig" find="\b(S|s)tandartmässig\b" replace="$1tandardmässig" />
+<Typo word="standarts" find="\b(S|s)tandarts\b" replace="$1tandards" />
+<Typo word="statrat" find="\b(S|s)tatrat\b" replace="$1tadtrat" />
+<Typo word="stehgreif" find="\b(S|s)tehgreif\b" replace="$1tegreif" />
+<Typo word="steiss" find="\b(S|s)teiss\b" replace="$1teiß" />
+<Typo word="stellverteter" find="\b(S|s)tellverteter\b" replace="$1tellvertreter" />
+<Typo word="stengel" find="\b(S|s)tengel\b" replace="$1tängel" />
+<Typo word="steptanz" find="\b(S|s)teptanz\b" replace="$1tepptanz" />
+<Typo word="steuererlaß" find="\b(S|s)teuererlaß\b" replace="$1teuererlass" />
+<Typo word="stewardeß" find="\b(S|s)tewardeß\b" replace="$1tewardess" />
+<Typo word="stichstoff" find="\b(S|s)tichstoff\b" replace="$1tickstoff" />
+<Typo word="stiess" find="\b(S|s)tiess\b" replace="$1tieß" />
+<Typo word="stiessen" find="\b(S|s)tiessen\b" replace="$1tießen" />
+<Typo word="stiftengehen" find="\b(S|s)tiftengehen\b" replace="$1tiften gehen" />
+<Typo word="stilleben" find="\b(S|s)tilleben\b" replace="$1tillleben" />
+<Typo word="stillegen" find="\b(S|s)tillegen\b" replace="$1tilllegen" />
+<Typo word="stillegung" find="\b(S|s)tillegung\b" replace="$1tilllegung" />
+<Typo word="stmmung" find="\b(S|s)tmmung" replace="$timmung" />
+<Typo word="stoffarbe" find="\b(S|s)toffarbe\b" replace="$1tofffarbe" />
+<Typo word="stoffetzen" find="\b(S|s)toffetzen\b" replace="$1tofffetzen" />
+<!-- <Typo word="stop" find="\b(S|s)top\b" replace="$1topp" /> --> <!-- bisher nur false postive, ca. 300x -->
+<Typo word="stoss" find="\b(S|s)toss\b" replace="$1toß" />
+<Typo word="stossen" find="\b(S|s)tossen\b" replace="$1toßen" />
+<Typo word="straferlaß" find="\b(S|s)traferlaß\b" replace="$1traferlass" />
+<Typo word="strafprozeß" find="\b(S|s)trafprozeß\b" replace="$1trafprozess" />
+<Typo word="strasse" find="\b(S|s)trasse\b" replace="$1traße" />
+<Typo word="strassen" find="\b(S|s)trassen\b" replace="$1traßen" />
+<Typo word="strassenverkehr" find="\b(S|s)trassenverkehr\b" replace="$1traßenverkehr" />
+<Typo word="strauss" find="\b(S|s)trauss\b" replace="$1trauß" />
+<Typo word="streß" find="\b(S|s)treß\b" replace="$1tress" />
+<Typo word="strukur" find="\b(S|s)trukur\b" replace="$1truktur" />
+<Typo word="strukuriert" find="\b(S|s)trukuriert\b" replace="$1trukturiert" />
+<Typo word="strukurierte" find="\b(S|s)trukurierte\b" replace="$1trukturierte" />
+<Typo word="stösst" find="\b(S|s)tösst\b" replace="$1tößt" />
+<Typo word="sumieren" find="\b(S|s)umieren\b" replace="$1ummieren" />
+<Typo word="sumiert" find="\b(S|s)umiert\b" replace="$1ummiert" />
+<Typo word="sylvester" find="\b(S|s)ylvester\b" replace="$1ilvester" />
+<Typo word="symetrisch" find="\b(S|s)ymetrisch\b" replace="$1ymmetrisch" />
+<Typo word="syphon" find="\b(S|s)yphon\b" replace="$1iphon" />
+<Typo word="sytem" find="\b(S|s)ytem\b" replace="$1ystem" />
+<Typo word="syteme" find="\b(S|s)yteme\b" replace="$1ysteme" />
+<Typo word="sytemen" find="\b(S|s)ytemen\b" replace="$1ystemen" />
+<Typo word="szlig" find="\b(S|s)zlig\b" replace="$1alzig" />
+<Typo word="sächsich" find="\b(S|s)ächsich\b" replace="$1ächsisch" />
+<Typo word="sächsiche" find="\b(S|s)ächsiche\b" replace="$1ächsische" />
+<Typo word="sächsichen" find="\b(S|s)ächsichen\b" replace="$1ächsischen" />
+<Typo word="süss" find="\b(S|s)üss\b" replace="$1üß" />
+<Typo word="süsssauer" find="\b(S|s)üsssauer\b" replace="$1üßsauer" />
+
+</source>
+
+=== T ===
+
+<source lang="xml">
+
+<Typo word="tablettenmißbrauch" find="\b(T|t)ablettenmißbrauch\b" replace="$1ablettenmissbrauch" />
+<Typo word="teddies" find="\b(T|t)eddies\b" replace="$1eddys" />
+<Typo word="telephon" find="\b(T|t)elephon\b" replace="$1elefon" />
+<Typo word="temparatur" find="\b(T|t)emparatur\b" replace="$1emperatur" />
+<Typo word="terasse" find="\b(T|t)erasse\b" replace="$1errasse" />
+<Typo word="terassen" find="\b(T|t)erassen\b" replace="$1errassen" />
+<Typo word="tiefergelegt" find="\b(T|t)iefergelegt\b" replace="$1iefer gelegt" />
+<Typo word="tiefergelegten" find="\b(T|t)iefergelegten\b" replace="$1iefer gelegten" />
+<Typo word="tiefergelegter" find="\b(T|t)iefergelegter\b" replace="$1iefer gelegter" />
+<Typo word="tieferlegen" find="\b(T|t)ieferlegen\b" replace="$1iefer legen" />
+<Typo word="tip" find="\b(T|t)ip\b" replace="$1ipp" />
+<Typo word="tollerant" find="\b(T|t)ollerant\b" replace="$1olerant" />
+<Typo word="tolleranz" find="\b(T|t)olleranz\b" replace="$1oleranz" />
+<Typo word="tollerieren" find="\b(T|t)ollerieren\b" replace="$1olerieren" />
+<Typo word="tolleriert" find="\b(T|t)olleriert\b" replace="$1oleriert" />
+<Typo word="tolpatsch" find="\b(T|t)olpatsch\b" replace="$1ollpatsch" />
+<Typo word="tolpatschig" find="\b(T|t)olpatschig\b" replace="$1ollpatschig" />
+<Typo word="totalste" find="\b(T|t)otalste\b" replace="$1otale" />
+<Typo word="totalsten" find="\b(T|t)otalsten\b" replace="$1otalen" />
+<Typo word="totalster" find="\b(T|t)otalster\b" replace="$1otaler" />
+<Typo word="totalstes" find="\b(T|t)otalstes\b" replace="$1otales" />
+<Typo word="totlangweilig" find="\b(T|t)otlangweilig\b" replace="$1odlangweilig" />
+<Typo word="totschick" find="\b(T|t)otschick\b" replace="$1odschick" />
+<Typo word="traditon" find="\b(T|t)raditon\b" replace="$1radition" />
+<Typo word="traditonell" find="\b(T|t)raditonell\b" replace="$1raditionell" />
+<Typo word="traditonelle" find="\b(T|t)raditonelle\b" replace="$1raditionelle" />
+<Typo word="traditonellen" find="\b(T|t)raditonellen\b" replace="$1raditionellen" />
+<Typo word="triologie" find="\b(T|t)riologie\b" replace="$1rilogie" />
+<Typo word="tryptichon" find="\b(T|t)ryptichon\b" replace="$1riptychon " />
+<Typo word="tunier" find="\b(T|t)unier\b" replace="$1urnier" />
+<Typo word="tuniere" find="\b(T|t)uniere\b" replace="$1urniere" />
+<Typo word="tunieren" find="\b(T|t)unieren\b" replace="$1urnieren" />
+<Typo word="tuniers" find="\b(T|t)uniers\b" replace="$1urniers" />
+
+</source>
+
+=== U ===
+
+<source lang="xml">
+
+<Typo word="ua" find="\b(U|u)a\b" replace="$1nd andere" />
+<Typo word="udn" find="\b(U|u)dn\b" replace="$1nd" />
+<Typo word="umbennant" find="\b(U|u)mbennant\b" replace="$1mbenannt" />
+<Typo word="umbennenung" find="\b(U|u)mbennenung\b" replace="$1mbenennung" />
+<Typo word="umbennung" find="\b(U|u)mbennung\b" replace="$1mbenennung" />
+<Typo word="umfaßt" find="\b(U|u)mfaßt\b" replace="$1mfasst" />
+<Typo word="umfaßte" find="\b(U|u)mfaßte\b" replace="$1mfasste" />
+<Typo word="umgangsprache" find="\b(U|u)mgangsprache\b" replace="$1mgangssprache" />
+<Typo word="umgangsprachlich" find="\b(U|u)mgangsprachlich\b" replace="$1mgangssprachlich" />
+<Typo word="umgangsprachliche" find="\b(U|u)mgangsprachliche\b" replace="$1mgangssprachliche" />
+<Typo word="umgangsprachlicher" find="\b(U|u)mgangsprachlicher\b" replace="$1mgangssprachlicher" />
+<Typo word="umriß" find="\b(U|u)mriß\b" replace="$1mriss" />
+<Typo word="umrißzeichnung" find="\b(U|u)mrißzeichnung\b" replace="$1mrisszeichnung" />
+<Typo word="umstellungsprozeß" find="\b(U|u)mstellungsprozeß\b" replace="$1mstellungsprozess" />
+<Typo word="unabhängikeit" find="\b(U|u)nabhängikeit\b" replace="$1nabhängigkeit" />
+<Typo word="unabhänig" find="\b(U|u)nabhänig\b" replace="$1nabhängig" />
+<Typo word="unabhänigkeit" find="\b(U|u)nabhänigkeit\b" replace="$1nabhängigkeit" />
+<Typo word="unbwaldet" find="(U|u)nbwaldet" replace="$1nbewaldet" />
+<Typo word="unbewußt" find="\b(U|u)nbewußt\b" replace="$1nbewusst" />
+<Typo word="unbewußtem" find="\b(U|u)nbewußtem\b" replace="$1nbewusstem" />
+<Typo word="unbewußten" find="\b(U|u)nbewußten\b" replace="$1nbewussten" />
+<Typo word="unerläßlich" find="\b(U|u)nerläßlich\b" replace="$1nerlässlich" />
+<Typo word="unermeßlich" find="\b(U|u)nermeßlich\b" replace="$1nermesslich" />
+<Typo word="unermeßliche" find="\b(U|u)nermeßliche\b" replace="$1nermessliche" />
+<Typo word="unermeßlichen" find="\b(U|u)nermeßlichen\b" replace="$1nermesslichen" />
+<Typo word="unermeßlicher" find="\b(U|u)nermeßlicher\b" replace="$1nermesslicher" />
+<Typo word="unermeßliches" find="\b(U|u)nermeßliches\b" replace="$1nermessliches" />
+<Typo word="unfaßbar" find="\b(U|u)nfaßbar\b" replace="$1nfassbar" />
+<Typo word="unfaßbare" find="\b(U|u)nfaßbare\b" replace="$1nfassbare" />
+<Typo word="unfaßbaren" find="\b(U|u)nfaßbaren\b" replace="$1nfassbaren" />
+<Typo word="unfaßbarer" find="\b(U|u)nfaßbarer\b" replace="$1nfassbarer" />
+<Typo word="unfaßbares" find="\b(U|u)nfaßbares\b" replace="$1nfassbares" />
+<Typo word="ungefär" find="\b(U|u)ngefär\b" replace="$1ngefähr" />
+<Typo word="ungewiß" find="\b(U|u)ngewiß\b" replace="$1ngewiss" />
+<Typo word="ungewiße" find="\b(U|u)ngewiße\b" replace="$1ngewisse" />
+<Typo word="ungewißen" find="\b(U|u)ngewißen\b" replace="$1ngewissen" />
+<Typo word="ungewißer" find="\b(U|u)ngewißer\b" replace="$1ngewisser" />
+<Typo word="ungewißes" find="\b(U|u)ngewißes\b" replace="$1ngewisses" />
+<Typo word="ungewißheit" find="\b(U|u)ngewißheit\b" replace="$1ngewissheit" />
+<Typo word="universtität" find="\b(U|u)niverstität\b" replace="$1niversität" />
+<Typo word="universtät" find="\b(U|u)niverstät\b" replace="$1niversität" />
+<Typo word="unmißverständlich" find="\b(U|u)nmißverständlich\b" replace="$1nmissverständlich" />
+<Typo word="unmißverständliche" find="\b(U|u)nmißverständliche\b" replace="$1nmissverständliche" />
+<Typo word="unmißverständlichen" find="\b(U|u)nmißverständlichen\b" replace="$1nmissverständlichen" />
+<Typo word="unmißverständlicher" find="\b(U|u)nmißverständlicher\b" replace="$1nmissverständlicher" />
+<Typo word="unmißverständliches" find="\b(U|u)nmißverständliches\b" replace="$1nmissverständliches" />
+<Typo word="unregelmässig" find="\b(U|u)nregelmässig\b" replace="$1nregelmäßig" />
+<Typo word="unregelmässige" find="\b(U|u)nregelmässige\b" replace="$1nregelmäßige" />
+<Typo word="unregelmässigen" find="\b(U|u)nregelmässigen\b" replace="$1nregelmäßigen" />
+<Typo word="unregelmässiger" find="\b(U|u)nregelmässiger\b" replace="$1nregelmäßiger" />
+<Typo word="unterbewußt" find="\b(U|u)nterbewußt\b" replace="$1nterbewusst" />
+<Typo word="unterbewußte" find="\b(U|u)nterbewußte\b" replace="$1nterbewusste" />
+<Typo word="unterbewußten" find="\b(U|u)nterbewußten\b" replace="$1nterbewussten" />
+<Typo word="unterbewußter" find="\b(U|u)nterbewußter\b" replace="$1nterbewusster" />
+<Typo word="unterbewußtes" find="\b(U|u)nterbewußtes\b" replace="$1nterbewusstes" />
+<Typo word="unterbewußtsein" find="\b(U|u)nterbewußtsein\b" replace="$1nterbewusstsein" />
+<Typo word="unterderhand" find="\b(U|u)nterderhand\b" replace="$1nter der Hand" />
+<Typo word="untergeschoß" find="\b(U|u)ntergeschoß\b" replace="$1ntergeschoss" />
+<Typo word="untericht" find="\b(U|u)ntericht\b" replace="$1nterricht" />
+<Typo word="unterichten" find="\b(U|u)nterichten\b" replace="$1nterrichten" />
+<Typo word="unterlaß" find="\b(U|u)nterlaß\b" replace="$1nterlass" />
+<Typo word="unterstüze" find="\b(U|u)nterstüze\b" replace="$1nterstütze" />
+<Typo word="unterstüzung" find="\b(U|u)nterstüzung\b" replace="$1nterstützung" />
+<Typo word="unvergeßlich" find="\b(U|u)nvergeßlich\b" replace="$1nvergesslich" />
+<Typo word="unwegbarkeiten" find="\b(U|u)nwegbarkeit(en?)\b" replace="$1nwägbarkeit$2" />
+<Typo word="unwiderbringlich" find="\b(U|u)nwiderbringlich\b" replace="$1nwiederbringlich" />
+<Typo word="unwiederruflich" find="\b(U|u)nwiederruflich\b" replace="$1nwiderruflich" />
+<Typo word="unzähligemal" find="\b(U|u)nzähligemal(e?)\b" replace="$1nzählige Mal$2" />
+<Typo word="urspünglich" find="\b(U|u)rspünglich\b" replace="$1rsprünglich" />
+<Typo word="urspüngliche" find="\b(U|u)rspüngliche\b" replace="$1rsprüngliche" />
+<Typo word="urspünglichen" find="\b(U|u)rspünglichen\b" replace="$1rsprünglichen" />
+<Typo word="ursupator" find="\b(U|u)rsupator\b" replace="$1supator" />
+<Typo word="ursupator" find="\b(U|u)rsupier(t?|en?)\b" replace="$1supier$2" />
+<Typo word="usprünglich" find="\b(U|u)sprünglich\b" replace="$1rsprünglich" />
+<Typo word="usprüngliche" find="\b(U|u)sprüngliche\b" replace="$1rsprüngliche" />
+<Typo word="usprünglichen" find="\b(U|u)sprünglichen\b" replace="$1rsprünglichen" />
+
+
+</source>
+
+=== V ===
+
+<source lang="xml">
+
+<Typo word="verabeitet" find="\b(V|v)erabeitet\b" replace="$1erarbeitet" />
+<Typo word="verabeitung" find="\b(V|v)erabeitung\b" replace="$1erarbeitung" />
+<Typo word="veranlaßt" find="\b(V|v)eranlaßt\b" replace="$1eranlasst" />
+<Typo word="veranlaßte" find="\b(V|v)eranlaßte\b" replace="$1eranlasste" />
+<Typo word="verand" find="(V|v)veränd" replace="$1erband" />
+<Typo word="vekauf" find="(V|v)ekauf" replace="$1erkauf" />
+<Typo word="verbeitet" find="\b(V|v)erbeitet\b" replace="$1erarbeitet" />
+<Typo word="verbeitung" find="\b(V|v)erbeitung\b" replace="$1erarbeitung" />
+<Typo word="verblaßt" find="\b(V|v)erblaßt\b" replace="$1erblasst" />
+<Typo word="verblaßte" find="\b(V|v)erblaßte\b" replace="$1erblasste" />
+<Typo word="verblaßten" find="\b(V|v)erblaßten\b" replace="$1erblassten" />
+<Typo word="verblaßter" find="\b(V|v)erblaßter\b" replace="$1erblasster" />
+<Typo word="verbreiteste" find="\b(V|v)erbreiteste" replace="$1erbreitetste" />
+<Typo word="Verbeitung" find="(V|v)erbeitung" replace="$1erbreitung" />
+<Typo word="verdruß" find="\b(V|v)erdruß\b" replace="$1erdruss" />
+<Typo word="vereingt" find="\b(V|v)ereingt\b" replace="$1ereinigt" />
+<Typo word="vereingte" find="\b(V|v)ereingte\b" replace="$1ereinigte" />
+<Typo word="vereingten" find="\b(V|v)ereingten\b" replace="$1ereinigten" />
+<Typo word="verfaßt" find="\b(V|v)erfaßt\b" replace="$1erfasst" />
+<Typo word="verfaßte" find="\b(V|v)erfaßte\b" replace="$1erfasste" />
+<Typo word="verfaßten" find="\b(V|v)erfaßten\b" replace="$1erfassten" />
+<Typo word="verfaßter" find="\b(V|v)erfaßter\b" replace="$1erfasster" />
+<Typo word="verfaßtes" find="\b(V|v)erfaßtes\b" replace="$1erfasstes" />
+<Typo word="vergass" find="\b(V|v)ergass\b" replace="$1ergaß" />
+<Typo word="vergeßlich" find="\b(V|v)ergeßlich\b" replace="$1ergesslich" />
+<Typo word="vergeßlichkeit" find="\b(V|v)ergeßlichkeit\b" replace="$1ergesslichkeit" />
+<Typo word="vergißt" find="\b(V|v)ergißt\b" replace="$1ergisst" />
+<Typo word="vergrössert" find="\b(V|v)ergrössert\b" replace="$1ergrößert" />
+<Typo word="vergrösserung" find="\b(V|v)ergrösserung\b" replace="$1ergrößerung" />
+<Typo word="verhaeltnismaessig" find="\b(V|v)erhaeltnismaessig\b" replace="$1erhältnismäßig" />
+<Typo word="verhaßt" find="\b(V|v)erhaßt\b" replace="$1erhasst" />
+<Typo word="verhehrend" find="\b(V|v)erhehrend\b" replace="$1erheerend" />
+<Typo word="verhehrende" find="\b(V|v)erhehrende\b" replace="$1erheerende" />
+<Typo word="verherend" find="\b(V|v)erherend\b" replace="$1erheerend" />
+<Typo word="verherrend" find="\b(V|v)erherrend\b" replace="$1erharrend" />
+<Typo word="verhältnismässig" find="\b(V|v)erhältnismässig\b" replace="$1erhältnismäßig" />
+<Typo word="verlaß" find="\b(V|v)erlaß\b" replace="$1erlass" />
+<Typo word="verliess" find="\b(V|v)erliess\b" replace="$1erließ" />
+<Typo word="verlohren" find="\b(V|v)erlohren\b" replace="$1erloren" />
+<Typo word="verlorengegangen" find="\b(V|v)erlorengegangen\b" replace="$1erloren gegangen" />
+<Typo word="verläßlich" find="\b(V|v)erläßlich\b" replace="$1erlässlich" />
+<Typo word="verläßlichkeit" find="\b(V|v)erläßlichkeit\b" replace="$1erlässlichkeit" />
+<Typo word="verläßt" find="\b(V|v)erläßt\b" replace="$1erlässt" />
+<Typo word="vermißt" find="\b(V|v)ermißt\b" replace="$1ermisst" />
+<Typo word="verpöhnt" find="\b(V|v)erpöhnt\b" replace="$1erpönt" />
+<Typo word="verriß" find="\b(V|v)erriß\b" replace="$1erriss" />
+<Typo word="verschiedenemal" find="\b(V|v)erschiedenemal(e?)\b" replace="$1erschiedene Mal$2" />
+<Typo word="verschleiss" find="\b(V|v)erschleiss\b" replace="$1erschleiß" />
+<Typo word="verspühren" find="\b(V|v)erspühren\b" replace="$1erspüren" />
+<Typo word="verspührt" find="\b(V|v)erspührt\b" replace="$1ersphrt" />
+<Typo word="verspührte" find="\b(V|v)erspührte\b" replace="$1erspürte" />
+<Typo word="verstossen" find="\b(V|v)erstossen\b" replace="$1erstoßen" />
+<Typo word="vertag" find="\b(V|v)ertag\b" replace="$1ertrag" />
+<Typo word="vertaglich" find="\b(V|v)ertaglich\b" replace="$1ertraglich" />
+<Typo word="verteter" find="\b(V|v)erteter\b" replace="$1ertreter" />
+<Typo word="vertäge" find="\b(V|v)ertäge\b" replace="$1erträge" />
+<Typo word="verfassung-" find="(V|v)erfassung(.^[:space:])" replace="$1erfassungs" />
+<Typo word="verwand" find="\b(V|v)erwand\b" replace="$1erwandt" />
+<Typo word="verwandschaft" find="\b(V|v)erwandschaft\b" replace="$1erwandtschaft" />
+<Typo word="veräussern" find="\b(V|v)eräussern\b" replace="$1eräußern" />
+<Typo word="veräussert" find="\b(V|v)eräussert\b" replace="$1eräußert" />
+<Typo word="veräusserte" find="\b(V|v)eräusserte\b" replace="$1eräußerte" />
+<Typo word="vetrag" find="\b(V|v)etrag\b" replace="$1ertrag" />
+<Typo word="vetraglich" find="\b(V|v)etraglich\b" replace="$1ertraglich" />
+<Typo word="veträge" find="\b(V|v)eträge\b" replace="$1erträge" />
+<Typo word="vieleicht" find="\b(V|v)ieleicht\b" replace="$1ielleicht" />
+<Typo word="vielleciht" find="\b(V|v)ielleciht\b" replace="$1ielleicht" />
+<Typo word="vohanden" find="\b(V|v)ohanden\b" replace="$1orhanden" />
+<Typo word="vorallem" find="\b(V|v)orallem\b" replace="$1or allem" />
+<Typo word="vorang" find="\b(V|v)orang\b" replace="$1orrang" />
+<Typo word="vorangig" find="\b(V|v)orangig\b" replace="$1orrangig" />
+<Typo word="vorausetzung" find="\b(V|v)orausetzung\b" replace="$1oraussetzung" />
+<Typo word="vorausetzungen" find="\b(V|v)orausetzungen\b" replace="$1oraussetzungen" />
+<Typo word="vorausichtlich" find="\b(V|v)orausichtlich\b" replace="$1oraussichtlich" />
+<Typo word="vorkommene" find="\b(V|v)orkommene\b" replace="$1orkommende" />
+<Typo word="vormachtsstellung" find="\b(V|v)ormachtsstellung\b" replace="$1ormachtstellung" />
+<Typo word="vorraus" find="\b(V|v)orraus\b" replace="$1oraus" />
+<Typo word="vorrausgesetzt" find="\b(V|v)orrausgesetzt\b" replace="$1orausgesetzt" />
+<Typo word="vorraussetzen" find="\b(V|v)orraussetzen\b" replace="$1oraussetzen" />
+<Typo word="vorraussetzt" find="\b(V|v)orraussetzt\b" replace="$1oraussetzt" />
+<Typo word="vorraussetzung" find="\b(V|v)orraussetzung\b" replace="$1oraussetzung" />
+<Typo word="vorraussetzungen" find="\b(V|v)orraussetzungen\b" replace="$1oraussetzungen" />
+<Typo word="vorraussichtlich" find="\b(V|v)orraussichtlich\b" replace="$1oraussichtlich" />
+<Typo word="vorrübergehend" find="\b(V|v)orrübergehend\b" replace="$1orübergehend" />
+<Typo word="vorrübergehende" find="\b(V|v)orrübergehende\b" replace="$1orübergehende" />
+<Typo word="vorrübergehenden" find="\b(V|v)orrübergehenden\b" replace="$1orübergehenden" />
+
+</source>
+
+=== W ===
+
+<source lang="xml">
+
+<Typo word="walfahrer" find="\b(W|w)alfahrer\b" replace="$1allfahrer" />
+<Typo word="walfahrt" find="\b(W|w)alfahrt\b" replace="$1allfahrt" />
+<Typo word="walfahrtskirche" find="\b(W|w)alfahrtskirche\b" replace="$1allfahrtskirche" />
+<Typo word="walfahrtsort" find="\b(W|w)alfahrtsort\b" replace="$1allfahrtsort" />
+<Typo word="walroß" find="\b(W|w)alroß\b" replace="$1alross" />
+<Typo word="warscheinlich" find="\b(W|w)arscheinlich\b" replace="$1ahrscheinlich" />
+<Typo word="wehrmutstropfen" find="\b(W|w)ehrmutstropfen\b" replace="$1ermutstropfen" />
+<Typo word="weinfaß" find="\b(W|w)einfaß\b" replace="$1einfass" />
+<Typo word="weis" find="\b(W|w)eis\b" replace="$1eiß" />
+<Typo word="weiss" find="\b(W|w)eiss\b" replace="$1eiß" />
+<Typo word="weisse" find="\b(W|w)eisse\b" replace="$1eiße" />
+<Typo word="weissem" find="\b(W|w)eissem\b" replace="$1eißem" />
+<Typo word="weissen" find="\b(W|w)eissen\b" replace="$1eißen" />
+<Typo word="weisser" find="\b(W|w)eisser\b" replace="$1eißer" />
+<Typo word="weisses" find="\b(W|w)eisses\b" replace="$1eißes" />
+<Typo word="weisswein" find="\b(W|w)eisswein\b" replace="$1eißwein" />
+<Typo word="weiterere" find="\b(W|w)eiterere\b" replace="$1eitere" />
+<Typo word="weitesgehend" find="\b(W|w)eitesgehend\b" replace="$1eitestgehend" />
+<Typo word="weißmachen" find="\b(W|w)eißmachen\b" replace="$1eiß machen" />
+<Typo word="weißrußland" find="\b(W|w)eißrußland\b" replace="$1eißrussland" />
+<Typo word="wiedererichtung" find="\b(W|w)iedererichtung\b" replace="$1iedererrichtung" />
+<Typo word="wiederrief" find="\b(W|w)iederrief\b" replace="$1iderrief" />
+<Typo word="wiederrum" find="\b(W|w)iederrum\b" replace="$1iederum" />
+<Typo word="wiederspiegeln" find="\b(W|w)iederspiegeln\b" replace="$1iderspiegeln" />
+<Typo word="wiederspiegelt" find="\b(W|w)iederspiegelt\b" replace="$1iderspiegelt" />
+<Typo word="wiedersprechen" find="\b(W|w)iedersprechen\b" replace="$1idersprechen" />
+<Typo word="wiedersprechend" find="\b(W|w)iedersprechend\b" replace="$1idersprechend" />
+<Typo word="wiedersprechende" find="\b(W|w)iedersprechende\b" replace="$1idersprechende" />
+<Typo word="wiederspruch" find="\b(W|w)iederspruch\b" replace="$1iderspruch" />
+<Typo word="wiedersprüche" find="\b(W|w)iedersprüche\b" replace="$1idersprüche" />
+<Typo word="wiedersprüchlich" find="\b(W|w)iedersprüchlich\b" replace="$1idersprüchlich" />
+<Typo word="wiedersprüchliche" find="\b(W|w)iedersprüchliche\b" replace="$1idersprüchliche" />
+<Typo word="wiedersprüchlichen" find="\b(W|w)iedersprüchlichen\b" replace="$1idersprüchlichen" />
+<Typo word="wiederstand" find="\b(W|w)iederstand\b" replace="$1iderstand" />
+<Typo word="wieviel" find="\b(W|w)ieviel\b" replace="$1ie viel" />
+<Typo word="wilhem" find="\b(W|w)ilhem\b" replace="$1ilhlem" />
+<Typo word="willhelm" find="\b(W|w)illhelm\b" replace="$1ilhelm" />
+<Typo word="wissentschaft" find="\b(W|w)issentschaft\b" replace="$1issenschaft" />
+<Typo word="wissentschaftlich" find="\b(W|w)issentschaftlich\b" replace="$1issenschaftlich" />
+<Typo word="wissentschaftliche" find="\b(W|w)issentschaftliche\b" replace="$1issenschaftliche" />
+<Typo word="wissentschaftlichen" find="\b(W|w)issentschaftlichen\b" replace="$1issenschaftlichen" />
+<Typo word="wissentschaftlicher" find="\b(W|w)issentschaftlicher\b" replace="$1issenschaftlicher" />
+<Typo word="wissentschaftliches" find="\b(W|w)issentschaftliches\b" replace="$1issenschaftliches" />
+<Typo word="wisssen" find="\b(W|w)isssen\b" replace="$1issen" />
+<Typo word="wisssenschaft" find="\b(W|w)isssenschaft\b" replace="$1issenschaft" />
+<Typo word="wisssenschaften" find="\b(W|w)isssenschaften\b" replace="$1issenschaften" />
+<Typo word="wißt" find="\b(W|w)ißt\b" replace="$1isst" />
+<Typo word="woduch" find="\b(W|w)oduch\b" replace="$1odurch" />
+<Typo word="wolen" find="\b(W|w)olen\b" replace="$1ollen" />
+<Typo word="wolte" find="\b(W|w)olte\b" replace="$1ollte" />
+<Typo word="wurd" find="\b(W|w)urd\b" replace="$1urde" />
+<Typo word="wurfgeschoß" find="\b(W|w)urfgeschoß\b" replace="$1urfgeschoss" />
+<Typo word="wußte" find="\b(W|w)ußte\b" replace="$1usste" />
+<Typo word="wußtest" find="\b(W|w)ußtest\b" replace="$1usstest" />
+<Typo word="währe" find="\b(W|w)ähre\b" replace="$1äre" />
+<Typo word="wärend" find="\b(W|w)ärend\b" replace="$1ährend" />
+<Typo word="wäßrig" find="\b(W|w)äßrig\b" replace="$1ässrig" />
+<Typo word="wüßten" find="\b(W|w)üßten\b" replace="$1üssten" />
+
+</source>
+
+=== X, Y ===
+
+<source lang="xml">
+
+
+</source>
+
+=== Z ===
+
+<source lang="xml">
+
+<Typo word="Zärlich" find="\b(Z|z)ärliche" replace="$1ärtlich" />
+<Typo word="zerreissen" find="\b(Z|z)erreissen\b" replace="$1erreißen" />
+<Typo word="zielbewußt" find="\b(Z|z)ielbewußt\b" replace="$1ielbewusst" />
+<Typo word="zierat" find="\b(Z|z)ierat\b" replace="$1ierrat" />
+<Typo word="zietraum" find="\b(Z|z)ietraum\b" replace="$1eitraum" />
+<Typo word="zietraumes" find="\b(Z|z)ietraumes\b" replace="$1eitraumes" />
+<Typo word="zietraums" find="\b(Z|z)ietraums\b" replace="$1eitraums" />
+<Typo word="zueineinander" find="\b(Z|z)ueineinander\b" replace="$1ueinander" />
+<Typo word="zugepreßt" find="\b(Z|z)ugepreßt\b" replace="$1ugepresst" />
+<Typo word="zulande" find="\b(Z|z)ulande\b" replace="$1u Lande" />
+<Typo word="zuläßt" find="\b(Z|z)uläßt\b" replace="$1ulässt" />
+<Typo word="zumindestens" find="\b(Z|z)umindestens\b" replace="$1umindest" />
+<Typo word="zunichte machen" find="\b(Z|z)unichte mach" replace="$1unichtemach" />
+<Typo word="zusamen" find="\b(Z|z)usamen\b" replace="$1usammen" />
+<Typo word="zusamenhang" find="\b(Z|z)usamenhang\b" replace="$1usammenhang" />
+<Typo word="zusammengefaßt" find="\b(Z|z)usammengefaßt\b" replace="$1usammengefasst" />
+<Typo word="zusammengepreßt" find="\b(Z|z)usammengepreßt\b" replace="$1usammengepresst" />
+<Typo word="zusammenschliessen" find="\b(Z|z)usammenschliessen\b" replace="$1usammenschließen" />
+<Typo word="zusammensein" find="\b(Z|z)usammensein\b" replace="$1usammen sein" />
+<Typo word="zusammmen" find="\b(Z|z)usammmen\b" replace="$1usammen" />
+<Typo word="zusein" find="\b(Z|z)usein\b" replace="$1u sein" />
+<Typo word="zuviel" find="\b(Z|z)uviel\b" replace="$1u viel" />
+<Typo word="zuwenig" find="\b(Z|z)uwenig\b" replace="$1u wenig" />
+<Typo word="zweitgrösste" find="\b(Z|z)weitgrösste\b" replace="$1weitgrößte" />
+<Typo word="zweitweise" find="\b(Z|z)weitweise\b" replace="$1eitweise" />
+<Typo word="zwischengeschoß" find="\b(Z|z)wischengeschoß\b" replace="$1wischengeschoss" />
+<Typo word="zäheit" find="\b(Z|z)äheit\b" replace="$1ähheit" />
+
+</source>
+
+=== Umlaute ===
+
+<source lang="xml">
+
+<Typo word="änlich" find="\b(Ä|ä)nlich\b" replace="$1hnlich" />
+<Typo word="überasch" find="\b(Ü|ü)berasch" replace="$1berrasch" />
+<Typo word="überhohlt" find="\b(Ü|ü)berhohlt\b" replace="$1berholt" />
+<Typo word="überschwenglich" find="\b(Ü|ü)berschwenglich\b" replace="$1berschwänglich" />
+<Typo word="Überwachungstaat" find="\b(Ü|Ü)berwachungstaat\b" replace="$1berwachungsstaat" />
+
+</source>

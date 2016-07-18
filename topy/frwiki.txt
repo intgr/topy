@@ -1,0 +1,1302 @@
+{{AWB}}
+Cette page contient une liste d'[[expression rationnelle|expressions rationnelles]] appelée ''[[:en:WP:RETF|RegExTypoFix]]'' qui permet de corriger automatiquement un grand nombre de fautes courantes de typographie, d'orthographe ou de grammaire. Elle est principalement utilisée par le logiciel [[Wikipédia:AutoWikiBrowser|AutoWikiBrowser]]. Elle peut aussi être utilisée par d'autres logiciels, soit directement par [[Wikipédia:WPCleaner/Orthographe et typographie|WPCleaner]] ou indirectement par [[Utilisateur:Leag/wikEd|wikEd]], après avoir été convertie dans un format exploitable par le logiciel. Pour wikEd, vous trouverez sur cette [[Utilisateur:EDUCA33E/RegExTypoFix.js|page]] un script [[JavaScript]] équivalent aux expressions rationnelles listées ci-dessous.
+
+Vous pouvez ajouter directement sur cette page de nouvelles expressions rationnelles en vous inspirant par exemple des autres règles. Vous pouvez aussi modifier et améliorer les expressions rationnelles existantes.
+
+Avant toute modification de cette page, prenez note qu'elle sera prise en compte en temps réel par les utilisateurs d'AutoWikiBrowser. Il faut donc éviter les essais de règles qui durent.
+Autre point important, avant d'utiliser ces règles dans vos éditeurs favoris ou d'ajouter de nouvelles règles, veillez toujours à considérer le risque de faux positifs.
+
+'''Vous devriez toujours tester une nouvelle règle avant de l'ajouter à la liste.''' Plusieurs sites Web permettent de tester en ligne les expressions rationnelles, par exemple [http://lumadis.be/regex/index.php celui-ci].
+
+Pour avoir plus d'informations sur l'ajout de règles, pensez à consulter l''''[[Wikipédia:AutoWikiBrowser/Typos/Aide|aide]]''' !
+Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors demander de l'aide en page de discussion ou suggérer l'ajout de nouvelles règles.
+
+== Typographie/Convention ==
+=== Dates ===
+<source lang="xml">
+<Typo word="Date" find="(\[\[|\{\{)([0-9]{1,2})(er)? +(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)(\]\]|\}\})?,? *(\[\[)?([0-9]{4})\]\]" replace="{{date|$2|$4|$7}}" />
+<Typo word="Date" find="\[\[(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)\]\] *\[\[([0-9]{4})\]\]" replace="{{date||$1|$2}}" />
+<Typo word="Date" find="(\[\[|\{\{)([0-9]{1,2})(er)? +(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)(\]\]|\}\}),? *\[\[([0-9]{4}) +(en|dans|aux?|à) +(aéronautique|architecture|astronomie|politique|cinéma|les chemins de fer|les croisades|droit|échecs|économie|informatique|jeu|littérature|musique|musique classique|les parcs d'attractions|science|sociologie|sport|la télévision|théâtre|animation asiatique)(\|[0-9]{4})?\]\]" replace="{{date|$2|$4|$6|$7 $8}}" />
+<Typo word="Date" find="\[\[(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)\]\] *\[\[([0-9]{4}) +(en|aux?|dans|à) +(aéronautique|architecture|astronomie|politique|cinéma|les chemins de fer|les croisades|droit|échecs|économie|informatique|jeu|littérature|musique|musique classique|les parcs d'attractions|science|sociologie|sport|la télévision|théâtre|animation asiatique)(\|[0-9]{4})?\]\]" replace="{{Date||$1|$2|$3 $4}}" />
+</source>
+
+==== Mois ====
+<source lang="xml">
+<Typo word="janvier" find="\b(\d{1,2}) +Janvier\b" replace="$1 janvier" />
+<Typo word="janvier" find="([a-z,;:] ) ?(\[*)Janvier\b(?<!(?:Auguste) ?Janvier)" replace="$1$2janvier" />
+<Typo word="janvier" find="\b[Jj]anv?\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="janvier $1" />
+<Typo word="février" find="\b(\d{1,2}) +[fF][eé]vrier\b" replace="$1 février" />
+<Typo word="février" find="([a-z,;:] ) ?(\[*)[fF][eé]vrier\b" replace="$1$2février" />
+<Typo word="février" find="\b[Ff][eé][vb]\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="février $1" />
+<Typo word="mars" find="\b(\d{1,2}) +Mars\b" replace="$1 mars" />
+<Typo word="mars" find="\b[Mm]ar\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="mars $1" />
+<Typo word="avril" find="\b(\d{1,2}) +Avril\b" replace="$1 avril" />
+<Typo word="avril" find="([a-z,;:] |['’]) ?(\[*)Avril\b" replace="$1$2avril" />
+<Typo word="avril" find="\b[Aa]vr\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="avril $1" />
+<Typo word="mai" find="\b(\d{1,2}) +Mai\b" replace="$1 mai" />
+<Typo word="mai" find="([a-z,;:] ) ?(\[*)Mai\b" replace="$1$2mai" />
+<Typo word="juin" find="\b(\d{1,2}) +Juin\b" replace="$1 juin" />
+<Typo word="juin" find="([a-z,;:] ) ?(\[*)Juin\b" replace="$1$2juin" />
+<Typo word="juillet" find="\b(\d{1,2}) +Juillet\b" replace="$1 juillet" />
+<Typo word="juillet" find="([a-z,;:] ) ?(\[*)Juillet\b(?<!(?:[Mm]onarchie de|[Rr]évolution de) ?Juillet)" replace="$1$2juillet" />
+<Typo word="juillet" find="\b[Jj]uil?\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="juillet $1" />
+<Typo word="août" find="\b(\d{1,2}) +Août\b" replace="$1 août" />
+<Typo word="août" find="([a-z,;:] |['’]) ?(\[*)Août\b" replace="$1$2août" />
+<Typo word="août" find="\b[Aa]oû.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="août $1" />
+<Typo word="aout" find="\b(\d{1,2}) +Aout\b" replace="$1 aout" />
+<Typo word="aout" find="([a-z,;:] |['’]) ?(\[*)Aout\b" replace="$1$2aout" />
+<Typo word="septembre" find="\b(\d{1,2}) +Septembre\b" replace="$1 septembre" />
+<Typo word="septembre" find="([a-z,;:] ) ?(\[*)Septembre\b" replace="$1$2septembre" />
+<Typo word="septembre" find="\b[Ss]ept?\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="septembre $1" />
+<Typo word="octobre" find="\b(\d{1,2}) +Octobre\b" replace="$1 octobre" />
+<Typo word="octobre" find="([a-z,;:] |['’]) ?(\[*)Octobre\b" replace="$1$2octobre" />
+<Typo word="octobre" find="\[Oo]ct\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="octobre $1" />
+<Typo word="novembre" find="\b(\d{1,2}) +Novembre\b" replace="$1 novembre" />
+<Typo word="novembre" find="([a-z,;:] ) ?(\[*)Novembre\b" replace="$1$2novembre" />
+<Typo word="novembre" find="\b[Nn]ov\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="novembre $1" />
+<Typo word="décembre" find="\b(\d{1,2}) +[dD][ée]cembre\b" replace="$1 décembre" />
+<Typo word="décembre" find="([a-z,;:] ) ?(\[*)[dD][ée]cembre\b" replace="$1$2décembre" />
+<Typo word="décembre" find="\b[Dd][eé]c\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="décembre $1" />
+<Typo word="1er du mois" find="\b1 +(janvier|février|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|décembre)\b" replace="{{1er}} $1" />
+</source>
+
+==== Années ====
+<source lang="xml">
+<Typo word="Années 19?0" find="\b(a|A)nnées +([1-9]0)\b" replace="$1nnées 19$2" />
+</source>
+
+==== Siècles ====
+<source lang="xml">
+<Typo word="Ier siècle av. J.-C." find="\b(?:I|1) *(?:<sup(?: +class=\"exposant\")?>)?(?:i?[éeè°](?:me)?|er)(?:</sup>)? *[Ss](?:i[eèé]cle|\.) +av(?:ant|\.) +J(?:ésus|\.)?[- ]?C(?:hrist\b|\.|\b)" replace="{{-s-|I|er}}" />
+<Typo word="Siècle av. J.-C." find="\b([12]?\d) *(?:<sup(?: +class=\"exposant\")?>)?i?[éeè°](?:me)?(?:</sup>)? *[Ss](?:i[eèé]cle|\.) +av(?:ant|\.) +J(?:ésus|\.)?[- ]?C(?:hrist\b|\.|\b)" replace="{{-s-|{{subst:Nombre en romain|$1|subst=subst:}}|e}}" />
+<Typo word="Siècle av. J.-C." find="\b([XVI]+) *(?:<sup(?: +class=\"exposant\")?>)?i?[éeè°](?:me)?(?:</sup>)? *[Ss](?:i[eèé]cle|\.) +av(?:ant|\.) +J(?:ésus|\.)?[- ]?C(?:hrist\b|\.|\b)" replace="{{-s-|$1|e}}" />
+<Typo word="Ier siècle" find="\b(?:I|1) *(?:<sup(?: +class=\"exposant\")?>)?(?:i?[éeè°](?:me)?|er)(?:</sup>)? *[Ss](?:i[eèé]cle\b|\.)" replace="{{s-|I|er}}" />
+<Typo word="Siècle" find="\b([12]?\d) *(?:<sup(?: +class=\"exposant\")?>)?i?[éeè°](?:me)?(?:</sup>)? *[Ss](?:i[eèé]cle\b|\.)" replace="{{s-|{{subst:Nombre en romain|$1|subst=subst:}}|e}}" />
+<Typo word="Siècle" find="\b([XVI]+) *(?:<sup(?: +class=\"exposant\")?>)?i?[éeè°](?:me)?(?:</sup>)? *[Ss](?:i[eèé]cle\b|\.)" replace="{{s-|$1|e}}" />
+<Typo word="ap. J.-C." find="\bap\. +J\.[- ]?C\." replace="ap. J.-C." />
+</source>
+
+=== Phonétique ===
+<source lang="xml">
+<Typo word="d͡z" find="ʣ" replace="d͡z" />
+<Typo word="d͡ʒ" find="ʤ" replace="d͡ʒ" />
+<Typo word="d͡ʑ" find="ʥ" replace="d͡ʑ" />
+<Typo word="t͡s" find="ʦ" replace="t͡s" />
+<Typo word="t͡ʃ" find="ʧ" replace="t͡ʃ" />
+<Typo word="t͡ɕ" find="ʨ" replace="t͡ɕ" />
+</source>
+
+=== Typographie ===
+<source lang="xml">
+<Type word="n° non suivi d'un chiffre" find="\b(N|n)°([^0-9][^0-9])\b" replace="$1{{o}}$2" />
+<Type word="points de suspension" find="\betc(\.\.\.*|…)\b" replace="etc." />
+<Type word="Virgule double" find="\b(\,\,)\b" replace="," />
+</source>
+
+=== Unités ===
+<source lang="xml">
+<Type word="surface - 2 en exposant" find="\b(G|M|k|K|h|da|d|c|m|u|µ|n|p)?m[²2]\b" replace="$1m{{2}}" />
+<Type word="volume - 3 en exposant" find="\b(G|M|k|K|h|da|d|c|m|u|µ|n|p)?m[³3]\b" replace="$1m{{3}}" />
+<Typo word="préfixe kilo - k au lieu de K" find="\b(?:k|K)(m|W|g|V|A)\b" replace="k$1" />
+</source>
+
+== Syntaxe Wiki ==  <!-- ATTENTION : l'ordre des regexp dépend des interrelations, PAS alphabétique -->
+<source lang="xml">
+<Typo word="1er" find="\b (1|I) ?i?er\b" replace=" {{$1er}}" />
+<Typo word="1re" find="\b (1|I) ?(re|i?ere|i?ère|i?ére)\b" replace=" {{$1re}}" />
+<Typo word="ordinal" find="\b ([0-9]{1,3}) ?(e|é|è|i?eme|i?ème|i?éme) \b" replace=" {{$1e}} " />
+<Typo word="{{e}}" find="<sup>e</sup>" replace="{{e}}" />
+<Typo word="espace insécable + ponctuation" find="&nbsp;(:|;|\!|\?|»)" replace=" $1" />
+<Typo word="espaces multiples + ponctuation" find="  +(:|;|\!|\?|»)" replace=" $1" />
+<Typo word="espace + espace insécable" find=" &nbsp;" replace=" " />
+<Typo word="espace insécable + espace" find="&nbsp; " replace=" " />
+<Typo word="guillemet ouvrant" find="«&nbsp;" replace="« " />
+<Typo word="guillemet fermant" find="&nbsp;»" replace=" »" />
+<Typo word="Catégorie" find="\[\s*\[[ _]*(?:(:)[ _]*)?(?:fr[ _]*:[ _]*)?[Cc]at[éèêe]gor(?:ie|y)[ _]*:[ _]*(.*[^\s*\]]+)\s*\]\s*\]" replace="[[$1Catégorie:$2]]" />
+<Typo word="exp" find="<sup>(-?[0-9]+\+?)</sup>" replace="{{exp|$1}}" />
+<Typo word="vitesse" find="(k?m)\.([sh])-([1-4])" replace="$1.$2<sup>-$3</sup>" />
+<Typo word="vitesse" find="(k?m)\/([sh])([1-4])" replace="$1.$2<sup>-$3</sup>" />
+<Typo word="vitesse" find="(k?m)\/([sh])<sup>([1-4])</sup>" replace="$1.$2<sup>-$3</sup>" />
+<Typo word="Image" find="\[\[[ _]*(?:(:)[ _]*)?(?:fr[ _]*:[ _]*)?[Ii]mage[ _]*:[ _]*" replace="[[$1Image:" />
+<Typo word="Clr" find="<[Bb][Rr] +[cC]lear *[=:] *\"?(left|right)\"? */?>" replace="{{Clr|$1}}" />
+<Typo word="Clr" find="<[Bb][Rr] +[cC]lear *[=:] *\"?(both|all)\"? */?>" replace="{{Clr}}" />
+<Typo word="<br />" find="</[Bb][Rr] ?>" replace="<br />" />​
+<Typo word="lang" find="{{lang\|([^\|]{2})\|('+)([^']+)('+)}}" replace="$2{{lang|$1|$3}}$4" />
+<Typo word="Coord" find="(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\'\′] *(N|S) *,? *(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\'\′] *(E|W)" replace="{{Coord|$1$2|$3$4|$5|$6$7|$8$9|$10}}" />
+<Typo word="Coord" find="(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\.,] *([0-9]{1,2}) *[\'\′] *(N|S) *,? *(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\.,] *([0-9]{1,2}) *[\'\′] *(E|W)" replace="{{Coord|$1$2|$3$4.$5|$6|$7$8|$9$10.$11|$12}}" />
+<Typo word="Coord" find="(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\'\′] *(-?) *([0-9]{1,2}) *[\"\″] *(N|S) *,? *(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\'\′] *(-?) *([0-9]{1,2}) *[\"\″] *(E|W)" replace="{{Coord|$1$2|$3$4|$5$6|$7|$8$9|$10$11|$12$13|$14}}" />
+<Typo word="n°s" find="\b(n°|nº|n˚|n{{o}}|N°|Nº|N˚|N{{o}})s(&nbsp;| )*([0-9–-]+)\b" replace="{{nos|$3}}" />
+<Typo word="n°" find="\b(n°|nº|n˚|n{{o}}|N°|Nº|N˚|№|N{{o}})(&nbsp;| )*([0-9–-]+)\b" replace="{{n°|$3}}" />
+<Typo word="p." find="\b[Pp]p?\.?(&nbsp;| +)?([0-9][0-9–-]*)\b" replace="{{p.|$2}}" />
+<Typo word="titre section" find="\n(==={0,3})(?: *)([^\n=]+)(?: *)\1(?: *)\n" replace="\n$1 $2 $1\n" />
+<Typo word="ref,ref" find="(</ref>|<ref[^/]*/>) *(<sup>)?[,;\.]?(</sup>)? *<ref\b" replace="$1{{,}}<ref" />
+<Typo word="ref vs ponct" find="(\.|\.{3}|,| *;| *:| *\!| *\?)? *(<ref[^>]*>[^<]*</ref>|<ref[^/]*/>)({{,}}<ref[^>]*>[^<]*</ref>|{{,}}<ref[^/]*/>)?({{,}}<ref[^>]*>[^<]*</ref>|{{,}}<ref[^/]*/>)?({{,}}<ref[^>]*>[^<]*</ref>|{{,}}<ref[^/]*/>)?({{,}}<ref[^>]*>[^<]*</ref>|{{,}}<ref[^/]*/>)?" replace="$2$3$4$5$6$1" />
+<Typo word="</ref>.." find="(</ref>|<ref[^/]*/>)\.{2}([^\.])" replace="$1.$2" />
+<Typo word="espace avant ref" find="([^|]) <ref" replace="$1<ref" />
+<Typo word="ruby" find="<ruby><rb>([^<]+)</rb><rt>([^<]+)</rt></ruby>" replace="{{Ruby|$1|$2}}" />
+<Typo word="Unité monnaie" find="([0-9]+)(&nbsp;| )*([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(€|\$|euros?|dollars?)\b" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité monnaie" find="([0-9]+)(&nbsp;| )*([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(€|\$|euros?|dollars?)\b" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité monnaie" find="(¤|₳|฿|¢|₡|₵|₢|₫|€|ƒ|₣|₲|₭|£|₤|₥|₦|₱|₧|₨|\$|₮|₩|¥|Ƶ|₯|₴|₪|₠|₰)+([0-9]+)(&nbsp;| )*([0-9]+)?[.,]([0-9]+)?( 000| milliers?| millions?| milliards?| billions?| billiards?)?\b" replace="{{unité|$2$4.$5$6|$1}}" />
+<Typo word="Unité monnaie" find="(¤|₳|฿|¢|₡|₵|₢|₫|€|ƒ|₣|₲|₭|£|₤|₥|₦|₱|₧|₨|\$|₮|₩|¥|Ƶ|₯|₴|₪|₠|₰)+([0-9]+)( 000| milliers?| millions?| milliards?| billions?| billiards?)?\b" replace="{{unité|$2$3|$1}}" />
+<Typo word="Unité température" find="(-?)([0-9]+)(&nbsp;| )*([0-9]*)[.,]([0-9]+)(&nbsp;| )*°(C|F)" replace="{{unité|$1$2$4.$5|°$7}}" />
+<Typo word="Unité température" find="(-?)([0-9]+)(&nbsp;| )*([0-9]*)(&nbsp;| )*([0-9]*)(&nbsp;| )*°(C|F)" replace="{{unité|$1$2$4$6|°$8}}" />
+<Typo word="Unité octet" find="([0-9]+)(&nbsp;| )*([0-9]*)[.,]([0-9]+)(&nbsp;| )*(octets?|o|ko|Kio|Mo|Mio|Go|Gio|To|Tio|Po|Pio|Eo|Eio)\b" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité octet" find="([0-9]+)(&nbsp;| )*([0-9]*)(&nbsp;| )*([0-9]*)(&nbsp;| )*(octets?|o|ko|Kio|Mo|Mio|Go|Gio|To|Tio|Po|Pio|Eo|Eio)\b" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité gramme" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(grammes?|g|kg|mg|t|tonnes?)\b" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité gramme" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(grammes?|g|kg|mg|t|tonnes?)\b" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité Hertz" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Hh]ertz|hz|Hz|kHz|MHz|GHz)\b" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité Hertz" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Hh]ertz|hz|Hz|kHz|MHz|GHz)\b" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité Volt" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Vv]olts?|V|mV|kV|MV|GV)\b" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité Volt" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Vv]olts?|V|mV|kV|MV|GV)\b" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité Ampère" find="(?<![A-Z0-9]-?)([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Aa]mpères?|A|mA|µA)\b(?!-)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité Ampère" find="(?<![A-Z0-9]-?)([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Aa]mpères?|A|mA|µA)\b(?!-)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité vitesse" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm)/(s|h)\b" replace="{{unité|$1$3.$4|$6/$7}}" />
+<Typo word="Unité vitesse" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm)/(s|h)\b" replace="{{unité|$1$3$5|$7/$8}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?([2-9])(</sup>|}})?" replace="{{unité|$1$3.$4|$6|$8}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?([2-9])(</sup>|}})?" replace="{{unité|$1$3$5|$7|$9}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?²(</sup>|}})?" replace="{{unité|$1$3.$4|$6|2}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?²(</sup>|}})?" replace="{{unité|$1$3$5|$7|2}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?³(</sup>|}})?" replace="{{unité|$1$3.$4|$6|3}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?³(</sup>|}})?" replace="{{unité|$1$3$5|$7|3}}" />
+<Typo word="Unité mètre" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(mètres?|m|km|mm|cm)\b" replace="$1{{unité|$2$4.$5|$7}}" />
+<Typo word="Unité mètre" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(mètres?|m|km|mm|cm)\b" replace="$1{{unité|$2$4$6|$8}}" />
+<Typo word="Unité pourmille" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?‰" replace="$1{{unité|$2$4.$5|‰}}" />
+<Typo word="Unité pourmille" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?‰" replace="$1{{unité|$2$4$6|‰}}" />
+<Typo word="formatnum" find="( |\n|\(|\|)([0-9]{1,3})( |&nbsp;)([0-9]{3})( |&nbsp;)([0-9]{3})( |&nbsp;)([0-9]{3})( |\n|\))" replace="$1{{formatnum:$2$4$6$8}}$9" />
+<Typo word="formatnum" find="( |\n|\(|\|)([0-9]{1,3})( |&nbsp;)([0-9]{3})( |&nbsp;)([0-9]{3})( |\n|\))" replace="$1{{formatnum:$2$4$6}}$7" />
+<Typo word="formatnum" find="( |\n|\(|\|)([0-9]{1,3})( |&nbsp;)([0-9]{3})( |\n|\))" replace="$1{{formatnum:$2$4}}$5" />
+</source>
+
+== Toponymie ==
+<source lang="xml">
+<Typo word="Abkhazie" find="\b[Aa][bhk]*azie\b" replace="Abkhazie" />
+<Typo word="Afghanistan" find="\b[Aa]fgh?ann?istan\b" replace="Afghanistan" />
+<Typo word="Albanie" find="\b[Aa]ll?bann?ie\b" replace="Albanie" />
+<Typo word="Algérie" find="\b[Aa]llg[eéèêë]rie\b" replace="Algérie" />
+<Typo word="Allemagne" find="\b[Aa]ll?emagne\b" replace="Allemagne" />
+<Typo word="Andorre" find="\b[Aa]ndorr?e\b" replace="Andorre" />
+<Typo word="Angleterre" find="\b[Aa]ngleterr?e\b" replace="Angleterre" />
+<Typo word="Angola" find="\b[Aa]ngoll?a\b" replace="Angola" />
+<Typo word="Arménie" find="\b[Aa]rm[eéèêë]nie\b" replace="Arménie" />
+<Typo word="Australie" find="\b[Aa]ustrall?ie\b" replace="Australie" />
+<Typo word="Autriche" find="\bautriche\b" replace="Autriche" />
+<Typo word="Azerbaïdjan" find="\b[aA]d?zz?erba[iï]d?jj?an\b" replace="Azerbaïdjan" />
+<Typo word="Bahamas" find="\bbahamas\b" replace="Bahamas" />
+<Typo word="Bahreïn" find="\b[bB]ahre[iï]n\b" replace="Bahreïn" />
+<Typo word="Bangladesh" find="\bbangladesh\b" replace="Bangladesh" />
+<Typo word="Belgique" find="\b[bB][eéèêë]lgique\b" replace="Belgique" />
+<Typo word="Belize" find="\b[bB][eéèêë]ll?ize\b" replace="Belize" />
+<Typo word="Benelux" find="\b[bB][eéèêë]n[eéèêë]lux\b" replace="Benelux" />
+<Typo word="Birmanie" find="\b[bB]irmann?ie\b" replace="Birmanie" />
+<Typo word="Bolivie" find="\b[bB]oll?ivie\b" replace="Bolivie" />
+<Typo word="Bosnie-et-Herzégovine" find="\b[bB]osnie[ -]et[ -](h|H)[éeèêë]r[sz][éeèêë]gg?ovine\b" replace="Bosnie-et-Herzégovine" />
+<Typo word="Bosnie-Herzégovine" find="\b[bB]osnie[ -](h|H)[éeèêë]r[sz][éeèêë]gg?ovine\b" replace="Bosnie-Herzégovine" />
+<Typo word="Botswana" find="\b[bB]os?ts?wann?a\b" replace="Botswana" />
+<Typo word="Brésil" find="\b[bB]r[eé][sz]il\b" replace="Brésil" />
+<Typo word="Bulgarie" find="\b[bB]ulgarr?ie\b" replace="Bulgarie" />
+<Typo word="Burkina" find="\b[bB]urkinn?a\b" replace="Burkina" />
+<Typo word="Burkina Faso" find="\b[bB]urkinn?a[ -](f|F)ass?o\b" replace="Burkina Faso" />
+<Typo word="Cambodge" find="\b[Cc]a[mn]bodge\b" replace="Cambodge" />
+<Typo word="Cameroun" find="\b[Cc]amm?err?oun\b" replace="Cameroun" />
+<Typo word="Canada" find="\b[Cc]ann?ada\b" replace="Canada" />
+<Typo word="Caraïbes" find="\b(C|c)arr?a[iïî]bb?e(s?)\b" replace="$1araïbe$2" />
+<Typo word="Ceylan" find="\bceylan\b" replace="Ceylan" />
+<Typo word="Cisjordanie" find="\b[Cc]isjordann?ie?\b" replace="Cisjordanie" />
+<Typo word="Colombie" find="\b[Cc]oll?o[mn]bie?\b" replace="Colombie" />
+<Typo word="Comores" find="\b[Cc]omm?orr?es?\b" replace="Comores" />
+<Typo word="Congo" find="\bcongo\b" replace="Congo" />
+<Typo word="Corée" find="\b[CcKk]orr?[eéèêë]e\b" replace="Corée" />
+<Typo word="Costa Rica" find="\b[cC]osta[ -][rR]ica\b" replace="Costa Rica" />
+<Typo word="Côte d'Ivoire" find="\b[cC][oô]tt?es?[ -]d('|’)[iI]vo[iïî]rr?es?\b" replace="Côte d$1Ivoire" />
+<Typo word="Croatie" find="\bcroatie\b" replace="Croatie" />
+<Typo word="Danemark" find="\b[Dd]ann?emm?arc?k\b" replace="Danemark" />
+<Typo word="Djibouti" find="\b[Dd]jibb?outt?ie?s?\b" replace="Djibouti" />
+<Typo word="Dominique" find="\b[Dd]omm?inn?ique\b" replace="Dominique" />
+<Typo word="Écosse" find="\b[Eeé]cosse\b" replace="Écosse" />
+<Typo word="Égypte" find="\b[Eeé]gypte\b" replace="Égypte" />
+<Typo word="Équateur" find="\b[EÉ]quatt?eur\b" replace="Équateur" />
+<Typo word="Émirats arabes unis" find="\b[EÉeé]mm?irr?at?e?s?[ -][Aa]rr?abb?es?[ -][Uu]nn?is?\b" replace="Émirats arabes unis" />
+<Typo word="Érythrée" find="\b[EÉeé]rr?yh?tt?h?r[ée]e?\b" replace="Érythrée" />
+<Typo word="Espagne" find="\bespagne\b" replace="Espagne" />
+<Typo word="Estonie" find="\b[EÉÈeéè]stonn?ie\b" replace="Estonie" />
+<Typo word="États-Unis" find="\b[ÉEeé]tats?(?:-|_| +)[Uu]nis?\b" replace="États-Unis" />
+<Typo word="Éthiopie" find="\b[Eeé]thiopie\b" replace="Éthiopie" />
+<Typo word="Fidji" find="\bfidji\b" replace="Fidji" />
+<Typo word="Finlande" find="\bfinlande\b" replace="Finlande" />
+<Typo word="France" find="\bfrance\b" replace="France" />
+<Typo word="Gabon" find="\bgabon\b" replace="Gabon" />
+<Typo word="Gambie" find="\bgambie\b" replace="Gambie" />
+<Typo word="Géorgie" find="\bgéorgie\b" replace="Géorgie" />
+<Typo word="Ghana" find="\bghana\b" replace="Ghana" />
+<Typo word="Gibraltar" find="\bgibraltar\b" replace="Gibraltar" />
+<Typo word="Grande-Bretagne" find="\b[gG]rande[ -][bB]retagne\b" replace="Grande-Bretagne" />
+<Typo word="Grèce" find="\bgrèce\b" replace="Grèce" />
+<Typo word="Groenland" find="\b[gG]r(oe|oë|ø)nlande?\b" replace="Gr$1nland" />
+<Typo word="Guatemala" find="\b[Gg]u?att?(e|é)mm?all?a\b" replace="Guat$1mala" />
+<Typo word="Guinée-Bissau" find="\b[Gg]uinn?ée?[ -][bB]is[seaou]*\b" replace="Guinée-Bissau" />
+<Typo word="Guyana" find="\bguyana\b" replace="Guyana" />
+<Typo word="Haute-Volta" find="\b[hH]aute[ -][vV]olta\b" replace="Haute-Volta" />
+<Typo word="Honduras" find="\b[hH]o[mn]durr?as?\b" replace="Honduras" />
+<Typo word="Hongrie" find="\b[hH]ongrie?\b" replace="Hongrie" />
+<Typo word="Île-de-France" find="\b[iIîÎ]le[ -]de[ -][fF]rance\b" replace="Île-de-France" />
+<Typo word="Indochine" find="\b[iI]ndochinn?e\b" replace="Indochine" />
+<Typo word="Irlande/Islande" find="\bi([rs])lande\b" replace="I$1lande" />
+<Typo word="Israël" find="\b[iI]sra[éeèêë]l\b" replace="Israël" />
+<Typo word="Italie" find="\bitalie\b" replace="Italie" />
+<Typo word="Itchkérie" find="\b[iI]t?chk[éeèëê]rr?ie?\b" replace="Itchkérie" />
+<Typo word="Jamaïque" find="\b[jJ]amm?a[iï]que\b" replace="Jamaïque" />
+<Typo word="Jordanie" find="\b[jJ]ordann?ie?\b" replace="Jordanie" />
+<Typo word="Kazakhstan" find="\b[kK]a[sz]z?ac?h?kh?stan\b" replace="Kazakhstan" />
+<Typo word="Kenya" find="\b[kK]enn?ya\b" replace="Kenya" />
+<Typo word="Kirghizistan" find="\b[kK]ih?rh?gg?h?i?[sz]i?h?s?tan\b" replace="Kirghizistan" />
+<Typo word="Kiribati" find="\b[kK]irr?ibb?h?att?h?i\b" replace="Kiribati" />
+<Typo word="Kosovo" find="\bkos(s?)ovo\b" replace="Kos$1ovo" />
+<Typo word="Koweït" find="\b[kK]oh?w[éeèëê][iîï]th?\b" replace="Koweït" />
+<Typo word="Kurdistan" find="\b[kK]urdh?isth?an\b" replace="Kurdistan" />
+<Typo word="Laos" find="\blaos\b" replace="Laos" />
+<Typo word="Lesotho" find="\b[lL]e[sz]ott?h?o\b" replace="Lesotho" />
+<Typo word="Lettonie" find="\b[lL]ett?onn?ie?\b" replace="Lettonie" />
+<Typo word="Liban" find="\b[lL]ibb?an\b" replace="Liban" />
+<Typo word="Libéria" find="\b[lL]ibb?(é|e)rr?ia\b" replace="Lib$1ria" />
+<Typo word="Libye" find="\b[Ll][iy]b[iy]e\b" replace="Libye" />
+<Typo word="Liechtenstein" find="\b[Ll]ie?chtens?th?[ae]i?n\b" replace="Liechtenstein" />
+<Typo word="Lituanie" find="\b[Ll]itt?uann?ie?\b" replace="Lituanie" />
+<Typo word="Luxembourg" find="\bluxembourg\b" replace="Luxembourg" />
+<Typo word="Macao" find="\bmacao\b" replace="Macao" />
+<Typo word="Madagascar" find="\b[mM]add?agg?ascar\b" replace="Madagascar" />
+<Typo word="Malaisie" find="\b[mM]all?aisie\b" replace="Malaisie" />
+<Typo word="Malawi" find="\b[mM]all?awie?\b" replace="Malawi" />
+<Typo word="Maldives" find="\b[mM]aldives?\b" replace="Maldives" />
+<Typo word="Maroc" find="\bmaroc\b" replace="Maroc" />
+<Typo word="Maurice" find="\bmaurice\b" replace="Maurice" />
+<Typo word="Mauritanie" find="\b[mM]aurr?itt?ann?ie?\b" replace="Mauritanie" />
+<Typo word="Mayotte" find="\bmayotte\b" replace="Mayotte" />
+<Typo word="Mexique" find="\bmexique\b" replace="Mexique" />
+<Typo word="Micronésie" find="\b[mM]icronn?[éeèëê]sie?\b" replace="Micronésie" />
+<Typo word="Moldavie" find="\b[mM]oldavie?\b" replace="Moldavie" />
+<Typo word="Moldova" find="\bmoldova\b" replace="Moldova" />
+<Typo word="Mongolie" find="\b[Mm]ongoll?ie?\b" replace="Mongolie" />
+<Typo word="Monténégro" find="\b[Mm]o[mn]t[éeèëê]nn?[éeèëê]gros?\b" replace="Monténégro" />
+<Typo word="Mozambique" find="\b[Mm]o[sz][ae][mn]biques?\b" replace="Mozambique" />
+<Typo word="Myanmar" find="\b[Mm]ya[mn][mn]ar\b" replace="Myanmar" />
+<Typo word="Nauru" find="\bnauru\b" replace="Nauru" />
+<Typo word="Népal" find="\bnépal\b" replace="Népal" />
+<Typo word="Nicaragua" find="\b[nN]icc?arr?ag[uü]?[aä]s?\b" replace="Nicaragua" />
+<Typo word="Niger" find="\bniger\b" replace="Niger" />
+<Typo word="Nigéria" find="\bnig(é|e)ria\b" replace="Nig$1ria" />
+<Typo word="Norvège" find="\b[nN]orv[éeèêë]ge\b" replace="Norvège" />
+<Typo word="Nouvelle-Calédonie" find="\b[nN]ouvell?es?[ -][cC]all[éeèêë]donn?ie?\b" replace="Nouvelle-Calédonie" />
+<Typo word="Nouvelle-Zélande" find="\b[nN]ouvell?es?[ -][zZ][éeèêë]ll?[ae]ndes?\b" replace="Nouvelle-Zélande" />
+<Typo word="Oman" find="\boman\b" replace="Oman" />
+<Typo word="Ossétie" find="\b[Oo](?:c|ss?)étie?\b" replace="Ossétie" />
+<Typo word="Ouganda" find="\bouganda\b" replace="Ouganda" />
+<Typo word="Ouzbékistan" find="\b[oO]u?[sz]b[éeèêë][chk]*is?ts?[ae]n\b" replace="Ouzbékistan" />
+<Typo word="Pakistan" find="\b(p|P)ac?kistan\b" replace="Pakistan" />
+<Typo word="Palaos" find="\bpala(os|u)\b" replace="Pala$1" />
+<Typo word="Palestine" find="\b[pP]all?estinn?e" replace="Palestine" />
+<Typo word="Papouasie-Nouvelle-Guinée" find="\b[pP]app?ouh?a[sz]ie?[ -][nN]ouvell?e[ -][gG]u?inn?ée?\b" replace="Papouasie-Nouvelle-Guinée" />
+<Typo word="Paraguay" find="\b[pP]arr?ag[uü?][aä]y\b" replace="Paraguay" />
+<Typo word="Pays-Bas" find="\b[pP]ays[ -][bB]as\b" replace="Pays-Bas" />
+<Typo word="Pays basque" find="\b[pP]ays[ -][bB]asque\b" replace="Pays basque" />
+<Typo word="Pérou" find="\b[pP][eé]rou\b" replace="Pérou" />
+<Typo word="Philippines" find="\b[Pp]hill?ipp?inn?es?\b" replace="Philippines" />
+<Typo word="Pologne" find="\b[Pp]oll?ogne\b" replace="Pologne" />
+<Typo word="Porto Rico" find="\b[Pp]orto[ -][rR]icc?o\b" replace="Porto Rico" />
+<Typo word="Portugal" find="\bportugal\b" replace="Portugal" />
+<Typo word="Puntland" find="\bpuntland\b" replace="Puntland" />
+<Typo word="Qatar" find="\b[Qq]u?atar\b" replace="Qatar" />
+<Typo word="Québec" find="\b[Qq]u[eéèêë]bec\b" replace="Québec" />
+<Typo word="Reykjavik" find="\b[Rr]eykjavík\b" replace="Reykjavik" />
+<Typo word="Roumanie" find="\b[rR]oumm?ann?ie?\b" replace="Roumanie" />
+<Typo word="Royaume-Uni" find="\b[rR]oyaume-[uU]ni\b" replace="Royaume-Uni" />
+<Typo word="Russie" find="\brussie\b" replace="Russie" />
+<Typo word="Rwanda" find="\b[rR]wa[mn]da\b" replace="Rwanda" />
+<Typo word="Sahara occidental" find="\b[sS]ahara[ -][oO]cc?idd?ental\b" replace="Sahara occidental" />
+<Typo word="Salomon" find="\bsalomon\b" replace="Salomon" />
+<Typo word="Salvador" find="\bsalvador\b" replace="Salvador" />
+<Typo word="Samoa" find="\bsamoa\b" replace="Samoa" />
+<Typo word="Sénégal" find="\bsénégal\b" replace="Sénégal" />
+<Typo word="Serbie" find="\bserbie\b" replace="Serbie" />
+<Typo word="Seychelles" find="\b[sS][éeèêë][iy]chell?es?\b" replace="Seychelles" />
+<Typo word="Sierra Leone" find="\b[sS]ierr?a[ -][lL][éeèêë]onn?e\b" replace="Sierra Leone" />
+<Typo word="Singapour" find="\bsingapour\b" replace="Singapour" />
+<Typo word="Slovaquie/Slovénie" find="\bslov(aquie|énie)\b" replace="Slov$1" />
+<Typo word="Sri Lanka" find="\b[Ss]ri[ -][lL]a[mn]c?ka\b" replace="Sri Lanka" />
+<Typo word="Somaliland" find="\b[sS]omm?all?ill?and\b" replace="Somaliland" />
+<Typo word="Suède" find="\b[Ss]u[eéèêë]de\b" replace="Suède" />
+<Typo word="Suriname" find="\b[Ss]urr?inn?amm?(e?)\b" replace="Surinam$1" />
+<Typo word="Swaziland" find="\b[Ss]wazz?ill?ande?\b" replace="Swaziland" />
+<Typo word="Syrie" find="\bsyrie\b" replace="Syrie" />
+<Typo word="Tadjikistan" find="\b[Tt]a[dj]*i[chk]*i[sth]*an\b" replace="Tadjikistan" />
+<Typo word="Ta(i|ï)wan" find="\bta(i|ï)wan\b" replace="Ta$1wan" />
+<Typo word="Tanzanie" find="\b[Tt]anzanie?\b" replace="Tanzanie" />
+<Typo word="Tchad" find="\btchad\b" replace="Tchad" />
+<Typo word="Tchétchénie" find="\b[tT]ch[eéèêë]t?ch[eéèêë]nn?ie?\b" replace="Tchétchénie" />
+<Typo word="Tchécoslovaquie" find="\b[tT]ch[eéèêë][ck]*oslovaquie?\b" replace="Tchécoslovaquie" />
+<Typo word="Tchéquie" find="\b[tT]ch[eéèêë](?:[chk]*|qu)ie?\b" replace="Tchéquie" /> 
+<Typo word="Thaïlande" find="\b[Tt]h?a[iï]ll?ande\b" replace="Thaïlande" />
+<Typo word="Timor" find="\btimor\b" replace="Timor" />
+<Typo word="Togo" find="\btogo\b" replace="Togo" />
+<Typo word="Transnistrie" find="\b[tT]ransi?nn?i?strie?\b" replace="Transnistrie" />
+<Typo word="Trinité-et-Tobago" find="\b[tT]rinn?i(té|dad)[ -]et[ -][tT]obb?agg?o\b" replace="Trini$1-et-Tobago" />
+<Typo word="Tunisie" find="\btunisie\b" replace="Tunisie" />
+<Typo word="Turkménistan" find="\b[Tt]urc?km[eéèêë]?nis?tan\b" replace="Turkménistan" />
+<Typo word="Turquie" find="\b[Tt]urc?quie\b" replace="Turquie" />
+<Typo word="Tuvalu" find="\btuvalu\b" replace="Tuvalu" />
+<Typo word="Ukraine" find="\bukraine\b" replace="Ukraine" />
+<Typo word="Uruguay" find="\b[uU]rr?ugg?u?a[iïy]\b" replace="Uruguay" />
+<Typo word="Vanuatu" find="\b[vV]ann?uatt?u\b" replace="Vanuatu" />
+<Typo word="Vatican" find="\b[vV]att?icc?an\b" replace="Vatican" />
+<Typo word="Venezuela" find="\b[vV][eéè]nn?[eéè]zu[eéè]ll?a\b" replace="Venezuela" />
+<Typo word="Viêt Nam" find="\b[Vv]i[eéèêë]t(?:-| *)[Nn]am\b" replace="Viêt Nam" />
+<Typo word="Wallis-et-Futuna" find="\b[wW]all?is[ -]et[ -][fF]utt?unn?a\b" replace="Wallis-et-Futuna" />
+<Typo word="Yémen" find="\b[yY][eéèêë]mm?en\b" replace="Yémen" />
+<Typo word="Zambie" find="\b[zZ]a[mn]bie\b" replace="Zambie" />
+<Typo word="Zimbabwe" find="\b[zZ]i[mn]bab(?:w|ou)[eé]e?\b" replace="Zimbabwe" />
+
+<Typo word="Afrique" find="\b[Aa]ff?rique\b" replace="Afrique" />
+<Typo word="Afrique du Sud" find="Afrique du sud" replace="Afrique du Sud" />
+<Typo word="Amérique" find="\b[Aa]m[eéèêë]rique(s?)\b" replace="Amérique$1" />
+<Typo word="Amérique du Sud" find="Amérique du sud" replace="Amérique du Sud" />
+<Typo word="Amérique du Nord" find="Amérique du nord" replace="Amérique du Nord" />
+<Typo word="Antarctique" find="\b([Aa]nta|[Aa])rtique(s?)\b" replace="$1rctique$2" />
+<Typo word="Asie" find="\b[Aa]sie\b" replace="Asie" />
+<Typo word="Asie du Sud-Est" find="Asie du sud-est" replace="Asie du Sud-Est" />
+<Typo word="Europe" find="\beurope\b" replace="Europe" />
+<Typo word="Europe de l'Est" find="\b([Ee])urope de l(['’])[Ee]st\b" replace="Europe de l$2Est" />
+<Typo word="Europe de l'Ouest" find="\b([Ee])urope de l(['’])[Oo]uest\b" replace="Europe de l$2Ouest" />
+<Typo word="Europe du Nord" find="Europe du nord" replace="Europe du Nord" />
+<Typo word="Europe du Sud" find="Europe du sud" replace="Europe du Sud" />
+<Typo word="Océanie" find="\b[Oo]c[eéèêë]anie\b" replace="Océanie" />
+</source>
+
+== Règles orthographiques générales ==
+<source lang="xml">
+<Typo word=", " find="(?<=[^0-9 {]) *,(?![\s&])(?!<br)" replace=", " /> <!-- Virgule sans espace après -->
+<Typo word=", " find="(?<=[^0-9 {]) *,( |&nbsp;) +(?!\s)" replace=", " /> <!-- Virgule avec plusieurs espaces -->
+<Typo word=", " find=",('+) +" replace="$1, " /> <!-- Virgule avant des apostrophes simples, doubles, triples, … -->
+<Typo word=",$" find="(?<=[^0-9 ]) +,$" replace="," />
+<Typo word=". À " find="(\.|\:|\?|!|==) A (?!contrario)" replace="$1 À " />
+<Typo word="À " find="(\n)A (?!contrario)" replace="$1À " />
+<Typo word="*À " find="(\n)(\*+|#+|'+) ?A (?!contrario)" replace="$1$2 À " />
+<Typo word="e suivi de 2 consonnes ou x" find="[éèê](cc|dd|ff|ll|nn|pp|rr|ss|tt|x|zz)" replace="e$1" />
+<Typo word="Écr…" find="\bEcr([aéêeiou])" replace="Écr$1" />
+<Typo word="éenne" find="[éèê]ene(s?)\b" replace="éenne$1" />
+<Typo word="ém" find="émm" replace="ém" />
+<Typo word="emm" find="[èê]mm" replace="emm" />
+<Typo word="alement" find="([c-zé]|rb|ob|ib|brimb|ueb)allement?(s?)\b" replace="$1alement$2" />
+<Typo word="inement" find="innement(s?)\b" replace="inement$1" />
+<Typo word="onnement" find="onement(s?)\b" replace="onnement$1" />
+<Typo word="ortho" find="\b(o|O)rto([^l]|l[^a])" replace="$1rtho$2" />
+<Typo word="rep" find="repp" replace="rep" />
+<Typo word="sil" find="\b(S|s)i il" replace="$1'il" />
+<Typo word="→" find="([^-])[-—–]\x3E" replace="$1→" />
+</source>
+
+== Mots ==
+
+=== A ===
+<source lang="xml">
+<Typo word="abandonner" find="\b(a|A)bandon([aâeéèio])" replace="$1bandonn$2" />
+<Typo word="abat" find="\b([aA]|[rR]a)bbat(s?)\b" replace="$1bat$2" />
+<Typo word="abattre" find="\b([aA]|[rR]a)bb?att?([raeîou]|i[^a])" replace="$1batt$2" />
+<Typo word="abondamment" find="\b([aA]|[sS]ura)bb?ondamm?[ae]nt\b" replace="$1bondamment" />
+<Typo word="abréviation" find="\b(a|A)bb?r[éèe]viation(s?)\b" replace="$1bréviation$2" />
+<Typo word="abscisse" find="\b(a|A)b[sc]s?isse(s?)\b" replace="$1bscisse$2" />
+<Typo word="accalmie" find="\b(a|A)calmie(s?)\b" replace="$1ccalmie$2" />
+<Typo word="accepter" find="\b(a|A)cept" replace="$1ccept" />
+<Typo word="accessibilité" find="\b(a|A)cc?essibb?ill?itt?ée?(s?)\b" replace="$1ccessibilité$2" />
+<Typo word="accommoder" find="\b([aA]|[rR]a|ina)cc?omm?od" replace="$1ccommod" />
+<Typo word="accompagner" find="\b([aA]|[rR]é?a)cc?o[mn]pagn" replace="$1ccompagn" />
+<Typo word="accorder" find="\b([aA]|[dD]ésa|[rR]é?a|ina)cord" replace="$1ccord" />
+<Typo word="accueil" find="\b(a|A)cc?(?:eu|ue)il(s?)\b" replace="$1ccueil$2" />
+<Typo word="accueillir" find="\b([aA]|[iI]na)cc?(?:eu|ue)ill?([aeiîo])" replace="$1ccueill$2" />
+<Typo word="accuser" find="\b([aA]|[rR]é?a)cus" replace="$1ccus" />
+<Typo word="acerbe" find="\b(a|A)s?cs?erbe(s?)\b" replace="$1cerbe$2" />
+<Typo word="acompte" find="\b(a|A)ccompte(s?)\b" replace="$1compte$2" />
+<Typo word="acquérir" find="\b(a|A)c?qu?(i?[eéè]r|î|ir|is[eis])" replace="$1cqu$2" />
+<Typo word="acquis|acquit" find="\b(a|A)c?qu?i([st]s?)\b" replace="$1cqui$2" />
+<Typo word="acquitter" find="\b(a|A)c?qu?itt?([âeéèio]|ai[^n]|an[^i]|a[^in])" replace="$1cquitt$2" />
+<Typo word="activité" find="\b(a|A)ctivitt?ée?(s?)\b" replace="$1ctivité$2" />
+<Typo word="actualité" find="\b(a|A)ctuall?itt?ée?(s?)\b" replace="$1ctualité$2" />
+<Typo word="admettre" find="\b(a|A)dm[eèé]t([raeio])" replace="$1dmett$2" />
+<Typo word="aérologie" find="\b(a|A)[eèéêë]rologi(e?|que?)(s?)\b" replace="$1érologi$2$3" />
+<Typo word="aréopage" find="\b(a|A)[eèéêë]ropage\b" replace="$1réopage" />
+<Typo word="aéroport " find="\b(a|A)r?[eèéêë]r?oport(s?)\b" replace="$1éroport$2" />
+<Typo word="affaire" find="\b(a|A)faire(s?)\b" replace="$1ffaire$2" />
+<Typo word="affilier" find="\b([aA]|[rR]éa)ff?ill?i" replace="$1ffili" />
+<Typo word="affirmer" find="\b([aA]|[rR]éa)firm" replace="$1ffirm" />
+<Typo word="afin" find="\b(A|a)ffin (de?|que?)\b" replace="$1fin $2" />
+<Typo word="âge" find="\bage(s?)\b" replace="âge$1" />
+<Typo word="Âge" find="\bAge(s?)\b" replace="Âge$1" />
+<Typo word="agglomération" find="\b(a|A)gg?ll?omm?[ée]ration(s?)\b" replace="$1gglomération$2" />
+<Typo word="agio" find="\b(a|A)ggio(s?)\b" replace="$1gio$2" />
+<Typo word="agression" find="\b(a|A)gg?r[eéèê][cst]s?ion(s?)\b" replace="$1gression$2" />
+<Typo word="agressivité" find="\b(a|A)gg?r[eéèê][cst]s?ivitt?ée?(s?)\b" replace="$1gressivité$2" />
+<Typo word="ailleurs" find="\b(a|A)i?ll?i?eurs?\b" replace="$1illeurs" />
+<Typo word="ait" find="\baît\b" replace="ait" />
+<Typo word="alentours" find="\b(a|A)ll?entour(s?)\b" replace="$1lentour$2" />
+<Typo word="Alzheimer" find="\b(a|A)lzeimer\b" replace="Alzheimer" />
+<Typo word="âme" find="\bame(s?)\b" replace="âme$1" />
+<Typo word="Âme" find="\bAme(s?)\b" replace="Âme$1" />
+<Typo word="amitié" find="\b(a|A)mm?itt?iée?(s?)\b" replace="$1mitié$2" />
+<Typo word="anecdote" find="\b(a|A)nn?[ée][gc]dott?(es?|iques?)\b" replace="$1necdot$2" />
+<Typo word="annonce" find="\b(a|A)nonce([sr]?)\b" replace="$1nnonce$2" />
+<Typo word="anthologie" find="\b(a|A)nth?oll?ogie(s?)\b" replace="$1nthologie$2" />
+<Typo word="antiquité" find="\b(a|A)ntic?quitt?ée?(s?)\b" replace="$1ntiquité$2" />
+<Typo word="anxiogène" find="\b(a|A)nxyog[eéèê]ne(s?)\b" replace="$1nxiogène$2" />
+<Typo word="apercevoir" find="\b(a|A)pper(c|ç)" replace="$1per$2" />
+<Typo word="apéritif" find="\b(a|A)pp[eéèê]rr?itt?if(s?)\b" replace="$1péritif$2" />
+<Typo word="apogée" find="\b(a|A)pp?ogée?\b" replace="$1pogée" />
+<Typo word="appareil" find="\b(a|A)pareil(s?)\b" replace="$1ppareil$2" />
+<Typo word="apparemment" find="\b(a|A)pp?arr?[ae]mm?ent\b" replace="$1pparemment" />
+<Typo word="appartenir" find="\b(a|A)pp?art(enir|enai[st]|enaient|enances?|iend|iendrai[st]|ien[st]|enu|enant)\b" replace="$1ppart$2" />
+<Typo word="appartenu" find="\b(a|A)pp?artenue?s?\b" replace="$1ppartenu" />
+<Typo word="appartienne" find="\b(a|A)pp?artienn?e(nt?|s?)\b" replace="$1ppartienne$2" />
+<Typo word="appeler" find="\b([aA]|[rR]a)pp?ell?(er|ée?s?|ante?s?|ons)\b" replace="$1ppel$2" />
+<Typo word="appellation" find="\b([aA])pp?[éeè]ll?a[cst]s?ion(s?)\b" replace="$1ppellation$2" />
+<Typo word="applicable" find="\b([aA]|[iI]na)pp?ll?i(?:c|qu)a(bles?|bilités?|tions?|teurs?)\b" replace="$1pplica$2" />
+<Typo word="appliquer" find="\b(a|A|ina|Ina|ra|Ra)pliqu(er?|ée?s?|ai[st]|aient)\b" replace="$1ppliqu$2" />
+<Typo word="apporter" find="\b(a|A|ra|Ra)port(er|é?e?s?|[ae]nt|i?ons|i?ez|ai?s?|ait|aient|erai?s?|erait|eri?ons|eri?ez|eront|eraient)\b" replace="$1pport$2" />
+<Typo word="apprécier" find="\b(a|A)préci(er|ée?s?|es?|i?ons|i?ez|ent|ais?|ait|aient|as?|âmes|âtes|èrent|erais?|eras?|eri?ons|eri?ez|eront|erait|eraient|ant)\b" replace="$1ppréci$2" />
+<Typo word="appréhender" find="\b(a|A)pp?r[éeè]h?en(der|dée?s?|dai?s?|dait|daient)\b" replace="$1ppréhen$2" />
+<Typo word="appréhension" find="\b(a|A)pp?r[éeè]h?en(?:t|ss?)(ions?)\b" replace="$1ppréhens$2" />
+<Typo word="apprendre" find="\b(a|A)prendre\b" replace="$1pprendre" />
+<Typo word="approcher" find="\b([aA]|[iI]na|[rR]a)pp?roch(er?|ée?s?|as?|ais?|ait|aient|able|antes?|ants?|ements?)\b" replace="$1pproch$2" />
+<Typo word="approvisionner" find="\b([aA]p|[rR]éap)?p?rovisionn?(er|ée?s?|ements?|a|ai[ts]|aient)\b" replace="$1provisionn$2" />
+<Typo word="après" find="\b(a|A)pr[éeêè]s?\b" replace="$1près" />
+<Typo word="ardemment" find="\b(a|A)rd[ae]mm?[ae]nt\b" replace="$1rdemment" />
+<Typo word="armoiries" find="\b(L|l|S|s|C|c)('|’|on|ette) ?(\[\[)?(a|A)rmoiries?\b" replace="$1es $3$4rmoiries" />
+<Typo word="Armoiries" find="\bArmoirie\b" replace="Armoiries" />
+<Typo word="arrière-cuisines" find="\b(a|A)rrières-cuisines\b" replace="$1rrière-cuisines" />
+<Typo word="arrondir" find="\b(a|A)rondi([^n])" replace="$1rrondi$2" />
+<Typo word="artisan" find="\b(a|A)rtisant?(s?)\b" replace="$1rtisan$2" />
+<Typo word="ascenseur" find="\b(a|A)s[sc]?[ae]n[cst](eurs?|ions?|ionnels?|ionnelles?)\b" replace="$1scens$2" /> 
+<Typo word="asocial" find="\b(a|A)ssocial\b" replace="$1social" /> 
+<Typo word="astérisque" find="\b(a|A)stérique(s?)\b" replace="$1stérisque$2" /> 
+<Typo word="athée" find="\b(a|A)the(is[mt]e|e?)(s?)\b" replace="$1thé$2$3" />
+<Typo word="athlète" find="\b(a|A)th?l[éèêëe]te(s?)\b" replace="$1thlète$2" />
+<Typo word="attacher" find="\b([aA])tach" replace="$1ttach" />
+<Typo word="attaquer" find="\b([aA]|[iI]na|[rR]éa)taqu" replace="$1ttaqu" />
+<Typo word="atteindre" find="\b(a|A)tei" replace="$1ttei" />
+<Typo word="atteint" find="\b(a|A)tteind(s?)\b" replace="$1tteint$2" />
+<Typo word="attitude" find="\b(a|A)titude(s?)\b" replace="$1ttitude$2" />
+<Typo word="attribuer" find="\b([aA]|[rR]éa)tribu" replace="$1ttribu" />
+<Typo word="au vu" find="\b(a|A)u vu(e?s?)\b" replace="$1u vu" />
+<Typo word="aucun" find="(?<![dD]['’])\b(a|A)ucun(e?)s\b" replace="$1ucun$2" />
+<Typo word="aujourd'hui" find="\b(A|a)ujourd *hui\b" replace="$1ujourd'hui" />
+<Typo word="austral" find="\b(a|A)us?trall?" replace="$1ustral" />
+<Typo word="authentifier" find="\b(a|A)uth?[ae]nti" replace="$1uthenti" />
+<Typo word="auxiliaire" find="\b(a|A)uxilliaire(s?)\b" replace="$1uxiliaire$2" />
+<Typo word="auxquels" find="\b(a|A)uxquel(le)?\b" replace="$1uxquel$2s" />
+<Typo word="avaliser" find="\b(a|A)valid" replace="$1valis" />
+<Typo word="avant-postes" find="\b(a|A)vants-postes\b" replace="$1vant-postes" />
+<Typo word="à proprement parler" find="\b[àa] proprement parlé\b" replace="à proprement parler" />
+</source>
+
+=== B ===
+<source lang="xml">
+<Typo word="baccalauréat" find="\b(B|b)acc?all?aurr?[eé]at?(s?)\b" replace="$1accalauréat$2" />
+<Typo word="balistique" find="\b(B|b)allistique(s?)\b" replace="$1alistique$2" />
+<Typo word="Barack Obama" find="\b[Bb]ar?rac?k? [Oo]bamm?a\b" replace="Barack Obama" />
+<Typo word="barrage" find="\b(B|b)arage(s?)\b" replace="$1arrage$2" />
+<Typo word="bateau" find="\b(B|b)âteau(x?)\b" replace="$1ateau$2" />
+<Typo word="bâtiment" find="\b(B|b)[aâ]tt?[iî]mm?ent(s?)\b" replace="$1âtiment$2" />
+<Typo word="battre" find="\b([aA]b|[bB]|[cC]omb|[Dd]éb|é|[rR]ab|[rR]eb)a(tante?s?|tre|tue?s?|tes?|tent)\b" replace="$1at$2" />
+<Typo word="Baudelaire" find="\b(?:B|b)e?audelaire\b" replace="Baudelaire" />
+<Typo word="beaucoup" find="\b(b|B)e?aucc?oup?s?\b" replace="$1eaucoup" />
+<Typo word="bénéfice" find="\b(b|B)énifice(s?)\b" replace="$1énéfice$2" />
+<Typo word="bête" find="\b(b|B)[ëèée]te(s?)\b" replace="$1ête$2" />
+<Typo word="bibliograph*" find="\b(b|B)il?b(?:li?|i)ograph" replace="$1ibliograph" />
+<Typo word="bibliothécaire" find="\b(b|B)il?b(?:li?|i)oth?[eéèêë](?:qu|c)aire(s?)\b" replace="$1ibliothécaire$2" />
+<Typo word="bibliothèque" find="\b(b|B)il?b(?:li?|i)oth?[eéèêë]que(s?)\b" replace="$1ibliothèque$2" />
+<Typo word="bientôt" find="\b(B|b)ient[oô]t?s?\b" replace="$1ientôt" />
+<Typo word="bijoux" find="\b(B|b)ijous\b" replace="$1ijoux" />
+<Typo word="bleus" find="\b(B|b)leux\b" replace="$1leus" />
+<Typo word="bœuf" find="\b(b|B)oeuf(s?)\b" replace="$1œuf$2" />
+<Typo word="boiteux" find="\b(b|B)oît(eux|euses?|er|ent|ai[ts]|aient)\b" replace="$1oit$2" />
+<Typo word="bouddhisme" find="\b(b|B)oudd?h?i(s[mt]e|que)(s?)\b" replace="$1ouddhi$2$3" />
+<Typo word="bouleverser" find="\b(b|B)oull?e?vers(ante?s?|ements?|er?|ée?s?|ai?s?|ait|aient|ent|erai?s?|erait|eraient)\b" replace="$1oulevers$2" />
+<Typo word="brièveté" find="\b(b|B)ri[eèé]ve?tt?ée?(s?)\b" replace="$1rièveté$2" />
+<Typo word="brillamment" find="\b(b|B)rill?[ae]mm?ent\b" replace="$1rillamment" />
+<Typo word="britannique" find="\b(b|B)ritt?ann?ique(s?)\b" replace="$1ritannique$2" />
+<Typo word="bruyamment" find="\b(b|B)ru(?:i|ill|y)amm?ent\b" replace="$1ruyamment" />
+</source>
+
+=== C ===
+<source lang="xml">
+<Typo word="câble" find="\b(c|C)abl(e|ée?|age|eur|euse|ante?)(s?)\b" replace="$1âbl$2$3" />
+<Typo word="cailloux" find="\b(C|c)aillous\b" replace="$1ailloux" />
+<Typo word="caméra" find="\b(C|c)am[eè]ra(s?)\b" replace="$1améra$2" />
+<Typo word="capacité" find="\b(c|C)app?acitt?ée?(s?)\b" replace="$1apacité$2" />
+<Typo word="caractère" find="\b(C|c)arr?act[éeèêë]rr?e(s?)\b" replace="$1aractère$2" />
+<Typo word="caractéris*" find="\b(C|c)arr?act[éèeêë]rr?is(tiques?|tiquement?|ations?|ée?s?|er|ante?s?|i?ons|i?ez|ent|ai?s?|ait|aient|erai?s?|erait|eri?ons|eri?ez|eront|eraient)\b" replace="$1aractéris$2" />
+<Typo word="carrière" find="\b(C|c)arr?i[éeè]rr?e(s?)\b" replace="$1arrière$2" />
+<Typo word="casserole" find="\b(C|c)ass?err?oll?e(s?)\b" replace="$1asserole$2" />
+<Typo word="catalytique" find="\b(C|c)ath?all?h?[iy]th?ique(s?)\b" replace="$1atalytique$2" />
+<Typo word="cauchemar" find="\b(C|c)auchemard(s?)\b" replace="$1auchemar$2" />
+<Typo word="cependant" find="\b(C|c)ep[ae]nd[ae]nts?\b" replace="$1ependant" />
+<Typo word="c'est-à-dire" find="\b([Cc][’'])est +[àa] +dire\b" replace="$1est-à-dire" />
+<Typo word="c'est-à-dire" find="\b([Cc])-?à-?d\b" replace="$1'est-à-dire" />
+<Typo word="celui-ci" find="\b(C|c)e(lui|lles?|ux)-?[cç]i\b" replace="$1e$2-ci" />
+<Typo word="celui-là" find="\b(C|c)e(lui|lles?|ux)-?l[aà]\b" replace="$1e$2-là" />
+<Typo word="cellule" find="\b(C|c)ell?ull?e(s?)\b" replace="$1ellule$2" />
+<Typo word="Cet article" find="\b(C|c)ette\s+article \b" replace="$1et article " />
+<Typo word="chacun" find="\b(c|C)ha(?:c|qu?)un(e?)s\b" replace="$1hacun$2" />
+<Typo word="championnat" find="\b(C|c)hampion(e|ats?)\b" replace="$1hampionn$2" />
+<Typo word="Champs-Élysées" find="\b[Cc]hamp(s?)[- ][Eeé]lys[eé]e(s?)\b" replace="Champs-Élysées" />
+<Typo word="chaque" find="\b(c|C)haques\b" replace="$1haque" />
+<Typo word="charançon" find="\b(c|C)haranco" replace="$1haranço" />
+<Typo word="châssis" find="\b(C|c)hassis\b" replace="$1hâssis" />
+<Typo word="château" find="\b(C|c)h[aàáâ]te?au(x?)\b" replace="$1hâteau$2" />
+<Typo word="chef-d'œuvre" find="\b(c|C)hef(s?)[ -]d([’'])(?:oe|œ)uvres?\b" replace="$1hef$2-d$3œuvre" />
+<Typo word="chef-lieu" find="\b(c|C)hef[ -]lieue?\b" replace="$1hef-lieu" />
+<Typo word="chevaux" find="\b(c|C)heveaux\b" replace="$1hevaux" />
+<Typo word="cheveux" find="\b(c|C)heu?veu[sx]\b" replace="$1heveux" />
+<Typo word="chiffre" find="\b(C|c)hifre(s?)\b" replace="$1hiffre$2" />
+<Typo word="chiffre d'affaires" find="\b(C|c)hi[f]re(s?)\s*d([’'])affaire\b" replace="$1hiffre$2 d$3affaires" />
+<Typo word="chœur" find="\b(c|C)hoeur(s?)\b" replace="$1hœur$2" />
+<Typo word="cinquante" find="\b(c|C)inquantes\b" replace="$1inquante" />
+<Typo word="cinquième" find="\b(c|C)inqui[ée]mm?e(ment)?\b" replace="$1inquième$2" />
+<Typo word="clarté" find="\b(c|C)lartée?(s?)\b" replace="$1larté$2" />
+<Typo word="clôture" find="\b(c|C)l[oô]tt?urr?((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant)\b" replace="$1lôtur$2" />
+<Typo word="cœur" find="\b(c|C)oeur(s?)\b" replace="$1œur$2" />
+<Typo word="collection" find="\b(c|C)oll?ection(s?)\b" replace="$1ollection$2" />
+<Typo word="collectionner" find="\b(c|C)oll?ectionn?((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant|eurs?|euses?|ismes?)\b" replace="$1ollectionn$2" />
+<Typo word="comité" find="\b(c|C)ommité(s?)\b" replace="$1omité$2" />
+<Typo word="commander" find="\b([cC]|[rR]ec|[tT]éléc|[dD]éc)omand((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant)\b" replace="$1ommand$2" />
+<Typo word="commandant" find="\b(c|C)omand(ant|ement|itaire|ite|itée?|o|eur|erie)(s?)\b" replace="$1ommand$2$3" />
+<Typo word="commémorer" find="\b(c|C)omm?[éeè]mm?orr?((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant|ations?|atifs?|atives?|ables?)\b" replace="$1ommémor$2" />
+<!-- À faire : ajouter, pour les verbes finissant par *ncer, les cas des terminaisons *nç(ai?s?|ons|etc.) -->
+<Typo word="commencer" find="\b(c|C)omm?[ae]nc(ement|er?|ée?s?|ent)\b" replace="$1ommenc$2" />
+<Typo word="commissaire" find="\b(c|C)omm?iss?a(ires?|riats?)\b" replace="$1ommissa$2" />
+<Typo word="commission" find="\b(c|C)omm?iss?ion(s?|né?|née?s?|nais?|nait?|na?|ne?|naient?|nement?|nements?)\b" replace="$1ommission$2" />
+<Typo word="commun" find="\b(c|C)omun(s?)\b" replace="$1ommun$2" />
+<Typo word="communauté" find="\b(c|C)omm?un((?:auté|e|ale?|autaire|autarité)s?|aux)\b" replace="$1ommun$2" />
+<Typo word="communisme" find="\b(c|C)omm?unn?(is[mt]es?)\b" replace="$1ommun$2" />
+<Typo word="communication" find="\b([cC]|[iI]nc)omm?unn?i(cations?|quer|quée?s?|cable|cateurs?|cateuses|catifs?|catives?|er|ée?s?|ai[st]|aient)\b" replace="$1ommuni$2" />
+<Typo word="comparer" find="\b([cC]|[iI]nc)omparr" replace="$1ompar" />
+<Typo word="compétence" find="\b([cC]|[iI]nc)omp[eéè]t[ae]n(?:c|ss?)e(s?)\b" replace="$1ompétence$2" />
+<Typo word="compléter" find="\b([cC]|[iI]nc)ompl[eéèê]t(er|ifs?|ives?|udes?)\b" replace="$1omplét$2" />
+<Typo word="complètement" find="\b([cC]|[iI]nc)ompl[eéèê]temm?ent\b" replace="$1omplètement" />
+<Typo word="conç" find="\b(C|c)onc(oi[s]t|ue?s?)\b" replace="$1onç$2" />
+<Typo word="concurrent" find="\b(c|C)oncc?urr?[ea]n(te?s?|ces?|tiels?|tielles?|cer|cée?s?|çai?s?|çait|çaient|çant)\b" replace="$1oncurren$2" />
+<Typo word="Condoleezza Rice" find="\b[Cc]ondole?ez?za [Rr]ice\b" replace="Condoleezza Rice" />
+<Typo word="confidentiel" find="\b(c|C)onff?idd?[ae]n[cst]iel(s?)\b" replace="$1onfidentiel$2" />
+<Typo word="connaissance" find="\b([cC]|[mM]éc|[rR]ec)onn?aiss?a(nces?|nte?s?|bles?)\b" replace="$1onnaissa$2" />
+<Typo word="connexion" find="\b(c|C)onn?ection(s?)\b" replace="$1onnexion$2" />
+<Typo word="connecter" find="\b([cC]|[dD]éc|[rR]ec)onn?ect(er|ée?s?|ant|iques?|es?|i?ons|i?ez|ent|ai?s?|ait|i?ons|i?ez|aient|erai?s?|erait|eri?ons|eri?ez|eront|eraient)\b" replace="$1onnect$2" />
+<Typo word="connoter" find="\b(c|C)onn?ot?((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant|ations?|ables?)\b" replace="$1onnot$2" />
+<Typo word="connu" find="\b([cC]|[iI]nc|[mM]éc|[rR]ec)onu(e?s?)\b" replace="$1onnu$2" />
+<Typo word="conscience" find="\b(c|C)on[cs]s?ien[cs]e(s?)\b" replace="$1onscience$2" />
+<Typo word="consensus" find="\b(c|C)on(?:c|ss?)en(?:ss?|[cç])u(s|els?|elles?)\b" replace="$1onsensu$2" />
+<Typo word="conséquence" find="\b([cC]|[iI]nc)on(?:c|ss?)[eéè]qu[ae]n(ces?|te?s?)\b" replace="$1onséquen$2" />
+<Typo word="consommation" find="\b([cC]|[aA]utoc|[iI]nc|[sS]urc)onsomm?(ables?|abilité|er|ée?s?|es?|ai[st]|aient|a|ations?|ateurs?|atrices?|ations?)\b" replace="$1onsomm$2" />
+<Typo word="consonance" find="\b(c|C)onsonn?[ae]n(?:c|ss?)e(s?)\b" replace="$1onsonance$2" />
+<Typo word="constamment" find="\b(c|C)onstamm?[ae]nt\b" replace="$1onstamment" />
+<Typo word="contrôle" find="\b(C|c)ontr[oô]ll?(ent|er|ez|ons|es?|ée?s?|ait|aient|ais)\b" replace="$1ontrôl$2" />
+<Typo word="convainc" find="\b(C|c)onvainc?t\b" replace="$1onvainc" />
+<Typo word="convention" find="\b([cC]|[rR]ec)onv[ae]n[cst]ion(s?)\b" replace="$1onvention$2" />
+<Typo word="conventionnel" find="\b([cC]|[dD]éc|[rR]ec)onv[ae]n[cst]ion(els?|elles?|ée?s?|ellement|ements?)\b" replace="$1onventionn$2" />
+<Typo word="Coréen" find="\b(\-?[cCkK])orr?[eéèêë]e(n?s?)\b" replace="$1orée$2" />
+<Typo word="correction" find="\b(c|C)orr?ec[cst]ion(s?)\b" replace="$1orrection$2" />
+<Typo word="correspondance" find="\b(c|C)orr?espondan(te?s?|ces?)\b" replace="$1orrespondan$2" />
+<Typo word="côté" find="\b([Dd][eu]|[àÀ]|[aA]ux?) coté(s?)\b" replace="$1 côté$2" />
+<Typo word="courage" find="\b([cC]|[dD]éc|[eE])ourr?age(s?|ux?|uses?|ante?s?|usement)\b" replace="$1ourage$2" />
+<Typo word="courant" find="\b([cC]|[cC]onc)ourr?an(te?s?)\b" replace="$1ouran$2" />
+<Typo word="couramment" find="\b(c|C)ourr?amm?[ae]nt\b" replace="$1ouramment" />
+<Typo word="couronn*" find="\b(c|C)ourr?onn?(es?|er|ements?|i?ons|i?ez|ent|ai?s?|ait|aient|erai?s?|eri?ons|eri?ez|eraient|eront|ant|ée?s?)\b" replace="$1ouronn$2" /> 
+<Typo word="cruauté" find="\b(c|C)ruautt?ée?(s?)\b" replace="$1ruauté$2" />
+<Typo word="cupidité" find="\b(c|C)upp?idd?itt?ée?(s?)\b" replace="$1upidité$2" />
+<Typo word="curiosité" find="\b(c|C)urr?iositt?ée?(s?)\b" replace="$1uriosité$2" />
+<Typo word="curriculum" find="\b(c|C)urr?icc?ull?um(s?)\b" replace="$1urriculum$2" />
+</source>
+
+=== D ===
+<source lang="xml">
+<Typo word="d'où" find="\b(d|D)'ou\b" replace="$1'où" />
+<Typo word="dangerosité" find="\b(d|D)ang[eéèê]rr?oss?itt?ée?(s?)\b" replace="$1angerosité$2" />
+<Typo word="déballer" find="\b([dD]|[rR]ed)[éèe]ball?" replace="$1éball" />
+<Typo word="débarras" find="\b([dD]é|[Ee]m)barr?as?\b" replace="$1barras" />
+<Typo word="débarrasser" find="\b([dD]é|[Ee]m)barr?ass?(ée?s?|er|es?|ai[st]|aient|as?|at|ante?s?)\b" replace="$1barrass$2" />
+<Typo word="déchèterie" find="\b([dD])[eéèêë][sc]h[eéèêë]t[eéèêë]rr?ie(s?)\b" replace="$1échèterie$2" />
+<Typo word="déchetterie" find="\b([dD])[eéèêë][sc]h[eéèêë]tt[eéèêë]rr?ie(s?)\b" replace="$1échetterie$2" />
+<Typo word="défendre" find="\b(d|D)[éèe]ff?[ea]nd" replace="$1éfend" />
+<Typo word="défense" find="\b([dD]|[aA]utod)[ée]ff?[ae]n([cçs]|ss)e(s?|ur?|use?|urs?|uses?)\b" replace="$1éfense$3" />
+<Typo word="déjà" find="\b(d|D)[éeè]j[aà]\b" replace="$1éjà" />
+<Typo word="déjeuner" find="\b(d|D)[éeè]je[uû]nn?er(s?)\b" replace="$1éjeuner$2" />
+<Typo word="démissionner" find="\b(d|D)[éeè]mm?i(?:ss?|c)ionn?([aâeéèio])" replace="$1émissionn$2" />
+<Typo word="densité" find="\b(d|D)en[cs]itt?ée?(s?)\b" replace="$1ensité$2" />
+<Typo word="dépannage" find="\b(d|D)[éèeêë]pp?ann?(age|er|ée?s?|ant|es?|i?ons|i?ez|ent|ai?s?|ait|aient|erai?s?|eri?ons|eri?ez|eraient)\b" replace="$1épann$2" />
+<Typo word="dernière" find="\b(d|D)(é|e|è)rnn?i[éeà]rr?e\b" replace="$1ernière" />
+<Typo word="désespérément" find="\b(D|d)[éeè]s[éeè]sp[éeè]rr?[éeè]ment\b" replace="$1ésespérément" />
+<Typo word="désœuvrement" find="\b(D|d)[éeè]s(o?eu|œu)vr(ement|ée?s?)\b" replace="$1ésœuvr$3" />
+<Typo word="désormais" find="\b(d|D)[éeè]sormai[st]\b" replace="$1ésormais" />
+<Typo word="dessiner" find="\b(d|D|Red|red)[eéè]ss?inn?(e\b|ent\b|e[rsz]|[oaièéâ])" replace="$1essin$2" />
+<Typo word="détecter" find="\b(d|D)étéct(er|es?|ions?|eurs?|ives?|rices?)\b" replace="$1étect$2" />
+<Typo word="déterminer" find="\b(d|D)[éeè]tt?[eè]rmin" replace="$1étermin" />
+<Typo word="deuxième" find="\b(d|D)euxi(é|e)me(ment)?\b" replace="$1euxième$3" />
+<Typo word="développer" find="\b(d|D)[ée]vell?opp?(ai[st]|aient|er?|eurs?|ée?s?|ement)\b" replace="$1évelopp$2" />
+<Typo word="dictionnaire" find="\b(d|D)ic[cst]ionn?aire(s?)\b" replace="$1ictionnaire$2" />
+<Typo word="différence" find="\b([dD]|[iI]nd)iff?[eé]rr?[ae]n(ces?|te?s?|tiation|tielles?|tiels?|[ct]ier)\b" replace="$1ifféren$2" />
+<Typo word="différemment" find="\b([dD]|[iI]nd)iff?[éeè]rr?[ae]mm?[ae]nt\b" replace="$1ifféremment" />
+<Typo word="difficile" find="\b(d|D)iff?ic(ile|ilement)\b" replace="$1iffic$2" />
+<Typo word="difficulté" find="\b(d|D)iff?icultée?(s?)\b" replace="$1ifficulté$2" />
+<Typo word="diffuser" find="\b(d|D)ifus(ions?|er|es?|ée?s?|ant?|i?ons|i?ez|ent|ai?s?|ait|aient|erai?s?|erait|eri?ons|eri?ez|eront|eraient)\b" replace="$1iffus$2" />
+<Typo word="dignité" find="\b(d|D)ignitt?ée?(s?)\b" replace="$1ignité$2" />
+<Typo word="dilemme" find="\b(d|D)ilemn?e(s?)\b" replace="$1ilemme$2" />
+<Typo word="diplôme" find="\b(d|D)ipp?l[oô]mm?(es?|ée?s?|er|ante?s?|i?ons|i?ez|ent|ai?s?|ait|aient|erai?s?|erait|eraient|eri?ons|eri?ez|eront)\b" replace="$1iplôm$2" />
+<Typo word="directement" find="\b([dD]|[iI]nd)irr?ectemm?ent\b" replace="$1irectement" />
+<Typo word="direction" find="\b([dD]|[bB]id|[cC]od|[oO]mnid|[uU]nid)irr?ection?(nels?|nelles?|s)\b" replace="$1irection$2" />
+<Typo word="discours" find="\b(d|D)iscour\b" replace="$1iscours" />
+<Typo word="discussion" find="\b(d|D)iscution(s?)\b" replace="$1iscussion$2" />
+<Typo word="disponible" find="\b(d|D)isponnib(les?|ilités?)\b" replace="$1isponib$2" />
+<Typo word="dissous" find="\b(d|D)issouts\b" replace="$1issous" />
+<Typo word="dissuasion" find="\bdi(ss?|[cç])ua(ss|t)i(on|f|ive)\b" replace="dissuasi$3" />
+<Typo word="divergent" find="\b(d|D)iverge?a?n([ct]es?)\b" replace="$1ivergen$2" />
+<Typo word="dixième" find="\b(d|D)ixi[ée]me(ment)?\b" replace="$1ixième$2" />
+<Typo word="dommage" find="\b([dD]|[dD]éd|[eE]nd)omm?ag(es?|ements?|ée?s?|er|as?|ai[st]|aient|eant|eables?)\b" replace="$1ommag$2" />
+<Typo word="donnée" find="\b(d|D)onn?[ée]e(s?)\b" replace="$1onnée$2" />
+<Typo word="douze" find="\b(d|D)ouzes\b" replace="$1ouze" />
+<Typo word="dûe" find="\b(d|D)û(e|s|es)\b" replace="$1u$2" />
+<Typo word="ductilité" find="\b(d|D)uctill?itt?ée?(s?)\b" replace="$1uctilité$2" />
+<Typo word="dureté" find="\b(d|D)urr?ett?ée?(s?)\b" replace="$1ureté$2" />
+</source>
+
+=== E ===
+<source lang="xml">
+<Typo word="en" find="\beb\b" replace="en" />
+<Typo word="écœurement" find="\b[ée]co?eu?rr?(ante?|ment|ée?s?|er?|ai[st]|aient|ent)\b" replace="écœur$1" />
+<Typo word="Écœurement" find="\b[ÉE]co?eu?rr?(ante?|ment|ée?s?|er?|ai[st]|aient|ent)\b" replace="Écœur$1" />
+<Typo word="école" find="\becoll?e(s?)\b" replace="école$1" />
+<Typo word="École" find="\bEcoll?e(s?)\b" replace="École$1" />
+<Typo word="Économie" find="\bEconomie(s?)\b" replace="Économie$1" />
+<Typo word="écouter" find="\b[éèe]cout(es?|és?|ées?|er|ez)\b" replace="écout$1" />
+<Typo word="Écouter" find="\b[ÉÈE]cout(es?|és?|ées?|er|ez)\b" replace="Écout$1" />
+<Typo word="écrit" find="\b[éeèê]cc?rit(s?|ures?|oires?|eaux?|es?)\b" replace="écrit$1" />
+<Typo word="Écrit" find="\b[ÉEÈÊ]cc?rit(s?|ures?|oires?|eaux?|es?)\b" replace="Écrit$1" />
+<Typo word="éditer" find="\b[éeèê]dit(ée?s?|er?|ai[st]|aient|ent|es|eurs?|rices?|ions?)\b" replace="édit$1" />
+<Typo word="Éditer" find="\b[ÉEÈÊ]dit(ée?s?|er?|ai[st]|aient|ent|es|eurs?|rices?|ions?)\b" replace="Édit$1" />
+<Typo word="efficacité" find="\b(e|E)ff?icacitt?ée?(s?)\b" replace="$1fficacité$2" />
+<Typo word="également" find="\b[eé]gall?emm?ent\b" replace="également" />
+<Typo word="Également" find="\b[EÉ]gall?emm?ent\b" replace="Également" />
+<Typo word="égalité" find="\b[ée]gall?itt?ée?(s?)\b" replace="égalité$1" />
+<Typo word="Égalité" find="\b[EÉ]gall?itt?ée?(s?)\b" replace="Égalité$1" />
+<Typo word="église" find="\beglise(s?)\b" replace="église$1" />
+<Typo word="Église" find="\bEglise(s?)\b" replace="Église$1" />
+<Typo word="égout" find="\b(é|É|E)gout(s?)\b" replace="$1gout$2" />
+<Typo word="électricité" find="\b[ée]lectricitt?ée?(s?)\b" replace="électricité$1" />
+<Typo word="Électricité" find="\b[ÉE]lectricitt?ée?(s?)\b" replace="Électricité$1" />
+<Typo word="électrique" find="\belectrique(s?)\b" replace="électrique$1" />
+<Typo word="Électrique" find="\bElectrique(s?)\b" replace="Électrique$1" />
+<Typo word="électron" find="\b[éeè]l[éeè]ctron(s?)\b" replace="électron$1" />
+<Typo word="Électron" find="\b[ÉEÈ]l[éeè]ctron(s?)\b" replace="Électron$1" />
+<Typo word="élément" find="\b[ée]l[ée]mm?ent(aires?|s?)\b" replace="élément$1" />
+<Typo word="Élément" find="\b[ÉE]l[ée]mm?ent(aires?|s?)\b" replace="Élément$1" />
+<Typo word="élu" find="\belu(e?s?)\b" replace="élu$1" />
+<Typo word="Élu" find="\bElu(e?s?)\b" replace="Élu$1" />
+<Typo word="Élysées" find="\b[Eeé]lys[eé]e(s?)\b" replace="Élysée$1" />
+<Typo word="emballer" find="\b([eE]|[rR]é?e)mbal([^lu])" replace="$1mball$2" />
+<Typo word="embarrasser" find="\b(e|E)mbarr?a(?:c|ss?)(er|ée?s?|ant|es?|i?ons|i?ez|ent|ai?s?|aient|erai?s?|erait|eri?ons|eri?ez|eront|eraient)\b" replace="$1mbarrass$2" />
+<Typo word="Émilie" find="\b[EÉée]milie\b" replace="Émilie" />
+<Typo word="émission" find="\b(?:e|é)mm?i(?:c|ss?)ion(s?)\b" replace="émission$1" />
+<Typo word="Émission" find="\b(?:É|E)mm?i(?:c|ss?)ion(s?)\b" replace="Émission$1" />
+<Typo word="Empire romain" find="\bempire (R|r)omain\b" replace="Empire romain" />
+<Typo word="enchain*" find="\b(en|En)?cha(i|î)n(er|es?|[ae]nt|ée?s?|ements?)\b" replace="$1cha$2n$3" />
+<Typo word="encore" find="\b(e|E)ncc?orr?es?\b" replace="$1ncore" />
+<Typo word="encourager" find="\b(e|E)ncourr?ag(ée?s?|er|ai[st]|aient|a|ements?|eante?|es?)\b" replace="$1ncourag$2" />
+<Typo word="endommager" find="\b(e|E)ndomm?ag(er|ée?s?|eant|es?|i?ons|i?ez|ent|eai?s?|eaient|erai?s?|erait|eri?ons|eri?ez|eront|eraient)\b" replace="$1ndommag$2" />
+<Typo word="ennemi" find="\b(e|E)nemi(e?s?)\b" replace="$1nnemi$2" />
+<Typo word="ensemble" find="\b(e|E)[mn]ss?e[nm]ble\b" replace="$1nsemble" />
+<Typo word="entité" find="\b(e|E)ntitt?ée?(s?)\b" replace="$1ntité$2" />
+<Typo word="entre autres" find="\b(e|E)ntre[ -]autre\b" replace="$1ntre autres" />
+<Typo word="entrain*" find="\b(e|E)ntra(i|î)nn?(er?|[ae]nt|ée?s?|ements?|eurs?)\b" replace="$1ntra$2n$3" />
+<Typo word="environnement" find="\b(e|E)nvirr?onn?(ements?|ementale?s?|ementaux|ementalis[mt]es?|ante?s?|er|ée?s?|ai?s?|ait|aient)\b" replace="$1nvironn$2" />
+<Typo word="épisode" find="\bepisode(s?)\b" replace="épisode$1" />
+<Typo word="Épisode" find="\bEpisode(s?)\b" replace="Épisode$1" />
+<Typo word="époque" find="\bepoque(s?)\b" replace="époque$1" />
+<Typo word="Époque" find="\bEpoque(s?)\b" replace="Époque$1" />
+<Typo word="époux" find="\bepou(x|ses?|ser|sai[st]|sa|saient|sé|ée?s?)\b" replace="épou$1" />
+<Typo word="Époux" find="\bEpou(x|ses?|ser|sai[st]|sa|saient|sé|ée?s?)\b" replace="Épou$1" />
+<Typo word="Équation" find="\bEquation(s?)\b" replace="Équation$1" />
+<Typo word="équipe" find="\b[eé]quipp?e(s?)\b" replace="équipe$1" />
+<Typo word="Équipe" find="\b[EÉ]quipp?e(s?)\b" replace="Équipe$1" />
+<Typo word="erroné" find="\b(e|E)rr?onn?é(e?s?)\b" replace="$1rroné$2"/>
+<Typo word="espace" find="\b(e|E)sapce(s?)\b" replace="$1space$2" />
+<Typo word="essentiellement" find="\b(e|E)ss?en([tscç]|ss)iell?emm?ent\b" replace="$1ssentiellement" />
+<Typo word="essentiel" find="\b(e|E)ss?en([tscç]|ss)iel(le?)\b" replace="$1ssentiel$3" />
+<Typo word="était" find="\beta(i[st]|ient|nt)\b" replace="éta$1" />
+<Typo word="Était" find="\bEta(i[st]|ient|nt)\b" replace="Éta$1" />
+<Typo word="Étampes" find="\bEtampes\b" replace="Étampes" />
+<Typo word="étendu" find="\b(pr)?[éeè]tandu(e?s?)\b" replace="$1étendu$2" />
+<Typo word="Étendu" find="\b[ÉEÈ]tandu(e?s?)\b" replace="Étendu$1" />
+<Typo word="État" find="\bEtat(s?)\b" replace="État$1" />
+<Typo word="éternité" find="\b[ée]tt?[eéèê]rnitt?ée?(s?)\b" replace="éternité$1" />
+<Typo word="Éternité" find="\b[EÉ]tt?[eéèê]rnitt?ée?(s?)\b" replace="Éternité$1" />
+<Typo word="Étienne" find="\b[EÉée]tienn?e\b" replace="Étienne" />
+<Typo word="étiologie" find="\betiologie(s?)\b" replace="étiologie$1" />
+<Typo word="Étiologie" find="\bEtiologie(s?)\b" replace="Étiologie$1" />
+<Typo word="étonnamment" find="\b[eé]tonn?amm?ent\b" replace="étonnamment" />
+<Typo word="Étonnamment" find="\b[EÉ]tonn?amm?ent\b" replace="Étonnamment" />
+<Typo word="étonnement" find="\b(e|é)tonn?emm?ent\b" replace="étonnement" />
+<Typo word="être" find="\b[éèe]tre(s?)\b" replace="être$1" />
+<Typo word="Être" find="\b[EÉÈ]t(res?|es)\b" replace="Êt$1" />
+<Typo word="étudier" find="\be(tud)" replace="é$1" />
+<Typo word="Étudier" find="\bE(tud)" replace="É$1" />
+<Typo word="étymologie" find="\b(é|É)thymologie\b" replace="$1tymologie" />
+<Typo word="étymologie" find="\bEth?ymologie\b" replace="Étymologie" />
+<Typo word="étymologie" find="\beth?ymologie\b" replace="étymologie" />
+<Typo word="euro" find="€uros?\b" replace="€" />
+<Typo word="européen" find="\b(e|E)uropp?[eé]{1,2}n(s?|nes?)\b" replace="$1uropéen$2" />
+<Typo word="éventualité" find="\b(é|e)ventuall?itt?ée?(s?)\b" replace="$1ventualité$2" />
+<Typo word="éventuellement" find="\b[eé]ventuell?emm?ent\b" replace="éventuellement" />
+<Typo word="éventuellement" find="\b[EÉ]ventuell?emm?ent\b" replace="Éventuellement" />
+<Typo word="évidemment" find="\b[eé]vid[aeé]mm?[ae]n[ts]?\b" replace="évidemment" />
+<Typo word="Évidemment" find="\b[EÉ]vid[ae]mm?[aeé]n[ts]?\b" replace="Évidemment" />
+<Typo word="excepter" find="\b(e|E)xep" replace="$1xcep" />
+<Typo word="exceptionnellement" find="\b(e|E)xc?eptionn?e(ls?|lles?|llement)\b" replace="$1xceptionne$2" />
+<Typo word="excellent" find="\b(e|E)xc?ell?(ents?|entes?|ences?|er|ée?s?|ai[st]|aient)\b" replace="$1xcell$2" />
+<Typo word="excentricité" find="\b(e|E)[cx]c?entricitt?ée?(s?)\b" replace="$1xcentricité$2" />
+<Typo word="Exécuter" find="\b[EÈÉ]x[éeè]cut" replace="Exécut" />
+<Typo word="exécuter" find="\b[éèe]x[éeè]cut" replace="exécut" />
+<Typo word="exemple" find="\b(e|E)xample(s?)\b(?<!(?:[fF]or|[aA]n)\s+(e|E)xample(s?))" replace="$1xemple$2" />
+<Typo word="exigence" find="\b(e|E)xig(?:ea|a|e)nce(s?)\b" replace="$1xigence$2" />
+<Typo word="exigeante" find="\b(e|E)xig[ae]nte(s?)\b" replace="$1xigeante$2" />
+<Typo word="existence" find="\b([eE]|[cC]oe|[iI]ne)xist[ae]n[cs]e\b" replace="$1xistence" />
+<Typo word="explicable" find="\b([eE]|[iI]ne)xpliquable(s?)\b" replace="$1xplicable$2" />
+<Typo word="extension" find="\b(e|E)xt[ae]n[st]ion(s?)\b" replace="$1xtension$2" />
+<Typo word="extrêmement" find="\b(e|E)xtr[éèeê]me?ment\b" replace="$1xtrêmement" />
+<Typo word="extrémité" find="\b(e|E)xtr[éèeê]mitt?ée?(s?)\b" replace="$1xtrémité$2" />
+<Typo word="(ré)échantillonnage" find="(ré-?)?[eé]chantillonage" replace="$1échantillonnage" />
+</source>
+
+=== F ===
+<source lang="xml">
+<Typo word="façade" find="\b(f|F)acade(s?)\b" replace="$1açade$2" />
+<Typo word="faculté" find="\b(f|F)acc?ultée?(s?)\b" replace="$1aculté$2" />
+<Typo word="faites" find="\b([vV]ous (ne )?(me )?(les? |la )?)faîtes\b" replace="$1faites" />
+<Typo word="fasciner" find="\b(f|F)a(sc?|cs?)inn?(ation|ante?s?|ée?s?|er|ai[st]|aient)\b" replace="$1ascin$3" />
+<Typo word="fausseté" find="\b(f|F)auss?ett?ée?(s?)\b" replace="$1ausseté$2" />
+<Typo word="fécondité" find="\b(f|F)[éèeê]conditt?ée?(s?)\b" replace="$1écondité$2" />
+<Typo word="fermeté" find="\b(f|F)[eéèê]rm[eéèê]tt?ée?(s?)\b" replace="$1ermeté$2" />
+<Typo word="fertilité" find="\b(f|F)ertill?itée?(s?)\b" replace="$1ertilité$2" />
+<Typo word="fierté" find="\b(f|F)i[eéèê]rtée?(s?)\b" replace="$1ierté$2" />
+<Typo word="filiale" find="\b(f|F)ill?iall?e(s?)\b" replace="$1iliale$2" />
+<Typo word="finalement" find="\b(f|F)inn?all?emm?[ae]nt?\b" replace="$1inalement" />
+<Typo word="fœtus" find="\b(f|F)oeu?t(al|ales?|aux|us|ologies?)\b" replace="$1œt$2" />
+<Typo word="fonctionner" find="\b([fF]|[dD]ysf|[Pp]lurif)onctio(nement|ner|née?s?|nai[st]|naient|naire(s?)|naliser|nalismes?|nalistes?|nariat|narisation|nels?|nelles?|nellement)\b" replace="$1onction$2" />
+<Typo word="fonctionnaire" find="\b(f|F)onc[cst]ionn?aire(s?)\b" replace="$1onctionnaire$2" />
+<Typo word="fonctionnalité" find="\b(f|F)onctionn?alitée?(s?)\b" replace="$1onctionnalité$2" />
+<Typo word="forcément" find="\b(f|F)orc(e|é|è)mm?ents?\b" replace="$1orcément" />
+<Typo word="fragilité" find="\b(f|F)ragill?itt?ée?(s?)\b" replace="$1ragilité$2" />
+<Typo word="français" find="\b(f|F)rancais(e?s?)\b" replace="$1rançais$2" />
+<Typo word="fraternité" find="\b(f|F)ratt?[eéèê]rnitée?(s?)\b" replace="$1raternité$2" />
+<Typo word="fréquemment" find="\b(f|F)r[éeè]qu[eéèa]mm?[ae]nts?\b" replace="$1réquemment" />
+<Typo word="fret" find="\b(F|f)r[éêè]t(s?)\b" replace="$1ret$2" />
+<Typo word="frugalité" find="\b(f|F)rugalitt?ée?(s?)\b" replace="$1rugalité$2" />
+<Typo word="furent" find="\b([bdefpstBDEFPST])[uû]rr?ent\b" replace="$1urent" />
+<Typo word="fusionner" find="\b(f|F)usion(ée?s?|er|ai[st]|aient|ement)\b" replace="$1usionn$2" />
+</source>
+
+=== G ===
+<source lang="xml">
+<Typo word="galerie" find="\b(G|g)allerie(s?)\b" replace="$1alerie$2" />
+<Typo word="garçon" find="\b([gG])arcon((?:net?|ère)?s?)\b" replace="$1arçon$2" />
+<Typo word="gaz" find="\b(G|g)azs\b" replace="$1az" />
+<Typo word="généralement" find="\b(G|g)[éeè]nn?[éeè]rr?all?emm?ent\b" replace="$1énéralement" />
+<Typo word="genoux" find="\b(G|g)enous\b" replace="$1enoux" />
+<Typo word="gestionnaire" find="\b(g|G)[eéèêë]stionn?aire(s?)\b" replace="$1estionnaire$2" />
+<Typo word="grâce" find="\b(g|G)race ([aà]|aux?)\b" replace="$1râce $2" />
+<Typo word="(dis)gracier" find="\b([Dd]isg|[Gg])r(?:â|a)(?:c|ss)i(er|ée?s?|ais?|as?)\b" replace="$1raci$2" />
+<Typo word="grand nombre" find="\b([Uu]n|[Ll]e|[Pp]lus|[Ee]n|[Dd]u|[Tt]rop) grand nombres\b" replace="$1 grand nombre" />
+</source>
+
+=== H ===
+<source lang="xml">
+<Typo word="habileté" find="\b(h|H)abb?ill?ett?ée?(s?)\b" replace="$1abileté$2" />
+<Typo word="hameçon" find="\b(h|H)amec" replace="$1ameç" />
+<Typo word="hémorragie" find="\b(h|H)[eé]mm?orr?agie?(s?)\b" replace="$1émorragie$2" />
+<Typo word="héros" find="\b(h|H)éro \b" replace="$1éros " />
+<Typo word="hiboux" find="\b(h|H)ibous\b" replace="$1iboux" />
+<Typo word="huitième" find="\b(h|H)uiti[ée]me(ment)?\b" replace="$1uitième$2" />
+<Typo word="hommage" find="\b(h|H)[oô]mm?age(s?)\b" replace="$1ommage$2" />
+<Typo word="honneur" find="\b([hH]|[dD]ésh)onn?eur(s?)\b" replace="$1onneur$2" />
+<Typo word="honorer" find="\b([hH]|[dD]ésh)onnor(er|ée?s?|ai[st]|a|aient)\b" replace="$1onor$2" />
+<Typo word="hôpital" find="\b(h|H)opita(l|ux)\b" replace="$1ôpita$2" />
+<Typo word="hormis" find="\b(h|H)ormi\b" replace="$1ormis" />
+<Typo word="hôtel" find="\b(h|H)otel(lerie?|ier?|ière?|s?)\b" replace="$1ôtel$2" />
+<Typo word="huit" find="\b(h|H)uits\b" replace="$1uit" />
+<Typo word="humanité" find="\b(h|H)umm?ann?itt?ée?(s?)\b" replace="$1umanité$2" />
+<Typo word="humidité" find="\b(h|H)umm?idd?itt?ée?(s?)\b" replace="$1umidité$2" />
+<Typo word="hypoténuse" find="\b(H|h)[iy]poth?[eéèêë]nuse\b" replace="$1ypoténuse" />
+</source>
+
+=== I ===
+<source lang="xml">
+<Typo word="ici" find="\b(I|i)çi\b" replace="$1ci" />
+<Typo word="imaginaire" find="\b(I|i)mmaginaire\b" replace="$1maginaire" />
+<Typo word="immédiat" find="\b(I|i)mm?[eéè]diat(ement|e)?\b" replace="$1mmédiat$2" />
+<Typo word="immédiatement" find="\b(I|i)mm?[eéè]diatemm?ent\b" replace="$1mmédiatement" />
+<Typo word="immense" find="\b(I|i)mm?en[sc](es?|ément)\b" replace="$1mmens$2" />
+<Typo word="immensité" find="\b(i|I)mm?en[sc]itt?ée?(s?)\b" replace="$1mmensité$2" />
+<Typo word="immersion" find="\b(I|i)mm?er[st]ion(s?)\b" replace="$1mmersion$2" />
+<Typo word="immortaliser" find="\b(I|i)mm?ortall?i[sc](es?|er|a[in]t|ée?s?|ai?s?|aient)\b" replace="$1mmortalis$2" />
+<Typo word="immortel" find="\b(i|I)mm?ortel(s?)\b" replace="$1mmortel$2" />
+<Typo word="impeccable" find="\b(I|i)[mn]pp?ecc?able(s|ment)\b" replace="$1mpeccable$2" />
+<Typo word="impédance" find="\b(I|i)[mn]pp?éd[ae]nce(s?)\b" replace="$1mpédance$2" />
+<Typo word="impressionner" find="\b(I|i)[mn]pp?r[éeèê][cs]s?ionn?(abilités?|ables?|ante?s?|es?|er|ée?s?|ai?s?|ait|aient|ismes?|istes?)\b" replace="$1mpressionn$2" />
+<Typo word="inactivité" find="\b(i|I)nactivitt?ée?(s?)\b" replace="$1nactivité$2" />
+<Typo word="inattendu" find="\b(I|i)nn?att?endu(e|es|)\b" replace="$1nattendu$2" />
+<Typo word="inconvénient" find="\b(I|i)ncon?v[éeè]ni[ae]nt(s?)\b" replace="$1nconvénient$2" />
+<Typo word="indépendamment" find="\b(I|i)nd[eé]p[ae]nd[ae]mm?ent\b" replace="$1ndépendamment" />
+<Typo word="indemnité" find="\b(i|I)ndemnitt?ée?(s?)\b" replace="$1ndemnité$2" />
+<Typo word="infériorité" find="\b(i|I)nf[éèeê]rr?iorr?itt?ée?(s?)\b" replace="$1nfériorité$2" />
+<Typo word="inflexion" find="\b(i|I)nflection(s?)\b" replace="$1nflexion$2" />  
+<Typo word="inhérent" find="\b(I|i)nh?[eéè]rr?[ea]ns?((?:t|te|ce)s?)\b" replace="$1nhéren$2" />
+<Typo word="initialement" find="\b(I|i)nn?itiall?(e|é|ement)\b" replace="$1nitial$2" />
+<Typo word="innocenter" find="\b(I|i)nn?on?cen(te?s?|ces?|ter|tée?s?|ai?s?|ait|aient)\b" replace="$1nnocen$2" />
+<Typo word="innover" find="\b(I|i)nov(ante?s?|er|ée?s?|ai?s?|ait|aient|ateurs?|atrices?|ations?)\b" replace="$1nnov$2" />
+<Typo word="inondation" find="\b(I|i)nn?h?ond(ations?|ée?s?|ai?s?|a[in]t|aient|er?|ables?)\b" replace="$1nond$2" />
+<Typo word="intentionnel" find="\b(I|i)nten(?:ss?|t)ionn?el(s?|les?|lement)?\b" replace="$1ntentionnel$2" />
+<Typo word="intéresser" find="\b(I|i|Dési|dési)nt[eé]rr?[éeêè](ssements?|sser|ssée?s?|ssante?s?|ai?s?|ait|ent)\b" replace="$1ntére$2" />
+<Typo word="intérêt" find="\b(I|i)nt[eé]rr?[éeêè]t(s?)\b" replace="$1ntérêt$2" />
+<Typo word="international" find="\b(I|i)nt[eéèêë]rna(?:c|t|ss?)ionn?a(l|ux|lités?|lement|lisations?|liser|lisée?s?|lismes?)\b" replace="$1nternationa$2" />
+<Typo word="intervalle" find="\b(i|I)nt[eéèêë]rvall?e(s?)\b" replace="$1ntervalle$2" />
+<Typo word="intrépidité" find="\b(i|I)ntr[eèéêë]pidit?ée?(s?)\b" replace="$1ntrépidité$2" />
+<Typo word="infarctus" find="\b(I|i)nfractus\b" replace="$1nfarctus" />
+<Typo word="innocent" find="\b(I|i)nn?on?[cç]e(nce|mment|ntes?|nter|ntés?|nta|ntai[st]|ntaient|nts?)\b" replace="$1nnoce$2" />
+<Typo word="invincibilité" find="\b(i|I)nvin[cs]ibb?ill?itt?ée?(s?)\b" replace="$1nvincibilité$2" />
+<Typo word="irréel" find="\b(I|i)r?r[eéèêë]+l(s?)\b" replace="$1rréel$2" />
+<Typo word="israélien" find="\b(I|i)sraëlien(s?)\b" replace="$1sraélien$2" />
+</source>
+
+=== J ===
+<source lang="xml">
+<Typo word="jamais" find="\b(j|J)amias\b" replace="$1amais" />
+<Typo word="joujoux" find="\b(j|J)oujous\b" replace="$1oujoux" />
+<Typo word="jusqu’à" find="\b([jJ])usqu(['’]) *[áaà]\b" replace="$1usqu$2à" />
+<Typo word="jusqu’à" find="\b([jJ])usqu´? *[áaà]\b" replace="$1usqu'à" />
+<Typo word="jeu vidéo" find="\b([jJ])eu [Vv]id[ée]os?\b" replace="$1eu vidéo" />
+<Typo word="jeux vidéo" find="\b([jJ])eux [Vv]id[ée]o(s?)\b" replace="$1eux vidéo$2" />
+</source>
+
+=== K ===
+<source lang="xml">
+<Typo word="keynésianisme" find="\bkeyn[eé]siann?isme\b" replace="keynésianisme" />
+<Typo word="kényan" find="\b([kK])enyan(s?)\b" replace="$1ényan$2" />
+<Typo word="kényane" find="\b([kK])enyan?ne(s?)\b" replace="$1ényane$2" />
+</source>
+
+=== L ===
+<source lang="xml">
+<Typo word="langage" find="\b(l|L)anguage(s?)\b" replace="$1angage$2" />
+<Typo word="latitude" find="\b(l|L)attitude(s?)\b" replace="$1atitude$2" />
+<Typo word="laser" find="\b([lL])azer(s?)\b" replace="$1aser$2" />
+<Typo word="laquelle" find="\b(l|L)aquell?es?\b" replace="$1aquelle" />
+<Typo word="légèreté" find="\b(l|L)[eéèê][jg][eéèê]rr?ett?ée?(s?)\b" replace="$1égèreté$2" />
+<Typo word="lesquels" find="\b(l|L)esque(l|lle)\b" replace="$1esque$2s" />
+<Typo word="lesquels" find="\b(l|L)eque(l|lle)s\b" replace="$1esque$2s" />
+<Typo word="liberté" find="\b(l|L)ibb?[eéèê]rtée?(s?)\b" replace="$1iberté$2" />
+<Typo word="littérature" find="\b(l|L)itérature(s?)\b" replace="$1ittérature$2" />
+<Typo word="localité" find="\b(l|L)occ?all?itt?ée?(s?)\b" replace="$1ocalité$2" />
+<Typo word="lœss" find="\b(l|L)oess\b" replace="$1œss" />
+<Typo word="logohrrée" find="\b(l|L)og(g[gh]*o[hr]*rée*|h[gh]*o*[hr]*rée*|or[hr]*ée*|ohrée*|ohrré)\b" replace="$1ogohrée" />
+<Typo word="longueur" find="\b(l|L)ongu?eur(s?)\b" replace="$1ongueur$2" />
+<Typo word="luire" find="\b(l|L)u[iy]re?\b" replace="$1uire" />
+<Typo word="lycée" find="\b(l|L)ycé(s?)\b" replace="$1ycée$2" />
+</source>
+
+=== M ===
+<source lang="xml">
+<Typo word="maintenant" find="\b(M|m)aintenn?[ae]n(s?|d?|t?s?)\b" replace="$1aintenan$2" />
+<Typo word="majorité" find="\b(m|M)ajorr?itt?ée?(s?)\b" replace="$1ajorité$2" />
+<Typo word="malgré" find="\b(M|m)algr[éè](s?)\b" replace="$1algré" />
+<Typo word="malheureusement" find="\b(M|m)alh?eu?reu?(sement|x|se)\b" replace="$1alheureu$2" />
+<Typo word="mallette" find="\b(M|m)all?ett?e(s?)\b" replace="$1allette$2" />
+<Typo word="manœuvre" find="\b(m|M)anoeuvre(s?|r?)\b" replace="$1anœuvre$2" />
+<Typo word="marier" find="\bmarri(er|ée?s?)\b" replace="mari$1" />
+<Typo word="(m|p)aternité" find="\b([mMpP])att?ernitt?ée?(s?)\b" replace="$1aternité$2" />
+<Typo word="mathématique" find="\b(m|M)att?h?[éeèê]mm?att?h?ique(s?)\b" replace="$1athématique$2" />
+<Typo word="maturité" find="\b(m|M)att?urr?itt?ée?(s?)\b" replace="$1aturité$2" />
+<Typo word="maxima/minima" find="\b([mM]ax|[mM]in)imas\b" replace="$1ima" />
+<Typo word="méchanceté" find="\b(m|M)[eéèê]chan[cs]ett?ée?(s?)\b" replace="$1échanceté$2" />
+<Typo word="Méditerranée" find="\b(m|M)[eé]diterr?ann?ée?\b" replace="Méditerranée" />
+<Typo word="méditerranéen" find="\bm[eé]diterr?ann?ée?n(s?|ne?s?)\b" replace="méditerranéen$1" />
+<Typo word="mégalopole" find="\b(m|M)[eéè]ga(lo)?p[oô]ll?e(s?)\b" replace="$1éga$2pole$3" />
+<Typo word="*-même" find="\b([mMtT]oi|[eE]ux|[lL]ui|[nNvN]ous|[eE]lles?) m[êe]me(s?)\b" replace="$1-même$2" />
+<Typo word="même" find="\b(m|M)emm?e(s?)\b" replace="$1ême$2" />
+<Typo word="méthode" find="\b(m|M)[éeèêë]tt?h?od(es?|iques?|iquement)\b" replace="$1éthod$2" />
+<Typo word="météorologie" find="\b(m|M)[eèéêë]t[eèéêë]orologi(e?|ste?|que?)(s?)\b" replace="$1étéorologi$2$3" />
+<Typo word="mettre" find="\b([aA]d|[cC]om|[cC]ompro|[dD]é|[éÉoO]|[eE]ntre|[pP]er|[pP]ro|[rR]éad|[rR]e|[rR]etrans|[sS]ou|[tT]rans)?me(tant|tre|trait|traient|te(s?)|tent|tiez|tions|tra(s?)|trai(s?)|tront)\b" replace="$1met$2" />
+<Typo word="milieu" find="\b(m|M)illieu\b" replace="$1ilieu" />
+<Typo word="militant" find="\b(m|M)illitan(t(s?)|te(s?)|tisme|tiste(s?))\b" replace="$1ilitan$2" />
+<Typo word="militaire" find="\b([mM]|[aA]ntim|[dD]ém)illita(ires?|risée?s?|irement|risation|risme)\b" replace="$1ilita$2" />
+<Typo word="milliardaire" find="\b(M|m)ill?i?ardi?aire(s?)\b" replace="$1illiardaire$2"/>
+<Typo word="millimètre" find="\b(M|m)ill?imm?[éeè]tre(s?)\b" replace="$1illimètre$2" />
+<Typo word="millionnaire" find="\b(M|m)ill?i?onn?i?aire(s?)\b" replace="$1illionnaire$2"/>
+<Typo word="minimum" find="\b(m|M)imimum(s)?\b" replace="$1inimum$2" />
+<Typo word="ministre" find="\b(m|M)insitre(s)?\b" replace="$1inistre$2" />
+<Typo word="minorité" find="\b(m|M)inn?orr?itt?ée?(s?)\b" replace="$1inorité$2" />
+<Typo word="miroir" find="\b(M|m)irroir(s?)\b" replace="$1iroir$2" />
+<Typo word="mis à" find="\b(M|m)is(e?s?) a\b" replace="$1is$2 à" />
+<Typo word="modèle" find="\b(m|M)odele\b" replace="$1odèle" />
+<Typo word="mœurs" find="\b(m|M)oeurs\b" replace="$1œurs" />
+<Typo word="moitié" find="\b(m|M)oitt?iée?(s?)\b" replace="$1oitié$2" />
+<Typo word="Monarchie de Juillet" find="\b(m|M)onarchie de (J|j)uillet\b" replace="$1onarchie de Juillet" />
+<Typo word="monolithe" find="\b(M|m)onn?ol[yi]th?e(s?)\b" replace="$1onolithe$2" />
+<Typo word="mourir" find="\b(M|m)ourrir\b" replace="$1ourir" />
+<Typo word="Moyen Âge" find="\b[mM]oyen[ -][aAâÂäÄàÀ]ge\b" replace="Moyen Âge" />
+<Typo word="M." find="\b(M|m)r\.?\b" replace="{{M.}}" />
+<Typo word="multiplate(-)forme" find="\b(m|M)ulti[ -]?plates?(-?)forme(s?)\b" replace="$1ultiplate$2forme$3" />
+<Typo word="Munich" find="\b(M|m)ünich(oise?s?)?\b" replace="$1unich$2" />
+<Typo word="municipalité" find="\b(m|M)unn?icipp?all?itt?ée?(s?)\b" replace="$1unicipalité$2" />
+</source>
+
+=== N ===
+<source lang="xml">
+<Typo word="naïveté" find="\b(n|N)a[ïîi]vett?ée?(s?)\b" replace="$1aïveté$2" />
+<Typo word="narrateur" find="\b(n|N)arr?a[ct]t?(eurs?|rices?|ions?|ifs?|ives?|ivement)\b" replace="$1arrat$2" />
+<Typo word="nationalité" find="\b(n|N)a[ct]ionn?all?itt?ée?(s?)\b" replace="$1ationalité$2" />
+<Typo word="navigateur web" find="(n|N)avigateur(s?) +(i|I)nternet" replace="$1avigateur$2 Web" />
+<Typo word="néanmoins" find="\b(n|N)[ée]a[mn]{1,2}oin(s?)\b" replace="$1éanmoins" />
+<Typo word="nécessaire" find="\b(n|N)[éeè](c|ss?)[eéè](ss?|c)airr?(e(s?)|ement(s?))\b" replace="$1écessair$4" />
+<Typo word="négationnisme" find="\b(n|N)égationis(m|t)e(s?)\b" replace="$1égationnis$2e$3" />
+<Typo word="neutralité" find="\b(n|N)eutrall?itt?ée?(s?)\b" replace="$1eutralité$2" />
+<Typo word="neuvième" find="\b(n|N)euvi[ée]me(ment)?\b" replace="$1euvième$2" />
+<Typo word="neveu" find="\b(n|N)euveu\b" replace="$1eveu" />
+<Typo word="neveux" find="\b(n|N)eu?veus\b" replace="$1eveux" />
+<Typo word="nœud" find="\b(n|N)oeud(s?)\b" replace="$1œud$2" />
+<Typo word="nomination" find="\b(n|N)ommination(s?)\b" replace="$1omination$2" />
+<Typo word="nommer" find="\b([nN]|[dD]én|[iI]nn|[Pp]rén|[rR]en|[sS]urn)n?omm?(é(s?)|ée(s?)|er?|ément|able|a(s?)|ai[st]|aient)\b" replace="$1omm$2" />
+<Typo word="normalement" find="\b([nN]|[aA]n|[pP]aran)ormall(e|ement|ité(s?)|ien(s?)|isateur(s)|isatrice(s?)|isation(s?)|iser|isée?(s?)|isai[ts]|isaient)\b" replace="$1ormal$2" />
+<Typo word="notamment" find="\b(n|N)ott?[ae]mm?[ae]nt\b" replace="$1otamment" />
+<Typo word="nourriture" find="\b(n|N)our(ie?|issante?s?|ir|itures?|ices?|iciers?|icières?|issage|isseurs?|isseuses?|issons?|i[ts]|issent|issai[st])\b" replace="$1ourr$2" />
+<Typo word="nouvelle" find="\b(n|N)ouv[eè]le(s?)\b" replace="$1ouvelle$2" />
+</source>
+
+=== O ===
+<source lang="xml">
+<Typo word="obscurité" find="\b(o|O)bscurr?itt?ée?(s?)\b" replace="$1bscurité$2" />
+<Typo word="obtient" find="\b(o|O)btiend\b" replace="$1btient" />
+<Typo word="occasionnellement" find="\b(o|O)cc?asionn?(er|ée?s?|ai[st]|aient|ellement|els?|elles?)\b" replace="$1ccasionn$2" />
+<Typo word="occuper" find="\b(o|O|préo|Préo|ino|Ino)cc?upp?(er?|ée?s?|ai[st]|aient|a|ant(e?|s?|tes?)|ations?|ationnel(le?|les?|s?))\b" replace="$1ccup$2" />
+<Typo word="occurrence" find="\b(o|O)cc?urr?[ae]n(c|ss?)e(s?)\b" replace="$1ccurrence$3" />
+<Typo word="œcuménisme" find="\b(oe|œ|oE)u?cc?umm?[eéèêë]nn?i(s[mt]es?|ques?)\b" replace="œcuméni$2" />
+<Typo word="Œcuménisme" find="\b(Oe|Œ|OE)u?cc?umm?[eéèêë]nn?i(s[mt]es?|ques?)\b" replace="Œcuméni$2" />
+<Typo word="œdème" find="\b(oe|œ|oE)dd?[eéèêë]mm?e(s?)\b" replace="œdème$2" />
+<Typo word="Œdème" find="\b(Oe|Œ|OE)dd?[eéèêë]mm?e(s?)\b" replace="Œdème$2" />
+<Typo word="Œdipe" find="\bO[Ee]u?dipe\b" replace="Œdipe" />
+<Typo word="œdipien" find="\b(pré|post)?oeu?dip" replace="$1œdip" />
+<Typo word="Œil*" find="\bO[Ee]il" replace="Œil" />
+<Typo word="œil*" find="\boeil" replace="œil" />
+<Typo word="œnolog*" find="\b(oe|oE|œ)u?nn?oll?og([iu]es?|iques?)\b" replace="œnolog$2" />
+<Typo word="Œnolog*" find="\b(Oe|OE|Œ)u?nn?oll?og([iu]es?|iques?)\b" replace="Œnolog$2" />
+<Typo word="œsophage*" find="\b(oe|oE|œ)u?[sz]ophage(s?)\b" replace="œsophage$2" />
+<Typo word="Œsophage*" find="\b(Oe|OE|Œ)u?[sz]ophage(s?)\b" replace="Œsophage$2" />
+<Typo word="œstrogène*" find="\b(oe|oE|œ)u?strog[eéèêë]nn?e(s?)\b" replace="œstrogène$2" />
+<Typo word="Œstrogène*" find="\b(Oe|OE|Œ)u?strog[eéèêë]nn?e(s?)\b" replace="Œstrogène$2" />
+<Typo word="œuvr-" find="\boeuvr([a-z])" replace="œuvr$1" />
+<Typo word="Œuvr-" find="\b(OE|Oe)uvr([a-z])" replace="Œuvr$2" />
+<Typo word="œuf" find="\b(OE|Oe)uf(s?)" replace="Œuf$2" />
+<Typo word="œuf" find="\boeuf(s?)\b" replace="œuf$1" />
+<Typo word="offensif" find="\b(o|O)ff?[ae]n[cs]i(fs?|ves?|vement)\b" replace="$1ffensi$2" />
+<Typo word="officiel" find="\b(o|O)ff?i(?:c|ss?)ie(ls?|lles?|ux|uses?|rs?)\b" replace="$1fficie$2" />
+<Typo word="onze" find="\b(o|O)nzes\b" replace="$1nze" />
+<Typo word="opérationnel" find="\b(o|O|ino|Ino)pp?[éeè]rr?a[cst]s?ionn?(els?|elles?)\b" replace="$1pérationn$2" />
+<Typo word="opprobre" find="\b(o|O)pp?r?obre\b" replace="$1pprobre" />
+</source>
+
+=== P ===
+<source lang="xml">
+<Typo word="paraffine" find="\b(p|P)arr?aff?inn?(es?|ée?s?|ages?)\b" replace="$1araffin$2" />
+<Typo word="paraissant" find="\b([pP]|[aA]pp)arr?aiss?ants?\b" replace="$1araissant" />
+<Typo word="parallèle" find="\b([pP]|[aA]ntip)arr?all?[eéè]ll?e(s?|ment?)\b" replace="$1arallèle$2" />
+<Typo word="parallélogramme" find="\b([Pp]ara)ll?l[eéêè]ll?ogramm?e(s?)\b" replace="$1llélogramme$2" />
+<Typo word="parcours" find="\b(p|P)arcour\b" replace="$1arcours" />
+<Typo word="parenthèses" find="\b(p|P)arr?[ae]nth?[èéeêë]se(s?)\b" replace="$1arenthèse$2" />
+<Typo word="parfois" find="\baprfois?\b" replace="parfois" />
+<Typo word="parmi" find="\b(p|P)armi[es]\b" replace="$1armi" />
+<Typo word="parrain" find="\b(p|P)arr?ainn?(s?|age|er?|ée?s?|a|ai[st]?|aient)\b" replace="$1arrain$2" />
+<Typo word="partialité" find="\b(p|P)ar(c|t|ss?)ialitt?ée?(s?)\b" replace="$1artialité$3" />
+<Typo word="particularité" find="\b(p|P)articc?ull?arr?itt?ée?(s?)\b" replace="$1articularité$2" />
+<Typo word="particulier" find="\b(p|P)articc?ull?(ariser|arismes?|arités?|es?|iers?|ières?|ièrement)\b" replace="$1articul$2" />
+<Typo word="particulièrement" find="\b(p|P)articc?ull?i[éeè]re(s?|ment)\b" replace="$1articulière$2" />
+<Typo word="partisan" find="\b(p|P)artisant(s?)\b" replace="$1artisan$2" />
+<Typo word="pauvreté" find="\b(p|P)auvrett?ée?(s?)\b" replace="$1auvreté$2" />
+<Typo word="pèlerin*" find="\b(p|P)[eéèêë]ll?err?i(ne?s?|nages?)\b" replace="$1èleri$2" />
+<Typo word="persane" find="\b(p|P)ersanne(s?)\b" replace="$1ersane$2" />
+<Typo word="personnel" find="\b(p|P)ersonn?(ages?|alisations?|aliser|alisée?s?|alisas?|alisai[ts]|alisaient|alisme|alistes?|el?s?|elles?|ellement|ifications?|ifiée?s?|ifier|ifiait)\b" replace="$1ersonn$2" />
+<Typo word="personnalité" find="\b(p|P)ersonn?all?itée?(s?)\b" replace="$1ersonnalité$2" />
+<Typo word="physique" find="\b(p|P)h[iy]s[iy]que(s?)\b" replace="$1hysique$2" />
+<Typo word="pièce" find="\b(p|P)i[eé]ce(s?)\b" replace="$1ièce$2" />
+<Typo word="plébiscite" find="\b(p|P)l[éeè]bi[sc]{1,2}itt?(es?|ée?s?|er|ais?|ait|aient|as?|ant|aires?)\b" replace="$1lébiscit$2" />
+<Typo word="plupart" find="\b(p|P)l[uû]s?part?s?\b" replace="$1lupart" />
+<Typo word="plusieurs" find="\b(p|P)lusieur[te]?s?\b" replace="$1lusieurs" />
+<Typo word="poèmes" find="\b(p|P)o[êëeé]me(s?)\b" replace="$1oème$2" />
+<Typo word="politique" find="\b(p|P)oltique(s?)\b" replace="$1olitique$2" />
+<Typo word="polonais" find="\b(p|P)oll?onn?ais(e?s?)\b" replace="$1olonais$2" />
+<Typo word="pollution" find="\b(p|P)olution(s?)\b" replace="$1ollution$2" />
+<Typo word="portugais" find="\b(p|P)ortugu?ais(e?s?)\b" replace="$1ortugais$2" />
+<Typo word="posséder" find="\b(p|P)oss?[éeè]d(ante?s?|ée?s?|er)\b" replace="$1osséd$2" />
+<Typo word="possède" find="\b(p|P)oss?[éeè]de(n?t?)\b" replace="$1ossède$2" />
+<Typo word="possibilité" find="\b(p|P)oss?ibill?itée?(s?)\b" replace="$1ossibilité$2" />
+<Typo word="postérité" find="\b(p|P)ost[éèeê]rr?itt?ée?(s?)\b" replace="$1ostérité$2" />
+<Typo word="pourquoi" find="\b(p|P)our?(?:c|qu?)oi(s?)\b" replace="$1ourquoi" />
+<Typo word="plusieurs" find="\b(p|P)lusieures\b" replace="$1lusieurs" />
+<Typo word="plutôt" find="\b(p|P)lutot\b" replace="$1lutôt" />
+<Typo word="poids" find="\b(p|P)oid\b" replace="$1oids" />
+<Typo word="pratiquement" find="\b(p|P)ratiqu[ae]mm?ent\b" replace="$1ratiquement" />
+<Typo word="précédent" find="\b(p|P)r[eéè][cs]{1,2}[eéè]d(a|e)nt(e?s?)\b(?<![pP]récèdent)" replace="$1récéd$2nt$3" />
+<Typo word="précédemment" find="\b(p|P)r[eéè][cs]{1,2}[éeè]d[aeé]mm?ent\b" replace="$1récédemment" />
+<Typo word="précepte" find="\b(p|P)récept(s)\b" replace="$1récepte$2" />
+<Typo word="présent" find="\b(p|P)r[éeè]sent\b" replace="$1résent" />
+<Typo word="président" find="\b(p|P)r[éêe]sid(a|e)nt(s?)\b" replace="$1résid$2nt$3" />
+<Typo word="première" find="\b(p|P)remm?i[éeè]r?(res?|rement)\b" replace="$1remiè$2" />
+<Typo word="prennent" find="\b(app|comp|dép|entrep|m?ép|p|réapp|rep|surp)r[éeêè]nn?(es?|ent)\b" replace="$1renn$2" />
+<Typo word="presque" find="\b(p|P)r[éeêè]s(?:qu|k)es?\b" replace="$1resque" />
+<Typo word="prêter" find="\b(p|P)r[éeêè]t(er?|ée?s?|ai[st])\b" replace="$1rêt$2" />
+<Typo word="principalement" find="\b(p|P)rin[sc]ipp?all?emm?[ae]nt\b" replace="$1rincipalement" />
+<Typo word="procès" find="\b(p|P)rocés\b" replace="$1rocès" />
+<Typo word="professionnel" find="\b(p|P)roff?ess?ionn?e(ls?|lles?|llement)\b" replace="$1rofessionne$2" />
+<Typo word="programme" find="\b(P|p)r?or?gramm?(ai?s?|es?|ée?s?|er|ations?|eurs?|euses?|atiques?|ant)" replace="$1rogramm$2" />
+<Typo word="progrès" find="\b(p|P)rogr[eéè]s?\b" replace="$1rogrès" />
+<Typo word="propreté" find="\b(p|P)roprett?ée?(s?)\b" replace="$1ropreté$2" />
+<Typo word="prospérité" find="\b(p|P)rosp[eéè]rr?itt?ée?(s?)\b" replace="$1rospérité$2" />
+<Typo word="proximité" find="\b(p|P)roximm?itt?ée?(s?)\b" replace="$1roximité$2" />
+<Typo word="puissamment" find="\b(p|P)uiss?amm?[ae]nts?\b" replace="$1uissamment" />
+</source>
+
+=== Q ===
+<!-- Attention, il y a des exceptions : "quand à huit heures, il prend le train, Paul décide de..." ou bien "quand à son tour il eut fini, Paul a déclaré...", de quand à quand, etc. -->
+<!--<Typo word="quant à" find="\b(Q|q)uand (à|au|aux)\b" replace="$1uant $2" />-->
+<source lang="xml">
+<Typo word="qualité" find="\b(q|Q)u?all?itt?ée?(s?)\b" replace="$1ualité$2" />
+<Typo word="quantité" find="\b(q|Q)u?antitt?ée?(s?)\b" replace="$1uantité$2" />
+<Typo word="quarante" find="\b(Q|q)uarantes\b" replace="$1uarante" />
+<Typo word="quatorze" find="\b(Q|q)uatorzes\b" replace="$1uatorze" />
+<Typo word="quatre" find="\b(Q|q)uatres\b" replace="$1uatre" />
+<Typo word="quatrième" find="\b(Q|q)uatri[ée]me(ment)?\b" replace="$1uatrième$2" />
+<Typo word="québécois" find="\b(q|Q)uébecois(es?)?\b" replace="$1uébécois$2" />
+<Typo word="quel que soit" find="\b(q|Q)uelque soit le\b" replace="$1uel que soit le" />
+<Typo word="quelle que soit" find="\b(q|Q)uelque soit ([ls]a)\b" replace="$1uelle que soit $2" />
+<Typo word="questionnaire" find="\b(Q|q)uestionn?airr?e(s?)\b" replace="$1uestionnaire$2" />
+<Typo word="quinze" find="\b(Q|q)uinzes\b" replace="$1uinze" />
+<Typo word="quittance" find="\b(Q|q)uitt?an[cs]e(s?)\b" replace="$1uittance$2" />
+</source>
+
+=== R ===
+<source lang="xml">
+<Typo word="raconter" find="\b(r|R)accont((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant|ables?|ars?)\b" replace="$1acont$2" />
+<Typo word="raccourci" find="\b(r|R)acc?our[cs](ie?s?|ir|issi?ons|issi?ez|issent|issant)\b" replace="$1accourc$2" />
+<Typo word="raffin*" find="\b(r|R)aff?inn?(er|ée?s?|ant|antes?|es?|i?ons|i?ez|ent|ai?s?|ait|aient|erai?s?|erait|eraient|eries?|ages?)\b" replace="$1affin$2" />
+<Typo word="rancœur" find="\b(r|R)ancoeur(s?)\b" replace="$1ancœur$2" />
+<Typo word="rapidement" find="\b(r|R)app?idemm?[ae]nt\b" replace="$1apidement" />
+<Typo word="rareté" find="\b(r|R)arr?ett?ée?(s?)\b" replace="$1areté$2" />
+<Typo word="rationnel" find="\b([rR]|[iI]rr)ationn?(ellement|els?|elles?|ements?|er|ée?s?|a|ai[st]|aient)\b" replace="$1ationn$2" />
+<Typo word="rationalité" find="\b([rR]|[iI]rr)ationn?alité\b" replace="$1ationalité" />
+<Typo word="réalité" find="\b([rR]|[iI]rr)[ée]alitt?ée?(s?)\b" replace="$1éalité$2" />
+<Typo word="record" find="\b(r|R)ecc?ord?(s|mans?|men)?\b" replace="$1ecord$2" />
+<Typo word="reçu" find="\b(r|R)ecu(e?s?)\b" replace="$1eçu$2" />
+<Typo word="récurrent" find="\b(r|R)[éeè]cc?urr?[ae]n(te?|ce)\b" replace="$1écurren$2" />
+<Typo word="récemment" find="\b(r|R)[éeè][cs]{1,2}[aeéè]mm?ent\b" replace="$1écemment" />
+<Typo word="recenser" find="\b(r|R)e(?:cc?|ss?)en(?:cc?|ss?)((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant|ement)\b" replace="$1ecens$2" />
+<Typo word="rééd." find="\b(r|R)[eé]{2}d.\b" replace="$1ééd." />
+<Typo word="réellement" find="\b(r|R)[eé]{2}ll?emm?ent\b" replace="$1éellement" />
+<Typo word="réflexion" find="\b(r|R)éflection(s?)\b" replace="$1éflexion$2" />
+<Typo word="refus" find="\b(r|R)efut?s?\b" replace="$1efus" />
+<Typo word="règle" find="\b(r|R)[eé]gl(ements?|es?)\b" replace="$1ègl$2" />
+<Typo word="réglé" find="\b(r|R)[eè]gl(ables?|ages?|ée?s?|e[rt]s?|ettes?|eurs?|euses?|isse?|os?|oirs?|ures?)\b" replace="$1égl$2" />
+<Typo word="règne" find="\b([iI]mpr|[rR])[eé]gne(s|nt)\b" replace="$1ègne$2" />
+<Typo word="régulièrement" find="\b([rR]|[iI]rr)[eéè]gull?i[eéè]rr?emm?[ae]nt\b" replace="$1égulièrement" />
+<Typo word="renouveler" find="\b(r|R)enouvell(er|ée?s?|a|ai[st]|aient)\b" replace="$1enouvel$2" />
+<Typo word="renouvellement" find="\b(r|R)enouvell?emm?ent(s?)\b" replace="$1enouvellement$2" />
+<Typo word="reprocher" find="\b(r|R)epproch((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant)\b" replace="$1eproch$2" />
+<Typo word="responsable" find="\b([rR]|[iI]rr)eponsable\b" replace="$1esponsable" />
+<Typo word="résonance" find="\b(r|R)([éeèê])sonn?ance(s?)\b" replace="$1$2sonance$3" />
+<Typo word="responsabilité" find="\b([rR]|[iI]rr)esponsabb?ill?itt?ée?(s?)\b" replace="$1esponsabilité$2" />
+<Typo word="ressusciter" find="\b(r|R)(?:e|é|è)[sc]{1,2}u[sc]{1,2}it((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant)\b" replace="$1essuscit$2" />
+<Typo word="résurrection" find="\b(r|R)[eéè]ss?urr?ection(s?)\b" replace="$1ésurrection$2" />
+<Typo word="rythme" find="\b(r|R)h?yth?m(es?|iques?|ée?s?)\b" replace="$1ythm$2" />
+</source>
+
+=== S ===
+<source lang="xml">
+<Typo word="sagacité" find="\b(s|S)agg?acitt?ée?(s?)\b" replace="$1agacité$2" />
+<Typo word="saleté" find="\b(s|S)all?e?tt?ée?(s?)\b" replace="$1aleté$2" />
+<Typo word="satiété" find="\b(s|S)a(ss?|c|t)i[éeè]tt?ée?(s?)\b" replace="$1atiété$3" />
+<Typo word="scénarios" find="\b(s|S)c?[éè]nariis?\b" replace="$1cénarios" />
+<!-- scénarii (avec accent), pluriel incorrect de scénario. Ne pas corriger scenarii (sans accent) pluriel archaïque du mot italien scenario, également archaïque en français -->
+<Typo word="scène" find="\b([sS])c[eé]ne(s?)\b" replace="$1cène$2" />
+<Typo word="schéma" find="\b(s|S)c?h[éeè]mat?(s?)\b" replace="$1chéma$2" />
+<Typo word="science" find="\b(s|S)ien(ces?|tifiques?|tifiquement|tis[tm]es?)\b" replace="$1cien$2" />
+<Typo word="sculpteur" find="\b(s|S)cult(eur|euse|rice)(s?)\b" replace="$1culpt$2$3" />
+<Typo word="sèchement" find="\b(s|S)[ée]chement\b" replace="$1èchement" />
+<Typo word="sécher" find="\b(s|S)[e]ch(er|eresses?|eries?)\b" replace="$1éch$2" />
+<Typo word="sécher" find="\b(s|S)[èe]ch(eurs?|euses?|oirs?)\b" replace="$1éch$2" />
+<Typo word="sécurité" find="\b(s|S)écc?urr?itt?ée?(s?)\b" replace="$1écurité$2" />
+<Typo word="seize" find="\b(s|S)ei[zs]es?\b" replace="$1eize" />
+<Typo word="sélectionner" find="\b([sS]|[pP]rés)[éeè]lection?(s?|n(?:(?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant|able|eu(?:r|se)s?))\b" replace="$1élection$2" />
+<Typo word="sensibilité" find="\b(s|S)en[cs]ibb?ill?itt?ée?(s?)\b" replace="$1ensibilité$2" />
+<Typo word="séparément" find="\b(s|S)[eéèê]pp?arr?[eéèê]mm?ent\b" replace="$1éparément" />
+<Typo word="septième" find="\b(s|S)epti[ée]me(ment)?\b" replace="$1eptième$2" />
+<Typo word="simplicité" find="\b(s|S)implicitt?ée?(s?)\b" replace="$1implicité$2" />
+<Typo word="simultanément" find="\b(s|S)imm?ultann?[éeè]mm?[ae]nt\b" replace="$1imultanément" />
+<Typo word="sixième" find="\b(s|S)ixi[ée]me(ment)?\b" replace="$1ixième$2" />
+<Typo word="société" find="\b(s|S)oci[eéêè]tt?[eéêè]e?(s?)\b" replace="$1ociété$2" />
+<Typo word="soixante" find="\b(s|S)oixantes\b" replace="$1oixante" />
+<Typo word="sœur" find="\b(s|S)oeur(s?)\b" replace="$1œur$2" />
+<Typo word="sollicit*" find="\b(s|S)oll?icitt?(er|ée?s?|ant|es?|i?ons|i?ez|ent|ai?s?|ait|aient|erai?s?|erait|eri?ons|eri?ez|eront|eraient|ations?|udes?|eurs?|euses?)\b" replace="$1ollicit$2" />
+<Typo word="solution" find="\b(s|S)oll?ution?(s?|n(?:(?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant))\b" replace="$1olution$2" />
+<Typo word="sous-jacent" find="\b(s|S)ous[ -]jacent(e?s?)\b" replace="$1ous-jacent$2" />
+<Typo word="souterrain" find="\b(s|S)outt?err?ain(s?)\b" replace="$1outerrain$2" />
+<Typo word="souvent" find="\b(s|S)ouv[ae]nt?s?\b" replace="$1ouvent" />
+<Typo word="spécial" find="\b(s|S)p[eéè][cs]iall?(es?|ement|ités?|is(?:(?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant|ations?|tes?))?\b" replace="$1pécial$2" />
+<Typo word="spécialité" find="\b(s|S)péciall?itt?ée?(s?)\b" replace="$1pécialité$2" />
+<Typo word="spectacle" find="\b(s|S)p[eèé]ctacle(s?)\b" replace="$1pectacle$2" />
+<Typo word="statu quo" find="\b(s|S)tatu[st]?(?:-| +)quo\b" replace="$1tatu quo" />
+<Typo word="statut" find="\b(s|S)tatus\b" replace="$1tatut" />
+<Typo word="stérilité" find="\b(s|S)térr?ill?itt?ée?(s?)\b" replace="$1térilité$2" />
+<Typo word="stocker" find="\b(s|S)to(c|qu)(ages?|ée?s?|er)\b" replace="$1tock$3" />
+<Typo word="subjectivité" find="\b([sS]u|[oO])bjectivitt?ée?(s?)\b" replace="$1bjectivité$2" />
+<Typo word="succès" find="\b([sS]|[iI]ns)ucc[eé]s\b" replace="$1uccès" />
+<Typo word="succinct" find="\b(s|S)ucc?int(e?s?|ement)\b" replace="$1uccinct$2" />
+<Typo word="succursale" find="\b(s|S)ucc?ursall?e(s?)\b" replace="$1uccursale$2" />
+<Typo word="suffisamment" find="\b([sS]|[iI]ns)uff?is[ae]mm?[ea]nts?\b" replace="$1uffisamment" />
+<Typo word="suffisant" find="\b([sS]|[iI]ns|[aA]utos)ufisant(e?s?)\b" replace="$1uffisant$2" />
+<Typo word="suffisance" find="\b([sS]|[iI]ns|[aA]utos)ufisance(s?)\b" replace="$1uffisance$2" />
+<Typo word="supériorité" find="\b(s|S)upp?érr?iorr?itt?ée?(s?)\b" replace="$1upériorité$2" />
+<Typo word="supplément" find="\b(s|S)upp?ll?[eéè]mm?ent(s?|aires?)\b" replace="$1upplément$2" />
+<Typo word="supprimer" find="\b(s|S)upp?rimm?((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant|able)\b" replace="$1upprim$2" />
+<Typo word="suppression" find="\b(s|S)upp?ress?ion(s?)\b" replace="$1uppression$2" />
+<Typo word="support*" find="\b(s|S)uport" replace="$1upport" />
+<Typo word="susceptible" find="\b(s|S)u(c[sc]*|s*|sc[sc]+)eptib(les?|ilités?)\b" replace="$1usceptib$3" />
+<Typo word="suédois" find="\b(s|S)u[èe]dois(es?)\b" replace="$1uédois$2" />
+<Typo word="syndrome" find="\b(s|S)yndrôme(s?)\b" replace="$1yndrome$2" />
+<Typo word="symétrie" find="\b([sS]|[aA]ntis)ymm?[éeèêë]tri(es?|ques?)\b" replace="$1ymétri$2" />
+<Typo word="symptôme" find="\b(s|S)ymptome(s?)\b" replace="$1ymptôme$2" />
+<Typo word="syntaxe" find="\b(s|S)[iy]nth?axe(s?)\b" replace="$1yntaxe$2" />
+<Typo word="système" find="\b(s|S)yst[êe]me(s?)\b" replace="$1ystème$2" />
+</source>
+
+=== T ===
+<source lang="xml">
+<Typo word="tchèque" find="\b(T|t)ch[eéê]que(s)?\b" replace="$1chèque$2" />
+<Typo word="territoire" find="\b(T|t)err?itt?oirr?e(s?)\b" replace="$1erritoire$2" />
+<Typo word="théori*" find="\b(T|t)h?[éeèê]orr?i(es?|ques?|quement|ciens?|ciennes?|ser|sée?s?|ses?|si?ons|si?ez|sent|sai?s?|sait|saient|serai?s?|serait|seraient|seront|seri?ons|seri?ez)\b" replace="$1héori$2" />
+<Typo word="timidité" find="\b(t|T)imm?idd?itt?ée?(s?)\b" replace="$1imidité$2" />
+<Typo word="tort" find="\b(à|À|a[is]|a|ont|avai[st]|avi?ons|avi?ez|avaient|eu|avoir|en|pas) tord\b" replace="$1 tort" />
+<Typo word="totalement" find="\b(T|t)otall?emm?ent\b" replace="$1otalement" />
+<Typo word="totalité" find="\b(t|T)ott?all?itt?ée?(s?)\b" replace="$1otalité$2" />
+<Typo word="toujours" find="\b(T|t)oujoure?s?\b" replace="$1oujours" />
+<Typo word="dans tout le" find="\b(D|d)ans (T|t)ous le \b" replace="$1ans $2out le " />
+<Typo word="tous les" find="\b(T|t)out les\b(?<!(?:[eE]n|[aA]vant|[Mm]algré)\s+(T|t)out les)" replace="$1ous les" />
+<Typo word="toutefois" find="\b(T|t)our?tefois?\b" replace="$1outefois" />
+<Typo word="traditionnel" find="\b(T|t)raditionn?el(s?|les?|lement?)\b" replace="$1raditionnel$2" />
+<Typo word="trafic" find="\b(T|t)raff+ic(s?)\b" replace="$1rafic$2" />
+<Typo word="tranquillité" find="\b(t|T)ranqu?ill?itt?ée?(s?)\b" replace="$1ranquillité$2" />
+<Typo word="travaux" find="\b(t|T)rave?au(s?|x?)\b" replace="$1ravaux" />
+<Typo word="treize" find="\b(T|t)rei[sz]es" replace="$1reize" />
+<Typo word="trente" find="\b(T|t)rentes\b" replace="$1rente" />
+<Typo word="très" find="\b(T|t)rés\b" replace="$1rès" />
+<Typo word="troisième" find="\b(T|t)roisi[ée]me(ment)?\b" replace="$1roisième$2" />
+<Typo word="trombone" find="\b(T|t)rombonn?e(s?)\b" replace="$1rombone$2" />
+<Typo word="trompette" find="\b(T|t)r[ou]mp(èt|ett?)e(s?)\b" replace="$1rompette$3" />
+<Typo word="trophée" find="\b(T|t)roph[éêèëe]e\b" replace="$1rophée" />
+</source>
+
+=== U ===
+<source lang="xml">
+<Typo word="une espèce" find="\b(U|u)n esp[èeé]ce\b" replace="$1ne espèce" />
+<Typo word="unité" find="\b(u|U)nn?itt?ée?(s?)\b" replace="$1nité$2" />
+<Typo word="université" find="\b(u|U)nn?iversitt?ée?(s?)\b" replace="$1niversité$2" />
+<Typo word="utiliser" find="\b(u|U)tt?ill?" replace="$1til" />
+</source>
+
+=== V ===
+<source lang="xml">
+<Typo word="vanité" find="\b(v|V)ann?itt?ée?(s?)\b" replace="$1anité$2" />
+<Typo word="variété" find="\b(v|V)arr?iétt?ée?(s?)\b" replace="$1ariété$2" />
+<Typo word="velours" find="\b(v|V)ell?ourt?\b" replace="$1elours" />
+<Typo word="verbalement" find="\b(v|V)erball?emm?ent\b" replace="$1erbalement" />
+<Typo word="véracité" find="\b([vV][éo])rr?acitt?ée?(s?)\b" replace="$1racité$2" />
+<Typo word="vérifier" find="\b([vV]|[rR]ev)[éeè]rr?iff?" replace="$1érif" />
+<Typo word="vérité" find="\b(v|V)[eéèê]rr?itt?ée?(s?)\b" replace="$1érité$2" />
+<Typo word="vêtement" find="\b(V|v)[eéèêë]temm?ent(s?)\b" replace="$1êtement$2" />
+<Typo word="violemment" find="\b(v|V)ioll?[ae]mm?ent\b" replace="$1iolemment" />
+<Typo word="visionner" find="\b([vV])ision((?:er)?i?(?:ez|ons)|ée?s?|e(?:u?s(?:es?)?)?|(?:er)?a(?:i(?:ent|s|t))?|er(?:ai|as|ont)?|aires?|(?:èr)?ent|ant)\b" replace="$1isionn$2" />
+<Typo word="vœu" find="\b(v|V)oeu(x?)\b" replace="$1œu$2" />
+<Typo word="vœux" find="\b(v|V)(oe|œ)us\b" replace="$1œux" />
+<Typo word="volatilité" find="\b(v|V)oll?att?ill?itt?ée?(s?)\b" replace="$1olatilité$2" />
+<Typo word="volonté" find="\b(v|V)oll?ontt?ée?(s?)\b" replace="$1olonté$2" />
+<Typo word="volontiers" find="\b(v|V)oll?ontiers?\b" replace="$1olontiers" />
+<Typo word="vraisemblable" find="\bvrais?sembl[a|e]ble(ment)?\b" replace="vraisemblable$1" />
+<Typo word="vulgarité" find="\b(v|V)ulgarr?itt?ée?(s?)\b" replace="$1ulgarité$2" />
+<Type word="vis-à-vis" find="\b(v|V)is[ -][aà][ -]vis\b" replace="$1is-à-vis" />
+</source>
+
+=== W ===
+<source lang="xml">
+<Typo word="wagon" find="\b(W|w)aggon(s?)\b" replace="$1agon$2" />
+<Typo word="Wehrmacht" find="\b[Ww]hermacht\b" replace="Wehrmacht" />
+<Typo word="Wehrmacht" find="\b[Ww]ermacht\b" replace="Wehrmacht" />
+</source>
+
+=== X ===
+<source lang="xml">
+</source>
+
+=== Y ===
+<source lang="xml">
+<Typo word="Yémen" find="\b[Yy][ée]men\b" replace="Yémen" />
+</source>
+
+=== Z ===
+<source lang="xml">
+</source>
+
+== Règles grammaticales ==
+
+Cette section devrait être réservée aux erreurs purement ''grammaticales''. Il faudrait surtout éviter d'y inclure des expressions rationnelles qui recherchent inutilement des occurrences grammaticalement correctes dans le but de corriger par la même occasion des erreurs ''orthographiques'' ou ''typographiques'', au lieu d'utiliser à cette fin les sections précédentes.
+
+<source lang="xml">
+<Typo word="à apparaître" find="\ba (n['’])?apparaître\b" replace="à $1apparaître" />
+<Typo word="à avoir" find="\ba (n['’]|en )?avoir\b" replace="à $1avoir" />
+<Typo word="à comparer" find="\ba ([ns]e |en )?comparer\b" replace="à $1comparer" />
+<Typo word="à comprendre" find="\ba ([mnst]e |[nv]ous |en )?comprendre\b" replace="à $1comprendre" />
+<Typo word="à compter" find="\ba ([ns]e |en )?compter\b" replace="à $1compter" />
+<Typo word="a contrario" find="\bà contrario" replace="a contrario" />
+<Typo word="A contrario" find="\bÀ contrario" replace="A contrario" />
+<Typo word="à défendre" find="\ba ([ns]e |en |les? )?défendre\b" replace="à $1défendre" />
+<Typo word="à définir" find="\ba ([ns]e |en )?définir\b" replace="à $1définir" />
+<Typo word="à dire" find="\ba ([ns]e |en )?dire\b" replace="à $1dire" />
+<Typo word="à être" find="\ba (n['’]|en )?être\b" replace="à $1être" />
+<Typo word="à faire" find="\ba ([ns]e |en )?faire\b" replace="à $1faire" />
+<Typo word="à finir" find="\ba ([ns]e |en )?finir\b" replace="à $1finir" />
+<Typo word="à jouer" find="\ba ([ns]e |en )?jouer\b" replace="à $1jouer" />
+<Typo word="à mettre" find="\ba ([nms]e )?mettre\b" replace="à $1mettre" />
+<Typo word="à obtenir" find="\ba (n['’])?obtenir\b" replace="à $1obtenir" />
+<Typo word="à partir" find="\ba partir\b" replace="à partir" />
+<Typo word="à placer" find="\ba ([ns]e |en )?placer\b" replace="à $1placer" />
+<Typo word="à poser" find="\ba ([ns]e |en )?([a-zé]*)poser\b" replace="à $1$2poser" />
+<Typo word="à prendre" find="\ba ([ns]e |en |le |lui |les )?prendre\b" replace="à $1prendre" />
+<Typo word="à produire" find="\ba ([ns]e |en )?produire\b" replace="à $1produire" />
+<Typo word="à propos" find="\ba propos\b" replace="à propos" />
+<Typo word="à remplacer" find="\ba ([ns]e |en )?remplacer\b" replace="à $1remplacer" />
+<Typo word="à se" find="\ba se\b" replace="à se" />
+<Typo word="à tenir" find="\ba ([ns]e |en |le |la |les )?(re|dé|main)?tenir\b" replace="à $1$2tenir" />
+<Typo word="à utiliser" find="\ba (n['’]|en )?utiliser\b" replace="à $1utiliser" />
+<Typo word="à vérifier" find="\ba ([ns]e |en )?vérifier\b" replace="à $1vérifier" />
+<Typo word="à voir" find="\ba ([ns]e |en |sa|re|pré)?voir\b" replace="à $1voir" />
+<Typo word="comme convenu" find="\b(c|C)omme convenu[est]s?\b" replace="$1omme convenu" />
+<Typo word="comme prévu" find="\b(c|C)omme prévu[est]s?\b" replace="$1omme prévu" />
+<Typo word="en termes de" find="\b(e|E)n terme (d['’e])\b" replace="$1n termes $2" />
+<Typo word="il peuvent" find="\b(i|I)l peuvent\b" replace="$1ls peuvent" />
+<Typo word="il veulent" find="\b(i|I)l veulent\b" replace="$1ls veulent" />
+<Typo word="qu+voyelle" find="\b([Qq])ue ([AEIOUYaeéèêiouy])" replace="$1u'$2" />
+<Typo word="se sont succédé" find="\bs(e +son|['’]es)t?([ \w,()]{0,50})succ?[éèe]dé(?:s|es?)\b" replace="s$1t$2succédé" />
+<Typo word="en quelque sorte 1" find="\b(e|E)n +quelques +sortes?\b" replace="$1n quelque sorte" />
+<Typo word="en quelque sorte 2" find="\b(e|E)n +quelques? +sort(es)?\b" replace="$1n quelque sorte" />
+<Typo word="quant à" find="\b(Q|q)uan[dt]\s*[aà]\b" replace="$1uant à" />
+</source>
+
+[[Catégorie:Wikipédia:Orthographe]]

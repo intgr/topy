@@ -1,0 +1,10 @@
+<source lang="xml">
+<Typo word="agressie" find="([Aa])ggressie" replace="$1gressie" />
+<Typo word="Gandhi" find="Ghandi" replace="Gandhi" />
+<Typo word="klassifikasie" find="([Kk])lasifikasie" replace="$1lassifikasie" />
+<Typo word="komittee" find="([Kk])omittee" replace="$1omitee" />
+<Typo word="kommitee" find="([Kk])ommitee" replace="$1omitee" />
+<Typo word="kommittee" find="([Kk])ommittee" replace="$1omitee" />
+<Typo word="Switserland" find="Switzerland" replace="Switserland" />
+
+</source>

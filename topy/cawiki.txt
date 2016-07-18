@@ -1,0 +1,425 @@
+{{drecera|[[VP:AWB/T]]}}
+Aquesta és la pàgina en català per la correcció de faltes d'ortografia i errors tipogràfics usant el programa [[:en:Wikipedia:AutoWikiBrowser|AWB]].
+
+Vigileu amb els canvis que hi posa ATENCIÓ. Això vol dir que generalment el canvi proposat serà útil, però en certs casos no. Heu de tenir en compte aquests casos.
+
+Existeix una pàgina de proves; [[Viquipèdia:AutoWikiBrowser/Typos/Test]] per a tenir exemples on refinar les substitucions.
+
+== Noves entrades ==
+
+== Signes de puntuació i altres caràcters ==
+<pre>
+<Typo word="·" find="([^l])l(\.|-|_|•)l" replace="$1l·l" />
+<Typo word="'" find="´" replace="'" />
+<Typo word="'" find="’" replace="'" />
+<Typo word=" " find="  " replace=" " />
+<Typo word="..." find="..." replace="…" />
+</pre>
+
+== Diacrítics ==
+Atenció, potser alguns d'aquests falla massa sovint i s'hauria d'eliminar, però algun en general dóna molt bons resultats.
+<pre>
+<Typo word="Bé ATENCIÓ: be" find="\b(B|b)[eè]\b" replace="$1é" />
+<Typo word="És+article ATENCIÓ: es..." find="\bEs (un|el|la|una|més|mes|molt|damunt|sobre|encara|de|per|a|que)\b" replace="És $1" />
+<Typo word="és+article ATENCIÓ: es..." find="\bes (un|el|la|una|més|mes|molt|damunt|sobre|encara|de|per|a|que)\b" replace="és $1" />
+<Typo word="És+l' ATENCIÓ: es..." find="\bEs (l'|d')\b" replace="És $1" />
+<Typo word="és+l' ATENCIÓ: es..." find="\bes (l'|d')\b" replace="és $1" />
+<Typo word="És l'..." find="\bEs l'" replace="És l'" />
+<Typo word="és l'..." find="\bes l'" replace="és l'" />
+<Typo word="Es van ATENCIÓ: És van" find="\bÉs (va|van|varen)\b" replace="Es $1" />
+<Typo word="es van ATENCIÓ: és van" find="\bés (va|van|varen)\b" replace="es $1" />
+<Typo word="està ATENCIÓ: articles en valencià" find="\b(E|e)sta\b" replace="$1stà" />
+<Typo word="féu ATENCIÓ: feu" find="\b(F|f)eu\b" replace="$1éu" />
+<Typo word="ús" find="\b([Ll]'|[Uu]n )us\b" replace="$1ús" />
+</pre>
+
+== A ==
+<pre>
+<Typo word="À" find="Á" replace="À" />
+
+<Typo word="" find="González" replace="Gonz_____aacute_____lez" />
+<Typo word="à" find="á" replace="à" />
+<Typo word="" find="_____aacute_____" replace="á" />
+
+<Typo word="a.C." find="\ba.C.\b" replace="aC" />
+<Typo word="A més" find="\b(A|a)dem[eé]s\b" replace="$1 més" />
+<Typo word="Això" find="\b(A|a)ixo\b" replace="$1ixò" />
+<Typo word="Alemany" find="\b(A|a)lem[aà]\b" replace="$1lemany" />
+<Typo word="Alemanya" find="\b(A|a)lemani?a\b" replace="$1lemanya" />
+<Typo word="Allò" find="\b(A|a)ll[oó]\b" replace="$1llò" />
+<Typo word="Amb" find="([^\[]\b[Aa])m\b" replace="$1mb" />
+<Typo word="Ambdós" find="(A|a)mbd[oò]s" replace="$1mbdós" />
+<Typo word="Antifaç" find="\b(A|a)ntifàs\b" replace="$1ntifàç" />
+<Typo word="Aquàtic" find="\b(A|a)[cq][uü][aà]ti" replace="$1quàti" />
+<Typo word="Àudio" find="\b[AÁ]udio\b" replace="Àudio" />
+<Typo word="àudio" find="\b[aá]udio\b" replace="àudio" />
+<Typo word="Àrab" find="\b[AÁ]rab(s?)" replace="Àrab$1" />
+<Typo word="àrab" find="\b[aá]rab(s?)" replace="àrab$1" />
+<Typo word="Àrea" find="\b[AÁ]rea\b" replace="Àrea" />
+<Typo word="àrea" find="\b[aá]rea\b" replace="àrea" />
+<Typo word="Assassí..." find="\b(A|a)ss?[ae]ss?[ií]" replace="$1ssass$2" />
+<Typo word="Abans ATENCIÓ: Abans o avanç?" find="\b(A|a)vans\b" replace="$1bans" />
+<Typo word="Arpa ATENCIÓ: Harpia" find="\b(H|h)arp" replace="arp" />
+</pre>
+
+== B ==
+<pre>
+<Typo word="Balena" find="\b(B|b)allen(a|es)" replace="$1alen$2" />
+<Typo word="Butlla" find="\b(B|b)ull(a|es)\b" replace="$1utll$2" /> 
+</pre>
+
+== C ==
+<pre>
+<Typo word="Cabdill" find="\b(C|c)apdill" replace="$1abdill" />
+<Typo word="Camí" find="\b(C|c)ami\b" replace="$1amí" />
+<Typo word="Càmera ATENCIó: També cambra" find="\b(C|c)amera\b" replace="$1àmera" />
+<Typo word="Canvi..." find="\b(C|c)ambi" replace="$1anvi" />
+<Typo word="Cartellera" find="\b(C|c)arteler" replace="$1arteller" />
+<Typo word="Català" find="(C|c)atalá" replace="$1atalà" />
+<Typo word="Cherok..." find="\b(X|x)erok" replace="Cherok" />
+<Typo word="Complex" find="\b(C|c)omplexe\b" replace="$1omplex" />
+<Typo word="Complexos" find="\b(C|c)omplexes\b" replace="$1omplexos" />
+<Typo word="Compondre ATENCIÓ: Composar, rarament, però pot ser correcte" find="(C|c)omposaria" replace="$1ompondria" />
+<Typo word="Compondre" find="(C|c)omposat" replace="$1ompost" />
+<Typo word="Compondre" find="(C|c)omposav" replace="$1omponi" />
+<Typo word="Compondre" find="(C|c)omposant" replace="$1omponent" />
+<Typo word="Compondre" find="(C|c)omposar" replace="$1ompondre" />
+<Typo word="Compondre" find="(C|c)omposada" replace="$1omposta" />
+<Typo word="Compondre" find="(C|c)omposades" replace="$1ompostes" />
+<Typo word="Compondre" find="(C|c)omposà" replace="$1ompongué" />
+<Typo word="Compondre" find="(C|c)omposa" replace="$1ompon" />
+<Typo word="Comprèn" find="(C|c)omprén" replace="$1omprèn" />
+<Typo word="Conèixer" find="(C|c)on[eé]ixer\b" replace="$1onèixer" />
+<Typo word="Connec..." find="\b(C|c)one(c|x)(\w)" replace="$1onne$2$3" />
+<Typo word="Connot..." find="\b(C|c)ono(t|v)\w" replace="$1onno$2" />
+<Typo word="Construir" find="(C|c)onstruïr\b" replace="$1onstruir" />
+<Typo word="Context" find="\b(C|c)ontexte\b" replace="$1ontext" />
+<Typo word="Contextos" find="\b(C|c)ontextes\b" replace="$1ontextos" />
+<Typo word="Corba" find="(C|c)[ou]r[bv](a|es)([^t])" replace="$1orb$2$3" />
+</pre>
+
+== D ==
+<pre>
+<Typo word="Dans..." find="\b(D|d)anç" replace="$1ans" />
+<Typo word="Davall..." find="\b(D|d)evall" replace="$1avall" />
+<Typo word="Davant" find="\b(D|d)evant" replace="$1avant" />
+<Typo word="dC" find="\bd.C.\b" replace="dC" />
+<Typo word="Decisiu" find="\b(D|d)ecissiu" replace="$1ecisiu" />
+<Typo word="Desafiament" find="\b(D|d)esafio" replace="$1esafiament" />
+<Typo word="Desaparegut" find="\b(D|d)esaparescu" replace="$1esaparegu" />
+<Typo word="Des de" find="\b(D|d)esde" replace="$1es de" />
+<Typo word="Desembre" find="\b(D|d)ecembre" replace="$1esembre" />
+<Typo word="Després" find="\b(D|d)esp[ur][eèé]s\b" replace="$1esprés" />
+<Typo word="Difícil" find="\b(D|d)ificil" replace="$1ifícil" />
+<Typo word="Distància" find="(D|d)istanci(a|es)\b" replace="$1istànci$2" />
+<Typo word="Diferència" find="(D|d)ifer[eé]nci(a|es)\b" replace="$1iferènci$2" />
+<Typo word="Dimensió" find="(D|d)imensi[oò]\b" replace="$1imensió" />
+<Typo word="Drama..." find="(D|d)rm(a|à)" replace="$1ram$2" />
+</pre>
+
+== E ==
+<pre>
+<Typo word="Electrònic..." find="(E|e)lectr[oó]ni(c|q)" replace="$1lectròni$2" />
+<Typo word="Emmagatze..." find="\b(E|e)mmagatza" replace="$1mmagatze" />
+<Typo word="Empíric..." find="(E|e)mpiri(c|q)" replace="$1mpíri$2" />
+<Typo word="Emprar" find="\b(E|e)emplear" replace="$1mprar" />
+<Typo word="Escepticis" find="\b(E|e)esceptisis" replace="$1scepticis" />
+<Typo word="Església" find="(E|e)sgl[eè]si(a|es)\b" replace="$1sglési$2" />
+<Typo word="Estadística" find="(E|e)stadisti" replace="$1stadísti" />
+<Typo word="Estran..." find="\b(E|e)xtran" replace="$1stran" />
+<Typo word="Etimologia" find="(E|e)timològia" replace="$1timologia" />
+<Typo word="EUA" find="\bEEUU" replace="EUA" />
+<Typo word="Ex..." find="\b(E|e)x-\w" replace="$1x" />
+<Typo word="Èxit" find="\bÉxit\b" replace="Èxit" />
+<Typo word="èxit" find="\béxit\b" replace="èxit" />
+<Typo word="External links" find="\b(E|e)xternal (L|l)inks" replace="$1nllaços externs" />
+</pre>
+
+== F ==
+<pre>
+<Typo word="Fàbriques ATENCIÓ: fabricar" find="\b(F|f)abriques\b" replace="$1fàbriques" />
+<Typo word="Família" find="(F|f)amilia\b" replace="$1amília" />
+<Typo word="Famós" find="(F|f)am[òo]s\b" replace="$1amós" />
+<Typo word="Física" find="\b(F|f)isi(ca|ques)" replace="$1ísi$2" />
+<Typo word="Forç... a" find="\b(F|f)ors([^t])" replace="$1orç$2" />
+<Typo word="Form... ATENCIÓ: Fromental" find="\b(F|f)rom\w" replace="$1orm" /> 
+<Typo word="Fórmula" find="(F|f)[òo]rmula\b" replace="$1órmula" />
+</pre>
+
+== G ==
+<pre>
+<Typo word="Geodèsia" find="(G|g)eod[eé]sia" replace="$1eodèsia" />
+</pre>
+
+== H ==
+<pre>
+<Typo word="Harmon..." find="\bArm(ò|o)n" replace="Harm$1n" />
+<Typo word="harmon..." find="\barm(ò|o)n" replace="harm$1n" />
+<Typo word="Hi ha. ATENCIó: Hi han + participi" find="\b(H|h)i han\b" replace="$1i ha" />
+<Typo word="Història" find="\b(H|h)istoria\b" replace="$1istòria" />
+<Typo word="Humà" find="\b(H|h)uma\b" replace="$1umà" />
+</pre>
+
+== I ==
+<pre>
+<Typo word="i" find="\by([^_])" replace="i$1" />
+<Typo word="Í" find="Ì" replace="Í" />
+<Typo word="í" find="ì" replace="í" />
+<Typo word="Imm..." find="\b(I|i)nm" replace="$1mm" />
+<Typo word="Impressi" find="\b(I|i)mpresi" replace="$1mpressi" />
+<Typo word="Inclourà" find="(I|i)ncloura\b" replace="$1nclourà" />
+<Typo word="Inclouran" find="(I|i)nclouràn\b" replace="$1nclouran" />
+<Typo word="Inspiració" find="(I|i)nspiraci[oò]\b" replace="$1nspiració" />
+</pre>
+
+== J ==
+<pre>
+</pre>
+
+
+== K ==
+<pre>
+<Typo word="km²" find="km2" replace="km²" />
+</pre>
+
+== L ==
+<pre>
+<Typo word="Línia" find="(L|l)[ií]n[ei](a|es)\b" replace="$1íni$2" />
+<Typo word="Llançament" find="(L|l)l[ae]n[cçs]ament" replace="$1lançament" />
+<Typo word="Lògic" find="\b(L|l)l?[oó]gic" replace="$1ògic" />
+<Typo word="Links" find="\bLinks" replace="Enllaços" />
+<Typo word="Links" find="\blinks" replace="enllaços" />
+<Typo word="Links" find="\bLink" replace="Enllaç" />
+<Typo word="Links" find="\blink" replace="enllaç" />
+</pre>
+
+== M ==
+<pre>
+<Typo word="Mentre" find="\b(M|m)entres\b" replace="$1entre" />
+<Typo word="Més" find="\b(M|m)ès\b" replace="$1és" />
+<Typo word="Mil·l..." find="\b(M|m)ili([^ acoót])" replace="$1il·li$2" />
+<Typo word="Mitjançant" find="(M|m)itjansant" replace="$1itjançant" />
+</pre>
+
+== N ==
+<pre>
+<Typo word="Necessària" find="(N|n)ecessaria" replace="$1ecessària" />
+<Typo word="Nombre ATENCIÓ: Número moltes vegades és correcte" find="(N|n)(u|ú)mero" replace="$1ombre" />
+<Typo word="Només" find="\b(N|n)om(è|e)s" replace="$1omés" />
+<Typo word="Norda-americà" find="(N|n)ordameric(a|à)" replace="$1ord-americ$2" />
+<Typo word="Notícia" find="\b(N|n)otici(a|es)" replace="$1otíci$2" />
+<Typo word="Nòvia" find="\b(N|n)[oò]vi(a|o|es)" replace="$1óvi$2" />
+</pre>
+
+== O ==
+<pre>
+<Typo word="Obté" find="\b(O|o)btè" replace="$1bté" />
+<Typo word="Ordinals" find="(1|3)er" replace="$1r" />
+<Typo word="Ordinals" find="([0-9])(e)([^m])" replace="$1è$3" />
+<Typo word="Ordinals" find="([0-9])(é)" replace="$1è" />
+<Typo word="Ordinals" find="2(o|ó)n" replace="2n" />
+<Typo word="Ordinals" find="4rt" replace="4t" />
+<Typo word="Ordinals" find="([0-9])(è|é|r|n|t)([^.])" replace="$1$2.$3" />
+<Typo word="Orgànul" find="\b(O|o)rganul" replace="$1rgànul" />
+<Typo word="Ornitorinc, ornitorínquids" find="\b(O|o)rnitorr" replace="$1rnitor" />
+</pre>
+
+== P ==
+<pre>
+<Typo word="Països" find="(P|p)a[iï]ss?os" replace="$1aïsos" />
+<Typo word="Paràmetre" find="(P|p)arametre" replace="$1aràmetre" />
+<Typo word="Peiot" find="\b(P|p)e[iy]ote" replace="$1eiot" />
+<Typo word="Però" find="\b(P|p)er[oó]\b" replace="$1erò" />
+<Typo word="Perquè" find="\b(P|p)erqu(e|é)\b" replace="$1erquè" />
+<Typo word="Person..." find="(P|p)rson" replace="$1erson" />
+<Typo word="Pertangut" find="(P|p)ertanyut" replace="$1ertangut" />
+<Typo word="Piràmide" find="\b(P|p)ir[aá]mide" replace="$1iràmide" />
+<Typo word="Plànol" find="\b(P|p)lanol" replace="$1lànol" />
+<Typo word="Potència" find="(P|p)otenci(a|es)([^l])" replace="$1otènci$2$3" />
+<Typo word="Pràctica ATENCIÓ: Practica" find="\b(U|u)na practica" replace="$1na pràctica" />
+<Typo word="Pretén" find="(P|p)retèn\b" replace="$1retén" />
+<Typo word="Prova" find="\b(P|p)rob(a|es)\b" replace="$1rov$2" />
+<Typo word="Pròpia" find="\b(P|p)r[oó]pi(a|es)" replace="$1ròpi$2" />
+</pre>
+
+== Q ==
+<pre>
+<Typo word="Quasi " find="\bCasib[eé]\b" replace="Quasi" />
+<Typo word="quasi " find="\bcasib[eé]\b" replace="quasi" />
+<Typo word="Quasi" find="\bCasi([^nm])" replace="Quasi$1" />
+<Typo word="quasi" find="\bcasi([^nm])" replace="quasi$1" />
+</pre>
+
+== R ==
+<pre>
+<Typo word="Reial Acadèmia" find="\b(R|r)eal (A|a)cadèmia" replace="Reial Acadèmia" />
+<Typo word="Reivi..." find="\b(R|r)einvi" replace="$1eivi" />
+</pre>
+
+== S ==
+<pre>
+<Typo word="Son germà" find="\bSa germ[aà]\b" replace="El seu germà" />
+<Typo word="son germà" find="\bsa germ[aà]\b" replace="el seu germà" />
+<Typo word="Següent" find="(S|s)eguent" replace="$1egüent" />
+<Typo word="Setembre" find="(S|s)eptembre" replace="$1etembre" />
+<Typo word="Símbol" find="(S|s)imbol\b" replace="$1ímbol" />
+<Typo word="Sinó" find="\b(S|s)in[oò]\b" replace="$1inó" />
+<Typo word="si us plau" find="\b(S|s)isplau\b" replace="$1i us plau"/>
+<Typo word="són: ATENCIÓ: son " find="\b(S|s)on\b" replace="$1ón" />
+<Typo word="són: ATENCIÓ" find="\b(S|s)ón (germà|pare|fill)\b" replace="$1on $2" />
+<Typo word="Sotmès" find="(S|s)otm[eé]s\b" replace="$1otmès" />
+<Typo word="Sugge..." find="\b(S|s)uge" replace="$1ugge" />
+<Typo word="Superfície" find="(S|s)uperficie" replace="$1uperfície" />
+</pre>
+
+== T ==
+<pre>
+<Typo word="També" find="\b(T|t)ambe" replace="$1ambé" />
+<Typo word="Té ATENCIÓ: Te" find="\b(T|t)e\b" replace="$1é" />
+<Typo word="Teoria de nombres" find="(T|t)eoria dels [Nn]ombres" replace="$1eoria de nombres" />
+<Typo word="Text" find="(T|t)exte" replace="$1ext" />
+<Typo word="Textos" find="(T|t)extes" replace="$1extos" />
+<Typo word="Títol" find="\b(T|t)itol(\b|s)" replace="$1ítol$2" />
+<Typo word="Titular" find="\b(T|t)itola\w" replace="$1itula" />
+<Typo word="Turó" find="\b(T|t)uro\b" replace="$1uró" />
+</pre>
+
+== U ==
+<pre>
+<Typo word="Ú" find="Ù" replace="Ú" />
+<Typo word="ú" find="ù" replace="ú" />
+<Typo word="Un altre ATENCIÓ: també pot ser una altra" find="\b(U|u)n altra\b" replace="$1n altre" /> 
+<Typo word="Una altra ATENCIÓ: també pot ser un altre" find="\b(U|u)na altre\b" replace="$1na altra" />
+<Typo word="Únic" find="\bUnic" replace="Únic" />
+<Typo word="únic" find="\bunic" replace="únic" /> 
+</pre>
+
+== V ==
+<pre>
+<Typo word="Venda" find="\b(V|v)ent(a|es)\b" replace="$1end$2" />
+<Typo word="Visualitz..." find="\b(V|v)isualiz" replace="$1isualitz" />
+<Typo word="Vegeu també" find="\b(V|v)egi's també" replace="$1egeu també" />
+<Typo word="Vegeu" find="\b(V|v)egi's" replace="$1egeu" />
+<Typo word="Vegeu" find="\b(V|v)egi" replace="$1egeu" />
+</pre>
+
+== W ==
+<pre>
+</pre>
+
+== X ==
+<pre>
+<Typo word="Xandall" find="\b(C|c)handal\b" replace="$1andall" />
+<Typo word="Xip" find="\b(C|c)hip\b" replace="$1ip" />
+</pre>
+
+== Y ==
+<pre>
+</pre>
+
+== Z ==
+<pre>
+</pre>
+
+== Paraules que contenen... ==
+Dígrafs que en català no existeixen. El canvi que proposo no sempre és el correcte, però si no es tracta d'una paraula estrangera, hi haurà algun error segur i així queda reflectit a la pantalla de canvis.
+<pre>
+<Typo word="mv!!!" find="([^&])mv" replace="$1mb" />
+<Typo word="Fals positiu tramvia" find="\b(T|t)rambi(a|es)\b" replace="$1ramvi$2" />
+<Typo word="Fals positiu circumval·la..." find="\b(C|c)ircumbal" replace="$1ircumval" />
+ 
+<Typo word="nb!!!" find="nb" replace="mb" />
+<Typo word="Fals positiu &nbsp" find="&mbsp;" replace="&nbsp;" />
+<Typo word="Fals positiu &nbsp" find="&amp;mbsp;" replace="&amp;nbsp;" />
+<Typo word="Fals positiu Gutenberg" find="(G|g)utemberg" replace="Gutenberg" />
+
+<Typo word="np!!!" find="np" replace="mp" />
+<Typo word="vr!!!" find="vr" replace="ver" />
+</pre>
+
+== Paraules acabades en... ==
+En articles on apareixen noms llatins, algunes paraules acaben en ii i no s'han de modificar
+<pre>
+<Typo word="...ia" find="ía\b" replace="ia" />
+<Typo word="...ies" find="íes\b" replace="ies" />
+<Typo word="...ións" find="ións\b" replace="ions" /> 
+<Typo word="...nèxier" find="([^o])(N|n)èixer" replace="$1$2éixer" /> 
+<Typo word="...ó" find="([^MSms])ón\b" replace="$1ó" />
+<Typo word="...uïm" find="([^gq])uim\b" replace="$1uïm" />
+<Typo word="...uïu" find="([^gq])uiu\b" replace="$1uïu" />
+
+
+<Typo word="...iï" find="ii\b" replace="iï" />
+<Typo word="Fals positiu Novii" find="\b(N|n)oviï\b" replace="$1ovii" />
+<Typo word="Fals positiu Hawaii" find="\b(H|h)awaiï\b" replace="$1awaii" />
+
+<Typo word="...ió. ATENCIÓ: No sempre" find="io\b" replace="ió" />
+<Typo word="Falsos positius adagio, àgio, àudio, brio, dàimio, dúrio, iaio, infòlio, io-io, paio, ràdio, trio" find="(ad[àaá]g|[àaá]g|[ÀAÁàaá]ud|br|d[àaá]im|d[úuù]r|ia|inf[òoó]l|io\-|pa|r[àaá]d|R[àaá]d|tr)ió\b" replace="$1io" />
+<Typo word="Fals positiu Ohio" find="\b(O|o)hió\b" replace="Ohio" />
+</pre>
+
+== Barbarismes ==
+Els poso aquí ja que donat un barbarisme, pot ser generalment substituït per diferents paraules i aleshores no sé a quina lletra ordrenar-los.
+
+<pre>
+<Typo word="Acera" find="\b[Aa]cer(a|es)\b" replace="vorer$1" />
+<Typo word="Aconteixement" find="\b[Aa]conteixement" replace="esdeveniment" />
+<Typo word="Admitir" find="\b(A|a)dmiti[ar]" replace="$1dmetre" />
+<Typo word="Algo" find="\b(A|a)lg[ou]\b" replace="$1lguna cosa" />
+<Typo word="Altillo" find="\b(A|a)ltillo" replace="$1ltell" />
+<Typo word="Amanèixer" find="\b[Aa]man[èée]ixer" replace="llostrejar" />
+<Typo word="Antes" find="\b(A|a)ntes\b" replace="$1bans" />
+<Typo word="Apretar" find="\b[Aa]preta" replace="préme" />
+<Typo word="Assafata" find="\b[Aa](?:s|ss|z)afat(a|es)\b" replace="hostess$1" />
+<Typo word="Basura" find="\b[Bb]asur" replace="escombrari" />
+<Typo word="Bírria" find="\b[Bb][ií]rri" replace="porqueri" />
+<Typo word="Borrar" find="\b[Bb]orra(r|v)" replace="esborra$1" />
+<Typo word="Celo" find="\b[Cc]elo\b" replace="zel" />
+<Typo word="Concluir" find="\b(C|c)onclu[iïí]r" replace="$1oncloure" />
+<Typo word="Hardware" find="\b(H|h)ardware" replace="maquinari" />
+<Typo word="Lograr" find="\b[Ll]ograr" replace="aconseguir" />
+<Typo word="Mitgeval" find="\b(M|m)i(g|tg)eval" replace="$1edieval" />
+<Typo word="Ningún" find="\b[Nn]ing[uú]n" replace="cap" />
+<Typo word="Puesto" find="\b[Pp]uest[ou]" replace="lloc" />
+<Typo word="Ratio" find="(R|r)[aà]tio\b" replace="$1aó" />
+<Typo word="Red" find="(^|[^:='"]\s\b)[Rr]ed\b" replace="xarxa" />
+<Typo word="Reds" find"[Rr]eds" replace="xarxes" />
+<Typo word="Rodejar" find="\b[Rr]ode[gj]" replace="envolt" />
+<Typo word="Software" find="(S|s)oftware" replace="programari" />
+<Typo word="Suggerència" find="\b(S|s)u(?:g|gg)er[eéè]ncia" replace="$1uggeriment" />
+<Typo word="Suggerències" find="\b(S|s)u(?:g|gg)er[eéè]ncies" replace="$1uggeriments" />
+<Typo word="Vegeu també" find="\b(V|v)eure [Tt]amb[eèé]\b" replace="$1egeu també" />
+</pre>
+
+== Tenir que - haver de ==
+<pre>
+<Typo word="Haver de" find="\b[Tt]enir (?:de|que|d')\b" replace="haver de" />
+<Typo word="He de" find="\b[Tt]inc (?:de|que|d')\b" replace="he de" />
+<Typo word="Has de" find="\b[Tt]ens (?:de|que|d')\b" replace="has de" />
+<Typo word="Ha de" find="\b[Tt]é (?:de|que|d')\b" replace="ha de" />
+<Typo word="Hem/u de" find="\b[Tt]eni(m|u) (?:de|que|d')\b" replace="he$1 de" />
+<Typo word="Han de" find="\b[Tt]enen (?:de|que|d')\b" replace="han de" />
+<Typo word="Haver (passat) de" find="\b[Tt]en(i|í)(a|e(s|m|u|n)) (?:de|que|d')\b" replace="havi$1 de" />
+<Typo word="Haver (futur i subj) de" find="\b[Tt]indr(é|às|à|em|eu|an|ia|ies|íem|ieu|ien) (?:de|que|d')\b" replace="haur$1 de" />
+<Typo word="Haver (subj i cond) de" find="\b[Tt]ingu(í|eres|é|érem|ereu|eren|em|eu|és|essis|éssim|essiu|essin) (?:de|que|d')\b" replace="hagu$1 de" />
+<Typo word="Haver de ()" find="\b[Tt]ingu(i|is|in) (?:de|que|d')\b" replace="hag$1 de" />
+</pre>
+
+== Contraccions i apòstrofs (ha d'anar al final, molt útil!) ==
+<pre>
+<Typo word="Des de" find="\b(D|d)esde\b" replace="$1es de" />
+<Typo word="Al" find="\b(A|a) el\b" replace="$1l" />
+<Typo word="Del" find="\b(D|d)e el\b" replace="$1el" />
+<Typo word="Pel" find="\b(P|p)er el\b" replace="$1el" />
+<Typo word="preventiu" find="(-|·)(la|el)" replace="_____$1_____$2" />
+<Typo word="L'+vocal" find="\bEl ([Hh]?[AEIOUaeiouÀÈÉÍÒÓÚàèéíòóú])" replace="L'$1" />
+<Typo word="L'+vocal (masc)" find="\bel ([Hh]?[AEIOUaeiouÀÈÉÍÒÓÚàèéíòóú])" replace="l'$1" />
+<Typo word="L'+vocal (fem)" find="\b(L|l)a ([Hh]?[AEOaeoÀÈÉÍÒÓÚàèéíòóú])" replace="$1'$2" />
+<Typo word="D'+vocal" find="\b(D|d)e ([Hh]?[AEIOUaeiouÀÈÉÍÒÓÚàèéíòóú])" replace="$1'$2" />
+<Typo word="De l'+vocal" find="\b(D|d)el ([Hh]?[AEIOUaeiouÀÈÉÍÒÓÚàèéíòóú])" replace="$1e l'$2" />
+<Typo word="A l'+vocal" find="\b(A|a)l ([Hh]?[AEIOUaeiouÀÈÉÍÒÓÚàèéíòóú])" replace="$1 l'$2" />
+<Typo word="Per l'+vocal" find="\b(P|p)el ([Hh]?[AEIOUaeiouÀÈÉÍÒÓÚàèéíòóú])" replace="$1er l'$2" />
+<Typo word="Se'n" find="\b(S|s)'en\b" replace="$1e'n" />
+<Typo word="Se n'+vocal" find="\b(S|s)e'n ([Hh]?[AEIOUaeiouÀÈÉÍÒÓÚàèéíòóú])" replace="$1e n'$2" />
+<Typo word="preventiu" find="_____(-|·)_____" replace="$1" />
+</pre>

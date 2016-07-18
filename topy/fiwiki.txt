@@ -1,0 +1,560 @@
+{{Oikopolku|WP:AWB/T}}
+[[Wikipedia:AutoWikiBrowser|AutoWikiBrowser]] lataa haluttaessa tältä sivulta oikeinkirjoitusohjeet. Ne on muotoiltu säännöllisinä lausekkeina.
+
+== Lausekkeet ==
+
+=== -energiainen ===
+
+Kohteen sisältämästä energiasta kertovat -energinen-päätteiset sanat korjataan -energiainen-päätteisiksi.
+<font size="-1"><source lang="xml">
+<Typo word="korkeaenergiainen" find="(K|k)orkeaenergi(?!a)" replace="$1orkeaenergiai" />
+<Typo word="matalaenergiainen" find="(M|m)atalaenergi(?!a)" replace="$1atalaenergiai" />
+<Typo word="niukkaenergiainen" find="(N|n)iukkaenergi(?!a)" replace="$1iukkaenergiai" />
+<Typo word="pienienergiainen" find="(P|p)ienienergi(?!a)" replace="$1ienienergiai" />
+<Typo word="runsasenergiainen" find="(R|r)unsasenergi(?!a)" replace="$1unsasenergiai" />
+<Typo word="samanenergiainen" find="(S|s)aman*energi(?!a)" replace="$1amanenergiai" />
+<Typo word="suurempienergiainen" find="(S|s)uurempienergi(?!a)" replace="$1uurempienergiai" />
+<Typo word="suurienergiainen" find="(S|s)uuri*energi(?!a)" replace="$1uurienergiai" />
+<Typo word="vähäenergiainen" find="(V|v)ähäenergi(?!a)" replace="$1ähäenergiai" />
+</source></font>
+
+=== -puolinen ===
+
+Korjataan -puoleinen-loppuisia sanoja -puolinen-loppuisiksi. Loppuosaa -puoleinen käytetään vain genetiivimuotoisen alkuosan jälkeen.
+
+Ilmansuunnista voidaan muodostaa myös genetiivialkuiset muodot (esim. ''etelänpuoleinen rinne''), mutta silloin merkitys ei ole sama.
+
+<font size="-1"><source lang="xml">
+<Typo word="eteläpuolinen, ..." find="([Ee]telä|[Ii]tä|[Ll]änsi|[Pp]ohjois)puolei(nen|s)" replace="$1puoli$2" />
+<Typo word="miespuolinen, ..." find="([Mm]ies|[Nn]ais)puolei(nen|s)" replace="$1puoli$2" />
+<Typo word="koiraspuolinen, ..." find="([Kk]oiras|[Nn]aaras|[Uu]ros)puolei(nen|s)" replace="$1puoli$2" />
+<Typo word="yksipuolinen, ..." find="([Yy]ksi|[Kk]aksi|[Tt]ois)puolei(nen|s)" replace="$1puoli$2" />
+</source></font>
+
+=== Sairaus- ===
+
+Sairauteen liittyvät sanat korjataan sairas-alusta sairaus-alkuisiksi.
+<font size="-1"><source lang="xml">
+<Typo word="sairauseläke" find="(S|s)airaselä" replace="$1airauselä" />
+<Typo word="sairauskertomus" find="(S|s)airaskerto" replace="$1airauskerto" />
+<Typo word="sairauskohtaus" find="(S|s)airaskoht" replace="$1airauskoht" />
+<Typo word="sairausloma" find="(S|s)airaslom" replace="$1airauslom" />
+<Typo word="sairauspäiväraha" find="(S|s)airaspäiv" replace="$1airauspäiv" />
+<Typo word="sairauspoissaolo" find="(S|s)airaspoiss" replace="$1airauspoiss" />
+<Typo word="sairaustapaus" find="(S|s)airastapau" replace="$1airaustapau" />
+<Typo word="sairausvakuutus" find="(S|s)airasvaku" replace="$1airausvaku" />
+</source></font>
+
+=== Lyhenteitä ===
+
+<font size="-1"><source lang="xml">
+<Typo word="Pisteelliset lyhenteet" find="\b(esim|tms) " replace="$1. " />
+</source></font>
+
+==== eaa. ja jaa. ====
+
+Lisää pisteen lyhenteiden eaa. ja jaa. loppuun ja korjaa lyhenteet e.a.a. ja j.a.a.
+<font size="-1"><source lang="xml">
+<Typo word="eaa." find="\beaa(?!\.)" replace="eaa." />
+<Typo word="eaa." find="\be\.a\.a\.*" replace="eaa." />
+<Typo word="jaa." find="(?<=([0-9]|luku|kymmen|sata|tuhat) )jaa(?!\.)\b" replace="jaa." />
+<Typo word="jaa." find="(?<=([0-9]|luku|kymmen|sata|tuhat) )j\.a\.a\.*" replace="jaa." />
+</source></font>
+
+=== Erisnimiä ===
+<font size="-1"><source lang="xml">
+<Typo word="Australia" find="(A|a)ustraal" replace="$1ustral" />
+<Typo word="Azerbaidžan" find="(A|a)(?!zerbaidža)[zž]*s*h*erbaid[zž]*s*h*a" replace="$1zerbaidža" />
+<Typo word="Bodominjärvi" find="[Bb]odom(|-|in )[Jj]" replace="Bodominj" />
+<Typo word="Britteinsaaret" find="(B|b)ritt(?!eins)(ei|ie)n\s*[Ss]aar" replace="$1ritteinsaar" />
+<Typo word="Espanja" find="(E|e)spaja" replace="$1spanja" />
+<Typo word="Fidži" find="(F|f)idz" replace="$1idž" />
+<Typo word="Havaiji" find="\b(H|h)a(wai*|va)j" replace="$1avaij" />
+<Typo word="Hruštšov" find="(H|h)(?!ruštšov)ru[šs]t[šs][eo]v" replace="$1ruštšov" />
+<Typo word="Israel" find="\b(I|i)sreal" replace="$1srael" />
+<Typo word="Kambodža" find="(K|k)(?!ambodž)ambod[zž]*s*h*" replace="$1ambodž" />
+<Typo word="Kanariansaaret" find="(K|k)anarian\s+[Ss]aar" replace="$1anariansaar" />
+<Typo word="Karjalankannas" find="Karjalan\s+[Kk]ann" replace="Karjalankann" />
+<Typo word="Kruununhaka" find="(K|k)ruunuha" replace="$1ruununha" />
+<Typo word="Mississippi" find="(M|m)(?!ississip)is+is+ip" replace="$1ississip" />
+<Typo word="Pikku Huopalahti" find="[Pp]ikku(-[Hh]|\s*h)uo" replace="Pikku Huo" />
+<Typo word="São Tomé" find="(?!São Tomé)[Ss][aã]o [Tt]om[eé]" replace="São Tomé" />
+<Typo word="São Tomé ja Príncipe" find="São Tomé ja (?!Príncipe)[Pp]r[ií]ncipe" replace="São Tomé ja Príncipe" />
+<Typo word="Šostakovitš" find="[Ssš]ostakovit[šs]" replace="Šostakovitš" />
+<Typo word="Tadžikistan" find="(T|t)adz+s*h*ik" replace="$1adžik" />
+<Typo word="Thaimaahan" find="[Tt]haimaaseen" replace="Thaimaahan" />
+<Typo word="Tšad" find="\b(T|t)sad(?!(e|i\b))" replace="$1šad" />
+<Typo word="Tšaikovski" find="[Tt]saiko" replace="Tšaiko" />
+<Typo word="Tšekki, Tšekkoslovakia" find="\b(T|t)sh*ek(?!a)" replace="$1šek" />
+<Typo word="Tšetšenia, tšetšeeni" find="(T|t)sh*etsh*e(?=[en])" replace="$1šetše" />
+</source></font>
+
+=== -ittain-adverbejä ===
+<font size="-1"><source lang="xml">
+<Typo word="ajoittain" find="\b(A|a)jotta" replace="$1joitta" />
+<Typo word="jaksoittain" find="(J|j)aksottai" replace="$1aksoittai" />
+<Typo word="joukoittain" find="(J|j)oukott" replace="$1oukoitt" />
+<Typo word="kuuroittain" find="(K|k)uurott" replace="$1uuroitt" />
+<Typo word="pulloittain" find="(P|p)ullottai" replace="$1ulloittai" />
+<Typo word="tukuittain" find="(T|t)ukutt" replace="$1ukuitt" />
+<Typo word="viikoittain" find="(V|v)iikott" replace="$1iikoitt" />
+<Typo word="vuoroittain" find="(V|v)uorottai" replace="$1uoroittai" />
+</source></font>
+=== -ottaa- ja -oittaa-verbejä ===
+<font size="-1"><source lang="xml">
+<Typo word="aloittaa" find="(?<!Ma')\b(A|a)lot(?!ec)(\w)" replace="$1loit$2" />
+<Typo word="ehdottaa" find="(E|e)hdoittaa" replace="$1hdottaa" />
+<Typo word="erottaa" find="\b(E|e)roit" replace="$1rot" />
+<Typo word="haavoittaa" find="(H|h)aavot" replace="$1aavoit" />
+<Typo word="hahmottaa" find="(H|h)ahmoit" replace="$1ahmot" />
+<Typo word="hajottaa" find="(H|h)ajoi(?!l)" replace="$1ajo" />
+<Typo word="harjoittaa" find="(H|h)arjot" replace="$1arjoit" />
+<Typo word="helpottaa" find="(H|h)elpoit(?!en)" replace="$1elpot" />
+<Typo word="hiekoittaa" find="(H|h)iekot" replace="$1iekoit" />
+<Typo word="himottaa" find="\b(H|h)imoit(?![sa])" replace="$1imot" />
+<Typo word="ilmoittaa" find="\b(I|i)lmot" replace="$1lmoit" />
+<Typo word="irrottaa" find="\b(I|i)rroi" replace="$1rro" />
+<Typo word="karkottaa" find="(K|k)arkoi" replace="$1arko" />
+<Typo word="kehottaa" find="\b(K|k)ehoit" replace="$1ehot" />
+<Typo word="kiihottaa" find="(K|k)iihoi" replace="$1iiho" />
+<Typo word="kiillottaa" find="(K|k)(?!iillo)iil+oi*t" replace="$1iillot" />
+<Typo word="kirjoittaa" find="(K|k)irjotta" replace="$1irjoitta" />
+<Typo word="kunnioittaa" find="(K|k)unniot" replace="$1unnioit" />
+<Typo word="lannoittaa" find="(L|l)annot" replace="$1annoit" />
+<Typo word="linnoittaa" find="(L|l)innot(?!\b)" replace="$1innoit" />
+<Typo word="liuottaa" find="(L|l)iuoi" replace="$1iuo" />
+<Typo word="miinoittaa" find="(M|m)iinot" replace="$1iinoit" />
+<Typo word="nauhoittaa" find="(N|n)auhot" replace="$1auhoit" />
+<Typo word="osoittaa" find="\b(O|o)sot" replace="$1soit" />
+<Typo word="pakottaa" find="\b(P|p)akoit" replace="$1akot" />
+<Typo word="painottaa" find="(P|p)ainoit" replace="$1ainot" />
+<Typo word="pelottaa" find="\b(P|p)eloit" replace="$1elot" />
+<Typo word="pingottaa" find="(P|p)ingoi" replace="$1ingo" />
+<Typo word="piilottaa" find="(P|p)iiloit" replace="$1iilot" />
+<Typo word="punoittaa" find="(P|p)unot(?=(us\b|ta))" replace="$1unoit" />
+<Typo word="rahoittaa" find="(R|r)ahot(?!\b)" replace="$1ahoit" />
+<Typo word="rauhoittaa" find="(R|r)auhot" replace="$1auhoit" />
+<Typo word="sekoittaa" find="\b(S|s)ekot(?!\b)" replace="$1ekoit" />
+<Typo word="sijoittaa" find="(S|s)ijot" replace="$1ijoit" />
+<Typo word="tarkoittaa" find="\b(T|t)arkot" replace="$1arkoit" />
+<Typo word="tavoittaa" find="(T|t)avot" replace="$1avoit" />
+<Typo word="teroittaa" find="\b(T|t)erot(?!\b)" replace="$1eroit" />
+<Typo word="tiedottaa" find="(T|t)iedoit" replace="$1iedot" />
+<Typo word="ulottaa" find="(U|u)loitt" replace="$1lott" />
+<Typo word="valottaa" find="(V|v)aloit" replace="$1alot" />
+<Typo word="velvoittaa" find="(V|v)elvot" replace="$1elvoit" />
+<Typo word="verottaa" find="(?<!(vah|co))(V|v)eroit" replace="$2erot" />
+<Typo word="vieroittaa" find="(V|v)ierot" replace="$1ieroit" />
+</source></font>
+
+=== Päin ja -päin ===
+<font size="-1"><source lang="xml">
+<Typo word="alaspäin" find="(A|a)las päi" replace="$1laspäi" />
+<Typo word="eteenpäin" find="\b(E|e)teen päi" replace="$1teenpäi" />
+<Typo word="jälkeenpäin" find="(J|j)älkee(n |mp)päin" replace="$1älkeenpäin" />
+<Typo word="miten päin" find="(M|m)itenp" replace="$1iten p" />
+<Typo word="niin päin" find="(N|n)iinpäi" replace="$1iin päi" />
+<Typo word="noin päin" find="(N|n)oinp" replace="$1oin p" />
+<Typo word="näin päin" find="(N|n)äinpäi" replace="$1äin päi" />
+<Typo word="poispäin" find="(P|p)ois päin" replace="$1oispäin" />
+<Typo word="sisäänpäin" find="(S|s)isään päi" replace="$1isäänpäi" />
+<Typo word="suin päin" find="\b(S|s)uinp" replace="$1uin p" />
+<Typo word="taaksepäin" find="(T|t)aakse päi" replace="$1aaksepäi" />
+<Typo word="ulospäin" find="\b(U|u)los päi" replace="$1lospäi" />
+<Typo word="ylöspäin" find="(Y|y)lös päi" replace="$1löspäi" />
+</source></font>
+
+=== Päätteitä ===
+<font size="-1"><source lang="xml">
+<Typo word="-aakseen, -ääkseen" find="(?<!\b[Ss])(aa|ää)ksen\b" replace="$1kseen" />
+<Typo word="-kin" find="kkin\b" replace="kin" />
+<Typo word="-mpi" find="npi\b" replace="mpi" />
+<Typo word="-ttiin" find="(?<=\b[adehijklmnoprstuvyäö]+)ttin\b" replace="ttiin" />
+<Typo word="-ttiin" find="t([aeiouyäö])tiin\b" replace="t$1ttiin" />
+<Typo word="show'n, ..." find="\b([Ss]how)[:´']?(n|ta\b|na|ksi|ssa|sta|hun|lla|lta|lle|t\b)" replace="$1’$2" />
+</source></font>
+
+==== Lyhenteiden päätteitä ====
+
+<font size="-1"><source lang="xml">
+<Typo word="-:n korkeudessa, ..." find="\b(m|km) (korkeu|pää(ssä|stä|hän)|etäisyy|säteel|syvyy|matka)" replace="$1:n $2" />
+<Typo word="-:n lämpötila" find="(°C|\bK) (lämpötil)" replace="$1:n $2" />
+<Typo word="-:n painoinen" find="\b(µg|g|kg) (painoi)(nen|s)" replace="$1:n $2$3" />
+<Typo word="-:n pituinen, ..." find="\b(nm|µm|mm|cm|m|km) (pitui|levyi|korkui|syvyi|paksui|(?:läpi)?mittai)(nen|s)" replace="$1:n $2$3" />
+</source></font>
+
+=== Sanaliittoja ===
+<font size="-1"><source lang="xml">
+<Typo word="aika lailla" find="\b(A|a)ikalailla" replace="$1ika lailla" />
+<Typo word="aina kun" find="(A|a)inakun" replace="$1ina kun" />
+<Typo word="aivan kuin" find="(A|a)ivankuin" replace="$1ivan kuin" />
+<Typo word="ajan mittaan" find="(A|a)janmittaan" replace="$1jan mittaan" />
+<Typo word="ajan tasalla" find="(A|a)jantasal" replace="$1jan tasal" />
+<Typo word="alla mainittu" find="(A|a)llamai" replace="$1lla mai" />
+<Typo word="alla oleva, alla olleet" find="(A|a)llao(?=l+e)" replace="$1lla o" />
+<Typo word="alun alkaen" find="(A|a)lunalk" replace="$1lun alk" />
+<Typo word="alun perin, alun pitäen" find="(A|a)lunp" replace="$1lun p" />
+<Typo word="alun perin" find="(A|a)lk*uperin" replace="$1lun perin" />
+<Typo word="ani harvoin" find="\b(A|a)niha" replace="$1ni ha" />
+<Typo word="ani varhain" find="\b(A|a)nivarh" replace="$1ni varh" />
+<Typo word="arvossa pidetty" find="(A|a)rvossap" replace="$1rvossa p" />
+<Typo word="edellä mainittu" find="(E|e)delläma" replace="$1dellä ma" />
+<Typo word="edellä/edessä oleva, edellä olleet" find="(E|e)de(ll|ss)äo(?=l+e)" replace="$1de$2ä o" />
+<Typo word="edeltä käsin" find="(E|e)deltäk" replace="$1deltä k" />
+<Typo word="ehdoin tahdoin" find="(E|e)hdoint" replace="$1hdoin t" />
+<Typo word="ennalta ehkäisevä" find="(E|e)nnaltaehkäise(?!e)" replace="$1nnalta ehkäise" />
+<Typo word="ennen aikaan" find="(E|e)nnenaikaa" replace="$1nnen aikaa" />
+<Typo word="ennen kaikkea" find="(E|e)nnenkai" replace="$1nnen kai" />
+<Typo word="ennen kuin" find="(E|e)nnen*kui" replace="$1nnen kui" />
+<Typo word="ennen kuulematon" find="(E|e)nnenkuule" replace="$1nnen kuule" />
+<Typo word="ennen muinoin" find="(E|e)nnenmu" replace="$1nnen mu" />
+<Typo word="ennen pitkää" find="(E|e)nnenpi" replace="$1nnen pi" />
+<Typo word="ennen vanhaan" find="(E|e)nnenv" replace="$1nnen v" />
+<Typo word="ensi alkuun" find="\b(E|e)nsialk" replace="$1nsi alk" />
+<Typo word="ensi kerran, ensi kertaa" find="(E|e)nsiker(?!tal)" replace="$1nsi ker" />
+<Typo word="ensi kädessä" find="(E|e)nsikädes" replace="$1nsi kädes" />
+<Typo word="ensi sijassa" find="(E|e)nsisijas" replace="$1nsi sijas" />
+<Typo word="ensi vuonna" find="(E|e)nsivuon" replace="$1nsi vuon" />
+<Typo word="ensin mainittu" find="\b(E|e)nsinma" replace="$1nsin ma" />
+<Typo word="eri lailla" find="(E|e)rilail" replace="$1ri lail" />
+<Typo word="eri tavalla" find="\b(E|e)ritav" replace="$1ri tav" />
+<Typo word="esiin tullut" find="(E|e)siintull" replace="$1siin tull" />
+<Typo word="hard rock" find="(H|h)ardrock" replace="$1ard rock" />
+<Typo word="heavy metal" find="(H|h)(?!eavy metal(?!l))eavy\s*metal+" replace="$1eavy metal" />
+<Typo word="heti kun" find="(H|h)etiku" replace="$1eti ku" />
+<Typo word="huomioon ottaen" find="(H|h)uomioono" replace="$1uomioon o" />
+<Typo word="hädin tuskin" find="(H|h)ädint" replace="$1ädin t" />
+<Typo word="ikään kuin" find="(I|i)käänk" replace="$1kään k" />
+<Typo word="itse asiassa" find="(I|i)tseas" replace="$1tse as" />
+<Typo word="itse kukin" find="(I|i)tsekuk" replace="$1tse kuk" />
+<Typo word="itsensä kannattava" find="(I|i)tsekann" replace="$1tsensä kann" />
+<Typo word="iän kaiken" find="(I|i)änkaike" replace="$1än kaike" />
+<Typo word="joka ikinen" find="(J|j)okaik" replace="$1oka ik" />
+<Typo word="jonkin verran, jonkun verran" find="(J|j)onk(i|u)nv" replace="$1onk$2n v" />
+<Typo word="juurta jaksaen, juurta jaksain" find="(J|j)uurtaj" replace="$1uurta j" />
+<Typo word="jäljelle jäänyt" find="(J|j)äljellej" replace="$1äljelle j" />
+<Typo word="jäljellä oleva" find="(J|j)äljelläole" replace="$1äljellä ole" />
+<Typo word="kahden istuttava" find="(K|k)ahdeni" replace="$1ahden i" />
+<Typo word="kahden kesken" find="(K|k)ahdenkesken" replace="$1ahden kesken" />
+<Typo word="kaiken kaikkiaan" find="(K|k)aikenkai" replace="$1aiken kai" />
+<Typo word="kaiken maailman" find="(K|k)aikenma" replace="$1aiken ma" />
+<Typo word="kaikin puolin" find="(K|k)aikinpuolin\b" replace="$1aikin puolin" />
+<Typo word="kautta rantain" find="(K|k)auttar" replace="$1autta r" />
+<Typo word="kerta kaikkiaan" find="(K|k)ertakaikkia" replace="$1erta kaikkia" />
+<Typo word="kesken jäänyt" find="(K|k)eskenjä" replace="$1esken jä" />
+<Typo word="koko ajan" find="(K|k)okoajan\b" replace="$1oko ajan" />
+<Typo word="koko lailla" find="(K|k)okolail" replace="$1oko lail" />
+<Typo word="käden käänteessä" find="(K|k)ädenkä" replace="$1äden kä" />
+<Typo word="käsin kirjoitettu" find="(K|k)äsinkirjoite" replace="$1äsin kirjoite" />
+<Typo word="käytöstä poistettu" find="(K|k)äytöstä poiste" replace="$1äytöstä poiste" />
+<Typo word="loppujen lopuksi" find="(L|l)oppujenl" replace="$1oppujen l" />
+<Typo word="lukuun ottamatta" find="(L|l)ukuuno" replace="$1ukuun o" />
+<Typo word="läsnä oleva, läsnä olleet" find="(L|l)äsnäo(?=l+e)" replace="$1äsnä o" />
+<Typo word="mielin määrin" find="(M|m)ielinm" replace="$1ielin m" />
+<Typo word="minkä takia, minkä tähden" find="(M|m)inkät" replace="$1inkä t" />
+<Typo word="minkä vuoksi" find="\b(M|m)inkävu" replace="$1inkä vu" />
+<Typo word="monin kerroin, monin verroin" find="(M|m)onin(k|v)err" replace="$1onin $2err" />
+<Typo word="mukaan luettuna, mukaan lukien" find="(M|m)ukaanl" replace="$1ukaan l" />
+<Typo word="muun muassa, muiden muassa" find="(M|m)(?!u(?:u|ide)n mua)u(u|ide)n\s*mu+a" replace="$1u$2n mua" />
+<Typo word="niin ikään" find="\b(N|n)iinikä" replace="$1iin ikä" />
+<Typo word="niin kuin" find="(N|n)iinkuin" replace="$1iin kuin" />
+<Typo word="niin sanotusti" find="\b(N|n)iins" replace="$1iin s" />
+<Typo word="näin ollen" find="(N|n)äino" replace="$1äin o" />
+<Typo word="olemassa oleva" find="(O|o)lemassaolev" replace="$1lemassa olev" />
+<Typo word="olemassa olleet" find="(O|o)lemassaolle" replace="$1lemassa olle" />
+<Typo word="paikallaan pysyvä" find="(P|p)aikallaanpy" replace="$1aikallaan py" />
+<Typo word="paikan päällä" find="(P|p)aikanp" replace="$1aikan p" />
+<Typo word="paikka paikoin" find="(P|p)aikkapai" replace="$1aikka pai" />
+<Typo word="perin pohjin" find="(P|p)erinpohji" replace="$1erin pohji" />
+<Typo word="perin juurin" find="\b(P|p)erinj" replace="$1erin j" />
+<Typo word="pois lukien" find="(P|p)oisl" replace="$1ois l" />
+<Typo word="poissa olleet" find="(P|p)oissaolle" replace="$1oissa olle" />
+<Typo word="päällisin puolin" find="(P|p)äällisinp" replace="$1äällisin p" />
+<Typo word="päätä pahkaa" find="(P|p)äätäp" replace="$1äätä p" />
+<Typo word="rinta rinnan" find="(R|r)intarin" replace="$1inta rin" />
+<Typo word="ristiin rastiin" find="(R|r)istiinr" replace="$1istiin r" />
+<Typo word="saman tien" find="(S|s)amantie" replace="$1aman tie" />
+<Typo word="saman verran" find="(S|s)amanverr" replace="$1aman verr" />
+<Typo word="samoin kuin" find="(S|s)amoink" replace="$1amoin k" />
+<Typo word="sen sijaan" find="(S|s)ensij" replace="$1en sij" />
+<Typo word="sen takia" find="\b(S|s)entak" replace="$1en tak" />
+<Typo word="sen tähden" find="\b(S|s)entäh" replace="$1en täh" />
+<Typo word="sen vuoksi" find="\b(S|s)env" replace="$1en v" />
+<Typo word="sillä lailla" find="\b(S|s)illäl" replace="$1illä l" />
+<Typo word="sillä tapaa, sillä tavoin" find="(S|s)illät" replace="$1illä t" />
+<Typo word="sillä välin" find="(S|s)illäv" replace="$1illä v" />
+<Typo word="silmällä pitäen" find="(S|s)ilmälläpit" replace="$1ilmällä pit" />
+<Typo word="sisään tuleva" find="(S|s)isääntule" replace="$1isään tule" />
+<Typo word="sitä mukaa" find="(S|s)(?!itä mukaa\b)itä\s*mukaan*\b" replace="$1itä mukaa" />
+<Typo word="sitä paitsi" find="\b(S|s)itäp" replace="$1itä p" />
+<Typo word="sitä vastoin" find="\b(S|s)itäv" replace="$1itä v" />
+<Typo word="suoraa päätä" find="(S|s)uoraap" replace="$1uoraa p" />
+<Typo word="suuntaa antava" find="(S|s)uuntaa-a" replace="$1uuntaa a" />
+<Typo word="suuri osa, suurin osa" find="(S|s)uuri(n*)os" replace="$1uuri$2 os" />
+<Typo word="suurin piirtein" find="(S|s)uurinpiirtein" replace="$1uurin piirtein" />
+<Typo word="tavan takaa" find="\b(T|t)avantakaa" replace="$1avan takaa" />
+<Typo word="toisin kuin" find="(T|t)oisinku" replace="$1oisin ku" />
+<Typo word="toisin sanoen" find="(T|t)oisins" replace="$1oisin s" />
+<Typo word="totta kai" find="(T|t)ottaka" replace="$1otta ka" />
+<Typo word="tuiki tavallinen" find="(T|t)uikit" replace="$1uiki t" />
+<Typo word="tuolla puolen" find="(T|t)uollapu" replace="$1uolla pu" />
+<Typo word="tällä hetkellä" find="(T|t)älläh" replace="$1ällä h" />
+<Typo word="tämän sijaan" find="\b(T|t)ämänsij" replace="$1ämän sij" />
+<Typo word="töin tuskin" find="/b(T|t)öint" replace="$1öin t" />
+<Typo word="varta vasten" find="\b(V|v)artav" replace="$1arta v" />
+<Typo word="viime aikoina" find="(V|v)iimeaiko" replace="$1iime aiko" />
+<Typo word="viime kädessä" find="(V|v)iimekä" replace="$1iime kä" />
+<Typo word="viime vuosina" find="(V|v)iimevuos" replace="$1iime vuos" />
+<Typo word="viimeksi mainittu" find="(V|v)(?!iimeksi m)iime(ksi|)\s*mai" replace="$1iimeksi mai" />
+<Typo word="voimassa oleva, voimassa olleet" find="(V|v)oimassao(?=l+e)" replace="$1oimassa o" />
+<Typo word="vuoron perään" find="(V|v)uoronperää" replace="$1uoron perää" />
+<Typo word="vuotta" find="(?<=[0-9])-(vuotta|vuode)" replace=" $1" />
+<Typo word="vähän väliä" find="(V|v)ähänv" replace="$1ähän v" />
+<Typo word="yhtä aikaa" find="(Y|y)htäaikaa" replace="$1htä aikaa" />
+<Typo word="yhtä kaikki" find="(Y|y)htäka" replace="$1htä ka" />
+<Typo word="yhtä kuin" find="(Y|y)htäku" replace="$1htä ku" />
+<Typo word="yhtä lailla" find="(Y|y)htäla" replace="$1htä la" />
+<Typo word="yhtä mittaa" find="(Y|y)htämittaa" replace="$1htä mittaa" />
+<Typo word="yhtä päätä" find="(Y|y)htäpää" replace="$1htä pää" />
+<Typo word="yksin tein" find="(Y|y)ksinte" replace="$1ksin te" />
+<Typo word="ylen määrin" find="(Y|y)lenmääri" replace="$1len määri" />
+<Typo word="yllin kyllin" find="\b(Y|y)llink" replace="$1llin k" />
+<Typo word="yllä mainittu" find="(Y|y)lläma" replace="$1llä ma" />
+<Typo word="yllä oleva" find="(Y|y)lläo" replace="$1llä o" />
+<Typo word="yltä päältä" find="(Y|y)ltäp" replace="$1ltä p" />
+<Typo word="yötä päivää" find="\b(Y|y)ötäp" replace="$1ötä p" />
+</source></font>
+==== Sanaliitto yhdyssanan määriteosana ====
+
+Sanaväli ja yhdysmerkki oikein.
+<font size="-1"><source lang="xml">
+<Typo word="hard rock -yhtye" find="(H|h)ard rock(?! -yhtye)\s*-*yhtye" replace="$1ard rock -yhtye" />
+<Typo word="heavy metal -yhtye" find="(H|h)eavy metal(?! -yhtye)\s*-*yhtye" replace="$1eavy metal -yhtye" />
+</source></font>
+
+=== Svetisististen adjektiivien korjaus ===
+
+Joissain tapauksissa esimerkiksi -köyhä-, -vapaa- ja -rikas-loppuiset adjektiivit on helppo korjata säännöllisellä lausekkeella.
+<font size="-1"><source lang="xml">
+<Typo word="hapekas" find="(H|h)appirik" replace="$1apek" />
+<Typo word="toiveikas" find="(T|t)oivorik" replace="$1oiveik" />
+<Typo word="vaiheikas" find="(V|v)aiherik" replace="$1aiheik" />
+</source></font>
+
+=== Yhdyssanoja ===
+<font size="-1"><source lang="xml">
+<Typo word="edestakaisin" find="(E|e)des tak" replace="$1destak" />
+<Typo word="eriarvoinen" find="(E|e)ri arvoi" replace="$1riarvoi" />
+<Typo word="erinäköinen" find="(E|e)ri näköi" replace="$1rinäköi" />
+<Typo word="erityyppinen" find="\b(E|e)ri tyyppi(?=[ns])" replace="$1rityyppi" />
+<Typo word="jompikumpi, jotenkuten, ..." find="\b(J|j)o(\w+) ku\2\b" replace="$1o$2ku$2" />
+<Typo word="lähestulkoon" find="(L|l)ähes tulk" replace="$1ähestulk" />
+<Typo word="läsnäolo" find="(L|l)äsnä olo" replace="$1äsnäolo" />
+<Typo word="nimenomaan" find="(N|n)imen omaan" replace="$1imenomaan" />
+<Typo word="olemassaolo" find="(O|o)lemassa olo" replace="$1lemassaolo" />
+<Typo word="paikkansapitävä" find="\b(P|p)(?!aikkansapi)aikka+nsa\s*pitä" replace="$1aikkansapitä" />
+<Typo word="poissaolo" find="\b(P|p)oissa olo" replace="$1oissaolo" />
+<Typo word="sentyyppinen" find="\b(S|s)en tyyppi(?=(ne|s))" replace="$1entyyppi" />
+<Typo word="uraauurtava" find="\b(U|u)raa uurtav" replace="$1raauurtav" />
+<Typo word="voimassaolo" find="(V|v)oimassa olo" replace="$1oimassaolo" />
+<Typo word="yksinomaan" find="(Y|y)ksin omaan" replace="$1ksinomaan" />
+<Typo word="-inen, -ista" find="(?<=[0-9])\s+(kilo|jalka|tuuma|sekunt|minuutt|tunt|viikko|kuukaut|vuot|kerroks|aste)(inen|ise|isi|ista)" replace="-$1$2" />
+<Typo word="-inen, -istä" find="(?<=[0-9])\s+(sentt|päivä)(inen|ise|isi|istä)" replace="-$1$2" />
+<Typo word="-metrinen, ..." find="(?<=[0-9])\s+(metr|mill(?!is(iever|ekun))|tonn)(inen|ise|isi)" replace="-$1$3" />
+<Typo word="-vuotias" find="(?<=[0-9])\s+(vuotia)" replace="-$1" />
+</source></font>
+
+=== Toistettuja sanoja ===
+Usein vahingossa toistettuja pikkusanoja.
+
+<font size="-1"><source lang="xml">
+<Typo word="Toistetut sanat" find="(\s)(että|hän|ja|kuin|kun|ne|noin|oli|on|se|tai)\b\s+\2\b" replace="$1$2" />
+</source></font>
+
+=== Muita ===
+<font size="-1"><source lang="xml">
+<Typo word="aggressiivinen" find="(A|a)gress" replace="$1ggress" />
+<Typo word="aiheesta" find="\b(A|a)ihes(?=[st])" replace="$1ihees" />
+<Typo word="ainoastaan" find="\b(A|a)inostaa" replace="$1inoastaa" />
+<Typo word="allekkain" find="(A|a)lekkai" replace="$1llekkai" />
+<Typo word="alinomaa" find="(A|a)linomaan" replace="$1linomaa" />
+<Typo word="arkeologia" find="(A|a)rgeol" replace="$1rkeol" />
+<Typo word="aiemmin" find="\b(A|a)ijem" replace="$1iem" />
+<Typo word="alpinismi, alpinisti" find="(A|a)lppinis([mt])" replace="$1lpinis$2" />
+<Typo word="ameba" find="(A|a)meeb" replace="$1meb" />
+<Typo word="ampeeri" find="(A|a)mppee" replace="$1mpee" />
+<Typo word="armeija" find="\b(A|a)rme+j" replace="$1rmeij" />
+<Typo word="arkkitehtia" find="(A|a)rkkiteh(ti|tej|te?in|de?il[lt]|de?is[st])ä" replace="$1rkkiteh$2a" />
+<Typo word="arkkitehtoninen" find="(A|a)rkkitehtuurilli" replace="arkkitehtoni" />
+<Typo word="artefakti" find="(A|a)rtifak" replace="$1rtefak" />
+<Typo word="attribuutti" find="(A|a)tribuut" replace="$1ttribuut" />
+<Typo word="aurinkokeskinen" find="(A|a)urinkokeskei" replace="$1urinkokeski" />
+<Typo word="avoimuus" find="(A|a)voimm" replace="$1voim" />
+<Typo word="balttilainen" find="(B|b)altiala" replace="$1alttila" />
+<Typo word="departementti" find="(D|d)epart*ment(?=[eit])" replace="$1epartement" />
+<Typo word="eli" find="\b(E|e)lik+äs*" replace="$1li" />
+<Typo word="elämäkerta" find="(E|e)lämänker" replace="$1lämäker" />
+<Typo word="elämänkertoja" find="(E|e)lämän*kerturi" replace="$1lämänkertoja" />
+<Typo word="enemmän" find="\b(E|e)nemä" replace="$1nemmä" />
+<Typo word="ennakko-" find="(E|e)tukäteis" replace="$1nnakko" />
+<Typo word="ennen" find="\b(E|e)nen\b" replace="$1nnen" />
+<Typo word="ensimmäinen" find="(E|e)(?!nsimmä)nsi*n*m+ä" replace="$1nsimmä" />
+<Typo word="entistää" find="(E|e)ntisöidä" replace="$1ntistää" />
+<Typo word="enää" find="\b(E|e)nään" replace="$1nää" />
+<Typo word="erikois-" find="\b(E|e)rikos" replace="$1rikois" />
+<Typo word="erilainen" find="\b(E|e)rilla" replace="$1rila" />
+<Typo word="esimerkiksi" find="(E|e)simeri" replace="$1simerki" />
+<Typo word="etä-" find="\b(E|e)täis(?!(e|i|t|yy))" replace="$1tä" />
+<Typo word="faarao" find="(F|f)aaro" replace="$1aarao" />
+<Typo word="golfaaja, ..." find="(G|g)olff" replace="$1olf" />
+<Typo word="hallinnan" find="(H|h)allina(?!(\b|a))" replace="$1allinna" />
+<Typo word="havainnollinen" find="(H|h)ava(?!innolli)i*n+oi*l+i" replace="$1avainnolli" />
+<Typo word="henkilökortti, -todistus" find="(H|h)enkilöllisyys(?=(ko|t))" replace="$1enkilö" />
+<Typo word="hetimmiten" find="(H|h)etimi" replace="$1etimmi" />
+<Typo word="heprea" find="(H|h)ebrea" replace="$1eprea" />
+<Typo word="hierarkia" find="(H|h)ierarkkia" replace="$1ierarkia" />
+<Typo word="hierarkkinen" find="(H|h)ierarki(?=(nen|s[ei]))" replace="$1ierarkki" />
+<Typo word="homogeenisuus" find="(H|h)omogeenisyy" replace="$1omogeenisuu" />
+<Typo word="hopeinen" find="(H|h)opeai(?=[ns])" replace="$1opei" />
+<Typo word="hälytys" find="(H|h)älyy" replace="$1äly" />
+<Typo word="ilottelu" find="\b(I|i)loitte" replace="$1lotte" />
+<Typo word="Internet, intranet" find="(I|i)nt(er|ra)netti([eiä])" replace="$1nt$2neti$3" />
+<Typo word="jaottelu" find="(J|j)aoit" replace="$1aot" />
+<Typo word="jogurtti" find="(J|j)ugurt(?!h)" replace="$1ogurt" />
+<Typo word="jonkinlainen" find="(J|j)onkunl" replace="$1onkinl" />
+<Typo word="joukkue" find="(J|j)oukkoe(?!(ro|siint))" replace="$1oukkue" />
+<Typo word="julkaista" find="(J|j)ulkas" replace="$1ulkais" />
+<Typo word="jälkeen" find="(J|j)älken(?!(sä|ä))" replace="$1älkeen" />
+<Typo word="jälleen" find="(J|j)ällen" replace="$1älleen" />
+<Typo word="jäännyt" find="(J|j)äännyt" replace="$1äänyt" />
+<Typo word="kaivu" find="(K|k)aivuu" replace="$1aivu" />
+<Typo word="kansatiede" find="(K|k)ansantie(d|t)e" replace="$1ansatie$2e" />
+<Typo word="kaliiperi" find="(K|k)ali([bp])e+r" replace="$1alii$2er" />
+<Typo word="kampanja" find="(K|k)(?!ampanj(?![ij]))amp+an[ij]+" replace="$1ampanj" />
+<Typo word="kansainvälinen" find="(K|k)ansaiv" replace="$1ansainv" />
+<Typo word="katkaista" find="(K|k)atkas" replace="$1atkais" />
+<Typo word="kauan" find="(K|k)auaa" replace="$1auan" />
+<Typo word="kaupungin" find="(K|k)aupunki(?=(n|sta|t)\b)" replace="$1aupungi" />
+<Typo word="kaupungit" find="(K|k)aupug" replace="$1aupung" />
+<Typo word="kiinnittää" find="\b(K|k)iinit" replace="$1iinnit" />
+<Typo word="kiinnostaa" find="\b(K|k)iinost" replace="$1iinnost" />
+<Typo word="kirjailija" find="(K|k)irjalij" replace="$1irjailij" />
+<Typo word="kirjasin" find="(K|k)irjaisi" replace="$1irjasi" />
+<Typo word="kirkko" find="(K|k)irkkk" replace="$1irkk" />
+<Typo word="kollega, kollegio" find="(K|k)olleeg" replace="$1olleg" />
+<Typo word="kokonsa" find="\b(K|k)oonsa" replace="$1okonsa" />
+<Typo word="konjunktio" find="(K|k)onjukt" replace="$1onjunkt" />
+<Typo word="koollekutsuja" find="(K|k)okoonku" replace="$1oolleku" />
+<Typo word="koskaan" find="koskaa\b" replace="koskaan" />
+<Typo word="kraatteri" find="(K|k)raater(?!\b)" replace="$1raatter" />
+<Typo word="kreivi" find="\b(K|k)revi" replace="$1reivi" />
+<Typo word="krokotiilia" find="(K|k)rokotiil(i|ej|e?in|e?il[lt]|e?is[st])ä" replace="$1rokotiil$2a" />
+<Typo word="kuitenkin" find="(K|k)(?!uitenk)uin*ten*k" replace="$1uitenk" />
+<Typo word="kuningas" find="(K|k)unig(?!(und|ami))" replace="$1uning" />
+<Typo word="kuninkaan" find="(K|k)unik" replace="$1unink" />
+<Typo word="kutsutaan" find="(K|k)utsutaa\b" replace="$1utsutaan" />
+<Typo word="kuulostaa" find="(K|k)uullos" replace="$1uulos" />
+<Typo word="kuvaannollinen" find="\b(K|k)(?!uvaannol)uva+i*n+o+i*ll" replace="$1uvaannoll" />
+<Typo word="käytetään" find="(K|k)äytetää\b" replace="$1äytetään" />
+<Typo word="käyttää" find="\b(K|k)äytää\b" replace="$1äyttää" />
+<Typo word="käännettiin" find="(K|k)ääne" replace="$1äänne" />
+<Typo word="liioitella" find="(L|l)iiot" replace="$1iioit" />
+<Typo word="liittyen" find="\b(L|l)itty" replace="$1iitty" />
+<Typo word="Liukuportaat" find="Rullapor" replace="Liukupor" />
+<Typo word="liukuportaat" find="rullapor" replace="liukupor" />
+<Typo word="maakeskinen" find="(M|m)aakeskei" replace="$1aakeski" />
+<Typo word="mahdollinen" find="(M|m)(?!ahdolli)ahdol+i" replace="$1ahdolli" />
+<Typo word="mieluummin" find="(M|m)ielum" replace="$1ieluum" />
+<Typo word="mihin" find="(M|m)ihinkä\b" replace="$1ihin" />
+<Typo word="miljoona" find="(M|m)iljon(?=[ai])" replace="$1iljoon" />
+<Typo word="monesti" find="(M|m)onasti\b" replace="$1onesti" />
+<Typo word="moottori" find="(M|m)ootor" replace="$1oottor" />
+<Typo word="morsiamen" find="(M|m)orsiamm" replace="$1orsiam" />
+<Typo word="muutti" find="\b(M|m)uuti" replace="$1uutti" />
+<Typo word="myös" find="\b(M|m)yöskin\b" replace="$1yös" />
+<Typo word="myöten" find="\b(M|m)yöden\b" replace="$1yöten" />
+<Typo word="naiivi" find="\b(N|n)aivi(n)?\b" replace="$1aiivi$2" />
+<Typo word="napalm" find="(N|n)apalmi\b" replace="$1apalm" />
+<Typo word="nestemäinen" find="(N|n)estemm" replace="$1estem" />
+<Typo word="neuvosto" find="(N|n)evosto" replace="$1euvosto" />
+<Typo word="niin kauan kuin" find="(N|n)iin kauan,* kun\b" replace="$1iin kauan kuin" />
+<Typo word="niinpä" find="\b(N|n)iimpä" replace="$1iinpä" />
+<Typo word="nimitys" find="(N|n)imisty" replace="$1imity" />
+<Typo word="Nykyään" find="Tänä\s*päivänä" replace="Nykyään" />
+<Typo word="nykyään" find="tänä\s*päivänä" replace="nykyään" />
+<Typo word="olisivat" find="\b(O|o)lisv" replace="$1lisiv" />
+<Typo word="olleet" find="\b(O|o)llet\b" replace="$1lleet" />
+<Typo word="piirustus" find="(P|p)iirru" replace="$1iiru" />
+<Typo word="piirros" find="(P|p)iiro(?=[ks])" replace="$1iirro" />
+<Typo word="pitkäjännitteinen" find="(P|p)itkäjänt" replace="$1itkäjännitt" />
+<Typo word="pareittain" find="(P|p)arett" replace="$1areitt" />
+<Typo word="planeetta" find="(P|p)lanett" replace="$1laneett" />
+<Typo word="pohjalainen" find="(P|p)ohjanmaalai" replace="$1ohjalai" />
+<Typo word="poliitikko" find="(P|p)olitiik(ko|o(?!j))" replace="$1oliitik$2" />
+<Typo word="poliittinen" find="(P|p)olitt(?!i\b)i+" replace="$1oliitti" />
+<Typo word="politiikka" find="(P|p)oliitii(?!ko)" replace="$1olitii" />
+<Typo word="politiikka" find="(P|p)olitik(?!(|oi|en))" replace="$1olitiik" />
+<Typo word="potentiaali-" find="(P|p)(?!otentiaa)ote+nt+iaa" replace="$1otentiaa" />
+<Typo word="psyykeä" find="(P|p)syykettä" replace="$1syykeä" />
+<Typo word="puolustaa" find="(P|p)uollu" replace="$1uolu" />
+<Typo word="päällikkö" find="(P|p)äälik(?=[kö])" replace="$1äällik" />
+<Typo word="päällys-" find="(P|p)äälys" replace="$1äällys" />
+<Typo word="rangaista" find="\b(R|r)ankaista" replace="$1angaista" />
+<Typo word="rei'ittää" find="(R|r)eijit" replace="$1ei’it" />
+<Typo word="reiät" find="(R|r)eijä" replace="$1eiä" />
+<Typo word="renessanssi" find="(R|r)(?!enessanssi)enes+ans+i" replace="$1enessanssi" />
+<Typo word="saadaan" find="(S|s)aadaa\b" replace="$1aadaan" />
+<Typo word="saanut" find="\b(S|s)aannu" replace="$1aanu" />
+<Typo word="saatikka" find="(S|s)aatika" replace="$1aatikka" />
+<Typo word="samalla kun" find="(S|s)amalla kuin\b" replace="$1amalla kun" />
+<Typo word="satelliitti" find="(S|s)atel(i|li|ii)t(?!es*)" replace="$1atelliit" />
+<Typo word="satunnainen" find="(S|s)atunai" replace="$1atunnai" />
+<Typo word="seitsemän" find="(S|s)eits(ämä|äme|eme)" replace="$1eitsemä" />
+<Typo word="sekunti" find="(S|s)ekuntt" replace="$1ekunt" />
+<Typo word="siksi" find="(S|s)iitä johtuen" replace="$1iksi" />
+<Typo word="sinänsä" find="(S|s)inäänsä" replace="$1inänsä" />
+<Typo word="sisäasiain" find="(S|s)isäasian" replace="$1isäasiain" />
+<Typo word="sisälsi" find="piti(\w*) sisällään" replace="sisälsi$1" />
+<Typo word="Sisältää" find="Pitä(\w*) sisällään" replace="Sisältä$1" />
+<Typo word="sisältää" find="pitä(\w*) sisällään" replace="sisältä$1" />
+<Typo word="sittemmin" find="\b(S|s)(?!ittemm)it+en*m+i" replace="$1ittemmi" />
+<Typo word="suomennos" find="(S|s)uomennu" replace="$1uomenno" />
+<Typo word="suunnitella, suunniltaan" find="(?<!\b([Mm]on|[Kk]a))(S|s)uuni(?=[tl]\w)" replace="$2uunni" />
+<Typo word="suurellinen" find="(S|s)uureelli" replace="$1uurelli" />
+<Typo word="Suuri merkitys" find="Tärkeä(\w*) merkit" replace="Suuri$1 merkit" />
+<Typo word="suuri merkitys" find="tärkeä(\w*) merkit" replace="suuri$1 merkit" />
+<Typo word="sydämen" find="(S|s)ydämm" replace="$1ydäm" />
+<Typo word="taiteilija" find="(T|t)(?!aiteilij[ao])aitei*li*j*(?=[ao])" replace="$1aiteilij" />
+<Typo word="taitotieto" find="(T|t)ietotai" replace="$1aitotie" />
+<Typo word="tapahtua" find="(T|t)apht" replace="$1apaht" />
+<Typo word="teettää" find="(T|t)eetät" replace="$1eet" />
+<Typo word="tehdään" find="(T|t)ehdää\b" replace="$1ehdään" />
+<Typo word="toiminta" find="(T|t)oimn" replace="$1oimin" />
+<Typo word="tunnetaan" find="(T|t)unnetaa\b" replace="$1unnetaan" />
+<Typo word="tällainen" find="(T|t)älläi(nen|sen|seksi|seen|selle|set|s[it]en|siksi|siin|sille)\b" replace="$1ällai$2" />
+<Typo word="tällaista" find="(T|t)älläis(t|en|ess|est|ell|elt|i|in|iss|ist|ill|ilt)ä\b" replace="$1ällais$2a" />
+<Typo word="tämän vuoksi" find="\b(T|t)ästä johtuen\b" replace="$1ämän vuoksi" />
+<Typo word="univormu" find="(U|u)niformu" replace="$1nivormu" />
+<Typo word="useimmiten" find="\b(U|u)(?!seimmi)sein*m+i" replace="$1seimmi" />
+<Typo word="uudelleen" find="\b(U|u)udellen" replace="$1udelleen" />
+<Typo word="vai" find="\b(V|v)aiko" replace="$1ai" />
+<Typo word="vampyyri" find="(V|v)amppyyr" replace="$1ampyyr" />
+<Typo word="vasemmalla" find="(V|v)asema" replace="$1asemma" />
+<Typo word="Vastuu" find="Edesv" replace="V" />
+<Typo word="vastuu" find="edesv" replace="v" />
+<Typo word="vielä" find="\b(V|v)iellä" replace="$1ielä" />
+<Typo word="viekoitella" find="(V|v)iekot" replace="$1iekoit" />
+<Typo word="Vinoviiva" find="Kauttaviiv" replace="Vinoviiv" />
+<Typo word="vinoviiva" find="kauttaviiv" replace="vinoviiv" />
+<Typo word="voidaan" find="(V|v)oidaa\b" replace="$1oidaan" />
+<Typo word="väestötiheys" find="(V|v)äe(n|ki|stön)ti" replace="$1äestöti" />
+<Typo word="yhtyeessä" find="(Y|y)htyeessa" replace="$1htyeessä" />
+<Typo word="yhä" find="(Y|y)hä (nykyään|tänä\s*päivänä)\b" replace="$1hä" />
+<Typo word="äskettäin" find="\b(Ä|ä)skeit" replace="$1sket" />
+</source></font>
+
+Maskuliinista järjestysluvun merkkiä näkee joskus käytettävän väärin astemerkin sijasta.
+
+<font size="-1"><source lang="xml">
+<Typo word="°C" find="ºC\b" replace="°C" />
+</source></font>

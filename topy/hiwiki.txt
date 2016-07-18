@@ -1,0 +1,191 @@
+<div style="float:right;width:250px;background-color:#f9f9f9;border:2px solid #a7d7f9;text-align:center;line-height: 2em;">टाइपो की संख्या<br><big>'''122'''</big></div>
+
+== रेफ ==
+<source lang="xml">
+<Typo word="आर्दश" find="\bआर्दश\b" replace="आदर्श"/>
+<Typo word="स्वरगीय" find="\bस्वरगीय\b" replace="स्वर्गीय"/>
+<Typo word="कार्यकर्म" find="\bकार्यकर्म\b" replace="कार्यक्रम"/>
+<Typo word="मरयादा" find="\bमरयादा\b" replace="मर्यादा"/>
+<Typo word="आर्शीवाद" find="\bआर्शीवाद\b" replace="आशीर्वाद"/>
+<Typo word="आद्र" find="\bआद्र\b" replace="आर्द्र"/>
+</source>
+
+== बिन्दु ==
+=== अनुपस्थित बिन्दु ===
+<source lang="xml">
+<Typo word="क्योकि" find="\bक्योकि\b" replace="क्योंकि"/>
+<Typo word="जिसमे" find="\bजिसमे\b" replace="जिसमें"/>
+<Typo word="मैंने" find="मैने" replace="मैंने"/>
+<Typo word="सन्यास" find="सन्यास" replace="संन्यास"/>
+</source>
+
+===ग़लत प्रयोग===
+<source lang="xml">
+<Typo word="हालाँकि" find="हालाकि" replace="हालाँकि"/>
+<Typo word="" find="" replace=""/>
+<Typo word="" find="" replace=""/>
+<Typo word="" find="" replace=""/>
+</source>
+
+=== न ===
+<source lang="xml">
+<Typo word="अंत" find="अंत" replace="अन्त"/>
+<Typo word="इंद" find="इंद" replace="इन्द"/>
+<Typo word="कांत" find="कांत" replace="कान्त"/>
+<Typo word="कंद" find="कंद" replace="कन्द"/>
+<Typo word="केंद" find="केंद" replace="केन्द"/>
+<Typo word="चंद" find="चंद" replace="चन्द"/>
+<Typo word="नंद" find="नंद" replace="नन्द"/>
+<Typo word="नींद" find="नींद" replace="नीन्द"/>
+<Typo word="फ्रांस" find="फ्रांस" replace="फ़्रान्स"/>
+<Typo word="मंत" find="मंत" replace="मन्त"/>
+<Typo word="मंद" find="मंद" replace="मन्द"/>
+<Typo word="यंत" find="यंत" replace="यन्त"/>
+<Typo word="रंत" find="रंत" replace="रन्त"/>
+<Typo word="संद" find="संद" replace="सन्द"/>
+<Typo word="संध" find="संध" replace="सन्ध"/>
+<Typo word="हिंद" find="हिंद" replace="हिन्द"/>
+<Typo word="वृंद" find="वृंद" replace="वृन्द"/>
+</source>
+
+=== म ===
+<source lang="xml">
+<Typo word="अंब" find="अंब" replace="अम्ब"/>
+<Typo word="रंभ" find="रंभ" replace="रम्भ"/>
+<Typo word="नंब" find="नंब" replace="नम्ब"/>
+<Typo word="दंब" find="दंब" replace="दम्ब"/>
+<Typo word="संप" find="संप" replace="सम्प"/>
+</source>
+
+== नुक़्ता ==
+=== ज़ ===
+<source lang="xml">
+<Typo word="अंग्रेज" find="अंग्रेज" replace="अंग्रेज़"/>
+<Typo word="अंग्रेजी" find="अंग्रेज़ी" replace="अंग्रेज़ी"/>
+<Typo word="ब्राजील" find="ब्राजील" replace="ब्राज़ील"/>
+<Typo word="जिक्र" find="\bजिक्र\b" replace="ज़िक्र"/>
+<Typo word="जरूर" find="\bजरूर\b" replace="ज़रूर"/>
+<Typo word="कब्जा" find="\bकब्जा\b" replace="क़ब्ज़ा"/>
+<Typo word="कमजोर" find="कमजोर" replace="कमज़ोर"/>
+</source>
+
+=== फ़ ===
+<source lang="xml">
+<Typo word="फ्रान्स" find="फ्रान्स" replace="फ़्रान्स"/>
+<Typo word="खिलाफ" find="खिलाफ" replace="ख़िलाफ़"/>
+<Typo word="अफगान" find="अफगान" replace="अफ़ग़ान"/>
+<Typo word="फतह" find="फतह" replace="फ़तह"/>
+<Typo word="फतेहपुर" find="फतेहपुर" replace="फ़तेहपुर"/>
+<Typo word="फकीर" find="\bफकीर\b" replace="फ़कीर"/>
+<Typo word="कफन" find="\bकफन\b" replace="कफ़न"/>
+<Typo word="इम्फाल" find="\bइम्फाल\b" replace="इम्फ़ाल"/>
+</source>
+
+===गलत नुक़्ता===
+<source lang="xml">
+<Typo word="फिर" find="\b(फ़ि|फ़ी|फ़ी)र\b" replace="फिर"/>
+<Typo word="सफल" find="\bसफ़ल\b" replace="सफल"/>
+<Typo word="अगर" find="\bअग़र\b" replace="अगर"/>
+<Typo word="जनाब" find="\bज़नाब\b" replace="जनाब"/>
+</source>
+
+== चन्द्रबिन्दु ==
+<source lang="xml">
+<Typo word="बँगला" find="\bबँगला\b" replace="बांग्ला"/>
+<Typo word="गांव" find="गांव" replace="गाँव"/>
+<Typo word="मां" find="\sमां\s" replace=" माँ "/>
+<Typo word="सांप" find="\bसांप\b" replace="साँप"/>
+<Typo word="पहुंच" find="पहुंच" replace="पहुँच"/>
+<Typo word="जाएं" find="\bजाएं\b" replace="जाएँ"/>
+<Typo word="यहां" find="\bयहां\b" replace="यहाँ"/>
+<Typo word="कहां" find="\bकहां\b" replace="कहाँ"/>
+<Typo word="वहां" find="\bवहां\b" replace="वहाँ"/>
+</source>
+
+== ड़ ==
+<source lang="xml">
+<Typo word="लकडी" find="\bलकडी\b" replace="लकड़ी"/>
+<Typo word="कडिय" find="कडिय" replace="कड़िय"/>
+</source>
+
+== ण ==
+<source lang="xml">
+<Typo word="साधारन" find="\bसाधारन\b" replace="साधारण"/>
+<Typo word="हिरन" find="\bहिरन\b" replace="हिरण"/>
+<Typo word="रामायन" find="\bरामायन\b" replace="रामायण"/>
+<Typo word="उदाहरन" find="\bउदाहरन\b" replace="उदाहरण"/> 
+<Typo word="पुन्य" find="\bपुन्य\b" replace="पुण्य"/> 
+</source>
+
+== गलत वर्तनी ==
+<source lang="xml">
+<Typo word="व्यवसायिक" find="\bव्यवसायिक\b" replace="व्यावसायिक"/>
+<Typo word="हिन्दु" find="\bहिन्दु \b" replace="हिन्दू "/>
+<Typo word="विषेला" find="\bविषेला\b" replace="विषैला"/>
+<Typo word="प्रसंशा" find="\bप्रसंशा\b" replace="प्रशंसा"/>
+<Typo word="स्वास" find="\bस्वास\b" replace="श्वास"/>
+<Typo word="कश्ट" find="\bकश्ट\b" replace="कष्ट"/>
+<Typo word="बिमारी" find="\bबिमारी\b" replace="बीमारी"/>
+<Typo word="आधीन" find="\bआधीन\b" replace="अधीन"/>
+<Typo word="अनाधिकार" find="अना(धि|धी)कार" replace="अनधिकार"/>
+<Typo word="घनिष्ट" find="\bघनिष्ट\b" replace="घनिष्ठ"/>
+<Typo word="सुस्वागत" find="\bसुस्वागत\b" replace="स्वागत"/>
+<Typo word="अहिल्या" find="\bअहिल्या\b" replace="अहल्या"/>
+<Typo word="चिन्ह" find="\bचिन्ह\b" replace="चिह्न"/>
+<Typo word="छमा" find="\bछमा\b" replace="क्षमा"/>
+<Typo word="अध्यन" find="\bअध्यन\b" replace="अध्ययन"/>
+<Typo word="पूज्यनीय" find="\bपूज्यनीय\b" replace="पूजनीय"/>
+<Typo word="अतिश्योक्ति" find="\bअतिश्योक्ति\b" replace="अतिशयोक्ति"/>
+</source>
+
+==चिन्ह==
+<source lang="xml">
+<Typo word="।" find="&nbsp;।|\s।" replace="।"/>
+<Typo word="॥" find="&nbsp;॥|\s॥" replace="॥"/>
+<Typo word="॥" find="(। ।|।।)" replace="॥"/>
+<Typo word=" ," find=" +,\s?" replace=", "/><!--change space before comma to space after comma, for eventual move to punctuation section-->
+<Typo word=",," find="\s?,\s?\s?,\s?" replace=", "/><!--fixes double commas-->
+<Typo word=")" find=" )" replace=")"/>
+<Typo word="(" find="( " replace="("/>
+<Typo word="/" find=" /" replace="/"/>
+<Typo word="/" find="/ " replace="/"/>
+<Typo word="—" find="--" replace="—" disabled="----"/>
+<Typo word="—" find="---" replace="—" disabled="----"/>
+<Typo word="—" find="——" replace="—"/>
+<Typo word="—" find="—-" replace="—"/>
+<Typo word="—" find="-—" replace="—"/>
+</source>
+
+==विकी परियोजना==
+<source lang="xml">
+<Typo word="विकिपीडिया" find="(वि|वी)(कि|की)(/s|-|)(पि|पी)(डि|डी़|ड़ि)(या|य)" replace="विकिपीडिया"/>
+<Typo word="विकिपुस्तक" find="(वि|वी)(कि|की)(/s|-|)(पुस्तक|किताब)" replace="विकिपुस्तक"/>
+<Typo word="विकिसूक्ति" find="(वि|वी)(कि|की)(/s|-|)(सु|सू)क्ति" replace="विकिसूक्ति"/>
+<Typo word="विकिस्रोत" find="(वि|वी)(कि|की)(/s|-|)स्रोत" replace="विकिस्रोत"/>
+<Typo word="विकिडेटा" find="(वि|वी)(कि|की)(/s|-|)डेटा" replace="विकिडेटा"/>
+<Typo word="विक्षनरी" find="(वि|वी)क्षन(रि|री)" replace="विक्षनरी"/>
+</source>
+
+==लाघव चिन्ह==
+<source lang="xml">
+<Typo word="डॉ॰" find="\bडॉ.\b" replace="डॉ॰"/>
+<Typo word="ऍम." find="\bऍम.\b" replace="ऍम॰"/>
+<Typo word="ए." find="\bए.\b" replace="ए॰"/>
+</source>
+
+== मात्राएँ ==
+<source lang="xml">
+<Typo word="द्वारिका" find="\bद्वारिका\b" replace="द्वारका"/>
+<Typo word="राजनैतिक" find="\bराजनैतिक\b" replace="राजनीतिक"/>
+<Typo word="अत्याधिक" find="\bअत्याधिक\b" replace="अत्यधिक"/>
+<Typo word="अगामी" find="\bआगामी\b" replace="आगामी"/>
+<Typo word="वाल्मीकी" find="\bवाल्मीकी\b" replace="वाल्मीकि"/>
+<Typo word="मैथली" find="\bमैथली\b" replace="मैथिली"/>
+<Typo word="कवियित्री" find="\bकवियित्री\b" replace="कवयित्री"/>
+<Typo word="श्रीमति" find="\bश्रीमति\b" replace="श्रीमती"/>
+<Typo word="प्रमाणिक" find="\bप्रमाणिक\b" replace="प्रामाणिक"/>
+<Typo word="संसारिक" find="\bसंसारिक\b" replace="सांसारिक"/>
+<Typo word="अध्यात्मिक" find="\bअध्यात्मिक\b" replace="आध्यात्मिक"/>
+</source>
+
+[[Category:AutoWikiBrowser|Typos]]
