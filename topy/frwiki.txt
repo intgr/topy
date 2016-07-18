@@ -13,15 +13,17 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 
 == Typographie/Convention ==
 === Dates ===
-<source lang="xml">
-<Typo word="Date" find="(\[\[|\{\{)([0-9]{1,2})(er)? +(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)(\]\]|\}\})?,? *(\[\[)?([0-9]{4})\]\]" replace="{{date|$2|$4|$7}}" />
-<Typo word="Date" find="\[\[(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)\]\] *\[\[([0-9]{4})\]\]" replace="{{date||$1|$2}}" />
-<Typo word="Date" find="(\[\[|\{\{)([0-9]{1,2})(er)? +(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)(\]\]|\}\}),? *\[\[([0-9]{4}) +(en|dans|aux?|à) +(aéronautique|architecture|astronomie|politique|cinéma|les chemins de fer|les croisades|droit|échecs|économie|informatique|jeu|littérature|musique|musique classique|les parcs d'attractions|science|sociologie|sport|la télévision|théâtre|animation asiatique)(\|[0-9]{4})?\]\]" replace="{{date|$2|$4|$6|$7 $8}}" />
-<Typo word="Date" find="\[\[(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)\]\] *\[\[([0-9]{4}) +(en|aux?|dans|à) +(aéronautique|architecture|astronomie|politique|cinéma|les chemins de fer|les croisades|droit|échecs|économie|informatique|jeu|littérature|musique|musique classique|les parcs d'attractions|science|sociologie|sport|la télévision|théâtre|animation asiatique)(\|[0-9]{4})?\]\]" replace="{{Date||$1|$2|$3 $4}}" />
+==== Dates avec année et lien ====
+<source lang="xml" enclose="div">
+<Typo word="Date lien vers modèle" find="\[\[([0-9]{1,2})(&nbsp;| )?(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)\]\](&nbsp;| )?\[\[([0-2]*[0-9]*[0-9][0-9])\]\]" replace="{{date|$1 $3 $5}}" />
+<Typo word="Date lien avec domaine vers modèle" find="\[\[([0-9]{1,2})(&nbsp;| )?(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)\]\](&nbsp;| )?\[\[([0-2]*[0-9]*[0-9][0-9]) *(en|dans|aux?|à)?( )*(aéronautique|architecture|astronomie|politique|cinéma|les chemins de fer|les croisades|droit|échecs|économie|informatique|jeu|littérature|musique|musique classique|les parcs d'attractions|science|sociologie|sport|la télévision|théâtre|animation asiatique)?(\|)?([0-2]*[0-9]*[0-9]*[0-9]*)\]\]" replace="{{date|$1 $3 $5$9$6$7$8}}" />
+<Typo word="Date modèle et lien avec domaine vers modèle" find="\{\{([0-9]{1,2})(er)*(&nbsp;| )?(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)\}\}(&nbsp;| )?\[\[([0-2]*[0-9]*[0-9][0-9]) *(en|dans|aux?|à)?( )*(aéronautique|architecture|astronomie|politique|cinéma|les chemins de fer|les croisades|droit|échecs|économie|informatique|jeu|littérature|musique|musique classique|les parcs d'attractions|science|sociologie|sport|la télévision|théâtre|animation asiatique)?(\|)?([0-2]*[0-9]*[0-9]*[0-9]*)\]\]" replace="{{date|$1 $4 $6$10$7$8$9}}" />
+<Typo word="Date mois-année et lien vers modèle" find="\[\[(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)\]\] *\[\[([0-2]*[0-9]*[0-9][0-9])\]\]" replace="{{date|$1 $2}}" />
+<Typo word="Date mois-année avec domaine vers lien" find="\[\[(janvier|février|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|décembre)\]\] *\[\[([0-9]{4}) +(en|aux?|dans|à) +(aéronautique|architecture|astronomie|politique|cinéma|les chemins de fer|les croisades|droit|échecs|économie|informatique|jeu|littérature|musique|musique classique|les parcs d'attractions|science|sociologie|sport|la télévision|théâtre|animation asiatique)(\|[0-2]*[0-9]*[0-9][0-9])?\]\]" replace="{{date|$1 $2|$3 $4}}" />
 </source>
 
 ==== Mois ====
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="janvier" find="\b(\d{1,2}) +Janvier\b" replace="$1 janvier" />
 <Typo word="janvier" find="([a-z,;:] ) ?(\[*)Janvier\b(?<!(?:Auguste) ?Janvier)" replace="$1$2janvier" />
 <Typo word="janvier" find="\b[Jj]anv?\.? +([0-9]{4}|\[\[[0-9]{4}\]\])\b" replace="janvier $1" />
@@ -61,12 +63,12 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 ==== Années ====
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="Années 19?0" find="\b(a|A)nnées +([1-9]0)\b" replace="$1nnées 19$2" />
 </source>
 
 ==== Siècles ====
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="Ier siècle av. J.-C." find="\b(?:I|1) *(?:<sup(?: +class=\"exposant\")?>)?(?:i?[éeè°](?:me)?|er)(?:</sup>)? *[Ss](?:i[eèé]cle|\.) +av(?:ant|\.) +J(?:ésus|\.)?[- ]?C(?:hrist\b|\.|\b)" replace="{{-s-|I|er}}" />
 <Typo word="Siècle av. J.-C." find="\b([12]?\d) *(?:<sup(?: +class=\"exposant\")?>)?i?[éeè°](?:me)?(?:</sup>)? *[Ss](?:i[eèé]cle|\.) +av(?:ant|\.) +J(?:ésus|\.)?[- ]?C(?:hrist\b|\.|\b)" replace="{{-s-|{{subst:Nombre en romain|$1|subst=subst:}}|e}}" />
 <Typo word="Siècle av. J.-C." find="\b([XVI]+) *(?:<sup(?: +class=\"exposant\")?>)?i?[éeè°](?:me)?(?:</sup>)? *[Ss](?:i[eèé]cle|\.) +av(?:ant|\.) +J(?:ésus|\.)?[- ]?C(?:hrist\b|\.|\b)" replace="{{-s-|$1|e}}" />
@@ -77,7 +79,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === Phonétique ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="d͡z" find="ʣ" replace="d͡z" />
 <Typo word="d͡ʒ" find="ʤ" replace="d͡ʒ" />
 <Typo word="d͡ʑ" find="ʥ" replace="d͡ʑ" />
@@ -87,21 +89,42 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === Typographie ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Type word="n° non suivi d'un chiffre" find="\b(N|n)°([^0-9][^0-9])\b" replace="$1{{o}}$2" />
 <Type word="points de suspension" find="\betc(\.\.\.*|…)\b" replace="etc." />
 <Type word="Virgule double" find="\b(\,\,)\b" replace="," />
+<Type word="Deux points après à" find="\b(à\:)\b" replace="à :" />
 </source>
 
 === Unités ===
-<source lang="xml">
-<Type word="surface - 2 en exposant" find="\b(G|M|k|K|h|da|d|c|m|u|µ|n|p)?m[²2]\b" replace="$1m{{2}}" />
-<Type word="volume - 3 en exposant" find="\b(G|M|k|K|h|da|d|c|m|u|µ|n|p)?m[³3]\b" replace="$1m{{3}}" />
-<Typo word="préfixe kilo - k au lieu de K" find="\b(?:k|K)(m|W|g|V|A)\b" replace="k$1" />
+<source lang="xml" enclose="div">
+<Type word="surface - 2 en exposant" find="\b(G|M|k|K|h|da|d|c|m|u|µ|n|p)?m[²2]([^0-9])" replace="$1m{{2}}$2" />
+<Type word="volume - 3 en exposant" find="\b(G|M|k|K|h|da|d|c|m|u|µ|n|p)?m[³3]([^0-9])" replace="$1m{{3}}$2" />
+<Typo word="préfixe kilo - k au lieu de K" find="\b(?:k|K)(m|W|g|V|A|o|Hz)\b" replace="k$1" />
+</source>
+
+=== Latin ===
+<source lang="xml" enclose="div">
+<Typo word="latin ad hoc" find="\b(ad hoc(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin a fortiori" find="\b(a fortiori(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin a posteriori" find="\b(a posteriori(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin a priori" find="\b(a priori(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin bis" find="\b(bis(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin grosso modo" find="\b(grosso modo(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin ibidem" find="\b(ibidem(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin idem" find="\b(idem(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin in extenso" find="\b(in extenso(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin in extremis" find="\b(in extremis(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin in fine" find="\b(in fine(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin infra" find="\b(infra(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin modus vivendi" find="\b(modus vivendi(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin sic" find="\b(sic(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin statu quo" find="\b(statu quo(''')?)(?=[\s,.)]|$)" replace="''$1''" />
+<Typo word="latin vice versa" find="\b(vice versa(''')?)(?=[\s,.)]|$)" replace="''$1''" />
 </source>
 
 == Syntaxe Wiki ==  <!-- ATTENTION : l'ordre des regexp dépend des interrelations, PAS alphabétique -->
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="1er" find="\b (1|I) ?i?er\b" replace=" {{$1er}}" />
 <Typo word="1re" find="\b (1|I) ?(re|i?ere|i?ère|i?ére)\b" replace=" {{$1re}}" />
 <Typo word="ordinal" find="\b ([0-9]{1,3}) ?(e|é|è|i?eme|i?ème|i?éme) \b" replace=" {{$1e}} " />
@@ -114,6 +137,9 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="guillemet fermant" find="&nbsp;»" replace=" »" />
 <Typo word="Catégorie" find="\[\s*\[[ _]*(?:(:)[ _]*)?(?:fr[ _]*:[ _]*)?[Cc]at[éèêe]gor(?:ie|y)[ _]*:[ _]*(.*[^\s*\]]+)\s*\]\s*\]" replace="[[$1Catégorie:$2]]" />
 <Typo word="exp" find="<sup>(-?[0-9]+\+?)</sup>" replace="{{exp|$1}}" />
+<Typo word="CO2" find="\b[Cc][Oo]2\b(?!\|)" replace="{{fchim|CO|2}}" />
+<Typo word="CH4" find="\b[Cc][Hh]4\b(?!\|)" replace="{{fchim|CH|4}}" />
+<Typo word="H2O" find="\b[Hh]2[Oo]\b(?!\|)" replace="{{fchim|H|2|O}}" />
 <Typo word="vitesse" find="(k?m)\.([sh])-([1-4])" replace="$1.$2<sup>-$3</sup>" />
 <Typo word="vitesse" find="(k?m)\/([sh])([1-4])" replace="$1.$2<sup>-$3</sup>" />
 <Typo word="vitesse" find="(k?m)\/([sh])<sup>([1-4])</sup>" replace="$1.$2<sup>-$3</sup>" />
@@ -125,8 +151,10 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="Coord" find="(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\'\′] *(N|S) *,? *(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\'\′] *(E|W)" replace="{{Coord|$1$2|$3$4|$5|$6$7|$8$9|$10}}" />
 <Typo word="Coord" find="(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\.,] *([0-9]{1,2}) *[\'\′] *(N|S) *,? *(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\.,] *([0-9]{1,2}) *[\'\′] *(E|W)" replace="{{Coord|$1$2|$3$4.$5|$6|$7$8|$9$10.$11|$12}}" />
 <Typo word="Coord" find="(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\'\′] *(-?) *([0-9]{1,2}) *[\"\″] *(N|S) *,? *(-?) *([0-9]{1,3}) *° *(-?) *([0-9]{1,2}) *[\'\′] *(-?) *([0-9]{1,2}) *[\"\″] *(E|W)" replace="{{Coord|$1$2|$3$4|$5$6|$7|$8$9|$10$11|$12$13|$14}}" />
-<Typo word="n°s" find="\b(n°|nº|n˚|n{{o}}|N°|Nº|N˚|N{{o}})s(&nbsp;| )*([0-9–-]+)\b" replace="{{nos|$3}}" />
-<Typo word="n°" find="\b(n°|nº|n˚|n{{o}}|N°|Nº|N˚|№|N{{o}})(&nbsp;| )*([0-9–-]+)\b" replace="{{n°|$3}}" />
+<Typo word="n°s" find="\bn(°|º|˚|{{o}})s(&nbsp;| )*([0-9–-]+)\b" replace="{{nos|$3}}" />
+<Typo word="N°s" find="\bN(°|º|˚|{{o}})s(&nbsp;| )*([0-9–-]+)\b" replace="{{Numéros avec majuscule|$3}}" />
+<Typo word="n°" find="\bn(°|º|˚|{{o}})(&nbsp;| )*([0-9–-]+)\b" replace="{{n°|$3}}" />
+<Typo word="N°" find="\b(N°|Nº|N˚|№|N{{o}})(&nbsp;| )*([0-9–-]+)\b" replace="{{Numéro avec majuscule|$3}}" />
 <Typo word="p." find="\b[Pp]p?\.?(&nbsp;| +)?([0-9][0-9–-]*)\b" replace="{{p.|$2}}" />
 <Typo word="titre section" find="\n(==={0,3})(?: *)([^\n=]+)(?: *)\1(?: *)\n" replace="\n$1 $2 $1\n" />
 <Typo word="ref,ref" find="(</ref>|<ref[^/]*/>) *(<sup>)?[,;\.]?(</sup>)? *<ref\b" replace="$1{{,}}<ref" />
@@ -134,41 +162,58 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="</ref>.." find="(</ref>|<ref[^/]*/>)\.{2}([^\.])" replace="$1.$2" />
 <Typo word="espace avant ref" find="([^|]) <ref" replace="$1<ref" />
 <Typo word="ruby" find="<ruby><rb>([^<]+)</rb><rt>([^<]+)</rt></ruby>" replace="{{Ruby|$1|$2}}" />
-<Typo word="Unité monnaie" find="([0-9]+)(&nbsp;| )*([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(€|\$|euros?|dollars?)\b" replace="{{unité|$1$3.$4|$6}}" />
-<Typo word="Unité monnaie" find="([0-9]+)(&nbsp;| )*([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(€|\$|euros?|dollars?)\b" replace="{{unité|$1$3$5|$7}}" />
-<Typo word="Unité monnaie" find="(¤|₳|฿|¢|₡|₵|₢|₫|€|ƒ|₣|₲|₭|£|₤|₥|₦|₱|₧|₨|\$|₮|₩|¥|Ƶ|₯|₴|₪|₠|₰)+([0-9]+)(&nbsp;| )*([0-9]+)?[.,]([0-9]+)?( 000| milliers?| millions?| milliards?| billions?| billiards?)?\b" replace="{{unité|$2$4.$5$6|$1}}" />
-<Typo word="Unité monnaie" find="(¤|₳|฿|¢|₡|₵|₢|₫|€|ƒ|₣|₲|₭|£|₤|₥|₦|₱|₧|₨|\$|₮|₩|¥|Ƶ|₯|₴|₪|₠|₰)+([0-9]+)( 000| milliers?| millions?| milliards?| billions?| billiards?)?\b" replace="{{unité|$2$3|$1}}" />
-<Typo word="Unité température" find="(-?)([0-9]+)(&nbsp;| )*([0-9]*)[.,]([0-9]+)(&nbsp;| )*°(C|F)" replace="{{unité|$1$2$4.$5|°$7}}" />
-<Typo word="Unité température" find="(-?)([0-9]+)(&nbsp;| )*([0-9]*)(&nbsp;| )*([0-9]*)(&nbsp;| )*°(C|F)" replace="{{unité|$1$2$4$6|°$8}}" />
+<Typo word="Unité monnaie après xxx.xxx" find="([0-9]+)[.,]([0-9]+)(?:&nbsp;| )*(€|c€|k€|M€|\$|euros?|dollars?|roupies?|roubles?|francs?|USD|£|₤|¥)" replace="{{unité|$1.$2|$3}}" />
+<Typo word="Unité monnaie après xxx xxx.xxx" find="([0-9]+)(?:&nbsp;| )+([0-9]+)[.,]([0-9]+)(?:&nbsp;| )*(€|c€|k€|M€|\$|euros?|dollars?|roupies?|roubles?|francs?|USD|£|₤|¥)" replace="{{unité|$1$2.$3|$4}}" />
+<Typo word="Unité monnaie après xxx xxx xxx" find="([0-9]+)(?:&nbsp;| )+([0-9]+)(?:&nbsp;| )+([0-9]+)(?:&nbsp;| )*(€|c€|k€|M€|\$|euros?|dollars?|roupies?|roubles?|francs?|USD|£|₤|¥)" replace="{{unité|$1$2$3|$4}}" />
+<Typo word="Unité monnaie après xxx xxx" find="([0-9]+)(?:&nbsp;| )+([0-9]+)(?:&nbsp;| )*(€|c€|k€|M€|\$|euros?|dollars?|roupies?|roubles?|francs?|USD|£|₤|¥)" replace="{{unité|$1$2|$3}}" />
+<Typo word="Unité monnaie après xxx" find="([0-9]+)(?:&nbsp;| )*(€|c€|k€|M€|\$|euros?|dollars?|roupies?|roubles?|francs?|USD|£|₤|¥)" replace="{{unité|$1|$2}}" />
+<Typo word="Unité monnaie avant" find="(¤|₳|฿|¢|₡|₵|₢|₫|€|ƒ|₣|₲|₭|£|₤|₥|₦|₱|₧|₨|\$|₮|₩|¥|Ƶ|₯|₴|₪|₠|₰)+([0-9]+)(&nbsp;| )*([0-9]+)?[.,]([0-9]+)?( 000| milliers?| millions?| milliards?| billions?| billiards?)?\b" replace="{{unité|$2$4.$5$6|$1}}" />
+<Typo word="Unité monnaie avant" find="(¤|₳|฿|¢|₡|₵|₢|₫|€|ƒ|₣|₲|₭|£|₤|₥|₦|₱|₧|₨|\$|₮|₩|¥|Ƶ|₯|₴|₪|₠|₰)+([0-9]+)( 000| milliers?| millions?| milliards?| billions?| billiards?)?\b" replace="{{unité|$2$3|$1}}" />
+<Typo word="Unité température" find="([−-]?)([0-9]+)(&nbsp;| )*([0-9]*)[.,]([0-9]+)(&nbsp;| )*°(C|F)" replace="{{tmp|$1$2$4.$5|°$7}}" />
+<Typo word="Unité température" find="([−-]?)([0-9]+)(&nbsp;| )*([0-9]*)(&nbsp;| )*([0-9]*)(&nbsp;| )*°(C|F)" replace="{{tmp|$1$2$4$6|°$8}}" />
 <Typo word="Unité octet" find="([0-9]+)(&nbsp;| )*([0-9]*)[.,]([0-9]+)(&nbsp;| )*(octets?|o|ko|Kio|Mo|Mio|Go|Gio|To|Tio|Po|Pio|Eo|Eio)\b" replace="{{unité|$1$3.$4|$6}}" />
 <Typo word="Unité octet" find="([0-9]+)(&nbsp;| )*([0-9]*)(&nbsp;| )*([0-9]*)(&nbsp;| )*(octets?|o|ko|Kio|Mo|Mio|Go|Gio|To|Tio|Po|Pio|Eo|Eio)\b" replace="{{unité|$1$3$5|$7}}" />
-<Typo word="Unité gramme" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(grammes?|g|kg|mg|t|tonnes?)\b" replace="{{unité|$1$3.$4|$6}}" />
-<Typo word="Unité gramme" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(grammes?|g|kg|mg|t|tonnes?)\b" replace="{{unité|$1$3$5|$7}}" />
-<Typo word="Unité Hertz" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Hh]ertz|hz|Hz|kHz|MHz|GHz)\b" replace="{{unité|$1$3.$4|$6}}" />
-<Typo word="Unité Hertz" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Hh]ertz|hz|Hz|kHz|MHz|GHz)\b" replace="{{unité|$1$3$5|$7}}" />
-<Typo word="Unité Volt" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Vv]olts?|V|mV|kV|MV|GV)\b" replace="{{unité|$1$3.$4|$6}}" />
-<Typo word="Unité Volt" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Vv]olts?|V|mV|kV|MV|GV)\b" replace="{{unité|$1$3$5|$7}}" />
-<Typo word="Unité Ampère" find="(?<![A-Z0-9]-?)([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Aa]mpères?|A|mA|µA)\b(?!-)" replace="{{unité|$1$3.$4|$6}}" />
-<Typo word="Unité Ampère" find="(?<![A-Z0-9]-?)([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Aa]mpères?|A|mA|µA)\b(?!-)" replace="{{unité|$1$3$5|$7}}" />
-<Typo word="Unité vitesse" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm)/(s|h)\b" replace="{{unité|$1$3.$4|$6/$7}}" />
-<Typo word="Unité vitesse" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm)/(s|h)\b" replace="{{unité|$1$3$5|$7/$8}}" />
+<Typo word="Unité masse" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(grammes?|g|µg|kg|kilogrammes?|mg|t|tonnes?|[Mm][ée]gatonnes?|[Gg]igatonnes?|kt|Mt|Gt|lb)\b(?!\|)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité masse" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(grammes?|g|µg|kg|kilogrammes?|mg|t|tonnes?|[Mm][ée]gatonnes?|[Gg]igatonnes?|kt|Mt|Gt|lb)\b(?!\|)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité Hertz" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Hh]ertz|hz|Hz|kHz|MHz|GHz|THz)\b(?!\|)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité Hertz" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Hh]ertz|hz|Hz|kHz|MHz|GHz|THz)\b(?!\|)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité Volt" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Vv]olts?|V|µV|mV|kV|MV|GV)\b(?!\|)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité Volt" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Vv]olts?|V|µV|mV|kV|MV|GV)\b(?!\|)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité électronvolt" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(électronvolts?|électron-volts?|eV|µeV|meV|keV|MeV|GeV)\b(?!\|)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité électronvolt" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(électronvolts?|électron-volts?|eV|µeV|meV|keV|MeV|GeV)\b(?!\|)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité Ampère" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Aa]mpères?|A|mA|µA|kA)\b(?!-)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité Ampère" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Aa]mpères?|A|mA|µA|kA)\b(?!-)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité Ohm" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Oo]hms?|Ω|mΩ|µΩ|kΩ)\b(?!-)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité Ohm" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Oo]hms?|Ω|mΩ|µΩ|kΩ)\b(?!-)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité énergie" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Jj]oules?|J|kJ|MJ|GJ|TJ|PJ|EJ|[Kk]ilowatt-heure|kWh|kW⋅h|Wh|MWh|GWh|TWh|[Tt]onnes? d'équivalent pétrole|tep|ktep|Mtep|calories?|cal)\b(?!\|)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité énergie" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Jj]oules?|J|kJ|MJ|GJ|TJ|PJ|EJ|[Kk]ilowatt-heure|kWh|kW⋅h|Wh|MWh|GWh|TWh|[Tt]onnes? d'équivalent pétrole|tep|ktep|Mtep|calories?|cal)\b(?!\|)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité puissance" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Ww]atts?|W|mW|Wth|Wel?|Wc|[Kk]ilowatts?|kW|kWth|kWel?|kWc|[Mm][ée]gawatts?|MW|MWth|MWel?|MWc|[Gg]igawatts?|GW|GWth|GWel?|GWc|VA|kVA|MVA)\b(?!\|)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité puissance" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Ww]atts?|W|mW|Wth|Wel?|Wc|[Kk]ilowatts?|kW|kWth|kWel?|kWc|[Mm][ée]gawatts?|MW|MWth|MWel?|MWc|[Gg]igawatts?|GW|GWth|GWel?|GWc|VA|kVA|MVA)\b(?!\|)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité vitesse" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm)/(s|h)\b(?!\|)" replace="{{unité|$1$3.$4|$6/$7}}" />
+<Typo word="Unité vitesse" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm)/(s|h)\b(?!\|)" replace="{{unité|$1$3$5|$7/$8}}" />
+<Typo word="Unité baril" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?([Bb]arils?|bl|bbl|kbl|kbbl|Mbl|Mbbl|Gbl|Gbbl)\b(?!\|)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité énergie" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([Bb]arils?|bl|bbl|kbl|kbbl|Mbl|Mbbl|Gbl|Gbbl)\b(?!\|)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)?([0-9]+)(&nbsp;| +)?(m|km|mm|cm)(&nbsp;| +)?([1-9][0-9])" replace="{{unité|$1$2.$6|$4}}" />
 <Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?([2-9])(</sup>|}})?" replace="{{unité|$1$3.$4|$6|$8}}" />
 <Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?([2-9])(</sup>|}})?" replace="{{unité|$1$3$5|$7|$9}}" />
-<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?²(</sup>|}})?" replace="{{unité|$1$3.$4|$6|2}}" />
-<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?²(</sup>|}})?" replace="{{unité|$1$3$5|$7|2}}" />
-<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?³(</sup>|}})?" replace="{{unité|$1$3.$4|$6|3}}" />
-<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm)(<sup>|{{|{{exp\|)?³(</sup>|}})?" replace="{{unité|$1$3$5|$7|3}}" />
-<Typo word="Unité mètre" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(mètres?|m|km|mm|cm)\b" replace="$1{{unité|$2$4.$5|$7}}" />
-<Typo word="Unité mètre" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(mètres?|m|km|mm|cm)\b" replace="$1{{unité|$2$4$6|$8}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm|Mm)(<sup>|{{|{{exp\|)?²(</sup>|}})?" replace="{{unité|$1$3.$4|$6|2}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm|Mm)(<sup>|{{|{{exp\|)?²(</sup>|}})?" replace="{{unité|$1$3$5|$7|2}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(m|km|mm|cm|Mm)(<sup>|{{|{{exp\|)?³(</sup>|}})?" replace="{{unité|$1$3.$4|$6|3}}" />
+<Typo word="Unité mètre + exposant" find="([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(m|km|mm|cm|Mm)(<sup>|{{|{{exp\|)?³(</sup>|}})?" replace="{{unité|$1$3$5|$7|3}}" />
+<Typo word="Unité longueur" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(mètres?|m|km|kilomètres?|mm|millimètres?|cm|centimètres?|miles?|pieds?|ft|pouces?|in)\b" replace="$1{{unité|$2$4.$5|$7}}" />
+<Typo word="Unité longueur" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(mètres?|m|km|kilomètres?|mm|millimètres?|cm|centimètres?|miles?|pieds?|ft|pouces?|in)\b" replace="$1{{unité|$2$4$6|$8}}" />
 <Typo word="Unité pourmille" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?‰" replace="$1{{unité|$2$4.$5|‰}}" />
 <Typo word="Unité pourmille" find="( |\n|\()([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?‰" replace="$1{{unité|$2$4$6|‰}}" />
+<Typo word="Unité ppm" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?[.,]([0-9]+)(&nbsp;| +)?(ppm)\b(?!-)" replace="{{unité|$1$3.$4|$6}}" />
+<Typo word="Unité ppm" find="(?<=[\s(])([0-9]+)(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?([0-9]+)?(&nbsp;| +)?(ppm)\b(?!-)" replace="{{unité|$1$3$5|$7}}" />
+<Typo word="formatnum" find="( |\n|\(|\|)([0-9]{1,3})( |&nbsp;)([0-9]{3})( |&nbsp;)([0-9]{3})( |&nbsp;)([0-9]{3})( |&nbsp;)([0-9]{3})( |\n|\))" replace="$1{{formatnum:$2$4$6$8$10}}$11" />
 <Typo word="formatnum" find="( |\n|\(|\|)([0-9]{1,3})( |&nbsp;)([0-9]{3})( |&nbsp;)([0-9]{3})( |&nbsp;)([0-9]{3})( |\n|\))" replace="$1{{formatnum:$2$4$6$8}}$9" />
 <Typo word="formatnum" find="( |\n|\(|\|)([0-9]{1,3})( |&nbsp;)([0-9]{3})( |&nbsp;)([0-9]{3})( |\n|\))" replace="$1{{formatnum:$2$4$6}}$7" />
 <Typo word="formatnum" find="( |\n|\(|\|)([0-9]{1,3})( |&nbsp;)([0-9]{3})( |\n|\))" replace="$1{{formatnum:$2$4}}$5" />
 </source>
 
 == Toponymie ==
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="Abkhazie" find="\b[Aa][bhk]*azie\b" replace="Abkhazie" />
 <Typo word="Afghanistan" find="\b[Aa]fgh?ann?istan\b" replace="Afghanistan" />
 <Typo word="Albanie" find="\b[Aa]ll?bann?ie\b" replace="Albanie" />
@@ -238,7 +283,8 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="Haute-Volta" find="\b[hH]aute[ -][vV]olta\b" replace="Haute-Volta" />
 <Typo word="Honduras" find="\b[hH]o[mn]durr?as?\b" replace="Honduras" />
 <Typo word="Hongrie" find="\b[hH]ongrie?\b" replace="Hongrie" />
-<Typo word="Île-de-France" find="\b[iIîÎ]le[ -]de[ -][fF]rance\b" replace="Île-de-France" />
+<Typo word="Ile-de-France" find="\b[iI]le[ -]de[ -][fF]rance\b" replace="Ile-de-France" />
+<Typo word="Île-de-France" find="\b[îÎ]le[ -]de[ -][fF]rance\b" replace="Île-de-France" />
 <Typo word="Indochine" find="\b[iI]ndochinn?e\b" replace="Indochine" />
 <Typo word="Irlande/Islande" find="\bi([rs])lande\b" replace="I$1lande" />
 <Typo word="Israël" find="\b[iI]sra[éeèêë]l\b" replace="Israël" />
@@ -299,7 +345,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="Pays-Bas" find="\b[pP]ays[ -][bB]as\b" replace="Pays-Bas" />
 <Typo word="Pays basque" find="\b[pP]ays[ -][bB]asque\b" replace="Pays basque" />
 <Typo word="Pérou" find="\b[pP][eé]rou\b" replace="Pérou" />
-<Typo word="Philippines" find="\b[Pp]hill?ipp?inn?es?\b" replace="Philippines" />
+<!--Typo word="Philippines" find="\b[Pp]hill?ipp?inn?es?\b" replace="Philippines" / Faux positifs avec le prénom Philippine -->
 <Typo word="Pologne" find="\b[Pp]oll?ogne\b" replace="Pologne" />
 <Typo word="Porto Rico" find="\b[Pp]orto[ -][rR]icc?o\b" replace="Porto Rico" />
 <Typo word="Portugal" find="\bportugal\b" replace="Portugal" />
@@ -348,7 +394,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="Vanuatu" find="\b[vV]ann?uatt?u\b" replace="Vanuatu" />
 <Typo word="Vatican" find="\b[vV]att?icc?an\b" replace="Vatican" />
 <Typo word="Venezuela" find="\b[vV][eéè]nn?[eéè]zu[eéè]ll?a\b" replace="Venezuela" />
-<Typo word="Viêt Nam" find="\b[Vv]i[eéèêë]t(?:-| *)[Nn]am\b" replace="Viêt Nam" />
+<!-- Typo word="Viêt Nam" find="\b[Vv]i[eéèêë]t(?:-| *)[Nn]am\b" replace="Viêt Nam" / -->
 <Typo word="Wallis-et-Futuna" find="\b[wW]all?is[ -]et[ -][fF]utt?unn?a\b" replace="Wallis-et-Futuna" />
 <Typo word="Yémen" find="\b[yY][eéèêë]mm?en\b" replace="Yémen" />
 <Typo word="Zambie" find="\b[zZ]a[mn]bie\b" replace="Zambie" />
@@ -371,14 +417,14 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 == Règles orthographiques générales ==
-<source lang="xml">
-<Typo word=", " find="(?<=[^0-9 {]) *,(?![\s&])(?!<br)" replace=", " /> <!-- Virgule sans espace après -->
+<source lang="xml" enclose="div">
+<Typo word=", " find="(?<=[^0-9 {]) *,(?![\s &])(?!<br)" replace=", " /> <!-- Virgule sans espace après -->
 <Typo word=", " find="(?<=[^0-9 {]) *,( |&nbsp;) +(?!\s)" replace=", " /> <!-- Virgule avec plusieurs espaces -->
 <Typo word=", " find=",('+) +" replace="$1, " /> <!-- Virgule avant des apostrophes simples, doubles, triples, … -->
 <Typo word=",$" find="(?<=[^0-9 ]) +,$" replace="," />
 <Typo word=". À " find="(\.|\:|\?|!|==) A (?!contrario)" replace="$1 À " />
-<Typo word="À " find="(\n)A (?!contrario)" replace="$1À " />
-<Typo word="*À " find="(\n)(\*+|#+|'+) ?A (?!contrario)" replace="$1$2 À " />
+<Typo word="À " find="(\n)A (?!contrario|:|-|–|—)" replace="$1À " />
+<Typo word="*À " find="(\n)(\*+|#+|'+) ?A (?!contrario|:|-|–|—)" replace="$1$2 À " />
 <Typo word="e suivi de 2 consonnes ou x" find="[éèê](cc|dd|ff|ll|nn|pp|rr|ss|tt|x|zz)" replace="e$1" />
 <Typo word="Écr…" find="\bEcr([aéêeiou])" replace="Écr$1" />
 <Typo word="éenne" find="[éèê]ene(s?)\b" replace="éenne$1" />
@@ -391,12 +437,23 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="rep" find="repp" replace="rep" />
 <Typo word="sil" find="\b(S|s)i il" replace="$1'il" />
 <Typo word="→" find="([^-])[-—–]\x3E" replace="$1→" />
+<Typo word="euil, ueil" find="\bceuil\b" replace="cueil"<!-- "euil" devient "ueil" devant c et g--> />
+<Typo word="euil,ueil (bis)" find="\bgeuil\b" replace="gueil" />
+<Typo word="auxiliaire" find="\bauxilliaire\b" replace="auxiliaire" />
+<Typo word="en définitif/définive" find="\b(en définitif)\b" replace="en définitive" />
+<Typo word="saurai gré" find="\bserai gré\b" replace="saurai gré" />
+<Typo word="inconsciemment" find="\b(inconscia[m|mm]ent)\b" replace="inconsciemment" />
+<Typo word="consciemment" find="\b(conscia[m|mm]ent)\b" replace="consciemment" />
+<Typo word="s'il" find="\b(si il)\b" replace="s'il" />
+<Typo word="c'est-à-dire" find="\b([Cc])'est à dire\b" replace="$1'est-à-dire" />
+<Typo word="Quelquefois" find="\b([Qq])uelques fois\b" replace="$1uelquefois" />
+<Typo word="Permis(e)" find="\b([Pp])ermise\b" replace="$1ermis"
 </source>
 
 == Mots ==
 
 === A ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="abandonner" find="\b(a|A)bandon([aâeéèio])" replace="$1bandonn$2" />
 <Typo word="abat" find="\b([aA]|[rR]a)bbat(s?)\b" replace="$1bat$2" />
 <Typo word="abattre" find="\b([aA]|[rR]a)bb?att?([raeîou]|i[^a])" replace="$1batt$2" />
@@ -413,6 +470,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="accueillir" find="\b([aA]|[iI]na)cc?(?:eu|ue)ill?([aeiîo])" replace="$1ccueill$2" />
 <Typo word="accuser" find="\b([aA]|[rR]é?a)cus" replace="$1ccus" />
 <Typo word="acerbe" find="\b(a|A)s?cs?erbe(s?)\b" replace="$1cerbe$2" />
+<Typo word="achèvement" find="\b(a|A)ch[ée]vement(s?)\b" replace="$1chèvement$2" />
 <Typo word="acompte" find="\b(a|A)ccompte(s?)\b" replace="$1compte$2" />
 <Typo word="acquérir" find="\b(a|A)c?qu?(i?[eéè]r|î|ir|is[eis])" replace="$1cqu$2" />
 <Typo word="acquis|acquit" find="\b(a|A)c?qu?i([st]s?)\b" replace="$1cqui$2" />
@@ -495,7 +553,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === B ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="baccalauréat" find="\b(B|b)acc?all?aurr?[eé]at?(s?)\b" replace="$1accalauréat$2" />
 <Typo word="balistique" find="\b(B|b)allistique(s?)\b" replace="$1alistique$2" />
 <Typo word="Barack Obama" find="\b[Bb]ar?rac?k? [Oo]bamm?a\b" replace="Barack Obama" />
@@ -524,7 +582,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === C ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="câble" find="\b(c|C)abl(e|ée?|age|eur|euse|ante?)(s?)\b" replace="$1âbl$2$3" />
 <Typo word="cailloux" find="\b(C|c)aillous\b" replace="$1ailloux" />
 <Typo word="caméra" find="\b(C|c)am[eè]ra(s?)\b" replace="$1améra$2" />
@@ -551,11 +609,13 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="château" find="\b(C|c)h[aàáâ]te?au(x?)\b" replace="$1hâteau$2" />
 <Typo word="chef-d'œuvre" find="\b(c|C)hef(s?)[ -]d([’'])(?:oe|œ)uvres?\b" replace="$1hef$2-d$3œuvre" />
 <Typo word="chef-lieu" find="\b(c|C)hef[ -]lieue?\b" replace="$1hef-lieu" />
+<Typo word="cette homme" find="\b(c|C)ette homme\b" replace="$1et homme" />
 <Typo word="chevaux" find="\b(c|C)heveaux\b" replace="$1hevaux" />
 <Typo word="cheveux" find="\b(c|C)heu?veu[sx]\b" replace="$1heveux" />
 <Typo word="chiffre" find="\b(C|c)hifre(s?)\b" replace="$1hiffre$2" />
 <Typo word="chiffre d'affaires" find="\b(C|c)hi[f]re(s?)\s*d([’'])affaire\b" replace="$1hiffre$2 d$3affaires" />
 <Typo word="chœur" find="\b(c|C)hoeur(s?)\b" replace="$1hœur$2" />
+<Typo word="ci-dessous" find="\b(c|C)i dess(o?)us\b" replace="$1i-dess$2us" />
 <Typo word="cinquante" find="\b(c|C)inquantes\b" replace="$1inquante" />
 <Typo word="cinquième" find="\b(c|C)inqui[ée]mm?e(ment)?\b" replace="$1inquième$2" />
 <Typo word="clarté" find="\b(c|C)lartée?(s?)\b" replace="$1larté$2" />
@@ -606,6 +666,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="courant" find="\b([cC]|[cC]onc)ourr?an(te?s?)\b" replace="$1ouran$2" />
 <Typo word="couramment" find="\b(c|C)ourr?amm?[ae]nt\b" replace="$1ouramment" />
 <Typo word="couronn*" find="\b(c|C)ourr?onn?(es?|er|ements?|i?ons|i?ez|ent|ai?s?|ait|aient|erai?s?|eri?ons|eri?ez|eraient|eront|ant|ée?s?)\b" replace="$1ouronn$2" /> 
+<Typo word="coutume" find="\b(c|C)outûme(s?)\b" replace="$1outume$2" />
 <Typo word="cruauté" find="\b(c|C)ruautt?ée?(s?)\b" replace="$1ruauté$2" />
 <Typo word="cupidité" find="\b(c|C)upp?idd?itt?ée?(s?)\b" replace="$1upidité$2" />
 <Typo word="curiosité" find="\b(c|C)urr?iositt?ée?(s?)\b" replace="$1uriosité$2" />
@@ -613,7 +674,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === D ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="d'où" find="\b(d|D)'ou\b" replace="$1'où" />
 <Typo word="dangerosité" find="\b(d|D)ang[eéèê]rr?oss?itt?ée?(s?)\b" replace="$1angerosité$2" />
 <Typo word="déballer" find="\b([dD]|[rR]ed)[éèe]ball?" replace="$1éball" />
@@ -664,12 +725,14 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === E ===
-<source lang="xml">
+<source lang="xml" enclose="div">
+<Typo word="ecclésiastique" find="\b[éèe]cc?l[eéè]si(es?|as?|astes?|ale?s?|aux|astiques?)\b" replace="ecclési$1" />
+<Typo word="Ecclésiastique" find="\b[ÉÈE]cc?l[eéè]si(es?|as?|astes?|ale?s?|aux|astiques?)\b" replace="Ecclési$1" />
 <Typo word="en" find="\beb\b" replace="en" />
 <Typo word="écœurement" find="\b[ée]co?eu?rr?(ante?|ment|ée?s?|er?|ai[st]|aient|ent)\b" replace="écœur$1" />
 <Typo word="Écœurement" find="\b[ÉE]co?eu?rr?(ante?|ment|ée?s?|er?|ai[st]|aient|ent)\b" replace="Écœur$1" />
-<Typo word="école" find="\becoll?e(s?)\b" replace="école$1" />
-<Typo word="École" find="\bEcoll?e(s?)\b" replace="École$1" />
+<Typo word="école" find="\b[eé]coll?e(s?)\b" replace="école$1" />
+<Typo word="École" find="\b[EÉ]coll?e(s?)\b" replace="École$1" />
 <Typo word="Économie" find="\bEconomie(s?)\b" replace="Économie$1" />
 <Typo word="écouter" find="\b[éèe]cout(es?|és?|ées?|er|ez)\b" replace="écout$1" />
 <Typo word="Écouter" find="\b[ÉÈE]cout(es?|és?|ées?|er|ez)\b" replace="Écout$1" />
@@ -684,7 +747,8 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="Égalité" find="\b[EÉ]gall?itt?ée?(s?)\b" replace="Égalité$1" />
 <Typo word="église" find="\beglise(s?)\b" replace="église$1" />
 <Typo word="Église" find="\bEglise(s?)\b" replace="Église$1" />
-<Typo word="égout" find="\b(é|É|E)gout(s?)\b" replace="$1gout$2" />
+<Typo word="égout" find="\b[eè]gout(s?)\b" replace="égout$1" />
+<Typo word="Égout" find="\b[EÈ]gout(s?)\b" replace="Égout$1" />
 <Typo word="électricité" find="\b[ée]lectricitt?ée?(s?)\b" replace="électricité$1" />
 <Typo word="Électricité" find="\b[ÉE]lectricitt?ée?(s?)\b" replace="Électricité$1" />
 <Typo word="électrique" find="\belectrique(s?)\b" replace="électrique$1" />
@@ -701,7 +765,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="Émilie" find="\b[EÉée]milie\b" replace="Émilie" />
 <Typo word="émission" find="\b(?:e|é)mm?i(?:c|ss?)ion(s?)\b" replace="émission$1" />
 <Typo word="Émission" find="\b(?:É|E)mm?i(?:c|ss?)ion(s?)\b" replace="Émission$1" />
-<Typo word="Empire romain" find="\bempire (R|r)omain\b" replace="Empire romain" />
+<Typo word="Empire romain" find="\bempire [Rr]omain\b" replace="Empire romain" />
 <Typo word="enchain*" find="\b(en|En)?cha(i|î)n(er|es?|[ae]nt|ée?s?|ements?)\b" replace="$1cha$2n$3" />
 <Typo word="encore" find="\b(e|E)ncc?orr?es?\b" replace="$1ncore" />
 <Typo word="encourager" find="\b(e|E)ncourr?ag(ée?s?|er|ai[st]|aient|a|ements?|eante?|es?)\b" replace="$1ncourag$2" />
@@ -751,8 +815,8 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="éventualité" find="\b(é|e)ventuall?itt?ée?(s?)\b" replace="$1ventualité$2" />
 <Typo word="éventuellement" find="\b[eé]ventuell?emm?ent\b" replace="éventuellement" />
 <Typo word="éventuellement" find="\b[EÉ]ventuell?emm?ent\b" replace="Éventuellement" />
-<Typo word="évidemment" find="\b[eé]vid[aeé]mm?[ae]n[ts]?\b" replace="évidemment" />
-<Typo word="Évidemment" find="\b[EÉ]vid[ae]mm?[aeé]n[ts]?\b" replace="Évidemment" />
+<Typo word="évidemment" find="\b[eé]vid[aeé](mm?)[ae]n[ts]?\b" replace="évide$1ent" />
+<Typo word="Évidemment" find="\b[EÉ]vid[ae](mm?)[aeé]n[ts]?\b" replace="Évide$1ent" />
 <Typo word="excepter" find="\b(e|E)xep" replace="$1xcep" />
 <Typo word="exceptionnellement" find="\b(e|E)xc?eptionn?e(ls?|lles?|llement)\b" replace="$1xceptionne$2" />
 <Typo word="excellent" find="\b(e|E)xc?ell?(ents?|entes?|ences?|er|ée?s?|ai[st]|aient)\b" replace="$1xcell$2" />
@@ -771,7 +835,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === F ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="façade" find="\b(f|F)acade(s?)\b" replace="$1açade$2" />
 <Typo word="faculté" find="\b(f|F)acc?ultée?(s?)\b" replace="$1aculté$2" />
 <Typo word="faites" find="\b([vV]ous (ne )?(me )?(les? |la )?)faîtes\b" replace="$1faites" />
@@ -799,11 +863,12 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === G ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="galerie" find="\b(G|g)allerie(s?)\b" replace="$1alerie$2" />
 <Typo word="garçon" find="\b([gG])arcon((?:net?|ère)?s?)\b" replace="$1arçon$2" />
 <Typo word="gaz" find="\b(G|g)azs\b" replace="$1az" />
 <Typo word="généralement" find="\b(G|g)[éeè]nn?[éeè]rr?all?emm?ent\b" replace="$1énéralement" />
+<Typo word="génois" find="\b(G|g)ênois(e?s?)\b" replace="$1énois$2" />
 <Typo word="genoux" find="\b(G|g)enous\b" replace="$1enoux" />
 <Typo word="gestionnaire" find="\b(g|G)[eéèêë]stionn?aire(s?)\b" replace="$1estionnaire$2" />
 <Typo word="grâce" find="\b(g|G)race ([aà]|aux?)\b" replace="$1râce $2" />
@@ -812,7 +877,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === H ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="habileté" find="\b(h|H)abb?ill?ett?ée?(s?)\b" replace="$1abileté$2" />
 <Typo word="hameçon" find="\b(h|H)amec" replace="$1ameç" />
 <Typo word="hémorragie" find="\b(h|H)[eé]mm?orr?agie?(s?)\b" replace="$1émorragie$2" />
@@ -832,7 +897,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === I ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="ici" find="\b(I|i)çi\b" replace="$1ci" />
 <Typo word="imaginaire" find="\b(I|i)mmaginaire\b" replace="$1maginaire" />
 <Typo word="immédiat" find="\b(I|i)mm?[eéè]diat(ement|e)?\b" replace="$1mmédiat$2" />
@@ -867,11 +932,12 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="innocent" find="\b(I|i)nn?on?[cç]e(nce|mment|ntes?|nter|ntés?|nta|ntai[st]|ntaient|nts?)\b" replace="$1nnoce$2" />
 <Typo word="invincibilité" find="\b(i|I)nvin[cs]ibb?ill?itt?ée?(s?)\b" replace="$1nvincibilité$2" />
 <Typo word="irréel" find="\b(I|i)r?r[eéèêë]+l(s?)\b" replace="$1rréel$2" />
-<Typo word="israélien" find="\b(I|i)sraëlien(s?)\b" replace="$1sraélien$2" />
+<Typo word="israélien" find="\b(I|i)sraëlien(ne)?(s?)\b" replace="$1sraélien$2$3" />
+<Typo word="israélien" find="\[\[(I|i)sraël\]\]ien(ne)?(s?)\b" replace="[[Israël|$1sraélien$2$3]]" />
 </source>
 
 === J ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="jamais" find="\b(j|J)amias\b" replace="$1amais" />
 <Typo word="joujoux" find="\b(j|J)oujous\b" replace="$1oujoux" />
 <Typo word="jusqu’à" find="\b([jJ])usqu(['’]) *[áaà]\b" replace="$1usqu$2à" />
@@ -881,14 +947,14 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === K ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="keynésianisme" find="\bkeyn[eé]siann?isme\b" replace="keynésianisme" />
 <Typo word="kényan" find="\b([kK])enyan(s?)\b" replace="$1ényan$2" />
 <Typo word="kényane" find="\b([kK])enyan?ne(s?)\b" replace="$1ényane$2" />
 </source>
 
 === L ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="langage" find="\b(l|L)anguage(s?)\b" replace="$1angage$2" />
 <Typo word="latitude" find="\b(l|L)attitude(s?)\b" replace="$1atitude$2" />
 <Typo word="laser" find="\b([lL])azer(s?)\b" replace="$1aser$2" />
@@ -900,19 +966,20 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="littérature" find="\b(l|L)itérature(s?)\b" replace="$1ittérature$2" />
 <Typo word="localité" find="\b(l|L)occ?all?itt?ée?(s?)\b" replace="$1ocalité$2" />
 <Typo word="lœss" find="\b(l|L)oess\b" replace="$1œss" />
-<Typo word="logohrrée" find="\b(l|L)og(g[gh]*o[hr]*rée*|h[gh]*o*[hr]*rée*|or[hr]*ée*|ohrée*|ohrré)\b" replace="$1ogohrée" />
+<Typo word="logorrhée" find="\b(l|L)oh?gg?h?o(h?rr?|rh)ée*\b" replace="$1ogorrhée" />
 <Typo word="longueur" find="\b(l|L)ongu?eur(s?)\b" replace="$1ongueur$2" />
 <Typo word="luire" find="\b(l|L)u[iy]re?\b" replace="$1uire" />
 <Typo word="lycée" find="\b(l|L)ycé(s?)\b" replace="$1ycée$2" />
 </source>
 
 === M ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="maintenant" find="\b(M|m)aintenn?[ae]n(s?|d?|t?s?)\b" replace="$1aintenan$2" />
 <Typo word="majorité" find="\b(m|M)ajorr?itt?ée?(s?)\b" replace="$1ajorité$2" />
 <Typo word="malgré" find="\b(M|m)algr[éè](s?)\b" replace="$1algré" />
 <Typo word="malheureusement" find="\b(M|m)alh?eu?reu?(sement|x|se)\b" replace="$1alheureu$2" />
 <Typo word="mallette" find="\b(M|m)all?ett?e(s?)\b" replace="$1allette$2" />
+<Typo word="manifestation" find="\b(m|M)anifestion(s?)\b" replace="$1anifestation$2" />
 <Typo word="manœuvre" find="\b(m|M)anoeuvre(s?|r?)\b" replace="$1anœuvre$2" />
 <Typo word="marier" find="\bmarri(er|ée?s?)\b" replace="mari$1" />
 <Typo word="(m|p)aternité" find="\b([mMpP])att?ernitt?ée?(s?)\b" replace="$1aternité$2" />
@@ -939,6 +1006,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="minorité" find="\b(m|M)inn?orr?itt?ée?(s?)\b" replace="$1inorité$2" />
 <Typo word="miroir" find="\b(M|m)irroir(s?)\b" replace="$1iroir$2" />
 <Typo word="mis à" find="\b(M|m)is(e?s?) a\b" replace="$1is$2 à" />
+<Typo word="mmHg" find="\bmm hg\b" replace="mmHg" />
 <Typo word="modèle" find="\b(m|M)odele\b" replace="$1odèle" />
 <Typo word="mœurs" find="\b(m|M)oeurs\b" replace="$1œurs" />
 <Typo word="moitié" find="\b(m|M)oitt?iée?(s?)\b" replace="$1oitié$2" />
@@ -946,14 +1014,13 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="monolithe" find="\b(M|m)onn?ol[yi]th?e(s?)\b" replace="$1onolithe$2" />
 <Typo word="mourir" find="\b(M|m)ourrir\b" replace="$1ourir" />
 <Typo word="Moyen Âge" find="\b[mM]oyen[ -][aAâÂäÄàÀ]ge\b" replace="Moyen Âge" />
-<Typo word="M." find="\b(M|m)r\.?\b" replace="{{M.}}" />
 <Typo word="multiplate(-)forme" find="\b(m|M)ulti[ -]?plates?(-?)forme(s?)\b" replace="$1ultiplate$2forme$3" />
 <Typo word="Munich" find="\b(M|m)ünich(oise?s?)?\b" replace="$1unich$2" />
 <Typo word="municipalité" find="\b(m|M)unn?icipp?all?itt?ée?(s?)\b" replace="$1unicipalité$2" />
 </source>
 
 === N ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="naïveté" find="\b(n|N)a[ïîi]vett?ée?(s?)\b" replace="$1aïveté$2" />
 <Typo word="narrateur" find="\b(n|N)arr?a[ct]t?(eurs?|rices?|ions?|ifs?|ives?|ivement)\b" replace="$1arrat$2" />
 <Typo word="nationalité" find="\b(n|N)a[ct]ionn?all?itt?ée?(s?)\b" replace="$1ationalité$2" />
@@ -975,7 +1042,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === O ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="obscurité" find="\b(o|O)bscurr?itt?ée?(s?)\b" replace="$1bscurité$2" />
 <Typo word="obtient" find="\b(o|O)btiend\b" replace="$1btient" />
 <Typo word="occasionnellement" find="\b(o|O)cc?asionn?(er|ée?s?|ai[st]|aient|ellement|els?|elles?)\b" replace="$1ccasionn$2" />
@@ -1007,7 +1074,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === P ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="paraffine" find="\b(p|P)arr?aff?inn?(es?|ée?s?|ages?)\b" replace="$1araffin$2" />
 <Typo word="paraissant" find="\b([pP]|[aA]pp)arr?aiss?ants?\b" replace="$1araissant" />
 <Typo word="parallèle" find="\b([pP]|[aA]ntip)arr?all?[eéè]ll?e(s?|ment?)\b" replace="$1arallèle$2" />
@@ -1023,7 +1090,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="particulièrement" find="\b(p|P)articc?ull?i[éeè]re(s?|ment)\b" replace="$1articulière$2" />
 <Typo word="partisan" find="\b(p|P)artisant(s?)\b" replace="$1artisan$2" />
 <Typo word="pauvreté" find="\b(p|P)auvrett?ée?(s?)\b" replace="$1auvreté$2" />
-<Typo word="pèlerin*" find="\b(p|P)[eéèêë]ll?err?i(ne?s?|nages?)\b" replace="$1èleri$2" />
+<Typo word="pèlerin*" find="\bp[eéèêë]ll?err?i(ne?s?|nages?)\b" replace="pèleri$1" />
 <Typo word="persane" find="\b(p|P)ersanne(s?)\b" replace="$1ersane$2" />
 <Typo word="personnel" find="\b(p|P)ersonn?(ages?|alisations?|aliser|alisée?s?|alisas?|alisai[ts]|alisaient|alisme|alistes?|el?s?|elles?|ellement|ifications?|ifiée?s?|ifier|ifiait)\b" replace="$1ersonn$2" />
 <Typo word="personnalité" find="\b(p|P)ersonn?all?itée?(s?)\b" replace="$1ersonnalité$2" />
@@ -1069,7 +1136,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 === Q ===
 <!-- Attention, il y a des exceptions : "quand à huit heures, il prend le train, Paul décide de..." ou bien "quand à son tour il eut fini, Paul a déclaré...", de quand à quand, etc. -->
 <!--<Typo word="quant à" find="\b(Q|q)uand (à|au|aux)\b" replace="$1uant $2" />-->
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="qualité" find="\b(q|Q)u?all?itt?ée?(s?)\b" replace="$1ualité$2" />
 <Typo word="quantité" find="\b(q|Q)u?antitt?ée?(s?)\b" replace="$1uantité$2" />
 <Typo word="quarante" find="\b(Q|q)uarantes\b" replace="$1uarante" />
@@ -1085,7 +1152,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === R ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="raconter" find="\b(r|R)accont((?:er)?(?:a(?:s|i(?:s|t|ent)?)?|i?(?:ez|ons))|ass(?:es?|iez|ions)|â(?:mes|t|tes)|(?:èr|ass)?ent|(?:ée?|e)s?|er(?:ont)?|ant|ables?|ars?)\b" replace="$1acont$2" />
 <Typo word="raccourci" find="\b(r|R)acc?our[cs](ie?s?|ir|issi?ons|issi?ez|issent|issant)\b" replace="$1accourc$2" />
 <Typo word="raffin*" find="\b(r|R)aff?inn?(er|ée?s?|ant|antes?|es?|i?ons|i?ez|ent|ai?s?|ait|aient|erai?s?|erait|eraient|eries?|ages?)\b" replace="$1affin$2" />
@@ -1120,7 +1187,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === S ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="sagacité" find="\b(s|S)agg?acitt?ée?(s?)\b" replace="$1agacité$2" />
 <Typo word="saleté" find="\b(s|S)all?e?tt?ée?(s?)\b" replace="$1aleté$2" />
 <Typo word="satiété" find="\b(s|S)a(ss?|c|t)i[éeè]tt?ée?(s?)\b" replace="$1atiété$3" />
@@ -1157,6 +1224,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 <Typo word="statut" find="\b(s|S)tatus\b" replace="$1tatut" />
 <Typo word="stérilité" find="\b(s|S)térr?ill?itt?ée?(s?)\b" replace="$1térilité$2" />
 <Typo word="stocker" find="\b(s|S)to(c|qu)(ages?|ée?s?|er)\b" replace="$1tock$3" />
+<Typo word="stœchiométrie" find="\b(S|s)t(oe|œ)(ch|qu)iom[eé]tri(e|que)\b" replace="$1tœchiométri$4" />
 <Typo word="subjectivité" find="\b([sS]u|[oO])bjectivitt?ée?(s?)\b" replace="$1bjectivité$2" />
 <Typo word="succès" find="\b([sS]|[iI]ns)ucc[eé]s\b" replace="$1uccès" />
 <Typo word="succinct" find="\b(s|S)ucc?int(e?s?|ement)\b" replace="$1uccinct$2" />
@@ -1179,7 +1247,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === T ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="tchèque" find="\b(T|t)ch[eéê]que(s)?\b" replace="$1chèque$2" />
 <Typo word="territoire" find="\b(T|t)err?itt?oirr?e(s?)\b" replace="$1erritoire$2" />
 <Typo word="théori*" find="\b(T|t)h?[éeèê]orr?i(es?|ques?|quement|ciens?|ciennes?|ser|sée?s?|ses?|si?ons|si?ez|sent|sai?s?|sait|saient|serai?s?|serait|seraient|seront|seri?ons|seri?ez)\b" replace="$1héori$2" />
@@ -1205,7 +1273,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === U ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="une espèce" find="\b(U|u)n esp[èeé]ce\b" replace="$1ne espèce" />
 <Typo word="unité" find="\b(u|U)nn?itt?ée?(s?)\b" replace="$1nité$2" />
 <Typo word="université" find="\b(u|U)nn?iversitt?ée?(s?)\b" replace="$1niversité$2" />
@@ -1213,7 +1281,7 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === V ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="vanité" find="\b(v|V)ann?itt?ée?(s?)\b" replace="$1anité$2" />
 <Typo word="variété" find="\b(v|V)arr?iétt?ée?(s?)\b" replace="$1ariété$2" />
 <Typo word="velours" find="\b(v|V)ell?ourt?\b" replace="$1elours" />
@@ -1235,37 +1303,35 @@ Si malgré tout vous ne savez pas comment vous y prendre, vous pouvez alors dema
 </source>
 
 === W ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="wagon" find="\b(W|w)aggon(s?)\b" replace="$1agon$2" />
 <Typo word="Wehrmacht" find="\b[Ww]hermacht\b" replace="Wehrmacht" />
 <Typo word="Wehrmacht" find="\b[Ww]ermacht\b" replace="Wehrmacht" />
 </source>
 
 === X ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 </source>
 
 === Y ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="Yémen" find="\b[Yy][ée]men\b" replace="Yémen" />
 </source>
 
 === Z ===
-<source lang="xml">
+<source lang="xml" enclose="div">
 </source>
 
 == Règles grammaticales ==
 
 Cette section devrait être réservée aux erreurs purement ''grammaticales''. Il faudrait surtout éviter d'y inclure des expressions rationnelles qui recherchent inutilement des occurrences grammaticalement correctes dans le but de corriger par la même occasion des erreurs ''orthographiques'' ou ''typographiques'', au lieu d'utiliser à cette fin les sections précédentes.
 
-<source lang="xml">
+<source lang="xml" enclose="div">
 <Typo word="à apparaître" find="\ba (n['’])?apparaître\b" replace="à $1apparaître" />
 <Typo word="à avoir" find="\ba (n['’]|en )?avoir\b" replace="à $1avoir" />
 <Typo word="à comparer" find="\ba ([ns]e |en )?comparer\b" replace="à $1comparer" />
 <Typo word="à comprendre" find="\ba ([mnst]e |[nv]ous |en )?comprendre\b" replace="à $1comprendre" />
 <Typo word="à compter" find="\ba ([ns]e |en )?compter\b" replace="à $1compter" />
-<Typo word="a contrario" find="\bà contrario" replace="a contrario" />
-<Typo word="A contrario" find="\bÀ contrario" replace="A contrario" />
 <Typo word="à défendre" find="\ba ([ns]e |en |les? )?défendre\b" replace="à $1défendre" />
 <Typo word="à définir" find="\ba ([ns]e |en )?définir\b" replace="à $1définir" />
 <Typo word="à dire" find="\ba ([ns]e |en )?dire\b" replace="à $1dire" />
@@ -1296,7 +1362,15 @@ Cette section devrait être réservée aux erreurs purement ''grammaticales''. I
 <Typo word="se sont succédé" find="\bs(e +son|['’]es)t?([ \w,()]{0,50})succ?[éèe]dé(?:s|es?)\b" replace="s$1t$2succédé" />
 <Typo word="en quelque sorte 1" find="\b(e|E)n +quelques +sortes?\b" replace="$1n quelque sorte" />
 <Typo word="en quelque sorte 2" find="\b(e|E)n +quelques? +sort(es)?\b" replace="$1n quelque sorte" />
+<Typo word="les/des tout premiers" find="\b(L|l|D|d)es tous premiers\b" replace="$1es tout premiers" />
 <Typo word="quant à" find="\b(Q|q)uan[dt]\s*[aà]\b" replace="$1uant à" />
 </source>
 
+== Pléonasme ==
+
+<source lang="xml" enclose="div">
+<Typo word="car en effet" find="\bcar[,]en effet\b" replace="car" />
+<Typo word="comparer ensemble" find="\bcomparer ensemble\b" replace="comparer" />
+<Typo word ="répéter de nouveau" find="\brépéter de nouveau\b" replace="répéter" />
+</source>
 [[Catégorie:Wikipédia:Orthographe]]

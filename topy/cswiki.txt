@@ -5,10 +5,59 @@
 {{Kotva|AWB}}
 === Nové ===
 <source lang="xml">
-<Typo word="(Ne)(Za)Blýsk(at/nout)" find="\b((?:[Nn]e)?(?:[Zz]a)?[Bb])l[iíy]sk(a(jí(cí(m?|ho|ch|m[iu]))?|l[aioy]?|n((ut)?([áéíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?)))|(ou)?t|u[lt][aioy]?)|á(n[aioy]?)?)\b" replace="$1lýsk$2"/>
-<Typo word="Latinská Amerika" find="\b[Ll]atinsk([áé]|ou)  ??[Aa](?<!Latinsk\w\w? A)meri(ce|k[ay]|kou)\b" replace="Latinsk$1 Ameri$2"/>
-<Typo word="Úhlopříč(ka/ně)" find="\b[UÚ]hlop[rř][ií][cč](?<!Úhlopříč)(ce|ek|k([auy]|ách|ám|ami)|n([áéěý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="Úhlopříč$1"/>
-<Typo word="úhlopříč(ka/ně)" find="\b[uú]hlop[rř][ií][cč](?<!úhlopříč)(ce|ek|k([auy]|ách|ám|ami)|n([áéěý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="úhlopříč$1"/>
+<Typo word="Morava" find="\bmorav([aěuy]|ou)\b" replace="Morav$1"/>
+<Typo word="Slezsko" find="\bslezsk(?!o(?:\]\])? ?[-–])([aouy]|em)\b" replace="Slezsk$1"/>
+<Typo word="Čisticí prostředek" find="\b([Čč])istící(m?|ho|ch|m[iu]) +?prostřed(cích|ek|k([uůy]|[eů]m))\b" replace="$1isticí$2 prostřed$3"/>
+<Typo word="Lidmi" find="\b([Ll])idm[ay]\b" replace="$1idmi"/>
+<Typo word="Hasicí přístroj" find="\b([Hh])asící(m?|ho|ch|m[iu]) +?přístroj([eiů]?|[eů]m|ích)\b" replace="$1asicí$2 přístroj$3"/>
+<Typo word="Řadicí páka" find="\b([Řř])adící(mi?|ch)? +?pá(ce|k([auy]?|ách|ám|ami|ou))\b" replace="$1adicí$2 pá$3"/>
+<Typo word="Dezinformovat" find="\b([Dd])esinform(\w+)\b" replace="$1ezinform$2"/>
+<Disabled Typo word="Dodnes" find="\b([Dd])o +?dnes\b" replace="$1odnes"/>
+<Typo word="Třpyt(it)" find="\b([Tt])řpit(\w*)\b" replace="$1řpyt$2"/>
+<Typo word="(ne)vědí" find="\bkteří +?(ne)?ví\b" replace="kteří $1vědí"/>
+<Typo word="Sezónní" find="\b((?:[Cc]elo|[Mm]ezi|[Mm]imo|[Pp]řed)?[Ss])ez[oó]ní(m?|ho|ch|m[iu])\b" replace="$1ezónní$2"/>
+<Typo word="datum leden" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?0?1\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2ledna $3"/>
+<Typo word="datum únor" find="\b0?([1-9]|[12]\d)\.( |&nbsp;)+?0?2\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2února $3"/>
+<Typo word="datum březen" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?0?3\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2března $3"/>
+<Typo word="datum duben" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?0?4\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2dubna $3"/>
+<Typo word="datum květen" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?0?5\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2května $3"/>
+<Typo word="datum červen" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?0?6\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2června $3"/>
+<Typo word="datum červenec" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?0?7\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2července $3"/>
+<Typo word="datum srpen" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?0?8\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2srpna $3"/>
+<Typo word="datum září" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?0?9\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2září $3"/>
+<Typo word="datum říjen" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?10\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2října $3"/>
+<Typo word="datum listopad" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?11\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2listopadu $3"/>
+<Typo word="datum prosinec" find="\b0?([1-9]|[123]\d)\.( |&nbsp;)+?12\.(?: |&nbsp;)+?(\d{3,4})\b" replace="$1.$2prosince $3"/>
+<Typo word="Newyorský" find="\b([Nn])ew\W+?[Yy]ork?(sk([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1ewyor$2"/>
+<Typo word="Korsika" find="\b([Kk])orzi(ce|ck([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí|k[auy]|kou)\b" replace="$1orsi$2"/>
+<Typo word="Manhattan" find="\b([Mm])anhatan(u?|em|sk([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1anhattan$2"/>
+<Typo word="Mezera před procentem" find="\bo((?: |&nbsp;)\d{1,3}(?:,\d\d?)?)%( +?\w+ší(?:m?|ho|ch|m[iu])\b|[\.,:;\)])" replace="o$1 %$2"/>
+<Typo word="Království" find="\b([Kk])r[aá]lo[stv]{2,5}(?<!álovstv)í(ch|mi?)?\b" replace="$1rálovství$2"/>
+<Typo word="Spojené království" find="\bSpojen(é(?:ho|mu?)?|ým) +?Království(m?)\b" replace="Spojen$1 království$2"/>
+<Typo word="Velká Británie" find="\b[Vv]elk([áé]|ou) +?[Bb](?<!Velk\1 B)ritáni([eií])\b" replace="Velk$1 Británi$2"/>
+<Typo word="Spojené arabské emiráty" find="\bSpojen(é|ých|ými?) +?(?!arabsk\1 emirát)[Aa]rabsk(?:é|ých|ými?) +?[Ee]mirát(y?|ech|ům?)\b" replace="Spojen$1 arabsk$1 emirát$2"/>
+<Typo word="Spojené státy" find="\bSpojen(é|ých|ými?) +?Stát(y?|ech|ům?)\b" replace="Spojen$1 stát$2"/>
+<Typo word="Spojené státy americké" find="\bSpojen(é|ých|ými?) +?(?!stát(?:y?|ech|ům?) americk\1\b)[Ss]tát(y?|ech|ům?) +[Aa]merick(?:é|ých|ými?)\b" replace="Spojen$1 stát$2 americk$1"/>
+<Typo word="Vichistický" find="\b([Vv])[iy]chysti(ck([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí)\b" replace="$1ichisti$2"/>
+<Typo word="Andorra" find="\b[Aa]ndor([auy]|ou)\b" replace="Andorr$1"/>
+<Typo word="Andorrský" find="\b([Aa])ndor(sk([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1ndorr$2"/>
+<Typo word="Opomíjet" find="\b([Nn]eo|[Oo])pomín[aá](l[aioy]?|n([áéíý]?|é(ho|mu?)|ý(ch|mi?))|j(e|í(ce?|cí(m?|ho|ch|m[iu]))?))\b" replace="$1pomíje$2"/>
+<Typo word="Tyrolsko" find="\b([Tt])irol(sk([aáéouyý]|em|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1yrol$2"/>
+<Typo word="Versailles" find="\b([Vv])ersail(?:les|l?es?)(s|sk([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1ersaille$2"/>
+<Typo word="vzor tiskl" find="\b((?:[Nn]e)?(?:[Dd]o|[Pp]ře|[Vv]y|[Zz]a)?)([Tt]isk|[Vv]lád)nul([aioy]?)\b" replace="$1$2l$3"/>
+<Typo word="Himálaj" find="\b([Hh])im(?:al[aá]|álá)j([ei]?|em|sk([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1imálaj$2"/>
+<Typo word="Himálajem" find="\b[Hh]im[aá]l[aá]jemi\b" replace="Himálajem"/>
+<Typo word="Himálaji" find="\b[Hh]im[aá]l[aá]j(ích|[íů]m)\b" replace="Himálaji"/>
+<Typo word="Bolivijský" find="\b([Bb])olívij(sk([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1olivij$2"/>
+<Typo word="něm(u)ž" find="\bn(?:em(u?)[zž]|ěm(u?)z)\b" replace="něm$1$2ž"/>
+<Typo word="Náklonn(ost/ý)" find="\b([Nn])[aá]klon([áéíý]|é(ho|mu?)|ost([ií]?|ech|em|mi)|ou|ý(ch|mi?))(?<!akloní)\b" replace="$1áklonn$2"/>
+<Typo word="Část" find="\bŠ[aá]st(i?|[eí]ch|[eí]m|mi)\b" replace="Část$1"/>
+<Typo word="část" find="\bš[aá]st(i?|[eí]ch|[eí]m|mi)\b" replace="část$1"/>
+<Typo word="Katastrální" find="\b([Kk])atas[tr][aá]ln[ií](m?|ho|ch|m[iu])\b" replace="$1atastrální$2"/>
+<Typo word="(Ne)(Na/Za)Blýsk(..)" find="\b((?:[Nn]e)?(?:[NnZz]a)?[Bb])l[iíy]sk(a(jí(cí(m?|ho|ch|m[iu]))?|l[aioy]?|n((ut)?([áéíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?)))|(ou)?t|u[lt][aioy]?)|á(n[aioy]?)?)\b" replace="$1lýsk$2"/>
+<Typo word="Latinská Amerika" find="\b[Ll]atinsk([áé]|ou)  ??[Aa](?<!Latinsk\w\w? A)meri(ce|k[auy]|kou)\b" replace="Latinsk$1 Ameri$2"/>
+<Typo word="Úhlopříč(ka/ně)" find="\b[UÚ]hlop[rř][ií][cč](?<!Úhlopříč)(ce|ek|k([auy]|ách|ám|ami|ou)|n([áéěý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="Úhlopříč$1"/>
+<Typo word="úhlopříč(ka/ně)" find="\b[uú]hlop[rř][ií][cč](?<!úhlopříč)(ce|ek|k([auy]|ách|ám|ami|ou)|n([áéěý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="úhlopříč$1"/>
 <Typo word="Pohonný" find="\b([Pp])ohon([áéý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1ohonn$2"/>
 <Typo word="Období" find="\b([Oo])[bd][bd]?o[bd][bd]?[íý](?<!bdobí)(ch|mi?)?\b" replace="$1bdobí$2"/>
 <Typo word="Desetinnou (...)" find="\b([Dd])esetinou (čárko?u|číslic[ií]|hodnoto?u|klasifikac[ií]|soustavo?u|tečko?u)\b" replace="$1esetinnou $2"/>
@@ -20,13 +69,13 @@
 <Typo word="Libyjský" find="\b([Ll])(?:ibi|yb[iy])j(sk([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1ibyj$2"/>
 <Typo word="oxid" find="\boxyd([uy]?|e(ch|m)|ům?)\b" replace="oxid$1"/>
 <Typo word="(Nej)(Ne)(Vy)Tipova(nější/t)" find="\b((?:[Nn]e)?(?:[Vv]y)?[Tt])yp(ov(áv)??((al|án)[aioy]?|an([áéěíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))|at)|ovává|uj(e|í(cí(m?|ho|ch|m[iu]))?))\b" replace="$1ip$2"/>
-<Typo word="kteří (se) s(ch)ázejí" find="(,| a)(?:&nbsp;| )+?kteří( se)? s(ch)?ází\b" replace="$1 kteří$2 s$3ázejí"/>
+<Typo word="kteří (se) (...)ejí" find="(,| a)(?:&nbsp;| )+?kteří( se)? (ne)?((?:od|na|po|při|s|vy)?(?:cház|sáz|sdíl))í\b" replace="$1 kteří$2 $3$4í"/>
 <Typo word="Psychi(atr/(atri)cký/ka)" find="\b([Pp])s(?:ich[iy]|ychy)(atr([ay]?|e(ch|m)|ov([aěiouy]|ý(ch|mi?))|ů[mv]?)|atři|ce|(atri)?(ck([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí)|k([auy]|á(ch|m)|ami|ou))\b" replace="$1sychi$2"/>
 <Typo word="Sbírat" find="\b(?:Zb[íý]|Sbý)r(a(jí(cí(m?|ho|ch|m[iu]))?|l[aioy]?|n([áéíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))|t)|á(n[aioy]?)?)\b" replace="Sbír$1"/>
 <Typo word="(Nej)(Ne)(Na/Po/Se/Vy)sbíra(nější/t)" find="\b([Nn]ej)?([Nn]e)?([Nn]a|[Pp]o|[Ss]e|[Vv]y)?(?:zb[íý]|sbý)r(a(jí(cí(m?|ho|ch|m[iu]))?|l[aioy]?|n([áéíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))|t)|á(n[aioy]?)?)\b" replace="$1$2$3sbír$4"/>
-<Typo word="(Ne)(Do)Implemento(vá)vat" find="\b((?:[Nn]e)?(?:[Dd]o)?[Ii])mplemet(ov(áv)?((al|án)[aioy]?|an([áéěíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))|at)|ovává|uj(e|í(cí(m?|ho|ch|m[iu]))?))\b" replace="$1mplement$2"/>
-<Typo word="Struktur(a/ní)" find="\b([Ss])truk(?:t[úů]|[uúů])(r([auy]|ách|ám|ami)|rn(ě|í(m?|ho|ch|m[iu]))|ře)\b" replace="$1truktu$2"/>
-<Typo word="Nejčastěji" find="\b([Nn])[eě]j?[cč]ast[eě]j[ií](?<!ejčastěji)\b" replace="$1ejčastěji"/>
+<Typo word="(Ne)(Do)Implemento(vá)vat" find="\b((?:[Nn]e)?(?:[Dd]o)?[Ii])(?:[mn]pleme|nplemen)t(ov(áv)?((al|án)[aioy]?|an([áéěíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))|at)|ovává|uj(e|í(cí(m?|ho|ch|m[iu]))?))\b" replace="$1mplement$2"/>
+<Typo word="Struktur(a/ní)" find="\b([Ss])truk(?:t[úů]|[uúů])(r([auy]|ách|ám|ami|ou)|rn(ě|í(m?|ho|ch|m[iu]))|ře)\b" replace="$1truktu$2"/>
+<Typo word="Nejčastěji" find="\b([Nn])[eě]j?[cč][aá]s?t[eě]j[ií](?<!ejčastěji)\b" replace="$1ejčastěji"/>
 <Typo word="Pouze" find="\b([Pp])oze\b" replace="$1ouze"/>
 <Typo word="Trenér(ský)" find="\b([Tt])r(?:én[eé]|ene)(r([ay]?|e(ch|m)|ov([aěiouy]|ý(ch|mi?))|sk([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|ští|ů[mv]?)|ři)\b" replace="$1rené$2"/>
 <Typo word="Pozitivně" find="\b([Pp])ozitívn(ě|í(m?|ho|ch|m[iu]))\b" replace="$1ozitivn$2"/>
@@ -39,7 +88,7 @@
 <Typo word="Turnaj(ový)" find="\b([Tt])runaj(i?|[eů]m?|ích|ov([áéěíý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="$1urnaj$2"/>
 <Typo word="(Ne)(Pře/Z)Kontrol(a/o(vá)vat)" find="\b((?:[Nn]e)?(?:[Pp]ře|[Zz])?[Kk])otrol([aeuy]|á(ch|m)|ami|ou|ov(áv)?((al|án)[aioy]?|an([áéěíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))|at)|uj(e|í(cí(m?|ho|ch|m[iu]))?))\b" replace="$1ontrol$2"/>
 <Typo word="Především" find="\b([Pp])[rř]edev[sš][ií](?<!ředevší)m\b" replace="$1ředevším"/>
-<Typo word="Poprvé" find="\b([Pp])o(?:pr|rp)v[eé](?<!prvé)\b" replace="$1oprvé"/>
+<Typo word="Poprvé" find="\b([Pp])o ?(?:pr|rp)v[eé](?<!oprvé)\b" replace="$1oprvé"/>
 <Typo word="Úložiště" find="\b[UÚŮ]lo[zž]i[sš](?<![ÚŮ]ložiš)(t(ěm?|i|í(ch|m))|ť)\b" replace="Úložiš$1"/>
 <Typo word="úložiště" find="\b[uúů]lo[zž]i[sš](?<![úů]ložiš)(t(ěm?|i|í(ch|m))|ť)\b" replace="úložiš$1"/>
 <Typo word="(Nej)(Ne)Uspořáda(nější/t)" find="\b((?:[Nn]ej)?(?:[Nn]e)?[Uu])s?po[rř][aá](?<!spořá)d(áv)?(a(jí(cí(m?|ho|ch|m[iu]))?|l[aioy]?|n([áéěíý]|é(ho|mu?)|ěj(i|ší(m?|ho|ch|m[iu]))|ou|ý(ch|mi?))|t)|á(n[aioy]?)?)\b" replace="$1spořád$2$3"/>
@@ -58,20 +107,20 @@
 <Typo word="Úmrt(n)í" find="\b[UÚŮ]mrt(n?)[ií](?<![ÚŮ]mrtn?í)(m?|ho|ch|m[iu])\b" replace="Úmrt$1í$2"/>
 <Typo word="úmrt(n)í" find="\b[uúů]mrt(n?)[ií](?<![úů]mrtn?í)(m?|ho|ch|m[iu])\b" replace="úmrt$1í$2"/>
 <Typo word="Druhý" find="\b([Dd])u(h([áéý]|é(ho|mu?)|ý(ch|mi?))|zí)\b" replace="$1ru$2"/>
-<Typo word="(Nej)(Ne)Používa(nější/t)" find="\b((?:[Nn]ej)?(?:[Nn]e)?[Pp])ou(?:[zž]i|zí)v(áv)?(a(jí(cí(m?|ho|ch|m[iu]))?|l[aioy]?|n([áéěíý]|é(ho|mu?)|ěj(i|ší(m?|ho|ch|m[iu]))|ou|ý(ch|mi?))|t)|á(n[aioy])?)\b" replace="$1oužív$2$3"/>
+<Typo word="(Nej)(Ne)Používa(nější/t)" find="\b((?:[Nn]ej)?(?:[Nn]e)?[Pp])(?:ou|uo)[zž][ií](?<!ouží)v(áv)?(a(jí(cí(m?|ho|ch|m[iu]))?|l[aioy]?|n([áéěíý]|é(ho|mu?)|ěj(i|ší(m?|ho|ch|m[iu]))|ou|ý(ch|mi?))|t)|á(n[aioy])?)\b" replace="$1oužív$2$3"/>
 <Typo word="Jízdní" find="\b([Jj])ízní(m?|ho|ch|m[iu])\b" replace="$1ízdní$2"/>
 </source>
 
 === Předpony ===
 <source lang="xml">
-<!-- při přidání k (ne)s/z- nekopírovat celé, ale jen fragment! -->
+<!-- u (ne)s/z- nekopírovat celé, ale jen přidanou část! -->
 <Typo word="Nej-" find="\b([Nn])(?!ajlepší|ajprve|ajsladší|ajvyšší)[aě]j(bl[ií][zž]\w+|č\w+|dřív\w{,6}|j?ednoduš\w+|lepší\w{,2}|méně|nižší\w{,2}|novější\w{,2}|řidší\w{,2}|sladší\w{,2}|snazší\w{,2}|šťastněj\w{1,4}|šťavnatěj\w{1,4}|světější\w{,2}|tenčí\w{,2}|upřímněj\w{1,4}|výkonněj\w{1,4}|vyšší\w{,2}|výše?|významněj\w{1,4}|známěj\w{1,4})\b" replace="$1ej$2"/><!-- "nejtěžší" a "největší" mají vlastní pravidla; sem patří cokoliv s nej- ze zbytku seznamu; u naj- ověřit slovenštinu -->
-<Typo word="Nej-" find="\b([Nn])[eě](mladší\w{,2}|starší\w{,2}|studenější\w{,2})\b" replace="$1ej$2"/>
-<Typo word="(Ne)s-" find="(?<=\b[Nn]e|\W)z(bal[ie]\w+|blíž[ie]\w+|druž[iu]\w+|hoř(e(l[aioy]?|t)|í)|kamarád\w+|kon[cč]\w+|louč\w+|páli\w+|potřeb\w+|pout[aá]\w+|provo(d\w+|zen\w{,3})|přátel[ie]\w+|táče\w+|toč\w+|tráv\w+)\b" replace="s$1"/>
-<Typo word="(Ne)z-" find="(?<=\b[Nn]e|\W)s(form(ov[aá]\w+|uj\w+)|kapal[nň]\w+|kombin[ou]\w+|kouma\w{1,4}|peče[tť]\w+|plo[dz]\w+|pozorov[aá]\w+|pracov\w+|prosti\w+|proště\w+|působ[ieu]\w+|totož[nň]\w+|troskot\w+|třeš[tť]\w+|tvár[nň]\w+)\b" replace="z$1"/>
-<Typo word="S-" find="\bZ(bal[ie]\w+|blíž[ie]\w+|bor\w{,5}|druž[eiu]\w+|hoř(e(l[aioy]?|t)|í)|kamarád\w+|kon(či[lt]|čen)\w+|louč\w+|páli\w+|placen\w{,3}|plati\w\w?|plá[ct]\w+|potřeb\w+|pout[aá]\w+|provo(d\w+|zen\w{,3})|přátel[ie]\w+|toč\w+|tráv\w+)\b" replace="S$1"/>
-<Typo word="Vice-" find="\b([Vv])íce(guverné[rř]\w{,10}|kancléř\w{,10}|konzul\w{,10}|král\w{,10}|maršál\w{,10}|mis(s|t[rř]\w{,10})|premi[eé][rř]\w{,10}|prezident\w{,10})\b" replace="$1ice$2"/>
-<Typo word="Z-" find="\bS(form(ov[aá]\w+|uj\w+)|kapal[nň]\w+|kombin[ou]\w+|koum(á|ají)|peče[tť]\w+|pev(n[iě]\w+|ňuj\w+)|pěv\w{,4}|pív\w+|plo[dz]\w+|pozorov[aá]\w+|pracov\w+|prosti\w+|proště\w+|působ\w+|totož[nň]\w+|troskot\w+|třeš[tť]\w+|tvár[nň]\w+)\b" replace="Z$1"/>
+<Typo word="Nej-" find="\b([Nn])[eě](mlad|star|studeněj)ší(m?|ho|ch|m[iu])\b" replace="$1ej$2ší$3"/>
+<Typo word="(Ne)s-" find="\b([Nn]e)?z(bal[ie]|blíž[ie]|druž[eiu]|hoř(?:e(?:l[aioy]?|t)|í)\b|kamarád|kon(?:či[lt]|čen)|louč|páli|placen|plati|plá[ct]|potřeb|pout[aá]|provo(?:d|zen)|přátel[ie]|toč|tráv)(\w*)\b" replace="$1s$2$3"/>
+<Typo word="(Ne)z-" find="\b([Nn]e)?s(form(?:ov[aá]|uj)|kapal[nň]|kombin[ou]|koum|peče[tť]\w+|pev[nň]|plo[dz]|pozorov[aá]|pracov|prosti|proštěn|působ|totož[nň]|troskot|třeš[tť]|tvár[nň])(\w*)\b" replace="$1z$2$3"/>
+<Typo word="S-" find="\bZ(bal[ie]|blíž[ie]|druž[eiu]|hoř(?:e(?:l[aioy]?|t)|í)\b|kamarád|kon(?:či[lt]|čen)|louč|páli|placen|plati|plá[ct]|potřeb|pout[aá]|provo(?:d|zen)|přátel[ie]|toč|tráv)(\w*)\b" replace="S$1$2"/>
+<Typo word="Vice-" find="\b([Vv])íce(guverné[rř]|kancléř|konzul|král|maršál|mis(?:s\b|t[rř])|premi[eé][rř]|prezident)(\w*)\b" replace="$1ice$2$3"/>
+<Typo word="Z-" find="\bS(form(?:ov[aá]|uj)|kapal[nň]|kombin[ou]|koum|peče[tť]\w+|pev[nň]|p[ěí]v|plo[dz]|pozorov[aá]|pracov|prosti|proštěn|působ|totož[nň]|troskot|třeš[tť]|tvár[nň])(\w*)\b" replace="Z$1$2"/>
 </source>
 
 === Přípony a konce slov ===
@@ -80,8 +129,8 @@
 <Typo word="-dveřový" find="\b(?:(\w+)(?:[ -]?|[ -]?[mt]i[ -]?))dv[eé](?<!\wdvé)řov([áéý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1dveřov$2"/>
 <Typo word="-i" find="\b([Čč]tyřm|[Mm]ajitel|[Mm]ysl|[Oo]cel|[Ss]měs|[Tt]ěm|[Tt]řem|verz|[Vv]šem)y\b" replace="$1i"/>
 <Typo word="-ie" find="\b(\w{4,20})(?:i[ií]|í)([eí]|ích)\b" replace="$1i$2"/>
-<Typo word="-jících" find="\b(\w{4,20})j[ií]c[ií]hc?\b" replace="$1jících"/>
-<Typo word="-krát" find="\b(\w+)-krát\b" replace="$1krát"/>
+<Typo word="-jících" find="\b(\w{4,20})j[ií]c[ií](hc?|ch)(?<!ících)\b" replace="$1jících"/>
+<Typo word="-krát" find="\b(\w+)-kr[aá]t\b" replace="$1krát"/>
 <Typo word="-li (spojovník)" find="(([Nn]e)?([Bb]ud(e([mt]e|š?)|o?u)|[Bb]yl[aioy]?|[Jj]sou)|[Nn]ení)(?:--| -|- |\s*?)li(?!-)\b" replace="$1-li"/>
 <Typo word="-li (bez spojovníku)" find="\b([Čč]i|[Jj]est|[Nn]ebo|[Nn]ež|[Zz]da)\Wli\b" replace="$1li"/>
 <Typo word="[-mi/-ti]" find="\b(\d+)-?[mt]i(?!-? ?\w+([áíéý]|[éí](ho|mu?)|ou|[íý](ch|mi?)))\b" replace="$1"/>
@@ -89,15 +138,16 @@
 <Typo word="-ní" find="([Ii]mu|\b[Pp]ostra|\b[Rr]ame|\b[Ss]pontá|\b[Ss]tehe|[Aa]?[Ss]ynchro)ní(m?|ho|ch|m[iu])\b" replace="$1nní$2"/>
 <Typo word="-ové(mu)" find="\b(?![A-MO-Z])(\w{4,20}|[Nn])ove(mu)?\b" replace="$1ové$2"/>
 <Typo word="-ový" find="\b(?![A-MO-Z])(\w{2,20}|[Nn])ovy(ch|mi?)\b" replace="$1ový$2"/>
-<!-- word="-sfér(a/ický)" find="\b(\w{4,20})sfe(r([auy]?|ách|ám|ami|ou)|rick([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|ričtí|ře)\b" replace="$1sfé$2"/ -->
+<Disabled Typo word="-sfér(a/ický)" find="\b(\w{4,20})sfe(r([auy]?|ách|ám|ami|ou)|rick([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|ričtí|ře)\b" replace="$1sfé$2"/>
 <Typo word="-ské" find="\b(?![A-Z])(\w{3,20})ske(ho|mu)?\b" replace="$1ské$2"/><!-- "-skem" = 7. pád "-sko" -->
 <Typo word="-ský" find="\b(?![A-Z])(\w{3,20})sky(ch|mi?)\b" replace="$1ský$2"/>
-<Typo word="-ský" find="\b(\w{2,15}(?:b[aeou]r|bjer|bour|köpin)|[Hh]elsin)o?[gk]h?(sk([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1$2"/><!-- http://prirucka.ujc.cas.cz/?id=755 -->
+<Typo word="-ský" find="\b(\w{2,15}(?:b[aeou]r|bjer|bour|köpin)|[Hh]elsin)o?[gk]h?(sk([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1$2"/><!-- http://prirucka.ujc.cas.cz/?id=755 -->
 <Typo word="-ský" find="\b(\w{2,20})nnsk(\w{1,3})\b" replace="$1nsk$2"/><!-- http://prirucka.ujc.cas.cz/?id=755 -->
-<Typo word="-stranný" find="\b(?:(jedna|dvaa|třia|čtyřia|pěta|šesta|sedma|osma|devěta)?(dvaceti|třiceti|čtyřiceti|padesáti|šedesáti|sedmdesáti|osmdesáti|devadesáti)|(?:(dvaceti|třiceti|čtyřiceti|padesáti|šedesáti|sedmdesáti|osmdesáti|devadesáti) ?)?(jedno|dvou|tří|čtyř|pěti|šesti|sedmi|osmi|devíti)|(des[eí]ti|(?:jede|dva|tři|čtr|pat|šest|sedm|osm|devate)nácti)|(\d+))(?:[ -]?|[ -]?[mt]i[ -]?)strann?(?<!\wstrann)([áíéý]|é(ho|mu?)|ou|ý(ch|mi?))(?<!([Nn]e|[Oo]d)straní|\wstrannou)\b" replace="$1$2$3$4$5$6strann$7"/>
+<Typo word="-stranný" find="\b(?:(jedna|dvaa|třia|čtyřia|pěta|šesta|sedma|osma|devěta)?(dvaceti|třiceti|čtyřiceti|padesáti|šedesáti|sedmdesáti|osmdesáti|devadesáti)|(?:(dvaceti|třiceti|čtyřiceti|padesáti|šedesáti|sedmdesáti|osmdesáti|devadesáti) ?)?(jedno|dvou|tří|čtyř|pěti|šesti|sedmi|osmi|devíti)|(des[eí]ti|(?:jede|dva|tři|čtr|pat|šest|sedm|osm|devate)nácti)|(\d+))(?:[ -]?|[ -]?[mt]i[ -]?)strann?(?<!\wstrann)([áíéý]|é(ho|mu?)|ou|ý(ch|mi?))(?<!\bjedno stranou|([Nn]e|[Oo]d)straní|\wstrannou)\b" replace="$1$2$3$4$5$6strann$7"/>
 <Typo word="-stvo/-ství" find="\b(\w{4,20})(?<![Kk]níže|[Kk]řesťan|[Vv]ítěz)s?tsv([aíouy]|[eůí]m|ech|ími)\b" replace="$1stv$2"/><!-- některá mají vlastní pravidla -->
+<Typo word="-ští" find="\b([Čč]erno|[Kk]aza|[Ll]oty)ští\b" replace="$1šští"/>
 <Typo word="-šť" find="\b(\w{4,20})išt\b" replace="$1išť"/>
-<Typo word="-té(ho/m/mu)" find="([Dd]ruh|[Čč]tvrt|[Pp]át|[Šš]est|[Ss]edm|[Oo]sm|[Dd]e[sv]át|([Jj]ede|[Dd]va|[Tt]ři|[Čč]tr|[Pp]at|[Šš]est|[Ss]edm|[Oo]sm|[Dd]evate)náct|([Dd]va|[Tt]ři|[Čč]tyři)cát|(?:[Pp]a|[Šš]e|[Ss]edm|[Oo]sm|[Dd]eva)desát|\b[Ss]t)e(ho|mu?)(?<![Dd]ruhem|[Ss]tem)\b" replace="$1é$2"/><!-- neopravují se "druhem" a "stem" -->
+<Typo word="-té(ho/m/mu)" find="([Dd]ruh|[Čč]tvrt|[Pp]át|[Šš]est|[Ss]edm|[Oo]sm|[Dd]e[sv]át|(?:[Jj]ede|[Dd]va|[Tt]ři|[Čč]tr|[Pp]at|[Šš]est|[Ss]edm|[Oo]sm|[Dd]evate)náct|(?:[Dd]va|[Tt]ři|[Čč]tyři)cát|(?:[Pp]a|[Šš]e|[Ss]edm|[Oo]sm|[Dd]eva)desát|\b[Ss]t)e(ho|mu?)(?<![Dd]ruhem|\b[Ss]tem)\b" replace="$1é$2"/><!-- neopravují se "druhem" a "stem" -->
 <Typo word="-úhelník" find="\b(\w+)ůhelní(cích|k([auyů]|ách|[eů]m))\b" replace="$1úhelní$2"/>
 <Typo word="-vají" find="\b(\w{4,20})vájí\b" replace="$1vají"/>
 <Typo word="-vající" find="\b(\w{4,20})vájící(m?|ho|ch|m[iu])\b" replace="$1vající$2"/>
@@ -109,13 +159,12 @@
 <source lang="xml">
 <Typo word="(A/I/…) proto, že" find="(?<=\s)([aIi]|[Hh]lavně|[Pp]ředevším)(?<!,  ??[ai])  ??pro {,2}to {,4}že\b" replace="$1 proto, že"/>
 <Typo word="Absorp(ce/ční)" find="\b([Aa])bsorb([cč]\w+)\b" replace="$1bsorp$2"/>
-<Typo word="Afghánistán-" find="\b([Aa])fgh(?:anistá|ánista)n(\w+)(?<!nu?|nem)\b" replace="$1fghánistán$2"/>
-<Typo word="Achillovka" find="\b([Aa])ch(?:yll?|il)ov([ck]\w{1,3})\b" replace="$1chillov$2"/>
+<Typo word="Afghánistánský" find="\b([Aa])fgh(?:anistá|ánista)n(sk([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b\b" replace="$1fghánistán$2"/>
+<Typo word="Achillovka" find="\b([Aa])ch(?:yll?|il)ov(ce|ek|k([auy]|ách|ám|ami|ou))\b" replace="$1chillov$2"/>
 <Typo word="Amatérsk(y/ý)" find="\b([Aa])mater(sk([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1matér$2"/>
-<Typo word="Angoulême" find="\bAngoul[eé]me\b" replace="Angoulême"/><!-- převzato z en -->
 <Typo word="(Ne)Antedato(vá)vat" find="\b([Aa]|[Nn]ea)(?<![\x22„]a)ntidat(\w{3,7})\b" replace="$1ntedat$2"/>
-<Typo word="Asie/Asijský" find="\bÁsi([eií]|jsk([áéý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="Asi$1"/>
-<Typo word="Atlantský oceán" find="\b[Aa]tlant(?:i?c|s)k(\w+)  ??[Oo]ce[aá](?<!Atlatsk\w{1,3}  ??oceá)n(u?|em)\b" replace="Atlantsk$1 oceán$2"/>
+<Typo word="Asie/Asijský" find="\bÁsi([eií]|jsk([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|jští)\b" replace="Asi$1"/>
+<Typo word="Atlantský oceán" find="\b[Aa]tlant(?:i?c|s)k(ého|ému?|ým?)  ??[Oo]ce[aá](?<!Atlatsk\w{1,3}  ??oceá)n(u?|em)\b" replace="Atlantsk$1 oceán$2"/>
 </source>
 ==== Album ====
 <source lang="xml">
@@ -127,23 +176,22 @@
 </source>
 === Á ===
 <source lang="xml">
-<Typo word="Ázerbájdžán-" find="\b[aá]z[eé]rb[aá]jdž[aá](?<!ázerbájdžá)n(\w+)(?<!nu?|nem)\b" replace="ázerbájdžán$1"/>
+<Typo word="Ázerbájdžánský" find="\b[AÁ]z[eé]rb[aá]jdž[aá](?<!Ázerbájdžá)n(sk([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="Ázerbájdžán$1"/>
+<Typo word="ázerbájdžánský" find="\b[aá]z[eé]rb[aá]jdž[aá](?<!ázerbájdžá)n(sk([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="ázerbájdžán$1"/>
 </source>
 === B ===
 <source lang="xml">
-<Typo word="Bardejov" find="\bBardějov([ěu]?|em)\b" replace="Bardejov$1"/>
 <Typo word="(Data)báze" find="\b([Dd]ata)?baz([eií]|emi|ích|ím)\b" replace="$1báz$2"/>
 <Typo word="Bez problém(u/ů)" find="\b([Bb])ezprobl[eé]m([uů])\b" replace="$1ez problém$2"/>
 <Typo word="Beze zbytku" find="\b([Bb])ez(?:e|  ??)zbytku\b" replace="$1eze zbytku"/>
 <Typo word="Bicí" find="\b([Bb])ící(m?|ch|mi)\b" replace="$1icí$2"/>
 <Typo word="Bizarn(ě/í)" find="\b([Bb])iz(?:ard|árd?)n(ě|ěji|(ějš)?í(m?|ho|ch|m[iu]))\b" replace="$1izarn$2"/>
-<Typo word="Blízký" find="\b([Bb])l(?:izs?|ízs)([ck]\w+)\b" replace="$1líz$2"/>
+<Typo word="Blízký" find="\b([Bb])l(?:izs?|ízs)(cí|k([áéoý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="$1líz$2"/>
 <Typo word="(Nej)Blíž(e)" find="\b([Nn]ejb|[Bb])l(?:i[zž]|íz)(e?)\b" replace="$1líž$2"/>
 <Typo word="(Nej)Bližší" find="\b([Nn]ejb|[Bb])l[ií][zž][sš][ií](?<!ižší)(m?|ho|ch|m[iu])\b" replace="$1ližší$2"/>
-<Typo word="Braník" find="(?<!\bnazývaný též )\b[Bb]ráník(u?|em)\b" replace="Braník$1"/>
 <Typo word="Března/Březnu" find="\bbře(?:nz|zen)([au])\b" replace="březn$1"/>
 <Typo word="Buddhismus" find="\b([Bb])udhis(m(u?|em|us)|t([aéiuůy]|ech|ou|ům))\b" replace="$1uddhis$2"/>
-<Typo word="Burgundsk(o/ý)" find="\b([Bb])urgunsk(\w+)\b" replace="$1urgundsk$2"/>
+<Typo word="Burgundsk(o/ý)" find="\b([Bb])urgun(sk([aáéouý]|em|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1urgund$2"/>
 <Typo word="(Ne)Byla/Byli/Bylo/Byly" find="\b([Bb]|[Nn]eb)ly([aioy])\b" replace="$1yl$2"/>
 <Typo word="(Ne)Byla/Byli/Bylo/Byly" find="\b([Bb]|[Nn]eb)y([aioy])l\b" replace="$1yl$2"/>
 <Typo word="(Ne)Být" find="\b([Nn]eb|[Bb])ý\b" replace="$1ýt"/>
@@ -151,21 +199,22 @@
 
 === C ===
 <source lang="xml">
-<Typo word="Cenný" find="\b((?:[Nn]e)?(?:[Bb]ez|[Mm]éně|[Rr]ovno)?[Cc])en([áéěíý]|é(ho|mu?)|ou|ý(ch|mi?))(?<!\b[Cc]enou|\b([Nn]e)?[Cc]en[ěí])\b" replace="$1enn$2"/>
-<Typo word="Coververze" find="\b([Cc])over\Wverze\b" replace="$1oververze"/>
+<Typo word="Cenný" find="\b((?:[Nn]ej?)?(?:[Bb]ez|[Mm]éně|[Rr]ovno)?[Cc])en([áéěíý]|é(ho|mu?)|ěj(i|ší(m?|ho|ch|m[iu]))|ou|ý(ch|mi?))(?<!\b[Cc]enou|\b([Nn]e)?[Cc]en[ěí])\b" replace="$1enn$2"/>
+<Typo word="Coververze" find="\b([Cc])over\W+?verz([eií]|emi|ích|ím)\b" replace="$1oververz$2"/>
 </source>
+
 === Č ===
 <source lang="xml">
-<Typo word="Černošští" find="\b([Čč])ernoští\b" replace="$1ernošští"/>
 <Typo word="Června/Červnu" find="\bčerv([au])n\b" replace="červn$1"/>
 <Typo word="Června/Červnu" find="\bčerven([au])(?<!do \s??červena)\b" replace="červn$1"/>
 <Typo word="Čeští" find="\b([Čč])e(?:s|šš)tí\b" replace="$1eští"/>
-<Typo word="(Ne)Činnost" find="\b([Čč]|[Nn]eč)inost(\w{,3})\b" replace="$1innost$2"/>
-<Typo word="Čtrnáct" find="\b([Čč])[tv][trv][rv]n[aá](?<![Čč]trná)ct(\w{,15})\b" replace="$1trnáct$2"/>
+<Typo word="(Ne)(-)Činnost" find="\b((?:[Nn]e)?(?:[Dd]obro|[Ss]ou|[Úú]|[Zz]lo)?č|Č)inost([ií]?|[eí](m|ch)|mi)\b" replace="$1innost$2"/>
+<Typo word="Čtrnáct" find="\b([Čč])[tv]?[trv][rv]n[aá](?<![Čč]trná)ct(\w{,15})\b" replace="$1trnáct$2"/>
 <Typo word="Čtvrt(-)" find="\b([Čč])vr(?!tfin)t(\w{,20})\b" replace="$1tvrt$2"/>
-<Typo word="Čtvrtfinál(e/ový)" find="\b([Čč])[rtťv]{3,5}(fi|ﬁ)n[aá](?<![Čč]tvrt\2ná)l(e|ov\w{1,3})\b" replace="$1vrt$2nál$3"/>
+<Typo word="Čtvrtfinál(e/ový)" find="\b([Čč])[rtťv]{3,5}(fi|ﬁ)n[aá](?<![Čč]tvrt\2ná)l(e|ov([áéíý]|é(ho|mu?)|ý(ch|mi?)))\b" replace="$1tvrt$2nál$3"/>
 <Typo word="Čtyř(-)" find="\b([Čč])tyr(\w{,20})\b" replace="$1tyř$2"/>
 </source>
+
 === D ===
 <source lang="xml">
 <Typo word="Další" find="\b([Dd])(?:l[aá]?|[aá]l)[sš][ií](?<!alší)(m?|ho|ch|m[iu])\b" replace="$1alší$2"/>
@@ -198,9 +247,9 @@
 === E ===
 <source lang="xml">
 <Typo word="Environment-" find="\b([Ee])nviroment(\w{,15})\b" replace="$1nvironment$2"/>
-<Typo word="(Ne)(Ex/Perz)ekvo(vá)vat" find="\b((?:[Nn]e)?(?:[Ee]x|[Pp]erz)[Ee])kuov(\w+)\b" replace="$1kvov$2"/>
-<Typo word="Existencialismus" find="\b([Ee])xistencionalis(m(u?|em)|t([aéiuůy]|ech|ou|ům))\b" replace="$1xistencialis$2"/>
-<Typo word="Expertiza" find="\b([Ee])xpert[íyý][sz]([aeuy]?|ách|ám|ami|ou)\b" replace="$1xpertiz$2"/>
+<Typo word="(Ne)(Ex/Perz)ekvo(vá)vat" find="\b((?:[Nn]e)?(?:[Ee]x|[Pp]erz)[Ee])ku(ov\w+|uj\w+)\b" replace="$1kv$2"/>
+<Typo word="Existencialismus" find="\b([Ee])xistencionalis(m(u?|em|us)|t([aéiuůy]|ech|ou|ům))\b" replace="$1xistencialis$2"/>
+<Typo word="Expertiza" find="\b([Ee])xpert(?:[íyý][sz]|is)([aeuy]?|ách|ám|ami|ou)\b" replace="$1xpertiz$2"/>
 <Typo word="Extrémn(ě/í)" find="\b([Ee])xtremn([ěí]|í(ho|ch|m[iu]?))\b" replace="$1xtrémn$2"/>
 </source>
 === F ===
@@ -208,7 +257,7 @@
 <Typo word="Fair play" find="(?<!')\bfair-play\b" replace="fair play"/><!-- pouze malými písmeny, protože cena se jmenuje "Fair-Play" -->
 <Typo word="Fólie" find="\b([Ff])oli([eií]|emi|ích|ím)\b" replace="$1óli$2"/>
 <Typo word="Funkce" find="\b(?!Fukui|Func?ke\b|[Ff]unkc[eií]|Funki)([Ff])[cknu]{3,5}([eií]|emi|í(ch|m))\b" replace="$1unkc$2"/><!-- Funke byl např. český fotograf, Funcke byl univerzitní profesor, Funki Porcini je anglický umělec(?) -->
-<Typo word="Fyzikálně-chemický" find="\b([Ff])[iy]z[iy]kálně(?:\s?[-–]\s?|[-–]?|  ??)[Cc](?<!yzikálně-c)hemick(\w+)\b" replace="$1yzikálně-chemick$2"/>
+<Typo word="Fyzikálně-chemický" find="\b([Ff])[iy]z[iy]kálně(?:\s?[-–]\s?|[-–]?| \s??)[Cc](?<!yzikálně-c)hemi(ck([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí)\b" replace="$1yzikálně-chemi$2"/>
 </source>
 
 === G ===
@@ -219,7 +268,7 @@
 <source lang="xml">
 <Typo word="Honorárn(ě/í)" find="\b([Hh])onoráln([ěí]|í(ho|ch|m[iu]?))\b" replace="$1onorárn$2"/>
 <Typo word="Hudebně-literární" find="\b([Hh])udebně(?:\s?[-–]\s?|[-–]?|  ??)[Ll]iterá[lr](?<!ě-literár)ní(m?|ho|ch|m[iu])\b" replace="$1udebně-literární$2"/>
-<Typo word="(…)Hrá([vá]va)t" find="\b(\w{,10}h|H)ra(l[aioy]?|t|v[aá]\w+)\b" replace="$1rá$2"/>
+<Typo word="(…)Hrá([vá]va)t" find="\b((?:[Nn]e)?(?:[Pp]ro|[Uu]|[Vv]y|[Zz]a)?[Hh])ra(vá)?(l[aioy]?|t)\b" replace="$1rá$2"/>
 </source>
 ==== Harvardova univerzita ====
 <source lang="xml">
@@ -238,28 +287,27 @@
 <Typo word="Idea" find="\b([Ii])de([eí])\b" replace="$1dej$2"/>
 <Typo word="Inter-" find="\b([Ii])nte(regn\w+|rup\w+)\b" replace="$1nter$2"/>
 <Typo word="Interview" find="\b([Ii])nter[vw]ie[vw](?!e[rř])\w{,3}(?<!view)\b" replace="$1nterview"/>
-<Typo word="Irák-" find="\b(?:Ír[aá])k(\w+)(?<!ku?|kem)\b" replace="Irák$1"/><!-- WP:PR -->
-<Typo word="irák-" find="\b(?:ír[aá]|ira)k(\w+)(?<!ku?|kem)\b" replace="irák$1"/><!-- WP:PR -->
+<Typo word="Irácký" find="\b(?:Ír[aá]|Ira)(čan([éiůy]?|ech|[eů]m|ovi)|ck([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí)\b" replace="Irá$1"/><!-- WP:PR -->
+<Typo word="irácký" find="\b(?:ír[aá]|ira)(čan([éiůy]?|ech|[eů]m|ovi)|ck([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí)\b" replace="irá$1"/><!-- WP:PR -->
 </source>
 === Í ===
 <source lang="xml">
-<Typo word="Írán-" find="\b(?:Irá|Íra)n(\w+)(?<!n(em|u))\b" replace="Írán$1"/><!-- WP:PR -->
-<Typo word="írán-" find="\b(?:irá|íra)n(\w+)(?<!n(em|u))\b" replace="írán$1"/><!-- WP:PR -->
+<Typo word="Íránský" find="\b(?:Irá|Íra)n(sk([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="Írán$1"/><!-- WP:PR -->
+<Typo word="íránský" find="\b(?:irá|íra)n(sk([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="írán$1"/><!-- WP:PR -->
 </source>
 === J ===
 <source lang="xml">
 <Typo word="Jako/Jaký" find="\b([Jj])ka([áéoý]|é(hož?|mu?)|ou|ý(ch|mi?))\b" replace="$1ak$2"/>
-<Typo word="Janské Lázně" find="\b[Jj][aá]nsk(\w{1,3})  ??[Ll](?<!Jansk\1  ??L)ázn(\w{1,3})\b" replace="Jansk$1 Lázn$2"/>
 <Typo word="Jedenáct" find="\b([Jj])ed(?:n[aá]|e?na)ct(\w{,15})\b" replace="$1edenáct$2"/>
-<Typo word="Její" find="\b([Jj])eji\b" replace="$1ejí"/>
+<Typo word="Její" find="\b([Jj])eji(ho|m[aiu]?)?\b" replace="$1ejí$2"/>
 <Typo word="jejíž" find="\bjej(?:i[zž]|íz)\b" replace="jejíž"/>
 <Typo word="Jejich(ž)/Jejích(ž)" find="\b([Jj])ej([ií])hc?(ž?)\b" replace="$1ej$2ch$3"/>
 <Typo word="Ještě" find="\b([Jj])[eě]š[tť][eě](?<!eště)\b" replace="$1eště"/>
-<Typo word="Jičín" find="\b([Jj])íčín([aěu]?|em|sk\w{1,3})\b" replace="$1ičín$2"/>
+<Typo word="Jičín" find="\b([Jj])íčín([aěu]?|em|sk([áéoyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1ičín$2"/>
 <Typo word="(Jih/Sever)o(východ/západ)(ní)" find="\b([Jj]ih|[Ss]ever)o[-– ](výcho|zápa)d([ěu]?|em|ní(m?|ho|ch|m[iu]))\b" replace="$1o$2d$3"/>
 <Typo word="Jimi/Jím" find="\b(?<!\b(?:[Mm]ezi|[Nn]ad|[Pp]od|[Pp]řed|[Ss]|[Zz]a)(?:  ??|&nbsp;))\bn(imi|ím)\b" replace="j$1"/>
-<Typo word="Jižn(ě/í)" find="\b([Jj])ížn(?!í  ??Ameri)(ě|ěji|(ějš)?í\w{,2})\b" replace="$1ižn$2"/>
-<Typo word="Jižní Amerika" find="\b[Jj][ií]žní  ??[Aa](?<!Jižní  ??A)meri(\w+)\b" replace="Jižní Ameri$1"/>
+<Typo word="Jižn(ě/í)" find="\b([Jj])ížn(?!í  ??Ameri)(ě|ěji|(ějš)?í(m?|ho|ch|m[iu]?))\b" replace="$1ižn$2"/>
+<Typo word="Jižní Amerika" find="\b[Jj][ií]žní  ??[Aa](?<!Jižní  ??A)meri(ce|k[auy]|kou)\b" replace="Jižní Ameri$1"/>
 <Typo word="Jmenný" find="\b((?:[Ss]tejno)?[Jj])men([áéý]|ého|ou|ý(ch|mi?))\b" replace="$1menn$2"/><!-- "jmeném": "jmenném", nebo "jménem"; ve druhém seznamu -->
 <Typo word="(Ne)Jsem/Jsi/Jsme/Jste/Jsou" find="\b(ne)?sj(i|em|me|te|ou)\b" replace="$1js$2"/>
 </source>
@@ -278,7 +326,7 @@
 <Typo word="Konstrukčn(ě/í)" find="\b([Kk])onstručn([ěí]|í(ho|ch|m[iu]?))\b" replace="$1onstrukčn$2"/>
 <Typo word="(Sub)Kontinent" find="\b([Kk]|[Ss]ubk)onti(?:ne|en)t(\w{,10})\b" replace="$1ontinent$2"/>
 <Typo word="Kontradmirál" find="(?<!nesprávně uváděn jako )\b([Kk])ontraaa??dmirál([auůy]?|e(ch|m)|ov([aéěiouy]|ou|ý(ch|mi?))|ů[mv])\b" replace="$1ontradmirál$2"/>
-<Typo word="Kontroverze" find="\b([Kk])ontraverz([eií]|emi|ích|ím)\b" replace="$1ontroverz$2"/>
+<Typo word="Kontroverze" find="\b([Kk])ontraverz([eií]|emi|ích|ím|ní(m?|ho|ch|m[iu]))\b" replace="$1ontroverz$2"/>
 <Typo word="Kostěný" find="\b([Kk])ostěnn([áéíý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1ostěn$2"/>
 <Typo word="Krajinnou (...)" find="\b([Kk])rajinou  ??(architekturo?u|dominanto?u|hranic[ií]|oblastí?|sféro?u)\b" replace="$1rajinnou $2"/>
 <Typo word="Krajinný" find="\b([Kk])rajin([áéý]|é(ho|mu?)|ý(ch|mi?))\b" replace="$1rajinn$2"/>
@@ -293,7 +341,7 @@
 
 === L ===
 <source lang="xml">
-<Typo word="Laser" find="\b([Ll])azer([uůy]?|ech|[eů]m)\b" replace="$1aser$2"/>
+<Typo word="Laser(ový)" find="\b([Ll])azer([uůy]?|ech|[eů]m|ov([áéěý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="$1aser$2"/>
 <Typo word="Ledna/Lednu" find="\ble(?:den|nd)([au])\b" replace="ledn$1"/>
 <Typo word="(Nej)Lehčí" find="\b([Ll]|[Nn]ejl)ehší(m?|ho|ch|m[iu])\b" replace="$1ehčí$2"/>
 <Typo word="Letištní" find="\b([Ll])etišťní(m?|ho|ch|m[iu])\b" replace="$1etištní$2"/>
@@ -303,7 +351,7 @@
 <Typo word="Loajalita" find="\b([Ll])o(?:j|a?y)alit([auy]|ou)\b" replace="$1oajalit$2"/>
 <Typo word="Lobbi(ng/sta/smus)" find="\b([Ll])obi(ng(u?|em)|sm(em|us?)|st([aéiuy]|ech|ou|ov([aěiouy]|ou|ý(ch|mi?))|ů[mv]?))\b" replace="$1obbi$2"/>
 <Typo word="Lombardn(ě/í)" find="\b([Ll])ombartn([ěí]|í(ho|ch|m[iu]?))\b" replace="$1ombardn$2"/>
-<Typo word="Lotyština" find="\b([Ll])ot(?:išš?|yšš)tin(\w+)\b" replace="$1otyštin$2"/>
+<Typo word="Lotyština" find="\b([Ll])ot(?:išš?|yšš)tin([aěuy]|ou)\b" replace="$1otyštin$2"/>
 </source>
 
 === M ===
@@ -311,20 +359,19 @@
 <Typo word="Medaili" find="\b([Mm])ed(?:a?i|ia)l[iy](?<!aili)\b" replace="$1edaili"/>
 <Typo word="(Nej)Menší" find="\b([Mm]|[Nn]ejm)enčí(m?|ho|ch|m[iu])\b" replace="$1enší$2"/>
 <Typo word="(Ne)Metastazo(vá)vat" find="\b([Mm]|[Nn]em)etastáz(ov\w+|uj\w+)\b" replace="$1etastaz$2"/>
-<Typo word="(…)Metr" find="\b((?:[Cc]enti|[Dd]eci|[Kk]ilo|[Mm]ili|[Mm]ikro|[Pp]ara)?[Mm])ter([uůy]?|e(ch|m)|ům)\b" replace="$1etr$2"/>
+<Typo word="(…)Metr" find="\b((?:[Cc]enti|[Dd]eci|[Kk]ilo|[Mm]ikro|[Mm]ili|[Pp]ara)?[Mm])ter([uůy]?|e(ch|m)|ům)\b" replace="$1etr$2"/>
 <Typo word="Měkký(š)" find="\b([Mm])ěk([áéý]|é(ho|mu?)|ou|ý(ch|mi?|š([eiů]|[eů]m|ích)))\b" replace="$1ěkk$2"/>
 <Typo word="(…)Měna/Měnit/měňo(vá)vat" find="\b((?:[Nn]e)?(?:[Pp]ro|[Vv][yý]|[Zz][aá]?)?[Mm])ně(n([aěuy]?|ami|á(ch|m)|ěn\w{,3}|i(l[aioy]?|t)|í([mš]?|[mt]e)|nost\w{,3}|ou)|ň(o(vá)?v(a(jící\w{,2}|l[aioy]?|t)|[aá]n\w{,3})|uje([mt]e|š?)))\b" replace="$1ě$2"/>
 <Typo word="Městě" find="\b([Mm])ěs(?:ť[eě]|te)\b" replace="$1ěstě"/>
-<Typo word="(Mezi/Pří)Městský" find="\b((?:[Mm]ezi|[Pp]ří)?[Mm])ě(?:ts|st)k([áéý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1ěstsk$2"/>
+<Typo word="(Mezi/Pří)Městský" find="\b((?:[Mm]ezi|[Pp]ří)?[Mm])ě(?:tst?|st)k([áéý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1ěstsk$2"/>
 <Typo word="Milión" find="\b([Mm])illi([oó]n[uůy])\b" replace="$1ili$2"/>
 <Typo word="Mimo jiné" find="\b([Mm])imojiné\b" replace="$1imo jiné"/>
-<Typo word="Mississippi" find="\b[Mm]iss?s??iss?s??ipp?p??(?<!Mississipp)i\b" replace="Mississippi"/>
 <Typo word="Místnost" find="\b([Mm])(?:ist?|ís)nost([ií]?|[eí](ch|m)|mi)\b" replace="$1ístnost$2"/>
 <Typo word="(Ne)(Se)Mlít" find="\b((?:[Nn]e)?(?:[Ss]e)?[Mm])lýt\b" replace="$1lít"/>
-<Typo word="Mnemotechnická" find="\b([Mm])emotechnick([áéý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1nemotechnick$2"/>
+<Typo word="Mnemotechnický" find="\b([Mm])emotechnick([áéý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1nemotechnick$2"/>
 <Typo word="Modlitba" find="\b([Mm])o(?:tli[dt]|dlid)(b([aěuy]|ách|ám|ami|ou)|eb)\b" replace="$1odlit$2"/>
-<Typo word="Multiplayer" find="\b([Mm])ulti\W{1,3}[Pp]layer([uy]?|em|ov\w{1,3})\b" replace="$1ultiplayer$2"/>
-<Typo word="Muting" find="\b([Mm])utting([uůy]?|[eů]m|ov\w{1,3})\b" replace="$1uting$2"/>
+<Typo word="Multiplayer" find="\b([Mm])ulti\W{1,3}[Pp]layer([uy]?|em|ov([áéý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="$1ultiplayer$2"/>
+<Typo word="Muting" find="\b([Mm])utting([uůy]?|[eů]m|ov([áéý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="$1uting$2"/>
 </source>
 === N ===
 <source lang="xml">
@@ -334,21 +381,21 @@
 <Typo word="(Ne)Napsal(a/i/o/y)" find="\b([Nn](?:en)?)apal([aioy])\b" replace="$1apsal$2"/>
 <Typo word="(Ne)Následovat" find="\b([Nn](?:en)?)asled(ova(l[aioy]?|t)|uj(e([mt]e|š?))|[ií])\b" replace="$1ásled$2"/>
 <Typo word="Následující" find="\b([Nn])[aá]sleduj[ií](?:c[ií])?(?<!ásledující)(m?|ho|ch|m[iu])(?<!j[ií])\b" replace="$1ásledující$2"/>
-<Typo word="(Ne)Nastal(ý)" find="\b([Nn](?:en)?)astál(?!o)(\w{,3})\b" replace="$1astal$2"/>
+<Typo word="(Ne)Nastal(ý)" find="\b(?![Nn]astálo\b)([Nn](?:en)?)astál(\w{0,3})\b" replace="$1astal$2"/>
 <Typo word="(N/V)ašich" find="\b([NnVv])aších\b" replace="$1ašich"/>
 <Typo word="Nejjednodušší" find="\b([Nn])e(?:jjednoduš|jednodušš)í(m?|ho|ch|m[iu])\b" replace="$1ejjednodušší$2"/>
 <Typo word="Nejtěžší" find="\b([Nn])[eě]j[tť][eě][zž][sš][ií](?<!ejtěžší)(m?|ho|ch|m[iu])\b" replace="$1ejtěžší$2"/>
 <Typo word="Největší" find="\b([Nn])[eě]jv[eě](?<!ejvě)tší(m?|ho|ch|m[iu])\b" replace="$1ejvětší$2"/>
 <Typo word="Není" find="(?<=\s)([Nn])(?:eni|ěn[ní])\b" replace="$1ení"/>
-<Typo word="Neštovice" find="\b([Nn])ešťovic(e?|ích|ím|emi)\b" replace="$1eštovic$2"/>
-<Typo word="Nešťastn(ě/ěji/ější/ík/ý)" find="\b([Nn])[eě]š[tť]ast?(?<!ešťast)n([áéěíý]|é(ho|mu?)|ěji|ější\w{,2}|í(ci|cích|k([aůy]?|[eů]m|ovi))|ou|ý(ch|mi?))\b" replace="$1ešťastn$2"/>
+<Typo word="Neštovice" find="\b([Nn])ešťovic(e?|emi|ích|ím)\b" replace="$1eštovic$2"/>
+<Typo word="Nešťastn(ě/ěji/ější/ík/ý)" find="\b([Nn])[eě]š[tť]ast?(?<!ešťast)n([áéěíý]|é(ho|mu?)|ěji|ější(m?|ho|ch|m[iu])|í(ci|cích|k([aůy]?|[eů]m|ovi))|ou|ý(ch|mi?))\b" replace="$1ešťastn$2"/>
 <Typo word="Nevinný" find="\b([Nn])evin([áéý]|é(ho|mu?)|ý(ch|mi?))\b" replace="$1evinn$2"/>
 <Typo word="Než" find="(?<!\b(mezi|mimo|[nz]a|[ov]|p(od|ro|řes)|skrze?)(&nbsp;|  ??))\bněž\b" replace="než"/>
 <Typo word="nějž" find="\bn(?:ej[zž]|ějz)\b" replace="nějž"/>
-<Typo word="Někdejší" find="\b([Nn])ěkdější(m?|ho|ch|m[iu])\b" replace="$1ěkdejší$2"/>
+<Typo word="Někdejší" find="\b([Nn])[eě]kdější(m?|ho|ch|m[iu])\b" replace="$1ěkdejší$2"/>
 <Typo word="Některý" find="\b([Nn])[eě]k[eět]{1,4}(?<!ěkte)(r([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|ří)\b" replace="$1ěkte$2"/>
-<Typo word="Německý" find="\b([Nn])(?:em[eě]|ěmě)(ck([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí)\b" replace="$1ěme$2"/>
-<Typo word="(Ne)(Po/Z)Ničit" find="\b((?:[Nn]e)?(?:[Pp]o|[Zz])?[Nn])íč(i(l[aioy]?|t)|í([mt]e)?|en([áéěý]?|é(ho|mu?)|ou|ý(ch|mi?))|(uj)?ící\w{,2})\b" replace="$1ič$2"/>
+<Typo word="Německý" find="\b([Nn])(?:em[eě]|ěmě)(ck([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí)\b" replace="$1ěme$2"/>
+<Typo word="(Ne)(Po/Z)Ničit" find="\b((?:[Nn]e)?(?:[Pp]o|[Zz])?[Nn])íč(i(l[aioy]?|t)|í([mt]e)?|en([áéěý]?|é(ho|mu?)|ou|ý(ch|mi?))|(uj)?ící(m?|ho|ch|m[iu]))\b" replace="$1ič$2"/>
 <Typo word="nich" find="\b([OoUuVvZz]|[DdPp]o|[NnZz]a)nich\b" replace="$1 nich"/>
 <Typo word="ním" find="\b([Mm]ezi|[Nn]ad|[Pp]od|[Pp]řed|[Ss]|[Zz]a)  ??nim\b" replace="$1 ním"/>
 <Typo word="nimi" find="\bněm[aiy]\b" replace="nimi"/>
@@ -363,10 +410,10 @@
 === O ===
 <source lang="xml">
 <Typo word="Oběťmi" find="\b([Oo])bě(?:tm[aiy]|ťm[ay])\b" replace="$1běťmi"/>
-<Typo word="(Ne)Objev(i/o[vá]va)t" find="\b([Nn]eo|[Oo])běv(en\w{0,3}|ov(áv)?((al|án)[aioy]?|an([áéěíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))|at)|uj(e|í(cí(m?|ho|ch|m[iu]))?)|[íuůy]|[eů]m|ech)\b" replace="$1bjev$2"/>
-<Typo word="Ocún" find="\b([Oo])c[uů]n([uůy]?|em|ech)\b" replace="$1cún$2"/>
+<Typo word="(Ne)Objev(i/o[vá]va)t" find="\b([Nn]eo|[Oo])běv(en([áéíý]?|é(ho|mu?)|ou|ý(ch|mi?))|ov(áv)?((al|án)[aioy]?|an([áéěíý]|é(ho|mu?)|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))|at)|uj(e|í(cí(m?|ho|ch|m[iu]))?)|[íuůy]|[eů]m|ech)\b" replace="$1bjev$2"/>
+<Typo word="Ocún" find="\b([Oo])c[uů]n([uůy]?|[eů]m|ech)\b" replace="$1cún$2"/>
 <Typo word="Očima" find="\b([Oo])čim[iy]\b" replace="$1čima"/>
-<Typo word="(Ne)Odděl(i/o[vá]va)t" find="\b([Nn]eo|[Oo])děl(en\w{,3}|(i|ov(áv)?a)(l[aioy]?|t)|í|uj([eí]|ící\w{,2}))\b" replace="$1dděl$2"/>
+<Typo word="(Ne)Odděl(i/o[vá]va)t" find="\b([Nn]eo|[Oo])děl(en\w{,3}|(i|ov(áv)?a)(l[aioy]?|t)|í|uj([eí]|ící(m?|ho|ch|m[iu])))\b" replace="$1dděl$2"/>
 <Typo word="Odpověď" find="\b([Oo])dpov[eě]d([,:; ])" replace="$1dpověď$2"/><!-- na konci není "." kvůli zkratce "odpověd." (odpovědný) -->
 <Typo word="(Ne)Odpovídají" find="\b((?:[Nn]e)?[Oo])dpov[ií]d[aá]j[ií](?<!ídají)\b" replace="$1dpovídají"/>
 <Typo word="(Ne)Odpovídající" find="\b((?:[Nn]e)?[Oo])dpov[ií]d[aá]j[ií](?:c[ií])?(?<!ídající)(m?|ho|ch|m[iu])(?<!jí)\b" replace="$1dpovídající$2"/>
@@ -375,14 +422,14 @@
 <Typo word="(O/Zá)chranný" find="\b([Oo]|[Zz]á)chran([áéíý]|é(ho|mu?)|ý(ch|mi?))\b" replace="$1chrann$2"/>
 <Typo word="Oky" find="\b([Oo])kam[aiy](?<!Okami)\b" replace="$1ky"/><!-- Okami je japonské jméno -->
 <Typo word="(Ne)(O/Při/Vz/Za)pomněl" find="\b((?:[Nn]e)?(?:[Oo]|[Pp]ři|[Vv]z|[Zz]a))pomě(l[aioy]?|n\w{,3}|tliv\w{1,3})\b" replace="$1pomně$2"/>
-<Typo word="Orleánský" find="\b([Oo])rl(?:é[aá]|ea)nsk([áéý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1rleánsk$2"/>
+<Typo word="Orleánský" find="\b([Oo])rl(?:é[aá]|ea)n(sk([áéý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1rleán$2"/>
 <Typo word="Ostatní" find="\b([Oo])stant?í(m?|ch|mi)\b" replace="$1statní$2"/>
 <Typo word="Ostatními" find="\b([Oo])stat?nt?ímy\b" replace="$1statními"/>
 </source>
 
 === P ===
 <source lang="xml">
-<Typo word="Pákistán" find="\b([Pp])(?:akistá|ákista)n(\w+)(?<!nu?|nem)\b" replace="$1ákistán$2"/>
+<Typo word="Pákistán" find="\b([Pp])(?:akistá|ákista)n(sk([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1ákistán$2"/>
 <Typo word="Patnáct" find="\b([Pp])(?:átn[aá]|atna)ct(\w{,15})\b" replace="$1atnáct$2"/>
 <Typo word="Paraleln(ě/í)" find="\b([Pp])ara[lr][eé][lr](?<!lel)n([ěí]|í(ho|ch|m[iu]?))\b" replace="$1araleln$2"/>
 <Typo word="Penězi" find="\b([Pp])eněz(?:m[aiy]|y)\b" replace="$1enězi"/>
@@ -391,16 +438,14 @@
 <Typo word="Počítač(ový)" find="\b([Pp])očitač(\w{,5})\b" replace="$1očítač$2"/>
 <Typo word="(Ne)Pohostinnost" find="\b([Nn]ep|[Pp])ohostinost([ií]?)\b" replace="$1ohostinnost$2"/>
 <Typo word="Pohřeb/Pohřben" find="\b([Pp])ohřeb([uůy]|e(ch|m|n\w{,3})|ům)\b" replace="$1ohřb$2"/><!-- http://www.ujc.cas.cz/jazykova-poradna/porfaq.html#krest -->
-<Typo word="Poliklinika" find="\b([Pp])ol[iy]kl[iy]n[iy](?<!iklini)(\w+)\b" replace="$1oliklini$2"/>
-<Typo word="Pomněnka" find="\b([Pp])oměn(ce|k([auy]|ách|ám|ami|ou))\b" replace="$1omněn$2"/>
+<Typo word="Poliklinika" find="\b([Pp])ol[iy]kl[iy]n[iy](?<!iklini)(ce|k([auy]?|ách|ám|ami|ou))\b" replace="$1oliklini$2"/>
+<Typo word="Pomněnka" find="\b([Pp])oměn(ce|ek|k([auy]|ách|ám|ami|ou))\b" replace="$1omněn$2"/>
 <Typo word="Popřípadě" find="\b([Pp])opřípadně\b" replace="$1opřípadě"/>
-<Typo word="Port-au-Prince" find="\bPort(?:\s?\s?[aA]u[ -]{1,3}|-Au[ -]{1,3})Prince\b" replace="Port-au-Prince"/><!-- převzato z en -->
 <Typo word="Portrétista" find="\b([Pp])o[rt]{2,4}[eé](?<!rtré)tist(\w+)\b" replace="$1ortrétist$2"/>
 <Typo word="Poté" find="\b([Pp])ot[eě]\b" replace="$1oté"/>
 <Typo word="Poté" find="\bpo(?<=\b[AIai]  ??po)\s{,3}(?!té,?  ??co)té\b" replace="poté"/>
 <Typo word="Poté, co" find="\b([Pp])o\s{,3}té  ??co\b" replace="$1oté, co"/>
 <Typo word="Potenciáln(ě/í)" find="\b([Pp])otencionál([ěí]|í(ho|ch|m[iu]?))\b" replace="$1otenciál$2"/>
-<Typo word="Považská Bystrica" find="\b[Pp]ov[aá]žsk([áé]|ou)  ??[Bb][iy]str[iy](?<!Považsk\1  ??Bystri)c([aií])\b" replace="Považsk$1 Bystric$2"/>
 <Typo word="(Ne)Povinen" find="\b((?:[Nn]e)?[Pp])ovinnen\b" replace="$1ovinen"/>
 <Typo word="(Ne)Povinn(ě/ý/ost)" find="\b((?:[Nn]e)?[Pp])ovin([aáéěiíý]|é(ho|mu?)|ost([ií]?|em|[eí]ch|mi)|ou|ý(ch|mi?))\b" replace="$1ovinn$2"/><!-- http://prirucka.ujc.cas.cz/?id=125 -->
 <Typo word="(Spolu)Prací(ch/m)" find="\b((?:[Ss]polu)?[Pp])r(?:ác[íe]|ace)(m|ch)\b" replace="$1rací$2"/><!-- http://www.ujc.cas.cz/jazykova-poradna/porfaq.html#prace -->
@@ -410,7 +455,7 @@
 <Typo word="Proměnnou h(odnot/vězd)(o)u" find="\b([Pp])rom(?:ěn|něnn?)ou h(odnoto?|hvězdo?)u\b" replace="$1roměnnou h$2u"/>
 <Typo word="prosinci" find="\bprosinic\b" replace="prosinci"/>
 <Typo word="Prosince/Prosinci" find="\bprosinec(em?|i)\b" replace="prosinc$1"/>
-<Typo word="(Ne)Protežo(vá)vat" find="\b([Nn]ep|[Pp])(?<![\x22„]nep)rotěžov(\w+)\b" replace="$1rotežov$2"/><!-- http://www.ujc.cas.cz/jazykova-poradna/porfaq.html#proteze -->
+<Typo word="(Ne)Protežo(vá)vat" find="\b([Nn]ep|[Pp])(?<![\x22„]nep)rotěž(ov\w+|uj\w+)\b" replace="$1rotež$2"/><!-- http://www.ujc.cas.cz/jazykova-poradna/porfaq.html#proteze -->
 <Typo word="Protože" find="\b([Pp])ro{,2}to?[zž]e?(?<!otože|Protze)\b" replace="$1rotože"/><!-- "Protze" je německé bojové vozidlo -->
 <Typo word="Protože" find=",  ??pro {,2}to,?  ??že\b" replace=", protože"/>
 <Typo word="Protože/Přestože" find="\bP(ro|řes)to,?  ??že\b" replace="P$1tože"/>
@@ -418,7 +463,7 @@
 <Typo word="(Nad/Pod)Průměrně" find="\b((?:[Nn]ad|[Pp]od)?[Pp])r[uúů]mn?[eě]rn?[nńň][eě](?<!ůměrně)\b" replace="$1růměrně"/>
 <Typo word="(Ne)Přecenit/Přeceňo(vá)vat" find="\b([Nn]ep|[Pp])ředce(n[iě]\w{1,3}|ň[ou]\w{,4})\b" replace="$1řece$2"/>
 <Typo word="Přese" find="\b([Pp])řeze\b" replace="$1řese"/>
-<Typo word="(Ne)Přesvědčit" find="\b((?:[Nn]e)?[Pp])řed?svěd?(?<!esvěd)č(en\w{,3}|i(l[aioy]?|t)|uje|ující\w{,2})\b" replace="$1řesvědč$2"/>
+<Typo word="(Ne)Přesvědčit" find="\b((?:[Nn]e)?[Pp])řed?svěd?(?<!esvěd)č(en\w{,3}|i(l[aioy]?|t)|uje|ující(m?|ho|ch|m[iu]))\b" replace="$1řesvědč$2"/>
 <Typo word="(Ne)Přijímat" find="\b([Nn]ep|[Pp])ř(?:íj[ií]?|iji?)m((áv)?a(l[aioy]?|t)|([aá]|ává)n\w{,3})\b" replace="$1řijím$2"/>
 <Typo word="(Ne)Přijmout" find="\b([Nn]ep|[Pp])říjm(out|ul[aioy]?)\b" replace="$1řijm$2"/>
 <Typo word="Příjmení" find="\b([Pp])[rř][ií]jmn?[eě](?<!říjme)ní(m?|ch|mi)\b" replace="$1říjmení$2"/>
@@ -442,46 +487,45 @@
 <Typo word="Rostlinnou (...)" find="\b([Rr])ostlinou  ??(buňko?u|čele(dí|ď)|(po|s)travo?u|říš[ií]|výrobo?u)\b" replace="$1ostlinnou $2"/>
 <Typo word="Roku" find="(?<=\.  ??|\n)R\. ?([12]?\d{3})\b" replace="Roku $1"/>
 <Typo word="(Ne)(Do/Po)Rozuměl" find="\b((?:[Nn]e)?(?:[DdPp]o)?[Rr])ozumně(l[aioy]?)\b" replace="$1ozumě$2"/>
-<Typo word="(Ne)(Roz/Vy)vin(o)ut" find="\b((?:[Nn]e)?(?:[Rr]oz|[Vv]y))vyn(\w+)\b" replace="$1vin$2"/>
+<Typo word="(Ne)(Roz/Vy/Za)vin(o)ut" find="\b((?:[Nn]e)?([Rr]oz|[Vv]y|[Zz]a))vyn(\w+)\b" replace="$1vin$2"/>
 <Typo word="Rozzlobit" find="\b((?:[Nn]e)?[Rr])ozlob(en([áéěíý]|é(ho|mu?)|ou|ý(ch|mi?))|i(l[aioy]?|t)|í([mt]e|š?))\b" replace="$1ozzlob$2"/>
-<Typo word="Rožňava" find="\bRožnav(\w{,5})\b" replace="Rožňav$1"/>
 </source>
 
 === Ř ===
 <source lang="xml">
 <Typo word="Ředitel(ský)" find="\b([Řř])iditel(i?|e(ch|m?)|ích|ov([aěiouy]|ou|ý(ch|mi?))|sk\w{1,3}|ů[mv]?)\b" replace="$1editel$2"/><!-- http://www.ujc.cas.cz/jazykova-poradna/porfaq.html#reditel -->
-<Typo word="(Nej)Řidší" find="\b([Nn]ejř|[Řř])[ií]d[čš][ií](?<!idší)(\w{,2})\b" replace="$1idší$2"/>
-<Typo word="Října/Říjnu" find="\bří(?:jen|nj)([au])\b" replace="říjn$1"/>
+<Typo word="(Nej)Řidší" find="\b([Nn]ejř|[Řř])[ií]d[čš][ií](?<!idší)(m?|ho|ch|m[iu])\b" replace="$1idší$2"/>
+<Typo word="Října/Říjnu" find="\bř[ií](?:je?n|nj)(?<!íjn)([au])\b" replace="říjn$1"/>
 </source>
 
 === S ===
 <source lang="xml">
 <Typo word="S sebou" find="(?<=(?:bral[aioy]?|ber(?:e|ou)|nes(?:e|l[aioy]?|o?u)|vzal[aioy]?)  ??)\bsebou\b" replace="s sebou"/>
-<Typo word="(Ne)Samostatně" find="\b([Nn]es|[Ss])amostan(\w+)\b" replace="$1amostatn$2"/>
+<Typo word="(Ne)Samostatně" find="\b([Nn]es|[Ss])amostan([ěí]|í(ho|ch|m[iu]?))\b" replace="$1amostatn$2"/>
 <Typo word="Samozřejmě" find="\b([Ss])amozd?řejmn?(?<!zřejm)(\w+)\b" replace="$1amozřejm$2"/>
 <Typo word="Saský" find="\b([Ss])assk([áéý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1ask$2"/>
-<Typo word="Saúdský" find="\b([Ss])audsk(\w+)\b" replace="$1aúdsk$2"/>
+<Typo word="Saúdský" find="\b([Ss])aud(sk([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|ští)\b" replace="$1aúd$2"/>
 <Typo word="Scenárista" find="\b([Ss])c(?:én[aá]|ena)rist(\w+)\b" replace="$1cenárist$2"/>
 <Typo word="Se stal" find="\b(?<!\bCo )sa  ??sta(l[aioy]?)\b" replace="se sta$1"/>
 <Typo word="Sestávat" find="\b([Nn]es|[Ss])estáv(a(j(í|ící\w{,2})|l[aioy]?|t)|á)  ??se\b" replace="$1estáv$2"/>
 <Typo word="Sestávat" find="\bse  ??(nes|s)estáv(a(j(í|ící\w{,2})|l[aioy]?|t)|á)\b" replace="$1estáv$2"/>
 <Typo word="Severní Amerika" find="\b[Ss]everní  ??[Aa](?<!Severní A)meri(ce|k[auy]|kou)\b" replace="Severní Ameri$1"/>
-<Typo word="(…)séri(e/ově)" find="\b(\w{,20}s)(?<![Kk]aros)eri(?!es)([eí]|[eo]\w+)\b" replace="$1éri$2"/><!-- opatření proti angličtině -->
+<Typo word="Séri(e/ově)" find="\b([Ss])eri([eií]|emi|ích|ím|ov\w{1,3})\b" replace="$1éri$2"/>
 <Typo word="(Ne)Shod(a/ně)" find="\b([Nn]es|[Ss])chod([aě]|ami|á(ch|m)|n([áéěíý]|ém|ou|ý(ch|mi?))|ou)\b" replace="$1hod$2"/><!-- vyjmenovány jen některé tvary slova "shoda" kvůli slovu "schody" -->
 <Typo word="Shora" find="\bZ\s?hora\b" replace="Shora"/>
 <Typo word="Shora" find="\bz\s?hora\b" replace="shora"/>
 <Typo word="Shromažď-" find="\b[SZ]c?hrom[aá][zž][dď](?<!Shromažď)(ov\w+|uj\w+)\b" replace="Shromažď$1"/>
-<Typo word="(Ne)shromažď-" find="(?<=\b[Nn]e|\W)[sz]c?hrom[aá][zž][dď](?<!shromažď)(ov\w+|uje?\w+)\b" replace="shromažď$1"/>
+<Typo word="(Ne)shromažď-" find="(?<=\b[Nn]e|\W)[sz]c?hrom[aá][zž][dď](?<!shromažď)(ov\w+|uj\w+)\b" replace="shromažď$1"/>
 <Typo word="Shromážd-" find="\b[SZ]c?hrom[aá][zž][dď](?<!Shromážd)([ěií]\w+)\b" replace="Shromažd$2"/>
 <Typo word="(Ne)shromažď-" find="(?<=\b[Nn]e|\W)[sz]c?hrom[aá][zž][dď](?<!shromážd)([ěií]\w+)\b" replace="shromažd$1"/>
-<Typo word="Schematicky" find="\b([Ss])chémat[iy](\w+)\b" replace="$1chemati$2"/>
+<Typo word="Schematicky" find="\b([Ss])chémat[iy]ck([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1chematick$2"/>
 <Typo word="Schéma" find="\b([Ss])chem(?!a/)(a(t([auy]?|[eu]m|ech))?)\b" replace="$1chém$2"/>
-<Typo word="Singleplayer" find="\b([Ss])ing(?:e?l|le)\W{,3}[Pp](?<!ep)layer([uy]?|em|ov\w{1,3})\b" replace="$1ingleplayer$2"/>
+<Typo word="Singleplayer" find="\b([Ss])ing(?:e?l|le)\W{,3}[Pp](?<!ep)layer([uy]?|em|ov([áéý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="$1ingleplayer$2"/>
 <Typo word="Skupinami" find="\b([Ss])kupinam[ay]\b" replace="$1kupinami"/>
 <Typo word="(Nej)Sladší" find="\b([Nn]ejs|[Ss])ladčí(m?|ho|ch|m[iu])\b" replace="$1ladší$2"/>
-<Typo word="Slavie/Sparta Praha" find="\b[Ss](lavi[eií]|part([ěy]|ou))  ??[Pp]ra(?:h[ay]|ze)(?<!S\1  ??Praha)\b" replace="S$1 Praha"/>
+<Typo word="Slavie/Sparta Praha" find="\b[Ss](lavi[eií]|part([ěy]|ou))  ??[Pp]ra(?:h[ay]|hou|ze)(?<!S\1  ??Praha)\b" replace="S$1 Praha"/>
 <Typo word="(Nej)Snazší" find="\b([Nn]ejs|[Ss])na[zž]?[sš](?<!zš)í(m?|ho|ch|m[iu])\b" replace="$1nazší$2"/>
-<Typo word="Snůška" find="\b([Ss])nůž([ck]\w+)\b" replace="$1nůš$2"/>
+<Typo word="Snůška" find="\b([Ss])nůž(ce|k([auy]|ami|ách|ám|ou))\b" replace="$1nůš$2"/>
 <Typo word="sólov(ě/ý)" find="\bsolov([áéěíý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="sólov$1"/><!-- „Solo“ je rodina ze Star Wars -->
 <Typo word="Současn(ě/ý)" find="\b([Ss])ouča(?:st)?n([áéěíý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1oučasn$2"/>
 <Typo word="Současnost" find="\b([Ss])oučas?t?nos?(?<!snos)t([ií]?)\b" replace="$1oučasnost$2"/>
@@ -492,7 +536,7 @@
 <Typo word="Standard(izace/ní)" find="\b([Nn]ads|[Ss])tandart(em|izac[cehiím]{1,3}|n([ěí]|í(ho|ch|m[iu]?)))\b" replace="$1tandard$2"/>
 <Typo word="Standarta" find="\b([Ss])tandard(a|ami|ou)\b" replace="$1tandtart$2"/><!-- pravidlo nad tímto opravuje kořen "standard" s "t", toto pravidlo opravuje kořen "standart" s "d" -->
 <Typo word="Stanný" find="\b([Ss])tan([áéý]|é(ho|mu?)|ý(ch|mi?))\b" replace="$1tann$2"/>
-<Typo word="Stévie" find="\b([Ss])tevi([áéechiímový]{1,3})\b" replace="$1tévi$2"/>
+<Typo word="Stévie" find="\b([Ss])tevi([eií]|emi|ích|ím|ov([áéý]|é(ho|mu?)|ý(ch|mi?)))(?<!Stevie)\b" replace="$1tévi$2"/>
 <Typo word="(Ne)Svědčit" find="\b((?:[Nn]e)?[Ss])věč(en\w{,3}|i(l[aioy]?|t)|í(cí\w{,2})?)\b" replace="$1vědč$2"/>
 </source>
 ==== Stanfordova univerzita ====
@@ -508,35 +552,35 @@
 === Š ===
 <source lang="xml">
 <Typo word="Šestnáct" find="\b([Šš])es(?:t?na|ná)ct(\w{,15})\b" replace="$1estnáct$2"/>
-<Typo word="(Nej)Šťastněj(i/ší)/Šťastn(ě/ý)" find="\b((?:[Nn]ej)?(?:[Nn]e)?[Šš])[tť]ast?(?<!ťast)n([áéěíý]|é(ho|mu?)|ěji|ější\w{,2}|ou|ý(ch|mi?))\b" replace="$1ťastn$2"/>
-<Typo word="(Nej)Šťavnat(ě[ji]/ější/ý)" find="\b([Nn]ejš|[Šš])tavnat([áéěíý]|é(ho|mu?)|ěji|ější\w{,2}|ou|ý(ch|mi?))\b" replace="$1ťavnat$2"/>
+<Typo word="(Nej)Šťastněj(i/ší)/Šťastn(ě/ý)" find="\b((?:[Nn]ej)?(?:[Nn]e)?[Šš])[tť]ast?(?<!ťast)n([áéěíý]|é(ho|mu?)|ěji|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))\b" replace="$1ťastn$2"/>
+<Typo word="(Nej)Šťavnat(ě[ji]/ější/ý)" find="\b([Nn]ejš|[Šš])tavnat([áéěíý]|é(ho|mu?)|ěji|ější(m?|ho|ch|m[iu])|ou|ý(ch|mi?))\b" replace="$1ťavnat$2"/>
 </source>
 
 === T ===
 <source lang="xml">
 <Typo word="tábor" find="\btabo(r([auůy]?|ech|[eů]m)|ře)\b" replace="tábo$1"/>
 <Typo word="Také" find="\b([Tt])(?:aék|k?aé)\b" replace="$1aké"/>
-<Typo word="Tamější" find="\b([Tt])amnější(m?|ho|ch|m[iu])\b" replace="$1amější$2"/>
+<Typo word="Tamější" find="\b([Tt])amn[eě]jší(m?|ho|ch|m[iu])\b" replace="$1amější$2"/>
 <Typo word="Tangenciální" find="\b([Tt])angen?[cs]i[aáeé](?<!ncia)lní(m?|ho|ch|m[iu])\b" replace="$1angenciální$2"/>
-<Typo word="Témata" find="\b([Tt])emat([ay]?|ech|[eu]m)?\b" replace="$1émat$2"/>
-<Typo word="Temati(cky/ka/zovat)" find="(?<!nespisovně\s)\b([Tt])émati(\w+)\b" replace="$1emati$2"/>
+<Typo word="Témata" find="\b([Tt])emat([auy]?|ech|[eů]m)\b" replace="$1émat$2"/>
+<Typo word="Temati(cky/ka/zovat)" find="(?<!nespisovně\s)\b([Tt])émati(ce|ck([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí|k([auy]?|ách|ám|ami|ou))\b" replace="$1emati$2"/>
 <Typo word="Téměř" find="\b([Tt])émn?[eě][rŕř](?<!emer|éměř)\b" replace="$1éměř"/>
 <Typo word="(Nej)Tenčí" find="\b([Nn]ejt|[Tt])enší(m?|ho|ch|m[iu])\b" replace="$1enčí$2"/>
 <Typo word="Terciární" find="\b([Tt])erci(?:a[lr]|ál)n(m?|ho|ch|m[iu])\b" replace="$1erciárn$2"/>
 <Typo word="Též" find="\b([Tt])(?:ež|éz)\b" replace="$1éž"/>
-<Typo word="Těžce/Těžký" find="\b([Tt])(?:e[zž]|ěz)([ck]\w{1,3})\b" replace="$1ěž$2"/>
+<Typo word="Těžce/Těžký" find="\b([Tt])(?:e[zž]|ěz)(c[eí]|k([áéoý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="$1ěž$2"/>
 <Typo word="Tchyně" find="\b([Tt])chýn([ěií]|ěmi|ích|ím|in([aěiouy]|ou|ý(ch|mi?))??)\b" replace="$1chyn$2"/>
 <Typo word="Tisíc(-)" find="\b([Tt])(?:ís[ií]|isi)c(\w{,15})\b" replace="$1isíc$2"/>
-<Typo word="Tloušťka" find="\b([Tt])loušt?([ck]\w+)\b" replace="$1loušť$2"/>
+<Typo word="Tloušťka" find="\b([Tt])loušt?(ce|k([auy]|ách|ám|ami|ou))\b" replace="$1loušť$2"/>
 <Typo word="Tomorrow" find="\b([Tt])omm?orr?(?<!omorr)ow(s?)\b" replace="$1omorrow$2"/>
 <Typo word="Tragédie" find="\b([Tt])ragedi([eií]|emi|ích|ím)\b" replace="$1ragédi$2"/>
 <Typo word="Transsibiřský" find="\b([Tt])ransibi[rŕř]sk([áéý]|é(ho|mu?)|ou|ý(ch|mi?))\b" replace="$1ranssibřsk$2"/>
 <Typo word="Trénink" find="\b([Tt])r[eé]nin[kg](?<!énink)([uůy]?|[eů]m)\b" replace="$1rénink$2"/>
 <Typo word="Trestn(ě/í/ý)" find="\b([Tt])resn([áéěíý]|[éí](ho|mu?)|[íý]ch|[íý]mi?|ou)\b" replace="$1restn$2"/>
-<Typo word="Trilogie" find="\b([Tt])riologi(\w+)\b" replace="$1rilogi$2"/>
+<Typo word="Trilogie" find="\b([Tt])riologi([eií]|emi|ích|ím)\b" replace="$1rilogi$2"/>
 <Typo word="Třemi/Čtyřmi (bez duálu)" find="\b([Tt]ře|[Čč]tyř)ma(?!\s+(\w+ma\s+)?(nohama|nožičkama|rukama|ručičkama|očima|ušima))\b" replace="$1mi"/>
 <Typo word="Třináct" find="\b([Tt])ř(?:ín[aá]|ina)ct(\w{,15})\b" replace="$1řináct$2"/>
-<Typo word="Typicky" find="\b([Tt])ipick(\w+)\b" replace="$1ypick$2"/>
+<Typo word="Typicky" find="\b([Tt])ipi(ck([áéyý]|é(ho|mu?)|ou|ý(ch|mi?))|čtí)\b" replace="$1ypi$2"/>
 </source>
 
 === U ===
@@ -545,7 +589,7 @@
 <Typo word="(Ne)Umístěn(i/í)" find="\b([Nn]eu|[Uu])m[ií][sš][tť]n?[eě][nň](?<!ístěn)([ií])\b" replace="$1místěn$2"/>
 <Typo word="(Nej)(Ne)Upřímně(ji/jší)" find="\b((?:[Nn]ej)?(?:[Nn]e)?[Uu])přímě(ji|jší(m?|ho|ch|m[iu]))?\b" replace="$1přímně$2"/>
 <Typo word="Ušima" find="\b([Uu])šim[iy]\b" replace="$1šima"/>
-<Typo word="Uvědomění" find="\b([Uu])vědomnění(\w{,3})\b" replace="$1vědomění$2"/>
+<Typo word="Uvědomění" find="\b([Uu])v(?:ě|je)domn?(?<!ědom)ění(\w{,3})\b" replace="$1vědomění$2"/>
 </source>
 === Ú ===
 <source lang="xml">
@@ -553,7 +597,6 @@
 <Typo word="ú-" find="(?<=[\s\x22\x28„])((?:[Nn]ej)?(?:[Nn]e)?(?:[Bb]ez|[Mm]imo|[NnZz]a|[DdPp]o|[Vv]y)?)ů(\w+)\b" replace="$1ú$2"/>
 <Typo word="Účin(ek/ný)" find="\bUčin(cích|ek|[kn]\w{1,10})\b" replace="Účin$1"/>
 <Typo word="účin(ek/ný)" find="\bučin(cích|ek|[kn]\w{1,10})\b" replace="účin$1"/>
-<Typo word="Újezd nad Lesy" find="\b[UuÚúŮů]jezd([ěu]?|em)  ??nad  ??[Ll]es[iy](?<!Újezd\1  ??nad  ??Lesy)\b" replace="Újezd$1 nad Lesy"/>
 <Typo word="únor" find="\bunor([au]?)\b" replace="únor$1"/>
 <Typo word="Úterý" find="\b[UÚ]ter[yý](?<!Úterý)\b" replace="Úterý"/>
 <Typo word="úterý" find="\b[uú]ter[yý](?<!úterý)\b" replace="úterý"/>
@@ -564,14 +607,14 @@
 <Typo word="Větší/Většina" find="\b([Vv])[eě][tť][sš](?<!ětš)(\w{,5})\b" replace="$1ětš$2"/>
 <Typo word="Vězeňkyně" find="\b([Vv])ězenky(n([ěií]|ěmi|ích|ím|in([aěiouy]?|ou|ý(ch|mi?)))|ň)\b" replace="$1ězeňky$2"/>
 <Typo word="(Ne)(U)Vid(ět/ina)" find="\b((?:[Nn]e)?[Uu]?[Vv])yd(in\w{1,3}|í(cí\w{,2}|[mt]e|š?)|ě(l[aioy]?|n\w{,3}))\b" replace="$1id$2"/>
-<Typo word="Virtuóz" find="\b([Vv])irtuoz(i?|e(ch|m)?|ích|ov([aéěiouy]|ou|ý(ch|mi?))|ů[mv]?)\b" replace="$1irtuóz$2"/>
+<Typo word="Virtuóz" find="\b([Vv])irtuoz([eiů]?|e(ch|m)?|ích|ov([aéěiouy]|ou|ý(ch|mi?))|ů[mv])\b" replace="$1irtuóz$2"/>
 <Typo word="Vítěz(ka/ný)" find="\b([Vv])[íý]t[eě][zž](?<!ítěz)([iů]?|ce|[eů]m|ích|k([auy]|ám|ami|ou)|n([áéěíý]|é(ho|mu?)|ou|ý(ch|mi?))|ov[éi])(?<![Vv]e  ??Vítěži|Vítěže?|ýtěžk[uy])\b" replace="$1ítěz$2"/><!-- neopravovat město "Vítěž" -->
 <Typo word="Vítězství" find="\b([Vv])[iíý]t[eě][stvz]{2,6}[ií](?<!ítězství)(m?|ch|mi)\b" replace="$1ítězství$2"/>
 <Typo word="Viz" find="\b([Vv])iz(?:…\.?|\.{1,4})" replace="$1iz"/><!-- WP:PR -->
 <Typo word="(Ne)Vlastn-" find="\b([Nn]ev|[Vv])lasn(\w{1,7})\b" replace="$1lastn$2"/>
-<Typo word="Vlaštovka" find="\b([Vv])lašťov([ck]\w+|čin([aěiouy]?|ou|ý(ch|mi?)))\b" replace="$1laštov$2"/>
+<Typo word="Vlaštovka" find="\b([Vv])lašťov(ce|ek|k([auy]|ách|ám|ami|ou)|čin([aěiouy]?|ou|ý(ch|mi?)))\b" replace="$1laštov$2"/>
 <Typo word="Vůči" find="\b([Vv])[uúů][cč][ií](?<!ůči)\b" replace="$1ůči"/>
-<Typo word="Výhrůžka" find="\b([Vv])[yý]hr[uúů][zž](?<!ýhrůž)([ck]\w{1,3})\b" replace="$1ýhrůž$2"/>
+<Typo word="Výhrůžka" find="\b([Vv])[yý]hr[uúů][zž](?<!ýhrůž)(ce|ek|k([auy]|ách|ám|ami|ou))\b" replace="$1ýhrůž$2"/>
 <Typo word="(Jiho/Severo)Východní" find="\b((?:[Jj]iho|[Ss]evero)?[Vv])ých(?:do?|o)ní(m?|ho|ch|m[iu])\b" replace="$1ýchodní$2"/>
 <Typo word="Výjim(ečný/ka)" find="\b([Vv])[iíyý]j[ií](?<!ýji)m([cke]\w{1,5})\b" replace="$1ýjim$2"/>
 <Typo word="(Ne)Výkonn(ě/ost/ý)" find="\b([Nn]ev|[Vv])ýkon([áéěíý]|é(ho|mu?)|ost[ií]?|ou|ý(ch|mi?))\b" replace="$1ýkonn$2"/>
@@ -579,11 +622,11 @@
 <Typo word="(Ne)Vymýtit" find="\b([Nn]ev|[Vv])ymí(cen\w{,3}|ti\w\w?|tí\w{,2})\b" replace="$1ymý$2"/>
 <Typo word="(Ne)Vyprazdňovat" find="\b([Nn]ev|[Vv])yprázdň([ou]\w+)\b" replace="$1yprazdň$2"/>
 <Typo word="(Nej)Výše" find="\b([Nn]ejv|[Vv])ýšše\b" replace="$1ýše"/>
-<Typo word="Výšivka" find="\b([Vv])[iíyý]š[ií](?<!ýši)v([ck]\w+)\b" replace="$1ýšiv$2"/>
+<Typo word="Výšivka" find="\b([Vv])[iíyý]š[ií](?<!ýši)v(ce|ek|k([auy]|ách|ám|ami|ou))\b" replace="$1ýšiv$2"/>
 <Typo word="(Nej)Vyšší" find="\b([Nn]ejv|[Vv])yší(m?|ho|ch|m[iu])\b" replace="$1yšší$2"/>
 <Typo word="Výtěžek" find="\b([Vv])ítěž(cích|ek|k([uůy]|ách|[eů]m))\b" replace="$1ýtěž$2"/>
 <Typo word="(Bez/Ne)Význam(ný)" find="\b((?:[Bb]ez|[Nn]e)?[Vv])íznam(n[^ě]{1,3})?\b" replace="$1ýznam$2"/>
-<Typo word="(Bez/Ne/Nej)Významně(ji/jší)" find="\b((?:[Bb]ez|[Nn]ej?)?[Vv])[íý]znamn?(?<!ýznamn)ě(ji|jší\w{,2})?\b" replace="$1ýznamně$2"/>
+<Typo word="(Bez/Ne/Nej)Významně(ji/jší)" find="\b((?:[Bb]ez|[Nn]ej?)?[Vv])[íý]znamn?(?<!ýznamn)ě(ji|jší(m?|ho|ch|m[iu]))?\b" replace="$1ýznamně$2"/>
 <Typo word="Vyztužit/Výztuž" find="\b([Vv][yý])stuž(\w{,3})\b" replace="$1ztuž$2"/>
 </source>
 
@@ -596,9 +639,9 @@
 <Typo word="(Ne)Začal(a/i/o/y)" find="\b([Nn]ez|[Zz])ačl([aioy]?)\b" replace="$1ačal$2"/>
 <Typo word="(Ne)Zájem" find="\b([Nn]ez|[Zz])aj(em|m([ůy]|ech|[eů]m))\b" replace="$1áj$2"/><!-- "(ne)zajmu" 1. os. č. j. (ne)zajmout -->
 <Typo word="Zájmen(ný/o)" find="\b([Zz])(?=[aá]jm[eé]n(?:[áéý]|ou)|ájmén|ajm[eé]n)[aá]jm[eé]n?([aěouy]?|ech|[eů]m|n([áéý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="$1ájmen$2"/>
-<Typo word="(Ne)Zakázat" find="\b([Nn]ez|[Zz])[aá]k[aá]z[aá](?<!akáza)(l[aioy]?|n(é\w{,2}|ý\w{,2}|ou)|t)\b" replace="$1akáza$2"/>
+<Typo word="(Ne)Zakázat" find="\b([Nn]ez|[Zz])[aá]k[aá]z[aá](?<!akáza)(l[aioy]?|n([éý]\w{,2}|ou)|t)\b" replace="$1akáza$2"/>
 <Typo word="(Ne)Zakázán" find="\b([Nn]ez|[Zz])[aá]k[aá]z[aá](?<!akázá)n\b" replace="$1akázán"/>
-<Typo word="Zákaz(nický/ník/ový)" find="\b([Zz])(?:ak[aá]|áká)z([uůy]?|ech|[eů]m|n[ií][ck]\w{1,4}|ov[áéý]\w{,2})\b" replace="$1ákaz$2"/>
+<Typo word="Zákaz(nický/ník/ový)" find="\b([Zz])(?:ak[aá]|áká)z([uůy]?|ech|[eů]m|n[ií][ck]\w{,4}|ov([áéý]|é(ho|mu?)|ou|ý(ch|mi?)))\b" replace="$1ákaz$2"/>
 <Typo word="Základě" find="\b([Zz])[aá]kl[aá]d[eě](?<!ákladě)\b" replace="$1ákladě"/>
 <Typo word="Základn(a/í)" find="\b([Zz])akladn(\w+)\b" replace="$1ákladn$2"/>
 <Typo word="Zánik" find="\b([Zz])(?:ani|[aá]ní)(cích|k([uůy]?|[eů]m))\b" replace="$1áni$2"/>
@@ -610,7 +653,7 @@
 <Typo word="Zkouška" find="\b([Zz])kou[čž](ce|k([auy]|ami|ách|ám|ou))\b" replace="$1kouš$2"/>
 <Typo word="Z(le/pra)va" find="\bOd ?(le|pra)va\b" replace="Z$1va"/>
 <Typo word="z(le/pra)va" find="\bod ?(le|pra)va\b" replace="z$1va"/>
-<Typo word="(Nej)Známěj(i/ší)" find="\b([Nn]ejz|[Zz])námněj(i|ší(m?|ho|ch|m[iu]))\b" replace="$1náměj$2"/>
+<Typo word="(Nej)Známější" find="\b([Nn]ejz|[Zz])námnější(m?|ho|ch|m[iu])\b" replace="$1námější$2"/>
 <Typo word="(Ne)Zúčast(ni/ňo[vá]va)t" find="\b([Nn]ez|[Zz])[úů]čast?(?<!účast)([nň]\w+)\b" replace="$1účast$2"/>
 <Typo word="(Ne)Zůst(áv)at" find="\b([Nn]ez|[Zz])úst([aá]\w+)\b" replace="$1ůst$2"/>
 <Typo word="Zvenčí" find="\b([Zz])  ??venčí\b" replace="$1venčí"/>
@@ -627,18 +670,18 @@
 <Typo word="#." find="\b(\d+)-?[mt]?(?:[áéíý]|[éí](?:ho|mu?)|ou|[íý](?:ch|mi?))\b" replace="$1."/>
 <Typo word="#. (datum)" find="(\d\d?)[ \.]{1,4}(?<!\d\. )(leden|ledn[au]|únor[au]?|březen|březn[au]|duben|dubn[au]|květen|květn[au]|červen|červn[au]|červenec|červenc[ei]|srpen|srpn[au]|září|říjen|říjn[au]|listopadu?|prosinec|prosinc[ei])\b" replace="$1. $2"/>
 <Typo word="#. (jiné)" find="\b(\d+)\.(kol([aeou]|e(m|ch))|l(et|etech|éta)|li(g([aouy]?|ami|á(ch|m)|ou)|ze)|míst([aouůy]?|e(ch|m)|ům)|pád([ěuůy]|ech|[eů]m))\b" replace="$1. $2"/>
-<Typo word="#. století" find="\b(\d\d?)\.stol(\.|etím??\b)" replace="$1. stol$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?Břez(en|n[au])\b" replace="$1. břez$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?Červ(en(ec|c[ei])?|n[au])\b" replace="$1. červ$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?Dub(en|n[au])\b" replace="$1. dub$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?Květ(en|n[au])\b" replace="$1. květ$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?L(eden|edn[au]|etech|ét[ay]|istopadu?)\b" replace="$1. l$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?Prosin(c[ei]|ec)\b" replace="$1. prosin$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?Říj(en|n[au])\b" replace="$1. říj$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?S(rpen|rpn[au]|t(ol(etí)?)?)\b" replace="$1. s$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?[ÚŮ]nor([au]?)\b" replace="$1. únor$2"/>
-<Typo word="Malé písmeno" find="\b(\d\d?)\.? ?Září\b" replace="$1. září"/>
-<Typo word="#. výročí" find="\b(\d+)-?(?:ti-?)?let\w+  ??výroč(\w+)\b" replace="$1. výroč$2"/>
+<Typo word="#. století" find="\b([1-9]?\d)\.stol(\.|etím??\b)" replace="$1. stol$2"/>
+<Typo word="Malé písmeno" find="\b([1-3]?\d)\.? ?Břez(en|n[au])\b" replace="$1. břez$2"/>
+<Typo word="Malé písmeno" find="\b([1-3]?\d)\.? ?Červ(en(ec|c[ei])?|n[au])\b" replace="$1. červ$2"/>
+<Typo word="Malé písmeno" find="\b([1-3]?\d)\.? ?Dub(en|n[au])\b" replace="$1. dub$2"/>
+<Typo word="Malé písmeno" find="\b([1-3]?\d)\.? ?Květ(en|n[au])\b" replace="$1. květ$2"/>
+<Typo word="Malé písmeno" find="\b([1-9]?\d)\.? ?L(eden|edn[au]|etech|ét[ay]|istopadu?)\b" replace="$1. l$2"/>
+<Typo word="Malé písmeno" find="\b([1-3]?\d)\.? ?Prosin(c[ei]|ec)\b" replace="$1. prosin$2"/>
+<Typo word="Malé písmeno" find="\b([1-3]?\d)\.? ?Říj(en|n[au])\b" replace="$1. říj$2"/>
+<Typo word="Malé písmeno" find="\b([1-9]?\d)\.? ?S(rpen|rpn[au]|t(ol(etím?)?)?)\b" replace="$1. s$2"/>
+<Typo word="Malé písmeno" find="\b([1-3]?\d)\.? ?[UÚŮ]nor([au]?)\b" replace="$1. únor$2"/>
+<Typo word="Malé písmeno" find="\b([1-3]?\d)\.? ?Září\b" replace="$1. září"/>
+<Typo word="#. výročí" find="\b(\d+)-?(?:ti-?)?let\w+  ??výročí(m?|ch|mi)\b" replace="$1. výroč$2"/>
 <Typo word="#(cm/mm) kanón" find="\b(\d+)  ??([cm])m  ??kan[oó]n([uůy]?|ech|[eů]m)\b" replace="$1$2m kanón$3"/>
 <Typo word="7,62×51 mm" find="\b7[\.,]62 ?[x×] ?51(&nbsp;| ) ?mm(?<!7,62×51\1mm)\b" replace="7,62×51&nbsp;mm"/>
 <Typo word="číslovka" find="((?:[Dd]va|[Tt]ři|[Čč]tyři)ceti?|(?:[Pp]a|[Šš]e|[Ss]edm|[Oo]sm|[Dd]eva)desáti?|[Ss]to)(jedn[aé]|dv[aě]|dvou|tř[ií]|čtyři?|pěti?|šesti?|sedmi?|osmi?|devět|devíti|(jede|dva|tři|čtr|pat|šest|sedm|osm|devate)nácti?)\b" replace="$1 $2"/>
@@ -651,18 +694,24 @@
 <Typo word="Deváté/Desáté výročí" find="\b([Dd])e([sv])[eěí]tilet([áé]|é(ho|mu?)|ý(ch|mi?))  ??výročí(m?|ch|mi)\b" replace="$1e$2át$3 výročí$4"/>
 <Typo word="11.–19. výročí" find="\b([Jj]ede|[Dd]va|[Tt]ři|[Čč]tr|[Pp]at|[Šš]est|[Ss]edm|[Oo]sm|[Dd]evate)náctilet([áé]|é(ho|mu?)|ý(ch|mi?))  ??výročí(m?|ch|mi)\b" replace="$1náct$2 výročí$3"/>
 <Typo word="20.–90. výročí" find="\b((?:[Dd]va|[Tt]ři|[Čč]tyři)c|(?:[Pp]a|[Šš]e|[Ss]edm|[Oo]sm|[Dd]eva)des)[áe]tilet([áé]|é(?:ho|mu?)|ý(?:ch|mi?)) \s??výročí(m?|ch|mi)\b" replace="$1át$2 výročí$3"/>
-<Typo word="Sté výročí" find="\b([Ss])tolet([áé]|é(?:ho|mu?)|ý(?:ch|mi?)) \s??výročí(m?|ch|mi)\b" replace="$1t$2 výročí$3"/>
+<Typo word="100. výročí" find="\b([Ss])tolet([áé]|é(?:ho|mu?)|ý(?:ch|mi?)) \s??výročí(m?|ch|mi)\b" replace="$1t$2 výročí$3"/>
+<Typo word="200. výročí" find="\b([Dd])věstělet([áé]|é(?:ho|mu?)|ý(?:ch|mi?)) \s??výročí(m?|ch|mi)\b" replace="$1voust$2 výročí$3"/>
+<Typo word="300. výročí" find="\b([Tt])řistalet([áé]|é(?:ho|mu?)|ý(?:ch|mi?)) \s??výročí(m?|ch|mi)\b" replace="$1říst$2 výročí$3"/>
+<Typo word="400. výročí" find="\b([Čč])tyřistalet([áé]|é(?:ho|mu?)|ý(?:ch|mi?)) \s??výročí(m?|ch|mi)\b" replace="$1tyřst$2 výročí$3"/>
+<Typo word="500.-900 výročí" find="\b([Pp]ět|[Šš]est|[Ss]edm|[Oo]sm|[Dd]evít)istalet([áé]|é(?:ho|mu?)|ý(?:ch|mi?)) \s??výročí(m?|ch|mi)\b" replace="$1ist$2 výročí$3"/>
 </source>
 
-=== Země ===
+== Sídla ==
+{{kotva|Země}}
+=== Státy ===
 <source lang="xml">
 <!-- pouze velká písmena -->
 <Typo word="Afganistan" find="\b[Aa]fg(?:anistá|ánist[aá])n(u?|em)\b" replace="Afganistan$1"/>
 <Typo word="Afghánistán" find="\b[Aa]fgh(?:ánista|anistá)n(u?|em)\b" replace="Afghánistán$1"/>
-<Typo word="Amerika" find="(?<!(?:[Jj][ií]žní|[Ll]atinsk\w\w?|[Ss]everní)  ??)\bameri(ce|k[ay]|kou)\b" replace="Ameri$1"/>
+<Typo word="Amerika" find="(?<!(?:[Jj][ií]žní|[Ll]atinsk\w\w?|[Ss]everní)  ??)\bameri(ce|k[auy]|kou)\b" replace="Ameri$1"/>
 <Typo word="Ázerbájdžán" find="\b[AaÁá]z[eé]rb[aá]jdž[aá](?<!Ázerbájdžá)n(u?|em)\b" replace="Ázerbájdžán$1"/>
 <Typo word="Bulharsko" find="\bbulharsk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Bulharsk$1"/>
-<Typo word="Česká republika" find="\b[Čč]esk([áé]|ou)  ??[Rr](?<!Česk\1  ??r)epubli(ce|k[au])\b" replace="Česk$1 republi$2"/>
+<Typo word="Česká republika" find="\b[Čč]esk([áé]|ou)  ??[Rr](?<!Česk\1  ??r)epubli(ce|k[auy]|kou)\b" replace="Česk$1 republi$2"/>
 <Typo word="Česko" find="\bčesk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Česk$1"/>
 <Typo word="Dánsko" find="\bdánsk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Dánsk$1"/>
 <Typo word="Evropa" find="\bevrop([aěuy]|ou)\b" replace="Evrop$1"/>
@@ -671,11 +720,13 @@
 <Typo word="Irák" find="\b[Íí]r[aá](?<!Irá)k(u?|em)\b" replace="Irák$1"/><!-- WP:PR -->
 <Typo word="Itálie" find="\bitáli([eií])\b" replace="Itáli$1"/>
 <Typo word="Írán" find="\b[Íí]r[aá](?<!Írá)n(u?|em)(?<!Iran)\b" replace="Írán$1"/><!-- WP:PR -->
+<Typo word="Massachusetts(ký)" find="\b([Mm])ass?achusett?ss?(?<!ssachusetts)(k\w{1,3})?\b" replace="$1assachusetts$2"/>
+<Typo word="Mississippi" find="\b[Mm]iss?s??iss?s??ipp?p??(?<!Mississipp)i\b" replace="Mississippi"/>
 <Typo word="Německo" find="\b[Nn][eě]m[eě](?<!Něme)ck(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Německ$1"/>
 <Typo word="Norsko" find="\bnorsk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Norsk$1"/>
 <Typo word="Pákistán" find="\bp(?:akistá|ákist[aá])n(u?|em)\b" replace="Pákistán$1"/>
 <Typo word="Polsko" find="\bpolsk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Polsk$1"/>
-<Typo word="Portgualsko" find="\bportugalsk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Portugalsk$1"/>
+<Typo word="Portugalsko" find="\bportugalsk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Portugalsk$1"/>
 <Typo word="Rakousko" find="\brakousk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Rakousk$1"/>
 <Typo word="Rakousko-Uhersko" find="\b[Rr]akousk([aou]|em)\s{,3}[-–]?\s{,3}[Uu](?<!Rakousk\1-U)hersk(?!o ?[-–])([aou]|em)\b" find="Rakousk$1-Uhersk$2"/>
 <Typo word="Rusko" find="\brusk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Rusk$1"/>
@@ -684,6 +735,7 @@
 <Typo word="Španělsko" find="\bšpanělsk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Španělsk$1"/>
 <Typo word="Švédsko" find="\bšvédsk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Švédsk$1"/>
 <Typo word="Švýcarsko" find="\b[Šš]v[áíý](?<!Švý)carsk(?!o(?:\]\])? ?[-–])([aou]|em)\b" replace="Švýcarsk$1"/>
+<Typo word="Tennessee" find="\b[Tt]ee?nn?n??ee?ss?s??e+(?<!Tennessee)\b" replace="Tennessee"/>
 </source>
 
 === Města ===
@@ -692,9 +744,10 @@
 <Typo word="-av" find="\b(Boles|Břec|Čás|Přibys|Soběs|Vratis|Zbras)lavy\b" replace="$1lavi"/>
 <Typo word="(Bratis/Jih)lava" find="\b(Bratis|Jih)lavi\b" replace="$1lavy"/>
 <Typo word="Brno" find="\bbrn([aěou]|em)\b" replace="Brn$1"/>
-<Typo word="České Budějovice" find="\b[Čč]esk(é|ý(?:ch|mi?)) +[Bb](?<!Česk\1 ??B)udějovic(e?|ím|ích)\b" replace="Česk$1 Budějovic$2"/>
-<Typo word="Frýdek-Místek" find="\b[Ff]rýd(\w\w)(?:\s?[-–]\s?|[-–]?|  ??)[Mm]íst\w\w(?<!Frýd\1-Míst\1)\b" replace="Frýd$1-Míst$1"/>
-<Typo word="Hradec Králové" find="\b[Hh]rad(c[ei]|cem|ec) +[Kk]r[aá]lov[eé]\w+(?<!Hrad\1  ??Králové)\b" replace="Hrad$1 Králové"/>
+<Typo word="České Budějovice" find="\b[Čč]esk(é|ý(?:ch|mi?)) +[Bb](?<!Česk\1 ??B)udějovic(e?|ích|ím)\b" replace="Česk$1 Budějovic$2"/>
+<Typo word="Frýdek-Místek" find="\b[Ff]rýd(ek|kem|ku)(?:\s?[-–]\s?|[-–]?| \s??)[Mm]íst(?:ek|kem|ku)(?<!Frýdek-Místek|Frýdku-Místku|Frýdkem-Místkem)\b" replace="Frýd$1-Míst$1"/>
+<Typo word="Hradec Králové" find="\b[Hh]rad(c[ei]|cem|ec) +[Kk]r[aá]lov[eé]\w*(?<!Hrad\1  ??Králové)\b" replace="Hrad$1 Králové"/>
+<Typo word="Janské Lázně" find="\b[Jj][aá]nsk(é|ý(?:ch|mi?)) \s??[Ll](?<!Jansk\w{1,3} \s??L)ázn([ěí]|í(ch|m))\b" replace="Jansk$1 Lázn$2"/>
 <Typo word="Jihlava" find="\bjihlav([aěuy]|ou)\b" replace="Jihlav$1"/>
 <Typo word="Karlovy Vary" find="\b[Kk]arlov(y|ý(?:ch|mi?))  ??[Vv](?<!Karlov\1  ??V)ar(ech|ům?|y)\b" replace="Karlov$1 Var$2"/>
 <Typo word="Liberec" find="\bliber(ec|c[ií])\b" replace="Liber$1"/>
@@ -703,20 +756,29 @@
 <Typo word="Pardubice" find="\bpardubic(e?|ím|ích)\b" replace="Pardubic$1"/>
 <Typo word="Plzeň" find="\bplz(eň|n[ěi])\b" replace="Plz$1"/>
 <Typo word="Praha" find="\bpra(ha|hou|ze)\b" replace="Pra$1"/>
+<Typo word="Újezd nad Lesy" find="\b[UuÚúŮů]jezd([ěu]?|em)  ??nad  ??[Ll]es[iy](?<!Újezd\1  ??nad  ??Lesy)\b" replace="Újezd$1 nad Lesy"/>
 <Typo word="Ústí nad Labem" find="\b[UuÚú]st[ií](m?) +nad +[Ll](?<!Ústím? nad L)abem\b" replace="Ústí nad Labem"/>
 <Typo word="Zlín" find="\bzlín([aěu]?|em)\b" replace="Zlín$1"/>
 </source>
 
-==== Jiná ====
+==== Zahraniční ====
 <source lang="xml">
-<Typo word="Massachusetts(ký)" find="\b([Mm])ass?achusett?ss?(?<!ssachusetts)(k\w{1,3})?\b" replace="$1assachusetts$2"/>
-<Typo word="Tennessee" find="\b[Tt]ee?nn?n??ee?ss?s??e+(?<!Tennessee)\b" replace="Tennessee"/>
+<Typo word="Angoulême" find="\bAngoul[eé]me\b" replace="Angoulême"/><!-- převzato z en -->
+<Typo word="Bardejov" find="\bBardějov([ěu]?|em)\b" replace="Bardejov$1"/>
+<Typo word="Port-au-Prince" find="\bPort(?:\s?\s?[aA]u[ -]{1,3}|-Au[ -]{1,3})Prince\b" replace="Port-au-Prince"/><!-- převzato z en -->
+<Typo word="Považská Bystrica" find="\b[Pp]ov[aá]žsk([áé]|ou)  ??[Bb][iy]str[iy](?<!Považsk\1  ??Bystri)c([aií])\b" replace="Považsk$1 Bystric$2"/>
+<Typo word="Rožňava" find="\bRožnav(\w{,5})\b" replace="Rožňav$1"/>
+</source>
+
+=== Jiná ===
+<source lang="xml">
+<Typo word="Braník" find="(?<!\bnazývaný též )\b[Bb]ráník(u?|em)\b" replace="Braník$1"/>
 </source>
 
 === Vokalizace ===
 <source lang="xml">
-<Typo word="nevokalizace" find="(?![Kk]e  ??[CGgKkQqXx]|[Ss]e  ??[ČčSsŠšXxZzŽž]|[Vv]e  ??[FfVvWw]|[Zz]e  ??[ČčSsŠšXxZzŽž])([KkSsVvZz])(?<=\s[KkSVvZz]|\bse  ??s)e  ??(?!II|VI|X[IV]|[Mm]ě)([AaÁáEeÉéIiÍíOoÓóUuÚú]\w{2,}|[^AaÁáEeÉéIiÍíOoÓóUuÚú\W][aáeéěiíoóuúůyý]\w{2,}|SSSR|StB|11|[15][589]|88?)\b" replace="$1 $2"/><!-- "se" se může změnit na "s", pokud před ním následuje jiné "se" (jako zvratné zájmeno); "-e" se odstraní pouze při 100% jistotě -->
-<Typo word="Ke" find="(?<=\s)([Kk])(?:&nbsp;|  ??)(?!X{1,3}V?I{,4})([GgKkQqXx]\w{2,})\b" replace="$1e $2"/>
+<Typo word="devokalizace" find="(?![Kk]e  ??[CGgKkQqXx]|[Ss]e  ??[ČčSsŠšXxZzŽž]|[Vv]e  ??[FfVvWw]|[Zz]e  ??[ČčSsŠšXxZzŽž])([KkSsVvZz])(?<=\s[KkSVvZz]|\bse  ??s)e  ??(?!II|VI|X[IV]|[Mm]ě)([AaÁáEeÉéIiÍíOoÓóUuÚú]\w{2,}|[^AaÁáEeÉéIiÍíOoÓóUuÚú\W][aáeéěiíoóuúůyý]\w{2,}|SSSR|StB|11|[15][589]|88?)\b" replace="$1 $2"/><!-- "se" se může změnit na "s", pokud před ním následuje jiné "se" (jako zvratné zájmeno); "-e" se odstraní pouze při 100% jistotě -->
+<Typo word="Ke" find="(?<=\s)([Kk])(?:&nbsp;|  ??)([GgKkQq]\w{2,}|[Xx][aeiouy]\w+)\b" replace="$1e $2"/>
 <Typo word="Se" find="(?<=\s)([Ss])(?:&nbsp;|  ??)(?!sebou)([Ss][a-záčďéěíňóřšťúůýž]{2,}|[17][47]|1\d\d)\b" replace="$1e $2"/><!-- jelikož se ve zkratkách často "s" vyslovuje [es], provedeno pouze pro malá písmena -->
 <Typo word="Ve" find="(?<=\s)([Vv])(?<!\d V)(?:&nbsp;|  ??)(?!VI)([FfﬁVvWw]\w{2,}|[Pp]h\w{2,}|1[24]|městě|svém?)\b" replace="$1e $2"/>
 <Typo word="Ze" find="(?<=\s)([Zz])(?:&nbsp;|  ??)([Zz]\w{2,}|čtv?r\w+|s[tv]\w+|železa|1[47]|7[14])\b" replace="$1e $2"/>
@@ -725,6 +787,7 @@
 * před číslicemi se vokalizace mění pouze, pokud je číslice "vadná" v obou varinatách, tedy jak v "osmdesáti osmi", tak v "osmaosmdesáti", ale i "osmaosmdesátém" či "osmdesátém osmém"
 -->
 </source>
+
 === Jiný pravopis ===
 <source lang="xml">
 <Typo word="Ce/Če" find="\b(?!acě\b)(.*?[CcČč])ě(.*?)(?<!\bcě)\b" replace="$1e$2"/>
@@ -768,7 +831,7 @@
 <Typo word="4. pád" find="\b([Pp]ro|[Pp]řese?|[Ss]krze?)  ??(n|[nv]aš|svoj)í\b" replace="$1 $2i"/>
 <Typo word="4. třída" find="([Hh]oř|[Tt]rp|[Tt]voř)[eě]jí(cí(m?|ho|ch|m[iu]))?\b" replace="$1í$2"/>
 <Typo word="6. pád" find="\b(kalhot)ech\b" replace="$1ách"/>
-<Typo word="6. pád" find="\b(les|městys)ech\b" replace="$1ích"/><!-- http://www.ujc.cas.cz/jazykova-poradna/porfaq.html#mestys -->
+<Typo word="6. pád" find="\b((?:pra)?les|městys)ech\b" replace="$1ích"/><!-- http://www.ujc.cas.cz/jazykova-poradna/porfaq.html#mestys -->
 <Typo word="7. pád" find="\b([Hh]ranolk|[Rr]izik|[Rr]ovnátk|[Tt]itulk)am[aiy]\b" replace="$1y"/>
 </source>
 
@@ -779,34 +842,30 @@
 <Typo word="Ke/Se/Ve/Ze" find="(?<=\s)([ksvz])(?<![^A-Za-z]  ??s)  ??\1e\b" replace="$1e"/>
 <Typo word="Po(d)/Při" find="\bP(od?|ři)  ??p\1\b" replace="P$1"/>
 <Typo word="se se" find="(?<=\s)se se se(?=\s)" replace="se se"/>
-<Typo word="Stal se" find="\b(?:se (\w+ )?)?stal([aioy]?) se stal\2?\b" replace="$1se stal$2"/>
+<Typo word="Stal se" find="\b(?:se (\w+ )?)?stal([aioy]?) se stal\2?\b" replace="se $1stal$2"/>
 </source>
 
 === Zkratky v textu ===
 <source lang="xml">
-<Typo word="aj." find="(?<=\s)a\.? ?j…?\.{,4}(?<!aj\.)([\s,;\x29“])" replace="aj.$1"/>
-<Typo word="apod." find="\ba(?:pod|\s?pod[\.…]|pod\.{2,5})(?<!apod\.)([\s,;\x29“])" replace="apod.$1"/>
-<Typo word="atp." find="\ba ?t\.? ?p(?:od)…?\.{,4}(?<!atp(?:od)?\.)([\s,;\x29“])" replace="atp.$1"/>
-<Typo word="Čp." find="\b(?![Čč]p\.(?: |&nbsp;))([Čč])\.?p\b[ \.,:]*(?![ \.,:]|&nbsp;)" replace="$1p. "/>
-<Typo word="lat." find="\blať[ \.,]+(?! |:|&nbsp;)" replace="lat. "/>
-<Typo word="lat." find="\blať\.? *:" replace="lat.:"/>
-<Typo word="mj./tj." find="\b(?![mt]j\.(?: |&nbsp;))([mt])\.?\s?j[ \.,]+(?![ \.,:]|&nbsp;)" replace="$1j. "/>
-<Typo word="mj./tj." find="\b(?![mt]j\.:)([mt])\.?\s?j\.* *:" replace="$1j.:"/>
-<Typo word="m n. m." find="\b(\d+)(&nbsp;| ) ??(?!m n\. m\.)[Mm]\.?\s?n\.?\s?[Mm]\.{,4}" replace="$1$2m n. m."/>
-<Typo word="např." find="\b(?!např\.(?: |&nbsp;))na[\. ]?p[rř][ \.,]+(?![ \.,:]|&nbsp;)" replace="např. "/>
-<Typo word="např." find="\b(?!např\.:)na[\. ]?p[rř][ \.,]*:" replace="např.:"/>
-<Typo word="př. n. l." find="\b(?!př\. n\. l\.[^\.])p[rř]\.* *n\.* *l\.*(?!\.)" replace="př. n. l."/>
-<Typo word="špan." find="\bšpaň[ \.,]+(?![ \.,:]|&nbsp;)" replace="špan. "/>
-<Typo word="špan." find="\bšpaň\.* *:" replace="špan.:"/>
-<Typo word="Tz(n/v)." find="\b(?![Tt]z[nv]\.(?: |&nbsp;))([Tt])\.?k?\.? ?(z[nv])[ \.,]*(?![ \.,:]|&nbsp;)" replace="$1$2. "/>
-<Typo word="Tz(n/v)." find="\b(?![Tt]z[nv]\.:)([Tt])\.?k?\.? ?(z[nv])\.? *:" replace="$1$2.:"/>
+<Typo word="aj." find="(?<=\s)a\.? ?j…?\.*(?<!aj\.)(?=[\s,;\)'\x29“])" replace="aj."/>
+<Typo word="apod." find="\ba(?:\s+(?=pod[^ ]))?pod…?\.*(?<!apod\.)(?=[\s,;\)'\x29“])" replace="apod."/>
+<Typo word="atp." find="\ba ?t\.? ?p(?:od)?…?\.*(?<!atp(?:od)?\.)(?=[\s,;\)'\x29“])" replace="atp."/>
+<Typo word="Čp." find="\b([Čč])\.?p\b[ \.,]*(?<![Čč]p\.)(?=\s|:|&nbsp;)" replace="$1p."/>
+<Typo word="lat." find="\blať\b[ \.,]*(?=\s|:|&nbsp;)" replace="lat."/>
+<Typo word="mj./tj." find="\b([mt])\.?\s?j\b[ \.,]*(?<![mt]j.)(?=[\s,:]|&nbsp;)" replace="$1j."/>
+<Typo word="m n. m." find="\b(\d+)(&nbsp;| )+?(?!m n\. m\.[^\.])[Mm]\.?\s?n\.?\s?[Mm]\.*" replace="$1$2m n. m."/>
+<Typo word="např." find="\bna[\. ]?p[rř]\b[ \.,]*(?<!např.)(?=\s|:|&nbsp;)" replace="např."/>
+<Typo word="př. n. l." find="\b(?!př\. n\. l\.[^\.])p[rř]\.?\s?n\.?\s?l\.*" replace="př. n. l."/>
+<Typo word="špan." find="\bšpaň\b[ \.,]*(?=\s|:|&nbsp;)" replace="špan."/>
+<Typo word="Tz(n/v)." find="\b([Tt])\.?k?\.? ?(z[nv])\b[ \.,]*(?<![Tt]z[nv]\.)(?=[\s,:]|&nbsp;)" replace="$1$2."/>
+<Typo word="mezera za zkratkou" find="\b([Čč]p|lat|[mt]j|např|příp|resp|[Ss]v|špan|tz[nv])\.+\b" replace="$1. "/>
 </source>
 
 === Jednotky a předpony SI ===
 <source lang="xml">
 <Typo word="°C/°F" find="\b(\d{1,5}) *˚([CF])\b" replace="$1&nbsp;°$2"/>
 <Typo word="µ" find="\b(\d{1,5})  ??u([AFTVms]|mol)\b" replace="$1&nbsp;µ$2"/>
-<Typo word="Hertz" find="\b(\d{1,5})  ??([GMTkm]?)hz\b" replace="$1&nbsp;$2Hz"/>
+<Typo word="Hertz" find="\b(\d{1,5})  ??([GMTkmµ]?)hz\b" replace="$1&nbsp;$2Hz"/>
 <Typo word="Kelvin" find="\b(\d{1,5})  ??[˚°]K\b" replace="$1&nbsp;K"/>
 <Typo word="kilo" find="\b(\d{1,5})  ??K([AJNTVWbgmΩ]|bit|Hz|mol|Pa)\b" replace="$1&nbsp;k$2"/>
 <Typo word="km/h" find="\bK[Mm]/h\b" replace="km/h"/>
@@ -815,14 +874,12 @@
 </source>
 === Interpunkce ===
 <source lang="xml">
-<Typo word="Více interpunkčních znamének" find="\b(čp|[mt]j|např|špan|tz[nv])\. +:" replace="$1.:"/>
 <Typo word="," find="\s{,4},\s{,4},\s{1,5}" replace=", "/>
 <Typo word="*/†" find="\(([*†])(\d{4})\)" replace="($1 $2)"/>
-<Typo word="×" find="\b(\d+)x(?=\D)\b" replace="$1×"/>
-<Typo word="×" find="\b(?<!\[|[Ee]pi[sz]od\w{,3}\s)(\d+)x([1-9]\d*)(?!\])\b" replace="$1×$2"/>
-<Typo word="×" find="\b(\d+)\s{1,3}x\s{,3}(\d+)\b" replace="$1&nbsp;×&nbsp;$2"/>
+<Disabled Typo word="×" find="\b(\d+)x(?=\D)\b" replace="$1×"/>
+<Disabled Typo word="×" find="\b(?<!\[|[Ee]pi[sz]od\w{,3}\s)(\d+)x([1-9]\d*)(?!\])\b" replace="$1×$2"/>
+<Disabled Typo word="×" find="\b(\d+)\s{1,3}x\s{,3}(\d+)\b" replace="$1&nbsp;×&nbsp;$2"/>
 <Typo word="desetinná čárka" find="(?<=\s)(\d\d?)\.(\d\d?)\s{,2}(&nbsp;|\s?)\s{,2}([km]?g|[hm]?l|[cdkm]?m|%)" replace="$1,$2$3$4"/>
-<Typo word="Svatý" find="\b([Ss])v\b\.*? *?(?<!\. )(\w+)\b" replace="$1v. $2"/>
 </source>
 
 === Apostrofy a uvozovky ===
@@ -830,12 +887,12 @@
 <Typo word="'" find="\b(?=O´[ABCDEFGHIJKLMNOPQRSTUVWXYZ]|\w´\w+)([DdLlOo])´(\w+)\b" replace="$1'$2"/>
 <Typo word="'" find="\b(\w+)´([ms]|re)\b" replace="$1'$2"/>
 <Typo word="'##" find="(?<=\s)´(\d\d)\b" replace="'$1"/>
-<Typo word="„" find="„ {1,4}(\w+)\b" replace="„$1"/>
+<Typo word="„" find="„ +?(\w+)\b" replace="„$1"/>
 </source>
 === Různé ===
 <source lang="xml">
 <Typo word="ISBN" find="\b(?:ISNB|IBSN|SIBN)\b" replace="ISBN"/>
-<Typo word="ISSN" find="\bISSN  ??(\d{4})[–—](\d{3}[\dX])\b" replace="ISSN $1-$2"/>
+<Typo word="ISSN" find="\bISSN +?(\d{4})[–—](\d{3}[\dX])\b" replace="ISSN $1-$2"/>
 <Typo word="nadpis Externí" find="(?<=[=]\s?)(?:[Ee]xternal|[Ee]xt[eé]rní|[Vv]nější)  ??(?:link[sy]?|stránk[ay]|odkazy?|zdroje?)(?<!Externí odkazy)\b" replace="Externí odkazy"/>
 <Typo word="nadpis Literatura" find="(?<=[=]\s?)[Dd]alší  ??čtení" replace="Literatura"/><!-- Pozor! Může se vyskytnout i v textu -->
 <Typo word="nadpis Související" find="(?<=[=]\s?)([Ss]ouvis(ej)?ící  ??hesla|[Vv]iz  ??(také|též))" replace="Související články"/>
@@ -843,7 +900,7 @@
 <Typo word="roky/větší rozsah" find="(?<=\s|\x28|\|)(?<!IS[BS]N  ??)([12]?\d{3}) ?- ?([12]\d{3}|dosud|současnost)(?!-)\b" replace="$1–$2"/>
 <Typo word="souřadnice" find="\b(\d{1,3})[°˚]\s{,3}(\d\d?|\d\d?[\.,]?\d{,5})['’'´](?<!\1°\2')" replace="$1°$2'"/>
 <Typo word="souřadnice" find="\b(\d{1,3})[°˚]\s{,3}(\d\d?|\d\d?[\.,]?\d{,5})['’'´]\s{,3}(\d\d?|\d\d?[\.,]?\d{,5})(?:\x22|”|''|’’|´´)(?<!\1°\2'\3”)" replace="$1°$2'$3”"/>
-<Typo word="spojovník" find="\b(jedno|dvou|tří|čtyř|pěti|šesti|sedmi|osmi|de[sv]íti)  ??([ai]|až|nebo(?: i)?)  ??(dvou|tří|čtyř|pěti|šesti|sedmi|osmi|de[sv]íti|(?:jede|dva|tři|čtr|pat)nácti|více)(\w{3,15}([áéíý]|ého|[íý](ch|m[iu]?)|ou))\b" replace="$1- $2 $3$4"/>
+<Typo word="spojovník" find="\b(jedno|dvou|tří|čtyř|pěti|šesti|sedmi|osmi|de[sv]íti) +?([ai]|až|či|nebo(?: i)?) +?(dvou|tří|čtyř|pěti|šesti|sedmi|osmi|de[sv]íti|(?:jede|dva|tři|čtr|pat)nácti|více)(\w{3,15}([áéíý]|é(ho|mu?)|[íý](ch|m[iu]?)|ou))\b" replace="$1- $2 $3$4"/>
 <Typo word="stupeň" find="\b(\d+)˚\B" replace="$1°"/>
-<Typo word="&nbsp;" find="&nbps;?" replace="&nbsp;"/>
+<Typo word="&nbsp;" find="&n(?:bps|sbp);?" replace="&nbsp;"/>
 </source>

@@ -1738,8 +1738,8 @@
 <Typo word="urspünglich" find="\b(U|u)rspünglich\b" replace="$1rsprünglich" />
 <Typo word="urspüngliche" find="\b(U|u)rspüngliche\b" replace="$1rsprüngliche" />
 <Typo word="urspünglichen" find="\b(U|u)rspünglichen\b" replace="$1rsprünglichen" />
-<Typo word="ursupator" find="\b(U|u)rsupator\b" replace="$1supator" />
-<Typo word="ursupator" find="\b(U|u)rsupier(t?|en?)\b" replace="$1supier$2" />
+<Typo word="ursupator" find="\b(U|u)rsupator\b" replace="$1surpator" />
+<Typo word="ursupator" find="\b(U|u)rsupier(t?|en?)\b" replace="$1surpier$2" />
 <Typo word="usprünglich" find="\b(U|u)sprünglich\b" replace="$1rsprünglich" />
 <Typo word="usprüngliche" find="\b(U|u)sprüngliche\b" replace="$1rsprüngliche" />
 <Typo word="usprünglichen" find="\b(U|u)sprünglichen\b" replace="$1rsprünglichen" />
@@ -1879,7 +1879,7 @@
 <Typo word="wiedersprüchlichen" find="\b(W|w)iedersprüchlichen\b" replace="$1idersprüchlichen" />
 <Typo word="wiederstand" find="\b(W|w)iederstand\b" replace="$1iderstand" />
 <Typo word="wieviel" find="\b(W|w)ieviel\b" replace="$1ie viel" />
-<Typo word="wilhem" find="\b(W|w)ilhem\b" replace="$1ilhlem" />
+<Typo word="wilhem" find="\b(W|w)ilhem\b" replace="$1ilhelm" />
 <Typo word="willhelm" find="\b(W|w)illhelm\b" replace="$1ilhelm" />
 <Typo word="wissentschaft" find="\b(W|w)issentschaft\b" replace="$1issenschaft" />
 <Typo word="wissentschaftlich" find="\b(W|w)issentschaftlich\b" replace="$1issenschaftlich" />

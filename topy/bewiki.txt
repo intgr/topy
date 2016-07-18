@@ -64,6 +64,7 @@ Please add to/modify/improve these regular expressions!
 <source lang="xml">
 <Typo word="гадох" find="\b(Г|г)адох\b" replace="$1адах" />
 <Typo word="газэта" find="\b(Г|г)азэт(\w+)\b" replace="$1азет$2" />
+<Typo word="газэта" find="\bГеоргі\b" replace="Георгій" />
 <Typo word="глябал" find="\b(Г|г)лябал(\w+)\b" replace="$1лабал$2" />
 <Typo word="году" find="\b(\d+) году\b" replace="$1 года" />
 <Typo word="году" find="\b (У|у|ў|Ў) (\d+) год[ау]\b" replace=" $1 $2 годзе" />
@@ -115,6 +116,7 @@ Please add to/modify/improve these regular expressions!
 <Typo word="льл" find="\b(\w+)льл(\w+)\b" replace="$1лл$2" />
 <Typo word="лягічны" find="\b(\w+)лягічн(\w+)\b" replace="$1лагічн$2" />
 <Typo word="ляўрэат" find="\b(Л|л)яўрэа(\w+)\b" replace="$1аўрэа$2" />
+<Typo word="лягенда" find="\b(Л|л)ягенд(\w+|)\b" replace="$1егенд$2" />
 </source>
 
 == М ==
@@ -170,12 +172,14 @@ Please add to/modify/improve these regular expressions!
 <source lang="xml">
 <Typo word="Раслаўль" find="\b(Р|р)аслаўл(\w+)\b" replace="$1ослаўл$2" />
 <Typo word="рэзэрв" find="\b(Р|р)эзэрв\b" replace="$1эзерв" />
+<Typo word="радыёвугляродны" find="\bадыёвугляр\b" replace="адыевугляр" />
 </source>
 
 == С ==
 
 <source lang="xml">
 <Typo word="Сардынія" find="\b(С|с)ардын(\w+)\b" replace="$1ардзін$2" />
+<Typo word="секрэцыя" find="\b(С|с)екрэцы(\w+)\b" replace="$1акрэцы$2" />
 <Typo word="спартовы" find="\b(С|с)партов(\w+)\b" replace="$1партыўн$2" />
 <Typo word="стагодзьдзе" find="\b(С|с)тагодзьдз(\w+)\b" replace="$1тагоддз$2" />
 <Typo word="сурвэтка" find="\b(С|с)урвет(\w+)\b" replace="$1урвэт$2" />

@@ -98,8 +98,8 @@ Lisää pisteen lyhenteiden eaa. ja jaa. loppuun ja korjaa lyhenteet e.a.a. ja j
 <Typo word="pulloittain" find="(P|p)ullottai" replace="$1ulloittai" />
 <Typo word="tukuittain" find="(T|t)ukutt" replace="$1ukuitt" />
 <Typo word="viikoittain" find="(V|v)iikott" replace="$1iikoitt" />
-<Typo word="vuoroittain" find="(V|v)uorottai" replace="$1uoroittai" />
 </source></font>
+
 === -ottaa- ja -oittaa-verbejä ===
 <font size="-1"><source lang="xml">
 <Typo word="aloittaa" find="(?<!Ma')\b(A|a)lot(?!ec)(\w)" replace="$1loit$2" />
@@ -525,7 +525,6 @@ Usein vahingossa toistettuja pikkusanoja.
 <Typo word="suuri merkitys" find="tärkeä(\w*) merkit" replace="suuri$1 merkit" />
 <Typo word="sydämen" find="(S|s)ydämm" replace="$1ydäm" />
 <Typo word="taiteilija" find="(T|t)(?!aiteilij[ao])aitei*li*j*(?=[ao])" replace="$1aiteilij" />
-<Typo word="taitotieto" find="(T|t)ietotai" replace="$1aitotie" />
 <Typo word="tapahtua" find="(T|t)apht" replace="$1apaht" />
 <Typo word="teettää" find="(T|t)eetät" replace="$1eet" />
 <Typo word="tehdään" find="(T|t)ehdää\b" replace="$1ehdään" />

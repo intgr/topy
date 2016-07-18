@@ -1,4 +1,12 @@
 {{CompactTOC}}
+Estas son [[expresión regular|expresións regulares]] de erros para RegExTypoFix (Regular Expression Typographical error Fixer, ou RETF). O desenvolvemento está aberto ó público desde 2006. Estas expresións son usadas polo [[Wikipedia:AutoWikiBrowser|AutoWikiBrowser]] para facer correccións ortográficas semiautomáticas.
+
+Por favor, engade ou mellora estas expresións regulares!
+
+==Descrición==
+Estas expresións regulares atopan e amañan erros tipográficos e gramaticais comúns. A principal vantaxe de RegExTypoFix respecto outros motores de corrección ortográfica é a súa exactitude e a devolución de só unha substitución posible. Debido á gran variabilidade de texto, RegExTypoFix non é exacto abondo para executarse sen unha persoa revisando cada corrección proposta. 
+
+A sintaxe das expresión está descrita [http://msdn.microsoft.com/en-us/library/az24scfc(VS.71).aspx en profundidade no sitio web do MSDN], pero para os propósitos desta páxina o resumo de [http://www.wellho.net/regex/dotnet.html Well House] é máis sinxelo de usar.
 
 == Traballo pendente ==
 *-mente -> Os adverbios en ''-mente'' non levan til.
@@ -8,11 +16,79 @@
 *Os verbos rematados en ''-uír'' sempre levan til no seu infinitivo: ex. '''construír'''.
 *ter + participio: en galego, esta perífrase só é correcta cando se refire a un feito reiterativo, repetido: ''teño feitas mil correccións na Galipedia'', non con valor perfectivo equivalente ó castelán ''haber + participio'' (*''Téñense censado 2.141 exiliados galegos'').
 
+==Uso==
+Todos os que usen RegExTypoFix deben facelo de forma responsable. ''Revisa cada edición antes de gardala. Se tes unha dúbida, SALTA A MODIFICACIÓN'''. Esta lista de erros é usada polo editor no navegador e por varias ferramentas de Wikipedia.
+
+===AutoWikiBrowser (AWB)===
+[[WP:AWB|AWB]] evita intencionadamente amañar erros en certas área do código wiki. Os amaños de erros evítanse dentro de: nomes de imaxe, nomes de modelo, e parámetros, ligazóns a artigos wiki, texto en citas e cursivas, e calquera texto que segue a dous puntos ou asterisco. Se unha regra dun erro coincide cunha ligazón interna, esa regra ignórase no resto da páxina.
+
+Cando se usa AWB, podes refrescar a lista de erros seleccionando "Ficheiro → Refrescar estado/erros" (CTRL-R). Isto é útil cando estás modificando a lista de erros na Wikipedia mentres usas AWB para probar/procesar a modificación (pero as probas básicas deben facerse primeiro fóra de liña-por exemplo usando o Probador de Expresións Regulares de AWB ou "Buscar e substituír").
+
+===AutoWikiBrowser Script===
+{{small|''AWB script xa non funciona''}}
+O [[Usuario:Elisardojm/AWB Script|AutoWikiBrowser Script]] usa as mesmas regras para ignorar os erros que a versión descargable de AWB. As regras de erros non se aplican a nomes de imaxe, nomes de modelo e parámetros, citas, e calquera texto que segue a dous puntos ou asterisco, así como saltar calquera regra que coincida cunha ligazón interna nesa páxina. Xa que JavaScript non permite ''lookbehinds'', calquera substitución que conteña ''lookbehinds'' (<code>?<=</code> e <code>?<!</code>) será ignorada.
+
+Para refrescar a lista de erros, simplemente preme a icona [[File:Gnome-view-refresh.svg|20px]] que está ó lado da caixa para activar ''Arranxos de Erros de RegEx''.
+
+===WPCleaner===
+[[Wikipedia:WPCleaner/Spelling and typography|WPCleaner]] tamén evita de forma intencionada amañar erros en certas áreas do texto wiki. As regras que comezan con <code>\{\{</code> só se aplican no comezo dos modelos, as reglas comezando con <code>\[\[</code> só se aplican no comezo de ligazóns internas. Para outras regras, a corrección de erros evítase dentro de:
+
+* comentarios,
+* ligazóns internas, excepto no texto de descrición cando a liazón está na forma <code><nowiki>[[ligazón|descrición]]</nowiki></code>,
+* imaxes, excepto nas descricións de texto ou a descrición de texto alternativa, 
+* modelos,
+* categorías,
+* ligazóns interwiki, excepto polo texto de descrición cando a ligazón está na forma <code><nowiki>[[xx:ligazón|descrición]]</nowiki></code>,
+* ligazóns de lingua,
+* ligazóns externas, excepto polo texto de descrición cando a ligazón está na forma  <code><nowiki>[http://xxxx/ descrición]</nowiki></code>,
+* ordenación por defecto,
+* etiquetas,
+* entre etiquetas {{tag|gallery}}, {{tag|math}}, {{tag|code}} ou {{tag|timeline}},
+* se o texto está rodeado por puntos, eles mesmos rodeados por letras ou díxitos.
+Cando se usa WPCleaner, podes refrescar a lista de erros premendo no botón [[File:Gnome-view-refresh.svg|22px]] na [[Wikipedia:WPCleaner/Main window|pantalla principal]].
+
+===wikEd===
+No trebello da Wikipedia [[User:Cacycle/wikEd|wikEd]], as regras aplícanse en todos lados.
+
+==Engadir/cambiar erro==
+A sintaxe para cada regra é a seguinte (de acordo ó código fonte de [http://autowikibrowser.svn.sourceforge.net/viewvc/autowikibrowser/AWB/WikiFunctions/Parse/RegExTypoFix.cs?view=markup#l20 AWB] e [[:en:User:Cacycle/wikEd.js|WikEd]]):
+
+<syntaxhighlight lang="xml" enclose="pre">
+<Typo word="Nome opcional para esta regra" find="Código de expresión regular para detectar o erro" replace="Substitución para o erro"/>
+</syntaxhighlight>
+O parámetro "word" é opcional e calquera espazo adicional entre os parámetros é ignorado.
+
+===Antes de editar esta páxina===
+*Ten en conta que todas as regras diferencian entre maiúsculas e minúsculas. Isto afecta a como se escriben e proban.
+*Proba os teus cambios previamente usando a [[Axuda:Procurar|busca normal de Wikipedia]] ou unha Busca de Google con AWB coa configuración "Atopar e substituír". Isto pode revelar se a túa regra dana texto correcto nalgún caso, ou se fai cambios incorrectos nalgún caso. Nestes casos non engadas a regra aquí, úsaa coa túa configuración persoal ou coméntaa na páxina de conversa. 
+*Se non sabes como facer un cambio, coméntao '''[[Wikipedia talk:AutoWikiBrowser/Typos|aquí]]''', onde outros usuarios poderán axudarche.
+*Ten en conta que cada adición/posibilidade dunha palabra usa máis CPU e enlentece o escaneo.
+*Tamén tes que saber que só se amañan as palabras fóra das marcas wiki, polo tanto, unha regra para amañar, por exemplo, un modelo wiki, non funcionará en AWB.
+
+===Escribindo regras de corrección===
+*Intenta ter unha regra simple para cada palabra raíz, prefixo e sufixo.
+*Evita engadir regras que detecten erros fóra do seu ámbito, por exemplo, unha regra que amaña ''housa'' a ''house'' non debe detectar ''thousand''. Engade límites ás palabras (<code>\b</code>) ó comezo e final da súa expresión regular a menos que esteas amañando erros en partes de palabras ou palabras múltiples. 
+*Non esperes que as regras se apliquen na orde na que aparecen.
+*Escribe regras rápidas:
+**Os comezos son custosos, polo que se específico na correspondencia dos primeiros caracteres para eliminar posibilidades rápidamente.
+**Se é posible non uses os cuantificadores <code>*</code> e <code>+</code> máis que cun carácter. Evítao totalmente se é posible, xa que provocan un esforzo extra na CPU e poden facer substitucións que non se esperan.
+*Cada regra debe ser completamente independente.
+*Actualiza o nome da regra se cambias algo que lle afecta.
+
+===Probando regras de corrección de erros===
+*Co probador de Expresións Regulares de AWB, o "Atopar e substituír" de AWB, ou algo semellante antes de engadila aquí. Se usas o "Atopar e substituír" de AWB asegúra de que tes marcado "Diferenciar maiúsculas e minúsculas" para cada regra probada.
+
+===Por facer===
+*Identifica e mellora regras para evitar falsos positivos
+*Elimina duplicados
+*Expande regras para aceptar máis sufixos e prefixos
+*Elimina palabras raras. Pero ten en conta que aínda que unha regra non atope erros hoxe, é posible que outro usuario usara esa regra onte para amañar moitos artigos.
+*Mantén as listas ordenadas alfabeticamente pola palabra raíz.
+*Ignora palabras rodeadas por "." como en www.academia.gal engadindo o seguinte ó final dunha regra: <code>(?![^\s\.]*\.\w)(?<!\.[^\s\.]{0,999})</code>
+
 ==Lista de erros==
 ===A===
 <source lang="xml">
-<Typo word="1) soleta" find="\bPlantilla\b" replace="1) soleta" /> <!-- (do calzado) '''2) modelo''', patrón '''3) cadro de persoal''' -->
-<Typo word="1) soleta" find="\bplantilla\b" replace="1) soleta" /> <!-- (do calzado) '''2) modelo''', patrón '''3) cadro de persoal''' -->
 <Typo word="a grandes trazos" find="\b([Aa]) grandes rasgos\b" replace="$1 grandes trazos" />
 <Typo word="á parte" find="\bAparte\b" replace="Á parte" />
 <Typo word="á parte" find="\baparte\b" replace="á parte" />
@@ -62,9 +138,10 @@
 <Typo word="afago" find="\bHalago\b" replace="Afago" />
 <Typo word="afago" find="\bhalago\b" replace="afago" />
 <Typo word="afastar" find="\b([Aa])lonxar\b" replace="$1fastar" />
+<Typo word="afeccionado" find="\b([Aa])mateur\b" replace="$1feccionado" />
+<Typo word="afeccionados" find="\b([Aa])mateurs\b" replace="$1feccionados" />
 <Typo word="aí" find="\b([Aa])hí\b" replace="$1í" />
 <Typo word="aínda que" find="\b([Aa])inda que\b" replace="$1índa que" />
-<Typo word="aínda que" find="\b([Aa])nque\b" replace="$1índa que" />
 <Typo word="aínda que" find="\b([Aa])nque\b" replace="$1índa que" />
 <Typo word="aínda" find="\bTodavía\b" replace="Aínda" />
 <Typo word="aínda" find="\btodavía\b" replace="aínda" />
@@ -161,8 +238,6 @@
 <Typo word="beirarrúa" find="\bacera\b" replace="beirarrúa" />
 <Typo word="beliscar" find="\bAbellizcar\b" replace="Beliscar" />
 <Typo word="beliscar" find="\babellizcar\b" replace="beliscar" />
-<Typo word="belota" find="\bAbellota\b" replace="Belota" />
-<Typo word="belota" find="\babellota\b" replace="belota" />
 <Typo word="bérber" find="\b([Bb])ereber\b" replace="$1érber" />
 <Typo word="berce" find="\bCuna\b" replace="Berce" />
 <Typo word="berce" find="\bcuna\b" replace="berce" />
@@ -310,11 +385,11 @@
 <Typo word="descubrir" find="\bAveriguar\b" replace="Descubrir" />
 <Typo word="descubrir" find="\baveriguar\b" replace="descubrir" />
 <Typo word="desculpa" find="\b([Dd])isculpa\b" replace="$1esculpa" />
-<Typo word="desparafusador" find="\bHachuela\b" replace="Desparafusador" />
-<Typo word="desparafusador" find="\bhachuela\b" replace="desparafusador" />
+<Typo word="desaparafusador" find="\bHachuela\b" replace="Desaparafusador" />
+<Typo word="desaparafusador" find="\bhachuela\b" replace="desaparafusador" />
 <Typo word="despedimento" find="\b([Dd])espido\b" replace="$1espedimento" />
 <Typo word="destino" find="\b([Dd])estiño\b" replace="$1estino" />
-<Typo word="detalle, reparto, especificación" find="\b([Dd])esglose\b" replace="$1etalle, reparto, especificación" />
+<Typo word="detalle, especificación" find="\b([Dd])esglose\b" replace="$1etalle, especificación" />
 <Typo word="deterioramento" find="\b([Dd])eterioro\b" replace="$1eterioramento" />
 <Typo word="devasa" find="\bCortafogos\b" replace="Devasa" />
 <Typo word="devasa" find="\bcortafogos\b" replace="devasa" />
@@ -352,6 +427,8 @@
 <Typo word="engalar" find="\bDespegar (un avión)\b" replace="Engalar" />
 <Typo word="engalar" find="\bdespegar (un avión)\b" replace="engalar" />
 <Typo word="entaboamento" find="\b([Ee])ntablamento\b" replace="$1ntaboamento" />
+<Typo word="entrenamento" find="\b([Ee])ntrena(r|dor|dora)\b" replace="$1destra$2" />
+<Typo word="entrenamento" find="\b([Ee])ntrenamiento(s)\b" replace="$1destramento$2" />
 <Typo word="envellecer" find="\b([Ee])nvexecer\b" replace="$1nvellecer" /> <!-- '''Avellentar''' ou '''avellar''' -->
 <Typo word="envorcallar" find="\bAborcallar\b" replace="Envorcallar" />
 <Typo word="envorcallar" find="\baborcallar\b" replace="envorcallar" />
@@ -457,8 +534,6 @@
 <Typo word="habelencia" find="\babelencia\b" replace="habelencia" />
 <Typo word="hahaha" find="\bJajaja (risada)\b" replace="Hahaha" />
 <Typo word="hahaha" find="\bjajaja (risada)\b" replace="hahaha" />
-<Typo word="hai [tempo]" find="\bFai [tempo]\b" replace="Hai [tempo]" />
-<Typo word="hai [tempo]" find="\bfai [tempo]\b" replace="hai [tempo]" />
 <Typo word="hámster" find="\b([Hh])ánster\b" replace="$1ámster" />
 <Typo word="haraquiri" find="\b([Hh])arakiri\b" replace="$1araquiri" />
 <Typo word="harén" find="\b([Hh])arem\b" replace="$1arén" />
@@ -468,7 +543,7 @@
 <Typo word="haxemita" find="\b([Hh])achemí\b" replace="$1axemita" />
 <Typo word="haxemita" find="\b([Hh])achemita\b" replace="$1axemita" />
 <Typo word="haxix" find="\b([Hh])achís\b" replace="$1axix" />
-<Typo word="héptathlon" find="\b([Hh])eptathlón\b" replace="$1éptathlon" />
+<Typo word="héptatlon" find="\b([Hh])eptathlón\b" replace="$1éptatlon" />
 <Typo word="herdade" find="\bfinca\b" replace="herdade" />
 <Typo word="herdade" find="\bFinca\b" replace="Herdade" /> <!-- '''propiedade rústica''', '''terreo''', '''leira''' -->
 <Typo word="heroe" find="\b([Hh])éroe\b" replace="$1eroe" />
@@ -489,8 +564,6 @@
 <Typo word="instrución" find="\b([Ii])nstrucción\b" replace="$1nstrución" />
 <Typo word="inverter" find="\b([Ii])nvertir\b" replace="$1nverter" /> <!-- (dar a volta a unha cousa) -->
 <Typo word="investir" find="\b([Ii])nverter\b" replace="$1nvestir" /> <!-- (facer un investimento) -->
-<Typo word="ir" find="\bfacer\b" replace="ir" />
-<Typo word="ir" find="\bFacer\b" replace="Ir" /> <!-- [tempo meteorolóxico] (*Fai sol -> Vai sol) -->
 <Typo word="irmandar" find="\b([Ii])rmanar\b" replace="$1rmandar" />
 <Typo word="iso" find="\belo\b" replace="iso" />
 <Typo word="iso" find="\bElo\b" replace="Iso" /> <!-- (é un pronome neutro do galego medieval que só se conserva na expresión '''estar a elo''', '''''pero ollo:''' tamén existe o substantivo ''elo'' co significado de cada un dos [[aro]]s que forman unha cadea'') -->
@@ -510,8 +583,10 @@
 <Typo word="ladrillo" find="\bTixolo\b" replace="Ladrillo" />
 <Typo word="ladrillo" find="\btixolo\b" replace="ladrillo" />
 <Typo word="lagarta" find="\b([Ll])agartixa\b" replace="$1agarta" />
-<Typo word="landra, belota" find="\bBellota\b" replace="Landra, belota" />
-<Typo word="landra, belota" find="\bbellota\b" replace="landra, belota" />
+<Typo word="landra" find="\bBellota\b" replace="Landra" />
+<Typo word="landra" find="\bbellota\b" replace="landra" />
+<Typo word="landra" find="\bAbellota\b" replace="Landra" />
+<Typo word="landra" find="\babellota\b" replace="landra" />
 <Typo word="laranxa" find="\bNaranxa\b" replace="Laranxa" />
 <Typo word="laranxa" find="\bnaranxa\b" replace="laranxa" />
 <Typo word="laranxeira" find="\bNaranxal\b" replace="Laranxeira" />
@@ -528,8 +603,6 @@
 <Typo word="ler" find="\b([Ll])eer\b" replace="$1er" />
 <Typo word="lesma" find="\bBabosa\b" replace="Lesma" /> <!-- '''limacha, limaco''' -->
 <Typo word="lesma" find="\bbabosa\b" replace="lesma" /> <!-- '''limacha, limaco''' -->
-<Typo word="leste" find="\beste\b" replace="leste" />
-<Typo word="leste" find="\bEste\b" replace="Leste" /> <!-- (punto cardinal) -->
 <Typo word="liberdade" find="\b([Ll])ibertade -\b" replace="$1iberdade" />
 <Typo word="líder" find="\bCabecilla\b" replace="Líder" />
 <Typo word="líder" find="\bcabecilla\b" replace="líder" />
@@ -571,7 +644,7 @@
 <Typo word="media" find="\bpromedio\b" replace="media" />
 <Typo word="medula" find="\b([Mm])édula\b" replace="$1edula" />
 <Typo word="meiriñado" find="\b([Mm])erindad\b" replace="$1eiriñado" />
-<Typo word="mentres, namentres, entrementres" find="\b([Mm])entras\b" replace="$1entres, namentres, entrementres" />
+<Typo word="mentres" find="\b([Mm])entras\b" replace="$1entres" />
 <Typo word="mergullador" find="\bBuzo\b" replace="Mergullador" /> <!-- (a non ser o sinónimo de [[bozo]]) -->
 <Typo word="mergullador" find="\bbuzo\b" replace="mergullador" /> <!-- (a non ser o sinónimo de [[bozo]]) -->
 <Typo word="mesa de braseiro" find="\b([Mm])esa camilla\b" replace="$1esa de braseiro" />
@@ -584,12 +657,10 @@
 <Typo word="modos" find="\b([Mm])odais\b" replace="$1odos" />
 <Typo word="monólito" find="\b([Mm])onolito\b" replace="$1onólito" />
 <Typo word="Moscova" find="\bMoscú\b" replace="Moscova" />
-<Typo word="Moscova" find="\bMoscú\b" replace="Moscova" />
 </source>
 
 ===N===
 <source lang="xml">
-<Typo word="Nadal" find="\bNavidade\b" replace="Nadal" />
 <Typo word="Nadal" find="\bNavidade\b" replace="Nadal" />
 <Typo word="nadar ao somorgullo" find="\bBucear\b" replace="Nadar ao somorgullo" />
 <Typo word="nadar ao somorgullo" find="\bbucear\b" replace="nadar ao somorgullo" />
@@ -730,7 +801,6 @@
 <Typo word="rir" find="\b([Rr])eír\b" replace="$1ir" />
 <Typo word="romanés(a)" find="\b([Rr])umano\b" replace="$1omanés(a)" />
 <Typo word="Romanía" find="\bRumanía\b" replace="Romanía" />
-<Typo word="Romanía" find="\bRumanía\b" replace="Romanía" />
 <Typo word="romano" find="\b([Rr])omán\b" replace="$1omano" /> <!-- -a -->
 <Typo word="rúa" find="\bCalle\b" replace="Rúa" />
 <Typo word="rúa" find="\bcalle\b" replace="rúa" />
@@ -816,7 +886,6 @@
 <Typo word="trevo" find="\b([Tt])rébol\b" replace="$1revo" />
 <Typo word="tríatlon" find="\b([Tt])riatlón\b" replace="$1ríatlon" />
 <Typo word="tribo" find="\b([Tt])ribu\b" replace="$1ribo" />
-<Typo word="Trindade" find="\bTrinidade\b" replace="Trindade" />
 <Typo word="Trindade" find="\bTrinidade\b" replace="Trindade" />
 <Typo word="triplo/a" find="\b([Tt])riple\b" replace="$1riplo/a" />
 <Typo word="triunfo" find="\b([Tt])riúnfo\b" replace="$1riunfo" />
@@ -911,3 +980,5 @@
 
 
 [[#Lista de erros|Volver ao comezo]]
+
+[[Categoría:Wikipedia:AutoWikiBrowser]]

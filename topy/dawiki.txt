@@ -22,7 +22,7 @@ Her kan man enten modificere reglen til at undgå disse særtilfælde, eller man
 :''Tilføj nye regler kun i denne sektion, af hensyn til overblikket.''
 
 <source lang="xml">
-<Typo word="Adskillige" find="\b(A|a)dskellige\b" replace="$ldskillige" />
+<Typo word="Adskillige" find="\b(A|a)dskellige\b" replace="$1dskillige" />
 <Typo word="Reglen" find="\b(R|r)egelen\b" replace="$1eglen" />
 <Typo word="Forholdt" find="\b(F|f)orholdte\b" replace="$1orholdt" />
 <Typo word="Pizzeria" find="\b(P|p)izzaria\b" replace="$1izzeria" />
@@ -38,7 +38,6 @@ Her kan man enten modificere reglen til at undgå disse særtilfælde, eller man
 <Typo word="Afbuddene" find="\b(A|a)fbudene\b" replace="$1fbuddene" />
 <Typo word="Afbuddet" find="\b(A|a)fbudet\b" replace="$1fbuddet" />
 <Typo word="Alle sammen" find="\b(A|a)llesammen" replace="$1lle sammen" />
-<Typo word="Antagelig" find="\b(A|a)ntageligvis\b" replace="$1ntagelig" />
 <Typo word="Apparat" find="\b(A|a)pperat(et|er|erne)?(s)?\b" replace="$1pparat$2$3" />
 <Typo word="Artikel" find="\b(A|a)rtikel(en|er|erne)(s)?\b" replace="$1rtikl$2$3" />
 <Typo word="At vide" find="\b(A|a)fvide\b" replace="$1t vide" />

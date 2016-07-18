@@ -1,4 +1,7 @@
-<div style="float:right;width:250px;background-color:#f9f9f9;border:2px solid #a7d7f9;text-align:center;line-height: 2em;">टाइपो की संख्या<br><big>'''122'''</big></div>
+{{AWB}}
+
+
+<div style="float:right;width:250px;background-color:#f9f9f9;border:2px solid #a7d7f9;text-align:center;line-height: 2em;">टाइपो की संख्या<br><big>'''120'''</big></div>
 
 == रेफ ==
 <source lang="xml">
@@ -22,9 +25,6 @@
 ===ग़लत प्रयोग===
 <source lang="xml">
 <Typo word="हालाँकि" find="हालाकि" replace="हालाँकि"/>
-<Typo word="" find="" replace=""/>
-<Typo word="" find="" replace=""/>
-<Typo word="" find="" replace=""/>
 </source>
 
 === न ===
@@ -83,7 +83,7 @@
 
 ===गलत नुक़्ता===
 <source lang="xml">
-<Typo word="फिर" find="\b(फ़ि|फ़ी|फ़ी)र\b" replace="फिर"/>
+<Typo word="फिर" find="\b(फ़ि|फ़ी)र\b" replace="फिर"/>
 <Typo word="सफल" find="\bसफ़ल\b" replace="सफल"/>
 <Typo word="अगर" find="\bअग़र\b" replace="अगर"/>
 <Typo word="जनाब" find="\bज़नाब\b" replace="जनाब"/>
@@ -136,17 +136,22 @@
 <Typo word="अध्यन" find="\bअध्यन\b" replace="अध्ययन"/>
 <Typo word="पूज्यनीय" find="\bपूज्यनीय\b" replace="पूजनीय"/>
 <Typo word="अतिश्योक्ति" find="\bअतिश्योक्ति\b" replace="अतिशयोक्ति"/>
+<Typo word="अधारित" find="\bअधारित\b" replace="आधारित"/>
+<Typo word="ताकी" find="\bताकी\b" replace="ताकि"/>
+<Typo word="वर्षो" find="\bवर्षो\b" replace="वर्षों"/>
 </source>
 
 ==चिन्ह==
 <source lang="xml">
+<Typo word="॥" find="\s।।|।।" replace="॥"/>
 <Typo word="।" find="&nbsp;।|\s।" replace="।"/>
 <Typo word="॥" find="&nbsp;॥|\s॥" replace="॥"/>
+<Typo word="॥" find="\s।।" replace="॥"/>
 <Typo word="॥" find="(। ।|।।)" replace="॥"/>
 <Typo word=" ," find=" +,\s?" replace=", "/><!--change space before comma to space after comma, for eventual move to punctuation section-->
 <Typo word=",," find="\s?,\s?\s?,\s?" replace=", "/><!--fixes double commas-->
-<Typo word=")" find=" )" replace=")"/>
-<Typo word="(" find="( " replace="("/>
+<Typo word=")" find="\s*(\))" replace=")"/>
+<Typo word="(" find="\(\s*" replace="("/>
 <Typo word="/" find=" /" replace="/"/>
 <Typo word="/" find="/ " replace="/"/>
 <Typo word="—" find="--" replace="—" disabled="----"/>
@@ -158,12 +163,9 @@
 
 ==विकी परियोजना==
 <source lang="xml">
-<Typo word="विकिपीडिया" find="(वि|वी)(कि|की)(/s|-|)(पि|पी)(डि|डी़|ड़ि)(या|य)" replace="विकिपीडिया"/>
-<Typo word="विकिपुस्तक" find="(वि|वी)(कि|की)(/s|-|)(पुस्तक|किताब)" replace="विकिपुस्तक"/>
-<Typo word="विकिसूक्ति" find="(वि|वी)(कि|की)(/s|-|)(सु|सू)क्ति" replace="विकिसूक्ति"/>
-<Typo word="विकिस्रोत" find="(वि|वी)(कि|की)(/s|-|)स्रोत" replace="विकिस्रोत"/>
-<Typo word="विकिडेटा" find="(वि|वी)(कि|की)(/s|-|)डेटा" replace="विकिडेटा"/>
-<Typo word="विक्षनरी" find="(वि|वी)क्षन(रि|री)" replace="विक्षनरी"/>
+<Typo word="विकि" find="विकी" replace="विकि"/>
+<Typo word="सूक्ति" find="सुक्ति" replace="सूक्ति"/>
+<Typo word="विक्षनरी" find="विक्षन(रि|री)" replace="विक्षनरी"/>
 </source>
 
 ==लाघव चिन्ह==

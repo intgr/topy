@@ -1,1 +1,48 @@
-{{Վիքիպեդիա:AutoWikiBrowser/Typos}}
+==Նոր ավելացված վրիպակներ==
+
+===Ա-Զ===
+<big><source lang="xml">
+<Typo word="Այլք" find="\b([Աա])յլոք\b" replace="$1յլք"/>
+<Typo word="Գարնան" find="\b([Գգ])առնա(ն|նը)\b" replace="$1արնա$2"/>
+<Typo word="Գործունեություն" find="\b[Գգ]ործունէությ(ա|ու)ն\b" replace="$1ործունեությ$2ն"/>
+<Typo word="Են" find="\bմ էն\b" replace="մ են"/>
+<Typo word="Եվրամիություն" find="\b([Եե])վրոմիությ(ու|ա)ն\b" replace="Եվրամիությ$2ն"/>
+</source></big>
+
+===Է-Կ===
+<big><source lang="xml">
+<Typo word="Ինչպես" find="\b([Իի])րչպես\b" replace="$1նչպես"/>
+<Typo word="Ինչպես և" find="\b([Իի])նչպեսև\b" replace="$1նչպես և"/>
+<Typo word="Իսրայել" find="\bԻսրաե(լ|ի)\b" replace="Իսրայե$1"/>
+<Typo word="Կային" find="\b([Կկ])աին\b" replace="$1ային"/>
+</source></big>
+
+===Հ-Ո===
+<big><source lang="xml">
+<Typo word="Հայաստան" find="\bՀայստա(ն|նի)\b" replace="Հայաստա$1"/>
+<Typo word="Հունարեն" find="\b([Հհ])ուներեն\b" replace="$1ունարեն"/>
+<Typo word="Մասամբ" find="\b([Մմ])ասսամբ\b" replace="$1ասամբ"/>
+<Typo word="Որևէ" find="\b([Ոո])րևե\b" replace="$1րևէ"/>
+<Typo word="Որևիցէ" find="\b([Ոո])րևիցէ\b" replace="$1րևիցե"/>
+<Typo word="Որպեսզի" find="\b([Ոո])րպեզսի\b" replace="$1րպեսզի"/>
+
+</source></big>
+
+===Չ-Ֆ===
+<big><source lang="xml">
+
+<Typo word="Սկսում" find="\b([Սս])քսում\b" replace="$1կսում"/>
+<Typo word="Ստեղծման" find="\b([Սս])տղծման\b" replace="$1տեղծման"/>
+<Typo word="Տնտեսական" find="\b([Տտ])նտեսակն\b" replace="$1նտեսական"/>
+<Typo word="Տուն-թանգարան" find="\b([Տտ])ուն թանգարա(ն|նը)\b" replace="$1ուն-թանգարա$2"/>
+<Typo word="Ութսուն" find="\b([Ոո])ւթանասուն\b" replace="$1ւթսուն"/>
+<Typo word="Քառ կիլոմետր" find="\b[Քք]առ կմ\b" replace="կմ²"/>
+<Typo word="Քառակուսի կիլոմետր" find="\b[Քք]առակուսի կմ\b" replace="կմ²"/>
+
+<Typo word="Ուղղված" find="\b([Ոո])ւղված\b" replace="$1ւղղված"/>
+<Typo word="Ուղղել" find="\b([Ոո])ւղել\b" replace="$1ւղղել"/>
+</source></big>
+
+== Տես նաև ==
+* [[Մասնակից:VacioBot/Տառասխալներ]]
+* [[Մասնակից:ERJANIKbot/Տառասխալներ]]
