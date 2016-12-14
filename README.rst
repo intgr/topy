@@ -42,6 +42,10 @@ Resources
 Changelog
 ---------
 
+Unreleased
+
+* Officially add Python 3.6 support
+
 0.2.1 (2016-07-15)
 
 * Update bundled ruleset
