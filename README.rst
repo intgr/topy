@@ -30,6 +30,12 @@ Usage::
       -r FILE, --rules=FILE
                             specify custom ruleset file to use
 
+For example, if you want to integrate topy in your CI test, you may want to do something like
+
+    bash -c "git ls-files | xargs topy --quiet --apply; git --no-pager diff --exit-code"
+
+The line above will check all files tracked by git, apply fixes to them and fail if any changes are applied.
+If no changes are to be applied, the command return success.
 
 Resources
 ---------
