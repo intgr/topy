@@ -13,7 +13,7 @@ downloaded.
 
 .. _RegExTypoFix: https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
 
-Topy works with either Python 2 or 3.
+Topy works with Python 2.7 and 3.5-3.7.
 
 The easiest way to install it is using pip::
 
@@ -41,6 +41,10 @@ Resources
 
 Changelog
 ---------
+
+UNRELEASED
+
+* Added Python 3.7 support, deprecated Python 3.3 and 3.4.
 
 0.2.2 (2016-12-16)
 
@@ -87,9 +91,9 @@ License
 
 The Topy software is licensed under the MIT license (see LICENSE.txt)
 
-The bundled ``retf.txt`` file, copied from `Wikipedia:AutoWikiBrowser/Typos`_ by Wikipedia contributors is licensed
+The bundled ``retf.txt`` file, copied from `Wikipedia AutoWikiBrowser/Typos`_ by Wikipedia contributors is licensed
 under CC-BY-SA_. See the page on Wikipedia for authorship information.
 
-.. _`Wikipedia:AutoWikiBrowser/Typos`: https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
+.. _`Wikipedia AutoWikiBrowser/Typos`: https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
 .. _CC-BY-SA: https://creativecommons.org/licenses/by-sa/3.0/
 

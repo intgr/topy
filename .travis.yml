@@ -1,14 +1,13 @@
 sudo: false  # Use travis' container based infra
 language: python
+dist: xenial
 # Versions are deliberately out of order to get a diverse sample first
 python:
-    - "2.7"
-    - "3.6-dev"
-    - "3.2"
-    - "3.3"
-    - "3.4"
-    - "3.5"
-    - "pypy-5.4.1"
+  - 3.7
+  - 2.7
+  - 3.5
+  - 3.6
+  - pypy3.5
 cache:
   directories:
     - $PWD/wheelhouse  # cache the dependencies
