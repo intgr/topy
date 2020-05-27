@@ -55,8 +55,14 @@ def load_rules(filename):
     """Load and parse rules from `filename`, returns list of 3-tuples [(name, regexp, replacement), ...]"""
 
     with open(filename) as rulefile:
-        # Use html.parser: lxml is only slightly faster & requires an additional dependency.
-        soup = BeautifulSoup(rulefile, 'html.parser')
+        # try to use lxml(slightly faster) if it's installed, otherwise default
+        # to html.parser
+        try:
+            import lxml
+            parser = 'lxml'
+        except ImportError:
+            parser = 'html.parser'
+        soup = BeautifulSoup(rulefile, parser)
     regs = []
 
     n_disabled = 0
