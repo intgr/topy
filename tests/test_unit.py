@@ -86,5 +86,17 @@ class OutputTest(unittest.TestCase):
         self.assertEqual(type(diff), type(expected))
 
 
+class ParsingTest(unittest.TestCase):
+    def test_parse_replacement(self):
+        cases = [
+            (r'', r''),
+            (r'$1', r'\1'),
+            (r'$1$2', r'\1\2'),
+            (r'US$ $CAD', r'US$ $CAD'),
+        ]
+        for replacement, expect in cases:
+            self.assertEqual(topy.parse_replacement(replacement), expect)
+
+
 if __name__ == '__main__':
     unittest.main()
