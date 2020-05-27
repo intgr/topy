@@ -51,6 +51,14 @@ log = logging.getLogger('topy')
 PY2 = sys.version_info[0] <= 2
 
 
+def parse_replacement(replace):
+    """
+    Parse a replacement pattern as read from the file by changing all back
+    references to \\ instead of $.
+    """
+    return regex.sub(r'\$(\d)', r'\\\1', replace)
+
+
 def load_rules(filename):
     """Load and parse rules from `filename`, returns list of 3-tuples [(name, regexp, replacement), ...]"""
 
@@ -80,8 +88,7 @@ def load_rules(filename):
 
         try:
             r = regex.compile(find)
-            # Use \1 instead of $1 etc
-            replace = replace.replace('$', '\\')
+            replace = parse_replacement(replace)
 
             regs.append((word, r, replace))
             n_loaded += 1
