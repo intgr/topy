@@ -61,6 +61,18 @@ class CommandTest(unittest.TestCase):
         # Non-existent source files are ignored
         topy.main(['--rules', self.testrules, notfound])
 
+    def test_disable_rules(self):
+        """Test disabling rules with --disable."""
+
+        original = topy.disabled.copy()
+        disable = ["foo", "bar"]
+
+        topy.main(
+            ['--disable', disable[0], '--disable', disable[1], self.testrules]
+        )
+
+        self.assertEqual(topy.disabled.difference(original), set(disable))
+
 
 if __name__ == '__main__':
     unittest.main()
