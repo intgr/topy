@@ -29,6 +29,8 @@ Usage::
       -a, --apply           overwrite files in place
       -r FILE, --rules=FILE
                             specify custom ruleset file to use
+      -d RULE, --disable=RULE
+                            disable rules by name
 
 
 Resources

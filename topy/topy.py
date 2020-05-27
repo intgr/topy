@@ -213,6 +213,8 @@ parser.add_option("-a", "--apply",
                   help="overwrite files in place")
 parser.add_option("-r", "--rules", dest='rules', metavar="FILE",
                   help="specify custom ruleset file to use")
+parser.add_option("-d", "--disable", dest='disable', action="append",
+                  metavar="RULE", help="disable rules by name")
 
 
 def main(args=None):
@@ -233,6 +235,9 @@ def main(args=None):
     if opts.rules is None:
         # TODO: Are there any better ways to bundle data files with Python packages?
         opts.rules = os.path.join(os.path.dirname(__file__), RETF_FILENAME)
+
+    if opts.disable is not None:
+        disabled.update(opts.disable)
 
     try:
         regs = load_rules(opts.rules)
