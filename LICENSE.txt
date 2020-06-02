@@ -1,7 +1,7 @@
 All files except retf.txt are licensed as follows
 =================================================
 
-Copyright (c) 2014-2016 Marti Raudsepp <marti@juffo.org> & contributors
+Copyright (c) 2014-2020 Marti Raudsepp <marti@juffo.org> & contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

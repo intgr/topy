@@ -44,8 +44,15 @@ Resources
 Changelog
 ---------
 
-UNRELEASED
+0.3.0 (2020-06-02)
 
+Note: This will be the last release to support Python 2.7.
+
+* Updated bundled ruleset (thanks to Oscar Caballero)
+* Added --disable option to disable individual rules (thanks to Oscar Caballero)
+* Fixed behavior when replacement string contains $ symbol (thanks to Oscar Caballero)
+* Prefer the faster lxml parser when it is installed. lxml is now an optional dependency
+  (thanks to Oscar Caballero)
 * Added Python 3.7 support, deprecated Python 3.3 and 3.4.
 
 0.2.2 (2016-12-16)
