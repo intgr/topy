@@ -8,69 +8,91 @@
 ===New additions===
 {{hatnote|For ease of correcting errors in newly added rules, please add new rules at the top of this section or its appropriate sub-section.}}
 <syntaxhighlight lang="xml">
-<Typo word="lower-case c" find="\bC(athedral|enter|entre|hapel|ity|lub|ollege|ommission|ommittee|ompany|onsulate|onvention|orporation|ouncil|ounty)(?<=\b(?:[Ii]ts|[Tt]h(?:e|is))\s+\w+)(?=(?:[,\;\.\)\:]|['’]s\s|\s+[\(–]|\s+(?:acquired|after|also|and\s+[a-z]+\s+[a-z]+|an?|announced|are|as|before|began|but|by|can|conducts|could|currently|during|established|for|from|ha[ds]|hosts|[io]n\s+[a-z0-9]+|is|launched|made|maintains|now|offers|operates|or|receive[ds]|should|supports|the|to|until|was|were|while|will|with|works|would)\b))(?!\s+for(?:\s(?:an?|the)\b)?\s+[A-Z])" replace="c$1"/>
-<Typo word="the institute" find="\bI(nstitute)(?<=\b[Tt]he\s+\w+)(?=(?:[,\;\.\)]|'s\s|\s+\(|\s+(?:after|also|before|conducts|currently|during|from|has|hosts|[io]n\s+[a-z0-9]+|is|maintains|offers|operates|supports|to|was|will|with|works)\b))" replace="i$1"/>
-<Typo word="In MY" find="\bOn\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(1[6-9]\d{2}|20[0-2]\d)\b" replace="In $1 $2"/>
-<Typo word="in MY" find="\bon\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(1[6-9]\d{2}|20[0-2]\d)\b" replace="in $1 $2"/>
-<Typo word="On DMY" find="\bIn\s+([1-9]|[1-2][0-9]|3[01])\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(1[6-9]\d{2}|20[0-2]\d)\b" replace="On $1 $2 $3"/>
-<Typo word="on DMY" find="\bin\s+([1-9]|[1-2][0-9]|3[01])\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(1[6-9]\d{2}|20[0-2]\d)\b" replace="on $1 $2 $3"/>
-<Typo word="On MDY" find="\bIn\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+([1-9]|[1-2][0-9]|3[01]),\s+(1[6-9]\d{2}|20[0-2]\d)\b" replace="On $1 $2, $3"/>
-<Typo word="on MDY" find="\bin\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+([1-9]|[1-2][0-9]|3[01]),\s+(1[6-9]\d{2}|20[0-2]\d)\b" replace="on $1 $2, $3"/>
-<Typo word="COVID-19" find="\b[Cc](ovid[-\s]?|OVID\s?)19\b" replace="COVID-19"/>
+<Typo word="Heavily" find="\b([hH])eavily-(?=[a-z])" replace="$1eavily "/>
+<Typo word="Politically" find="\b([pP])olitically-(?=[a-z])" replace="$1olitically "/>
+<Typo word="nn-seat" find="\b((?:\d+,)?\d\d+) +seat(?= (?:a(?:rena|uditorium)|black\s+box|concert|lecture|majority|restaurant|st(?:adium|udio)|theat(?:er|re))\b)(?<!\bto\s+\d+\s+\w+)" replace="$1-seat"/>
+<Typo word="Tightly" find="\b([tT])ightly-(?=[a-z])" replace="$1ightly "/>
+<Typo word="Stand-up" find="\b([sS])tand\s+up(?=\s+(?:acts?|com(?:ed(?:ians?|y)|ics?)|guy|s(?:ets?|hows?))\b)" replace="$1tand-up"/>
+<Typo word="Ad hoc" find="\b([aA])d-?hoc\b" replace="$1d hoc"/>
+<Typo word="lower-case h" find="\bH(o(?:tel|spital))(?<=\b(?:[iI]ts|[tT]h(?:e|is))\s+\w+)(?=(?:[,\;\.\)\:]|['’]s\s|\s+[\(–]|\s+(?:a(?:fter|lso|nd\s+[a-z]+\s+[a-z]+|n?|re|[st])|b(?:ecame|u(?:ilding|rned)|y)|c(?:an|losed|omplex)|f(?:or|rom)|grounds|ha[ds]|[io]n\s+[a-z\d]+|i(?:ncluding|s)|manager|o(?:ffers|n|pened)|provides|receive[ds]|site|to|until|w(?:as|ere|he(?:n|re))|w(?:hi(?:ch|le)|i(?:ll|th)))\b))(?!\s+for(?:\s(?:an?\b|the\b))?\s+[A-Z])" replace="h$1"/>
+<Typo word="squared" find="\b([ck]?m|mi)²" replace="$1<sup>2</sup>"/>
+<Typo word="gold medal-winning" find="\b([gG]old|[sS]ilver|[bB]ronze)[-–−—―\s]+([mM]edal)[-–−—―\s]+winning(?<!\w+\s+\w+-\w+)(?=\s)" replace="$1 $2-winning"/>
+<Typo word="gold medal" find="\bGold\s+[mM]edal(s)?\b(?<=\b(?:[a-z]+|Olympic)\s+\w+\s+\w+)(?=(?:[-,;/:/.\)])|\s+(?:a(?:nd|re|t)|by|for|i[ns]|game|with)\b)" replace="gold medal$1"/>
+<Typo word="silver medal" find="\bSilver\s+[mM]edal(s)?\b(?<=\b(?:[a-z]+|Olympic)\s+\w+\s+\w+)(?=(?:[-,;/:/.\)])|\s+(?:a(?:nd|re|t)|by|for|i[ns]|game|with)\b)" replace="silver medal$1"/>
+<Typo word="bronze medal" find="\bBronze\s+[mM]edal(s)?\b(?<=\b(?:[a-z]+|Olympic)\s+\w+\s+\w+)(?=(?:[-,;/:/.\)])|\s+(?:a(?:nd|re|t)|by|for|i[ns]|game|with)\b)" replace="bronze medal$1"/>
+<Typo word="gold medalist" find="\bGold\s+[mM]edalist(s)?\b(?<=\b[a-z]+\s+\w+\s+\w+)" replace="gold medalist$1"/>
+<Typo word="silver medalist" find="\bSilver\s+[mM]edalist(s)?\b(?<=\b[a-z]+\s+\w+\s+\w+)" replace="silver medalist$1"/>
+<Typo word="bronze medalist" find="\bBronze\s+[mM]edalist(s)?\b(?<=\b[a-z]+\s+\w+\s+\w+)" replace="bronze medalist$1"/>
+<Typo word="Jain" find="\bjain(ism|s?)\b" replace="Jain$1"/>
+<Typo word="cellar" find="\bceller(s)?\b" replace="cellar$1"/>
+<Typo word="Boeing" find="\bboeing\b" replace="Boeing"/>
+<Typo word="Qualified" find="\b([dD]isq|[qQ]|[rR]eq|[uU]nq)ual(?:fie|ife)([ds]|rs?)\b" replace="$1ualifie$2"/>
+<Typo word="Possibilities" find="\b([pP])ossibilites\b" replace="$1ossibilities"/>
+<Typo word="Born" find="\b([bB])orned\b" replace="$1orn"/>
+<Typo word="Directly" find="\b([dD])irectly-(?=[a-z]+ed\b)" replace="$1irectly "/>
+<Typo word="lower-case c" find="\bC(athedral|ent(?:er|re)|hapel|ity|lub|o(?:llege|m(?:mi(?:ssion|ttee)|pany))|on(?:sulate|vention)|o(?:rporation|un(?:cil|ty)))(?<=\b(?:[iI]ts|[tT]h(?:e|is))\s+\w+)(?=(?:[,\;\.\)\:]|['’]s\s|\s+[\(–]|\s+(?:a(?:cquired|fter|lso|n?|nnounced|re|s|nd\s+[a-z]+\s+[a-z]+)|b(?:e(?:fore|gan)|ut|y)|c(?:an|o(?:nducts|uld)|urrently)|during|established|f(?:or|rom)|h(?:a[ds]|osts)|is?|launched|ma(?:de|intains)|on\s+[a-z\d]+|now|o(?:ffers|perates|r)|receive[ds]|s(?:hould|upports)|t(?:he|o)|until|w(?:as|ere|hile|ill)|w(?:ith|o(?:rks|uld)))\b))(?!\s+for(?:\s(?:an?\b|the\b))?\s+[A-Z])" replace="c$1"/>
+<Typo word="the institute" find="\bI(nstitute)(?<=\b[tT]he\s+\w+)(?=(?:[,\;\.\)]|'s\s|\s+\(|\s+(?:a(?:fter|lso)|before|c(?:onducts|urrently)|during|from|h(?:as|osts)|is?|maintains|o(?:ffers|perates|n\s+[a-z\d]+)|supports|to|w(?:as|i(?:ll|th)|orks))\b))" replace="i$1"/>
+<Typo word="In MY" find="\bOn\s+(April|February|January|Ma(?:rch|y)|Ju(?:ly|ne)|August|December|September|October|November)\s+(1[6-9]\d\d|20[0-2]\d)\b" replace="In $1 $2"/>
+<Typo word="in MY" find="\bon\s+(April|February|January|Ma(?:rch|y)|Ju(?:ly|ne)|August|December|September|October|November)\s+(1[6-9]\d\d|20[0-2]\d)\b" replace="in $1 $2"/>
+<Typo word="On DMY" find="\bIn\s+([1-9]|[1-2]\d|3[01])\s+(April|February|January|Ma(?:rch|y)|Ju(?:ly|ne)|August|December|September|October|November)\s+(1[6-9]\d\d|20[0-2]\d)\b" replace="On $1 $2 $3"/>
+<Typo word="on DMY" find="\bin\s+([1-9]|[1-2]\d|3[01])\s+(April|February|January|Ma(?:rch|y)|Ju(?:ly|ne)|August|December|September|October|November)\s+(1[6-9]\d\d|20[0-2]\d)\b" replace="on $1 $2 $3"/>
+<Typo word="On MDY" find="\bIn\s+(April|February|January|Ma(?:rch|y)|Ju(?:ly|ne)|August|December|September|October|November)\s+([1-9]|[1-2]\d|3[01]),\s+(1[6-9]\d\d|20[0-2]\d)\b" replace="On $1 $2, $3"/>
+<Typo word="on MDY" find="\bin\s+(April|February|January|Ma(?:rch|y)|Ju(?:ly|ne)|August|December|September|October|November)\s+([1-9]|[1-2]\d|3[01]),\s+(1[6-9]\d\d|20[0-2]\d)\b" replace="on $1 $2, $3"/>
+<Typo word="COVID-19" find="\b[cC](ovid[-–−—―\s]?|OVID\s?)19\b" replace="COVID-19"/>
 <Typo word="TikTok" find="\bTik(?: ?t| T)ok\b" replace="TikTok"/>
-<Typo word="Cutting-edge" find="\b([Cc])utting\s+edge\b(?=\s+(?:art|artists|contemporary|design|developments|electronic|equipment|features|lifestyle|materials|medical|military|music|production|programs|research|science|scientific|techniques|technological|technologies|technology|weapons|work)\b)" replace="$1utting-edge"/>
-<Typo word="full-length" find="\bfull(?<=\b(?:[Aa]|first|second|third|fourth|fifth|only)\s+\w+)\s+length\b" replace="full-length"/>
-<Typo word="Cruiserweight" find="\b([Cc])rusi?erweight(s)?\b" replace="$1ruiserweight$2"/>
+<Typo word="Cutting-edge" find="\b([cC])utting\s+edge\b(?=\s+(?:art(?:ists)?|contemporary|de(?:sign|velopments)|e(?:lectronic|quipment)|features|lifestyle|m(?:aterials|edical|ilitary|usic)|pro(?:duction|grams)|research|scien(?:ce|tific)|techn(?:iques|olog(?:i(?:cal|es)|y))|w(?:eapons|ork))\b)" replace="$1utting-edge"/>
+<Typo word="full-length" find="\bfull(?<=\b(?:[aA]|f(?:i(?:fth|rst)|ourth)|second|third|only)\s+\w+)\s+length\b" replace="full-length"/>
+<Typo word="Cruiserweight" find="\b([cC])rusi?erweight(s)?\b" replace="$1ruiserweight$2"/>
 <Typo word="Véhicule Press" find="\bVehicule\s+Press\b" replace="Véhicule Press"/>
-<Typo word="vice president" find="\bV(ice)\b(?<= (?:acting|appointed|as?|be|bec(?:ame|ome|oming)|been|Democratic|elected|for|former|her|hi[ms]|incumbent|it?s|named|new|Republican|serving|sitting|their|to|U\.?S\.?|was|\w+'s) +\w+)(?<![A-Z][a-z]+\s+for\s+\w+)([-\s]+)[Pp](residen(?:ts?ial|t|cy))(?=(?:[,\.;\)]|\s+[a-z]+))(?!\s+of\s)" replace="v$1$2p$3"/>
-<Typo word="president" find="\bP(residen(?:ts?ial|t|cy))(?<=\s(?:acting|appointed|as|be|bec(?:ame|ome|oming)|been|Democratic|elected|for|former|her|hi[ms]|incumbent|it?s|named|new|Republican|serving|sitting|their|to|U\.?S\.?|was|\w+'s) +\w+)(?<![A-Z][a-z]+\s+for\s+\w+)(?=(?:[,\.;\)]|\s+[a-z]+))(?!\s+of\s)(?!\s+and\s+Vice[-\s]+President\s+of\s)" replace="p$1"/>
-<Typo word="case-by-case" find="\bcase\s+by\s+case(?=\s+(?:basis|analysis)\b)" replace="case-by-case"/>
-<Typo word="Upper-level" find="\b([Uu]pper|[Hh]igher|[Ll]ower|[Mm]iddle|[Tt]op|[Ss]econd)\s+(level|tier)(?=\s+(?:circulation|class(?:es)?|clubs?|competition|conditions?|courses?|directors?|education|environment|floors?|football|houses?|jet|leagues?|lows?|manage(?:ment|rs?)|outflow|platforms?|ridges?|rooms?|schools?|seating|seats?|shear|side|students?|teams?|tours?|troughs?|verandahs?|windows?|winds?)\b)" replace="$1-$2"/>
-<Typo word="Long-distance" find="\b([Ll]ong|[Ss]hort|[Mm]iddle) +distance(?=\s+(?:access|air|applications?|athletes?|attacks?|backpacking|bird|bus|buses|business|businesses|calling|calls?|cards?|carriers?|championship|charges?|circuits?|coach|coaches|collaborations?|commerce|commercial|communications?|commuters?|companies|company|competition|connections?|contacts?|cross|cruising|customers?|cycles?|cycling|cyclist|data|destinations?|dial|dispersal|division|driving|duathlon|effects?|electric|endurance|equipment|events?|exchanges?|express|fiber|fibre|flights?|flying|foot|footpaths?|formations?|freestyle|freight|goals?|haulage|high|highways?|hijackings?|hikers?|hiking|horse|infrastructure|interactions?|intercity|journeys?|learning|lines?|loves?|marathon|markets?|merchants?|migrants?|migrations?|motorcycles?|motorcycling|mountain|movements?|navigation|navigational|networks?|night|numbers?|ocean|operations?|operators?|overland|passengers?|paths?|patrols?|phone|places?|power|prefix|prefixes|propagation|providers?|public|races?|racing|radio|rail|railways?|rates?|records?|relationships?|relay|relocations?|revenues?|rider|riding|roads?|romances?|routes?|run|runners?|running|runs|sailing|seed|services?|shippers?|shipping|shooting|shortwave|shots?|signaling|space|speed|stations?|strike|surface|swimmers?|swimming|switch|switches|systems?|telecommunications?|telegraphs?|telephones?|telephony|tolls?|tour|touring|tracks?|trade|traders?|trading|traffic|trails?|training|trains?|transit|transmissions?|transportation|transports?|travelers?|traveling|travellers?|travelling|travels?|triathlons?|trips?|trucks?|trunks?|uses?|views?|voice|voyages?|walkers?|walking|walks?|walkway|wireless|women|work|world)\b)" replace="$1-distance"/>
-<Typo word="side by side" find="\bside-by[- ]+side(?=[;\.]|,?\s+(?:across|against|along|and|as|at|behind|between|by|down|during|for|from|in|instead|into|just|on|over|the|through|throughout|to|under|until|when|while|with|within)\b)" replace="side by side"/>
-<Typo word="Long-term" find="\b([Ll]ong(?:er)?|[Ss]hort)-?\s+(term)(?=\s+(?:affairs?|agreements?|aims?|alliances?|ambitions?|appointments?|aspirations?|associations?|basis|boyfriends?|business|care|careers?|charters?|collaborations?|collaborators?|commitments?|contracts?|deals?|declines?|developments?|economic|engagements?|financial|friends?|future|girlfriends?|goals?|health|horizons?|illness|illnesses|impacts?|inflows?|injuries|injury|investments?|knee|leases?|loans?|love|members?|memories|memory|missions?|objectives?|partners?|partnerships?|periods?|perspectives?|plans?|presence|problems?|process|processes|programs?|projects?|recording|reductions?|relationships?|replacements?|research|residents?|restoration|solutions?|sponsors?|storage|strategic|strategies|strategy|studies|study|success|supplies|supply|support|supporters?|sustainable|treatments?|trends?|views?|vision)\b)" replace="$1-$2"/>
-<Typo word="time-consuming" find="\btime\s+consuming(?=(?:[,\.:;\)]|\s+(activities|activity|and|as|aspects?|because|but|compared|drive|due|effort|for|if|in|investigations?|jobs?|manual|methods?|nature|operations?|or|part|practice|procedures?|process|processes|projects?|research|routes?|search|so|steps?|tasks?|techniques?|than|that|to|ways?|when|work)\b))" replace="time-consuming"/>
+<Typo word="vice president" find="\bV(ice)\b(?<= (?:a(?:cting|ppointed|s?)|be|bec(?:ame|om(?:e|ing))|been|Democratic|elected|for(?:mer)?|h(?:er|i[ms])|i(?:ncumbent|ts|s)|n(?:amed|ew)|Republican|s(?:erving|itting)|t(?:heir|o)|U\.?S\.?|was|\w+'s) +\w+)(?<![A-Z][a-z]+\s+for\s+\w+)([-\s]+)[pP](residen(?:t(?:ial|sial)?|cy))(?=(?:[,\.;\)]|\s+[a-z]+))(?!\s+of\s)" replace="v$1$2p$3"/>
+<Typo word="president" find="\bP(residen(?:t(?:ial|sial)?|cy))(?<=\s(?:a(?:cting|ppointed|s)|be|bec(?:ame|om(?:e|ing))|been|Democratic|elected|for(?:mer)?|h(?:er|i[ms])|i(?:ncumbent|ts|s)|n(?:amed|ew)|Republican|s(?:erving|itting)|t(?:heir|o)|U\.?S\.?|was|\w+'s) +\w+)(?<![A-Z][a-z]+\s+for\s+\w+)(?=(?:[,\.;\)]|\s+[a-z]+))(?!\s+of\s)(?!\s+and\s+Vice[-–−—―\s]+President\s+of\s)" replace="p$1"/>
+<Typo word="case-by-case" find="\bcase\s+by\s+case(?=\s+(?:basis\b|analysis\b))" replace="case-by-case"/>
+<Typo word="Upper-level" find="\b([uU]pper|[hH]igher|[lL]ower|[mM]iddle|[tT]op|[sS]econd)\s+(level|tier)(?=\s+(?:c(?:irculation|lass(?:es)?)|c(?:lubs?|o(?:mpetition|nditions?|urses?))|directors?|e(?:ducation|nvironment)|f(?:loors?|ootball)|houses?|jet|l(?:eagues?|ows?)|manage(?:ment|rs?)|outflow|platforms?|r(?:idges?|ooms?)|s(?:chools?|eat(?:ing|s?)|hear)|s(?:ide|tudents?)|t(?:eams?|ours?|roughs?)|verandahs?|wind(?:ows?|s?))\b)" replace="$1-$2"/>
+<Typo word="Long-distance" find="\b([lL]ong|[sS]hort|[mM]iddle) +distance(?=\s+(?:a(?:ccess|ir|(?:pplications?|t(?:hletes?|tacks?)))|b(?:ackpacking|ird|us(?:es)?)|business(?:es)?|ca(?:ll(?:ing|s?)|r(?:ds?|riers?))|cha(?:mpionship|rges?)|c(?:ircuits?|o(?:ach(?:es)?|llaborations?))|comm(?:erc(?:e|ial)|u(?:nications?|ters?))|co(?:mp(?:an(?:ies|y)|etition)|nnections?)|c(?:ontacts?|r(?:oss|uising)|ustomers?)|cycl(?:es?|i(?:ng|st))|d(?:ata|estinations?|i(?:al|spersal))|d(?:ivision|riving|uathlon)|e(?:ffects?|lectric|ndurance|quipment)|e(?:vents?|x(?:changes?|press))|f(?:ib(?:er|re)|l(?:ights?|ying))|foot(?:paths?)?|f(?:ormations?|re(?:estyle|ight))|goals?|h(?:aulage|i(?:gh(?:ways?)?|jackings?))|h(?:ik(?:ers?|ing)|orse)|in(?:frastructure|ter(?:actions?|city))|journeys?|l(?:earning|ines?|oves?)|mar(?:athon|kets?)|m(?:erchants?|igra(?:nts?|tions?)|otorcycles?)|mo(?:torcycling|untain|vements?)|n(?:avigation(?:al)?|etworks?|ight|umbers?)|o(?:cean|perat(?:ions?|ors?)|verland)|p(?:a(?:ssengers?|t(?:hs?|rols?))|hone|laces?|ower)|pr(?:efix(?:es)?|o(?:pagation|viders?))|public|rac(?:es?|ing)|ra(?:dio|il(?:ways?)?|tes?)|re(?:cords?|l(?:a(?:tionships?|y)|ocations?))|r(?:evenues?|id(?:er|ing)|oads?)|ro(?:mances?|utes?)|ru(?:n(?:(?:ners?)?|ning|s))|s(?:ailing|e(?:ed|rvices?)|hippers?)|sh(?:ipping|o(?:oting|rtwave|ts?))|s(?:ignaling|p(?:ace|eed)|tations?)|s(?:trike|urface|wimm(?:ers?|ing))|s(?:witch(?:es)?|ystems?)|tele(?:communications?|graphs?|phon(?:es?|y))|to(?:lls?|ur)|t(?:ouring|ra(?:cks?|de(?:rs?)?))|tra(?:ding|ffic|i(?:ls?|ning))|tra(?:ins?|ns(?:it|missions?|portation))|tra(?:nsports?|vel(?:ers?|ing|lers?))|tr(?:avel(?:ling|s?)|i(?:athlons?|ps?))|tru(?:[cn]ks?)|uses?|v(?:iews?|o(?:ice|yages?))|walk(?:ers?|ing|s?|way)|w(?:ireless|o(?:men|r(?:k|ld))))\b)" replace="$1-distance"/>
+<Typo word="side by side" find="\bside-by[-–−—―\s]+side(?=[;\.]|,?\s+(?:a(?:cross|gainst|long|nd|[st])|b(?:e(?:hind|tween)|y)|d(?:own|uring)|f(?:or|rom)|in(?:(?:stead)?|to)|just|o(?:n|ver)|t(?:h(?:e|rough(?:out)?)|o)|un(?:der|til)|w(?:h(?:en|ile)|ith(?:in)?))\b)" replace="side by side"/>
+<Typo word="Long-term" find="\b([lL]ong(?:er)?|[sS]hort)-?\s+(term)(?=\s+(?:a(?:ffairs?|greements?|ims?|lliances?)|a(?:mbitions?|ppointments?|s(?:pirations?|sociations?))|b(?:asis|oyfriends?|usiness)|care(?:ers?)?|c(?:harters?|o(?:llaborat(?:ions?|ors?)|mmitments?|ntracts?))|de(?:als?|clines?|velopments?)|e(?:conomic|ngagements?)|f(?:inancial|riends?|uture)|g(?:irlfriends?|oals?)|h(?:ealth|orizons?)|illness(?:es)?|i(?:mpacts?|n(?:flows?|jur(?:ies|y)))|investments?|knee|l(?:eases?|o(?:ans?|ve))|m(?:em(?:bers?|or(?:ies|y))|issions?)|objectives?|p(?:artner(?:s(?:hips?)?)?|er(?:iods?|spectives?))|p(?:lans?|r(?:esence|o(?:blems?|cess)))|pro(?:cesses|grams?|jects?)|re(?:cording|ductions?|lationships?|placements?|s(?:earch|idents?|toration))|s(?:olutions?|ponsors?|t(?:orage|rategic))|st(?:rateg(?:ies|y)|ud(?:ies|y))|su(?:ccess|pp(?:l(?:ies|y)|ort))|su(?:pporters?|stainable)|tre(?:atments?|nds?)|vi(?:ews?|sion))\b)" replace="$1-$2"/>
+<Typo word="time-consuming" find="\btime\s+consuming(?=(?:[,\.:;\)]|\s+(activit(?:ies|y)|a(?:nd|s(?:pects?)?)|b(?:ecause|ut)|compared|d(?:rive|ue)|effort|for|i(?:f|n(?:vestigations?)?)|jobs?|m(?:anual|ethods?)|nature|o(?:perations?|r)|p(?:art|r(?:actice|oce(?:dures?|ss)))|pro(?:cesses|jects?)|r(?:esearch|outes?)|s(?:earch|o|teps?)|t(?:asks?|echniques?|ha[nt]|o)|w(?:ays?|hen|ork))\b))" replace="time-consuming"/>
 <Typo word="Corps of Engineers" find="\bCorp\s+of\s+Engineers\b" replace="Corps of Engineers"/>
-<Typo word="0–0" find="\b(\d+)(?<=\s\d+)[-—](\d+)(?=\s+(?:academic|advantage|against|at|away|career|defeat|deficit|draw|edge|final|game|home|in|lead|loss|mark|on|over|overtime|record|rout|run|school\s+year|score|seasons?|series|shootout|shutout|split|start|sweep|term|tie|to|triumph|upset|victory|vote|win|with)\b)" replace="$1–$2"/>
-<Typo word="2–1" find="\b(\d+)(?<=\s\d+)[-—](\d+)(?=[,\.;\n])(?<!\b(?:No\.|IS[BS]N|LCCN|INCITS|Columbia|ISO|IEC|ISO/IEC|ANSI|VITA|ANSI/VITA|FIPS|Publication|card number:?)\s+\d+[-—]\d+)(?<!\b\d{2}[-—]\d{3})(?<!\b\d{1}[-—]\d{2})(?<!\b\1[-—]\1\b)" replace="$1–$2"/>
-<Typo word="north–south" find="\b[Nn]orth(?<=(?:,|\b(?:[a-z]+|The))\s+\w+)(west|east)?[-/][Ss]outh(west|east)?\b(?!\s+[A-Z])" replace="north$1–south$2"/>
-<Typo word="south–north" find="\b[Ss]outh(?<=(?:,|\b(?:[a-z]+|The))\s+\w+)(west|east)?[-/][Nn]orth(west|east)?\b(?!\s+[A-Z])" replace="south$1–north$2"/>
-<Typo word="east–west" find="\b[Ee]ast(?<=(?:,|\b(?:[a-z]+|The))\s+\w+)-[Ww]est\b(?!\s+[A-Z])" replace="east–west"/>
-<Typo word="west–east" find="\b[Ww]est(?<=(?:,|\b(?:[a-z]+|The))\s+\w+)-[Ee]ast\b(?!\s+[A-Z])" replace="west–east"/>
-<Typo word="north–south" find="\b([Nn]orth(?:west|east)?)[-/][Ss](outh(?:west|east)?)(?=\s+(?:alignment|avenue|axis|border|boundary|corridor|direction|distance|divide|division|expressway|extension|extent|highway|interstate|length|line|link|main|mountain|orientation|portion|quadrant|rail|railway|ridge|road|route|running|runway|section|segment|street|trade|traffic)s?\b)" replace="$1–s$2"/>
-<Typo word="south–north" find="\b([Ss]outh(?:west|east)?)[-/][Nn](orth(?:west|east)?)(?=\s+(?:alignment|avenue|axis|border|boundary|corridor|direction|distance|divide|division|expressway|extension|extent|highway|interstate|length|line|link|main|mountain|orientation|portion|quadrant|rail|railway|ridge|road|route|running|runway|section|segment|street|trade|traffic)s?\b)" replace="$1–n$2"/>
-<Typo word="east–west" find="\b([Ee]ast)[-/][Ww](est)(?=\s+(?:alignment|avenue|axis|border|boundary|corridor|direction|distance|divide|division|expressway|extension|extent|highway|interstate|length|line|link|main|mountain|orientation|portion|quadrant|rail|railway|ridge|road|route|running|runway|section|segment|street|trade|traffic)s?\b)" replace="$1–w$2"/>
-<Typo word="west–east" find="\b([Ww]est)[-/][Ee](ast)(?=\s+(?:alignment|avenue|axis|border|boundary|corridor|direction|distance|divide|division|expressway|extension|extent|highway|interstate|length|line|link|main|mountain|orientation|portion|quadrant|rail|railway|ridge|road|route|running|runway|section|segment|street|trade|traffic)s?\b)" replace="$1–e$2"/>
-<Typo word="Acoustic" find="\b([Ee]lectroa|[Pp]hotoa|[Aa])custic(al|s)?\b" replace="$1coustic$2"/>
+<Typo word="0–0" find="\b(\d+)(?<=\s\d+)[-—](\d+)(?=\s+(?:a(?:cademic|dvantage|gainst|t|way)|career|d(?:ef(?:eat|icit)|raw)|edge|final|game|home|in|l(?:ead|oss)|mark|o(?:n|ver(?:time)?)|r(?:ecord|out|un)|sc(?:hool\s+year|ore)|s(?:e(?:asons?|ries)|h(?:ootout|utout))|s(?:plit|tart|weep)|t(?:erm|ie|o|riumph)|upset|v(?:ictory|ote)|wi(?:n|th))\b)" replace="$1–$2"/>
+<Typo word="2–1" find="\b(\d+)(?<=\s\d+)[-—](\d+)(?=[,\.;\n])(?<!\b(?:Boeing|Columbia|IS[BS]N|LCCN|INCITS|I(?:EC|SO(?:/IEC)?)|ANSI(?:/VITA)?|card number:?|FIPS|No\.|VITA|Publication)\s+\d+[-—]\d+)(?<!\b\d\d[-—]\d{3})(?<!\b\d{1}[-—]\d\d)(?<!\b\1[-—]\1\b)" replace="$1–$2"/>
+<Typo word="north–south" find="\b[nN]orth(?<=(?:,|\b(?:[a-z]+|The))\s+\w+)(east|west)?[-/][sS]outh(east|west)?\b(?!\s+[A-Z])" replace="north$1–south$2"/>
+<Typo word="south–north" find="\b[sS]outh(?<=(?:,|\b(?:[a-z]+|The))\s+\w+)(east|west)?[-/][nN]orth(east|west)?\b(?!\s+[A-Z])" replace="south$1–north$2"/>
+<Typo word="east–west" find="\b[eE]ast(?<=(?:,|\b(?:[a-z]+|The))\s+\w+)-[wW]est\b(?!\s+[A-Z])" replace="east–west"/>
+<Typo word="west–east" find="\b[wW]est(?<=(?:,|\b(?:[a-z]+|The))\s+\w+)-[eE]ast\b(?!\s+[A-Z])" replace="west–east"/>
+<Typo word="north–south" find="\b([nN]orth(?:east|west)?)[-/][sS](outh(?:east|west)?)(?=\s+(?:a(?:lignment|venue|xis)|bo(?:rder|undary)|corridor|di(?:rection|stance|vi(?:de|sion))|ex(?:pressway|ten(?:sion|t))|highway|interstate|l(?:ength|in[ek])|m(?:ain|ountain)|orientation|portion|quadrant|r(?:ail(?:way)?|idge|oad)|r(?:oute|un(?:ning|way))|s(?:e(?:ction|gment)|treet)|tra(?:de|ffic))s?\b)" replace="$1–s$2"/>
+<Typo word="south–north" find="\b([sS]outh(?:east|west)?)[-/][nN](orth(?:east|west)?)(?=\s+(?:a(?:lignment|venue|xis)|bo(?:rder|undary)|corridor|di(?:rection|stance|vi(?:de|sion))|ex(?:pressway|ten(?:sion|t))|highway|interstate|l(?:ength|in[ek])|m(?:ain|ountain)|orientation|portion|quadrant|r(?:ail(?:way)?|idge|oad)|r(?:oute|un(?:ning|way))|s(?:e(?:ction|gment)|treet)|tra(?:de|ffic))s?\b)" replace="$1–n$2"/>
+<Typo word="east–west" find="\b([eE]ast)[-/][wW](est)(?=\s+(?:a(?:lignment|venue|xis)|bo(?:rder|undary)|corridor|di(?:rection|stance|vi(?:de|sion))|ex(?:pressway|ten(?:sion|t))|highway|interstate|l(?:ength|in[ek])|m(?:ain|ountain)|orientation|portion|quadrant|r(?:ail(?:way)?|idge|oad)|r(?:oute|un(?:ning|way))|s(?:e(?:ction|gment)|treet)|tra(?:de|ffic))s?\b)" replace="$1–w$2"/>
+<Typo word="west–east" find="\b([wW]est)[-/][eE](ast)(?=\s+(?:a(?:lignment|venue|xis)|bo(?:rder|undary)|corridor|di(?:rection|stance|vi(?:de|sion))|ex(?:pressway|ten(?:sion|t))|highway|interstate|l(?:ength|in[ek])|m(?:ain|ountain)|orientation|portion|quadrant|r(?:ail(?:way)?|idge|oad)|r(?:oute|un(?:ning|way))|s(?:e(?:ction|gment)|treet)|tra(?:de|ffic))s?\b)" replace="$1–e$2"/>
+<Typo word="Acoustic" find="\b([eE]lectroa|[pP]hotoa|[aA])custic(al|s?)\b" replace="$1coustic$2"/>
 <Typo word="Jacuzzi" find="\bjacuzzi(s)?\b" replace="Jacuzzi$1"/>
 <Typo word="Bhojpuri" find="\bbhojpuri\b" replace="Bhojpuri"/>
-<Typo word="Evening" find="\b([Ee])[bcf]ening\b" replace="$1vening"/>
-<Typo word="Blu-ray" find="\b[Bb]lu\s?[Rr]ay\b" replace="Blu-ray"/>
-<Typo word="A to An" find="\b(?<=[\s\(]|\A)([Aa])(?<=a|(?:(?:\.|\n)\s\s?\s?|\A)A)\s\s?((?:[aA](?!\b|2\b|[Aa]A?[AaT]?|bogado|brirse|cademiei|cao|cceptat?a?|cestei|cordo|cquis|ddaswyd|ED|FN|face|fecta|jouté|juns|l(?:do\b|guien\b)|lba\b|lcalde|LL|lma|mbasadei|mérica|MD|[Nn](\b|amnese|[Dd]\b|daluc|G|ihila|ului|tiga)|OA|p(?:agar\b|arecer\b|ostar\b|robat\b)|quest|rder\b|renys\b|rmatei\b|rquitectura|R(S|\$)|rte(\b|lor\b)|s\b|ssouvi|t\b|tahualpa\b|tenuar|thair|tlântida|triz|tteint|U(D|S|\$|\£)|usiàs|ustriei\b|vançar|venida|vut\b|WG|ZN)|[eE](?!\b|cologia|dição|dil\b|ditora\b|gipto|GP|la\b|litei\b|llas\b|m(?:a\b|bajadora|boîté|igracja|pezar\b)|n(?:core\sdu|ergia|flamm[eé]|frentar|gagé|gañar|loquecer|se[nñ]ar|tend(erse|u)\b|trada|tra[iî]n[eé]|trar\b|tre(nador|nar)?|voyé)|qui(librista|p[ao])|RN|s(?:as?\b|cada|cala|cola|cuchar|cuela|cultura|curidão|fera|pa[nñń]|paldas|perança)|st(a\b|aciones|ados|ar\b|e\b|é|eban|o\b|os\b|rada|rat[eé][gx]ia|r[eé][il]a|rellar|ruc?tura|udia[nr])|t\b|TB\b|t[eé]\b|terna\b|[Uu]([A-Za-z]{2}|\sde\b)|UI|UR|v(acuar|reilor|rop)|w[abei]|xist[ée](ncia)?|xpansão|xperi[eê]ncia|xpressão|xposição|xtranj)|h(?:aut[besu]|eir|o(?:rs\sd|ur(\b|g|s|ly)))|[iI](?!\b|aij|a[șş]i|DR\b|greja|[Ii][Ii]?[Ii]?|l\sraen\b|legal|lha\b|LS|mage[nm]\b|migração|mmagini\b|n(?:\b|ceput|dia[’']?s\b|dicação|dro\b|dúst|és|fluência|formační|glat|icios|nei\b|quisição|stancias|stitucí|sulté|tegra(nte|rse)|teligência|ter(preta|ven)[cç][aã]o|timidade|tra\b|vasão|venté|vestit)|NR\b|QD\b|R£|RR\b|s(\b|chia\b|la\b|te\b)|SK|ts?\b|u(bit\b|bit-o\b|dex\b|dice\b|re\b)|[vxVX]\b|Vth|XC\b|[\b\d])|M(?:D\b|VP\b)|[oO](?!\b|ax|b(a\b|čan|chodní|ra|tenu|ţi|yv)|c(cidente|ho|hrany|upat)|d\b|de[cč]et\b|este|f\b|ferecer|ggi|hniv|ito\b|kol[íi]e?\b|lot\b|lše\b|lvidarte|mnisciê|MR\b|nda\b|[Nn](\s|[CcçIi][aEe]|[Ee](?!rous|g\b|ga\b|ges|gin|ida|i[lr]))|O\b|opa|péra|perador\b|ra?\b|[Rr](?:\b|a(?:[şsș]ului|z\b)|chestr\b|dem|dinii|fu\b|i\b|illa)|S-9\b|sasuna|scuras|sobnosti|sona|tr[ao]\b|ttobre|u\b|ua[bcdglt]|ued|ui|utro|velha|viedo)|u(?!\b|\-|\:|\.|[A-Z0-9]|adim|ah\b|ain\b|b[aiou]|c|č|dev\b|draw\b|e|fo|ga(li|nd)|gx\b|ile\b|in|iro|itat\b|jam|k|lak|lu|ma?\b|mění\b|mria|mrl|n(?:(\s|as?\b|ani|ary|ate\b)|d\b|e(\b|i\b|sco)|o[rs]?\b|s\b|uib?)|ni(?!de|dio|dl|do|gn|ll|mag|mb|mi|mm|mp[aeloru]|nau|nc|nd|neb|nf|ng|nh|nj|nk|nin|nit|nn|noc|nq|ns|nt|nv|rad|rk|ron|rr)|omo|pazilas?|prisin\b|r[aeiolsuy]|s[aeiou]|s(b(net)?|d)\b|s\$|s(hape|tream|ted(es)?\b)|t[aeiou]|tranga|tric|v|yu\b|ž|zs\b))[^\|\[\]\<\⌊\>\{\}\s]{0,29})(?<=\b(\S|\s){1,49}(?<!\b(?:[Aa](baten|cceso|compañando|cosa|ct|cusa|di[oó]s|dmisión|dvanced|eroporto|gus|menazan|n\b|ndalucía|nfibio|[Nnñ][Oo]|ns\b|prendiendo|şa|spirante|tacó|tención|ur|usf(\.|ührung)|umenta|utorov|xudar|yúdame|yudar|yudó)|[Bb](attery|arokiem|enefician|ílé|usca(ndo)?)|[CcČ](abellera|alle|amino|antan?\b|arretera|artas?|asar|ategory\:?|e|ensura|entrală|ercano|hama|hlorophyll|hromogranin?|iclista|íny|lass|o\.|om|omienzan|omp(any|osition|ound|ró|rometido)|omunicações|oncerto|onoció|onfirma|ontrat[aoó]|onvocatoria|osta|um|uarto||yclosporine)|[Dd]([aáàâăåeêèé]|alla|e[nst]|edicada|eseó|enuncian|erecho|es(apareceu|pedida|piden)|etienen|evoción|[iîìíòôóuùûú]|igas|ile|irecto|ivision|ojmy|ouble|urante)|[EÉeé](\b|cusa|insatzgruppe|jecutan?|le|lle|mpecé|n|nfrent(a|ará)|nseñ(ame|ó|o)|ntonces|ntre(\b|gó|vista)|s|squivel|st|t|xtradita(do)?|xitos)|[Ff](acilitar|az|emenina|ermato|iammanti|ichó|ormula|rente|usil|u[ií]|utbol)|[Gg](alega|enerală|lorie|olpe|rade|roup|uerra)|[Hh](istorických|omena(je|gem|tge)|ousle)|[iI](\b|l\b|nformații|nna|nte(gran|rpreta|rvista)|ntrodu(cción|zione)|nvita(ción)?|storie|terum)|[Jj](r|ung|unto|unior)|[Kk](lavír|rál|rtek|ultúry|uřátko)|[Ll](abe|e\b|ékaři|ewis|igada|ipid|ist|íderes|iniers|legar[aá]?|legan?|leva(n|sen)|ui|uxe)|[Mm](\.I|anu|as|atar|hic\b|[íi]nima\b|iedo|odel|onte|onumento|oro[șs]anu|ou(lin|nd)|ovid[ao]|ult|usgos)|[Nn](bsp|ei|iegan|ombrar|ônibus|otícia|ous)|[Oo](kina\}\}|cchio|lza|maggio|noare|riente|sob\b|tázky|tec\b|u\b)|[Pp](\.|ara|art|asado|assou?|entru|erò|erpetua|ese|ietro|iù|lan|oint|onte|ro|rólogo|re(ludio|senta)|r[ůu]myslu|ublicat)|[Qq](\sand|uando|ue|ui)|[Rr](apó|ec(ibe|usa)|ecordando|egião|eferencias|ei|etorno|isale|oi|omână|ozšířené)|şi\b|[Ss](\.|abe|alve\b|atisface|é|eason|ecuestran|eine|[eé]r(á|ie|vir)|ic\s?\|?|ide|ingle|ob|obre|ociální|ou|prijin|portivă|tavební|tyky|uma|ubida|ub(-)?unit|uple|upplemento|urt|ustituye)|[Tt](arda|áxi|he|oda|orno|orturan|razendo|ren|ributo|riple|ype)|[Uu](hlie|n[ade])|[Vv](a|ai|ada|amos?|ariant|as|ayas|eche|ence[rn]?|en(da|de|do|ga|go|ta|te)|eta|ez|ě(du?|rný)|iagem|illena|iol(on?cello|u)|itamin|iva|ivace|ojsko|ol(amos|ar|ta|vamos|ver(a|á|é|emos|te)?|v[íi]|viendo)|oy|uel(a|e|ta|to|u|v[aeo]s?)\b)|[Ww]h[aā]nau|[Yy]\b|[ZŽz](eit|ivoty))\W?\s?\s?[aA]\s?\s?\2))" replace="$1n $2"/><!--'A to An' correction, [[User:Sun_Creator/A_to_An]] document. Occurring often.-->
+<Typo word="Evening" find="\b([eE])[bcf]ening\b" replace="$1vening"/>
+<Typo word="Blu-ray" find="\b[bB]lu\s?[rR]ay\b" replace="Blu-ray"/>
+<Typo word="A to An" find="\b(?<=[\s\(][aA]|\A[aA])(?<=a|(?:(?:\.|\n)\s\s?\s?|\A)A)\s\s?((?:[aA](?!\b|2\b|[aA]A?[aAT]?|b(?:ogado|rirse)|c(?:a(?:demiei|o)|ceptat?a?|estei|ordo|quis)|ddaswyd|ED|FN|f(?:ace|ecta)|j(?:outé|uns)|l(?:do\b|ba\b|calde|guien\b)|LL|lma|m(?:basadei|érica)|MD|[nN](\b|amnese|D\b|d(?:aluc)?|G|ihila|ului|tiga)|OA|p(?:a(?:gar\b|recer\b)|ostar\b|robat\b)|quest|r(?:der\b|enys\b|matei\b|quitectura)|R(S|\$)|rte(\b|lor\b)|s(?:\b|souvi)|t(?:ahualpa\b|enuar|hair|lântida|\b|riz|teint)|U([DS]|\$|\£)|us(?:iàs|triei\b)|v(?:ançar|enida|ut\b)|WG|ZN)|[eE](?!\b|cologia|di(?:ção|l\b|tora\b)|gipto|GP|l(?:a\b|itei\b|las\b)|m(?:a\b|b(?:ajadora|oîté)|igracja|pezar\b)|n(?:core\sdu|ergia|f(?:lamm[eé]|rentar)|ga(?:gé|ñar)|loquecer|se[nñ]ar|tend(erse\b|u\b)|tra(?:da|[iî]n[eé]|r\b)|tre(na(?:dor|r))?|voyé)|qui(librista|p[ao])|RN|s(?:as?\b|ca(?:[dl]a)|c(?:ola|u(?:char|ela|ltura|ridão))|fera|p(?:a(?:[nñń]|ldas)|erança))|st(a(?:\b|ciones|dos|r\b)|e\b|é|eban|o(?:\b|s\b)|r(?:a(?:da|t[eé][gx]ia)|(?:e(?:l(?:a|lar|uc?tura)|ia|uc?tura)|é[il]a|uc?tura))|udia[nr])|t\b|TB\b|t(?:é\b|e(?:rna\b)?)|[uU]([A-Za-z]{2}|\sde\b)|U[IR]|v(acuar|r(?:eilor|op))|w[abei]|xist[ée](ncia)?|x(?:p(?:ansão|eri[eê]ncia|ressão|osição)|tranj))|h(?:aut[besu]|eir|o(?:rs\sd|ur(\b|[gs]|ly)))|[iI](?!\b|a(?:ij|[șş]i)|DR\b|greja|[iI][iI]?[iI]?|l(?:\sraen\b|egal|ha\b)|LS|m(?:age[nm]\b|igração|magini\b)|n(?:\b|ceput|dia[’']?s\b|d(?:icação|ro\b|úst)|és|f(?:luência|ormační)|glat|icios|nei\b|quisição|s(?:t(?:ancias|itucí)|ulté)|tegra(nte|rse)|teligência|ter(preta[cç][aã]o|ven[cç][aã]o)|t(?:imidade|ra\b)|v(?:asão|e(?:nté|stit)))|NR\b|QD\b|R(?:£|R\b)|s(\b|chia\b|la\b|te\b)|SK|ts?\b|u(bit(?:\b|-o\b)|d(?:ex\b|ice\b)|re\b)|[vxX]\b|V(?:th)?|[\b\d]|XC\b)|M(?:D\b|VP\b)|[oO](?!\b|ax|b(a\b|čan|chodní|ra|tenu|ţi|yv)|c(cidente|h(?:o|rany)|upat)|d(?:\b|e[cč]et\b)|este|f(?:\b|erecer)|ggi|hniv|ito\b|kol[íi]e?\b|l(?:ot\b|še\b|vidarte)|mnisciê|MR\b|nda\b|[nN](\s|[cçiCI][aeE]|[eE](?!g(?:\b|a\b|es|in)|i(?:da|[lr])|rous))|O\b|opa|p(?:éra|erador\b)|ra?\b|[rR](?:\b|a(?:[şsș]ului|z\b)|chestr\b|d(?:em|inii)|fu\b|i(?:\b|lla))|S-9\b|s(?:asuna|curas|o(?:bnosti|na))|t(?:r[ao]\b|tobre)|u(?:\b|a[bcdglt]|ed|i|tro)|v(?:elha|iedo))|u(?!\b|\-|\:|\.|[A-Z\d]|a(?:dim|h\b|in\b)|b[aiou]|[cč]|d(?:ev\b|raw\b)|e|fo|ga(li|nd)|gx\b|i(?:le\b|n|ro|tat\b)|jam|k|l(?:ak|u)|m(?:a\b|\b|ění\b|r(?:ia|l))|n(?:(\s|a(?:s\b|\b|ni|ry|te\b))|d\b|e(\b|i\b|sco)|o[rs]?\b|s\b|uib?)|ni(?!d(?:e|io|[lo])|gn|ll|m(?:ag|b|[im]|p[aeloru])|n(?:au|[cd]|eb|[fg]|[hj]|[kn]|i[nt]|oc|q|[stv])|r(?:ad|k|on|r))|omo|p(?:azilas?|risin\b)|r[aeiolsuy]|s[aeiou]|s(b(net)?|d)\b|s\$|s(hape|tream|ted(es)?\b)|t(?:[aeiou]|r(?:anga|ic))|v|yu\b|ž|zs\b))[^\|\\\<\⌊\>\{\}\s]{0,29})(?<=\b(\[sS]){1,49}(?<!\b(?:[aA](baten|c(?:ceso|o(?:mpañando|sa)|t|usa)|d(?:misión|i[oó]s|vanced)|eroporto|gus|menazan|n(?:\b|dalucía|fibio)|[ñN][oO]|n(?:s\b)?|prendiendo|şa|spirante|t(?:acó|ención)|ur|usf(\.|ührung)|u(?:menta|torov)|xudar|y(?:údame|ud(?:ar|ó)))|[bB](a(?:ttery|rokiem)|enefician|ílé|usca(ndo)?)|[cCČ](a(?:bellera|lle|mino|ntan?\b|r(?:retera|tas?))|a(?:sar|tegory\:?)|e(?:|n(?:sura|trală))|ercano|h(?:ama|lorophyll|romogranin?)|iclista|íny|lass|o\.|om(?:ienzan)?|omp(any|o(?:sition|und)|r(?:ó|ometido))|o(?:municações|n(?:certo|firma|oció|trat[aoó]))|o(?:nvocatoria|sta)|u(?:arto|m)|(?:yclosporine)?)|[dD]([áàâăåeêèé]|a(?:lla)?|e(?:[nst]|dicada|seó|nuncian|recho)|es(apareceu|p(?:edida|iden))|e(?:tienen|voción)|[iîìíòôóuùûú]|i(?:gas|le|recto|vision)|o(?:jmy|uble)|urante)|[eéEÉ](\b|cusa|insatzgruppe|jecutan?|l(?:e|le)|mpecé|n|nfrent(a(?:rá)?)|nseñ(ame|[óo])|ntonces|ntre(\b|gó|vista)|s(?:(?:quivel)?|t)|t|xtradita(do)?|xitos)|[fF](a(?:cilitar|z)|e(?:menina|rmato)|i(?:ammanti|chó)|ormula|rente|u(?:[ií]|sil|tbol))|[gG](alega|enerală|lorie|olpe|r(?:ade|oup)|uerra)|[hH](istorických|omena(je|gem|tge)|ousle)|[iI](\b|l\b|n(?:formații|na)|nte(gran|r(?:preta|vista))|ntrodu(cción|zione)|nvita(ción)?|storie|terum)|[jJ](r|un(?:g|ior|to))|[kK](lavír|r(?:ál|tek)|u(?:ltúry|řátko))|[lL](abe|e\b|ékaři|ewis|i(?:gada|pid|st)|íderes|iniers|lega(?:r[aá]?|n?)|leva(n|sen)|u(?:i|xe))|[mM](\.I|a(?:nu|s|tar)|hic\b|[íi]nima\b|iedo|o(?:del|n(?:te|umento)|ro[șs]anu)|ou(lin|nd)|ovid[ao]|u(?:lt|sgos))|[nN](bsp|ei|iegan|ombrar|ônibus|o(?:tícia|us))|[oO](kina\}\}|cchio|lza|maggio|noare|riente|sob\b|t(?:ázky|ec\b)|u\b)|[pP](\.|a(?:r[at]|s(?:ado|sou?))|e(?:ntru|r(?:ò|petua)|se)|i(?:etro|ù)|lan|o(?:int|nte)|r(?:o|ólogo)|re(ludio|senta)|r[ůu]myslu|ublicat)|[qQ](\sand|u(?:ando|[ei]))|[rR](apó|ec(ibe|usa)|e(?:cordando|ferencias|gião|i|torno)|isale|o(?:i|mână|zšířené))|şi\b|[sS](\.|a(?:be|lve\b|tisface)|é|e(?:ason|cuestran|ine)|[eé]r(á|ie|vir)|ic\s?\|?|i(?:de|ngle)|o(?:b(?:re)?|ciální|u)|p(?:rijin|ortivă)|t(?:avební|yky)|u(?:bida|ma)|ub(-)?unit|u(?:p(?:le|plemento)|rt|stituye))|[tT](arda|áxi|he|o(?:da|r(?:no|turan))|r(?:azendo|en|i(?:buto|ple))|ype)|[uU](hlie|n[ade])|[vV](a(?:da|i|mos?|riant|s?|yas)|e(?:che|nce[rn]?)|en(d[aeo]|g[ao]|t[ae])|e(?:ta|z)|ě(du?|rný)|i(?:agem|llena)|iol(on?cello|u)|i(?:tamin|va(?:ce)?)|ojsko|ol(a(?:mos|r)|ta|vamos|ver([aáé]|emos|te)?|v(?:[íi]|iendo))|oy|uel([ae]|t[ao]|u|v[aeo]s?)\b)|[wW]h[aā]nau|[yY]\b|[zZŽ](eit|ivoty))\W?\s?\s?[aA]\s?\s?\2))" replace="$1n $2"/><!--'A to An' correction, [[User:Sun_Creator/A_to_An]] document. Occurring often.-->
 <Typo word="Partnership" find="\b([pP])arternship\b" replace="$1artnership"/>
 <Typo word="Allegiance" find="\b([aA])ll[ie]+g[iea]+nce\b(?<!llegiance)" replace="$1llegiance"/><!--avoid self-->
 <Typo word="Pardoned" find="\b([pP])ardonn(ed|ing|s)\b" replace="$1ardon$2"/>
-<Typo word="Precipitation" find="\b([pP])rec[ie]ptiat(ion|e)\b" replace="$1recipitat$2"/>
+<Typo word="Precipitation" find="\b([pP])rec[ie]ptiat(e|ion)\b" replace="$1recipitat$2"/>
 <Typo word="Betrothed" find="\b([bB])ethroted\b" replace="$1etrothed"/>
 <Typo word="Serviceable" find="\b([sS])ervicable\b" replace="$1erviceable"/><!--see also rule "Service"-->
-<Typo word="Register" find="\b([rR])egistr(ed|ing|s)?\b" replace="$1egister$2"/>
+<Typo word="Register" find="\b([rR])egistr(ed|ing|s?)\b" replace="$1egister$2"/>
 <Typo word="Ousted" find="\b([oO])uts(ed|ing(?<!could\s+outsing))\b" replace="$1ust$2"/><!--check FPs before adding outs -> oust-->
 <Typo word="Soprano" find="\b([sS])porano(s)?\b" replace="$1oprano$2"/>
 <Typo word="Guilty" find="\b([gG])ulity\b" replace="$1uilty"/>
 <Typo word="Voyage" find="\b([vV])o(?:age|yae)(s)?\b" replace="$1oyage$2"/>
 <Typo word="Signed" find="\b([sS])igend\b" replace="$1igned"/>
 <Typo word="Predominantly" find="\b([pP])redom[ie]?n[aei]ntly\b(?<![pP]redominantly)" replace="$1redominantly"/><!--see also rule "Predominately"-->
-<Typo word="Teaches/ing/s" find="\b([tT])ech(ings?|es)\b" replace="$1each$2"/>
+<Typo word="Teaches/ing/s" find="\b([tT])ech(es|ings?)\b" replace="$1each$2"/>
 <Typo word="([mb]|tr)illion (2)" find="((?:[€£￥\$]|Rs\.\s?)[\d,\.–]+(?:\s|&nbsp;)+(?:[mb]|tr))illions\b" replace="$1illion"/>
-<Typo word="Receive" find="\b([rR])ec(?:ie|i|e)v(ed?|ing)\b" replace="$1eceiv$2"/>
-<Typo word="Veil" find="\b([uU]n)?([vV])eill(ed|ing)?\b" replace="$1$2eil$3"/>
+<Typo word="Receive" find="\b([rR])ec(?:e|ie?)v(ed?|ing)\b" replace="$1eceiv$2"/>
+<Typo word="Veil" find="\b([uU]n[vV]|[vV])eill(ed|ing)?\b" replace="$1$2eil$3"/>
 <Typo word="Double euros" find="(€[\d\.–]+(?: |&nbsp;)(?:[mb]illion|t(?:housand|rillion))?) euros?\b" replace="$1"/>
 <Disabled word="space before EOL" find=" $" replace=""/>
 <Disabled word="duplicated space" find=" " replace=" "/>
-<Typo word="Independently" find="\b([Ii])ndependently-(?=[a-z]+ed\b)" replace="$1ndependently "/>
-<Typo word="A to An (2)" find="\b(?<![´ˈ׳᾿’′Ꞌꞌ`'\[\|\]\.\,\:\-\&\—\>\/])a\s+((a([bcd]|n[acdginot])|e[abBcdefgilmnpqrstvx]|i[cdglmnr]|o[bf])\w+|MVP)(?<!about|escala|est[aé]\b)\b" replace="an $1"/><!--avoid "a about", "a escala", "a esta" and "a esté"-->
+<Typo word="Independently" find="\b([iI])ndependently-(?=[a-z]+ed\b)" replace="$1ndependently "/>
+<Typo word="A to An (2)" find="\b(?<![´ˈ׳᾿’′Ꞌꞌ`'\[\|\]\.\,\:\-\&\—\>\/])a\s+((a([bcd]|n[acdginot])|e[abcdefgilmnpqrstvxB]|i[cdglmnr]|o[bf])\w+|MVP)(?<!about|es(?:cala|t[aé]\b))\b" replace="an $1"/><!--avoid "a about", "a escala", "a esta" and "a esté"-->
 <Typo word="about" find="\ba\s+about\b" replace="about"/>
-<Typo word="world's" find="\b([Tt])he\s+worlds\b(?=\s+(?:\w+est|first|most|top)\b)" replace="$1he world's"/>
+<Typo word="world's" find="\b([tT])he\s+worlds\b(?=\s+(?:\w+est|first|most|top)\b)" replace="$1he world's"/>
 <Typo word="nn-pounder" find="\b(\d+)\s+pounder(s)?\b" replace="$1-pounder$2"/>
 <Typo word="takeoff" find="\btake\s+off\b(?<=\b(a(?:fter|t)|before|during|its|on) take\s+off)" replace="takeoff"/>
 <Typo word="Publicly_" find="\b([pP])ublicly[−―–—](?=[a-z]+ed\b)" replace="$1ublicly "/>
@@ -110,11 +132,11 @@
 <Typo word="gallery_" find="\bgaler(ies|y)\b" replace="galler$1"/><!--avoid proper name Galeries-->
 <Typo word="Profile" find="\b([pP])rofli?e([ds])?\b" replace="$1rofile$2"/>
 <Typo word="Facility/Facilitates" find="\b([fF])acilti?(ates?|ies|y)\b" replace="$1acilit$2"/>
-<Typo word="(up)holding" find="\b([hH]?|[uU]ph)elding\b" replace="$1olding" />
+<Typo word="(up)holding" find="\b(h|[uU]ph)elding\b" replace="$1olding" />
 <Typo word="Foothills" find="\b([fF])oot[−―–—\s]+hills\b" replace="$1oothills" />
 <Typo word="United States'" find="\b[uU]nited\s+[sS]tate[´ˈ׳᾿‘’′Ꞌꞌ`;']s\b" replace="United States'" />
 <Typo word="US$ (1)" find="\bUS(?:D\$?|\s\$|\$)(?<=(?:\b[a-z]+\s+|[\(,]\s*)US[\s\$D]+)(?:\s|&nbsp;)?\$?(?=\d)" replace="US$" />
-<Typo word="US$ (2)" find="([\s\(~])\$?\s?((?:\d+(?:\.\d+)?|(?:\d+,)+\d{3}(?:\.\d\d)?))((?:\s|&nbsp;)+(?:[mMbB]illion|[tT](?:housand|rillion))\b)?(?<![^\$\d](?:1[89]\d\d|20\d\d))(?<!\d\s+\d+)(?:\s|&nbsp;)*US[D\$]\b" replace="$1US$$$2$3" />
+<Typo word="US$ (2)" find="([\s\(~])\$?\s?((?:\d+(?:\.\d+)?|(?:\d+,)+\d{3}(?:\.\d\d)?))((?:\s|&nbsp;)+(?:[mbMB]illion|[tT](?:housand|rillion))\b)?(?<![^\$\d](?:1[89]\d\d|20\d\d))(?<!\d\s+\d+)(?:\s|&nbsp;)*US[D\$]\b" replace="$1US$$$2$3" />
 <Typo word="Unduly" find="\b([uU])nduely\b" replace="$1nduly" />
 <Typo word="Frankish" find="[fF]rani?ksh(?<!18238 Franksh)" replace="Frankish" /><!--avoid minor planet 18238 Frankshu-->
 <Typo word="Vanderbilt" find="\bvanderbilt\b(?![^\s\.]*\.\w)" replace="Vanderbilt"/><!--avoid domains-->
@@ -138,8 +160,8 @@
 <Typo word="Fast/Slow-paced" find="\b([fF]ast|[sS]low)[−―–—\s]+paced\b" replace="$1-paced"/>
 <Typo word="a part (not apart) of" find="(?<=\s+(?:a(?:re|s)|As|be(?:c(?:ame|om(?:e|ing))|en|ing)|is|not|to\s+be|w(?:as|ere))(?:\s+(?:al(?:l|so)|now))?\s+)\bapart\s+of\b" replace="a part of"/>
 <Typo word="FedEx" find="\b[fF]ed[−―–—\s]?[eE]x\b" replace="FedEx"/>
-<Typo word="Coca-Cola" find="\b([cC]o[ck][ae][−―–—\s]*[cC]ola|[Cc]oca-cola)\b" replace="Coca-Cola"/>
-<Typo word="Off-road" find="(?<![oO]ne-)\b([oO])ff[−―–—\s]+road\b" replace="$1ff-road"/>
+<Typo word="Coca-Cola" find="\b([cC]o[ck][ae][−―–—\s]*[cC]ola|[cC]oca-cola)\b" replace="Coca-Cola"/>
+<Typo word="Off-road" find="(?<![oO]ne-)\b([oO])ff[−―–—\s]+road\b(?!\s+access)" replace="$1ff-road"/><!-- allos "cutting off road access" -->
 <Typo word="McDonald's ..." find="\bM[cC][dD]onald[´ˈ׳᾿‘’′Ꞌꞌ`;']?s\s+(All American|burger|cheese|Championship|fr(?:anchise|ench|ies)|me(?:al|nu)|Monopoly|New Zealand|Open|restaurants?|store|Super Smash)" replace="McDonald's $1"/>
 <Typo word="Heavily" find="\b([hH])eavilly[−―–—]" replace="$1eavily "/>
 <Typo word="Reschedule" find="\b([rR])e-schedul(e[ds]?|ing)\b" replace="$1eschedul$2"/>
@@ -184,12 +206,12 @@
 <Typo word="Sword fight" find="\b([sS])wordfight([a-z]*)\b" replace="$1word fight$2"/>
 <Typo word="bachelor's degree_" find="\b[bB]at?chelor[´ˈ׳᾿‘’′Ꞌꞌ`']?s?[´ˈ׳᾿‘’′Ꞌꞌ`']?\s+[dD]egree(s)?\b(?<=[a-z]\s+[bB]a[a-z´ˈ׳᾿’′Ꞌꞌ`']+\s+[dD]egrees?)(?<!bachelor's\s+degrees?)" replace="bachelor's degree$1"/><!--neg lookbehind removable-->
 <Typo word="master's degree" find="\b[mM]aster[´ˈ׳᾿‘’′Ꞌꞌ`']?s?[´ˈ׳᾿‘’′Ꞌꞌ`']?\s+[dD]egree(s)?\b(?<=[a-z]\s+[mM]a[a-z´ˈ׳᾿’′Ꞌꞌ`']+\s+[dD]egrees?)(?<!master's\s+degrees?)" replace="master's degree$1"/><!--neg lookbehind removable-->
-<Typo word="([mb]|tr)illion" find="\b(\d+(?:\s|&nbsp;)+(?:[mb]|tr))illions\s+(albums|copies|dollars|[eE]uros?|people|pounds|records|ton(?:ne)?s|view(?:er)?s|visitors|years)\b" replace="$1illion $2"/>
+<Typo word="([mb]|tr)illion" find="\b(\d+(?:\s|&nbsp;)+(?:[mb]|tr))illions\s+(albums|copies|dollars|[eE]uros?|p(?:eople|ounds)|records|ton(?:ne)?s|vi(?:ew(?:er)?s|sitors)|years)\b" replace="$1illion $2"/>
 <Typo word="In comparison,_" find="\bIn\s+comparison(?=\s)(?!\s+(?:studies\b|to\b|with\b))" replace="In comparison,"/>
 <Typo word="incredible" find="\bincre?[ai]d[ai]bl([ey])\b" replace="incredibl$1"/>
 <Typo word="shown_" find="\bshowed\b(?<=\b(?:are|be(?:en)?|is|w(?:as|ere))\s+showed)" replace="shown"/>
 <Typo word="bachelor's and master's degrees" find="\bbachelor[´ˈ׳᾿‘’′Ꞌꞌ`']?s? and master[´ˈ׳᾿‘’′Ꞌꞌ`']?s? degree(s)?\b" replace="bachelor's and master's degree$1"/>
-<Typo word="Furthermore," find="\b(Accordingly|Consequently|Even\s+so|F(?:or\s+example|urthermore)|In(?:deed|\s+other\s+words)|M(?:eanwhile(?!\s+Gardens)|oreover)|Nevertheless|On\s+the\s+other\s+hand|Therefore|Subsequently(?!\s+(?:enacted|renamed|told)))(?!\s*\|)(?=\s+[\p{L}´ˈ׳᾿’′Ꞌꞌ`'\[\|\]]+\b)" replace="$1,"/>
+<Typo word="Furthermore," find="\b(Accordingly|Consequently|Even\s+so|F(?:or\s+example|urthermore)|In(?:deed|\s+other\s+words)|M(?:eanwhile(?!\s+Gardens)|oreover)|Nevertheless|On\s+the\s+other\s+hand|Therefore|Subsequently(?!\s+(?:enacted|renamed|told)))(?!\s+\|)?(?=\s+[\p{L}´ˈ׳᾿’′Ꞌꞌ`'\[\|\]]+\b)" replace="$1,"/>
 <Typo word="As a result," find="\bAs\s+a\s+result(?=\s)(?!\s+of\b)" replace="As a result,"/>
 <Typo word="However," find="\bHowever\s+(?=(?:a(?:ccording|fter|s)|b(?:e(?:cause|fore)|y)|d(?:espite|u(?:e|ring))|f(?:or|rom)|i[fn]|later|not|on(?:ly)?|s(?:ince|ometimes)|there|w(?:hen|ith))\b)" replace="However, "/>
 <Typo word="Commercially" find="\b([cC])ommerciall?y-(?=[a-z]+(?:ble\b|ed\b|ful\b))(?![a-z]+-)" replace="$1ommercially "/>
@@ -207,7 +229,7 @@
 <Typo word="centuries-old" find="\b(centuri|decad)es\s+old\b(?<=\b(?:[aA]|[tT]he(?:ir)?)\s+[a-z]+\s+old)" replace="$1es-old"/>
 <Typo word="intertribal" find="\b([iI])nter[−―–—\s]+tribal\b" replace="$1ntertribal"/>
 <Typo word="Passageway" find="\b([pP])assage[−―–—\s]+way(s)?\b" replace="$1assageway$2"/>
-<Typo word="A n-something" find="\b([\d]+[\d,\.]*|e(?:ight(?:een|y?)|leven)|f(?:i(?:ft(?:een|y)|ve)|o(?:rty|ur(?:teen)?))|hundred|nine(?:t(?:een|y))?|one|s(?:even|ix)(?:t(?:een|y))?|t(?:en|h(?:irt(?:een|y)|ousand|ree)|w(?:e(?:lve|nty)|o)))\b(?<=\b(?:[aA](?:dditional|n?)|first|[hH](?:er|is)|[iI]ts|second|th(?:eir|ird)|Their)\s+[\da-z]+)(?:&nbsp;|\s+)(?!member\s+[a-z]+s\b)(acre|bed|cylinder|d(?:ay|ecker|oor)|foot|g(?:a(?:llon|me)|oal)|h(?:o(?:le|rsepower|ur)|uman)|inch|lit(?:er|re)|m(?:an|e(?:mber|t(?:er|re))|i(?:le|nute)|onth)|ounce|p(?:a(?:ge|ssenger)|erson|o(?:int|und))|r(?:o(?:om|und)|unner)|s(?:e(?:a(?:son|t(?:er)?)|cond)|ong|t(?:age|ore?y))|ton|vote|w(?:eek|heel(?:e[dr])?|oman)|y(?:ard|ear))(?=[,\s]|-(?:deep|high|long|old|tall|wide)\b)(?!\s+(?:ago|a[st]|by|deep|for|high|i[ns]|long|o(?:f|ld)|t(?:all|here)|w(?:as|i(?:de|th)))\b)(?<!\b\d{4}\s+(?:game|s(?:e(?:ason|cond)|ong|t(?:age|ory))|vote))(?<![dD]uring\s+h(?:er|is)\s+one\s+season|told\s+h(?:er|im)\s+one\s+day|send\s+for\s+h(?:er|im)\s+one\s+day)" replace="$1-$2"/><!--Note: If the n-something potentially has a year as the 'n', be sure to add the 'something' to the "(?<!\b\d{4}\s+" false-positive alternation list.-->
+<Typo word="A n-something" find="\b([\d]+[\d,\.]*|e(?:ight(?:een|y?)|leven)|f(?:i(?:ft(?:een|y)|ve)|o(?:rty|ur(?:teen)?))|hundred|nine(?:t(?:een|y))?|one|s(?:even|ix)(?:t(?:een|y))?|t(?:en|h(?:irt(?:een|y)|ousand|ree)|w(?:e(?:lve|nty)|o)))\b(?<=\b(?:[aA](?:dditional|n?)|first|[hH](?:er|is)|[iI]ts|second|th(?:eir|ird)|Their)\s+[\da-z]+)(?:&nbsp;|\s+)(?!member\s+[a-z]+s\b)(acre|bed|cylinder|d(?:ay|ecker|oor)|foot|g(?:a(?:llon|me)|oal)|h(?:o(?:le|rsepower|ur)|uman)|inch|lit(?:er|re)|m(?:an|e(?:mber|t(?:er|re))|i(?:le|nute)|onth)|ounce|p(?:a(?:ge|ssenger)|erson|o(?:int|und))|r(?:o(?:om|und)|unner)|s(?:e(?:a(?:son|t(?:er)?)|cond)|ong|t(?:age|ore?y))|ton|vote|w(?:eek|heel(?:e[dr])?|oman)|y(?:ard|ear))(?=[,\s]|-(?:deep|high|long|old|tall|wide)\b)(?!\s+(?:a(?:go|[st])|by|deep|for|high|i[ns]|long|o(?:f|ld)|t(?:all|here)|w(?:as|i(?:de|th)))\b)(?<!\b\d{4}\s+(?:game|s(?:e(?:ason|cond)|ong|t(?:age|ory))|vote))(?<![dD]uring\s+h(?:er|is)\s+one\s+season|told\s+h(?:er|im)\s+one\s+day|send\s+for\s+h(?:er|im)\s+one\s+day)" replace="$1-$2"/><!--Note: If the n-something potentially has a year as the 'n', be sure to add the 'something' to the "(?<!\b\d{4}\s+" false-positive alternation list.-->
 <Typo word="n-year" find="\b([\d]+[\d,\.]*|e(?:ight(?:een|y?)|leven)|f(?:i(?:ft(?:een|y)|ve)|o(?:rty|ur(?:teen)?))|hundred|nine(?:t(?:een|y))?|one|s(?:even|ix)(?:t(?:een|y))?|t(?:en|h(?:irt(?:een|y)|ousand|ree)|w(?:e(?:lve|nty)|o)))(?:&nbsp;|\s+)(month|year)\b(?<= [\da-z]+(?:&nbsp;[a-z]+|\s+[a-z]+))(?=\s+(?:a(?:bsence|ffair|greement|ss(?:ignment|ociation))|b(?:a(?:n|ttle)|reak)|c(?:a(?:mpaign|reer)|ease-?fire|losure|o(?:m(?:a|petition)|ntract|urse)|ruise|ycle)|d(?:e(?:a(?:dline|l)|lay|ployment)|rought|uration)|e(?:ffort|n(?:gagement|listment)|x(?:hibit(?:ion)?|i(?:le|stence)|pedition|tension))|feasibility|g(?:ap|estation|uest)|h(?:i(?:atus|story)|ospital)|i(?:llness|n(?:cumbent|jury|ternship|vestigation))|j(?:ail|ourney)|l(?:ay-?off|ea[sv]e|ife-?span|o(?:an|ckout))|m(?:aintenance|i(?:litary|ssion)|o(?:dernization|ratorium))|notice|overhaul|p(?:artnership|eriod|lan|osting|r(?:ison|o(?:cess|fessional|gram(?:me)?|ject)))|r(?:e(?:c(?:overy|urring)|fit|gular|ign|lationship|s(?:earch|idency|tricted))|otation|un)|s(?:abbatical|cho(?:larship|ol)|e(?:ason|ntence)|iege|ojourn|p(?:an|e(?:aking|ll))|t(?:a(?:rter|y)|int|r(?:ike|uggle)|udy)|u(?:bs(?:cription|idy)|pen(?:ded|sion)))|t(?:e(?:nure|rm)|our|r(?:aining|eatment|i(?:al|p)|uce))|v(?:eteran|isit|oyage)|w(?:a(?:it(?:ing)?|r)|orkshop))\b)" replace="$1-$2"/>
 <Typo word="One-night stand" find="\bone\b(?<=\b[aA]\s+one)[−―–—\s]+night[−―–—\s]+stand\b(?<!one-night\s+stand)" replace="one-night stand"/><!--neg lookbehind removable-->
 <Typo word="Long-standing" find="\blong\s+standing\b(?<=\b(?:[aA]|[tT]he)\s+long\s+standing)(?!\s+(?:in\b|o(?:f\b|vation\b)))" replace="long-standing"/>
@@ -246,7 +268,6 @@
 <Typo word="Right-hand man" find="\b([rR])ight\s+hand\s+(guy|man|person|woman)\b" replace="$1ight-hand $2"/>
 <Typo word="Life-threatening" find="\b([lL])ife\s+threatening\b" replace="$1ife-threatening"/>
 <Typo word="Reassign" find="\b([rR])e-assign(ed|ing|ments?|s?)\b" replace="$1eassign$2"/>
-<Typo word="Buildup" find="\bbuild\s+up(?=\s+of\b)|\bbuild\s+up\b(?<=\b(?:[aA](?:ny)?|d(?:angerous|ramatic)|eventual|gradual|huge|large|m(?:a(?:jor|ssive)|ilitary)|naval|plaque|rapid|s(?:ignificant|low)|The|t(?:he|roop))\s+build\sup)" replace="buildup"/>
 <Typo word="Internationally" find="\b([iI])nternat+ionall?y-(?=[a-z]+ed\b)" replace="$1nternationally "/>
 <Typo word="Fuentes de Oñoro" find="\bFuentes de Onoro\b" replace="Fuentes de Oñoro"/>
 <Typo word="His/Her Majesty's Stationery Office" find="\bH(\.\s?M\.?|\sM\.?|M\.?|er Majesty[´ˈ׳᾿‘’′Ꞌꞌ`']s|is Majesty[´ˈ׳᾿‘’′Ꞌꞌ`']s) Stationary Office\b" replace="H$1 Stationery Office"/>
@@ -310,7 +331,7 @@
 <Typo word="Republic" find="\b([rR])e(?:bu[bp]|pup)lic(ans?|s?)\b" replace="$1epublic$2"/>
 <Typo word="Also (twice)" find="\balso\s+(are|could|is|w(?:as|ere|ould))\s+also\b" replace="$1 also"/>
 <Typo word="Also (2 times)" find="\balso\s+ha([ds]|ve)\s+also\b" replace="also ha$1"/>
-<Typo disabled="Newly" find="\b([nN])ewly-(?=[a-z]+ed\b)(?![a-z]+-|wed)" replace="$1ewly "/><!--disabled: too general; context-specific-->
+<Typo word="Newly" find="\b([nN])ewly-(?=(?:[a-z]+ed\b|(?:a(?:rriving|vailable)|b(?:o(?:rn|ught)|uilt)|d(?:eveloping|rawn|ug)|e(?:ligible|merging)|forming|independent|made|popular|r(?:e(?:b(?:orn|uilt)|drawn)|ich)|s(?:hot|ingle)|w(?:ealthy|on|ritten))\b))(?!wed)" replace="$1ewly "/>
 <Typo word="Recently" find="\b([rR])ecently-(?=[a-z]+ed\b)(?![a-z]+-)" replace="$1ecently "/>
 <Typo word="Horse-drawn" find="\b([hH])orse\s+drawn(?= (?:b(?:oat|use?)|c(?:ar(?:riage|t)|hariot|oache?)|fire|hearse|omnibuse?|railway|s(?:leigh|treetcar)|tra(?:m(?:way)?|nsport)|vehicle|wagon)s?\b)" replace="$1orse-drawn"/>
 <Typo word="Mason–Dixon line" find="\b[mM]ason[−―–—\s][dD]ixon\s+[lL]ine\b" replace="Mason–Dixon line"/>
@@ -410,7 +431,7 @@
 <Typo word="Research" find="\b([rR])ea?s(?:a(?:[aeiu]r[aeiou]?ch?|r[aeiou]?ch?)|e(?:a(?:ch|r[aeiou]?ch?)|[eiu]r[aeiou]?ch?|r[aeiou]?ch?)|i(?:[aeiu]r[aeiou]?ch?|r[aeiou]?ch?)|r[aeiou]?ch?|u(?:[aeiu]r[aeiou]?ch?|r[aeiou]?ch?))(?<![rR]es(?:earch|ura?c))(e(?:[ds]|rs?)|ing)?\b" replace="$1esearch$2"/><!--Fuzzy rule, extends & completely replaces existing rule "Research"-->
 <Typo word="(Dis/Re)Organi(s/z)ation" find="\b([dD]iso|[oO]|[rR]eo)r[aeiou]?g[aeiou]?[aeiou]?n[aeiou]?[aeiou]?([sz])[aeiou]?[aeiou]?ti?(?<!rgani[sz]ati)on(al(?:ly)?|s?)\b" replace="$1rgani$2ation$3"/><!--Fuzzy rule, extends & completely replaces existing rule "Organization"-->
 <Typo word="so-called_" find="\bso\scalled\b(?<=\b(?:[aA]|by|[hH](?:er|is)|of|[tT]he(?:ir|se)?|[tT]his)\sso\scalled)" replace="so-called"/><!--avoid variants of "it is so called because"-->
-<Typo word="(At/Con/Dis/Re(dis))Tribute" find="\b([aA]tt|[cC]ont|[dD]ist|[rR]edist|[tT])t?(?:ribu(e[ds]|i(?:ng|on))\b|(?:[aeiou]?r(?:[iu]+)?b(?:[aeiu]+)?t(?<!arbat|[tT]ribut)|ritut)([a-z]+)\b(?<!Attribates|b(?:at(?:a(?:lis|ria|s?)|e(?:jamae|lla)?|i(?:a?|on)|or?|rix|u[ms])|et(?:ek|isonios|sk[iy]?s?|t(?:ite)?)|it(?:an?|[ho]|kan|t(?:ite)?)|ott(?:ite)?|u(?:atur|it[aeiou](?:gli(?:de)?|le|r?)|t(?:aline|h(?:ylazine)?|it|r[oy]n|t(?:ite?|s?))|utti))|conturbat(?:ed|um)|disturbator[ey]|k(?:aya|o[iy]s?)|T(?:arb(?:butt(?:on)?|et[hs]|i(?:at(?:e|ul)|t[sz]a?))|er(?:b(?:a(?:atar|tas)|itlah)|ibithia|ubetaake)|or(?:b(?:at(?:eheydarieh|[io]|ross)|i(?:at[io]|tch)|ut(?:rol|ton))|iibata)|r(?:ib(?:at(?:e|io)|et(?:ek|o(?:n|on|y)|t)|itch)|ub(?:at(?:a|ch(?:ov)?|sa)|e(?:ats|t(?:a|chin(?:o|sky)|sk(?:a|o(?:go|j))|zin))|it(?:s[iy]na?|t)|t(?:ensee|hob)|ute))|urb(?:at(?:a|hi|[iu]|or?|r(?:ix|oss))|et(?:li|ts?)|it(?:een|ity)|utt))|t(?:ax|rubed)|urbitt?s?))(?![^\s\.]*\.\w)(?<!\.[^\s\.]{0,999})" replace="$1ribut$2$3"/><!--avoid domains & URLs-->
+<Typo word="(At/Con/Dis/Re(dis))Tribute" find="\b([aA]tt|[cC]ont|[dD]ist|[rR]edist|[tT])t?(?:ribu(e[ds]|i(?:ng|on))\b|(?:[aeiou]?r(?:[iu]+)?b(?:[aeiu]+)?t(?<!arbat|[tT]ribut)|ritut)([a-z]+)\b(?<!Attribates|b(?:at(?:a(?:lis|ria|s?)|e(?:jamae|lla)?|i(?:a?|on)|or?|rix|u[ms])|et(?:ek|isonios|sk[iy]?s?|t(?:ite)?)|it(?:an?|[ho]|kan|t(?:ite)?)|ott(?:ite)?|u(?:atur|it[aeiou](?:gli(?:de)?|le|r?)|t(?:aline|h(?:ylazine)?|it|r[oy]n|t(?:ite?|s?))|utti))|conturbat(?:ed|um)|disturbator[ey]|k(?:aya|o[iy]s?)|T(?:arb(?:butt(?:on)?|et[hs]|i(?:at(?:e|ul)|t[sz]a?))|er(?:b(?:a(?:atar|tas)|itlah)|ibithia|ubetaake)|or(?:b(?:at(?:eheydarieh|[io]|ross)|i(?:at[io]|tch)|ut(?:rol|ton))|iibata)|r(?:ib(?:at(?:e|io)|et(?:ek|o(?:n|on|y)|t)|itch)|ub(?:at(?:a|ch(?:ov)?|sa)|e(?:ats|t(?:a|chin(?:o|sky)|sk(?:a|o(?:go|j))|zin))|it(?:s[iy]na?|t)|t(?:ensee|hob)|ute))|urb(?:at(?:a|hi|[iu]|or?|r(?:ix|oss))|et(?:li|ts?)|it(?:een|ity)|utt))|t(?:ax|rubed)|urbitt?s?))(?![^\s\.]*\.\w)(?<!\.[^\s\.]{0,999})(?<!T(?:arbutton|ribe[tT]ones))" replace="$1ribut$2$3"/><!--avoid domains & URLs-->
 <Typo word="Individual* (1)" find="\b([iI])n[aeiou]?d[aeiou]?[aeiou]?v[aeiou]?[aeiou]?d?[aeiou]?[dl]?[aeiou]?[aeiou]?l(?<!nd(?:avl|evel))(?!e[s\b]|l(?:e|os))[aeou]?(?<!ndividu[ae]l)([a-z-\´ˈ׳᾿’′Ꞌꞌ`']{0,99})" replace="$1ndividual$2"/><!--Fuzzy rule to supplement existing "Individual" rule-->
 <Typo word="Self-" find="\b([sS])elf\s+(?<=\s[sS]elf\s{1,9})\b([sS])elf\s+(?<=\s[sS]elf\s{1,9})\b(a(?:b(?:a(?:ndon(?:ed|ment)?|se(?:ed|ment)?)|negati(?:ng|on)|sor(?:bed|ption)|use)|c(?:cusat(?:ion|ory)|t(?:i(?:ng|v(?:ating|ity))|uali[sz](?:ation|e[ds]?)))|d(?:dressed|hesive|just(?:ing|ment)|mi(?:nist(?:er(?:ed|ing|s?)|ration)|r(?:ation|er|ing))|v(?:ancement|erti(?:ng|se(?:ment|r))|ocacy))|ffirmation|ggrandi[sz](?:ement|ing)|li(?:enation|gning)|n(?:aly(?:si(?:ng|s)|zing)|nihilation)|pp(?:ointed|ro(?:bation|v(?:al|ing(?:ly)?)))|ss(?:e(?:mbl[ey]|rti(?:ng|on|ve(?:ness)?)|ssment)|ur(?:ance|ed(?:ly)?))|ware(?:ness)?)|b(?:alancing|etrayal|uild(?:er)?)|c(?:a(?:ncell?ing|tering)|e(?:n(?:sorship|te?red(?:ly|ness)?)|rtif(?:icat(?:e|ion)|y))|l(?:eaning|osing)|o(?:cking|lou?red|m(?:mand|patible)|n(?:ce(?:it(?:ed)?|pt)|demn(?:ation|ed|ing)|f(?:ess(?:ed(?:ly)?|ion(?:al)?)|iden(?:ce|t(?:ly)?))|gratulat(?:ion|ory)|s(?:cious(?:ly|ness)?|isten(?:cy|t(?:ly)?))|t(?:ain(?:ed|ment)|empt(?:uous)?|r(?:adict(?:i(?:ng|on)|ory)|ol(?:led)?)))|rrect(?:i(?:ng|on)|s?))|r(?:eat(?:ed|i(?:ng|on))|itic(?:al|ism)))|d(?:e(?:ce(?:i(?:t|v(?:er|ing))|pti(?:on|ve))|f(?:e(?:ating|n[cs](?:e|ive))|inition)|l(?:ight|usion)|n(?:ial|ying)|p(?:enden(?:ce|t)|reci?at(?:i(?:ng(?:ly)?|on)|ory))|s(?:pair|tr(?:oying|uct(?:i(?:on|ve(?:ly)?)|s?)))|termination|v(?:elopment|otion))|i(?:agnose|ffusion|rect(?:ed|i(?:ng|on))|s(?:c(?:iplined?|overy)|gust))|oubt|r(?:amati[sz]ation|ive))|e(?:ducat(?:ed|ion)|ffac(?:ement|ing(?:ly)?)|mploy(?:ed|ment)|nclosed|steem|v(?:aluation|iden(?:ce|t(?:ly)?))|x(?:amination|cited|ecuting|istent|p(?:lanatory|ressi(?:on|ve))))|f(?:aced|e(?:ed(?:er|ing)|rtil(?:e|i(?:sation|ty|z(?:ation|ed|ing))))|inanc(?:ed|ing)|la(?:gellation|tter(?:ing|y))|orgetful(?:ness)?|ulfil(?:l(?:ing|ment)|ment))|g(?:enerating|lorification|overn(?:ed|ing|ment)|ravitation|uided)|h(?:a(?:at(?:e|red)|rm(?:er)?)|elp)|i(?:denti(?:fication|ty)|m(?:age|molation|p(?:o(?:rtan(?:ce|t(?:ly)?)|sed)|rovement))|n(?:compatib(?:ility|le)|du(?:c(?:ed|t(?:ance|i(?:on|ve)))|lgen(?:ce|t(?:ly)?))|flicted|surance|terest(?:ed)?|volve(?:d|ment)))|justif(?:icat(?:ion|ory)|ying)|know(?:ing|ledge)|l(?:i(?:miting|quidating)|o(?:a(?:d(?:er|ing)|thing)|cking|v(?:e|ing)))|zzNotzzmadezz|m(?:a(?:nag(?:ement|ing)|stery)|edicat(?:e[ds]?|ion)|o(?:ck(?:ery|ing(?:ly)?)|rtification|ti(?:on|vat(?:ed|i(?:ng|on)))|ving)|u(?:rder(?:er)?|tilation))|neglect|o(?:bse(?:rvation|ss(?:ed|ion))|pinion(?:ated)?)|p(?:arod(?:ic|y(?:ing)?)|erpetuati(?:ng|on)|ity(?:ing(?:ly)?)?|o(?:l(?:icing|linat(?:ed|i(?:ng|on)|or))|rtrait(?:s?|ure)|ssess(?:ed|ion))|r(?:aise|eservation|o(?:claimed|duced|mot(?:er|i(?:ng|on))|p(?:agat(?:es?|i(?:ng|on))|ell(?:ed|ing))|tecti(?:on|ve)|ving))|ublish(?:e[drs])?)|r(?:a(?:ising\sflour|ting)|e(?:ali[sz]ation|corded|f(?:eren(?:ce|tial(?:ity|ly)?)|le(?:cti(?:on|ve)|xive))|g(?:ard(?:ing)?|ulat(?:i(?:ng|on)|ory))|l(?:eas(?:ed?|ing)|ian(?:ce|t(?:ly)?))|n(?:ew(?:al|ing)|unciation)|p(?:ort|roach(?:ful)?)|s(?:pect(?:ing)?|train(?:ed|t))|ve(?:aling|lat(?:ion|ory)))|i(?:sing\sflour|ght(?:eous(?:ly|ness)?|ing))|ule)|sa(?:crific(?:e|i(?:al|ng))|tisf(?:action|ied))|se(?:aling|e[dk](?:er|ing)?|lect(?:i(?:ng|on)|s?)|rvi(?:ce|ng))|s(?:hifter|imilar(?:ity)?|laughter|own?|t(?:art(?:er|ing)?|eril(?:e|ity)|i(?:ck|mulation)|orage|yled)|u(?:bsistent|fficien(?:cy|t(?:ly)?)|ggestion|pport(?:ing)?|rrender|tain(?:ed|ing))|ystem)|t(?:a(?:iling|nn(?:er|ing)|pping|ught)|i(?:mer|tled)|orture|ra(?:cking|nscendence))|understanding|zzNotzzwillzz|w(?:i(?:lled|nding)|orth))\b(?!-)" replace="$1elf-$2"/>
 <Typo word="Each other's" find="\beach\s+others[´ˈ׳᾿‘’′Ꞌꞌ`']? " replace="each other's "/>
@@ -447,7 +468,7 @@
 <Typo word="Frostbite" find="\b([fF])rost[−―–—\s]bit(e|ten)\b" replace="$1rostbit$2"/>
 <Typo word="game-winning" find="\bgame\s+winning\s+(goal|h(?:it|ome)|move|play)\b" replace="game-winning $1"/>
 <Typo word="walk-off" find="\bwalkoff\b" replace="walk-off"/>
-<Typo word="On board" find="\b([oO])n-?board(?<!-onboard)(?= (?:a[nst]?|ll|for|in|ship|t(?:h(?:at|ese|e)|o)|w(?:hen|ith|ere))\b|[,\.;:])" replace="$1n board"/><!--see talk page 23 July 2012-->
+<Typo word="On board" find="\b([oO])n-?board(?<!-onboard)(?= (?:a[nst]?|for|ll|in|ship|t(?:h(?:at|e(?:se)?)|o)|w(?:ere|hen|ith))\b|[,\.;:\)])" replace="$1n board"/><!--see talk page 23 July 2012-->
 <Typo word="High-ranking officials" find="\b([hH])igh(?<![vV]ery high)(e(?:r|st))? rank(ed|ing)\s+(m(?:embers?|ilitary)|offic(?:ers?|ials?))\b" replace="$1igh$2-rank$3 $4"/>
 <Typo word="Skyrocket" find="\b([sS])ky[−―–—\s]rocket(ed|ing)\b" replace="$1kyrocket$2"/>
 <Typo word="Grief-stricken" find="\b([gG])rief stricken\b" replace="$1rief-stricken"/>
@@ -456,7 +477,7 @@
 <Typo word="War of Jenkins' Ear" find="\bWar of [jJ]enkin(?:[´ˈ׳᾿‘’′Ꞌꞌ`']s|s[´ˈ׳᾿‘’′Ꞌꞌ`']?) Ear\b" replace="War of Jenkins' Ear"/>
 <Typo word="Spearhead" find="\b([sS])pear[−―–—\s]head(ed|ing)\b" replace="$1pearhead$2"/><!--but 'spear head' might be a noun-->
 <Typo word="(Pre/Re/Un)Format" find="\b([fF]|[pP]ref|[rR]ef|[uU]nf)omat(?!\s[mM]artin|[mM]artin)(t?(?:a(?:ble|nks?)|e(?:d?|rs?)|i(?:ngs?|on(?:als?|[s\b])|v(?:e(?:ly|s?)|ity))|k(?:ii|y)|or(?:ies|y)|s(?:k(?:ii|y))?))?" replace="$1ormat$2"/><!--avoid MŠK Fomat Martin-->
-<Typo word="(Working/upper/middle/lower)-class" find="\b([lL]ower|[mM]iddle|[uU]pper|[wW]orking)\s+[cC]lass\s+(b(?:ackground|oy)s?|famil(?:ies|y)|girls?|ho(?:mes?|uses?)|neighbou?rhoods?|p(?:arents|eople)|roots|(wo)?m[ae]n)\b" replace="$1-class $2"/>
+<Typo word="(Working/upper/middle/lower)-class" find="\b([lL]ower|[mM]iddle|[uU]pper|[wW]orking)\s+[cC]lass\s+(b(?:ackgrounds?|oys?)|famil(?:ies|y)|girls?|ho(?:mes?|uses?)|neighbou?rhoods?|p(?:arents|eople)|roots|(wo)?m[ae]n)\b" replace="$1-class $2"/>
 <Typo word="(Upper/lower)-middle-class" find="\b([lL]ow|[uU]pp)er\s+middle-class\s+(backgrounds?|famil(?:ies|y)|ho(?:mes?|uses?)|neighbou?rhoods?|people|(wo)?m[ae]n)\b" replace="$1er-middle-class $2"/>
 <Typo word="Postscript" find="\b([pP])ostcript\b" replace="$1ostscript"/>
 <Typo word="Counterbalance" find="\b([cC])ounter[−―–—\s]balanc(e[ds]?|ing)\b" replace="$1ounterbalanc$2"/>
@@ -507,7 +528,7 @@
 <Typo word="King's Lynn" find="\bKing[´ˈ׳᾿‘’′Ꞌꞌ`;]?s Lynn\b" replace="King's Lynn"/>
 <Typo word="Poets' Corner" find="\bPoet(?:[´ˈ׳᾿‘’′Ꞌꞌ`']s[´ˈ׳᾿‘’′Ꞌꞌ`']?|s[´ˈ׳᾿‘’′Ꞌꞌ`]?) Corner\b" replace="Poets' Corner"/>
 <Typo word="Leonardo da Vinci" find="\bLeonardo\s+(?:D[ae]\s?[vV]|d(?:a(?:[vV]| v)|e [vV]))inci\b" replace="Leonardo da Vinci"/>
-<Typo disabled="well received" find="\b([wW])ell-received\b(?=\.| (?:by\b|in\b)| at\b)" replace="$1ell received"/><!--disabled: context-specific-->
+<Typo word="well received" find="\b([wW])ell-received\b(?=\.|\s+(?:at\b|by\b|in\b))" replace="$1ell received"/>
 <Typo word="Apostles' Creed" find="\bApostle(?:[´ˈ׳᾿‘’′Ꞌꞌ`']s[´ˈ׳᾿‘’′Ꞌꞌ`']?|s[´ˈ׳᾿‘’′Ꞌꞌ`]?) Creed\b" replace="Apostles' Creed"/>
 <Typo word="Peasants' Revolt" find="\bPeasant(?:[´ˈ׳᾿‘’′Ꞌꞌ`']s[´ˈ׳᾿‘’′Ꞌꞌ`']?|s[´ˈ׳᾿‘’′Ꞌꞌ`]?) Revolt\b" replace="Peasants' Revolt"/>
 <Typo word="Years' War" find="\b(Nine|S(?:even|ixty)|T(?:en|hirt(?:een|y))|Eighty|Hundred) (?:year[´ˈ׳᾿‘’′Ꞌꞌ`;']?s[´ˈ׳᾿‘’′Ꞌꞌ`']? [wW]|Year(?:[´ˈ׳᾿‘’′Ꞌꞌ`']s[´ˈ׳᾿‘’′Ꞌꞌ`']? [wW]|s(?:[´ˈ׳᾿‘’′Ꞌꞌ`] [wW]|' w| [wW])))ar\b" replace="$1 Years' War"/>
@@ -685,8 +706,9 @@
 
 ====New capitalisation====
 <syntaxhighlight lang="xml">
-<Typo word="Kurd" find="\bkurd(s|ish|istani?|istanê|î)\b(?![^\s\.]*\.\w)" replace="Kurd$1"/><!--avoid domains-->
-<Typo word="GPU" find="\b(?<=\s)(?<!\|\s{0,9})([Gg]pu)\b(?![^\s\.]*\.\w)" replace="GPU"/><!--avoid in infobox, filenames i.e mydriver/gpu and domains-->
+<Typo word="Instagram" find="\binstagram\b" replace="Instagram"/>
+<Typo word="Kurd" find="\bkurd(is(?:h|tan[iê]?)|[sî])\b(?![^\s\.]*\.\w)" replace="Kurd$1"/><!--avoid domains-->
+<Typo word="GPU" find="\b(?<=\s)(?<!\|\s{0,9})([gG]pu)\b(?![^\s\.]*\.\w)" replace="GPU"/><!--avoid in infobox, filenames i.e mydriver/gpu and domains-->
 <Typo word="Pro Tools" find="\b[pP]ro(?:\st|[tT])ools\b" replace="Pro Tools"/>
 <Typo word="Microsoft PowerPoint" find="\b[mM]icrosoft\s+[pP]owerpoint\b" replace="Microsoft PowerPoint"/>
 <Typo word="Pacific Ocean" find="(?!Pacific Ocean)\b[pP]acific\s+[oO]cean\b" replace="Pacific Ocean"/>
@@ -781,7 +803,7 @@
 <Typo word="Nîmes" find="\bNimes\b" replace="Nîmes"/>
 <Typo word="Nuevo León" find="\bNuevo\s+Leon\b" replace="Nuevo León"/>
 <Typo word="Ōkārito" find="\bOkarito\b" replace="Ōkārito"/>
-<Typo word="Pâté" find="\bpat[èeé](s)?\b(?<!\bbald\s+pate)" replace="pâté$1"/><!--avoid surname Pate or Paté, avoid bald pate-->
+<Typo word="Pâté" find="\bpat[èeé](s)?\b(?<!\b(bald|shave[dn])\s+pate)" replace="pâté$1"/><!--avoid surname Pate or Paté, avoid bald/shaved/shaven pate-->
 <Typo word="Périg(ord/(u)eux)" find="\bP[èe]rig(eux|ord|ueux)\b" replace="Périg$1"/>
 <Typo word="Provençal" find="\bProvencal\b" replace="Provençal"/>
 <Typo word="Querétaro" find="\bQuer[èe]taro\b" replace="Querétaro"/>
@@ -853,7 +875,7 @@
 <Typo word="Aggression" find="\b([aA])g(?:gre|res?)s(i(?:ons?|ve[a-z]*)|ors?)\b" replace="$1ggress$2"/>
 <Typo word="Aggrieve" find="\b([aA])g(?:grei|r(?:ei|ie))v(e[ds]?|ing)\b" replace="$1ggriev$2"/>
 <Typo word="(Dis)Agree" find="\b(A(?!gre\b)|a|[dD]isa)g(?:gre+|re(?:ee)?)(abl[ey]|[ds]?|ing|ments?)\b" replace="$1gree$2"/><!--avoid Agre-->
-<Typo word="Air-" find="\b([aA])r?i(b(?:ags?|oats?)|cr(?:afts?|ews?)|d(?:ate|rops?)|f(?:ares?|lows?|oils?)|glow|h(?:eads?|oles?)|i(?:est|ngs?)|l(?:ess|i(?:fts?|kes?|ne(?:rs?|s?)))|m(?:a(?:il|n)|en)(?<!Aiman)|p(?:arks?|la(?:nes?|y)|o(?:[rs]ts?))|s(?:h(?:eds?|ips?|o[tw]s?)|ick|pace)|ti(?:mes?|ng)|w(?:a(?:rds?|ves?|ys?)|ise|om[ae]n))\b" replace="$1ir$2"/><!--avoid given name Aiman-->
+<Typo word="Air-" find="\b([aA])r?i(b(?:ags?|oats?)|cr(?:afts?|ews?)|d(?:ate|rops?)|f(?:ares?|lows?|oils?)|glow|h(?:eads?|oles?)(?<!Aihole)|i(?:est|ngs?)|l(?:ess|i(?:fts?|kes?|ne(?:rs?|s?)))|m(?:a(?:il|n)|en)(?<!Aim[ae]n)|p(?:arks?|la(?:nes?|y)|o(?:[rs]ts?))|s(?:h(?:eds?|ips?|o[tw]s?)|ick|pace)|ti(?:mes?|ng)|w(?:a(?:rds?|ves?|ys?)|ise|om[ae]n))\b" replace="$1ir$2"/><!--avoid given names Aiman, Aimen, place name Aihole-->
 <Typo word="Airborne" find="\bairbourne?\b" replace="airborne"/><!--avoid Airbourne, a band-->
 <Typo word="Aircraft" find="\b([aA])ir(?:c|rcr)ar?ft(s)?\b" replace="$1ircraft$2"/>
 <Typo word="Albeit" find="\b([aA])l(?:bie|lb(?:ei|ie))t\b" replace="$1lbeit"/>
@@ -885,7 +907,7 @@
 <Typo word="(Ambi/Pre)valent" find="\b([aA]mbi|[pP]re)v(?:ala|el[ae])n([ct][a-z]*)\b" replace="$1valen$2"/>
 <Typo word="Amend" find="\b([aA])dmend(a(?:ble|tory)|ed|ing|ments?|s?)\b" replace="$1mend$2"/>
 <Typo word="Ammunition" find="\b([aA])m+untion(s)?\b" replace="$1mmunition$2"/>
-<Typo word="Amock" find="\b([aA])m[o]ck\b" replace="$1mok"/><!-- Amuck is valid https://www.merriam-webster.com/dictionary/amuck-->
+<Typo word="Amock" find="\b([aA])mock\b" replace="$1mok"/><!-- Amuck is valid https://www.merriam-webster.com/dictionary/amuck-->
 <Typo word="Among" find="\b([aA])mo?ung(st)?\b" replace="$1mong$2"/>
 <Typo word="Amongst" find="\b([aA])mon(?:ge)?st\b" replace="$1mongst"/>
 <Typo word="Amount" find="\b([aA])mout(ed|ing|s?)\b" replace="$1mount$2"/>
@@ -1345,7 +1367,7 @@
 <Typo word="Defensive" find="\b([dD])efencive([a-z]*)\b" replace="$1efensive$2"/>
 <Typo word="Deficit" find="\b([dD])efict(s)?\b" replace="$1eficit$2"/>
 <Typo word="(Re/Un)Define" find="\b([dD]|[rR]ed|[uU]nd)ef(?:f(?:in(?:in)?|nin)|inin)(e[ds]?|i(?:ng|tions?))\b" replace="$1efin$2"/>
-<Typo word="(In)Definition" find="\b([dD]|[iI]nd)ef(?:f(?:f+inite?|in(?:et|ite?))|in(?:et|it|ti)|nin(?:i?|it|ti?))(ons?|ve(?:ly|ness|s?))\b" replace="$1efiniti$2"/>
+<Typo word="(In)Definition" find="\b([dD]|[iI]nd)ef(?:f(?:f+inite?|in(?:et|ite?))|in(?:[ei]t|ti)|nin(?:i?|it|ti?))(ons?|ve(?:ly|ness|s?))\b" replace="$1efiniti$2"/>
 <Typo word="Degradation" find="\b([dD])egredation\b" replace="$1egradation"/>
 <Typo word="Degrade" find="\b([dD])egrat(e[ds]?|ing)\b" replace="$1egrad$2"/>
 <Typo word="Deity" find="\b([dD])iet(ies|y)\b" replace="$1eit$2"/>
@@ -1640,7 +1662,7 @@
 <Typo word="Fasci(nate/st)" find="\b([fF])aci(nat(?:e[ds]?|ing(?:ly)?)|s(?:m|t(?:ic|s?)))\b" replace="$1asci$2"/>
 <Typo word="Fasciitis" find="\b([fF])ascitis\b" replace="$1asciitis"/>
 <Typo word="favo(u)rite" find="\b([fF])avo(u)?(?:ite|rit)(s)?\b" replace="$1avo$2rite$3"/>
-<Typo word="Feature" find="\b([fF])(?:aetur|ea(?:tu|ture|utu?re?))(e[ds]?|ing)\b" replace="$1eatur$2"/>
+<Typo word="Feature" find="\b([fF])(?:aetur|ea(?:tu(?:re)?|utu?re?))(e[ds]?|ing)\b" replace="$1eatur$2"/>
 <Typo word="(Con/Non)Federal" find="\b([cC]onf|[fF]|[nN]onf)ed(?:ar|re)a(c(?:ies|y)|l(?:is[mt]s?|ly)?|t(?:e[ds]?|ions?))\b" replace="$1edera$2"/>
 <Typo word="Feud" find="\b([fF])ued(al[a-z]*|ed|ing|s?)\b" replace="$1eud$2"/>
 <Typo word="Fiancé" find="\b([fF])ianc[eè](e)?\b(?![^\s\.]*\.\w)" replace="$1iancé$2"/><!--avoid domains-->
@@ -1780,14 +1802,14 @@
 <Typo word="Have" find="\b([hH])(?:aev|vae)\b" replace="$1ave"/>
 <Typo word="(S)Having" find="\b([hH]|[sS]h)(?:ave|va)ing\b" replace="$1aving"/>
 <Typo word="He" find="\b([hH])ge\b(?![^\s\.]*\.\w)" replace="$1e"/><!--avoid domains-->
-<Typo word="Headquarters" find="\b([hH])(?:aed|ea?d?)[−―–—\s]?[qQ]ua(?:rt|tr?)e?r?(?<!eadquarter|e quarter)(ed|s?)\b" replace="$1eadquarter$2"/>
+<Typo word="Headquarters" find="\b([hH])(?:aed|ea?d?)[−―–—\s]?[qQ]ua(?:rt|tr?)e?r?(?<!e(?:adquarter| quarter))(ed|s?)\b" replace="$1eadquarter$2"/>
 <Typo word="Heard" find="\b([hH])eared\b" replace="$1eard"/>
 <Typo word="Heart" find="(?!\bHerat\b)\b([hH])erat(s)?\b" replace="$1eart$2"/><!--avoid city Herat-->
 <Typo word="Height" find="\b([hH])(?:eighth|i(?:eght|ghth))(s?|en(?:e(?:d|rs?)|ing|s?))\b" replace="$1eight$2"/>
 <Typo word="Heirs" find="\b([hH])ier(ess(?:es)?|s)(?<!Hiers)\b" replace="$1eir$2"/><!--avoid hier, French/German word or surname Hiers-->
 <Typo word="Helicopter" find="\b([hH])e(?:ilocopte|l(?:[eo]copte|i(?:copto|[eo]copte)))r(s)?\b" replace="$1elicopter$2"/>
 <Typo word="Helmet" find="\b([hH])elment(s)?\b" replace="$1elmet$2"/>
-<Typo word="Help" find="\b([hH])(?:al|elp|le)p([a-z]*)\b(?<!Halp(?:er(?:in|n?|t?)|in|ov|rin))" replace="$1elp$2"/><!--avoid surnames Halper(n), Halperin, Halpin, Halprin, Halpov, Halpert-->
+<Typo word="Help" find="\b([hH])(?:al|elp|le)p([a-z]*)\b(?<!Halp(?:er(?:in|[nt]?)|in|ov|rin))" replace="$1elp$2"/><!--avoid surnames Halper(n), Halperin, Halpin, Halprin, Halpov, Halpert-->
 <Typo word="Hemorrhage" find="\b([hH])(?:aemorrag|em(?:mor?rh?ag|orh?ag))(e[ds]?|i(?:c|ng))\b" replace="$1emorrhag$2"/>
 <Typo word="Heredity" find="\b([hH])eridit(ar)?y\b" replace="$1eredit$2y"/>
 <Typo word="Hergé" find="\bHerge\b" replace="Hergé"/>
@@ -1933,7 +1955,7 @@
 <Typo word="Judg(e)ment" find="\b([jJ])ugd?(e)?ment(al(?:ly)?|s?)\b(?<!\b[lL]e\s{1,9}[jJ]ugement\b)" replace="$1udg$2ment$3"/><!--avoid Le jugement-->
 <Typo word="Judicial" find="\b([jJ])ud(?:i(?:c|su)|uci)a(l|ry)\b" replace="$1udicia$2"/>
 <Typo word="(Jun/Sen)ior" find="\b([jJ]u|[sS]e)(?:ino|noi)r(ity|s?)\b" replace="$1nior$2"/>
-<Typo word="Jurisdiction" find="\b([jJ])uri(?:d|st)iction(al(?:ly)?|s?)(?!\s(des?|du|sur)\b)\b" replace="$1urisdiction$2"/><!--avoid French juridiction de/des/du/sur-->
+<Typo word="Jurisdiction" find="\b([jJ])uri(?:d|st)iction(al(?:ly)?|s?)(?!\s(d(?:es?|u)|sur)\b)\b" replace="$1urisdiction$2"/><!--avoid French juridiction de/des/du/sur-->
 <Typo word="Just(ify)" find="\b([jJ])s(?:tu|ut)(ice|if(?:i[ace][a-z]+|y)|ly)?\b" replace="$1ust$2"/>
 <Typo word="Juvenile" find="\b([jJ])uv[ai]nil(e[a-z]*|i(?:a|ty))\b" replace="$1uvenil$2"/>
 </syntaxhighlight>
@@ -1969,7 +1991,7 @@
 <Typo word="Late" find="\b([lL])aste(r(?<!Laster)|st)\b" replace="$1ate$2"/><!--avoid Laster, a surname & a Transformer-->
 <Typo word="Latitude" find="\b([lL])attitud(es?|inal)\b" replace="$1atitud$2"/>
 <Typo word="(Col)League" find="\b([cC]oll|[lL])ea(?:g|ugu?)e([ds]?|rs?)\b(?<!Leager)" replace="$1eague$2"/><!--avoid surname Leager-->
-<Typo word="(Un/Re)Learn" find="\b([lL]|[rR]el|[uU]nl)eran(ed|ing|[st]?)\b" replace="$1earn$2"/>
+<Typo word="(Un/Re)Learn" find="\b([lL]|[rR]el|[uU]nl)eran(ed|ing|[st]?)\b(?<!Leran)" replace="$1earn$2"/><!--avoid place name Leran-->
 <Typo word="least" find="\belast\b" replace="least"/>
 <Typo word="Left" find="\b([lL])efted\b" replace="$1eft"/>
 <Typo word="(L/R)egion" find="\b([lrLR])eagion(s?|al(?:i(?:s(?:e[ds]?|m)|ze[ds]?)|ly|s?)|ar(?:ies|y))\b" replace="$1egion$2"/>
@@ -2142,7 +2164,7 @@
 <Typo word="Négligée" find="\b([nN])(?:églige|egligé)e?(s)?\b" replace="$1égligée$2"/><!--avoid [[wikt:negligee]]-->
 <Typo word="Negligible" find="\b([nN])egli(?:ga)?bl([ey])\b" replace="$1egligibl$2"/>
 <Typo word="(Re)Negotiate" find="\b([nN]|[rR]en)ego(?:cia|ta)(b(?:ility|l[ey])|t(?:ed?|i(?:ng|on)|or)s?|nt(?<!ciant)s?)\b" replace="$1egotia$2"/>
-<Typo word="Neighbo(u)r" find="\b([nN])[ei]+[gh]*bh?(?:o?(u)?[eo]?r|ro?(u)?o?)(?<![nN]eighbou?r)(ed|hoods?|ing|l(?:iness|y)|s?)\b(?<!N(?:ebr|eiber|i(?:eb(?:hur|oer|ur)|gh?bor)))" replace="$1eighbo$2$3r$4"/>
+<Typo word="Neighbo(u)r" find="\b([nN])[ei]+[gh]*bh?(?:o?(u)?[eo]?r|ro?(u)?o?)(?<![nN]eighbou?r)(ed|hoods?|ing|l(?:iness|y)|s?)\b(?<!N(?:e(?:br|iber)|i(?:eb(?:hur|oer|ur)|gh?bor)))" replace="$1eighbo$2$3r$4"/>
 <Typo word="Never" find="\b([nN])ver\b" replace="$1ever"/>
 <Typo word="(Never/None)theless" find="\b([nN](?:ever|one))(?:th(?:e\s+)?|\s+the)\s?less\b" replace="$1theless"/>
 <Typo word="New Delhi" find="\bNew\s*[dD]ehli\b" replace="New Delhi"/>
@@ -2182,7 +2204,7 @@
 <Typo word="Nuptial" find="\b([nN])uptual(s)?\b" replace="$1uptial$2"/>
 <Typo word="Nurturing" find="\b([nN])utur(e[ds]?|ing)\b" replace="$1urtur$2"/>
 <Typo word="n-round something" find="\b(\d+|e(?:ight(?:een|y?)|leven)|f(?:i(?:ft(?:een|y)|ve)|o(?:rty|ur(?:teen)?))|hundred|nine(?:t(?:een|y))?|one|s(?:even|ix)(?:t(?:een|y))?|t(?:en|h(?:irt(?:een|y)|ousand|ree)|w(?:e(?:lve|nty)|o)))\b\s+round(?=\s+(?:d(?:ecisions?|raws?)|knockouts?|KOs?|match(?:es)?|newspaper\s+decisions?|technical\s+knockouts?|TKOs?))" replace="$1-round"/><!--"A n-something" won't catch all useful, esp. boxing-related things-->
-<Typo word="n-something contract/deal/run/etc." find="\b((?<!,)\d{1,3}|e(?:ight(?:een|y?)|leven)|f(?:i(?:ft(?:een|y)|ve)|o(?:rty|ur(?:teen)?))|hundred|nine(?:t(?:een|y))?|one|s(?:even|ix)(?:t(?:een|y))?|t(?:en|hr(?:ee|irt(?:een|y))|w(?:e(?:lve|nty)|o)))(?:&nbsp;|\s+)(album|book|episode|fi(?:ght|lm)|game|movie|picture|record)(?=\s+(?:contract|deal|run|s(?:uspension|weep))\b)" replace="$1-$2"/><!--entertainment-related hyphen combos-->
+<Typo word="n-something contract/deal/run/etc." find="\b((?<!,)\d{1,3}|e(?:ight(?:een|y?)|leven)|f(?:i(?:ft(?:een|y)|ve)|o(?:rty|ur(?:teen)?))|hundred|nine(?:t(?:een|y))?|one|s(?:even|ix)(?:t(?:een|y))?|t(?:en|hr(?:ee|irt(?:een|y))|w(?:e(?:lve|nty)|o)))(?:&nbsp;|\s+)(album|book|episode|fi(?:ght|lm)|game|movie|picture|record)(?=\s+(?:contract|deal|run|s(?:eason|uspension|weep))\b)" replace="$1-$2"/><!--entertainment-related hyphen combos-->
 <Typo word="n-time champion/winner_" find="\b([\d]+[\d,\.]*|e(?:ight(?:een|y?)|leven)|f(?:i(?:ft(?:een|y)|ve)|o(?:rty|ur(?:teen)?))|hundred|nine(?:t(?:een|y))?|one|s(?:even|ix)(?:t(?:een|y))?|t(?:en|h(?:irt(?:een|y)|ousand|ree)|w(?:e(?:lve|nty)|o)))\b\s+time(?=\s+(?:champions?|defending\s+champions?|losers?|nominees?|winners?))" replace="$1-time"/>
 </syntaxhighlight>
 
@@ -2224,7 +2246,7 @@
 <Typo word="Opponent" find="\b([oO])ppono?nent(s)?\b" replace="$1pponent$2"/>
 <Typo word="Opportunity" find="\b([oO])p+(?:er|or?|ror?|ur)t?uni(?<![oO]pportuni)(s(?:[mt]s?|tic[a-z]*)|t(?:ies|y))\b" replace="$1pportuni$2"/>
 <Typo word="(Un)Oppose" find="\b([oO]|[uU]no)p+oss(e[ds]?|ing)\b" replace="$1ppos$2"/>
-<Typo word="(O/Su/Presu)ppose" find="\b([oO]|[pP]resu|[sS]u)pos([a-z]+)\b(?<!Reta Oposta)(?<![oO]pos(?:sums?|tegidae?|hchnaya|ura))" replace="$1ppos$2"/>
+<Typo word="(O/Su/Presu)ppose" find="\b([oO]|[pP]resu|[sS]u)pos([a-z]+)\b(?<!Reta Oposta)(?<![oO]pos(?:hchnaya|sums?|tegidae?|ura))" replace="$1ppos$2"/>
 <Typo word="Opposite" find="\b([oO])pp(?:asite|os(?:ate|it))(ly|s?)\b" replace="$1pposite$2"/>
 <Typo word="Opposition" find="\b([oO])pp?ositition\b" replace="$1pposition"/>
 <Typo word="Optimism" find="\b([oO])pto?mi(s(?:ations?|e[ds]?|ing|m|t[a-z]*)|z(?:ations?|e[ds]?|ing))\b" replace="$1ptimi$2"/>
@@ -2262,7 +2284,7 @@
 <Typo word="Parenthesis" find="\b([pP])aranthe(s[ei]s|tic[a-z]+)\b" replace="$1arenthe$2"/>
 <Typo word="Parishioner (1)" find="\b([pP])arish[io]ner(s(?:hip)?)?\b" replace="$1arishioner$2"/>
 <Typo word="Parishioner (2)" find="\b([pP])ar(?:is+[hi]?|r+is+h?i?)oner(s(?:hip)?)?\b" replace="$1arishioner$2"/>
-<Typo word="Parliament" find="(?!\bParlament\b)\b([pP])ar?l[ai]i?ment(ar[a-z]+|s?)\b" replace="$1arliament$2"/><!--avoid common proper name for foreign parliament "Parlament"-->
+<Typo word="Parliament" find="(?!\bParlament\b)\b([pP])ar?l[ai]i?ment(ar[a-z]+|s?)\b(?<!mentarisch[a-z]*)" replace="$1arliament$2"/><!--avoid common proper name for foreign parliament "Parlament"-->
 <Typo word="Parmesan" find="\bparmesan\b" replace="Parmesan"/>
 <Typo word="Participate" find="\b([pP])a[rt]+[ei]?c[aei]*pa?(?<!articipa)(n(?:c[ey]|ts?)|t(?:e[ds]?|i(?:ng|on)|or[sy]?))\b" replace="$1articipa$2"/>
 <Typo word="Particular (1)" find="\b([pP])a(?:rticlu?|ticul)a([a-z]+)\b" replace="$1articula$2"/>
@@ -2421,7 +2443,7 @@
 <Typo word="pro-life" find="\bpro\s*life(rs?)?\b(?![^\s\.]*\.\w)" replace="pro-life$1"/><!--avoid cap. form due to various proper nouns; avoid domains-->
 <Typo word="Prolific" find="\b([pP])rofilic(ly)?\b" replace="$1rolific$2"/>
 <Typo word="Promiscuous" find="\b([pP])romiscous(ly)?\b" replace="$1romiscuous$2"/>
-<Typo word="Promote" find="\b([pP])(?:omo|romot|rome)t(e[ds]|i(?:ng|ons?))\b" replace="$1romot$2"/>
+<Typo word="Promote" find="\b([pP])(?:omo|rom(?:e|ot))t(e[ds]|i(?:ng|ons?))\b" replace="$1romot$2"/>
 <Typo word="Prompt" find="\b([pP])ropmt(ed|ing|s?)\b" replace="$1rompt$2"/>
 <Typo disabled="Pronominal" find="\b([pP])ronomial\b" replace="$1ronominal"/><!--avoid [[wikt:pronomial]]-->
 <Typo word="Pronounced" find="\b([pP])rou?nou[cn]+h?(?<!ronounc)(e[ds]?|ing|ments?)\b" replace="$1ronounc$2"/>
@@ -2988,7 +3010,7 @@
 <Typo word="Unofficial" find="\binofficial(ly)?\b" replace="unofficial$1"/>
 <Typo word="Unofficial" find="\bInofficial(ly)?\b" replace="Unofficial$1"/>
 <Typo word="Unwieldy" find="\b([uU])nw(?:eildl?|ieldl)(iness|y)\b" replace="$1nwield$2"/>
-<Typo word="Until" find="\b([uU])(?:n(?:it|til))l\b" replace="$1ntil"/>
+<Typo word="Until" find="\b([uU])n(?:it|til)l\b" replace="$1ntil"/>
 <Typo word="Util-" find="\b([uU])(?:lti|t)li+([stz][a-z]+)\b" replace="$1tili$2"/>
 <Typo word="Up to" find="\b([uU])pto\b" replace="$1p to"/>
 <Typo word="(Mis/Dis)Use" find="\b([dmDM]isu|[uU])ise([ds])?\b" replace="$1se$2"/>
@@ -3176,7 +3198,7 @@
 <Typo word="Gurkha" find="\bgurkha(s)?\b(?![^\s\.]*\.\w)" replace="Gurkha$1"/>
 <Typo word="Hebrew" find="\bhebr(ai(?:c|s[mt])|ews?)\b(?![^\s\.]*\.\w)" replace="Hebr$1"/>
 <Typo word="Hellenic" find="\bhel+[ae]n(ist)?ic\b(?![^\s\.]*\.\w)" replace="Hellen$1ic"/>
-<Typo word="Hind(i/u(stan(i)))" find="\bhind(is?|u(?:s(?:tan(?:is?)?)?)?)\b(?![^\s\.]*\.\w)" replace="Hind$1"/>
+<Typo word="Hind(i/u(stan(i)))" find="\bhind(is?|u(?:s(?:tan(?:is?)?)?)?|uism)\b(?![^\s\.]*\.\w)" replace="Hind$1"/>
 <Typo word="Hispan-" find="\bhispan(i(?:a|c(?:i[sz][a-z]+|s?)|ola)|o)\b(?![^\s\.]*\.\w)" replace="Hispan$1"/>
 <Typo word="Irish" find="\birish(m[ae]n|wom[ae]n)?\b(?![^\s\.]*\.\w)" replace="Irish$1"/>
 <Typo word="Jew" find="\bj(ew(?:ish(?:ness)?|s?)|ud(?:aica?|ean?s?))\b(?![^\s\.]*\.\w)" replace="J$1"/>
@@ -3218,7 +3240,7 @@
 <Typo word="(Ant)Arctic Circle" find="\bA(nta)?rctic\s+circle\b" replace="A$1rctic Circle"/>
 <Typo word="Antarctic" find="\bantarc?ticc(a)?\b(?!'')(?![^\s\.]*\.\w)" replace="Antarctic$1"/><!--Arctic dealt with elsewhere; avoid species-->
 <Typo word="Africa" find="\bafri(can?s?|ka(?:ans|n?|n(?:da|ers?)))\b(?![^\s\.]*\.\w)" replace="Afri$1"/>
-<Typo word="America" find="\b[aA]merc?ic?a(n(?:[as]?|ism))?\b(?<!America[nasim]*)(?<![A-Z][a-z]+(Agave|Anes|Aythya|Borrelia|Certhia|Corylus|Fulica|Grus|Leishmaniasis|Mareca|Martes|Mazama|Monodelphis|Morone|Mycteria|Phytolacca|Rhea|Setophaga|Spirochaeta|Spiza|Submission|Tilia|Ulmus)?\s?\(?americana)(?![^\s\.]*\.\w)(?<!\.[^\s\.]{0,999})" replace="America$1"/><!--avoid self after merge & species-->
+<Typo word="America" find="\b[aA]merc?ic?a(n(?:[as]?|ism))?\b(?<!America[nasim]*)(?<![A-Z][a-z]+(A(?:gave|nes|ythya)|Borrelia|C(?:erthia|orylus)|Fulica|Grus|Leishmaniasis|Mar(?:eca|tes)|M(?:azama|o(?:nodelphis|rone)|ycteria)|Phytolacca|Rhea|S(?:etophaga|pi(?:rochaeta|za)|ubmission)|Tilia|Ulmus)?\s?\(?americana)(?![^\s\.]*\.\w)(?<!\.[^\s\.]{0,999})" replace="America$1"/><!--avoid self after merge & species-->
 <Typo word="Asia_" find="\bai?sia(ns?|s?|tic)\b(?![^\s\.]*\.\w)" replace="Asia$1"/>
 <Typo word="Austral(as)ia" find="\baustral(asian?s?|ian?s?)\b(?![^\s\.]*\.\w)" replace="Austral$1"/>
 <Typo word="Central America" find="\bcentral\s*[aA]merica(ns?|s?)\b" replace="Central America$1"/>
@@ -3664,7 +3686,7 @@
 <Typo word="Romano(v/ff)" find="\bromano(ffs?|vs?)\b(?![^\s\.]*\.\w)" replace="Romano$1"/>
 <Typo word="Sassanid" find="\bsassani(ans?|de?s?)\b(?![^\s\.]*\.\w)" replace="Sassani$1"/>
 <Typo word="Sel(juk/eucid)" find="\bsel(euc(?:ids?|us)|juk)\b(?![^\s\.]*\.\w)" replace="Sel$1"/>
-<Typo word="Stone Age" find="\b(?:stone\s+[aA]|stone\s+a)ge(s)?\b" replace="Stone Age$1"/>
+<Typo word="Stone Age" find="\bstone\s+[aA]ge(s)?\b" replace="Stone Age$1"/>
 <Typo word="Stuart" find="\bstuart(s)?\b(?![^\s\.]*\.\w)" replace="Stuart$1"/>
 <Typo word="Tudor" find="\btudor(s)?\b(?![^\s\.]*\.\w)" replace="Tudor$1"/>
 <Typo word="Valois" find="\bvalois\b(?![^\s\.]*\.\w)" replace="Valois"/>
@@ -3743,8 +3765,10 @@
 <Typo word="(H/Sh/W)e'(d/ll/s)" find="\b([hwHW]|[sS][hw])e[´ˈ׳᾿‘’′Ꞌꞌ`;]([ds]|ll)\b" replace="$1e'$2"/>
 <Typo word="(T/W)Here'(d/ll/s/ve)" find="\b([hH]|[twTW]h)ere[´ˈ׳᾿‘’′Ꞌꞌ`;]([ds]|ll|ve)\b" replace="$1ere'$2"/>
 <Typo word="I(t)'(d/m/s/ll)" find="\b([iI]t?)[´ˈ׳᾿‘’′Ꞌꞌ`;]([dms]|ll)\b" replace="$1'$2"/>
-<Typo word="Its (after)" find="(?=it)(?<=\b(?:[aA](?:bove|[lm]ong(?:st)?|r(?:e|ound)|t)|[bB](?:e(?:low|tween|yond)?|oth|y)|[cC]elebrat(?:e[ds]?|ing)|[dD]uring|[fF]rom|[hH][eo]ld|[iI]n(?:to)?|[kK]eep|[mM]ade|[oO](?:f|n(?:to)?|ver)|[tT](?:hrough(?:out)?|o)|[uU](?:nder(?:neath)?|p(?:on)?)|[wW]ith(?:in|out)?)\s+)it[´ˈ׳᾿‘’′Ꞌꞌ`;']s\b" replace="its"/><!--cheapened expensive beginning-->
+<Typo word="Its (after)" find="\b(?=it)(?<=\b(?:[aA](?:bove|[lm]ong(?:st)?|r(?:e|ound)|t)|[bB](?:e(?:low|tween|yond)?|oth|y)|[cC]elebrat(?:e[ds]?|ing)|[dD]uring|[fF]rom|[hH][eo]ld|[iI]n(?:to)?|[kK]eep|[mM]ade|[oO](?:f|n(?:to)?|ver)|[tT](?:hrough(?:out)?|o)|[uU](?:nder(?:neath)?|p(?:on)?)|[wW]ith(?:in|out)?)\s+)it[´ˈ׳᾿‘’′Ꞌꞌ`;']s\b" replace="its"/><!--cheapened expensive beginning-->
+<Typo word="Its (after)" find="\b(?=it)(?<=\b(?:[aA](?:bove|[lm]ong(?:st)?|r(?:e|ound)|t)|[bB](?:e(?:low|tween|yond)?|oth|y)|[cC]elebrat(?:e[ds]?|ing)|[dD]uring|[fF]rom|[hH][eo]ld|[iI]n(?:to)?|[kK]eep|[mM]ade|[oO](?:f|n(?:to)?|ver)|[tT](?:hrough(?:out)?|o)|[uU](?:nder(?:neath)?|p(?:on)?)|[wW]ith(?:in|out)?)\s+)its[´ˈ׳᾿‘’′Ꞌꞌ`;']\b" replace="its"/>
 <Typo word="Its (before)" find="\b([iI])t[´ˈ׳᾿‘’′Ꞌꞌ`;']s\s+(apex|causes?|do(?:ors|wnfall)|founders?|inceptions?|o(?:rigins?|wn)|p(?:innacle|olicies)|reasons?|zenith)\b" replace="$1ts $2"/>
+<Typo word="Its (before)" find="\b([iI])ts[´ˈ׳᾿‘’′Ꞌꞌ`;']\s+(apex|causes?|do(?:ors|wnfall)|founders?|inceptions?|o(?:rigins?|wn)|p(?:innacle|olicies)|reasons?|zenith)\b" replace="$1ts $2"/>
 <Typo word="-en't" find="\b([aA]r|[hH]av|[wW]er)n[´ˈ׳᾿‘’′Ꞌꞌ`;]t\b" replace="$1en't"/>
 <Typo word="-n't (2)" find="\b(are|[cC]ould|[dD](?:id|oes)|[hH]a([ds]|ve)|[sS]hould|[wW](?:as|ere|ould))nt\b" replace="$1n't"/><!--avoid Arent, cant, wont, "Don't" (rule exists)-->
 <Typo word="-n't (1)" find="\b(are|[cC](?:a|ould)|[dD](?:id|o(?:es)?)|[hH]a(?:[ds]|ve)|[sS]hould|[wW](?:as|ere|o(?:uld)?))(?:[´ˈ׳᾿‘’′Ꞌꞌ`;']n|n[´ˈ׳᾿‘’′Ꞌꞌ`;])t\b" replace="$1n't"/>
@@ -3850,7 +3874,7 @@ These have to come last, so that special cases (which these might transform into
 <Typo word="Emi-" find="\b([eE]|[pP]ree)mmi(grat[a-z]+|nen[ct][a-z]*|ssar[iy][a-z]*)\b" replace="$1mi$2"/>
 <Typo word="Emb-" find="\b([eE])nb([a-z]+)\b(?<!\bEnb(?:a(?:[ns]|qom|rr?)|e(?:kshi[a-z]{0,99}|rgs?|tsu)?|i(?:lulu|se)|lend|o(?:m|rne|th)|r(?:el|idge)|u(?:kan|lufushi|n))\b)(?<!Bir Enba)" replace="$1mb$2"/>
 <!--avoid Enbergs?, Enban, Enbaqom, Enbar(r), Enbas, Enbee, Enbekshi..., Enbetsu, Enbilulu, Enbise, Enblend, Enbom, Enboth, Enbrel, Enbridge, Enbukan, Enbulufushi, Enbun, Bir Enba-->
-<Typo word="Emm-" find="\b([eE])nm([a-z]+)\b(?<!\bEnm(?:a|ei)|enm(?:a(?:scarados?|tter[a-z]*)|esh[a-z]*|áscarados?|it(?:ies|y))|Enm(?:a(?:rk\b|kaje|nn?(?:sche)?|[ox]|s(?:carados?|s)|tter[a-z]*)|esh[a-z]*|áscarados?|it(?:ies|y)|ore|und))" replace="$1mm$2"/>
+<Typo word="Emm-" find="\b([eE])nm([a-z]+)\b(?<!\bEnm(?:a|ei)|enm(?:a(?:scarados?|tter[a-z]*)|esh[a-z]*|áscarados?|it(?:ies|y))|Enm(?:a(?:kaje|rk\b|nn?(?:sche)?|[ox]|s(?:carados?|s)|tter[a-z]*)|esh[a-z]*|áscarados?|it(?:ies|y)|ore|und))" replace="$1mm$2"/>
 <!--avoid Enma, Enmakaje, Enman, Enmann(sche), Enmass, Enmore, enmesh, enmatter, enmity, Enmax, Enmund, enmáscarado, Enmao-->
 <Typo disabled="Emp-" find="\b([eE])n(p[a-z]+)\b(?<!\b[eE]np(?:hytot[a-z]+|i(?:ng)?|lan[a-z]+|ower|rostil|uku)\b)" replace="$1m$2"/>
 <!--avoid enphytotic, enplane, enpi, Enping, Enpower, Enprostil, Enpuku-->
@@ -3886,14 +3910,14 @@ These have to come last, so that special cases (which these might transform into
 <Typo word="Sea- (no hyphen)" find="\b([sS])ea-(board?|foods?|m[ae]n|p(?:lanes?|orts?)|w(?:ards?|eeds?|o(?:m[ae]n|rth(?:iness|y))))\b" replace="$1ea$2"/><!--No other sea- words should be corrected; see talk page (Wikipedia_talk:AutoWikiBrowser/Typos#Sea-)-->
 <Typo word="und-/unn-/unt-/unv-" find="\bum([dntv][a-z]+)\b(?<!umtv)(?![^\s\.]*\.\w)(?<!\.[^\s\.]{0,999})" replace="un$1"/><!--[[!3GPP!]] is domain false positive not umtv and proper nouns by only matching lower case--> 
 <Typo word="Unn-" find="\b([uU])n(?:nn)?(a(?:med|tural[a-z]*|vigable)|e(?:cessar(?:ily|y)|eded)|otice[a-z]*|umber[a-z]*)\b" replace="$1nn$2"/>
-<Typo word="Wh-" find="\b([wW])(ere(?:abouts|by)|is(?:ing|ker(?:ed|s)|tle(?:[ds]|rs?)))\b(?<![Ww]ising\b)" replace="$1h$2"/><!-- avoid wising --->
+<Typo word="Wh-" find="\b([wW])(ere(?:abouts|by)|is(?:ing|ker(?:ed|s)|tle(?:[ds]|rs?)))\b(?<![wW]ising\b)" replace="$1h$2"/><!-- avoid wising --->
 <Typo word="Xiph-" find="\b([xX])yph([io][a-z]+)\b" replace="$1iph$2"/><!--avoid Xyphus-->
 </syntaxhighlight>
 
 ====Endings====
 =====A=====
 <syntaxhighlight lang="xml">
-<Typo word="-XXX(ed/er/ing/ive)" find="(?=([aeiou])([bdfgklmnprstvz])\2{2,})(?<=\b(?:[A-Z][a-z]*|[a-z]+))\1\2{3,}(e(?:d|rs?)|i(?:ngs?|ons?|ves?)|ors?)\b" replace="$1$2$2$3"/><!--cheapened expensive beginning-->
+<Typo word="-XXX(ed/er/ing/ive)" find="(?=([aeiou][bdfgklmnprstvz])\2{2,})(?<=\b(?:[A-Z][a-z]*|[a-z]+))\1\2{3,}(e(?:d|rs?)|i(?:ngs?|ons?|ves?)|ors?)\b" replace="$1$2$2$3"/><!--cheapened expensive beginning-->
 <Typo word="-able (1)" find="\b([aA](?:ccept|rgu)|[cC](?:ap|onfigur)|[fF]orgiv|[hH]ospit|[iI]n(?:[aA](?:ccept|rgu)|[cC](?:ap|onfigur)|[fF]orgiv|[hH]ospit|[mM]istak|[nN]ot|[oO]ppos|[sS]cal|[tT]ranslat|[uU]s|[vV](?:alu|ulner))|[mM]istak|[nN]ot|[oO]ppos|[sS]cal|[tT]ranslat|[uU](?:s|n(?:[aA](?:ccept|rgu)|[cC](?:ap|onfigur)|[fF]orgiv|[hH]ospit|[mM]istak|[nN]ot|[oO]ppos|[sS]cal|[tT]ranslat|[uU]s|[vV](?:alu|ulner)))|[vV](?:alu|ulner))(?:[eiu]a?)b(ilit(?:ies|y)|l[ey])\b" replace="$1ab$2"/>
 <Typo word="-able (2)" find="\b([dD]e|[iuIU]nde)(bat|cid|f(?:in|orm)|grad|lect|not|p(?:end|lor|riv)|riv|s(?:ir|pi[cs])|tect)(?:ea|i)bl([ey])\b" replace="$1$2abl$3"/>
 <Typo word="-able (3)" find="\b([iI]nre|[rR]e|[uU]nre)(a(?:d|son)|c(?:harge|o(?:gni[sz]|ncil|ver)|ycl)|deem|m(?:ark|ov)|new|p(?:ai?r|ea[lt]|lace|ut)|v(?:iew|oc))(?:[eiu]a?)b(ility|l[ey])\b" replace="$1$2ab$3"/>
@@ -3916,7 +3940,7 @@ These have to come last, so that special cases (which these might transform into
 <Typo word="-ard(s/ian/son)" find="\b([eE]dw|[hH]ow|[rR]ich)rad(ians?|s?|sons?)\b" replace="$1ard$2"/>
 <Typo word="-ary" find="\b([bB]ound|[dD]iction|[pP]rim|[sS](?:al|econd)|[tT]ern)e?r(ies|y)\b" replace="$1ar$2"/>
 <Typo word="-asion" find="\b([aA]br|[eE]v|[iI]nv|[oO]cc|[pP]ersu)ation(al(?:ly)?|s?)\b" replace="$1asion$2"/>
-<Typo word="-ately_" find="(?=atly)(?<=\b(?:[A-Z][a-z]*|[a-z]+)[bcdgimstv])atly\b" replace="ately"/><!--cheapened expensive beginning-->
+<Typo word="-ately_" find="(?=atly)(?<=\b(?:[A-Z][a-z]*[bcdgimstv]|[a-z]+[bcdgimstv]))atly\b" replace="ately"/><!--cheapened expensive beginning-->
 <Typo word="-athlon" find="\b([bB]i|[dD]ec|[hH]ept|[pP]ent|[tT]ri)ath[ae]l(etes?|ons?)\b" replace="$1athl$2"/>
 <Typo word="-atian" find="\b(Als|Dalm|Gal)ation(s)?\b" replace="$1atian$2"/>
 <Typo word="-atile" find="\b([nN]onv(?:ers|ol)|[vV](?:ers|ol))itile(ly|ness)?\b" replace="$1atile$2"/>
@@ -3945,7 +3969,7 @@ These have to come last, so that special cases (which these might transform into
 <Typo word="-ceps" find="\b([qQ]uad|[tT])ricep(?:ts?)?\b" replace="$1riceps"/>
 <Typo word="-cidental(ly)" find="\b([aA]c|[cC]oin|[iI]n)c(?:edenti?al?|ident(?:a|ial))(ly|s?)\b" replace="$1cidental$2"/>
 <Typo word="-cious" find="\b([cC]ons|[gG]ra|[jJ]udi|[lL]us|[mM]ali|[pP]re(?:co|da)?|[sS](?:p[ae]|uspi)|[vV](?:era|i|ora))(?:c(?:i(?:o(?:iu|ui)|uo)|o(?:iu|ui))|sciou)s(ly|ness)?\b" replace="$1cious$2"/>
-<Typo word="-(c/l/t)ious" find="(?=ioous)(?<=\b(?:[A-Z][a-z]*|[a-z]+)[clt])ioous([a-z]*)\b" replace="ious$1"/><!--cheapened expensive beginning-->
+<Typo word="-(c/l/t)ious" find="(?=ioous)(?<=\b(?:[A-Z][a-z]*[clt]|[a-z]+[clt]))ioous([a-z]*)\b" replace="ious$1"/><!--cheapened expensive beginning-->
 <Typo word="-cipient" find="\b([eE]x|[iI]n|[pP]er|[rR]e)c(?:epie|ipia)n(c[ey]|t(?:ly|s?))\b" replace="$1cipien$2"/>
 <Typo word="-claim" find="\b([aA]c|[dD]is|[eE]x|[pP]ro|[rR]e)cliam(e(?:d|rs?)|ing|s?)\b" replace="$1claim$2"/>
 <Typo word="-clamation" find="\b([dD]e|[eE]x|[pP]ro|[rR]e)cl(?:ai|o)mat(ions?|ory)\b" replace="$1clamat$2"/>
@@ -4065,11 +4089,11 @@ These have to come last, so that special cases (which these might transform into
 <Typo word="-ing" find="(?<=\b(?:[bB]ak|[cC](?:a[kr]|ontinu)|[dD](?:a(?:nc|r)|i(?:v|s(?:bak|c(?:a[kr]|ontinu)|d(?:a(?:nc|r)|iv|riv)|f(?:ak|eatur|orc)|giv|hav|l(?:anc|iv)|mak|notic|ra[kv]|s(?:av|h(?:a[rtv]|in)|ka[rtv])|tak|us|w(?:a[kv]|hin)))|riv)|[eE]n(?:bak|c(?:a[kr]|ontinu)|d(?:a(?:nc|r)|iv|riv)|f(?:ak|eatur|orc)|giv|hav|l(?:anc|iv)|mak|notic|ra[kv]|s(?:av|h(?:a[rtv]|in)|ka[rtv])|tak|us|w(?:a[kv]|hin))|[fF](?:ak|eatur|orc)|[gG]iv|[hH]av|[lL](?:anc|iv)|[mM](?:ak|is(?:bak|c(?:a[kr]|ontinu)|d(?:a(?:nc|r)|iv|riv)|f(?:ak|eatur|orc)|giv|hav|l(?:anc|iv)|mak|notic|ra[kv]|s(?:av|h(?:a[rtv]|in)|ka[rtv])|tak|us|w(?:a[kv]|hin)))|[nN]otic|[rR]a[kv]|[sS](?:av|h(?:a[rtv]|in)|ka[rtv])|[tT]ak|[uU]s|[wW](?:a[kv]|hin)))eing(s)?\b" replace="ing$1"/><!--cheapened expensive beginning-->
 <Typo word="-ining" find="(?=inig)(?<=\b(?:[A-Z][a-z]*|[a-z]+))inig(ly|s?)\b(?<!\b(?:Bre|He|K(?:le|urt)|Lap|Me|Nar(?:ir)?|Re|Stee|[tT]|We)inig\b)" replace="ining$1"/><!--avoid (Br/Kl/M/H/R/St/W)einig, (Nar/Narir/Kurt/Lap/T)inig. 'ing' typos can be false positive i.e 'paintinig'--><!--cheapened expensive beginning-->
 <Typo word="-ionship" find="\b([cC](?:hamp|ompan)|[rR]elat)(?:ionsih?|oinshi)p(s)?\b" replace="$1ionship$2"/>
-<Typo word="-ish" find="(?=i?sih)(?<=\b(?:[A-Za-z]+?))i?sih(e(?:[ds]|rs?)|ing(?:ly)?|ly)?\b(?<!asih|A(?:isih|riningsih|sih)|Bersih|esih|Finarsih|ingsih|K(?:asih|osasih)|[rs]sih|M(?:a(?:drasih|ss?ih)|essih|irajoucsih)|N(?:esih|ingsih|urnaningsih)|Su(?:kaesih|mbangsih)|T(?:laksih|sih)|Y(?:ingtsih|ulianingsih))" replace="ish$1"/><!--avoid proper names with -asih -esih -rsih -ssih, e.g., Bersih, Finarsih, Kasih, Kosasih, Madrasih, Masih, Massih, Messih, Nesih, Sukaesih, Nurnaningsih, Ningsih, Ariningsih, Yulianingsih, Asih, Tsih, Aisih, Tlaksih, Mirajoucsih, Sumbangsih, Yingtsih--><!--cheapened expensive beginning-->
+<Typo word="-ish" find="(?=isih|sih)(?<=\b(?:[A-Za-z]+?))i?sih(e(?:[ds]|rs?)|ing(?:ly)?|ly)?\b(?<!asih|A(?:isih|riningsih|sih)|Bersih|esih|Finarsih|ingsih|K(?:asih|osasih)|[rs]sih|M(?:a(?:drasih|ss?ih)|essih|irajoucsih)|N(?:esih|ingsih|urnaningsih)|Su(?:kaesih|mbangsih)|T(?:laksih|sih)|Y(?:ingtsih|ulianingsih))" replace="ish$1"/><!--avoid proper names with -asih -esih -rsih -ssih, e.g., Bersih, Finarsih, Kasih, Kosasih, Madrasih, Masih, Massih, Messih, Nesih, Sukaesih, Nurnaningsih, Ningsih, Ariningsih, Yulianingsih, Asih, Tsih, Aisih, Tlaksih, Mirajoucsih, Sumbangsih, Yingtsih--><!--cheapened expensive beginning-->
 <Typo word="-ism" find="\b([aA]narch|[cC]ritic|[oO]rgan|[pP]lagiar|[tT]our)s?i(?:st)?m(s)?\b" replace="$1ism$2"/>
 <Typo word="-istry" find="([aA]rt|[cC]hem|[dD]ent|[mM]in|[rR]eg)ist(ies|y)\b" replace="$1istr$2"/>
 <Typo word="-itch_" find="\b([dhpwDHPW]|[sS][tw]|[tT]w)ict?h(e[ds]|ing|(?<![wW]ich)ers?)\b(?<!Picher|Sticher)" replace="$1itch$2"/><!--avoid "swich", "wicher", "Picher", "Sticher"-->
-<Typo word="-itely" find="(?=itly)(?<=\b(?:[A-Z][a-z]*|[a-z]+)[lnst])(?<![qQ]ual)itly\b" replace="itely"/><!--cheapened expensive beginning-->
+<Typo word="-itely" find="(?=itly)(?<=\b(?:[A-Z][a-z]*[lnst]|[a-z]+[lnst]))(?<![qQ]ual)itly\b" replace="itely"/><!--cheapened expensive beginning-->
 <Typo word="-ition" find="\b([aA](?:dd|mb|ud)|[cC]o(?:al|nd)|[dD]emol|[eE](?:d|xhib)|[iI](?:gn|n(?:hib|tu)?)|[pP](?:os|rohib)|[tT](?:rad|u))it(?:ioi|oi?)n(al(?:ly)?|is[mt]s?|s?)\b" replace="$1ition$2"/>
 <Typo word="-itious" find="\b([aA]mb|[cC]ement|[fF]ict|[nN]utr|[sS]ed)icious([a-z]*)\b" replace="$1itious$2"/>
 <Typo word="-itous" find="\b([fF]ort|[gG]rat|[uU]biq)ui?tious(ly|ness)?\b" replace="$1uitous$2"/>
@@ -4083,7 +4107,7 @@ These have to come last, so that special cases (which these might transform into
 <Typo word="-kel" find="\b([sS](?:he|nor)|[yY]o)kle(ing|s?)\b" replace="$1kel$2"/> 
 <Typo word="-keted" find="\b([bB](?:lan|rac)|[dD]oc|[jJ]ac|[mM]ar|[pP][ao]c|[rsRS]oc)kett(ed|ing|s)\b" replace="$1ket$2"/>
 <Typo word="-king" find="\b([bB][ai]|[sS]tri|[tmwcfrTMCFRW]a|[vhlVHL]i)keing\b" replace="$1king"/>
-<Typo word="-(a/e/i/o/u)(c/n/o/r/s)king" find="(?=kign)(?<=\b(?:[A-Z][a-z]*|[a-z]+)[aeiou][cnors])kign\b" replace="king"/><!--cheapened expensive beginning-->
+<Typo word="-(a/e/i/o/u)(c/n/o/r/s)king" find="(?=kign)(?<=\b(?:[A-Z][a-z]*[aeiou][cnors]|[a-z]+[aeiou][cnors]))kign\b" replace="king"/><!--cheapened expensive beginning-->
 </syntaxhighlight>
 
 =====L=====
@@ -4114,7 +4138,7 @@ These have to come last, so that special cases (which these might transform into
 =====N=====
 <syntaxhighlight lang="xml">
 <Typo word="-nace" find="\b([fF]ur|[mM]e)nanc(e[ds]?|ing)\b" replace="$1nac$2"/>
-<Typo word="-nally" find="(?=(?:anlly|nalyl))(?<=\b(?:[A-Z][a-z]*|[a-z]+)[a-mo-z])(?:anlly|nalyl)\b" replace="nally"/><!--avoid incorrect to incorrect change on -nanlly; cheapened expensive beginning-->
+<Typo word="-nally" find="(?=anlly|nalyl)(?<=\b(?:[A-Z][a-z]*[a-mo-z]|[a-z]+[a-mo-z]))(?:anlly|nalyl)\b" replace="nally"/><!--avoid incorrect to incorrect change on -nanlly; cheapened expensive beginning-->
 <Typo word="-nance" find="\b([iI]ndig|[mM]a(?:inte|lig)|[pP](?:e|oig|reg)|[rR]e(?:pug|so)|[sS]usti)nen(c(?:es?|ies?|y)|t[a-z]*)\b" replace="$1nan$2"/><!--see also "-mina(nt/te)"-->
 <Typo word="-nf(i/o)rm" find="\b([cC]o|[dD]isi|[iI](?:nco)?|[mM]isi|[rR]eco|[uU]nco)mf([io])rm(a(?:ti(?:ons?|ve(?:ly)?)|bl[ey]|l(?:ity)?)|ed|ing|s?)\b" replace="$1nf$2rm$3"/>
 <Typo word="-nment" find="\b([aA](?:lig|ssig)|[eE]n(?:tertai|viro)|[gG]over)(?:me|nem)nt(al[a-z]*|s?)\b" replace="$1nment$2"/><!--see also "-ment"-->
@@ -4191,9 +4215,9 @@ These have to come last, so that special cases (which these might transform into
 
 =====T=====
 <syntaxhighlight lang="xml">
-<Typo word="-tally" find="(?=taly)(?<=\b(?:[A-Z][a-z]*|[a-z]+)[b-eghj-z])talyl?\b" replace="tally"/><!--avoid names Naftaly, Nataly; cheapened expensive beginning-->
+<Typo word="-tally" find="(?=taly)(?<=\b(?:[A-Z][a-z]*[b-eghj-z]|[a-z]+[b-eghj-z]))talyl?\b" replace="tally"/><!--avoid names Naftaly, Nataly; cheapened expensive beginning-->
 <Typo word="-teenth" find="\b([eE]igh|[fF](?:if|our)|[nN]ine|[sS](?:even|ix)|[tT]hir)t(?:e[en]|the+n)th?(s)?\b" replace="$1teenth$2"/>
-<Typo word="-thèque" find="\b([bB]ibli|[dD]isc)oth?[eéê]que(s)?\b(?<!\b[Dd]iscotheques?)" replace="$1othèque$2"/><!--but not discotheque-->
+<Typo word="-thèque" find="\b([bB]ibli|[dD]isc)oth?[eéê]que(s)?\b(?<!\b[dD]iscotheques?)" replace="$1othèque$2"/><!--but not discotheque-->
 <Typo word="-thing" find="\b([aA]ny|[eE]very|[nN]o|[sS]ome)t(?:hign|ing)\b(?<![nN]oting)" replace="$1thing"/>
 <Typo word="-tience" find="\b([iI][mn](?:pa|quo|sen)|[oO]ut(?:pa|quo|sen)|[pP]a|[qQ]uo|[sS]en)t(?:ei|ia)n(ces?|t[a-z]*)\b" replace="$1tien$2"/>
 <Typo word="-tified" find="\b([bB]eau?|[cC]er|[fF]or|[iI]den|[jJ]us|[mM]or|[nN]o|[qQ]uan|[rR](?:a|ec)|[tT]es)ta?fi(abl[ey]|cat(?:es?|ions?)|e[ds])\b" replace="$1tifi$2"/><!--see also "-tifie(d/s)"-->
@@ -4219,7 +4243,7 @@ These have to come last, so that special cases (which these might transform into
 =====U-V=====
 <syntaxhighlight lang="xml">
 <Typo word="-ually" find="\b([aA]sex|[cC]as|[eE](?:q|vent)|[fF]act|[gG]rad|[mM](?:an|ut)|[sS]ex|[tT]act|[uU](?:nus|s)|[vV]is)(?:al?|u[al]?)ly\b" replace="$1ually"/><!--avoid Annaly-->
-<Typo word="-vel" find="(?<=\b(?:[blBL]e|[dD]ri|[gG](?:a|r[ao])|[hH]o|[mM]ar|[nN][ao]|[rR][ae]|[tT]r[ao]|[sS](?:h(?:o|ri)|[nw]i)))vle(s)?\b" replace="vel$2"/><!--cheapened expensive beginning-->
+<Typo word="-vel" find="(?<=\b(?:[blBL]e|[dD]ri|[gG](?:a|r[ao])|[hH]o|[mM]ar|[nN][ao]|[rR][ae]|[tT]r[ao]|[sS](?:h(?:o|ri)|[nw]i)))vle(s)?\b" replace="vel$1"/><!--cheapened expensive beginning-->
 <Typo word="-vele(d/r)" find="\b([blLB]e|[dD]ri|[gG]r[ao]|[mM]ar|[rR]a|[sS](?:h(?:o|ri)|[nw]i)|[tT]r[ao])va?le(d|rs?)\b" replace="$1vele$2"/>
 <Typo word="-veling" find="\b([bB]e|[dD]ri|[gG]r[ao]|[lL]e|[mM]ar|[rR][ae]|[sS](?:h(?:o|ri)|[nw]i)|[tT]r[ao])vle?ing\b" replace="$1veling"/>
 <Typo word="-vement" find="(?=vment)(?<=\b(?:[A-Z][a-z]*|[a-z]+))vment(al|ed|ing|s?)\b" replace="vement$1"/><!--cheapened expensive beginning-->
