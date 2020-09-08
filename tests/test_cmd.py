@@ -1,7 +1,5 @@
 """Functional tests using the command line interface"""
 
-from __future__ import unicode_literals
-
 import os
 import shutil
 import tempfile
