@@ -44,9 +44,15 @@ Resources
 Changelog
 ---------
 
+1.0.0 (2020-09-08)
+
+* Updated bundled ruleset from Wikipedia (#23)
+* Removed Python 2.x and <3.5 compatibility code (#22)
+* Fixed Travis CI configuration (#21)
+
 0.3.0 (2020-06-02)
 
-Note: This will be the last release to support Python 2.7.
+Note: This was the last release to support Python 2.7.
 
 * Updated bundled ruleset (thanks to Oscar Caballero)
 * Added --disable option to disable individual rules (thanks to Oscar Caballero)
