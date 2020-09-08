@@ -3,19 +3,15 @@
 Topy (anagram of "typo") is a Python script to fix typos in text, based on
 the RegExTypoFix project from Wikipedia and AutoWikiBrowser.
 
-Topy requires BeautifulSoup version 4 and runs with either Python 2 and 3.
+Topy requires BeautifulSoup version 4 and runs with Python 3.5+
 
 Usage: ./topy.py /path/to/files
-NB! Files will be changed in place (overwritten)
 
 See:
 * https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
 * https://github.com/intgr/topy
 """
 
-# TODO: clean this crappy code up!
-
-from __future__ import unicode_literals
 import sys
 import logging
 import os
@@ -27,7 +23,6 @@ from bs4 import BeautifulSoup
 
 
 RETF_FILENAME = 'retf.txt'
-ENCODING = 'utf8'
 
 # some rules are not working with regex or are not useful
 disabled = {
@@ -48,7 +43,6 @@ disabled = {
 }
 
 log = logging.getLogger('topy')
-PY2 = sys.version_info[0] <= 2
 
 
 def parse_replacement(replace):
@@ -105,8 +99,8 @@ def read_text_file(filename):
     """Reads file `filename` and returns contents as Unicode string. On failure, returns None and logs error."""
 
     try:
-        with open(filename, 'rb') as f:
-            return f.read().decode(ENCODING)
+        with open(filename, 'r') as f:
+            return f.read()
     except (IOError, OSError) as err:
         log.error("Cannot open %r: %s", filename, err)
     except UnicodeDecodeError:
@@ -120,29 +114,15 @@ def read_text_file(filename):
 def sanitize_filename(filename):
     """Converts `filename` to unicode, replaces invalid (un-encodable) characters."""
 
-    if PY2:
-        # This may break on Windows with Unicode filenames? Please tell me how to fix it if anyone out there cares.
-        if isinstance(filename, str):
-            # noinspection PyUnresolvedReferences
-            filename = filename.decode(sys.getfilesystemencoding() or ENCODING, 'replace')
-        return filename
-    else:
-        # Input filename is always unicode with surrogate escapes.
-        return filename.encode('utf8', 'surrogateescape').decode('utf8', 'replace')
+    # Input filename is always unicode with surrogate escapes.
+    return filename.encode(errors='surrogateescape').decode(errors='replace')
 
 
 def print_diff(filename, old, new, stream=sys.stdout):
     """Diffs the `old` and `new` strings and prints as unified diff to file-like object `stream`."""
 
     # TODO: color output for terminals
-    if PY2:
-        # On Python 2, unified_diff() requires non-Unicode str
-        filename = filename.encode(ENCODING)
     lines = unified_diff(old.splitlines(True), new.splitlines(True), filename, filename)
-    if PY2:
-        # Encode lines that aren't already str
-        lines = (line if isinstance(line, str) else line.encode(ENCODING)
-                 for line in lines)
     stream.writelines(lines)
 
 
@@ -172,8 +152,8 @@ def handle_file(regs, filename):
     if replaced > 0:
         if opts.apply:
             log.info("Writing %s", safe_name)
-            with open(filename, 'wb') as f:
-                f.write(text.encode(ENCODING))
+            with open(filename, 'w') as f:
+                f.write(text)
         else:
             print_diff(safe_name, oldtext, text)
 
@@ -183,10 +163,9 @@ def walk_dir_tree(dirpath):
 
     for root, dirs, files in os.walk(dirpath):
         # Modify 'dirs' list in place, so walk() doesn't recurse into them
-        # str(".") fixes issue #14: Python 2 has non-Unicode str pathnames, Python 3 uses Unicode
-        dirs[:] = (d for d in dirs if not d.startswith(str(".")))
+        dirs[:] = (d for d in dirs if not d.startswith("."))
         for f in files:
-            if not f.startswith(str(".")):
+            if not f.startswith("."):
                 yield os.path.join(root, f)
 
 
@@ -195,9 +174,7 @@ def flatten_files(paths):
 
     for path in paths:
         if os.path.isdir(path):
-            # Once we can drop Python < 3.3 support, this should use 'yield from'
-            for filename in walk_dir_tree(path):
-                yield filename
+            yield from walk_dir_tree(path)
         else:
             # Filename, or the path cannot be accessed (privilege errors, file not found, etc)
             yield path

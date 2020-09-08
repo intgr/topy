@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
 """Unit tests for internal functions"""
-
-from __future__ import unicode_literals
 
 import unittest
 
@@ -49,7 +46,7 @@ class OutputTest(unittest.TestCase):
         # Unicode filename
         filename = 'ünicöde.txt'
         self.diff_inner(
-            filename.encode('utf8') if topy.PY2 else filename,
+            filename,
             "Foobar\n",
             "Foobaz\n",
             """\
@@ -63,7 +60,7 @@ class OutputTest(unittest.TestCase):
         # Filename with invalid characters
         filename = b'foo\xffbar.txt'
         self.diff_inner(
-            filename if topy.PY2 else filename.decode('utf8', 'surrogateescape'),
+            filename.decode(errors='surrogateescape'),
             "Foobar\n",
             "Foobaz\n",
             """\
@@ -75,9 +72,6 @@ class OutputTest(unittest.TestCase):
 """)
 
     def diff_inner(self, filename, old, new, expected):
-        if topy.PY2:
-            expected = expected.encode('utf8')
-
         out = StringIO()
         topy.print_diff(topy.sanitize_filename(filename), old, new, out)
         diff = out.getvalue()
