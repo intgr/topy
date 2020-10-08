@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='topy',
-    version='0.2.2',
+    version='1.0.0',
 
     # PyPI metadata
     author='Marti Raudsepp',
@@ -23,11 +23,10 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         # Until we have a test suite we're conservative about Python version compatibility claims
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Topic :: Documentation',
         'Topic :: Software Development :: Quality Assurance',
         'Topic :: Text Processing :: Filters',

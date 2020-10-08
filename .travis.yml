@@ -1,20 +1,14 @@
 sudo: false  # Use travis' container based infra
 language: python
+dist: focal
 # Versions are deliberately out of order to get a diverse sample first
 python:
-    - "2.7"
-    - "3.6-dev"
-    - "3.2"
-    - "3.3"
-    - "3.4"
-    - "3.5"
-    - "pypy-5.4.1"
-cache:
-  directories:
-    - $PWD/wheelhouse  # cache the dependencies
-env:
-  global:
-    - export PIP_FIND_LINKS=$PWD/wheelhouse
+  - 3.8
+  - 3.5
+  - 3.6
+  - 3.7
+  - pypy3
+cache: pip
 install:
   - pip wheel -r requirements.txt
   - pip install -r requirements.txt
