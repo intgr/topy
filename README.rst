@@ -32,6 +32,12 @@ Usage::
       -d RULE, --disable=RULE
                             disable rules by name
 
+For example, if you want to integrate topy in your CI pipeline, you can do something like::
+
+    sh -c "git ls-files | xargs topy --quiet --apply --; git --no-pager diff --exit-code"
+
+The line above will check all files tracked by git, apply fixes to them and fail if any changes are applied.
+If no changes are to be applied, the command returns success.
 
 Resources
 ---------
@@ -111,4 +117,3 @@ under CC-BY-SA_. See the page on Wikipedia for authorship information.
 
 .. _`Wikipedia AutoWikiBrowser/Typos`: https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
 .. _CC-BY-SA: https://creativecommons.org/licenses/by-sa/3.0/
-
