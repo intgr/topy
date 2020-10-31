@@ -56,7 +56,7 @@ def parse_replacement(replace):
 def load_rules(filename):
     """Load and parse rules from `filename`, returns list of 3-tuples [(name, regexp, replacement), ...]"""
 
-    with open(filename) as rulefile:
+    with open(filename, encoding='utf-8') as rulefile:
         # try to use lxml(slightly faster) if it's installed, otherwise default
         # to html.parser
         try:
@@ -99,7 +99,7 @@ def read_text_file(filename):
     """Reads file `filename` and returns contents as Unicode string. On failure, returns None and logs error."""
 
     try:
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             return f.read()
     except (IOError, OSError) as err:
         log.error("Cannot open %r: %s", filename, err)
@@ -121,9 +121,22 @@ def sanitize_filename(filename):
 def print_diff(filename, old, new, stream=sys.stdout):
     """Diffs the `old` and `new` strings and prints as unified diff to file-like object `stream`."""
 
-    # TODO: color output for terminals
     lines = unified_diff(old.splitlines(True), new.splitlines(True), filename, filename)
-    stream.writelines(lines)
+    lines_color = add_output_color(lines)
+    stream.writelines(lines_color if not None else lines)  # print in colour if available
+
+
+def add_output_color(lines):
+    """Adds color to the output of the diff lines."""
+    try:
+        lines_list = list(lines)
+        for index, line in enumerate(lines_list):
+            lines_list[index] = f'\033[1;32m{line}\033[0;32m' if line.startswith('+') else (
+                f'\033[1;31m{line}\033[0;31m' if line.startswith('-') else f'\033[0m{line}')
+        return lines_list
+    except TypeError:
+        log.info("Could not convert %s to a list", lines)
+        return None
 
 
 def handle_file(regs, filename):
