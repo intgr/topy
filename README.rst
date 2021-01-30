@@ -13,7 +13,7 @@ downloaded.
 
 .. _RegExTypoFix: https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
 
-Topy works with Python 3.5-3.8.
+Topy works with Python 3.5-3.9.
 
 The easiest way to install it is using pip::
 
@@ -52,6 +52,7 @@ Changelog
 
 Unreleased
 
+* Python 3.9 is now officially supported and tested in CI (#27)
 * Migrated tests from travis-ci.org to travis-ci.com (#28)
 
 1.0.0 (2020-09-08)
