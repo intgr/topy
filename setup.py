@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='topy',
-    version='1.0.0',
+    version='1.0.1',
 
     # PyPI metadata
     author='Marti Raudsepp',

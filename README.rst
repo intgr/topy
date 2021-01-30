@@ -50,8 +50,9 @@ Resources
 Changelog
 ---------
 
-Unreleased
+1.0.1 (2021-01-30)
 
+* Updated bundled ruleset from Wikipedia (#29)
 * Python 3.9 is now officially supported and tested in CI (#27)
 * Migrated tests from travis-ci.org to travis-ci.com (#28)
 
