@@ -31,6 +31,9 @@ Usage::
                             specify custom ruleset file to use
       -d RULE, --disable=RULE
                             disable rules by name
+      --color=WHEN, --colour=WHEN
+                            colorize the output; WHEN can be 'never', 'always', or
+                            'auto'
 
 For example, if you want to integrate topy in your CI pipeline, you can do something like::
 

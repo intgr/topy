@@ -122,21 +122,24 @@ def print_diff(filename, old, new, stream=sys.stdout):
     """Diffs the `old` and `new` strings and prints as unified diff to file-like object `stream`."""
 
     lines = unified_diff(old.splitlines(True), new.splitlines(True), filename, filename)
-    lines_color = add_output_color(lines)
-    stream.writelines(lines_color if not None else lines)  # print in colour if available
+    lines = map(lambda l: determine_color(l, stream=stream), lines)
+    stream.writelines(lines)
 
 
-def add_output_color(lines):
+def determine_color(line, stream):
+    """Determines the color of the diffs."""
+    return add_output_color(line) if is_color_output_required(stream) else line
+
+
+def is_color_output_required(stream):
+    """Determines whether to output the line diffs in color or not."""
+    return False if opts.color == "never" else True if opts.color == "always" else hasattr(stream, 'isatty') and stream.isatty()
+
+
+def add_output_color(line):
     """Adds color to the output of the diff lines."""
-    try:
-        lines_list = list(lines)
-        for index, line in enumerate(lines_list):
-            lines_list[index] = f'\033[1;32m{line}\033[0;32m' if line.startswith('+') else (
-                f'\033[1;31m{line}\033[0;31m' if line.startswith('-') else f'\033[0m{line}')
-        return lines_list
-    except TypeError:
-        log.info("Could not convert %s to a list", lines)
-        return None
+    return f'\033[1;32m{line}\033[0;32m' if line.startswith('+') else (
+        f'\033[1;31m{line}\033[0;31m' if line.startswith('-') else f'\033[0m{line}')
 
 
 def handle_file(regs, filename):
@@ -205,6 +208,8 @@ parser.add_option("-r", "--rules", dest='rules', metavar="FILE",
                   help="specify custom ruleset file to use")
 parser.add_option("-d", "--disable", dest='disable', action="append",
                   metavar="RULE", help="disable rules by name")
+parser.add_option("--color", "--colour", type="choice", choices=("never", "always", "auto"), default="auto",
+                  dest="color", metavar="WHEN", help="colorize the output; WHEN can be 'never', 'always', or 'auto'")
 
 
 def main(args=None):
