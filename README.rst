@@ -13,7 +13,7 @@ downloaded.
 
 .. _RegExTypoFix: https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
 
-Topy works with Python 3.5-3.8.
+Topy works with Python 3.6-3.8.
 
 The easiest way to install it is using pip::
 

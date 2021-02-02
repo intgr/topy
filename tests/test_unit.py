@@ -74,7 +74,7 @@ class OutputTest(unittest.TestCase):
     def diff_inner(self, filename, old, new, expected):
         out = StringIO()
         topy.print_diff(topy.sanitize_filename(filename), old, new, out)
-        diff = out.getvalue().replace('\033[1;31m', '').replace('\033[0;31m', '').replace('\033[1;32m', '').replace('\033[0;32m', '').replace('\033[0m', '')  # filter out the color codes
+        diff = out.getvalue()
         self.assertEqual(diff, expected)
         # Must be correct type too, otherwise writelines() fails
         self.assertEqual(type(diff), type(expected))

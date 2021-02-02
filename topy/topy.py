@@ -3,7 +3,7 @@
 Topy (anagram of "typo") is a Python script to fix typos in text, based on
 the RegExTypoFix project from Wikipedia and AutoWikiBrowser.
 
-Topy requires BeautifulSoup version 4 and runs with Python 3.5+
+Topy requires BeautifulSoup version 4 and runs with Python 3.6+
 
 Usage: ./topy.py /path/to/files
 
@@ -122,24 +122,27 @@ def print_diff(filename, old, new, stream=sys.stdout):
     """Diffs the `old` and `new` strings and prints as unified diff to file-like object `stream`."""
 
     lines = unified_diff(old.splitlines(True), new.splitlines(True), filename, filename)
-    lines = map(lambda l: determine_color(l, stream=stream), lines)
+    if is_color_output_required(stream):
+        lines = map(add_output_color, lines)
     stream.writelines(lines)
-
-
-def determine_color(line, stream):
-    """Determines the color of the diffs."""
-    return add_output_color(line) if is_color_output_required(stream) else line
 
 
 def is_color_output_required(stream):
     """Determines whether to output the line diffs in color or not."""
-    return False if opts.color == "never" else True if opts.color == "always" else hasattr(stream, 'isatty') and stream.isatty()
+    if opts.color == "never":
+        return False
+    elif opts.color == "always":
+        return True
+    return hasattr(stream, 'isatty') and stream.isatty()
 
 
 def add_output_color(line):
     """Adds color to the output of the diff lines."""
-    return f'\033[1;32m{line}\033[0;32m' if line.startswith('+') else (
-        f'\033[1;31m{line}\033[0;31m' if line.startswith('-') else f'\033[0m{line}')
+    if line.startswith('+'):
+        line = f'\033[1;32m{line}'
+    elif line.startswith('-'):
+        line = f'\033[1;31m{line}'
+    return f'{line}\033[0m'
 
 
 def handle_file(regs, filename):
