@@ -3,7 +3,7 @@
 Topy (anagram of "typo") is a Python script to fix typos in text, based on
 the RegExTypoFix project from Wikipedia and AutoWikiBrowser.
 
-Topy requires BeautifulSoup version 4 and runs with Python 3.5+
+Topy requires BeautifulSoup version 4 and runs with Python 3.6+
 
 Usage: ./topy.py /path/to/files
 
@@ -56,7 +56,7 @@ def parse_replacement(replace):
 def load_rules(filename):
     """Load and parse rules from `filename`, returns list of 3-tuples [(name, regexp, replacement), ...]"""
 
-    with open(filename) as rulefile:
+    with open(filename, encoding='utf-8') as rulefile:
         # try to use lxml(slightly faster) if it's installed, otherwise default
         # to html.parser
         try:
@@ -99,7 +99,7 @@ def read_text_file(filename):
     """Reads file `filename` and returns contents as Unicode string. On failure, returns None and logs error."""
 
     try:
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             return f.read()
     except (IOError, OSError) as err:
         log.error("Cannot open %r: %s", filename, err)
@@ -121,9 +121,28 @@ def sanitize_filename(filename):
 def print_diff(filename, old, new, stream=sys.stdout):
     """Diffs the `old` and `new` strings and prints as unified diff to file-like object `stream`."""
 
-    # TODO: color output for terminals
     lines = unified_diff(old.splitlines(True), new.splitlines(True), filename, filename)
+    if is_color_output_required(stream):
+        lines = map(add_output_color, lines)
     stream.writelines(lines)
+
+
+def is_color_output_required(stream):
+    """Determines whether to output the line diffs in color or not."""
+    if opts.color == "never":
+        return False
+    elif opts.color == "always":
+        return True
+    return hasattr(stream, 'isatty') and stream.isatty()
+
+
+def add_output_color(line):
+    """Adds color to the output of the diff lines."""
+    if line.startswith('+'):
+        line = f'\033[1;32m{line}'
+    elif line.startswith('-'):
+        line = f'\033[1;31m{line}'
+    return f'{line}\033[0m'
 
 
 def handle_file(regs, filename):
@@ -192,6 +211,8 @@ parser.add_option("-r", "--rules", dest='rules', metavar="FILE",
                   help="specify custom ruleset file to use")
 parser.add_option("-d", "--disable", dest='disable', action="append",
                   metavar="RULE", help="disable rules by name")
+parser.add_option("--color", "--colour", type="choice", choices=("never", "always", "auto"), default="auto",
+                  dest="color", metavar="WHEN", help="colorize the output; WHEN can be 'never', 'always', or 'auto'")
 
 
 def main(args=None):

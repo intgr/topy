@@ -13,7 +13,7 @@ downloaded.
 
 .. _RegExTypoFix: https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/Typos
 
-Topy works with Python 3.5-3.9.
+Topy works with Python 3.6-3.9.
 
 The easiest way to install it is using pip::
 
@@ -31,6 +31,9 @@ Usage::
                             specify custom ruleset file to use
       -d RULE, --disable=RULE
                             disable rules by name
+      --color=WHEN, --colour=WHEN
+                            colorize the output; WHEN can be 'never', 'always', or
+                            'auto'
 
 For example, if you want to integrate topy in your CI pipeline, you can do something like::
 

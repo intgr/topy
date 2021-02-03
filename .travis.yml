@@ -4,7 +4,6 @@ dist: focal
 # Versions are deliberately out of order to get a diverse sample first
 python:
   - 3.9
-  - 3.5
   - 3.6
   - 3.7
   - 3.8
