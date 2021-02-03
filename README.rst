@@ -53,6 +53,11 @@ Resources
 Changelog
 ---------
 
+1.1.0 (2021-02-03)
+
+* Added colors to output. Thanks to Brian de Buiteach (@debuiteb) (#25)
+* Python 3.5 support is removed to allow newer syntax (#25)
+
 1.0.1 (2021-01-30)
 
 * Updated bundled ruleset from Wikipedia (#29)
