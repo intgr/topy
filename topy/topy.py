@@ -72,13 +72,19 @@ def load_rules(filename):
     n_loaded = 0
 
     for typo in soup.findAll('typo'):
-        if 'word' not in typo.attrs or typo.attrs['word'] in disabled:
+        attrs = typo.attrs
+        word = attrs.get('word')
+        find = attrs.get('find')
+        replace = attrs.get('replace')
+
+        if 'disable' in attrs or 'disabled' in attrs or word in disabled:
             n_disabled += 1
             continue
 
-        word = typo.attrs['word']
-        find = typo.attrs['find']
-        replace = typo.attrs['replace']
+        if not word or not find or not replace:
+            log.debug("tag incomplete: %s", typo)
+            n_errors += 1
+            continue
 
         try:
             r = regex.compile(find)
