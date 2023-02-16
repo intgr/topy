@@ -3,7 +3,7 @@
 Topy (anagram of "typo") is a Python script to fix typos in text, based on
 the RegExTypoFix project from Wikipedia and AutoWikiBrowser.
 
-Topy requires BeautifulSoup version 4 and runs with Python 3.6+
+Topy requires BeautifulSoup version 4 and runs with Python 3.7+
 
 Usage: ./topy.py /path/to/files
 
