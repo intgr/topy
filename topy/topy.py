@@ -139,10 +139,10 @@ def is_color_output_required(stream):
 def add_output_color(line):
     """Adds color to the output of the diff lines."""
     if line.startswith('+'):
-        line = f'\033[1;32m{line}'
+        line = f'\033[1;32m{line}\033[0m'
     elif line.startswith('-'):
-        line = f'\033[1;31m{line}'
-    return f'{line}\033[0m'
+        line = f'\033[1;31m{line}\033[0m'
+    return line
 
 
 def handle_file(regs, filename):
