@@ -3,9 +3,8 @@ Topy
 .. image:: https://badge.fury.io/py/topy.svg
    :target: https://badge.fury.io/py/topy
 
-.. image:: https://travis-ci.com/intgr/topy.svg?branch=master
-   :alt: Travis CI
-   :target: https://travis-ci.com/github/intgr/topy
+.. |Tests status| image:: https://github.com/intgr/topy/workflows/Tests/badge.svg?branch=master
+   :target: https://github.com/intgr/topy/actions?query=workflow:Tests
 
 Topy (anagram of "typo") is a Python script to fix typos in text, using rulesets developed by the RegExTypoFix_ project
 from Wikipedia. The English ruleset is included with Topy and is used by default. Other rulesets can be manually
