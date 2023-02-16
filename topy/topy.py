@@ -171,7 +171,7 @@ def handle_file(regs, filename):
     if replaced > 0:
         if opts.apply:
             log.info("Writing %s", safe_name)
-            with open(filename, 'w') as f:
+            with open(filename, 'w', encoding='utf-8') as f:
                 f.write(text)
         else:
             print_diff(safe_name, oldtext, text)
